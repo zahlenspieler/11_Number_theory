@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofThatANumberIsPoliteIffItIsPositiveAndNotAPositivePowerOf2}
+\pmcreated{2013-03-22 18:10:05}
+\pmmodified{2013-03-22 18:10:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{another proof that a number is polite iff it is positive and not a positive power of $2$}
+\pmrecord{5}{40729}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry we give another proof that an integer is polite iff it is neither non-positive nor a positive power of $2$.  The proof utilizes the formula $$a+(a+1)+\cdots + b = \frac{(a+b)(b-a+1)}{2}.$$
+
+\begin{proof}
+By definition, an integer $n$ is polite if it a sum of consecutive non-negative integers, $n$ itself must be non-negative.  Furthermore $n$ can not be $0$ since a sum of at least two consecutive non-negative integers must be positive.  So we may assume that $n$ is positive.
+
+There are two cases:
+\begin{enumerate}
+\item $n$ is a power of $2$:
+
+Suppose that $n$ is polite, say $n=a+(a+1)+\cdots + (a+k)$, where $a$ is non-negative and $k>0$, then $$n=\frac{(2a+k)(k+1)}{2}$$
+This means that $(2a+k)(k+1)=2n$ is a power of $2$, or $2a+k$ and $k+1$ are both powers of $2$ by the unique factorization of positive integers.  Since $k>0$, $k+1>1$, so that if $k+1$ were a power of $2$, $k$ must be odd, which implies that $2a+k$ is odd too.  Since  $2a+k$ is a power of $2$, this forces $2a+k=1$.  As $k>0$ and $a\ge 0$, there is only one solution: $k=1$ and $a=0$, or $n=1$, showing that $1$ is the only power of $2$ that is polite.
+
+\item $n$ is not a power of $2$:
+
+Let $p$ be the smallest odd prime dividing $n$.  Write $n=mp$.  So $m\ge p$, or $m-p\ge 0$.  Set $$a:=\frac{2m+1-p}{2}.$$  Since $2m+1-p$ is the sum of $2m$ and $1-p$, both even numbers, $a$ is an integer.  Since $2m+1-p=(m-p)+(m+1)\ge m+1>0$, $a$ is positive.  Solving for $m$ we get $$m=\frac{2a+p-1}{2}.$$
+Then $$a+(a+1)+\cdots + (a+p-1) = \frac{(2a+p-1)p}{2}=mp=n,$$ showing that $n$ is polite.
+\end{enumerate}
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

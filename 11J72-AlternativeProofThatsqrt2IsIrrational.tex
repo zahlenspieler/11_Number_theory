@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeProofThatsqrt2IsIrrational}
+\pmcreated{2013-03-22 16:55:15}
+\pmmodified{2013-03-22 16:55:15}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{alternative proof that $\sqrt{2}$ is irrational}
+\pmrecord{8}{39183}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J72}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11J82}
+\pmclassification{msc}{13A05}
+\pmrelated{Irrational}
+\pmrelated{EisensteinCriterion}
+\pmrelated{GausssLemmaII}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Following is a proof that $\sqrt{2}$ is irrational.
+
+The polynomial $x^2-2$ is irreducible over $\mathbb{Z}$ by Eisenstein's criterion with $p=2$.  Thus, $x^2-2$ is irreducible over $\mathbb{Q}$ by \PMlinkname{Gauss's lemma}{GausssLemmaII}.  Therefore, $x^2-2$ does not have any roots in $\mathbb{Q}$.  Since $\sqrt{2}$ is a root of $x^2-2$, it must be irrational.
+
+This method generalizes to show that any number of the form $\sqrt[r]{n}$ is not rational, where $r \in \mathbb{Z}$ with $r>1$ and $n \in \mathbb{Z}$ such that there exists a prime $p$ dividing $n$ with $p^2$ not dividing $n$.
+%%%%%
+%%%%%
+\end{document}

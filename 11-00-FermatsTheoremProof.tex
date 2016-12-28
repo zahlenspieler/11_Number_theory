@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FermatsTheoremProof}
+\pmcreated{2013-03-22 11:46:10}
+\pmmodified{2013-03-22 11:46:10}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Fermat's theorem proof}
+\pmrecord{11}{30223}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{37B55}
+\pmrelated{EulerFermatTheorem}
+\pmrelated{FermatsLittleTheorem}
+\pmrelated{ProofOfEulerFermatTheoremUsingLagrangesTheorem}
+\pmrelated{FermatsLittleTheoremProofInductive}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+Consider the sequence $a,\,2a,\,\ldots,\,(p-1)a$.
+
+They are all different (modulo $p$), because if $ma=na$ with $1\le m<n\le p-1$ then
+$0=a(m-n)$, and since\, $p\nmid a$, we get $p\mid(m-n)$,\, which is impossible.
+
+Now, since all these numbers are different, the set \,$\{a,\,2a,\,3a,\,\ldots,\,(p-1)a\}$\, will have the $p-1$ possible congruence classes (although not necessarily in the same order) and therefore 
+$$a\cdot2a\cdot3a\cdots (p-1)a\equiv (p-1)!a^{p-1}\equiv (p-1)!\pmod{p}$$
+and using\, $\gcd((p-1)!,\;p)=1$\, we get
+$$a^{p-1}\equiv 1\pmod{p}.$$
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

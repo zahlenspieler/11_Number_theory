@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EverySufficientlyLargeEvenIntegerCanBeExpressedAsTheSumOfAPairOfAbundantNumbers}
+\pmcreated{2013-03-22 16:46:58}
+\pmmodified{2013-03-22 16:46:58}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{every sufficiently large even integer can be expressed as the sum of a pair of abundant numbers}
+\pmrecord{9}{39014}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+If $n > 1540539$, then $n = a + b$, where $a$ and
+$b$ are abundant numbers.
+\end{thm}
+
+\begin{proof}
+Note that both $20$ and $81081$ are abundant numbers.
+Furthermore, we have $81081 = 4054 \cdot 20 + 1$.
+If $n$ is a multiple of $20$, then $n-20$ is also 
+a multiple of $20$ hence, as a multiple of an abundant
+number, is also abundant, so we may choose $a = 20$ 
+and $b = n-20$.  Otherwise, write $n = 20 m + k$ where
+$m$ and $k$ are positive and $k < 20$.  Note that,
+since $n > 1540539$ and $k < 20$, it follows that
+$m > 77026 > 4054 k$, hence we have
+\[
+n = 20 (m - 4054 k) + 81081 k.
+\]  
+Since positive multiples of abundant numbers are 
+abundant, we may set $a = 20 (m - 4054 k)$ and
+$b = 81081 k$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

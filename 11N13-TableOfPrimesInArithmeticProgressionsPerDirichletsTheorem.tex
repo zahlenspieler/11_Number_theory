@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfPrimesInArithmeticProgressionsPerDirichletsTheorem}
+\pmcreated{2013-03-22 18:13:15}
+\pmmodified{2013-03-22 18:13:15}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of primes in arithmetic progressions per Dirichlet's theorem}
+\pmrecord{4}{40804}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11N13}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Dirichlet's theorem on primes in arithmetic progressions tells us that given the $n$th prime $p_n$, there are infinitely many primes of the form $mp_n + 1$. Obviously, for $p_1 = 2$, the primes of that form are merely the odd primes. For the other primes, $m$ has to be even, but not much else appears obvious.
+
+The leftmost column of this table gives the $n$th prime, the second column from the left gives the smallest prime of the form $mp_n + 1$, the third column from the left gives the second smallest prime of that form, etc. Apart from the leftmost column, none of the columns contain a sequence in ascending order.
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|}
+$p_n$ &   &   &   &    &    &    &    &    &    &    \\
+2 & 3 & 5 & 7 & 11 & 13 & 17 & 19 & 23 & 29 & 31 \\
+3 & 7 & 13 & 19 & 31 & 37 & 43 & 61 & 67 & 73 & 79 \\
+5 & 11 & 31 & 41 & 61 & 71 & 101 & 131 & 151 & 181 & 191 \\
+7 & 29 & 43 & 71 & 113 & 127 & 197 & 211 & 239 & 281 & 337 \\
+11 & 23 & 67 & 89 & 199 & 331 & 353 & 397 & 419 & 463 & 617 \\
+13 & 53 & 79 & 131 & 157 & 313 & 443 & 521 & 547 & 599 & 677 \\
+17 & 103 & 137 & 239 & 307 & 409 & 443 & 613 & 647 & 919 & 953 \\
+19 & 191 & 229 & 419 & 457 & 571 & 647 & 761 & 1103 & 1217 & 1483 \\
+23 & 47 & 139 & 277 & 461 & 599 & 691 & 829 & 967 & 1013 & 1151 \\
+29 & 59 & 233 & 349 & 523 & 929 & 1103 & 1277 & 1451 & 1567 & 1741 \\
+31 & 311 & 373 & 683 & 1117 & 1303 & 1427 & 1489 & 1613 & 1861 & 2357 \\
+37 & 149 & 223 & 593 & 1259 & 1481 & 1777 & 1999 & 2221 & 2591 & 2887 \\
+41 & 83 & 739 & 821 & 1231 & 1559 & 1723 & 2297 & 2543 & 2707 & 2789 \\
+43 & 173 & 431 & 947 & 1033 & 1291 & 1549 & 1721 & 1979 & 2237 & 2753 \\
+47 & 283 & 659 & 941 & 1129 & 1223 & 1693 & 1787 & 2069 & 2351 & 2539 \\
+53 & 107 & 743 & 1061 & 1697 & 2333 & 2969 & 3181 & 3499 & 3923 & 4241 \\
+59 & 709 & 827 & 1063 & 1181 & 1889 & 2243 & 2833 & 3187 & 3541 & 3659 \\
+61 & 367 & 733 & 977 & 1709 & 1831 & 2441 & 3539 & 4027 & 4271 & 4637 \\
+67 & 269 & 1609 & 1877 & 2011 & 3083 & 3217 & 4021 & 4289 & 4423 & 4691 \\
+71 & 569 & 853 & 1279 & 1847 & 2131 & 2273 & 2557 & 2699 & 4261 & 5113 \\
+73 & 293 & 439 & 877 & 1607 & 1753 & 3067 & 3359 & 3797 & 3943 & 4673 \\
+79 & 317 & 1423 & 2213 & 2371 & 2687 & 3319 & 3793 & 4583 & 5531 & 5689 \\
+83 & 167 & 499 & 997 & 1163 & 1993 & 2657 & 4483 & 4649 & 5147 & 5479 \\
+89 & 179 & 1069 & 2137 & 2671 & 3739 & 3917 & 4273 & 4451 & 5519 & 6053 \\
+97 & 389 & 971 & 1553 & 1747 & 3299 & 3881 & 4463 & 4657 & 5821 & 6791 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

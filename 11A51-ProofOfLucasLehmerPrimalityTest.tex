@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLucasLehmerPrimalityTest}
+\pmcreated{2013-03-22 18:42:16}
+\pmmodified{2013-03-22 18:42:16}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Lucas-Lehmer primality test}
+\pmrecord{5}{41468}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+
+\begin{document}
+The objective of this article is to prove the Lucas-Lehmer primality test:
+\newline
+Let $p>2$ be a prime, and let $M_p=2^p-1$ be the corresponding Mersenne number. Then $M_p$ is prime if and only if $M_p$ divides $s_{p-1}$ (equivalently, if and only if $s_{p-1}\equiv 0\pod {M_p}$) where the numbers $(s_n)_{n\geq1}$ are given by the following recurrence relation: 
+\begin{align*}
+  s_1 &= 4 \\
+  s_{n+1} &= {s_n}^2-2,\quad n\geq 1
+\end{align*}
+
+We show that the validity of the primality test is equivalent to the following theorem, which is then proved directly:
+\begin{thm} \label{thm:one}(Lucas) $M_p$ is prime if and only if $\alpha^{(M_p+1)/2}\equiv -1\pod{M_p}$, where $\alpha = 2+\sqrt{3}$.
+\end{thm}
+
+To see that the two are in fact equivalent, let $\beta=2-\sqrt{3}$. Then $\alpha+\beta=4,\ \alpha\beta=1$. Thus
+\begin{align*}
+  s_1 &= \alpha+\beta\\
+  s_2 &= (\alpha+\beta)^2 - 2 = \alpha^2 + \beta^2 + 2\alpha\beta-2 = \alpha^2+\beta^2\\
+  s_3 &= \alpha^4 + \beta^4\\
+  \cdots &\\
+  s_{p-1} &= \alpha^{2^{p-2}}+\beta^{2^{p-2}}
+\end{align*}
+Note that $2^{p-2} = \frac{M_p+1}{4}$. Then
+\begin{align*}
+  s_{p-1}\equiv 0\pod{M_p} & \iff \alpha^{(M_p+1)/4}+\beta^{(M_p+1)/4} \equiv 0\pod {M_p}\\
+    &\iff \alpha^{(M_p+1)/2}+(\alpha\beta)^{(M_p+1)/4} \equiv 0\pod {M_p}\\
+    &\iff \alpha^{(M_p+1)/2}\equiv -1\pod {M_p}
+\end{align*}
+
+It thus remains to prove Theorem \ref{thm:one}. We start with two simple lemmas:
+\begin{lem} \label{lem:two}If $p>3$ is prime, then $\alpha^{p-1}\equiv 1\pod p$ or $\alpha^{p+1}\equiv 1\pod p$.
+\end{lem}
+\begin{proof}
+\[
+  \alpha^p \equiv 2^p + 3^{(p-1)/2}\sqrt{3} \equiv \begin{cases}\alpha\pod p & \text{if }\Leg{3}{p}=1\\
+  \beta \pod p & \text{if }\Leg{3}{p}=-1\end{cases}
+\]
+where $\Leg{\cdot}{\cdot}$ is the Legendre symbol. Thus
+\begin{gather*}
+    \Leg{3}{p} = 1 \ \Rightarrow\ \alpha^{p-1} = \alpha^p\alpha^{-1}
+      = \alpha^p\beta \equiv \alpha\beta = 1\pod p\\
+  \Leg{3}{p} = -1 \ \Rightarrow\ \alpha^{p+1} = \alpha^p\alpha \equiv \beta\alpha = 1\pod p
+\end{gather*}
+\end{proof}
+
+\begin{lem} \label{lem:three}Let $p$ be a prime with $p\equiv 7\pod 8$ and $p\equiv 7\pod {12}$. Then $\alpha^{(p+1)/2}\equiv -1\pod p$.
+\end{lem}
+\begin{proof}
+$(1+\sqrt{3})^2 = 4+2\sqrt{3} = 2\alpha$, so that
+\[
+  (1+\sqrt{3})^{p+1} = 2^{(p+1)/2}\alpha^{(p+1)/2}
+\]
+But $p\equiv 7\pod 8$, so that $\Leg{2}{p}=1$. Thus $2^{(p+1)/2} \equiv 2\cdot 2^{(p-1)/2} \equiv 2 \pod p$ and therefore
+\[
+  (1+\sqrt{3})^{p+1} \equiv 2\alpha^{(p+1)/2}\pod p
+\]
+Also,
+\[
+  (1+\sqrt{3})^{p+1} = (1+\sqrt{3})(1+\sqrt{3})^p \equiv (1+\sqrt{3})(1+3^{(p-1)/2}\sqrt{3})\pod p
+\]
+But $p\equiv 7\pod {12}$, so $3^{(p-1)/2}\equiv -1\pod p$ and thus
+\[
+  (1+\sqrt{3})^{p+1} \equiv (1+\sqrt{3})(1-\sqrt{3}) = -2\pod p
+\]
+Putting together the two expressions for $(1+\sqrt{3})^{p+1}$, we get $\alpha^{(p+1)/2}\equiv -1\pod p$.
+\end{proof}
+
+We are now in a position to prove Theorem \ref{thm:one}:
+\begin{proof}
+$(\Rightarrow):$ If $M_p$ is prime where $p>3$ is prime, then note that $M_p\equiv 7\pod 8, 7\pod 12$ so that $M_p$ satisfies the conditions of Lemma \ref{lem:three}. The result follows.
+
+$(\Leftarrow):$ If $\alpha^{(M_p+1)/2} \equiv -1\pod{M_p}$, choose $q\mid M_p$ for $q$ a prime. Since $M_p\equiv 7\pod 12$, we have $q>3$. Since $\alpha^{(M_p+1)/2}\equiv -1\pod{M_p}$ also $\alpha^{(M_p+1)/2}\equiv -1\pod q$ and thus $\alpha^{M_p+1}\equiv 1\pod q$. But $M_p+1=2^p$, so
+\[
+  \alpha^{2^p} \equiv 1\pod q
+\]
+Thus the order of $\alpha\pod q$ divides $2^n$. It can't divide $2^{n-1}$ since $\alpha^{(M_p+1)/2} \equiv -1\pod q$, so its order is precisely $2^n = M_p+1$. However, $\alpha^{q+1}\equiv 1\pod q$ or $\alpha^{q-1}\equiv 1\pod q$ by Lemma \ref{lem:two} and thus $q\geq M_p$. But $q\mid M_p$, so $q=M_p$ and $M_p$ is in fact prime.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

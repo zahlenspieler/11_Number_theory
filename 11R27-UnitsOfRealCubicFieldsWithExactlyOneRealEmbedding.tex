@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitsOfRealCubicFieldsWithExactlyOneRealEmbedding}
+\pmcreated{2013-03-22 16:02:25}
+\pmmodified{2013-03-22 16:02:25}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{units of real cubic fields with exactly one real embedding}
+\pmrecord{13}{38090}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R27}
+\pmclassification{msc}{11R16}
+\pmclassification{msc}{11R04}
+\pmrelated{NormAndTraceOfAlgebraicNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $K \subseteq \mathbb{R}$ be a number field with $[K\!:\!\mathbb{Q}]=3$ such that $K$ has exactly one real embedding.  Thus, $r=1$ and $s=1$.  Let ${\mathcal{O}_K}^*$ denote the group of units of the ring of integers of $K$.  By Dirichlet's unit theorem, ${\mathcal{O}_K}^* \cong \mu(K) \times \mathbb{Z}$ since $r+s-1=1$.  The only roots of unity in $K$ are $1$ and $-1$ because $K \subseteq \mathbb{R}$.  Thus, $\mu(K)=\{1,-1\}$.  Therefore, there exists $u \in {\mathcal{O}_K}^*$ with $u>1$, such that every element of ${\mathcal{O}_K}^*$ is of the form $\pm u^n$ for some $n \in \mathbb{Z}$.
+
+Let $\rho>0$ and $0<\theta<\pi$ such that the conjugates of $u$ are $\rho e^{i\theta}$ and $\rho e^{-i\theta}$.  Since $u$ is a unit, $N(u)=\pm 1$.  Thus, $\pm 1=N(u)=u(\rho e^{i\theta})(\rho e^{-i\theta})=u\rho^2$.  Since $u>0$ and $\rho^2>0$, it must be the case that $u\rho^2=1$.  Thus, $\displaystyle u=\frac{1}{\rho^2}$.  One can then deduce that $\displaystyle \operatorname{disc}u=-4\sin^2\theta\left(\rho^3+\frac{1}{\rho^3}- 2\cos\theta\right)^2$.  Since the maximum value of the polynomial $4\sin^2\theta(x-2\cos\theta)^2-4x^2$ is at most $16$, one can deduce that $\displaystyle |\operatorname{disc}u| \le 4\left(u^3+\frac{1}{u^3}+4\right)$.  Define $d=|\operatorname{disc}\mathcal{O}_K|$.  Then $\displaystyle d\le|\operatorname{disc}u| \le 4\left(u^3+\frac{1}{u^3}+4\right)$.  Thus, $\displaystyle u^3 \ge \frac{d}{4}-4-\frac{1}{u^3}$.  From this, one can obtain that $\displaystyle u^3 \ge \frac{d-16+\sqrt{d^2-32d+192}}{8}$.  (Note that a higher lower bound on $u^3$ is desirable, and the one stated here is much higher than that stated in Marcus.)  Thus, $\displaystyle u^2 \ge \left( \frac{d-16+\sqrt{d^2-32d+192}}{8} \right)^{\frac{2}{3}}$.  Therefore, if an element $x \in {\mathcal{O}_K}^*$ can be found such that $\displaystyle 1<x<\left( \frac{d-16+\sqrt{d^2-32d+192}}{8} \right)^{\frac{2}{3}}$, then $x=u$.
+
+Following are some applications:
+
+\begin{itemize}
+\item The above is most applicable for finding the fundamental unit of a ring of integers of a pure cubic field.  For example, if $K=\mathbb{Q}(\sqrt[3]{2})$, then $d=108$, and the lower bound on $u^2$ is $\displaystyle \left( \frac{23+10\sqrt{21}}{2} \right)^{\frac{2}{3}}$, which is larger than $9$.  Note that $\displaystyle \left( \sqrt[3]{4}+\sqrt[3]{2}+1 \right) \left( \sqrt[3]{2}-1 \right)=2-1=1$.  Since $1<\sqrt[3]{4}+\sqrt[3]{2}+1<9$, it follows that $\sqrt[3]{4}+\sqrt[3]{2}+1$ is the fundamental unit of $\mathcal{O}_K$.
+\item The above can also be used for any number field $K$ with $[K\!:\!\mathbb{Q}]=3$ such that $K$ has exactly one real embedding.  Let $\sigma$ be the real embedding.  Then the above produces the fundamental unit $u$ of $\sigma(K)$.  Thus, $\sigma^{-1}(u)$ is a fundamental unit of $K$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{marcus} Marcus, Daniel A. {\em Number Fields}. New York: Springer-Verlag, 1977.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

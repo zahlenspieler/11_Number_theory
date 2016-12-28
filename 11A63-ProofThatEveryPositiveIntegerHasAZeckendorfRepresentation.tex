@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEveryPositiveIntegerHasAZeckendorfRepresentation}
+\pmcreated{2013-03-22 16:36:43}
+\pmmodified{2013-03-22 16:36:43}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that every positive integer has a Zeckendorf representation}
+\pmrecord{5}{38809}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+\pmclassification{msc}{11B39}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Theorem. Every positive integer $n$ has a Zeckendorf representation as a sum of non-consecutive Fibonacci numbers $F_i$.
+
+If an integer $n = F_k$, where $F_x$ refers to a Fibonacci number, then $Z_k = 1$ and $Z_i = 0$ for all $0 < i < k$, where $Z$ is an array of binary digits and $k$ is the index of the most significant digit.
+
+Otherwise, we assign $j = n - F_i$ where $F_i$ is the largest Fibonacci number such that $F_i < n$. Then $Z_i > 0$. It is obvious that $j < F_i$, because it can be safely assumed at this juncture that $F_{i - 2}$ and $F_{i - 1}$ are distinct, that $F_{i - 2} < F_{i - 1}$ and therefore $F_i < 2F_{i - 1}$. This proves that $Z_i$ must be 1, but no more than that. If $j$ is a Fibonacci number, we can stop now, otherwise, we must again subtract the largest possible Fibonacci number, decrement $i$ accordingly and set the appropriate $Z_i = 1$. The farthest this iterative process can go is to $i = 1$, corresponding to $F_1 = 1$.
+
+Furthermore, the 1s in $Z$ must have 0s in between them because any two consecutive 1s, such as at, say, $Z_i$ and $Z_{i - 1}$ would indicate a failure to recognize that $F_{i - 1} + F_i = F_{i + 1}$, and thus $Z_i$ and $Z_{i - 1}$ can be set to zero in favor of setting $Z_{i + 1}$ to 1. (As a side note, no binary representation of a Mersenne number should be mistaken for a Zeckendorf representation; in other words, there are no repunits in Zeckendorf representations).
+%%%%%
+%%%%%
+\end{document}

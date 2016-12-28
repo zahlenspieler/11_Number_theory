@@ -1,0 +1,268 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLindemannWeierstrassTheoremAndThatEAndpiAreTranscendental}
+\pmcreated{2013-03-22 17:07:55}
+\pmmodified{2013-03-22 17:07:55}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Lindemann-Weierstrass theorem and that e and $\pi$ are transcendental}
+\pmrecord{21}{39438}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J85}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\fdiff}[2]{f^{(#1)}(#2)}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+
+\begin{document}
+\PMlinkescapeword{arguments}
+\PMlinkescapeword{bounds}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{estimate}
+\PMlinkescapeword{estimates}
+\PMlinkescapeword{inconsistent}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{inner}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{irreducible}
+\PMlinkescapeword{lines}
+\PMlinkescapeword{order}
+\PMlinkescapeword{remainder}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{similarity}
+\PMlinkescapeword{symmetric}
+\PMlinkescapeword{symmetry}
+
+This article provides a proof of the Lindemann-Weierstrass theorem, using a method similar to those used by Ferdinand von Lindemann and Karl Weierstrass. This material is taken from \cite{bib:baker} and expanded for clarity.
+
+Before attacking the general case, we first use the same methods to prove two earlier theorems, namely that both $e$ and $\pi$ are transcendental. These proofs introduce the methods to be used in the more general theorem. At the end, we present some trivial but important corollaries.
+
+Both $e$ and $\pi$ were both known to be irrational in the 1700's (Euler showed the former; Lambert the latter). But $e$ was not shown to be transcendental until 1873 (by Hermite, see \cite{bib:hermite} and \cite{bib:hermitetrans}), and Lindemann showed $\pi$ to be transcendental as well in the late 1870's. He also sketched a proof of the general theorem, which was fleshed out by Weierstrass and Hilbert among others in the late 1800's.
+
+The following construct is used in all three proofs. Suppose $f(x)$ is a real polynomial, and let
+\[I(t)=\int_0^t e^{t-x}f(x)\, dx.\]
+\PMlinkname{Integrating by parts}{IntegrationByParts}, we get
+\[I(t)=(-e^{t-x}f(x))\bigg|_0^t +\int_0^t e^{t-x}f'(x)\, dx=e^tf(0)-f(t)+\int_0^t e^{t-x}f'(x)\, dx .\]
+Continuing, and integrating by parts a total of $m=\deg f$ times, we get
+\begin{equation}\label{one}I(t)=e^t\sum_{j=0}^m \fdiff j0 - \sum_{j=0}^m \fdiff jt
+\end{equation}
+where $\fdiff jx$ is the $j^{\mathrm{th}}$ derivative of $f$.
+
+If $f(x)=\sum a_ix^i$, let $F(x)=\sum \lvert a_i\rvert x^i$; \PMlinkname{i.e.}{Ie}, the polynomial whose coefficients are the absolute values of those for $f$. Then using trivial \PMlinkname{bounds}{Bound2} on the integrand, we get
+\begin{equation}\label{two}\lvert I(t)\rvert\leq\int_0^t \lvert e^{t-x}f(x)\rvert dx \leq \lvert t\rvert e^{\lvert t\rvert}F(\lvert t\rvert).\end{equation}
+
+We now proceed to prove the theorems. The proofs of all three are similar, although the proof for $e$ is the easiest. The steps of the proofs are as follows:
+\begin{itemize}
+\item Assume the theorem is false, and write down an equation in exponential form that shows that the number in question is algebraic (for $\pi$, we will use $\displaystyle e^{i\pi}=-1$ to write the equation in that form).
+\item Define a polynomial or set of polynomials $f$, and an associated number $J$ (or a sequence of numbers) that is a linear combination of the values of $I$ at the exponents in question. The motivation for the choice of $f$ used in each theorem is not given in Hermite's proof. An excellent exposition of how these definitions are relevant to the problem is given in \cite{bib:cohn}. In essence, the ratio of the terms of $I(t)$ in the proof that $e$ is transcendental relates to a \emph{Pad\'{e} approximation} to $e^t$; this approximation is better the larger $\deg f$ gets.
+\item Analyze $J$ to show that it is \PMlinkname{integral}{Integer} and nonzero, and derive a lower bound on $J$.
+\item Use equation \eqref{two} to derive a trivial upper bound on $J$.
+\item Note that the upper bound is lower than the lower bound, disproving the original assumption.
+\end{itemize}
+The ``magic'' in the proof consists of finding the appropriate choice of $f$, as well as in defining the transformation $I$ to begin with. Once that is done, the work in the proof is in showing $J$ integral (which is harder for the more general theorems) and in deriving the lower bound. But the outline of the proof remains the same across all three theorems.
+
+\begin{thm} \label{thm:one}$e$ is transcendental.
+\end{thm}
+\begin{proof}
+Suppose not, so that $e$ is algebraic. Then $e$ satisfies some integer polynomial $\sum a_i x^i=0$ with $a_0\neq 0$. This means that
+\[a_0+a_1 e + a_2 e^2+\cdots a_n e^n=0.\]
+Let $p$ be a (sufficiently large) prime, define a polynomial of degree $m=(n+1)p-1$ by
+\[f(x)=x^{p-1}(x-1)^p\cdots (x-n)^p\]
+and let
+\[J=a_0 I(0) + a_1 I(1) + \cdots a_n I(n).\]
+We derive two sets of inconsistent bounds on $J$, thus showing that the original hypothesis is false and $e$ is transcendental.
+
+First, apply equation \eqref{one} to $J$:
+\begin{align*}J&=\sum_{k=0}^n a_k I(k)\\
+&= \sum_{k=0}^n a_k\left(e^k\sum_{j=0}^m \fdiff j0 - \sum_{j=0}^m \fdiff jk\right)\\
+&=\sum_{k=0}^n a_k e^k \sum_{j=0}^m \fdiff j0 - \sum_{k=0}^n a_k\sum_{j=0}^m \fdiff jk\\
+&=-\sum_{j=0}^m \sum_{k=0}^n a_k \fdiff jk
+\end{align*}
+where the last equality follows because of the assumed linear dependence of the powers of $e$.
+
+Consider the values of $\fdiff jk$. If $j<p-1$, then none of the factors in $f$ vanish by differentiation, so that $\fdiff jk=0$ for all $k$. If $j=p-1$, then only the initial factor $x^{p-1}$ can vanish in any term in $\fdiff jx$, and so $\fdiff jk=0$ if $k>0$. In the case where $j=p-1, k=0$, the only term in the derivative that contributes a nonzero value is the term where $x^{p-1}$ is differentiated each time; that term gives
+\[\fdiff{p-1}0 =(p-1)!(-1)^{np}(n!)^p.\]
+Finally, if $j\geq p$, then the terms in $\fdiff jk$ that are nonzero are those terms in which $(x-k)^p$ has been differentiated away; in these cases, the terms have a leading coefficient that is thus a multiple of $p!$.
+
+Now assume $p>n$; then $\fdiff{p-1}0$ is a multiple of $(p-1)!$ but not of $p!$. Putting together the above computations, we get
+\[J=Np! +a_0M(p-1)! = (p-1)!(Np+a_0M)\]
+where $M,N$ are integers and $p\nmid M$. Assume also $p>a_0$; then $Np+a_0M$ must be nonzero and thus $\lvert J\rvert \geq (p-1)!$.
+
+On the other hand, obviously $F(k)\leq (2n)^m$ and thus
+\[\lvert J\rvert\leq \lvert a_1\rvert e F(1)+\cdots \lvert a_n\rvert ne^nF(n)\leq ane^n(2n)^{(n+1)p-1}=\frac{ane^n}{2n}((2n)^{n+1})^p\leq c^p\]
+where $a=\max(\lvert a_1\rvert,\ldots,\lvert a_n\rvert)$ and $c$ is some constant that does not depend on $p$.
+
+But for $p$ large enough, $(p-1)!>c^p$ no matter what $c$ is, so these two bounds on $J$ are contradictory.
+\end{proof}
+
+\begin{thm} \label{thm:two}$\pi$ is transcendental.
+\end{thm}
+\begin{proof}
+Again suppose not. Then $i\pi$ is also algebraic. Suppose the minimal polynomial, $f$, of $i\pi$ has degree $d$, say
+\[f(x)=\sum_{i=0}^d a_i x^i\]
+with $a_0\neq 0$, and let $\theta_1=i\pi, \theta_2,\ldots,\theta_d$ be the conjugates of $i\pi$ (the other roots of $f$). Then since $e^{i\pi}=-1$, we have
+\[(1+e^{\theta_1})(1+e^{\theta_2})\cdots(1+e^{\theta_d})=0\]
+Note that since $\theta_i$ is algebraic for each $i$, then $a_d\theta_i$ is an algebraic integer.
+
+Each term in this product can be written as a power of $e$, where the exponent is of the form
+\[\beta_{\epsilon_1,\ldots,\epsilon_d}=\epsilon_1\theta_1+\epsilon_2\theta_2+\cdots+\epsilon_d\theta_d\]
+and each $\epsilon_i$ is either $0$ or $1$. Denote by $\alpha_1,\ldots,\alpha_n$ those exponents that are nonzero. Note that at least one exponent is zero, and thus $n<2^d$. We then have
+\begin{equation}\label{four}(2^d-n)+e^{\alpha_1}+\cdots e^{\alpha_n} = 0\end{equation}
+
+We will show that if we define $f$ by
+\[f(x)=a_d^{np}x^{p-1}(x-\alpha_1)^p\cdots(x-\alpha_n)^p\]
+with $p$ a (sufficiently large) prime, then
+\[J=I(\alpha_1)+\cdots+I(\alpha_n)\]
+satisfies the same incompatible bounds as in the previous theorem.
+
+Let $m=\deg f=(n+1)p-1$. As before, we see that 
+\begin{align*}J&=\sum_{k=1}^n I(\alpha_k)\\
+&= \sum_{k=1}^n \left(e^{\alpha_k}\sum_{j=0}^m \fdiff j0 - \sum_{j=0}^m \fdiff j{\alpha_k}\right)\\
+&=\sum_{k=1}^n e^{\alpha_k} \sum_{j=0}^m \fdiff j0 - \sum_{k=1}^n \sum_{j=0}^m \fdiff j{\alpha_k}\\
+&=(n-2^d)\sum_{j=0}^m \fdiff j0-\sum_{j=0}^m \sum_{k=1}^n \fdiff j{\alpha_k}
+\end{align*}
+where the last equality follows from equation \eqref{four}.
+
+The remainder of the proof is quite similar to the above proof for $e$, except that we must first show that the sum over $k$ above is an integer; this was clear in the previous theorem.
+
+Consider the inner sum over $k$. It is clear that this is a symmetric polynomial with integer coefficients in $a_d \alpha_1,\ldots,a_d\alpha_n$. The $a_d \alpha_i$ are algebraic integers since the $a_d \theta_i$ are. By the fundamental theorem of symmetric polynomials, it follows that the inner sum is in fact a polynomial in the elementary symmetric functions on the $a_d\alpha_i$. Since the $\alpha_i$ are the nonzero elements of the $\beta_{\ldots}$, we see that the sum is also a polynomial in the elementary symmetric functions of the $a_d\beta_{\ldots}$, and thus is a symmetric polynomial with integer coefficients in the $a_d\theta_i$. Again applying the fundamental theorem of symmetric polynomials, we see that the sum over $k$ must be a polynomial in the elementary symmetric functions of the $a_d\theta_i$. But these elementary symmetric functions are simply the coefficients of the minimal polynomial of $a_di\pi$, which are integers. Thus the inner sum is an integer.
+
+By arguments identical to those in the previous theorem, we have that $\fdiff j{\alpha_k}=0$ when $j<p$ and thus that $\fdiff j{\alpha_k}$ is an integral multiple of $p!$; that $\fdiff j0$ is an integral multiple of $p!$ when $j\neq p-1$; and that
+\[\fdiff {p-1}{0} = (p-1)!(-a_d)^{np}(\alpha_1\ldots\alpha_n)^p\]
+is an integral multiple of $(p-1)!$ but is not divisible by $p$ if $p$ is chosen to exceed $a_d \alpha_1\ldots\alpha_n$. Thus if also $p>n-2^d$, we have that $J$ is nonzero and divisible by $(p-1)!$ and thus $\lvert J\rvert\geq (p-1)!$. But again, similar to the proof in the previous theorem, we have that
+\[\lvert J\rvert\leq 
+\lvert\alpha_1\rvert e^{\lvert\alpha_1\rvert}F(\lvert\alpha_1\rvert)+\cdots+
+\lvert\alpha_1\rvert e^{\lvert\alpha_n\rvert}F(\lvert\alpha_n\rvert)\leq c^p\]
+and again these estimates are contradictory.
+\end{proof}
+
+The Lindemann-Weierstrass theorem generalizes both these two statements and their proofs.
+\begin{thm}\label{thm:three}
+If $\alpha_1,\ldots,\alpha_n$ are algebraic and distinct, and if $\beta_1,\ldots,\beta_n$ are algebraic and non-zero, then
+\[\beta_1 e^{\alpha_1}+\cdots\beta_n e^{\alpha_n}\neq 0\]
+\end{thm}
+
+Note that the facts that $e$ and $\pi$ are transcendental follow trivially from this theorem. For example, if $e$ were algebraic, then $e$ is the root of a polynomial $\sum \beta_i x^i$ where $\beta_i\in\Rats$, in contradiction to the theorem.
+
+\begin{proof}
+The proof follows the same general lines as above, but there are additional complexities introduced by the arbitrary $\alpha_i$. In the proof of the transcendality of $\pi$, we were able to use facts about the relationship of the exponents in the proof; no such relationship is available to us in this more general setting.
+
+Again start by supposing
+\begin{equation}\label{five}
+\beta_1 e^{\alpha_1}+\cdots\beta_n e^{\alpha_n}= 0
+\end{equation}
+where the $\alpha_i, \beta_i$ are as given. 
+
+Claim we can assume, without loss of generality, that $\beta_i\in\Ints$. For if not, take all the expressions formed by substituting for one or more of the $\beta_i$ one of its conjugates, and multiply those by the equation above. The result is a new expression of the same form (with different $\alpha_i$), but where the coefficients are rational numbers. Clear denominators, proving the claim.
+
+Next, claim we can assume that the $\alpha_i$ are a complete set of conjugates, and that if $\alpha_i, \alpha_j$ are conjugates, then $\beta_i=\beta_j$. To see this, choose an \PMlinkname{irreducible}{IrreduciblePolynomial} integral polynomial having $\alpha_1,\ldots,\alpha_n$ as roots; let $\alpha_{n+1},\ldots,\alpha_N$ be the remaining roots, and define $\beta_{n+1}=\ldots\beta_N=0$. Then clearly we have
+\[\prod_{\sigma\in S_N}\left(\beta_1 e^{\alpha_{\sigma(1)}} + \cdots \beta_N e^{\alpha_{\sigma(N)}}\right)=0\]
+(Note the similarity with the proof for $\pi$). There are $N!$ factors in this product, so expanding the product, it is a sum of terms of the form
+\[e^{h_1\alpha_1+\cdots h_N\alpha_N}\]
+with integral coefficients, and $h_1+\cdots+h_N=N!$. Clearly the set of all such exponents forms a complete set of conjugates. By symmetry considerations, we see that the coefficients of two conjugate terms are equal. Also, the product is not identically zero. To see this, consider the term in the product formed by multiplying together, from each factor, the nonzero terms with the largest exponents in the lexicographic order on $\Complex$. Since the $\alpha_i$ are unique (because the polynomial is irreducible), there is only one term with this largest exponent, and it has a nonzero coefficient by construction.
+
+Finally, order the terms so that the conjugates of a particular $\alpha_i$ appear together. That is, for the remainder of the proof we may assume that
+\[\beta_1 e^{\alpha_1} + \cdots + \beta_n e^{\alpha_n}=0\]
+with the $\beta_i\in\Ints$,and that there are integers $0=n_0 < n_1 < \cdots < n_r=n$ chosen so that, foreach $0\leq t<n$ we have
+\begin{gather*}
+\alpha_{n_t+1},\ldots,\alpha_{n_{t+1}}\text{ form a complete set of conjugates}\\
+\beta_{n_t+1} = \beta_{n_t+2} = \cdots \beta_{n_{t+1}}
+\end{gather*}
+
+Now, since $\alpha_i, \beta_i$ are algebraic, we can choose $l$ such that $l\alpha_i, l\beta_i$ are algebraic integers. Let
+\[f_i(x)=l^{np}\frac{((x-\alpha_1)\cdots(x-\alpha_n))^p}{(x-\alpha_i)},\ 1\leq i\leq n\]
+where again $p$ is a (large) prime. We will develop contradictory estimates for $\lvert J_1\ldots J_n\rvert$, where
+\[J_i=\beta_1 I_i(\alpha_1)+\cdots +\beta_n I_i(\alpha_n),\ 1\leq i\leq n\]
+and $I_i$ is the \PMlinkname{integral}{RiemannIntegral} associated with $f_i$, as above (see equation \eqref{one}).
+
+Using equations \eqref{one} and \eqref{five}, we see that
+\begin{align*}J_i & =\sum_{k=1}^n \beta_k I_i(\alpha_k)\\
+ & = \sum_{k=1}^n \left(\beta_k e^{\alpha_k}\sum_{j=0}^{np-1} f_i^{(j)}(0)\right) - \sum_{k=1}^n \left(\beta_k\sum_{j=0}^{np-1} f_i^{(j)}(\alpha_k)\right)\\
+ & = \left(\sum_{j=0}^{np-1} f_i^{(j)}(0)\right)\left(\sum_{k=1}^n \beta_k e^{\alpha_k}\right) - \sum_{k=1}^n \left(\beta_k\sum_{j=0}^{np-1} f_i^{(j)}(\alpha_k)\right)\\
+ & = -\sum_{j=0}^{np-1}\sum_{k=1}^n \left(\beta_k f_i^{(j)}(\alpha_k)\right) .
+\end{align*}
+
+Arguing similarly to the foregoing proofs, we see that $f_i^{(j)}(\alpha_k)$ is an algebraic integer divisible by $p!$ unless $j=p-1$ and $k=i$. In this particular case, we have that
+\[f_i^{p-1}(\alpha_i)=l^{np}(p-1)!\prod_{\substack {k=1\\k\neq i}}^n (\alpha_i-\alpha_k)^p\]
+and so again, if $p$ is large enough, this is divisible by $(p-1)!$ but not by $p!$. Thus $J_i$ is a nonzero algebraic integer divisible by $(p-1)!$ but not by $p!$. As before, we can prove that $J_i\neq 0$.
+
+$J_i$ can be written as follows:
+\[J_i=-\sum_{j=0}^{np-1} \sum_{t=0}^{r-1} \beta_{n_{t+1}}(f_i(j)\left(\alpha_{n_t+1}+\cdots+\alpha_{n_{t+1}}\right)\]
+Note that by construction, $f_i(x)$ can be written as a polynomial whose coefficients are polynomials in $\alpha_i$, and the integral coefficients of \emph{those} polynomials are integers independent of $i$. Thus, noting that the $\alpha_i$ form a complete set of conjugates and using the fundamental theorem on symmetric polynomials as in the previous proof, we see that the product of the $J_i$ is in fact a rational number. But it is an algebraic integer, hence an integer. Thus $J_1\cdot \ldots \cdot J_n\in\Ints$, and it is divisible by $((p-1)!)^n$. Thus $\lvert J_1\cdots J_n\rvert \geq (p-1)!$. But the same estimate as in the previous proofs shows that for each $i$,
+\[\lvert J_i\rvert \leq \sum_{k=1}^n \lvert \beta_k\rvert \lvert I_i(\alpha_k)\rvert\leq \sum_{k=1}^n\lvert \beta_k \alpha_k\rvert e^{\lvert \alpha_k\rvert}F_i(\lvert\alpha_k\rvert)\]
+which as before is $\leq c^p$ for some sufficiently large $c$. These estimates are again in contradiction, proving the theorem.
+
+\end{proof}
+
+Note that Theorems \ref{thm:one} and \ref{thm:two} are trivial corollaries of Theorem \ref{thm:three}, as one would expect. (To prove that $\pi$ is transcendental, note that if it were algebraic, then $e^{i\pi}=-1$ would be transcendental).
+
+Here are some other more or less trivial corollaries.
+
+\begin{cor} \label{cor:four}If $\alpha \neq 0$ is algebraic, then $e^{i\alpha}$ is transcendental.
+\end{cor}
+\begin{proof}
+If it were algebraic, say $e^{i\alpha}=\beta$, then we have
+\[e^{i\alpha}-\beta e^0=0\]
+in contradiction to the above theorem since $\alpha\neq 0$.
+\end{proof}
+
+\begin{cor} If $\alpha\neq 0$ is algebraic, then $\cos \alpha$ and $\sin \alpha$ are both transcendental.
+\end{cor}
+\begin{proof}
+Recall that $\cos\alpha + i\sin\alpha=e^{i\alpha}$, which is transcendental. If either $\cos\alpha$ or $\sin\alpha$ were algebraic, then the other would be as well (and thus their sum would be) since $\cos^2 \alpha+\sin^2 \alpha=1$. Therefore, both $\cos \alpha$ and $\sin\alpha$ are transcendental.
+\end{proof}
+
+\begin{cor} If $\alpha>0$ is algebraic with $\alpha\neq 1$, then $\ln\alpha$ is transcendental.
+\end{cor}
+\begin{proof}
+If $\beta=\ln\alpha$, then $e^\beta=\alpha$. By Corollary \ref{cor:four}, since $\alpha$ is algebraic, $\beta$ cannot be.
+\end{proof}
+
+\begin{thebibliography}{10}
+\bibitem{bib:baker}
+A.~Baker, \emph{Transcendental Number Theory}, Cambridge University Press, 1990.
+\bibitem{bib:cohn}
+H.~Cohn, \emph{A Short Proof of the Simple Continued Fraction Expansion of e}, American Mathematical Monthly, Jan. 2006, pp. 57-62.
+\bibitem{bib:hermite}
+C.~Hermite, \emph{Sur la fonction exponentielle}, Compte Rendu Acad. Sci. 77 (1873) 18-24, 74-79, 226-233, and 285-293; also in \emph{{\OE}uvres}, v. 3, Gauthier-Villiers, Paris, 1912 pp. 150-181.
+\bibitem{bib:hermitetrans}
+U.~G.~Mitchell,~M.~Strain, \emph{Osiris}, Vol. 1, Jan. 1936, pp. 476-496.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

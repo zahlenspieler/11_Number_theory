@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGaloisGroupOfTheCompositumOfTwoGaloisExtensions}
+\pmcreated{2013-03-22 18:42:01}
+\pmmodified{2013-03-22 18:42:01}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Galois group of the compositum of two Galois extensions}
+\pmrecord{6}{41462}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R32}
+\pmclassification{msc}{12F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Order}[1]{\left\lvert #1 \right\rvert}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\begin{document}
+\begin{proof} Consider the diagram
+\[\xymatrix @R1pc@C1pc{
+ & \ar@{-}[ld]\ar@{-}[rd]EF \\
+\ar@{-}[rd]E & & \ar@{-}[ld]F\\
+ & \ar@{-}[d]E\cap F \\
+ & K
+}
+\]
+(1): Let $p(x)\in K[x]$ with a root $\alpha\in E\cap F$. Then since $E$ (resp. $F$) is Galois over $K$, all the roots of $p$ lie in $E$ (resp. $F$) and thus in $E\cap F$. The result follows.
+
+(2): We first show that $EF$ is Galois over $K$. Choose separable polynomials $p(x),q(x)\in K[x]$ so that $E$ (resp. $F$) is a splitting field for $p$ (resp. $q$). Then $EF$ is a splitting field for the squarefree part of $pq$, which is separable since it is squarefree and since $p(x),q(x)$ are separable.
+
+Now, define
+\[\theta: \Gal(EF/K)\to \Gal(E/K)\times \Gal(F/K): \sigma\mapsto (\sigma|_E,\sigma|_F)\]
+This map is a group homomorphism; its kernel is precisely those elements that leave both $E$ and $F$ fixed. Any such element must thus leave $EF$ fixed, so that $\theta$ is injective. The image obviously lies in
+\[H=\{ (\sigma, \tau) : \sigma|_{E\cap F}=\tau|_{E\cap F} \}\]
+by construction: $(\sigma|_E)|_{E\cap F} = \sigma|_{E\cap F} = (\sigma|_F)|_{E\cap F}$. We will show that $H$ is precisely the image of $\theta$ by showing that the order of $H$ is the same as the index of the field extension $[EF:K]$.
+
+For each $\sigma\in \Gal(E/K)$, there are precisely $\Order{\Gal(F/E\cap F)}$ elements of $\Gal(F/K)$ whose restrictions to $E\cap F$ are $\sigma|_{E\cap F}$. Thus directly from the definition of $H$,
+\[
+  \Order{H} = \Order{\Gal(E/K)}\cdot\Order{\Gal(F/E\cap F)} 
+            = \Order{\Gal(E/K)}\cdot\frac{\Order{\Gal(F/K)}}{\Order{\Gal((E\cap F)/K)}}
+\]
+By the \PMlinkname{corollary to the theorem regarding the compositum of a Galois extension and another extension}{CorollaryToTheCompositumOfAGaloisExtensionAndAnotherExtensionIsGalois}, we have
+\[[EF:K] =[EF:F][F:K] = [E:E\cap F][F:K] = \frac{[E:K][F:K]}{[E\cap F:K]}\]
+so that
+\[
+  \Order{H} = [EF:K]
+\]
+\end{proof} 
+
+\begin{thebibliography}{10}
+\bibitem{bib:df}
+Dummit,~D.,~Foote,~R.M., \emph{Abstract Algebra, Third Edition}, Wiley, 2004.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheSetOfSumproductNumbersInBase2IsFinite}
+\pmcreated{2013-03-22 15:46:56}
+\pmmodified{2013-03-22 15:46:56}
+\pmowner{Mravinci}{12996}
+\pmmodifier{Mravinci}{12996}
+\pmtitle{proof that the set of sum-product numbers in base 2 is finite}
+\pmrecord{6}{37739}
+\pmprivacy{1}
+\pmauthor{Mravinci}{12996}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+\pmsynonym{Proof that the set of sum-product numbers in binary is finite}{ProofThatTheSetOfSumproductNumbersInBase2IsFinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For any positive integer with 0's in its binary representation, the equality
+
+$$n = \sum_{i = 1}^m d_i \prod_{i = 1}^m d_i$$
+
+is false, or we can rewrite it as the inequality $n > 0$. Obviously, for $n = 0$ the equality given above is true, thus 0 is the only sum-product number in binary that has 0's in its binary representation.
+
+This leaves the Mersenne numbers (numbers whose significant digits are all 1's), an infinite set but just as manageable. The Mersenne numbers are usually expressed as $2^k - 1$, but for our purposes we express them as $\displaystyle \sum_{i = 0}^{k - 1} 2^i$, which shows that for $n = 2^k - 1$, $\displaystyle \sum_{i = 1}^m d_i = k$. Regardless of how many digits a Mersenne number has, it is obvious that $\displaystyle \prod_{i = 1}^m d_i = 1$ because of the multiplicative identity. Thus, for a Mersenne number, the right hand side of our equality above will be $k$. For any nonnegative $k$, the inequality $k < 2^k - 1$ will always hold except of course for $k = 1$.
+
+This proves that 0 and 1 are the only sum-product numbers in binary.
+%%%%%
+%%%%%
+\end{document}

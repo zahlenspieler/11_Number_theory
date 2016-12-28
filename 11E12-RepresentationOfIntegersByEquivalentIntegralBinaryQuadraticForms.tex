@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationOfIntegersByEquivalentIntegralBinaryQuadraticForms}
+\pmcreated{2013-03-22 19:18:48}
+\pmmodified{2013-03-22 19:18:48}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{representation of integers by equivalent integral binary quadratic forms}
+\pmrecord{7}{42251}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E12}
+\pmclassification{msc}{11E16}
+\pmrelated{integralbinaryquadraticforms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{array}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\begin{document}
+\begin{thm} If $F, G$ are equivalent integral binary quadratic forms, then $F$ and $G$ represent the same set of integers.
+\end{thm}
+\begin{proof}
+Write $G(x,y)=F(\alpha x+\beta y, \gamma x+\delta y)$ where
+\[
+\det\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right) = \pm 1
+\]
+Then $m=G(r,s) \Rightarrow m=F(\alpha r+\beta s,\gamma r+\delta s)$, so if $G$ represents $m$, so does $F$. Since the matrix has determinant 1, it is invertible and its inverse is another integer matrix, so the reverse statement follows as well.
+\end{proof}
+
+\begin{lem} $F$ properly represents an integer $m$ if and only if $F$ is properly equivalent to a form $mx^2+Bxy+Cy^2$.
+\end{lem}
+\begin{proof}
+$\Leftarrow$: It is obvious by the above that $F$ represents $m$; the problem is to show that it represents $m$ properly. Write $G(x,y)=mx^2+Bxy+Cy^2$; then $G(x,y)=F(\alpha x+\beta y,\gamma x+\delta y)$, where $\alpha\delta-\beta\gamma=1$. Then $m=G(1,0)=F(\alpha,\gamma)$. But clearly $(\alpha,\gamma)=1$ since otherwise we cannot have $\alpha\delta-\beta\gamma=1$. So $F$ represents $m$ properly.
+\newline
+$\Rightarrow$: Write $F(p,q)=m$, where $(p,q)=1$. Since $(p,q)=1$, we can find integers $r,s$ such that $ps-qr=1$, and then
+\begin{multline*}
+F(px+ry,qx+sy)=a(px+ry)^2+b(px+ry)(qx+sy)+c(qx+sy)^2\\
+=(ap^2+bpq+cq^2)x^2+(2apr+bps+bqr+2cqs)xy+(ar^2+brs+cs^2)y^2 \\
+=F(p,q)x^2+(2apr+bps+bqr+2cqs)xy+F(r,s)y^2=mx^2+Bxy+Cy^2
+\end{multline*}
+\end{proof}
+
+\begin{defn} If $F$ is a binary quadratic form, its \emph{discriminant}, $\Delta(F)$ is $b^2-4ac$.
+\end{defn}
+
+Note that $\Delta(F)$ is always either congruent to $0$ or $1$ mod 4, and that $b$ is even (odd) exactly when $\Delta(F)\equiv 0 (1) \pmod 4$.
+
+\begin{thm}If $F, G$ are equivalent integral quadratic forms, then $\Delta(F)=\Delta(G)$.
+\end{thm}
+\begin{proof}
+For any form $F$, define
+\[
+M_F=\left( \begin{array}{cc}
+2a & b \\
+b & 2c
+\end{array}\right)
+\]
+Then 
+\[
+2F(x,y)=(x\text{ }y)M_F\left(\begin{array}{c} x \\
+y\end{array}\right)
+\]
+Note further that $\Delta(F)=-\det(M_F)$.
+
+Now in our particular case, if $G(x,y)=F(\alpha x + \beta y, \gamma x+\delta y)$, then 
+\[
+2G(x,y) = (\alpha x + \beta y\text{  } \gamma x+\delta y)M_F\left(\begin{array}{c} \alpha x + \beta y \\
+\gamma x+\delta y\end{array}\right)=(x\text{ }y)\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right)M_F\left( \begin{array}{cc}
+\alpha & \beta \\
+\gamma & \delta
+\end{array}\right)\left(\begin{array}{c} x \\
+y\end{array}\right)
+\]
+Hence 
+\[
+M_G = \left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right) M_F \left( \begin{array}{cc}
+\alpha & \beta \\
+\gamma & \delta
+\end{array}\right)
+\]
+But $\Delta(F) = -\det(M_F)$, so since $\det\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right)=\det\left( \begin{array}{cc}
+\alpha & \beta \\
+\gamma & \delta
+\end{array}\right)=\pm1$,
+	\[
+\Delta(G)=-\det(M_G)=-\det\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right)\det(M_F)\det\left( \begin{array}{cc}
+\alpha & \beta \\
+\gamma & \delta
+\end{array}\right)=-\det(M_F)=\Delta(F)
+\]
+\end{proof}
+
+Note that this proof shows that applying a set of transformations amount to multiplying by the transform matrix on the left and its transpose on the right.
+
+\textbf{Example}: In the previous example, note that $\Delta(F) = 1-4\cdot 1\cdot 6=-23$, and $\Delta(G)=51^2-4\cdot 82\cdot 8 = 2601-2624=-23$.
+
+The converse of this theorem is not true - that is, there are forms of the same discriminant that represent different numbers. For example, $x^2+5y^2$ and $2x^2+2xy+3y^2$ both have discriminant $-20$, yet the second form represents $2$ while the first clearly does not. However, equivalence classes of forms under arbitrary (proper or improper) equivalence represent disjoint sets of primes:
+
+\begin{thm} Let $p$ be an odd prime. Suppose $F,G$ both represent $p$ and $\Delta(F)=\Delta(G)$. Then $F$ and $G$ are equivalent (but perhaps not properly equivalent).
+\end{thm}
+\begin{proof}
+Since $p$ is prime, $F$ obviously represents $p$ properly. So $F\sim px^2+bxy+cy^2$. Note that the transformation $(x,y)\mapsto(x+dy,y)$ results in a form whose middle term is $2pd+b$, so by an appropriate choice of $d$ we can arrange that $-p< b\leq p$. Similarly, $G\sim px^2+b'xy+c'y^2$ with $-p< b'\leq p$. Note also that since $b^2-4pc=b'^2-4pc'$, it follows that $b\equiv b'\pod 2$ (i.e. $b,b'$ have the same parity).
+
+Since $\Delta(F)=\Delta(G)$, we see that $b^2-4pc=b'^2-4pc'\Leftrightarrow b^2\equiv b'^2\pod p\Leftrightarrow b\equiv \pm b'\pod p$, so $b=\pm b'+kp$ for some $k$. Since $b,b'$ have the same parity and $p$ is odd, $k$ is even; since $-p<b,b'\leq p$, $k=0$ (since otherwise $b,b'$ would be separated by at least $2p$, which is impossible).
+
+We are left with two cases. If $b=b'$, then $\Delta(F) = \Delta(G)$ implies that $c=c'$ and hence $F\sim G$. If $b=-b'$, then again $\Delta(F) = \Delta(G)$ implies that $c=c'$. Then $F$ and $G$ are equivalent via the transformation $(x,y)\mapsto (x,-y)$.
+\end{proof}
+
+Note that $F(x,y)=ax^2+bxy+cy^2$ and $G(x,y)=ax^2-bxy+cy^2$ are always improperly equivalent via the transformation $(x,y)\mapsto (x,-y)$. They are sometimes properly equivalent, and sometimes not. For example, $2x^2 + 2xy + 3y^2$ and  $2x^2 - 2xy + 3y^2$ are properly equivalent while $3x^2+ 2xy + 5y^2$ and  $3x^2- 2xy + 5y^2$ are not. (See the article on reduced integral binary quadratic forms for details).
+
+In summary, we have proved the following:
+\begin{gather*}
+F,G\text{ equivalent } \quad\Rightarrow\quad F,G \text{ represent the same set of integers }\\
+F,G\text{ equivalent } \quad\Rightarrow\quad \Delta(F)=\Delta(G)\\
+\Delta(F)=\Delta(G)\text{ and } F,G\text{ both represent some odd prime }p\quad\Rightarrow\quad F\text{ and } G\text{ are equivalent}
+\end{gather*}
+
+We conclude with the following lemma and corollary, which provide concrete criteria for when an integer is representable by a class of forms.
+
+\begin{lem} If $D\equiv 0, 1\pod 4$ is an integer, and $m$ is an odd integer relatively prime to $D$, then $m$ is properly represented by a primitive form of discriminant $D$ if and only if $D$ is a quadratic residue $\mod m$.
+\end{lem}
+\begin{proof} If $F(x,y)$ properly represents $m$, then by the preceding lemma, we may assume that $F(x,y) = mx^2 + bxy + cy^2$. Then $D=b^2-4mc$, being the discriminant of $F$, so that $D \equiv b^2\pod D$. Conversely, if $D\equiv b^2\pod D$, we may assume $D\equiv b\pod 2$ (if they have different parities, replace $b$ by $b+m$; since $m$ is odd, the condition now holds and $D\equiv (b+m)^2\pod D$ as well). Since $D\equiv 0, 1\pod 4$, it follows that $D\equiv b^2\pod 4$ and thus $D\equiv b^2\pod {4m}$. Hence $D = b^2-4mc$ for some integer $c$. But then $mx^2+bxy+cy^2$ represents $m$ and has discriminant $D$; it is primitive since $\gcd(m,b) = \gcd(m,D)=1$.
+\end{proof}
+
+\begin{cor} Let $n$ be an integer, and $p$ an odd prime not dividing $n$. Then $\Leg{-n}{p}=1$ if and only if $p$ is represented by a primitive form of discriminant $-4n$.
+\end{cor}
+\begin{proof}
+By the preceding lemma, $p$ is represented by a primitive form of discriminant $-4n$ if and only if 
+\[
+  1 = \Leg{-4n}{p} = \Leg{-n}{p}
+\]
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

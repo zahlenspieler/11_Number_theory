@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCongruenceOfClausenAndVonStaudt}
+\pmcreated{2013-03-22 15:33:58}
+\pmmodified{2013-03-22 15:33:58}
+\pmowner{slachter}{11430}
+\pmmodifier{slachter}{11430}
+\pmtitle{proof of congruence of Clausen and von Staudt}
+\pmrecord{5}{37470}
+\pmprivacy{1}
+\pmauthor{slachter}{11430}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B68}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proof}{Proof}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\begin{document}
+\begin{theorem}
+For $m \geq 1$, 
+$$
+(m+1) S_m(n) = \sum_{k=0}^{m} \binom{m+1}{k} B_k n^{m+1-k},
+$$
+where
+$$
+S_m(n) = 1^m + 2^m + \ldots + (n-1)^m.
+$$
+\end{theorem}
+\begin{proof}
+In the equation
+$$
+e^{kt} = \sum_{m=0}^{\infty} k^m \left( \frac{t^m}{m!} \right),
+$$
+substitute $k = 0, 1, 2, \ldots, n-1$ and add, obtaining,
+\begin{eqnarray*}
+\sum_{m=0}^{\infty} S_m(n) \frac{t^m}{m!} = \frac{e^{nt}-1}{e^t-1} &=& \frac{e^{nt}-1}{t} \cdot \frac{t}{e^t-1} \\
+						  &=& \sum_{k=1}^{\infty} n^k \frac{t^{k-1}}{k!} 							   \sum_{j=0}^{\infty} B_j \frac{t^j}{j!},
+\end{eqnarray*}
+since
+$$
+\frac{t}{e^t-1} = \sum_{j=0}^{\infty} B_j \frac{t^j}{j!}.
+$$
+Now by comparing coefficients of $t^m$ and then multiplying by $(m+1)!$, we obtain the result.
+\end{proof}
+We will write this identity in the following form:
+\begin{eqnarray}
+S_m(n) &=& \sum_{k=0}^m \binom{m}{k} B_{m-k} \frac{n^{k+1}}{k+1} \\
+&=& \label{rel}
+B_m n + \binom{m}{1} B_{m-1} \frac{n^2}{2} + \ldots + \frac{n^{m+1}}{m+1}
+\end{eqnarray}
+This follows by replacing $\binom{m+1}{k}$ by $\frac{m+1}{m-k+1} \binom{m}{k}$ and then switching $m-k$ and $k$ in the theorem.
+
+\begin{proposition}
+Let $p$ be prime and $m \geq 1$. Then $p B_m$ is $p$-integral, and if $m \geq 2$ is even, then $p B_m \equiv S_m(p) \pmod{p}$.
+\end{proposition}
+\begin{proof}
+The first statement is equivalent to showing if $p \mid b$ then $p^2 \nmid b$, where $b$ is the denominator of $p B_m$. This is clear for $p B_1 = -p/2$. We proceed by induction. Suppose $m > 1$ and let $n=p$ in (\ref{rel}). Since $S_m(p) \in \mathbb{Z}$, it suffices to prove that
+$$
+\binom{m}{k} (p B_{m-k}) \frac{p^k}{k+1}
+$$
+is $p$-integral for $k = 1, 2, \ldots, m$. By induction $p B_{m-k} $ is $p$-integral for $k \geq 1$, and $\frac{p^k}{k+1}$ is $p$-integral since $k+1 \leq p^k$ for all primes $p$. It follows that $p B_m$ is $p$-integral.
+To establish the congruence, we need to show that if $k \geq 1$, then
+$$
+\binom{m}{k} (p B_{m-k}) \frac{p^k}{k+1} \equiv 0 \pmod{p}.
+$$
+For $k \geq 2$, $\frac{p^k}{k+1} \equiv 0 \pmod{p}$, since $k+1 < p^k$.
+For $k=1$, we have 
+$$
+\frac{m}{2} (p B_{m-1}) p \equiv 0 \pmod{p},
+$$
+since $m$ is even. In fact, since $B_{m-1} = 0$ for $m \geq 4$ even, it suffices to check it for $m=2$, which is obvious.
+\end{proof}
+
+\begin{lemma}
+Let $p$ be prime. Then
+$$
+S_m(p) \equiv \begin{cases}
+0 &\pmod{p}, ~\mbox{if $p-1 \nmid m$} \\
+-1 &\pmod{p}, ~\mbox{if $p-1 \mid m$}
+\end{cases}
+$$
+\end{lemma}
+\begin{proof}
+Let $g$ be a primitive root modulo $p$. Then
+\begin{eqnarray*}
+S_m(p) &=& 1^m + 2^m + \ldots + (p-1)^m \\
+&\equiv& 1^m + g^m + g^{2m} + \ldots + g^{(p-2)m} \pmod{p}
+\end{eqnarray*}
+Hence,
+$$
+(g^m - 1) S_m(p) \equiv g^{m(p-1)} - 1 \equiv 0 \pmod{p}.
+$$
+If $p-1 \nmid m$, then $g^m \not\equiv 1 \pmod{p}$, and $S_m(p) \equiv 0 \pmod{p}$. 
+If $p-1 \mid m$, then $S_m(p) \equiv 1 + 1 + \ldots + 1 \equiv p-1 \equiv -1 \pmod{p}$.
+\end{proof}
+
+We are now ready to prove the congruence.
+
+\begin{proof}[Proof of von Staudt-Claussen congruence]
+Assume $m$ is even. Then by the proposition, $p B_m$ is $p$-integral and $p B_m \equiv S_m(p) \pmod{p}$. Therefore, by the lemma, if $p-1 \nmid m$, then $B_m$ is a $p$-integer and if $p-1 \mid m$, then $p B_m \equiv -1 \pmod{p}$. Hence,
+$$
+A_m = B_m + \sum_{p-1 \mid m} \frac{1}{p}
+$$
+is a $p$-integer for all primes $p$. For if $q$ is a prime, and $q-1 \nmid m$, then $B_m$ is $q$-integral and hence $A_m$ is as well, since the sum contributes no negative power of $q$. Otherwise, $q-1 \mid m$ and 
+\begin{eqnarray*}
+A_m &=& B_m + \frac{1}{q} + \sum_{\substack{p-1 \mid m \\ p \neq q}} \frac{1}{p} \\
+&=& \frac{q B_m + 1}{q} + \sum_{\substack{p-1 \mid m \\ p \neq q}} \frac{1}{p} \\
+&\equiv& \sum_{\substack{p-1 \mid m \\ p \neq q}} \frac{1}{p} \pmod{\mathbb{Z}},
+\end{eqnarray*}
+which is clearly $q$-integral. Since $A_m$ is $p$-integral for all primes $p$, it must be the case that $A_m \in \mathbb{Z}$. That is,
+$$
+B_m \equiv -\sum_{\substack{p ~prime\\ p-1 \mid m}} \frac{1}{p} \pmod{\mathbb{Z}}
+$$
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

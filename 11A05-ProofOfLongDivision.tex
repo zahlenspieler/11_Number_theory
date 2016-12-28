@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLongDivision}
+\pmcreated{2013-03-22 15:36:00}
+\pmmodified{2013-03-22 15:36:00}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{proof of long division}
+\pmrecord{6}{37515}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+\pmclassification{msc}{12E99}
+\pmclassification{msc}{00A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\begin{proof}[Proof of theorem 1]
+Let $a,b$ be integers, $b \ne 0$. Set
+\[q=\begin{cases}
+\left\lfloor \frac{a}{b}\right\rfloor &\text{if $b>0$} \\
+-\left\lfloor \frac{a}{\lvert b\rvert}\right\rfloor &\text{otherwise},
+\end{cases}
+\]
+and $r=a-q\cdot b$. Since $0\le x -\lfloor x\rfloor < 1$ for any real $x$, we get for positive $b$
+\[0\le \frac{a}{b} -q =\frac{r}{b} < 1\],
+and for $b<0$
+\[0 \le \frac{a}{\lvert b \rvert} -\left\lfloor\frac{a}{\lvert b\rvert}\right\rfloor =\frac{a}{\lvert b\rvert} +q=\frac{r}{\lvert b\rvert} <1,\]
+and the statement follows immediately.
+\end{proof}
+
+\begin{proof}[Proof of theorem 2]
+Let $R$ be a commutative ring with 1, and take $b(x)$ from $R[x]$, where the leading coefficient of $b(x)$ is a unit in $R$. Without loss of generality we may assume the leading coefficient of $b(x)$ is 1.
+
+If $n$ is the degree of $b(x)$, then set
+\[q(x)=
+\begin{cases}
+0&\text{if $\deg(a(x)) <n$}\\
+a_n&\text{if $\deg(a(x))=n$},
+\end{cases}\]
+where $a_n$ is the leading coefficient of $a(x)$. Then $r(x)=a(x) -q(x)\cdot b(x)$ is either 0 or $\deg(r(x))<\deg(b(x))$, as desired.
+
+Now let $m \ge \deg(b(x))$. Then the degree of the polynomial
+\[\check{a}(x)=a(x) -a_{m+1}b(x)\cdot x^{m+1-n}\]
+is at most $m$. So by assumption we can write $a(x)$ as
+\[a(x)=b(x)\cdot(\check{q}(x)+a_{m+1}x^{m+1-n}) +\check{r}(x)\]
+where $\check{r}(x)$ is either 0, or its degree is $<b(x)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

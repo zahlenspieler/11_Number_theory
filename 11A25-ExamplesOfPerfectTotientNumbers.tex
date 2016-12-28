@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPerfectTotientNumbers}
+\pmcreated{2013-03-22 16:37:45}
+\pmmodified{2013-03-22 16:37:45}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of perfect totient numbers}
+\pmrecord{7}{38829}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+As has been proven, all powers of 3 are perfect totient numbers. Thus 3, 9, 27, 81, 243, 729, 2187, 6561, 19683, etc. are all examples of perfect totient numbers.
+
+Digging a little deeper, it follows from Perez Cacho's proof that $3p$ is a perfect totient number when the prime is of the form $4n + 1$, where $n$ is a smaller perfect totient number, that perfect totient numbers can be chained together in a somewhat similar manner to Sophie Germain primes and safe primes in Cunningham chains. That is, if $n$ is a perfect totient number and $4n + 1$ is a prime, then $12n + 3$ is a perfect totient number. Although 1 is technically not a perfect totient number, since it is technically an integer power of 3, if we indulge in granting it perfect totient number status for the purpose of seeking chains, we find that it generates the chain 1, 15, 183, 2199.
+
+The actual powers of 3 that are in fact perfect totient numbers disappoint when it comes to generating chains: 3, 39, 471; 9, 111; 27, 327; we need not even consider those $3^x \equiv 1 \mod 5$ because in that case then clearly $5|(4 \cdot 3^x + 1)$; 243; 729, 8751; etc.
+
+We'd be led astray, however, if we thought that we could generate a complete listing of perfect totient numbers simply by trying to make chains from powers of 3; such a method would overlook 4375 (which alas, however, does not make a chain). Neither does 4190263, 3932935775 nor 4764161215, three other perfect totient numbers that are not divisible by 3 and which do not give primes when multiplied by 4 and added 1.
+
+How about other multiples of 3? There is 255, 3063, 36759; 363, 4359; if nothing else among chain beginnings below a million.
+%%%%%
+%%%%%
+\end{document}

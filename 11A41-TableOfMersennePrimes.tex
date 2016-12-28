@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfMersennePrimes}
+\pmcreated{2013-03-22 18:04:25}
+\pmmodified{2013-03-22 18:04:25}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of Mersenne primes}
+\pmrecord{7}{40607}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This is a table of the known Mersenne primes. This table could be complete, but it could just as easily be hopelessly short of completeness.
+
+The first few Mersenne primes are so small written in base 10 that there is no excuse not to do so. Furthermore, since these were known since antiquity and the name of the first discoverer can be neither ascertainted nor disputed, we can dispense with the ``Discoverer'' field and instead use it for the associated perfect number (or 2-perfect number, to be more precise, see: multiply perfect number). The first field gives the rank (the Mersenne prime's position in A000396 of Sloane's OEIS), the second field gives the exponent $n$ (for the formula $2^n - 1$), the third field gives the Mersenne prime written in base 10, and the last field gives the associated 2-perfect number.
+
+\begin{tabular}{|r|r|r|r|}
+Rank & Exponent & Prime & 2-Perfect \\
+1 &  2 & 3 & 6  \\
+2 &  3 & 7 & 28 \\
+3 &  5 & 31 &  496 \\
+4 &  7 & 127 &  8128 \\
+5 &  13 & 8191 & 33550336 \\
+\end{tabular}
+
+The number 1 has been left off this listing, not out of some dogmatic belief that it is not a prime number, but because accepting it as a Mersenne prime one would have to also explain the fact that it leads to a 1-perfect number instead of a 2-perfect number like the other Mersenne primes. So for this particular application, 1 can't be considered a Mersenne prime.
+
+Moving along, the associated 2-perfect numbers are getting too large, so we'll omit them for the rest of the table, and reinstate the ``Discoverer'' field.
+
+\begin{tabular}{|r|r|r|l|}
+Rank & Exp. & Prime & Discoverer \\
+6 &  17 & 131071 & Pietro Cataldi, 1588 \\
+7 &  19 & 524287 & Pietro Cataldi, 1588 \\
+8 &  31 & 2147483647 & Leonhard Euler, 1772 \\
+9 &  61 & 2305843009213693951 & Ivan Pervushin, 1883 \\
+10 &  89 & 618970019642690137449562111 & R. E. Powers, 1911 \\
+11 &  107 & 162259276829213363391578010288127 & R. E. Powers, 1914 \\
+12 &  127 & 170141183460469231731687303715884105727 & \'Edouard Lucas, 1876 \\
+\end{tabular}
+
+Now it starts to become impractical to write out these numbers in base 10. So we'll settle for scientific notation, with our third field giving a number between 0 and 10, our fourth field giving the exponent to which to raise 10 and multiply by the number in the third field, and the name of the discoverer is moved to the fifth field. The number in scientific notation is of course useless if you wish to perform any kind of modular arithmetic, but it can be helpful in order to computer other things, such as how many football fields it would take to write the number out in base 10 in 12 point Courier New. If you just want to know how many base 10 digits it has, just add 1 to the scientific notation exponent. By contrast, the bits (binary digits) of these Mersenne primes have an extremely efficient, lossless run-length encoding: the exponent indicates how many 1s the number consists of in binary.
+
+\begin{tabular}{|r|r|r|r|l|}
+Rank & Exp. & Prime (SCN) & SCN exp. &  Discoverer \\
+13 &  521 &  6.864797660130609 & 156 & Robinson, 1952 \\
+14 &  607 &  5.311379928167670 & 182 & Robinson, 1952 \\
+15 &  1279 & 1.040793219466439 & 385 & Robinson, 1952 \\
+16 &  2203 & 1.475979915214180 & 663 & Robinson, 1952 \\
+17 &  2281 & 4.460875571837584 & 686 & Robinson, 1952 \\
+18 &  3217 & 2.591170860132026 & 968 & Riesel, 1957 \\
+19 &  4253 & 1.907970075244390 & 1280 & Alexander Hurwitz, 1961 \\
+20 &  4423 & 2.855425422282796 & 1331 & Alexander Hurwitz, 1961 \\
+21 &  9689 & 4.782202788054612 & 2916 & Donald B. Gillies, 1963 \\
+22 &  9941 & 3.460882824908512 & 3375 & Donald B. Gillies, 1963 \\
+23 &  11213 &  2.814112013697373 & 6001 & Donald B. Gillies, 1963 \\
+24 &  19937 &  4.315424797388162 & 6532 & Bryant Tuckerman, 1971 \\
+25 &  21701 &  4.486791661190433 &  6532 & Nickel, L. Curt Noll, 1978 \\
+26 &  23209 &  4.028741157789888 &  6986 & L. Curt Noll, 1979 \\
+27 &  44497 &  8.545098243036338 &  13394 & David Slowinski, Nelson, 1979 \\
+28 &  86243 &  5.369279955027563 &  25961 & David Slowinski, 1982 \\
+29 &  110503 & 5.219283133417550 &  33264 & Welsh, Colquitt, 1988 \\
+30 &  132049 & 5.127402762693207 &  39750 & David Slowinski, 1983 \\
+31 &  216091 & 7.460931030646613 &  65049 & David Slowinski, 1985 \\
+32 &  756839 & 1.741359068200870 &  227831 & David Slowinski, Paul Gage, 1992 \\
+33 &  859433 &  1.294981256042076 &  258715 & David Slowinski, Paul Gage, 1994 \\
+34 &  1257787 & 4.122457736214286 &  378631 & David Slowinski, Paul Gage, 1996 \\
+35 &  1398269 & 8.147175644125730 &  420920 & Great Internet Mersenne Prime Search (GIMPS), Joel Armengaud, George F. Woltman, 1996 \\
+36 &  2976221 & 6.233400762485786 &  895931 & GIMPS, Gordon Spence, George F. Woltman, 1997 \\
+37 &  3021377 & 1.274116830300933 &  909525 & GIMPS, Roland Clarkson, George F. Woltman, Scott Kurowski, 1998 \\
+38 &  6972593 & 4.370757441270813 &  2098959 & GIMPS, Najan Hajratwala, George F. Woltman, Scott Kurowski, 1999 \\
+\end{tabular}
+
+These next few Mersenne primes have question marks next to their rank. If any other Mersenne primes are found with exponents between 13466917 and 32582657, the ranks of at least one of these will have to be adjusted. But if no others are found in that range, the question marks can simply be removed.
+
+\begin{tabular}{|r|r|r|r|l|}
+Rank & Exp. & Prime (SCN) & SCN exp. &  Discoverer \\
+39? &  13466917 & 9.249477380067013222477584 &  4053945 & GIMPS, Michael Cameron, George F. Woltman, Scott Kurowski, 2001 \\
+40? &  20996011 & 1.259768954503301050204943 &  6320429 & GIMPS, Michael Shafer, George F. Woltman, Scott Kurowski, 2003 \\
+41? &  24036583 & 2.994104294041571720890489 &  7235732 & GIMPS, Josh Findley, George F. Woltman, Scott Kurowski, 2004 \\
+42? &  25964951 & 1.221646300612779481077540 &  7816229 & GIMPS, Dr. Martin Novak MD, George F. Woltman, Scott Kurowski, 2005 \\
+43? &  30402457 & 3.154164756188460809363030 &  9152051 & GIMPS, Curtis Cooper, Steven R. Boone, George F. Woltman, Scott Kurowski, 2005 \\
+44? &  32582657 & 1.245750260153694554008555 &  9808357 & GIMPS, Curtis Cooper, Steven R. Boone, George F. Woltman, Scott Kurowski, 2006 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfTheLucasLehmerPrimalityTestOnSmallNumbers}
+\pmcreated{2013-03-22 17:45:40}
+\pmmodified{2013-03-22 17:45:40}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of the Lucas-Lehmer primality test on small numbers}
+\pmrecord{5}{40214}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+To illustrate the Lucas-Lehmer primality test for Mersenne numbers, it is best to use small numbers. For any purpose other than pedagogical, applying this test to a small number is of course more trouble than it's worth, since it would be much easier to just perform integer factorization; a classic example of ``sandblasting a soup cracker,'' in Scott Adams' words. But for the purpose of illustrating the test, since the numbers in the recurrence relation get quite large, small numbers are more suitable.
+
+Is $M_3 = 2^3 - 1 = 7$ a Mersenne prime? The first few terms of the recurrence relation $s_n = {s_{n - 1}}^2 - 2$ (with initial term $s_1 = 4$) are 4, 14, 194, 37634, 1416317954, 2005956546822746114, 4023861667741036022825635656102100994, etc. (see A003010 in Sloane's OEIS). For our first example, we need to look up $s_{3 - 1}$, which is 14. That number divided by 7 is 2, telling us that 7 is indeed a Mersenne prime.
+
+Is $M_7 = 2^7 - 1 = 127$ a Mersenne prime? $s_6 = 2005956546822746114$ and that divides neatly by 127, being 15794933439549182 times 127. So 127 is indeed a Mersenne prime. Already this is larger than what a typical pocket scientific calculator can handle with integer precision.
+
+What about 11? $s_{10}$ is 687296824066442772388374862317475309242471541086466717521926185830884874057909
+579647328830691025610434367796639355951720423573065949163446060745647128680782
+876080552030246583594390175808839109786661858757174155410844949265004751673811
+68505927378181899753839260609452265365274850901879881203714, which divided by 2047 gives a remainder of 1736, telling us that 2047 is a Mersenne number but not a Mersenne prime. Even by computer it would have been quicker to perform trial division on 2047, giving the result $2047 = 23 \times 89$. But already for $M_{59}$, with its least prime factor being 179951, the 16336th prime, the Lucas-Lehmer test appears much more attractive than trial division.
+
+How does the test work on a composite number, say 4? Seeing that $s_3 = 194 \equiv 14 \mod 15$ (or $-1 \mod 15$ if you prefer), it is quite obvious that 15 is not a Mersenne prime.
+%%%%%
+%%%%%
+\end{document}

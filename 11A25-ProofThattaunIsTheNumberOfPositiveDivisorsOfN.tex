@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThattaunIsTheNumberOfPositiveDivisorsOfN}
+\pmcreated{2013-03-22 13:30:24}
+\pmmodified{2013-03-22 13:30:24}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that $\tau(n)$ is the number of positive divisors of $n$}
+\pmrecord{11}{34088}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The following is a proof that $\tau$ counts the positive divisors of its input (which must be a positive integer).
+
+\begin{proof}
+
+Recall that $\tau$ behaves according to the following two rules:
+
+\begin{enumerate}
+\item If $p$ is a prime and $k$ is a nonnegative integer, then $\tau(p^k)=k+1$.
+\item If $\gcd(a,b)=1$, then $\tau(ab)=\tau(a)\tau(b)$.
+\end{enumerate}
+
+Let $p$ be a prime.  Then $p^0=1$.  Note that 1 is the only positive divisor of 1 and $\tau(1)=\tau(p^0)=0+1=1$.
+
+Suppose that, for all positive integers $m$ smaller than $z \in \mathbb{Z}$ with $z>1$, the number of positive divisors of $m$ is $\tau(m)$.  Since $z>1$, there exists a prime divisor $p$ of $z$.  Let $k$ be a positive integer such that $p^k$ exactly divides $z$.  Let $a$ be a positive integer such that $z=p^ka$.  Then $\gcd(a,p)=1$.  Thus, $\gcd(a,p^k)=1$.  Since $1\le a<z$, by the induction hypothesis, there are $\tau(a)$ positive divisors of $a$.
+
+Let $d$ be a positive divisor of $z$.  Let $y$ be a nonnegative integer such that $p^y$ exactly divides $d$.  Thus, $0 \le y \le x$, and there are $k+1$ choices for $y$.  Let $c$ be a positive integer such that $d=p^yc$.  Then $\gcd(c,p)=1$.  Since $c$ divides $d$ and $d$ divides $z$, we conclude that $c$ divides $z$.  Since $c$ divides $p^ka$ and $\gcd(c,p)=1$, it must be the case that $c$ divides $a$.  Thus, there are $\tau(a)$ choices for $c$.  Since there are $k+1$ choices for $y$ and there are $\tau(a)$ choices for $c$, there are $(k+1)\tau(a)$ choices for $d$.  Hence, there are $(k+1)\tau(a)$ positive divisors of $z$.  Since $\tau(z)=\tau(p^ka)=\tau(p^k)\tau(a)=(k+1)\tau(a)$, it follows that, for every positive integer $n$, the number of positive divisors of $n$ is $\tau(n)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

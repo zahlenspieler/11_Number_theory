@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDivisionAlgorithmForIntegers}
+\pmcreated{2013-03-22 13:01:11}
+\pmmodified{2013-03-22 13:01:11}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of division algorithm for integers}
+\pmrecord{4}{33404}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $a,b$ integers ($b>0$). We want to express $a=bq+r$ for some integers $q,r$ with $0\leq r < b$ and that such expression is unique.
+
+Consider the numbers
+$$\ldots, a-3b, a-2b, a-b,a,a+b,a+2b,a+3b,\ldots$$
+From all these numbers, there has to be a smallest non negative one. Let it be $r$. 
+Since $r=a-qb$ for some $q$,\footnote{For example, if $r =a+5b$ then $q=-5$.} we have $a=bq+r$. And, if $r\geq b$ then $r$ wasn't the smallest non-negative number on the list, since the previous (equal to $r-b$) would also be non-negative. Thus $0\leq r<b$.
+
+So far, we have proved that we can express $a$ as$bq+r$ for some pair of integers $q,r$ such that $0\leq r<b$. Now we  will prove the uniqueness of such expression.
+
+
+Let $q'$ and $r'$ another pair of integers holding $a=bq'+r'$ and $0\leq r' <b$. Suppose $r\neq r'$. Since $r' = a-bq'$ is a number on the list, cannot be smaller or equal than $r$ and thus $r<r'$. Notice that 
+$$0<r'-r =(a-bq') - (a-bq) = b(q-q')$$
+so $b$ divides $r'-r$ which is impossible since $0<r'-r < b$. We conclude that $r'=r$. 
+Finally, if $r=r'$ then $a-bq = a-bq'$ and therefore $q=q'$. This concludes the proof of the uniqueness part.
+%%%%%
+%%%%%
+\end{document}

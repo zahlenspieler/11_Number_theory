@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComputationOfPowersUsingFermatsLittleTheorem}
+\pmcreated{2013-03-22 13:17:42}
+\pmmodified{2013-03-22 13:17:42}
+\pmowner{basseykay}{877}
+\pmmodifier{basseykay}{877}
+\pmtitle{computation of powers using Fermat's little theorem}
+\pmrecord{5}{33794}
+\pmprivacy{1}
+\pmauthor{basseykay}{877}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+%\pmkeywords{number theory}
+%\pmkeywords{RSA}
+%\pmkeywords{cryptography}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\remainder}{\: \% \:}
+\begin{document}
+A straightforward application of Fermat's theorem consists of rewriting the power of an integer mod $n$. Suppose we have $x \equiv a^b \pmod{n}$ with $a \in \mathcal{U}(n)$. Then, by Fermat's theorem we have
+\begin{equation*}
+a^{\phi(n)}\equiv 1 \pmod{n},
+\end{equation*}
+so
+\begin{equation*}
+x \equiv a^b (1)^k \equiv a^b (a^{\phi(n)})^k \equiv a^{b+k\phi(n)} \pmod{n}
+\end{equation*}
+for any integer $k$. This means we can replace $b$ by any integer congruent to it mod $\phi(n)$. In particular we have
+\begin{equation*}
+x \equiv a^{b \remainder \phi(n)} \pmod{n}
+\end{equation*}
+ where $b \remainder \phi(n)$ denotes the remainder of $b$ upon division by $\phi(n)$.
+
+This can be used to make the computation of large powers easier. It also allows one to find an easy to compute inverse to $x^b \pmod{n}$ whenever $b \in \mathcal{U}(n)$. In fact, this is just $x^{b^{-1}}$ where $b^{-1}$ is an inverse to $b$ mod $\phi(n)$. This forms the base of the RSA cryptosystem where a message $x$ is encrypted by raising it to the $b$th power, giving $x^b$, and is decrypted by raising it to the $b^{-1}$th power, giving 
+\begin{equation*}
+(x^b)^{b^{-1}} \equiv x^{b b^{-1}},
+\end{equation*}
+which, by the above argument, is just
+\begin{equation*}
+x^{ b b^{-1} \remainder \phi(n)} \equiv x,
+\end{equation*}
+the original message!
+%%%%%
+%%%%%
+\end{document}

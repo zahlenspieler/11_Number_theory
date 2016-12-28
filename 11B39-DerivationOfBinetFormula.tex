@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfBinetFormula}
+\pmcreated{2013-03-22 15:03:50}
+\pmmodified{2013-03-22 15:03:50}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{derivation of Binet formula}
+\pmrecord{4}{36784}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B39}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+The characteristic polynomial for the Fibonacci recurrence $f_n = f_{n-1}+f_{n-2}$ is
+\[
+x^2 = x +1.
+\]
+
+The solutions of the characteristic equation $x^2-x-1=0$ are 
+\[
+\phi=\frac{1+\sqrt5}2,\qquad \psi=\frac{1-\sqrt5}2
+\]
+so the closed formula for the Fibonacci sequence must be of the form
+\[
+f_n = u\phi^n +v\psi^n
+\]
+for some real numbers $u,v$. Now we use the boundary conditions of the recurrence, that is, $f_0=0, f_1=1$, which means we have to solve the system
+\[
+0=u \phi^0 +v\psi^0, \qquad 1=u\phi^1 + v\psi^1
+\]
+The first equation simplifies to $u=-v$ and substituting into the second one gives:
+\[
+1=u\left(\frac{1+\sqrt5}2\right) - u\left(\frac{1-\sqrt5}2\right) = u\left(\frac{2\sqrt{5}}2\right)=u\sqrt{5}.
+\]
+
+Therefore
+\[
+u=\frac{1}{\sqrt5},\qquad v=\frac{-1}{\sqrt5}
+\]
+and so
+\[
+f_n = \frac{\phi^n}{\sqrt5}- \frac{\psi^n}{\sqrt5}=\frac{\phi^n-\psi^n}{\sqrt5}.
+\]
+%%%%%
+%%%%%
+\end{document}

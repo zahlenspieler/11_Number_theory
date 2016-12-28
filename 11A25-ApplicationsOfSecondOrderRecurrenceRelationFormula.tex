@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationsOfSecondOrderRecurrenceRelationFormula}
+\pmcreated{2013-03-22 17:51:46}
+\pmmodified{2013-03-22 17:51:46}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{applications of second order recurrence relation formula}
+\pmrecord{8}{40340}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+\pmclassification{msc}{11F11}
+\pmclassification{msc}{11B39}
+\pmclassification{msc}{11B37}
+\pmclassification{msc}{03D20}
+\pmrelated{FibonacciSequence}
+\pmrelated{RamanujanTauFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{theorem}
+
+We give two applications of the formula for sequences satisfying second order recurrence relations:
+
+\begin{enumerate}
+\item Recall that the Fibonacci sequence satisfies the recurrence relation
+\[
+f_{n+1}=f_n + f_{n-1}.
+\]
+Thus, $f_0=1$, $A=1$, and $B=1$.  Therefore, the theorem yields the following formula for the Fibonacci sequence:
+\[
+f_n=\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \binom{n-k}{k}
+\]
+\item \PMlinkname{Fix}{Fix2} a prime $p$ and define a sequence $s$ by $s_n=\tau(p^n)$, where $\tau$ denotes the Ramanujan tau function.  Recall that $\tau$ satisfies
+\[
+\tau(p^{n+1})=\tau(p)\tau(p^n)-p^{11}\tau(p^{n-1}).
+\]
+Thus, $s_0=1$, $A=\tau(p)$, and $B=-p^{11}$.  Therefore, the theorem yields
+\[
+\tau(p^n)=\sum_{k=0}^{\lfloor\frac{n}{2}\rfloor} \binom{n-k}{k} (-p^{11})^k (\tau(p))^{n-2k}.
+\]
+This formula is valid for all primes $p$ and all nonnegative integers $n$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

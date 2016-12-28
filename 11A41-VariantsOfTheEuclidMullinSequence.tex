@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariantsOfTheEuclidMullinSequence}
+\pmcreated{2013-03-22 17:38:12}
+\pmmodified{2013-03-22 17:38:12}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{variants of the Euclid-Mullin sequence}
+\pmrecord{4}{40058}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Only 43 terms are known of the Euclid-Mullin sequence: 2, 3, 7, 43, 13, 53, 5, 6221671, 38709183810571, 139, 2801, 11, 17, 5471, 52662739, 23003, 30693651606209, 37, 1741, 1313797957, 887, 71, 7127, 109, 23, 97, 159227, 643679794963466223081509857, 103, 1079990819, 9539, 3143065813, 29, 3847, 89, 19, 577, 223, 139703, 457, 9649, 61, 4357.
+
+The Hungarian mathematician E. Labos noticed that if we try to vary the Euclid-Mullin sequence by starting ``with 3, 7 or 43 instead of 2, then from $a_5$ onwards'' the resulting sequence is the same as the Euclid-Mullin sequence. This is easily verified with reference to the fact that multiplication is commutative. Starting with any odd prime, one more than that is an even number, therefore the second term of any variant of the Euclid-Mullin sequence will have 2 as its second term. Twice 3, 7 or 43 gives 6, 14 or 86, and the least prime factor of 7, 15 or 87 is 7, 3 or 3. By the fourth term, then, we have the same terms of the Euclid-Mullin sequence except in a different order.
+
+What if we start with other primes? If we start with an odd Sophie Germain prime, then, as we've remarked, the second term will be 2, and the third term will be the matching safe prime. Where the sequence goes after that can still be quite unpredictable. For example: 5, 2, 11, 3, 331, 19, 199, 53, 21888927391, 29833, 101, 71, 23, 311, 7.
+
+With the Euclid-Mullin sequence, 31 is the smallest prime whose membership in the sequence is in doubt. Are there variants of the Euclid-Mullin sequence in which the smallest prime of doubtful membership is greater than 31? None that I've been able to find. In its first twenty terms, starting with 17, we get: 17, 2, 5, 3, 7, 3571, 31, 395202571, 13, 29, 137, 23, 97, 1896893, 34138453466895150823580146142491, 4639, 61, 181, 43, 19. Not only is 11 missing, but 31 is not to be seen in this selection either!
+
+Generally we can find 2, 3, 5 and 7 fairly early on, often clumped together. But with 23, we get these fifteen terms: 23, 2, 47, 3, 13, 84319, 7109609443, 463, 23403050994721829453179, 7, 5, 57367, 239, 40237, 10575444619218059847586376042094152838881224222904607376771. While not every prime will give a sequence with a significantly large term early on, the one for 83 looks atypical in that its first ten terms are all less than a thousand: 83, 2, 167, 3, 7, 67, 5, 13, 719, 37, 11, 31, 1367, 31440216015620321911, 988487183108868589955299792587646370011, 19, 499, 937, 23, 29. What if we start with a largish prime? Then probably the next dozen terms or so will be smallish. To close, I choose a prime from the known terms of the Euclid-Mullin sequence: 38709183810571, 2, 3, 7, 43, 13, 53, 5, 6221671, 139. Note that 6221671, which occurs right before 38709183810571 in the Euclid-Mullin sequence, here comes after and is separated by seven primes less than a hundred.
+%%%%%
+%%%%%
+\end{document}

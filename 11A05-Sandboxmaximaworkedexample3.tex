@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sandboxmaximaworkedexample3}
+\pmcreated{2014-12-30 17:48:15}
+\pmmodified{2014-12-30 17:48:15}
+\pmowner{robert_dodier}{1000903}
+\pmmodifier{robert_dodier}{1000903}
+\pmtitle{sandbox-maxima-worked-example-3}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{robert_dodier}{1000903}
+\pmtype{Example}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Before we get started, load ezunits.
+\begin{verbatim}
+load (ezunits);
+\end{verbatim}
+$$
+ \mbox{{}/usr/local/share/maxima/branch\_5\_32\_base\_2\_g0e99686/share/ezunits/ezunits.mac{}}$$
+\section{Units in integrals and derivatives
+}
+\subsection{Integral
+}
+Units for integrals and derivatives are derived as the same units that a finite approximation would yield.
+Turn off simplification for a moment so that we can have a look at the unsimplified form.
+\begin{verbatim}
+simp : false $
+foo : 'integrate ((3 * t^2) ` m/s, t ` s, 0 ` s, t[1] ` s);
+\end{verbatim}
+$$\int_{0\;\mathrm{s}}^{t_{1}\;\mathrm{s}}{3\,t^2\;{{\mathrm{m}
+ }\over{\mathrm{s}}}\;dt\;\mathrm{s}}$$
+Now go ahead and simplify it.
+\begin{verbatim}
+simp : true $
+foo : ''foo;
+\end{verbatim}
+$$3\,\left(\int_{0}^{t_{1}}{t^2\;dt}\right)\;\mathrm{m}$$
+\begin{verbatim}
+%, nouns;
+\end{verbatim}
+$$t_{1}^3\;\mathrm{m}$$
+\subsection{Derivative
+}
+Again, have a look at the unsimplified form.
+\begin{verbatim}
+simp : false $
+foo : 'diff (sqrt (t) ` inch, t ` year, 1);
+\end{verbatim}
+$${{d+^{1}}\over{d\,`^1\left(t , {\it year}\right)}}\,\left(\sqrt{t}
+ \;\mathrm{inch}\right)$$
+Go ahead and simplify it.
+\begin{verbatim}
+simp : true $
+foo : ''foo;
+\end{verbatim}
+$${{d}\over{d\,t}}\,\sqrt{t}\;{{\mathrm{inch}}\over{\mathrm{year}}}$$
+\begin{verbatim}
+foo, nouns;
+\end{verbatim}
+$${{1}\over{2\,\sqrt{t}}}\;{{\mathrm{inch}}\over{\mathrm{year}}}$$
+\section{Units in solving equations
+}
+`solve_dimensional' can solve equations in which unit-ful expressions contain unknowns.
+\begin{verbatim}
+foo : solve_dimensional (10^6 ` Btu = 1/2 * (10 ` lbm) * v^2, v);
+\end{verbatim}
+$$\left[ v=\left(-8\,5^{{{5}\over{2}}}\right)\;{{\sqrt{\mathrm{Btu}}
+ }\over{\sqrt{\mathrm{lbm}}}} , v=8\,5^{{{5}\over{2}}}\;{{\sqrt{
+ \mathrm{Btu}}}\over{\sqrt{\mathrm{lbm}}}} \right] $$
+\begin{verbatim}
+dimensions (foo);
+\end{verbatim}
+$$\left[ {\it dimensions}\left(v\right)={{{\it length}}\over{
+ {\it time}}} , {\it dimensions}\left(v\right)={{{\it length}}\over{
+ {\it time}}} \right] $$
+\begin{verbatim}
+foo1 : foo `` m/s;
+\end{verbatim}
+$$\left[ {\it ``}\left(v , {{m}\over{s}}\right)=\left(-{{128\,5^{{{13
+ }\over{2}}}\,\sqrt{1055}}\over{\sqrt{45359237}}}\right)\;{{
+ \mathrm{m}}\over{\mathrm{s}}} , {\it ``}\left(v , {{m}\over{s}}
+ \right)={{128\,5^{{{13}\over{2}}}\,\sqrt{1055}}\over{\sqrt{45359237}
+ }}\;{{\mathrm{m}}\over{\mathrm{s}}} \right] $$
+\begin{verbatim}
+float (foo1);
+\end{verbatim}
+$$\left[ {\it ``}\left(v , {{m}\over{s}}\right)=\left(-
+ 21567.92463845541\right)\;{{\mathrm{m}}\over{\mathrm{s}}} , {\it ``}
+ \left(v , {{m}\over{s}}\right)=21567.92463845541\;{{\mathrm{m}
+ }\over{\mathrm{s}}} \right] $$
+\section{Selecting a named field from a unit-ful expression
+}
+`@' distributes over unit-ful expressions.
+\begin{verbatim}
+defstruct (my3d (x, y, z));
+\end{verbatim}
+$$\left[ {\it my3d}\left(x , y , z\right) \right] $$
+\begin{verbatim}
+foo : my3d (17, 29, 42) ` m;
+\end{verbatim}
+$${\it my3d}\left(17 , 29 , 42\right)\;\mathrm{m}$$
+\begin{verbatim}
+foo @ z;
+\end{verbatim}
+$$@\left({\it my3d}\left(17 , 29 , 42\right) , z\right)\;\mathrm{m}$$
+Hmm, looks like it needs a little encouragement.
+\begin{verbatim}
+''%;
+\end{verbatim}
+$$42\;\mathrm{m}$$
+\section{Real part and imaginary part of a unit-ful expression
+}
+Simplifications for unit-ful expressions apply only to noun forms of `realpart' and `imagpart'.
+Oh well.
+\begin{verbatim}
+declare (a, complex) $
+realpart (a ` m);
+\end{verbatim}
+$${\it realpart}\left(a\;\mathrm{m}\right)$$
+\begin{verbatim}
+''%;
+\end{verbatim}
+$${\it realpart}\left(a\right)\;\mathrm{m}$$
+\begin{verbatim}
+imagpart (a ` m);
+\end{verbatim}
+$${\it imagpart}\left(a\;\mathrm{m}\right)$$
+\begin{verbatim}
+''%;
+\end{verbatim}
+$${\it imagpart}\left(a\right)\;\mathrm{m}$$
+\section{Splitting off units of varying magnitudes
+}
+This one is for converting to units which come in conventional magnitude order,
+such as hours, minutes, and seconds, or miles, feet, and inches.
+When the units are specified as a list,
+the unit conversion operator will split off the first,
+then the second from the remainder of the first,
+the third from the remainder, etc.
+\begin{verbatim}
+10 ` km `` mile;
+\end{verbatim}
+$${{78125}\over{12573}}\;\mathrm{mile}$$
+\begin{verbatim}
+10 ` km `` [mile, yard, foot, inch];
+\end{verbatim}
+$$\left[ 6\;\mathrm{mile} , 376\;\mathrm{yard} , 0\;\mathrm{foot} , 
+ {{608}\over{127}}\;\mathrm{inch} \right] $$
+\begin{verbatim}
+apply ("+", %) `` km;
+\end{verbatim}
+$$10\;\mathrm{km}$$
+
+\end{document}

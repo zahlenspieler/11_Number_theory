@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingThePrimitiveElementOfBiquadraticField}
+\pmcreated{2013-03-22 17:54:25}
+\pmmodified{2013-03-22 17:54:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{using the primitive element of biquadratic field}
+\pmrecord{12}{40399}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R16}
+\pmsynonym{expressing two square roots with their sum}{UsingThePrimitiveElementOfBiquadraticField}
+\pmsynonym{irrational sum of square roots}{UsingThePrimitiveElementOfBiquadraticField}
+\pmrelated{BinomialTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $m$ and $n$ be two distinct squarefree integers $\neq 1$.\, We want to express their square roots as polynomials of
+\begin{align}
+\alpha \;:=\; \sqrt{m}\!+\!\sqrt{n}
+\end{align}
+with rational coefficients.\\
+
+If $\alpha$ is \PMlinkname{cubed}{CubeOfANumber}, the result \PMlinkescapetext{contains} no terms with $\sqrt{mn}$:
+\begin{align*}
+\alpha^3 &\;=\; (\sqrt{m})^3+3(\sqrt{m})^2\sqrt{n}+3\sqrt{m}(\sqrt{n})^2+(\sqrt{n})^3\\ 
+ &\;=\; m\sqrt{m}+3m\sqrt{n}+3n\sqrt{m}+n\sqrt{n}\\ 
+ &\;=\; (m+3n)\sqrt{m}+(3m+n)\sqrt{n}
+\end{align*}
+Thus, if we subtract from this the product $(3m\!+\!n)\alpha$, the $\sqrt{n}$ term vanishes:
+$$\alpha^3\!-\!(3m\!+\!n)\alpha \;=\; (-2m\!+\!2n)\sqrt{m}$$
+Dividing this equation by $-2m\!+\!2n$ ($\neq 0$) yields
+\begin{align}
+\sqrt{m} \;=\; \frac{\alpha^3\!-\!(3m\!+\!n)\alpha}{2(-m\!+\!n)}.
+\end{align}
+Similarly, we have
+\begin{align}
+\sqrt{n} \;=\;\frac{\alpha^3\!-\!(m\!+\!3n)\alpha}{2(m\!-\!n)}.
+\end{align}
+The \PMlinkescapetext{representations} (2) and (3) may be interpreted as such polynomials as intended.
+
+Multiplying the equations (2) and (3) we obtain a corresponding \PMlinkescapetext{representation} for the square root of $mn$ which also lies in the quartic field \,$\mathbb{Q}(\sqrt{m},\,\sqrt{n}) = \mathbb{Q}(\sqrt{m}\!+\!\sqrt{n})$:
+\begin{align*}
+\sqrt{mn} \;=\; \frac{\alpha^6\!-\!4(m\!+\!n)\alpha^4\!+\!(3m^2\!+\!10mn\!+\!3n^2)\alpha^2}{4(-m^2\!+\!2mn\!-\!n^2)}\\
+\end{align*}
+
+
+For example, in the special case \,$m := 2,\; n := 3$\, we have
+$$\sqrt{2} \;=\; \frac{\alpha^3\!-\!9\alpha}{2}, \quad  \sqrt{3} \;=\; -\frac{\alpha^3\!-\!11\alpha}{2}, \quad 
+ \sqrt{6} \;=\; \frac{-\alpha^6\!+\!20\alpha^4\!-\!99\alpha^2}{4}.\\$$
+
+\textbf{Remark.}\, The sum (1) of two square roots of positive squarefree integers is always irrational, since in the contrary case, the equation (3) would say that $\sqrt{n}$ would be rational; this has been proven impossible \PMlinkname{here}{SquareRootOf2IsIrrationalProof}.
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

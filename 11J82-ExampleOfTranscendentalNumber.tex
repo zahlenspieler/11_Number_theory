@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfTranscendentalNumber}
+\pmcreated{2013-03-22 15:02:45}
+\pmmodified{2013-03-22 15:02:45}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{example of transcendental number}
+\pmrecord{7}{36760}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J82}
+\pmclassification{msc}{11J81}
+%\pmkeywords{transcendental}
+%\pmkeywords{algebraic}
+\pmrelated{LiouvillesTheorem}
+\pmrelated{RothsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+The following is a classical application of Liouville's approximation theorem. For completeness, we state Liouville's result here:
+
+\begin{thm}
+For any algebraic number $\alpha$ with degree $m>1$, there exists a constant $c=c(\alpha)>0$ such that:
+$$|\alpha-\frac{p}{q}|> \frac{c}{q^m}$$
+for all rationals $p/q$ (with $q>0$).
+\end{thm}
+
+Next we use the theorem to construct a transcendental number.
+
+\begin{cor}
+The real number
+$$\psi= \sum_{n=1}^\infty \frac{1}{10^{n!}}=0.1100010\ldots$$
+is transcendental.
+\end{cor}
+\begin{proof}
+Clearly, the number $\psi$ is well defined, i.e. the series converges. Indeed, 
+$$\frac{1}{10^{n!}}<\frac{1}{10^n}$$
+and $\sum_{n=1}^\infty 10^{-n}=1/9$. Thus, by the comparison test, the series converges and $0<\psi<1/9$.\\
+
+Suppose, for a contradiction, that $\psi$ is algebraic of degree $m$. We will construct infinitely many rationals $p/q$ such that 
+$$|\psi - \frac{p}{q}|< \frac{c}{q^m}$$
+where $c=c(\psi)$ is the constant given by the theorem above. Let $k\in \Nats$ be such that $1/2^k < c$. Then, in fact, we will show that there are infinitely many rationals $p/q$ with $q\geq 2$ such that 
+$$|\psi -\frac{p}{q}|<\frac{1}{q^{m+k}}<\frac{1}{2^k}\cdot \frac{1}{q^m}<\frac{c}{q^m}$$
+For all $j>k+m$ we define a rational number $p_j/q_j$ by:
+$$p_j=10^{j!}\sum_{n=1}^j 10^{-n!},\quad q_j=10^{j!}$$
+then $p_j$ and $q_j$ are relatively prime integers and we have:
+\begin{eqnarray*}
+|\psi - \frac{p_j}{q_j}| & = & \sum_{n=j+1}^\infty \frac{1}{10^{n!}}\\
+& < & \frac{1}{10^{(j+1)!}}(1+\frac{1}{10}+\frac{1}{10^2}+\ldots)\\
+& = & 10/9\cdot \frac{1}{q_j^{(j+1)}} \\
+& < & \frac{1}{q_j^j}\\
+& < & \frac{1}{q_j^{(k+m)}}
+\end{eqnarray*}
+where in the last inequality we have used the fact that $j>k+m$. Therefore, all rationals $\{ p_j/q_j \}_{j=k+m+1}^\infty$ satisfy the desired inequality, which leads to the contradiction with the theorem above. Thus $\psi$ cannot be algebraic and it must be transcendental.
+\end{proof}
+
+Many other similar transcendental numbers can be constructed in this fashion.
+%%%%%
+%%%%%
+\end{document}

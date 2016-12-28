@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BertrandsConjectureProofOf}
+\pmcreated{2013-03-22 13:18:55}
+\pmmodified{2013-03-22 13:18:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Bertrand's conjecture, proof of}
+\pmrecord{15}{33822}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11N05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{lemma*}{Lemma}
+\begin{document}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{conjecture}
+\PMlinkescapeword{minimal}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{information}
+
+This is a version of Erd\H{o}s's proof as it appears in Hardy and Wright.
+
+We begin with the following lemma.
+
+\begin{lemma*}
+Let $n$ be a positive integer and $p$ be a prime.  The highest power of $p$ dividing $n!$ is $\displaystyle\sum_j\left\lfloor\frac{n}{p^j}\right\rfloor$, where $\lfloor x\rfloor$ is the floor of $x$.
+\end{lemma*}
+
+\begin{proof}
+Let $p^k$ divide $n!$ with $k$ as large as possible.  Every $p$th term of the sequence $1,\dots,n$ is divisible by $p$, so contributes a factor to $p^k$.  There are $\displaystyle\left\lfloor\frac{n}{p}\right\rfloor$ such factors.  Every $p^2$th term contributes an extra factor above that, providing $\displaystyle\left\lfloor\frac{n}{p^2}\right\rfloor$ new factors.  In general, the $p^j$th terms contribute $\displaystyle\left\lfloor\frac{n}{p^j}\right\rfloor$ extra factors to $p^k$.  So the highest power of $p$ dividing $n!$ is $\displaystyle\sum_j\left\lfloor\frac{n}{p^j}\right\rfloor$.
+\end{proof}
+
+We now prove the theorem.
+
+\begin{proof}[Bertrand's conjecture]
+Let $n>2$ be a minimal counterexample to the claim. Thus there is no prime $p$ such that $n<p<2n$.
+
+In the sequence of primes
+\[
+2, 3, 5, 7, 13, 23, 43, 83, 163, 317, 631, 1259, 2503,
+\]
+each succeeding term is smaller than the double of its predecessor.  This shows
+that $n\ge 2503$.
+
+The \PMlinkname{binomial expansion}{BinomialTheorem} of $(1+1)^{2n}$ has $2n+1$ terms and has largest term $\binom{2n}{n}$.  Hence 
+\[
+\binom{2n}{n}\ge\frac{4^n}{2n+1}\ge\frac{4^n}{(2n)^2}.
+\]
+
+For a prime $p$ define $r(p,n)$ to be the highest power of $p$ dividing $\binom{2n}{n}$.  To compute $r(p,n)$, we apply the lemma to $(2n)!$ and $n!$.  We get that
+\[
+r(p,n)=\sum_{j\ge 1}\left\lfloor\frac{2n}{p^j}\right\rfloor
+-2\sum_{j\ge 1}\left\lfloor\frac{n}{p^j}\right\rfloor
+=\sum_{j\ge 1}\left(\left\lfloor\frac{2n}{p^j}\right\rfloor
+-2\left\lfloor\frac{n}{p^j}\right\rfloor\right).
+\]
+The terms of the sum are all 0 or 1 and vanish when
+$\displaystyle j>\left\lfloor\frac{\log(2n)}{\log p}\right\rfloor$, so
+$\displaystyle r(p,n)\le\left\lfloor\frac{\log(2n)}{\log p}\right\rfloor$, that is,
+$p^{r(p,n)}\le 2n$.
+
+Now $\displaystyle\binom{2n}{n}=\prod_p p^{r(p,n)}$. By the inequality just proved, primes larger than $2n$ do not contribute to this product, and by assumption there are no primes between $n$ and $2n$. So
+\[
+\binom{2n}{n}=\prod_{\substack{1\le p \le n\\ p\text{\ prime}}}p^{r(p,n)}.
+\]
+
+For $n>p>\frac{2n}{3}$, $\frac{3}{2}>\frac{n}{p}>1$ and so for $p>\frac{2n}{3}>\sqrt{2n}$ we can apply the previous formula for $r(p,n)$ and find that it is zero. So for all $n>4$, the contribution of the primes larger than $\frac{2n}{3}$ is zero.
+
+If $p>\sqrt{2n}$, all the terms for higher powers of $p$ vanish and $\displaystyle r(p,n)=\left\lfloor\frac{2n}{p}\right\rfloor-2\left\lfloor\frac{n}{p}\right\rfloor$.
+Since $r(p,n)$ is at most 1, an upper bound for the
+contribution for the primes between $\sqrt{2n}$ and $\frac{2n}{3}$ is the product of all primes smaller than $\frac{2n}{3}$.  This product is
+$\exp\left(\vartheta(\frac{2n}{3})\right)$, where $\vartheta(n)$ is the Chebyshev function
+\[
+\vartheta(n)=\sum_{\substack{p\le n\\p\text{\ prime}}}\log p.
+\]
+There are at most $\sqrt{2n}$ primes smaller than $\sqrt{2n}$ and by the inequality $p^{r(p,n)}\le 2n$ their product is less than
+$(2n)^{\sqrt{2n}}$.  Combining this information, we get the inequality
+\[
+\frac{4^n}{(2n)^2}\le\binom{2n}{n}\le(2n)^{\sqrt{2n}}\exp\left({\textstyle\vartheta(\frac{2n}{3})}\right).
+\]
+Taking logarithms and applying the \PMlinkname{upper bound of $n\log 4$ for $\vartheta(n)$}{UpperBoundOnVarthetan}, we obtain the inequality $\frac{n}{3}\log 4\le(\sqrt{2n}+2)\log(2n)$, which is false for sufficiently large $n$, say $n=2^{11}$.  This shows that $n<2^{11}$.
+
+Since the conditions $n\ge 2503$ and $n<2^{11}$ are incompatible, there are no counterexamples to the claim.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{HW}
+G.H. Hardy, E.M. Wright, \emph{An Introduction to the Theory of Numbers}, Oxford University Press, 1938.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,436 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProposedElementaryProofOfFermatsLastTheorem}
+\pmcreated{2013-03-22 17:36:55}
+\pmmodified{2013-03-22 17:36:55}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proposed elementary proof of Fermat's last theorem}
+\pmrecord{78}{40033}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Michael Pogorsky has offered what is said to be an elementary proof of Fermat's
+last theorem. Is the proof correct? The intent
+of this entry is to show the proof up to the point at which it fails,
+if there is such a point. New equation numbers will be used. 
+
+\textbf{proof}
+We assume that there are positive integers $a,b$ and $c$ such that
+
+$$
+a^n + b^n = c^n \quad \quad \quad (1)
+$$.
+
+We can assume without loss of generality that $a,b$ and $c$ are mutually coprime, so that in fact
+they are also pairwise coprime. The proof is split into 3 major cases:
+(1) $n$ is a prime greater than 2, (2) $n$ is divisible by a prime greater than 2,
+and (3) $n$ is a power of 2.
+
+\section{n is a prime greater than 2}
+
+
+Write $c$ as
+$$
+c = a + k = b+f
+$$
+for some integers $k$ and $f$.
+
+Then
+$$
+a^n + b^n =  (a+k)^n = (b+f)^n .
+$$
+Using the binomial theorem we can write 
+$$
+a^n = f(nb^{n-1} + \frac{1}{2}n(n-1)b^{n-2}f+ \cdots + f^{n-1})  \quad \quad \quad (2)
+$$
+and
+$$
+b^n = k(na^{n-1} + \frac{1}{2}n(n-1)a^{n-2}k + \cdots + k^{n-1}). \quad \quad \quad (3)
+$$
+
+Lemma 1. If $n$ is prime number then $n$ divides $\binom{n}{k}$ for $0 < k < n$.\\
+The proof is easy.
+
+Claim: $gcd(f,k) = 1$.  \\
+Proof. A factor of $f$ and $k$ will also divide $a$ and $b$ by equations (2) 
+and (3). But $a$ and $b$ are coprime, so the gcd of $f$ and $k$ must be 1.
+
+Now write (2) as $a^n = fs$ for some integer $s$. 
+
+From that point in the proof the exposition is somewhat unclear 
+so I will attempt to rearrange the steps in what seems to be a better order. 
+First, I introduce a lemma of my own. 
+Write (3) as $b^n = kt$ for some integer $t$. 
+
+Lemma 2. $gcd(f,s) = n^{\alpha}$ and   $gcd(k,t) = n^{\beta}$ for
+some nonnegative integers  $\alpha$ and $\beta$. \\
+Proof. Suppose $q$ divides $\gcd(f,s)$ where $q$ is a prime. Then $q$ divides $a$ and $s$. 
+We can write $s=nb^{n-1} + fT$ for some integer $T$, so that $q$ divides $s-fT$ and therefore
+$q$ divides $nb^{n-1}$. Hence $q$ divides $n$ or $q$ divides $b^{n-1}$. But if $q$ divides
+$b^{n-1}$ then $q$ divides $b$, a contradiction. Hence $q$ divides $n$. But $n$ is a prime, so
+$q=n$. From this we get that $gcd(f,s) = n^{\alpha}$ for some nonnegative integer $\alpha$.
+Similarly, $gcd(k,t) = n^{\beta}$ for
+some nonnegative integer $\beta$. \\
+
+It is clear that at least one of $\alpha$ and $\beta$ is zero, otherwise $n$ divides $f$
+and $k$. Without loss of generality, we can assume that $\alpha=0$.
+
+The author now introduces what he calls version A and version B. I would prefer to call these
+Case A and Case B. But there is no claim outstanding yet, so I have to defer the case split.
+What seems to be the next main result is stated in the following lemma. \\
+
+Lemma 3. There exist positive integers $p,u,v,w$ such  \\
+1) $a=vp$, \\
+2) if $\beta = 0$ then  \\
+$$
+a = uwv + v^n 
+$$
+$$
+b= uwv + w^n 
+$$
+$$
+c = uwv + v^n + w^n.
+$$ 
+and \\
+3) if $\beta > 0$ then there is a  positive integers $g$ such that
+$$ 
+a= n^guwv + v^ n
+$$
+$$
+b= n^guwv + n^{gn-1}w^n
+$$
+and
+$$
+c= n^guwv + v^n + n^{gn-1}w^n.
+$$ \\
+Proof. (1) We have $a^n=fs$,where $f$ and $s$ are coprime. By unique factorization of integers
+it must be that $f=v^n$ and $s=p^n$ for some positive integers $p$ and $v$. It follows that
+$a=pv$. \\
+(2) Similarly, there are positive integers $w$ and $q$ such that $b=wq$, where $w^n=k$.
+From $a+k=b+f$ we get
+$$
+vp + w^n = wq + v^n
+$$
+and after regrouping we have
+$$
+v(p-v^{n-1}) = w(q-w^{n-1})
+$$
+Since $gcd(f,k)=1$ it follows that $gcd(v,w) = 1$, so that 
+$$
+v | (q-w^{n-1})
+$$
+and 
+$$
+w | (p-v^{n-1}). 
+$$
+Hence 
+$$
+u:= \frac{p-v^{n-1}}{w} = \frac{q-w^{n-1}}{v} \quad \quad \quad (4)
+$$
+is an integer. Using $u$ we can now write
+$a=uwv+v^n$, $b=uwv+w^n$, and $c=uwv+v^n+w^n$.  \\
+(3) Since  $\alpha=0$, we have  $gcd(f,s)=1$. 
+Since $\beta>0$, we can write
+$$
+k = k_1 n^{\tau}
+$$
+where $\tau>0$ and $gcd(k_1, n) = 1$. By Lemma 1 there is a positive  integer $c_i$ such that
+$\binom{n}{i} = nc_i$ for $0 < i < n$. We can write
+$$
+t = \sum_{i=1}^n \binom{n}{i}a^{n-i}k^{i-1} = \sum_{i=1}^{n-1}nc_i a^{n-i}k^{i-1} + k^{n-1} 
+$$ 
+$$
+ = \sum_{i=1}^{n-1}nc_i a^{n-i}k^{i-1} + nk_1n^{\tau-1}k^{n-2} = nT
+$$
+where $T=a^{n-1} + \frac{1}{2}(n-1)a^{n-2}k + \cdots + k_1 n^{\tau-1}k^{n-2}$.
+Hence,
+$$
+b^n = kt = knT = k_1n^{\tau+1}T.
+$$
+Claim: $gcd(T,n) = 1 $. \\
+This follows from the fact that $n$ divides all the terms of $T$ except the first term.
+The first term is not divisible by $n$ because $k$ divides $n$ and therefore $n$ divides $b$
+and $a$ and $b$ are coprime. \\
+Claim: $gcd(T,k_1) = 1$. \\
+This follows from the fact that $k$ divides $b$, so $k_1$ divides $b$, and $a$ and
+$b$ are coprime.
+By unique factorization of integers, then, it must be that there are positive integers
+$q$, $w$ and $\lambda$ such that
+$T = q^n$, $k_1 = w^n$ and $n^{\tau+1} = \lambda^n$. Since $n$ is a prime, it follows
+that $\lambda = n^g$ for some positive integer $g$. Hence $gn= \tau+1$. 
+
+It follows that
+$b^n = w^nn^{gn}q^n$, so that $b= n^gwq$. From $a+k = b+ f $ we get
+$$
+vp + n^{gn-1}w^n = n^gwq + v^n
+$$
+which we can regroup to get
+$$
+v(p-v^{n-1}) = n^gw(q-n^{g(n-1)-1}w^{n-1}).
+$$
+Since $a$ and $b$ are coprime, it follows that $v$ and $n^gw$ are coprime.
+Hence
+$$
+u:=\frac{p-v^{n-1}}{n^gw} = \frac{q-n^{g(n-1)-1}w^{n-1}}{v}
+$$ 
+is an integer. 
+It follows that
+$$
+vp - v^n = n^gwq-n^{gn-1}w^n = n^guwv
+$$
+and one can now express $a$,$b$ and $c$ in terms of $u$,$v$,$w$.
+
+
+Lemma 4. Let $u$ be the integer of Lemma 3. There is a monic polynomial $P$ 
+with integer coefficients such that  \\
+(a) $P(u)=0$,  \\
+(b) the sum of the roots of $P$ is 0, and \\
+(c) all coefficients of $P$ are divisible by $n$ except that when 
+$\beta$ is positive  the last coefficient is not divisible by $n$. \\
+Proof. We use the same cases as in Lemma 3. (1) In this case we have
+$$
+(uwv+v^n)^n + (uwv+w^n )^n - (uwv+v^n + w^n)^n = 0.
+$$
+The left hand side can be  expanded using the binomial theorem to get a 
+polynomial $Q$ 
+with coefficients that
+depend on $v$ and $w$.  For the coefficient of $u^{n-i}$ we have to combine
+$$
+\binom{n}{i}(uwv)^{n-i}(v^n)^i + \binom{n}{i}(uwv)^{n-i}(w^n)^i - \binom{n}{i}(uwv)^{n-i}(v^n+w^n)^i
+$$ 
+$$
+= u^{n-i}\binom{n}{i}(wv)^{n-i}(-(v^n+w^n)^i + (v^n)^i+(w^n)^i)  \quad \quad \quad (5)
+$$
+Clearly if $i=1$ this coefficient is 0. 
+If $i=0$ the coefficient is $(wv)^n$. 
+For the other terms we can write
+them as
+$$
+\binom{n}{i}(wv)^{n-i}v^nw^n\sum_{j=1}^{i-1}\binom{i}{j}v^{n(j-1)}w^{n(i-j-1)}
+$$ 
+so that the coefficient is divisible by $(wv)^n$.
+The coefficient is also divisible by $n$ if $1 \le i \le n$ by Lemma 1. 
+So we set $P := Q/(wv)^n$ to get the conclusion for case (1). \\
+(2) We proceed as in case (1). The left side of the equation 
+$$
+(n^guwv+v^n)^n + (n^guwv+n^{gn-1}w^n)^n - (n^guwv+v^n+n^{gn-1}w^n)^n =0
+$$ 
+can be expanded by the binomial theorem to get a polynomial
+$Q$ with coefficients that depend on $v$ and $w$. 
+It is clear that the leading term is
+$(n^guwv)^n$. For the coefficient of $u^{n-i}$ we have to combine
+$$
+\binom{n}{i}(n^guwv)^{n-i}(v^n)^i+\binom{n}{i}(n^guwv)^{n-i}(n^{gn-1}w^n)^i-\binom{n}{i}(n^guwv)^{n-i}(v^n+n^{gn-1}w^n)^i
+$$
+$$
+=u^{n-i}\binom{n}{i}(n^gwv)^{n-i}((v^n)^i+(n^{gn-1}w^n)^i-(v^n+n^{gn-1}w^n)^i . \quad \quad \quad (6)
+$$
+This form makes it clear that the coefficient is 0 if $i=1$ and divisible by $n$ if
+$1 \le i < n$. 
+If $i=0$, the coefficient is $(n^gwv)^n$. Equation (6) is equal to 
+$$
+u^{n-i}\binom{n}{i}(n^gwv)^{n-i} \sum_{j=1}^{i-1}v^{n(j-1)}(n^{gn-1}w^n)^{i-j-1}v^nn^{gn-1}w^n
+$$
+which shows that $n^{gn}w^nv^n$ divides each coefficient. Set
+$P:=Q/(n^gwv)^n$ to get the conclusion for case (2).
+
+Lemma 5. The polynomial $P$ of Lemma 4 has exactly one positive root. \\
+Proof. By (5) and (6) the coefficients of $P$ are negative except for the leading 
+coefficient. So there is exactly one sign change and by Descartes's rule of signs
+there is exactly one positive root.
+
+Definition. For each real root $u_i$ of $P$ we can define $a$, $b$ and $c$. 
+(For example, $a=u_iwv + v^n$ and so on.) We say that a root $u_i$ is
+\emph{acceptable} if the resulting $a,b,c$ are all positive integers.
+
+Lemma 6.   The only acceptable root
+of $P$ is $u$ and $u>0.$ \\
+Proof. Suppose that $u_i$ is a nonpositive acceptable root. Then $a,b,c$ are all
+positive and in case (1) we have
+$$
+a+b = 2u_iwv + v^n + w^n = c + u_iwv \le c,
+$$
+while in case (2) we have
+$$
+a+b= 2n^gu_iwv + v^n + n^{gn-1}w^n = c + n^gu_iwv \le c.
+$$
+But
+$$
+a^n + b^n < (a+b)^n \le c^n 
+$$
+which is a contradiction. Since $u$ is acceptable, it must be that
+$u>0$.\\
+
+The following lemma 7 is incorrect. \\
+Lemma 7.  $n$ does not divide $a+b$. \\
+Proof.  We use the cases of Lemma 3. (1)  We write \\
+$$
+a^n + b^n = (a+b)Q
+$$
+where 
+$$
+Q=\sum_{j=1}^na^{n-j}b^{j-1}(-1)^{j-1}.
+$$
+It is known that the common divisor if $a+b$ and $Q$ is $n$ and that
+if $n^s || a+b$ then $n^{s+1} || a^n + b^n$. 
+Hence, we can write
+$$
+a+b = n^s \delta
+$$
+and 
+$$
+Q=n \gamma
+$$
+where $gcd(n,\delta) = 1$, $gcd(n, \gamma) =1$ and $gcd(\delta, \gamma) =1$.
+From $c^n = a^n+b^n = (a+b)Q = n^{s+1}\delta \gamma$
+we get $s=n-1$, $n||c$ and 
+$$
+a+b=n^{n-1}\delta . \quad \quad \quad (7)
+$$
+Since $n$ divides $a+b$ and $c$ we have $n$ divides $2c-(a+b) = v^n + w^n$.
+It is also known that
+$$
+v^n + w^n = (v+w)[(v+w)^{n-1}-nvw(v^{n-1}+ \cdots + w^{n-1})] \quad \quad \quad (8)
+$$
+so that $n$ divides $v+w$. But then from (8) again, $n^2$ divides $v^n+w^n$.
+Now from (7) we have $n^2$ divides $a+b$.
+Hence  
+$$
+2c = (a+b)+ v^n + w^n
+$$
+is divisible by $n^2$ and this is a contradiction. \\
+(2) In this case 
+$$
+a+b = 2n^guwv + v^n + n^{gn-1}w^n
+$$
+so that if $n$ divides $a+b$ then $n$ divides $v^n$ and therefore $n$ divides $v$. 
+From $a=vp$ we get then $n$ divides $a$ and therefore $n$ divides $b=a+b-a$.
+But $a$ and $b$ are coprime, so we have a contradiction.
+
+Since Lemma 7 is incorrect, Lemma 8 is also incorrect. \\
+Lemma 8.  There are positive integers
+$u_p$ and $c_p$ such that
+$a+b = {u_p}^n$ and $c=u_pc_p$. \\
+Proof.  We can write
+$$
+x^z+y^z = (x+y)Q
+$$
+where
+$$
+Q=\sum_{j=1}^zx^{z-j}y^{j-1}(-1)^{j-1}.
+$$
+It is an old result first attributed to Nicolas Malebranche (1638-1715) 
+that if $x$ and $y$ are coprime and $d$ is a prime divisor of 
+$x+y$ and $Q$ then $d$ divides $z$. I will give a proof of this here.
+Define 
+$$
+Q_1 = Q = x^{z-1} + x^{z-2}y + \sum_{j=3}^zx^{z-j}y^{j-1}(-1)^{j-1}.
+$$
+Let
+$$
+Q_2 = Q_1 - x^{z-2}(x+y) = -2x^{z-2}y + x^{z-3}y^2+ \sum_{j=4}^zx^{z-j}y^{j-1}(-1)^{j-1}.
+$$
+Then $d$ divides $Q_2$.
+Define 
+$$
+Q_3 = Q_2 + 2x^{z-3}y(x+y) = 3x^{z-3}y^2-x^{z-4}y^3 + \sum_{j=5}^zx^{z-j}y^{j-1}(-1)^{j-1}.
+$$
+In general 
+$$
+Q_n = (-1)^{n+1}nx^{z-n}y^{n-1}+x^{z-n-1}y^n + \sum_{j=n+2}^zx^{z-j}y^{j-1}(-1)^{j-1}
+$$
+and each $Q_n$ is divisible by $d$. Hence,
+$$
+Q_z = \pm zy^{z-1}
+$$
+will be divisible by $d$. But $d$ does not divide $y$ (since otherwise it would also divide
+$x$, which would contradict that $x$ and $y$ are coprime). Hence, $d$ divides $z$. 
+Using this result, we can say that
+if
+$$
+a^n+b^n = (a+b)(a^{n-1}-a^{n-2}b+\cdots-ab^{n-2}+b^{n-1}) = (a+b)Q
+$$
+then $a+b$ and $Q$ are coprime. Because if $d$ is a prime divisor of each
+then $d$ divides $n$, so $d=n$ and then $n$ divides $a+b$, which contradicts Lemma 7.
+By unique factorization there  are positive integers $u_p$ and $c_p$
+such that
+$$
+a+b = {u_p}^n
+$$
+and
+$$
+Q = {c_p}^n .
+$$
+Then $c^n = (a+b)Q = {u_p}^n {c_p}^n$.
+Hence $c = u_p c_p$.
+
+Lemma 9. Let $p,u,v,w$ be as in Lemma 3. Let $c_p$ be as in 
+Lemma 8.  Suppose there are positive integers $h$and $q$  such that
+$$
+ah + bq = cp .
+$$
+Then one of the following possibilities holds: \\
+(a) $h = h_k c, q = q_k c$ for some integers $h_k$ and $q_k$; \\
+(b) $h = q = jc_p$ for some integer $j$; \\
+(c) $h = jw^{n(n-1)}, q = j v^{n(n-1)}$ for some integer $j$;  \\
+(d) $h = jb, q = jw^n$ for some integer $j$; \\
+(e) $h = jv^n, q = -jw^n$ for some integer $j$; \\
+(f) $h = jv^n, q = j(2uwv+w^n+2v^n)$ for some integer $j$; \\
+(g) $h=j(2uwv+2w^n+v^n), q=jw^n$ for some integer $j$. \\
+Proof. At this point I think the proof is incomplete since he does not prove the result, but rather
+verifies that each of the possible solutions is indeed a solution. Later on,he needs to know that these
+are the only solutions.
+
+
+\section{n is divisible by a prime greater than 2}
+If $n = mz$ where $z$ is a prime greater than 2, then
+$$
+(a^m)^z + (b^m)^z = (c^m)^z
+$$ 
+and we can apply the results of section 1 to conclude that no such $z$ can exist. 
+
+
+\section{n is a power of 2}
+
+It is known that if $n=4$ then Fermat's Last Theorem is true. For example,
+see \cite{HW}. So if $n=2^t, t\ge 3$, then we can write
+$$
+(a^{2^{t-2}})^4 + (b^{2^{t-2}})^4 = (c^{2^{t-2}})^4
+$$
+which contradicts the theorem for $n=4$. 
+
+\begin{thebibliography}{1}
+\bibitem{HW} G.H. Hardy, E.M. Wright, \emph{An Introduction to the Theory of Numbers}, 5th ed., Oxford
+University Press, page 191. 
+\end{thebibliography}
+ 
+%%%%%
+%%%%%
+\end{document}

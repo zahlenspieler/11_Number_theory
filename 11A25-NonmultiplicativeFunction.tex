@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonmultiplicativeFunction}
+\pmcreated{2013-03-22 12:47:04}
+\pmmodified{2013-03-22 12:47:04}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{non-multiplicative function}
+\pmrecord{16}{33098}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+%\pmkeywords{number theory}
+%\pmkeywords{arithmetic function}
+%\pmkeywords{multiplicative function}
+\pmrelated{PartitionFunction2}
+\pmdefines{partition function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{between}
+\PMlinkescapeword{order}
+\PMlinkescapeword{orders}
+\PMlinkescapeword{representations}
+
+In  number theory, a {\it non-multiplicative function} is an arithmetic function  which is not multiplicative.
+
+\paragraph{Examples}
+
+Some examples of a non-multiplicative functions are the arithmetic functions:
+
+\begin{itemize}
+\item $r_{2}(n)$ - the number of unordered representations of $n$ as a sum of squares of two integers, positive, negative or zero,
+\item $c_{4}(n)$ - the number of ways that $n$ can be expressed as the sum of four squares of nonnegative integers, where we distinguish between different orders of the summands. For example:
+$$ 1 = 1^{2}+0^{2}+0^{2}+0^{2} = 0^{2}+1^{2}+0^{2}+0^{2}+0^{2} = 0^{2}+0^{2}+1^{2}+0^{2} = 0^{2} + 0^{2} + 0^{2} + 1^{2} \; ,$$
+hence $c_{4}(1)=4 \ne 1 \; .$
+\item The {\it partition function} $P(n)$ - the number of ordered representations of $n$ as a sum of positive integers. For instance:
+$$ P(2 \cdot 5) = P(10) = 42 \quad \hbox{and} $$
+$$ P(2) P(5) = 2 \cdot 7 = 14 \ne 42 \; . $$
+\item The prime counting function $\pi(n)$. Here we first have $\pi(1) = 0 \ne 1$ and then we have as yet for example: 
+$$ \pi(2 \cdot 5) = \pi(10) = 4 \quad \hbox{and} $$
+$$ \pi(2) \pi(5) = 1 \cdot 3 = 3 \ne 4 \; . $$
+\item The Mangoldt function $\Lambda(n)$. $\Lambda(1) = \ln 1 \ne 1$ and for example: 
+$$ \Lambda(2 \cdot 5) = \Lambda(10) = 0 \quad \hbox{and} $$
+$$ \Lambda(2) \Lambda(5) = \ln 2 \cdot \ln 5 \ne 0 \; . $$
+We would think that for some $n$ multiplicativity of $\Lambda(n)$ would be true as in:
+$$ \Lambda(2 \cdot 6) = \Lambda(12) = 0 \quad \hbox{and} $$
+$$ \Lambda(2) \Lambda(6) = \ln 2 \cdot 0 = 0 \; , $$
+but we have to write:
+$$ \Lambda(2^{2}) \Lambda(3) = \ln 2 \cdot \ln 3 \ne 0 \; . $$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

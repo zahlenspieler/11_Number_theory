@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndependenceOfCharacteristicPolynomialOnPrimitiveElement}
+\pmcreated{2014-02-04 8:07:18}
+\pmmodified{2014-02-04 8:07:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{independence of characteristic polynomial on primitive element}
+\pmrecord{10}{42054}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmsynonym{norm and trace functions in number field}{IndependenceOfCharacteristicPolynomialOnPrimitiveElement}
+%\pmkeywords{norm}
+%\pmkeywords{trace.}
+\pmrelated{Norm}
+\pmrelated{NormAndTraceOfAlgebraicNumber}
+\pmrelated{PropertiesOfMathbbQvarthetaConjugates}
+\pmrelated{DiscriminantInAlgebraicNumberField}
+\pmdefines{norm in number field}
+\pmdefines{trace in number field}
+\pmdefines{norm}
+\pmdefines{trace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{degree}
+
+The simple field extension $\mathbb{Q}(\vartheta)/\mathbb{Q}$ where $\vartheta$ is an algebraic number of \PMlinkname{degree}{DegreeOfAnAlgebraicNumber} $n$ may be determined also by using another primitive element $\eta$.\, Then we have
+$$\eta \in \mathbb{Q}(\vartheta),$$
+whence, by the entry degree of algebraic number, the degree of $\eta$ divides the degree of $\vartheta$.\, But also
+$$\vartheta \in \mathbb{Q}(\eta),$$
+whence the degree of $\vartheta$ divides the degree of $\eta$.\, Therefore any possible primitive element of the field extension has the same degree $n$.\, This number is the \PMlinkname{degree of the number field}{NumberField}, i.e. the degree of the field extension, as comes clear from the entry canonical form of element of number field.
+
+Although the characteristic polynomial
+$$g(x) \;:=\; \prod_{i=1}^n[x-r(\vartheta_i)] \;=\; \prod_{i=1}^n(x-\alpha^{(i)})$$
+of an element $\alpha$ of the algebraic number field $\mathbb{Q}(\vartheta)$ is based on the primitive element 
+$\vartheta$, the equation 
+\begin{align}
+g(x) \;=\; (x-\alpha_1)^m(x-\alpha_2)^m\cdots(x-\alpha_k)^m
+\end{align}
+in the entry \PMlinkid{degree of algebraic number}{12050} shows that the polynomial is fully determined by the algebraic conjugates of $\alpha$ itself and the number $m$ which equals the degree $n$ divided by the degree $k$ of 
+$\alpha$. \\
+
+The above stated makes meaningful to define the norm and the trace functions in an algebraic number field as follows.
+
+\textbf{Definition.}\, If $\alpha$ is an element of the number field $\mathbb{Q}(\vartheta)$, then the \emph{norm} 
+$\mbox{N}(\alpha)$ and the \emph{trace} $\mbox{S}(\alpha)$ of $\alpha$ are the product and the sum, respectively, of all \PMlinkid{$\mathbb{Q}(\vartheta)$-conjugates}{12046} $\alpha^{(i)}$ of $\alpha$.\\
+
+
+Since the coefficients of the characteristic equation of $\alpha$ are rational, one has
+$$\mbox{N}\!:\,\mathbb{Q}(\vartheta) \to \mathbb{Q} \quad\mbox{and}\quad 
+  \mbox{S}\!:\,\mathbb{Q}(\vartheta) \to \mathbb{Q}.$$
+In fact, one can infer from (1) that
+\begin{align}
+\mbox{N}(\alpha) \;=\; a_k^m, \qquad \mbox{S}(\alpha) \;=\; -ma_1,
+\end{align}
+where $x^k\!+\!a_1x^{k-1}\!+\ldots+\!a_k$ is the minimal polynomial of $\alpha$.
+
+
+
+%%%%%
+%%%%%
+\end{document}

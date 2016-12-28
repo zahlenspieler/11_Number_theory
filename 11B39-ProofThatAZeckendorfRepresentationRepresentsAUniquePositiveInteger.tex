@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAZeckendorfRepresentationRepresentsAUniquePositiveInteger}
+\pmcreated{2013-03-22 16:36:46}
+\pmmodified{2013-03-22 16:36:46}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that a Zeckendorf representation represents a unique positive integer}
+\pmrecord{8}{38810}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B39}
+\pmclassification{msc}{11A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem.} For any positive integer $n$, the Zeckendorf representation $Z$ (with $k$ elements all 0s or 1s) of $n$ is unique.
+
+For our proof, we accept it as axiomatic that $F_0 = F_1 = 1$ but $F_0$ is not used in the Zeckendorf representation of any number, and we also accept as axiomatic that all $F_i$ are distinct as long as $i > 0$.
+
+\begin{proof}
+Assume that there are two integers $a$ and $b$ such that $0 < a < b$, yet they both have the same Zeckendorf representation $Z$ with $k$ elements all 0s or 1s. We compute $$c = \sum_{i = 1}^k Z_iF_i,$$ where $F_x$ is the $x$th Fibonacci number. We can be assured that there is only one possible value for $c$ since all $F_i$ are distinct for $i > 0$ and each $F_i$ was added only once or not at all, since each $Z_i$ is limited by definition to 0 or 1. Now $c$ holds the value of the Zeckendorf representation $Z$. If $c = a$, it follows that $c < b$, but that would mean that $Z$ is not the Zeckendorf representation of $b$ after all, hence this results in a contradiction of our initial assumption. And if on the other hand $c = b$ and $c > a$, then this leads to a similar contradiction as to what is the Zeckendorf representation of $a$ really is.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

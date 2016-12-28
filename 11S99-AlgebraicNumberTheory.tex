@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicNumberTheory}
+\pmcreated{2013-03-22 15:08:05}
+\pmmodified{2013-03-22 15:08:05}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{algebraic number theory}
+\pmrecord{34}{36878}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11S99}
+\pmclassification{msc}{11R99}
+\pmclassification{msc}{11-01}
+\pmrelated{NormAndTraceOfAlgebraicNumber}
+\pmrelated{ModularForms}
+\pmrelated{HeckeOperator}
+\pmrelated{BibliographyForNumberTheory}
+\pmrelated{ArithmeticOfEllipticCurves}
+\pmrelated{ClassNumbersAndDiscriminantsTopicsOnClassGroups}
+\pmrelated{ExamplesOfRingOfIntegersOfANumberField}
+\pmrelated{NumberField}
+\pmrelated{TheoryOfAlgebraicNumbers}
+\pmrelated{TheoryOfRa}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\p}{{\mathfrak{p}}}
+\newcommand{\A}{{\mathfrak{A}}}
+\renewcommand{\P}{{\mathfrak{P}}}
+\newcommand{\intK}{\mathcal{O}_K}
+\newcommand{\intF}{\mathcal{O}_F}
+\begin{document}
+\section*{Algebraic Number Theory}
+
+This entry is a \PMlinkescapetext{collection} of \PMlinkescapetext{links} to entries on algebraic number theory in Planetmath (therefore \PMlinkescapetext{bound} to be always {\bf under construction}). It is the hope of the author(s) that someday this can be used as a ``graduate text'' to learn the subject by reading the individual entries listed here. Each \PMlinkescapetext{section} \PMlinkescapetext{contains} a brief description of the concepts, which is expanded in the entries. Some of the concepts might be missing in Planetmath as of today (please consider writing an entry on them!). In \PMlinkescapetext{order} to organize the entry in sections, we followed the main reference \cite{marcus}.  
+
+\section{Introduction}
+
+The entry number theory contains a nice introduction to the broad subject. From very early on, mathematicians have tried to understand the integer solutions of polynomial equations (e.g. Pythagorean triples). One of the main motivational examples for the subject is Fermat's Last Theorem (when does $x^n+y^n=z^n$ have integer solutions?). The study of integer solutions immediately leads to the study of algebraic numbers (see \PMlinkname{$y^2=x^3-2$}{Y2X32} for an example). Algebraic number theory is the study of algebraic numbers, their properties and their applications.
+
+\begin{itemize}
+\item As an introduction, the reader should be comfortable with the basic theory of rational and irrational numbers, and its complementary entry, the basic theory of algebraic and transcendental numbers.
+\end{itemize}
+
+\section{Number Fields and Rings of Integers}
+
+\begin{enumerate}
+\item The main object of study in algebraic number theory is the number field. A number field $K$ is a finite field extension of $\Rats$. Since a finite extension of fields is an algebraic extension, $K/\Rats$ is algebraic. Thus, every $\alpha\in K$ is an \PMlinkname{algebraic number}{AlgebraicNumber}.
+\item The ring of integers of $K$, usually denoted by $\mathcal{O}_K$, is the set of all algebraic integers of $K$. $\mathcal{O}_K$ is a commutative ring with \PMlinkname{identity}{Unity}. See examples of ring of integers of a number field.
+\item Real and complex embeddings of a number field. Read also about totally real and imaginary fields.
+\item Norm and trace of an algebraic number. See also \PMlinkname{this entry}{NormAndTraceOfAlgebraicNumber}. One also can take the norm of an ideal.
+\item The discriminant of a number field measures the ramification of the field (read the following section for more details on ramification).
+\item \PMlinkname{The ring of integers of a number field is finitely generated over $\mathbb{Z}$}{RingOfIntegersOfANumberFieldIsFinitelyGeneratedOverMathbbZ}.
+
+\item Euclidean number fields.
+\end{enumerate}
+
+\section{Decomposition of Prime Ideals}
+
+\begin{enumerate}
+\item It is a well-known fact that the ring of integers of a number field is a Dedekind domain.
+\item Every non-zero fractional ideal in a Dedekind domain is invertible. In fact, the set of all non-zero fractional ideals forms a group under multiplication (see also Pr\"ufer ring and multiplication ring).
+\item Notice that the ring of integers $\mathcal{O}_K$ of a number field is not necessarily a PID nor a UFD (see example of ring which is not a UFD). However, every fractional ideal in a Dedekind domain factors uniquely as a product of powers of prime ideals. In particular, the ideals of $\mathcal{O}_K$ factor uniquely as a product of prime ideals.
+\item Let $F/K$ be an extension of number fields. Let $\p$ be a prime ideal of $\intK$, then $\p \intF$ is an ideal of $F$. What is the factorization of $\p \intF$ into prime ideals of $F$? Read about splitting and ramification in number fields and Galois extensions for a detailed explanation and definitions of the terminology.
+\item In \PMlinkescapetext{order} to understand ramification in a more general setting, read \PMlinkname{ramify}{Ramify}, inertia group and decomposition group.
+\item See the entry ramification of archimedean places for the case of infinite places.
+\item An important example: \PMlinkname{prime ideal decomposition in quadratic extensions of $\mathbb{Q}$}{PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ}.
+\item Another important case: \PMlinkname{prime ideal decomposition in cyclotomic extensions of $\Rats$}{PrimeIdealDecompositionInCyclotomicExtensionsOfMathbbQ}.
+\item Explicit examples of prime ideal decomposition in number fields.
+\item More generally, read calculating the splitting of primes.
+\end{enumerate}
+
+\section{Ideal Class Groups}
+
+The ideal class group $\Cl(K)$ of a number field $K$ is the quotient group of all fractional ideals modulo principal fractional ideals. In some sense, it measures the arithmetic complexity of the number field (how far $K$ is from being a PID). The class number of $K$, denoted by $h_K$, is the \PMlinkescapetext{size} of $\Cl(K)$. See topics on ideal class groups and discriminants for a detailed exposition.
+
+\section{The Unit Group}
+The unit group of a number field $K$ is the group of units of the ring of integers $\mathcal{O}_K$, and it is usually denoted by $\mathcal{O}_K^\times$.
+\begin{enumerate}
+\item The structure of the unit group is described by Dirichlet's unit theorem, which asserts the existence of a system of fundamental units.
+\item An application of Dirichlet's unit theorem: units of quadratic fields.
+\item The regulator is an important invariant of the unit group (it appears in the \PMlinkname{class number formula}{ClassNumberFormula}).
+\item The cyclotomic units are a subgroup of the group of units of a cyclotomic field with very interesting properties. The cyclotomic units are algebraic units.
+\end{enumerate}
+
+\section{Zeta Functions and $L$-functions}
+\begin{enumerate}
+\item The prototype of zeta function is $\zeta(s)$, the \PMlinkname{Riemann zeta function}{RiemannZetaFunction} (the entry also discusses the famous Riemann hypothesis).
+\item More generally, for every number field $K$ one can define a Dedekind zeta function $\zeta_K(s)$.
+\item The Dedekind zeta function of a number field satisfies the so-called class number formula, which relates many of the invariants of the number field.
+\end{enumerate}
+\section{Class Field Theory}
+Class field theory studies the abelian extensions of number fields.
+
+\begin{enumerate}
+\item The Kronecker-Weber theorem classifies the possible abelian extensions of $\Rats$.
+
+\item The abelian extensions of quadratic imaginary number fields can be described using elliptic curves with complex multiplication.
+
+\item The Artin map is an important tool in class field theory. Class field theory and the Artin map can be presented in \PMlinkescapetext{terms} of \PMlinkname{id\`eles}{Idele} and \PMlinkname{ad\`eles}{Adele}. 
+
+\item The Hilbert class field $H$ of a number field $K$ is the maximal unramified abelian extension of $K$. The key property of $H$ is that the Galois group $\Gal(H/K)$ is isomorphic to the ideal class group $\Cl(K)$.
+
+\item Ray class fields are maximal abelian extensions with \PMlinkescapetext{fixed} conductor. See also ray class groups.
+\end{enumerate}
+
+\section{Local Fields}
+Many problems in number theory can be treated ``locally'' or one prime at a \PMlinkescapetext{time}. For this, one works over local fields, like $\Rats_p$ or the completion of a number field at a prime $\P$.
+\begin{enumerate}
+\item Definition of \PMlinkname{local field}{LocalField}.
+\item The main example and motivation: the \PMlinkname{$p$-adic rationals and the $p$-adic integers}{PAdicIntegers} (see also \PMlinkname{$p$-adic valuation}{PAdicValuation}).
+\item Let $v$ be a valuation of the field $K$ (see the entry \PMlinkname{valuation}{Valuation} for a comprehensive introduction). The \PMlinkname{completion}{Completion} of $K$ with respect to $v$ is a local field. For example, $\Rats_p$ is the completion of $\Rats$ with respect to the \PMlinkname{$p$-adic valuation}{PAdicValuation}.
+\item Read also about discrete valuation rings.
+\item Hensel's lemma provides a criterion to prove the existence of roots of polynomials in local fields. See also examples for Hensel's lemma.
+\end{enumerate}
+
+\section{Galois Representations}
+\begin{enumerate}
+\item Recall that a number field is a finite extension of $\Rats$. We can also study infinite extensions. Read about infinite Galois theory.
+\item Some number theorists would say that algebraic number theory is the study of the absolute Galois group of $\Rats$, $\Gal(\overline{\Rats}/\Rats)$.
+\item In order to understand $\Gal(\overline{\Rats}/\Rats)$, one studies Galois representations (the entry is an excellent overview and introduction to Galois representation theory).
+\end{enumerate}
+\section{Elliptic Curves}
+
+Elliptic curves are, essentially, equations of the form $y^2=x^3+Ax+B$. Read the entry on the arithmetic of elliptic curves for a full account of this beautiful theory. 
+
+\section{Modular Forms}
+
+\begin{enumerate}
+\item Definition of modular form and the Hecke algebra of Hecke operators.
+\end{enumerate}
+
+\begin{thebibliography}{Mar}
+\bibitem[Mar]{marcus} Daniel A. Marcus, {\it Number Fields}, Springer, New York. 
+\end{thebibliography}
+
+{\it Note: If you would like to contribute to this entry, please send an email to the author (alozano).}
+%%%%%
+%%%%%
+\end{document}

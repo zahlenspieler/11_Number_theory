@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitsOfQuadraticFields}
+\pmcreated{2013-03-22 14:16:30}
+\pmmodified{2013-03-22 14:16:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{units of quadratic fields}
+\pmrecord{39}{35726}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmclassification{msc}{11R27}
+\pmsynonym{quadratic unit}{UnitsOfQuadraticFields}
+\pmrelated{Unit}
+\pmrelated{NumberField}
+\pmrelated{ImaginaryQuadraticField}
+\pmrelated{SomethingRelatedToFundamentalUnits}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{primitive}
+Dirichlet's unit theorem gives all units of an algebraic number field $\mathbb{Q}(\vartheta)$ in the unique form
+   $$\varepsilon = \zeta^{n}\eta_1^{k_1}\eta_2^{k_2}...\eta_t^{k_t},$$
+where $\zeta$ is a primitive $w^\mathrm{th}$ root of unity in $\mathbb{Q}(\vartheta)$, the $\eta_j$'s are the fundamental units of $\mathbb{Q}(\vartheta)$,\, $0 \leqq n \leqq w\!-\!1$,\, $k_j \in \mathbb{Z}$\, $\forall j$,\, $t = r\!+\!s\!-\!1$.
+
+\begin{itemize}
+
+\item The case of a real quadratic field $\mathbb{Q}(\sqrt{m})$, the square-free \,$m > 1$:\, $r = 2$,\, $s = 0$,\, $t = r\!+\!s\!-\!1 = 1$.\, So we obtain
+     $$\varepsilon = \zeta^{n}\eta^{k} = \pm\eta^{k},$$ 
+because\, $\zeta= -1$\, is the only real primitive root of unity ($w = 2$).\, Thus, every real quadratic field has infinitely many units and a unique fundamental unit $\eta$.
+
+Examples:\, If\, $m = 3$,\, then\, $\eta = 2\!+\!\sqrt{3}$;\, if\, $m = 421$,\, then\, $\eta = \frac{444939+21685\sqrt{421}}{2}$.
+
+\item The case of any imaginary quadratic field $\mathbb{Q}(\vartheta)$; here\, $\vartheta = \sqrt{m}$,\, the square-free\, $m < 0$:\, The conjugates of $\vartheta$ are the pure imaginary numbers $\pm\sqrt{m}$, hence\, $r = 0$,\, $2s = 2$,\, $t = r\!+\!s\!-\!1 = 0$.\, Thus we see that all units are 
+                     $$\varepsilon = \zeta^{n}.$$
+
+1) $m = -1$.\, The field contains the primitive fourth root of unity, e.g. $i$, and therefore all units in the {\em \PMlinkescapetext{Gaussian} field} $\mathbb{Q}(i)$ are $i^n$, where\, $n = 0,\,1,\,2,\,3$.
+
+2) $m = -3$.\, The field in question is a \PMlinkname{cyclotomic field}{CyclotomicExtension} containing the primitive third root of unity and also the primitive sixth root of unity, namely
+           $$\zeta = \cos{\frac{2\pi}{6}}+i\sin{\frac{2\pi}{6}};$$
+hence all units are\, $\varepsilon = (\frac{1+\sqrt{-3}}{2})^{n}$,\, where\, $n = 0,\,1,\,\ldots,\,5$, or, equivalently,
+\, $\varepsilon = \pm(\frac{-1+\sqrt{-3}}{2})^{n}$,\, where\, 
+$n = 0,\,1,\,2$.
+
+3) $m = -2$,\, $m <-3$. \, The only roots of unity in the field are $\pm 1$; hence\, $\zeta = -1$,\, $w = 2$,\, and the units of the field are simply\,
+ $(-1)^{n}$, where\, $n = 0,\,1$.
+                   
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

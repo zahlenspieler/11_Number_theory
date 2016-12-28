@@ -1,0 +1,287 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoryFromOrdersOfClassicalGroups}
+\pmcreated{2013-03-22 15:56:48}
+\pmmodified{2013-03-22 15:56:48}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{theory from orders of classical groups}
+\pmrecord{10}{37958}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E57}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+One formula for the order of $GL(d,q)$ can be given as:
+\[|GL(d,q)|=q^{\binom{d}{2}}(q-1)^d\prod_{i=2}^d (q^{i-1}+\cdots + q + 1).\]
+In \PMlinkname{Orders of Classical Groups}{OrdersAndStructureOfClassicalGroups} we see an accounting for this orders from an elementary linear algebra perspective and from there derive order of related classical groups.   However, many of these formulas can be explicitly observed with the group theoretic structure of the various classical groups.  We explore this presently.
+
+We describe three families of subgroups $U$, $T$, $S_i$ which intersect trivially and whose orders are:
+\[
+|U|=q^{\binom{d}{2}}, \quad |T|=(q-1)^d, \quad\textnormal{ and }
+|S_i|=q^{i-1}+\cdots + q + 1,\quad 2\leq i\leq d.
+\]
+
+\section{The Unipotent matrices $U$}
+
+\begin{prop}
+Given $q=p^s$ a Sylow $p$-subgroup of $GL(d,q)$ has order $p^{s\binom{d}{2}}$ 
+and is isomorphic to the group of lower-unitriangular matrices.  
+\end{prop}
+\begin{proof}
+Observe for any $i>0$, $q^i-1\equiv -1\pmod{q}$.  Therefore
+$q^i-1\equiv -1\pmod{p}$ as $q=p^s$.  Therefore $p$ is relatively prime to the
+\[\prod_{i=1}^d (q^i-1)\]
+factor of the order of $GL(d,q)$.  Therefore the order of a Sylow $p$-subgroup
+of $GL(d,q)$ is 
+\[q^{\binom{d}{2}})=p^{s\binom{d}{d}}.\]
+
+From matrix multiplication we observe the that product of two lower triangular 
+matrices is lower triangular.  And the same for lower unitriangular.  Therefore
+the lower unitriangular matrices form a subgroup of $GL(d,k)$.  Moreover, they 
+have $\binom{d}{2}$ entries which can range over $GF(q)$ giving a total order of
+$q^{\binom{d}{2}}$.
+\[
+\begin{bmatrix}
+1 & 0 & \cdots \\
+* & 1 & \\
+* & * & 1 \\
+\vdots & \\
+* & \vdots & * & 1
+\end{bmatrix}
+\]
+\end{proof}
+\begin{remark}
+Unitriangular subgroups are often called \emph{unipotent} because every element in the group has all eigenvalues equal to 1.  
+\end{remark}
+
+\begin{defn}
+A unipotent subgroup of $GL(V)$ is a subgroup in which every element has
+all eigenvalues equal to 1.
+\end{defn}
+
+It can be shown that every unipotent group, under some choice of basis, is a set
+of lower unitriangular matrices.  Of course upper triangular matrices may also be used.
+
+\section{The Diagonal (Toral) matrices $T$}
+
+We will now account for the $(q-1)^d$ term in the order.
+
+\begin{prop}
+The diagonal matrices of $GL(d,k)$ form an abelian group isomorphic to $(k^\times)^d$.  So in $GL(d,q)$, the diagonal matrices have order $(q-1)^d$.
+\end{prop}
+\begin{proof}
+The isomorphism is easily explained with matrix multiplication:
+\[
+\begin{bmatrix} 
+a_1 & \\
+ & a_2 \\
+ & & \ddots\\
+ & & & a_d
+\end{bmatrix}
+\begin{bmatrix} 
+b_1 & \\
+ & b_2 \\
+ & & \ddots\\
+ & & & b_d
+\end{bmatrix}
+=
+\begin{bmatrix} 
+a_1 b_1 & \\
+ & a_2 b_2 \\
+ & & \ddots\\
+ & & & a_d b_d
+\end{bmatrix}
+.\]
+Note that in order to be invertible each $a_i\neq 0$.
+\end{proof}
+
+\begin{remark}
+In general theory, diagonal matrices are replaced with the term \emph{toral} subgroup.  This is on account of the fact that when $k=\mathbb{C}$, $\mathbb{C}^\times$ is homotopic to the circle, $S^1$.  Therefore, as a 
+topology, $(\mathbb{C}^\times)^d$ is $S^1 \times S^1\times \cdots \times S^1$,
+that is, the $d$-dimensional torus.
+\end{remark}
+
+\begin{defn}
+A toral subgroup of $GL(V)$ is a subgroup in which can be simultaneously
+diagonalized, possibly requiring a field extension.  A maximal torus is on which is not properly contained in
+any other.
+\end{defn}
+
+\section{The Singer Cycles $S$}
+
+The last point illustrate where the remaining pieces of the order of $GL(V)$ come from.  When we accounted for $(q-1)^d$ we used diagonal matrices.  However we could have used any subgroup of matrices which can be diagonalized, and then choose a maximal such subgroup (proof that this is sufficient is beyond the scope at the momenet.)  So we should ask, when is a matrix diagonalizable.
+The answer is when all the eigenvalues of the matrix lie in the field and the matrix is symmetric, meaning $X=X^t$.  
+
+As our fields $GF(q)$ are finite, they are not algebraically closed, and so some matrices may have eigenvalues that are not in the field.  For example:
+\[A=\begin{bmatrix} 0 & 1\\ -1 & 0\end{bmatrix}\]
+has characteristic polynomial $x^2+1$ which requires a $\sqrt{-1}$.  This is not an element of $\mathbb{Z}_p$ when $p$ is odd.  Therefore we must create a quadratic extension to $GF(p^2)$ to diagonalize this matrix.  In particular we
+would then be abel to write:
+\[\begin{bmatrix} \sqrt{-1} & 0\\ 0 & -\sqrt{-1}\end{bmatrix}\]
+as the diagonalization of $A$.  If $p=2$ the example
+\[ B=\begin{bmatrix} 1 & 1\\ 1 & 0\end{bmatrix}\]
+has irreducible characteristic polynomial $x^2+x+1$ and requires a quadratic field extension as well.  Notice that $|B|=3$ just as a generator of $GF(4)^\times$ requires.
+
+When one extends to a field of order $p^2$ then the multiplicative subgroup of $GF(p^2)^\times$ has order $p^2-1=(p-1)(p+1)$.  Here we finally see the source of the remaining parts of the order of $GL(V)$.
+We now collect this idea into a theorem.
+
+\begin{prop}
+$GL(d/e,q^{e})$ embeds in $GL(d,q)$ for every $e|d$.  In particular,
+$GF(q^e)^\times$ embeds in $GL(d,q)$ for every $e|d$.
+\end{prop}
+\begin{proof}
+Given $W$ a $d/e$-dimensional vector space over $GF(q^e)$ where $e|d$, 
+then $W$ is a $d$-dimensional vector space over $GF(q)$ as $GF(q)\leq GF(q^e)$.
+Furthermore, if $f:W\rightarrow W$ is a $GF(q^e)$-linear map, then it is
+also a $GF(q)$-linear map.  Thus we can interpret $GL(d/e,q^{e})$ as a 
+subgroup of $GL(d,q)$.
+
+To see that $GF(q^e)^\times$ embeds in $GL(d,q)$ simply observe that the
+scalar matrices of $GL(d/e,q^{e})$ are isomorphic to $GF(q^e)$.
+\end{proof}
+
+Caution: although the scalar matrices of $GL(e,q^{d/e})$ are central in 
+$GL(e,q^{d/e})$, then need not be central in $GL(d,q)$.
+
+\begin{defn}
+A \emph{Singer cycle} is an element $f\in GL(V)$ which is the image of
+a scalar transform of some field extension.
+\end{defn}
+
+\begin{remark}
+It is not uncommon for Singer cycles to refer only to maximal order scalar
+transforms.
+\end{remark}
+
+Finally, as $GL(i,q)$ embeds in $GL(d,q)$ for every $1\leq i\leq d$ we now 
+conclude:
+
+\begin{coro}
+$GF(q^i)$ embeds in $GL(d,q)$ for every $1\leq i\leq d$.  Moreover, the
+order 
+\[\prod_{i=2}^d (q^{i-1}+\cdots +q+1)\]
+are represented by the Singer cycles of $GL(d,q)$.
+\end{coro}
+\begin{proof}
+$GF(q^i)^\times$ embeds in $GL(d,q)$ and has order $q^i-1=(q-1)(q^{i_1}+\cdots+q+1)$.  As it is cyclic, it has only one $q-1$
+order subgroup and this must therefore correspond to the $GF(q)^\times$
+subgroup.  These are accounted for with toral subgroups we already mentioned.  The remaining $q^{i-1}+\cdots +q+1$ cyclic subgroup of $GF(q^i)^\times$ are
+Singer cycles of $GL(d,q)$.  In particular, they account for the remaining
+portion of the order formula of $GL(d,q)$.
+\end{proof}
+
+Unfortunately, encoding a Singer cycle as a matrix is typically difficult.  One can expect this by considering that these matrices must all be matrices which are not triangular.  Thus a geometric pattern is out of the question.  Yet one will also observe that for this very reason, there are many Singer cycles so at random there is a high probablity of finding such an invertible matrix.  This is a very useful tool in practical algorithms for matrices which rely on non-deterministic approaches to remain efficient.
+
+If the matrices of $GL(d,q)$ are interpreted as matrices of $GL(d,\bar{q})$, where $\bar{q}$ denotes the algebraic closure of the field $GF(q)$, then every Singer cycle is diagonalizable as all the eigenvalues now lie in the field.  In this case every matrix of $GL(d,q)$ can be triangularized and so we only need to talk of unipotent and toral subgroups.
+
+The study of Singer cycles has largely been replaced by the more generally applicable study of toral subgroups.  Singer cycles generally do not have determinant 1 and so the study of these elements in projective and special groups is difficult.  The study of \emph{semi-simple} elements from Lie theory and algebraic groups replaces the use of Singer cycles.
+%%%%%
+%%%%%
+\end{document}

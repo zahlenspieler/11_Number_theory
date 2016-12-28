@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfPythagoreanTriples}
+\pmcreated{2013-03-22 18:34:40}
+\pmmodified{2013-03-22 18:34:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivation of Pythagorean triples}
+\pmrecord{8}{41302}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D09}
+\pmclassification{msc}{11A05}
+\pmrelated{LinearFormulasForPythagoreanTriples}
+\pmrelated{ContraharmonicMeansAndPythagoreanHypotenuses}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For finding all positive solutions of the Diophantine equation
+\begin{align}
+x^2\!+\!y^2 \;=\; z^2
+\end{align}
+we first can determine such triples\, $x,\,y,\,z$\, which are coprime.\, When these are then multiplied by all positive integers, one obtains all positive solutions.\\
+
+Let\, $(x,\,y,\,z)$\, be a solution of the mentioned kind.\, Then the numbers are pairwise coprime, since by (1), a common divisor of two of them is also a common divisor of the third.\, Especially, $x$ and $y$ cannot both be even.\, Neither can they both be odd, since because the square of any odd number is\, $\equiv 1 \pmod{4}$, the equation (1) would imply an impossible congruence\, $2 \equiv z^2 \pmod{4}$.\, Accordingly, one of the numbers, e.g. $x$, is even and the other, $y$, odd.
+
+Write (1) to the form
+\begin{align}
+x^2 \;=\; (z\!+\!y)(z\!-\!y).
+\end{align}
+Now, both \PMlinkname{factors}{Product} on the right hand side are even, whence one may denote
+\begin{align}
+z\!+\!y \;=:\; 2u, \quad z\!-\!y \;=:\; 2v
+\end{align}
+giving
+\begin{align}
+z \;=\; u\!+\!v, \quad y \;=\; u\!-\!v,
+\end{align}
+and thus (2) reads
+\begin{align}
+x^2 \;=\; 4uv.
+\end{align}
+Because $z$ and $y$ are coprime and\, $z > y > 0$,\, one can infer from (4) and (3) that also $u$ and $v$ must be coprime and\, $u > v > 0$.\, Therefore, it follows from (5) that
+$$u \;=\; m^2, \quad v \;=\; n^2$$
+where $m$ and $n$ are coprime and\, $m > n > 0$.\, Thus, (5) and (4) yield
+\begin{align}
+x \;=\; 2mn, \quad y \;=\; m^2\!-\!n^2, \quad z \;=\; m^2\!+\!n^2.
+\end{align}
+Here, one of $m$ and $n$ is odd and the other even, since $y$ is odd.
+
+By substituting the expressions (6) to the equation (1), one sees that it is satisfied by arbitrary values of $m$ and 
+$n$.\, If $m$ and $n$ have all the properties stated above, then $x,\,y,\,z$ are positive integers and, as one may deduce from two first of the equations (6), the numbers $x$ and $y$ and thus all three numbers are coprime.\\
+
+Thus one has proved the
+
+\textbf{Theorem.}\, All coprime positive solutions\, $x,\,y,\,z$,\, and only them, are gotten when one substitutes for $m$ and $n$ to the formulae (6) all possible coprime value pairs, from which always one is odd and the other even and\, $m > n$.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.} {\sc K. V\"ais\"al\"a}: {\em Lukuteorian ja korkeamman algebran alkeet}.\, Tiedekirjasto No. 17.\quad  Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

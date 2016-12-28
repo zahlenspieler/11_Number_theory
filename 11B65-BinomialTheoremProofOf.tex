@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BinomialTheoremProofOf}
+\pmcreated{2013-03-22 15:03:54}
+\pmmodified{2013-03-22 15:03:54}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{binomial theorem, proof of}
+\pmrecord{15}{36785}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B65}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\newcommand{\fm}[1]{{\it #1}}
+\begin{document}
+\begin{proposition*}
+Let \fm{a} and \fm{b} be commuting elements of some rig.  Then
+\[
+(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^k b^{n-k},
+\]
+where the $\binom{n}{k}$ are binomial coefficients.
+\end{proposition*}
+
+\begin{proof}
+Each term in the expansion of $(a+b)^n$ is obtained by making \fm{n}
+decisions of whether to use \fm{a} or \fm{b} as a factor.  Moreover,
+any sequence of \fm{n} such decisions yields a term in the expansion.
+So the expandsion of $(a+b)^n$ is precisely the sum of all the
+\fm{ab}-words of length \fm{n}, where each word appears exactly once.
+
+Since \fm{a} and \fm{b} commute, we can reduce each term via rewrite
+rules of the form $b^na\mapsto ab^n$ to a term in which the \fm{a}
+factors precede all the \fm{b} factors.  This produces a term of the
+form $a^k b^{n-k}$ for some \fm{k}, where we use the expressions $a^0
+b^n$ and $a^n b^0$ to denote $b^n$ and $a^n$ respectively.  For
+example, reducing the word $babab^2aba$ yields $a^4 b^5$, via the
+following reduction.
+\[
+babab^2aba \mapsto
+a ba ba b^2a b \mapsto
+a^2babab^3 \mapsto
+a^3bab^4 \mapsto
+a^4b^5.
+\]
+After performing this rewriting process, we collect like terms.  Let
+us illustrate this with the case \fm{n} = 3.
+\begin{align*}
+(a+b)^3
+&= aaa + aab + aba + abb + baa + bab + bba + bbb \\
+&= a^3 + a^2b + a^2 b + ab^2 +a^2 b + ab^2 + ab^2 + b^3 \\
+&= a^3 + 3a^2b + 3ab^2 + b^3.
+\end{align*}
+To determine the coefficient of a reduced term, it suffices to
+determine how many \fm{ab}-words have that reduction.  Since reducing
+a term only changes the positions of \fm{a}s and \fm{b}s and not their
+number, all the \fm{ab}-words where \fm{k} of the letters are \fm{b}s
+and \fm{n-k} are \fm{a}s, for $0\le k\le n$, have the same
+normalization.  But there are exactly $\binom{n}{k}$ such
+\fm{ab}-words, since there are $\binom{n}{k}$ ways to select \fm{k}
+positions out of \fm{n} to place \fm{a}s in an \fm{ab}-word of length
+\fm{n}.  This shows that the coefficient of the $a^n$ term is
+$\binom{n}{0}=1$, the coefficient of the $b^n$ term is
+$\binom{n}{n}=1$, and that the coefficient of the $a^k b^{n-k}$ term
+is $\binom{n}{k}$.
+\end{proof}
+
+\PMlinkescapeword{expansion}
+\PMlinkescapeword{length}
+\PMlinkescapeword{place}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+
+%%%%%
+%%%%%
+\end{document}

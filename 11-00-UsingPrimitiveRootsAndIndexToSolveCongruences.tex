@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingPrimitiveRootsAndIndexToSolveCongruences}
+\pmcreated{2013-03-22 16:20:58}
+\pmmodified{2013-03-22 16:20:58}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{using primitive roots and index to solve congruences}
+\pmrecord{4}{38483}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+\pmrelated{PrimitiveRoot}
+\pmrelated{Congruence}
+\pmrelated{PolynomialCongruence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\ind}{\operatorname{ind}}
+\begin{document}
+The aim of the following example is to illustrate how to use primitive roots and the index of an integer to solve seemingly complicated congruences.
+
+For this example, let $p=13$ and let us attempt to solve $$7x^{10}\equiv 5 \mod 13.$$ Since every prime has a primitive root, we can easily find one. In particular, the number $2$ is a primitive root for $p=13$. Indeed, the powers of $2$ are the following modulo $13$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $x$ & $x^2$ & $x^3$ & $x^4$ & $x^5$ & $x^6$ & $x^7$ & $x^8$ & $x^9$ 
+& $x^{10}$ & $x^{11}$ & $x^{12}$ \\
+  \hline
+  $2$ & $4$ & $8$ & $3$ & $6$ & $12$ & $11$ & $9$ & $5$ & $10$ & $7$ & $1$ \\
+  \hline
+\end{tabular}
+\end{center}
+The table above allows us to build a table of indices with base $2$ (for the definition of index and its properties which will be used below, see \PMlinkid{this entry}{PropertiesOfTheIndexOfAnIntegerWithRespectToAPrimitiveRoot}):
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ 
+& $10$ & $11$ & $12$ \\
+  \hline
+  $\ind x$ & $12$ & $1$ & $4$ & $2$ & $9$ & $5$ & $11$ & $3$ & $8$ & $10$ & $7$ & $6$ \\
+  \hline
+\end{tabular}
+\end{center}
+
+Now we can use the properties of index to solve the equation $7x^{10}\equiv 5 \mod 13$. By taking indices on both sides we obtain
+$$\ind (7x^{10})\equiv \ind 7 +10\ind x \equiv \ind 5 \mod 12$$
+and so $\ind x \equiv \ind 5 - \ind 7 \equiv 9-11\equiv 10 \mod 12$. The equivalence $10\ind x \equiv 10 \mod 12$ implies $5\ind x\equiv 5 \mod 6$ and hence $\ind x \equiv 1 \mod 6$. Lifting this solution to modulo $12$ we obtain $\ind x \equiv 1$ or $7$ modulo $12$, and by the table of indices, $x\equiv 2$ or $11$ modulo $13$ are the unique solutions of the congruence.
+%%%%%
+%%%%%
+\end{document}

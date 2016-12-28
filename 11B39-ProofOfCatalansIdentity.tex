@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCatalansIdentity}
+\pmcreated{2013-03-22 14:45:01}
+\pmmodified{2013-03-22 14:45:01}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof of Catalan's Identity}
+\pmrecord{20}{36389}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B39}
+%\pmkeywords{Fibonacci Numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\numberwithin{equation}{section}
+\begin{document}
+For all positive integers $i$, let $F_{i}$ denote the $i^{th}$ Fibonacci number, with $F_{1}$ = $F_{2}$ = 1. We will show that for all positive integers $n$ and $r$ such that $n > r$ the following holds:
+$$F_{n}^2 - F_{n + r}F_{n - r}=( - 1)^{n - r}F_{r}^2.$$
+But in order to prove this we first need two lemmas: \begin{lem}
+For all positive integers $a$ and $b$ such that $a>1$, the identity
+$$F_{a + b} = F_{a}F_{b + 1} + F_{a - 1}F_{b}$$ is true. \end{lem}
+\begin{proof} 
+We will prove this by induction on $b$. When $b = 1$, the identity states that 
+$$F_{a + 1} = F_{a}F_{2} + F_{a - 1}F_{1} \quad \Longleftrightarrow \quad F_{a + 1} = F_{a}\cdot 1 + F_{a - 1}\cdot 1$$
+which is true by the definition  of the Fibonacci numbers.  Now, assume for possible values of $b$ less than some positive integer $b_{0}$ such that $b_{0}>1$, the proposition is true. Then
+\begin{alignat*}{2}
+& F_{a}F_{b_{0} + 1} + F_{a - 1}F_{b_{0}} & \\ 
+=\ & F_{a}(F_{b_{0}} + F_{b_{0} - 1}) + F_{a - 1}(F_{b_{0} - 1} + F_{b_{0} - 2}) & \\
+=\ & (F_{a}F_{b_{0}} + F_{a - 1}F_{b_{0} - 1}) + (F_{a}F_{b_{0} - 1} + F_{a - 1}F_{b_{0} - 2}) & \\
+=\ & F_{a + (b_{0} - 1)} + F_{(a - 1) + (b_{0} - 1)} &  \mbox{(induction hypothesis)} \\
+=\ & F_{a + b_{0}} & \mbox{(definition of the Fibonacci numbers)}
+\end{alignat*}
+This concludes the proof. \end{proof}
+\begin{lem}
+For all positive integers $t$ such that $t>1$, the following holds:
+$$F_{t - 1}^2 + F_{t}F_{t - 1} - F_{t}^2 = ( - 1)^t.$$
+\end{lem}
+\begin{proof}
+We will (again) proceed by induction. First, when $t=2$, we have
+$$F_{1}^2 + F_{2}F_{1} - F_{2}^2=1 \quad \Longleftrightarrow \quad 1 + 1\cdot 1 - 1^2=1$$
+which is true. Now let us assume that the proposition is true for
+all positive integers which are greater than 1 and less than some
+positive integer $t_{0}$ $(t_{0}>2)$. Then
+\begin{alignat*}{2}
+& F_{t_{0} - 1}^2 + F_{t_{0}}F_{t_{0} - 1} - F_{t_{0}}^2 & \\
+=\ & F_{t_{0} - 1}^2  + (F_{t_{0} - 1} + F_{t_{0} - 2})F_{t_{0} - 1} - (F_{t_{0} - 1} + F_{t_{0} - 2})^2 & \\
+=\ & F_{t_{0} - 1}^2  + F_{t_{0} - 1}^2 + F_{t_{0} - 2}F_{t_{0} - 1} - F_{t_{0} - 1}^2 - F_{t_{0} - 2}^2 - 2F_{t_{0} - 1}F_{t_{0} - 2} & \\
+=\ & F_{t_{0} - 1}^2 - 2F_{t_{0} - 1}F_{t_{0} - 2} - F_{t_{0} - 2}^2 & \\
+=\ & - (F_{t_{0} - 2}^2 - 2F_{t_{0} - 2}F_{t_{0} - 1} - F_{t_{0} - 1}^2) & \\
+=\ &( - 1)( - 1)^{t_{0} - 1} & \mbox{(by induction hypothesis)} \\
+=\ & ( - 1)^{t_{0}} 
+\end{alignat*} and the proof is complete.
+\end{proof}
+Now to the main proposition. Let us make the substitutions $x = n - r$
+and $a=r$ so that the theorem now states:
+\begin{thm}
+For all positive integers $x$ and $a$, the following identity holds:
+$$F_{x + a}^2 - F_{x + 2a}F_{x}=( - 1)^{x}F_{a}^2.$$
+\end{thm}
+\begin{proof}  We follow a series of calculations
+\begin{alignat*}{2}
+& F_{x + a}^2 - F_{x + 2a}F_{x} & \\ 
+=\ & (F_{x}F_{a + 1} + F_{x - 1}F_{a})^2  - (F_{x}F_{2a + 1} + F_{x - 1}F_{2a})F_{x} & \text{(by lemma 1)} \\
+=\ & F_{x}^2 F_{a + 1}^2 + 2F_{x} F_{a + 1} F_{x - 1} F_{a} + F_{x - 1}^2 F_{a}^2 - & \\ 
+ & \quad F_{x}(F_{x}(F_{a + 1}^2 + F_{a}^2) + F_{x - 1}(F_{a} F_{a + 1} + F_{a - 1} F_{a})) & \text{(by lemma 1 again)} \\
+=\ & F_{x}F_{x - 1}F_{a}(F_{a + 1} - F_{a - 1}) + F_{a}^2(F_{x - 1}^2 - F_{x}^2) & \\
+=\ & F_{x}F_{x - 1}F_{a}(F_{a}) + F_{a}^2(F_{x - 1}^2 - F_{x}^2) & \text{(by the definition of Fibonacci numbers)} \\
+=\ & F_{a}^2(F_{x - 1}^2 + F_{x}F_{x - 1} - F_{x}^2) & \\
+=\ & F_{a}^2( - 1)^x & \text{(by lemma 2)} 
+\end{alignat*}
+completing our proof of the theorem.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

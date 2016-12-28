@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfSmallMultiplyPerfectNumbers}
+\pmcreated{2013-03-22 17:48:21}
+\pmmodified{2013-03-22 17:48:21}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of small multiply perfect numbers}
+\pmrecord{16}{40268}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The first five $k$-multiperfect numbers for $1 < k < 6$ are small enough to fit on a single page without the aid of horizontal scrollbars, or breaking up the numbers into more than one lines. For $k > 5$, the numbers get quite big and writing them out becomes less practical. But since they tend to be divisible by lots of small primes, it makes sense to take advantage of the primorials. In the following table, the notation $n\#$ means the product of the first $n$ primes, while the notation $k\textrm{-}P_i$ refers to the $i$th $k$-perfect number.
+
+\begin{tabular}{|l|r|r|r|r|r|}
+2 &                     6 &                     28 &                      496 &           8128 &       33550336 \\
+3 &                   120 &                    672 &                   523776 &      459818240 & $11(2^{27} - 2^{13})$ \\
+4 &                 30240 &                  32760 &                  2178540 &       23569920 &       45532800 \\
+5 &           14182439040 &            31998395520 &             518666803200 & 13661860101120 & 30823866178560 \\
+6 & $297581328(5\textrm{-}P_3)$ & $\displaystyle \left(\frac{1845}{31}\right) 6\textrm{-}P_1$ & $\displaystyle \left(\frac{27335}{369}\right) 6\textrm{-}P_2$ & $\displaystyle \frac{(13\#) 210^{18} 412057}{3^9 5^16 7^17 18241}$ & $\displaystyle \frac{(13\#)2^{18} 105^5 793}{58339155}$ \\
+\end{tabular}
+
+The smallest 7-multiperfect number is 14131089794743834825984940273848552326434354481
+8565120000.
+
+The source for $1 < k < 6$ in the table are the following sequences in Sloane's OEIS: A000396, A005820, A027687, A046060 and A046061. These have all been verified with Mathematica. For larger $k$, the information comes from the Multiply Perfect Numbers Page but has not been doublechecked anew, as these numbers require far more intensive computational effort to verify.
+%%%%%
+%%%%%
+\end{document}

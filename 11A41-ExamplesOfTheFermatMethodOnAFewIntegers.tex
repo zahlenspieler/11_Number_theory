@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfTheFermatMethodOnAFewIntegers}
+\pmcreated{2013-03-22 16:39:28}
+\pmmodified{2013-03-22 16:39:28}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of the Fermat method on a few integers}
+\pmrecord{5}{38863}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Take $n = 2039183$. The square root is approximately 1428, so that's what we set our iterator's initial state to. The test cap is 339865.
+
+At $i = 1428$, we find that $\sqrt{1428^2 - 2039183} = 1$, clearly an integer.
+
+Then, $1428 - 1 = 1427$ and $1428 + 1 = 1429$. By multiplication, we verify that $2039183 = 1427 \cdot 1429$, indeed. It is the product of a twin prime. By trial division, this would have taken 225 test divisions.
+
+However, there are integers for which trial division performs much better than the Fermat method. For example, take $n = 1411041$. Our iterator starts at 1188 and the test cap is 235175.
+
+At $i = 1188$, we find that $\sqrt{1188^2 - 1411041} \approx 17.4068952$. Similar frustration at 1189, 1190, etc.
+
+It's not until we get to $i = 235175$ that we finally get $\sqrt{235175^2 - 1411041} = 235172$.
+
+Then, $235175 - 235172 = 3$, and $235175 + 235172 = 470347$, and we verify that indeed $3 \cdot 470347 = 2039183$. This took 233987 instances of squaring, subtraction and square root extraction, which would have taken just 196 test divisions in trial division.
+
+How about 4393547637856664251490043044051018234292171475232959? The square root is approximately 6628384145368058140794809 and the test cap is 732257939642777375248340507341836372382028579205495. At worst, the Fermat method could take as many as 732257939642777375248340500713452227013970438410686 instances of squaring, subtraction and square root extraction to give a result. Clearly a more sophisticated method is needed to factorize an integer of this magnitude.
+%%%%%
+%%%%%
+\end{document}

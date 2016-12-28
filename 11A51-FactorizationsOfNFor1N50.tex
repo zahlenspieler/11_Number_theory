@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactorizationsOfNFor1N50}
+\pmcreated{2013-03-22 18:01:14}
+\pmmodified{2013-03-22 18:01:14}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{factorizations of $n!$ for $1 < n < 50$}
+\pmrecord{4}{40537}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following table gives the exponent for each of the primes from 2 to 47 in the prime factorization of $n!$. Stripping off the zeroes and ignoring the top row and the leftmost column, this table is A115627 in Sloane's OEIS.
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+$n$&  2 &  3 &  5 & 7 & 11& 13& 17& 19& 23& 29& 31& 37& 41& 43&47 \\
+ 2 &  1 &  0 &  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 3 &  1 &  1 &  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 4 &  3 &  1 &  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 5 &  3 &  1 &  1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 6 &  4 &  2 &  1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 7 &  4 &  2 &  1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 8 &  7 &  2 &  1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 9 &  7 &  4 &  1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+10 &  8 &  4 &  2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+11 &  8 &  4 &  2 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+12 & 10 &  5 &  2 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+13 & 10 &  5 &  2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+14 & 11 &  5 &  2 & 2 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+15 & 11 &  6 &  3 & 2 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+16 & 15 &  6 &  3 & 2 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+17 & 15 &  6 &  3 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+18 & 16 &  8 &  3 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+19 & 16 &  8 &  3 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+20 & 18 &  8 &  4 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+21 & 18 &  9 &  4 & 3 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+22 & 19 &  9 &  4 & 3 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+23 & 19 &  9 &  4 & 3 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+24 & 22 & 10 &  4 & 3 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+25 & 22 & 10 &  6 & 3 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+26 & 23 & 10 &  6 & 3 & 2 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+27 & 23 & 13 &  6 & 3 & 2 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+28 & 25 & 13 &  6 & 4 & 2 & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+29 & 25 & 13 &  6 & 4 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+30 & 26 & 14 &  7 & 4 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+31 & 26 & 14 &  7 & 4 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+32 & 31 & 14 &  7 & 4 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+33 & 31 & 15 &  7 & 4 & 3 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+34 & 32 & 15 &  7 & 4 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+35 & 32 & 15 &  8 & 5 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+36 & 34 & 17 &  8 & 5 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+37 & 34 & 17 &  8 & 5 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+38 & 35 & 17 &  8 & 5 & 3 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+39 & 35 & 18 &  8 & 5 & 3 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+40 & 38 & 18 &  9 & 5 & 3 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+41 & 38 & 18 &  9 & 5 & 3 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\
+42 & 39 & 19 &  9 & 6 & 3 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\
+43 & 39 & 19 &  9 & 6 & 3 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+44 & 41 & 19 &  9 & 6 & 4 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+45 & 41 & 21 & 10 & 6 & 4 & 3 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+46 & 42 & 21 & 10 & 6 & 4 & 3 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 0 \\
+47 & 42 & 21 & 10 & 6 & 4 & 3 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 \\
+48 & 46 & 22 & 10 & 6 & 4 & 3 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 \\
+49 & 46 & 22 & 10 & 8 & 4 & 3 & 2 & 2 & 2 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

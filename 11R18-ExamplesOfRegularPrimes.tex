@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfRegularPrimes}
+\pmcreated{2013-03-22 14:05:58}
+\pmmodified{2013-03-22 14:05:58}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of regular primes}
+\pmrecord{10}{35494}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R18}
+\pmclassification{msc}{11R29}
+%\pmkeywords{class number}
+%\pmkeywords{cyclotomic field}
+\pmrelated{ClassNumbersAndDiscriminantsTopicsOnClassGroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+{\bf Examples}:
+\begin{enumerate}
+\item These are all the irregular primes up to $1061$:
+
+37, 59, 67, 101, 103, 131, 149, 157, 233, 257, 263, 271,\\
+283, 293, 307, 311, 347, 353, 379, 389, 401,\\
+409, 421, 433, 461, 463, 467, 491, 523, 541,\\
+547, 557, 577, 587, 593, 607, 613, 617, 619,\\
+631, 647, 653, 659, 673, 677, 683, 691, 727,\\ 
+751, 757, 761, 773, 797, 809, 811, 821, 827,\\
+839, 877, 881, 887, 929, 953, 971, 1061.
+
+(for this, see the \PMlinkexternal{On-Line Encyclopedia of Integer Sequences}{http://www.research.att.com/~njas/sequences/Seis.html},  \PMlinkexternal{
+sequence A000928}{http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.c
+gi?Anum=A000928})
+
+\item The following are the first few class numbers of the cyclotomic fields $\Rats(\zeta_p)$, where $\zeta_p$ is a primitive $p$-th root of unity:
+
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $p$ & Class Number \\
+  \hline
+  3 & 1 \\
+  5 & 1 \\
+  7 & 1 \\
+  11 & 1 \\
+  13 & 1 \\
+  17 & 1 \\
+  19 & 1 \\
+  23 & 3 \\
+  29 & 8 \\
+  31 & 9 \\
+  37 & 37 \\
+  41 & 121 \\
+  43 & 211 \\
+  47 & 695 \\
+  53 & 4889 \\
+  59 & 41241 \\
+  61 & 76301 \\
+  \hline
+\end{tabular}
+
+An excellent reference for this is $\cite{wash}$.
+
+{\bf Remarks}:
+\begin{itemize}
+\item Notice that $37$ divides $37$, and $59$ divides $41241=3\cdot 59\cdot 233$, thus $37,\ 59$ are irregular primes (see above).  
+
+\item The class number of the cyclotomic fields grows very quickly with $p$. For example, $p=19$ is the last cyclotomic field of class number 1.
+
+\end{itemize}
+
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{wash} L. C. Washington, {\em Introduction to Cyclotomic Fields},
+Springer-Verlag, New York.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

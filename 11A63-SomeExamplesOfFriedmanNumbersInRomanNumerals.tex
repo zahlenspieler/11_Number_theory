@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeExamplesOfFriedmanNumbersInRomanNumerals}
+\pmcreated{2013-03-22 15:47:12}
+\pmmodified{2013-03-22 15:47:12}
+\pmowner{Mravinci}{12996}
+\pmmodifier{Mravinci}{12996}
+\pmtitle{some examples of Friedman numbers in Roman numerals}
+\pmrecord{6}{37745}
+\pmprivacy{1}
+\pmauthor{Mravinci}{12996}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In exploring Friedman numbers written with Roman numerals, some people may find it useful to add the constraint that other operators must be used in addition to the addition and subtraction operators, to avoid obvious and uninteresting instances like $XVIII = XI + VII$ or $XIX = XX - I$. Also, to avoid confusion with the numeral for 10, the multiplication dot should be used instead of the multiplication cross.
+
+A systematic search has yet to be undertaken. With Friedman numbers in positional bases, searches usually begin with integers in the range $b < x < b^3$. For Roman numerals, the search for Friedman numbers could be structured according to Sloane's A003857.
+
+\subsection{Examples of regular Friedman numbers}
+
+$VIII = IV \cdot II$ is also an example of a vampire number in Roman numerals.
+
+$$XXVII = IX \cdot ({X \over V} + I)$$
+
+36 is the smallest one known to be a Friedman number in two different, non-equivalent ways: $XXXVI = VI^{{{XX} \over X}}$ or $IX \cdot {{XX} \over V}$.
+
+75 can also be expressed in two different, non-equivalent ways: $LXXV = {{L \cdot XV} \over X}$ or $XV \cdot {L \over X}$.
+
+$$LXXVIII = (XV - II) \cdot ({L \over X} + I)$$
+
+$$CCXLIII = III^{{CC} \over {XL}}$$
+
+The largest known might be $MMCLXXXVII = ({{CXX} \over {LX}} + {M \over M})^{VII}$.
+
+\subsection{Examples of nice Friedman numbers}
+
+The first one found was $VIII = (V - I) \cdot II$.
+
+Erich Friedman himself prefers to call these "strong" Friedman numbers, but Sloane's Online Encyclopedia of Integer Sequences, because of its "nice" keyword has pretty much codified the term "nice."
+
+\subsection{Examples of derived Friedman numbers}
+
+Because of the nature of Roman numerals, finding a small Roman numeral Friedman number usually allows one to derive many others. To give just two examples: 
+
+$$XVIII = X + (IV \cdot II), XXVIII = XX + (IV \cdot II), \ldots$$
+
+and
+
+$$CXXVII = C + IX \cdot ({X \over V} + I), CCXXVII = CC + IX \cdot ({X \over V} + I), \ldots$$
+
+\subsection{Examples of contrived Friedman numbers}
+
+I call these "contrived" because using 1 as either a base or an exponent has the effect of making one of the values irrelevant.
+
+$XLIX = L - I^{XX}$ or $L^I - {X \over X}$
+
+$$LXXXIX = X \cdot (X - I^L) - {X \over X}$$
+%%%%%
+%%%%%
+\end{document}

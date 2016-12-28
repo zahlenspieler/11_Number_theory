@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfEllipticCurvesWithComplexMultiplication}
+\pmcreated{2013-03-22 14:22:47}
+\pmmodified{2013-03-22 14:22:47}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of elliptic curves with complex multiplication}
+\pmrecord{4}{35872}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11G05}
+\pmrelated{ArithmeticOfEllipticCurves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Here we show some elliptic curves defined over $\Rats$ which have complex multiplication by a quadratic imaginary field $K$ of class number $1$ (with $\operatorname{End}(E)$ exactly isomorphic to the full ring of integers $\mathcal{O}_K$).
+
+\begin{center}
+\begin{tabular}{|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $K$ & {\bf Curve} \\
+  \hline
+  $\Rats(\sqrt{-1})$ & $y^2=x^3+x$ \\
+  $\Rats(\sqrt{-2})$ & $y^2=x^3+4x^2+2x$ \\
+  $\Rats(\sqrt{-3})$ & $y^2+y=x^3$ \\
+  $\Rats(\sqrt{-7})$ & $y^2+xy=x^3-x^2-2x-1$ \\
+  $\Rats(\sqrt{-11})$ & $y^2+y=x^3-x^2-7x+10$ \\
+  $\Rats(\sqrt{-19})$ & $y^2+y=x^3-38x+90$ \\
+  $\Rats(\sqrt{-43})$ & $y^2+y=x^3-860x+9707$ \\
+  $\Rats(\sqrt{-67})$ & $y^2+y=x^3-7370x+243528$ \\
+  $\Rats(\sqrt{-163})$ & $y^2+y=x^3-2174420x+1234136692$ \\
+  \hline
+\end{tabular}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

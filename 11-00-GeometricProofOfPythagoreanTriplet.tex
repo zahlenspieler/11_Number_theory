@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricProofOfPythagoreanTriplet}
+\pmcreated{2013-03-22 18:36:20}
+\pmmodified{2013-03-22 18:36:20}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{geometric proof of Pythagorean triplet}
+\pmrecord{6}{41337}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+\pmrelated{RationalSineAndCosine}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+If $x^2+y^2=z^2$ for $x,y,z$ positive integers is a pythagorean triple, then dividing through by $z^2$, we can write this in the form $r^2+s^2=1$ for positive rational numbers $r,s$. There is thus a 1-1 correspondence between primitive pythagorean triples (i.e. those for which $x,y$, and $z$ are pairwise coprime) and rational points in the first quadrant on the unit circle.
+
+To find all such points on the unit circle, consider the following diagram:
+\begin{center}
+\begin{pspicture}
+\psframe(-5,-1)(5,5.2)
+\psline(0,-1)(0,5)
+\psline(-5.2,0)(5.2,0)
+\psarc(0,0){4}{350}{190}
+\uput{.2}[135](0,2){1}
+\psdot*(0,0)
+\uput{.2}[225](0,0){$O$}
+\psdot*(-4,0)
+\uput{.2}[315](-4,0){$A=(-1,0)$}
+\psdot*(3.4641,2)
+\uput{.2}[45](3.4641,2){$B=(x,t(x+1))$}
+\psdot*(3.4641,0)
+\uput{.2}[270](3.4641,0){$(x,0)$}
+\psline(3.4641,2)(3.4641,0)
+\psline(-4,0)(3.4641,2)
+\rput(0,5){.}
+%\rput(-5.2,0){.}
+\rput(7,0){.}
+\rput(0,-1){.}
+\end{pspicture}
+\end{center}
+The line from $A$ to $B$ is the line $y=t(x+1)$; we parametrize this as $t$ ranges over $[0,1]$ to capture all points in the first quadrant.
+
+Substituting $y=t(x+1)$ back into the equation for the unit circle, we get
+\begin{gather*}
+  1=x^2+y^2 = x^2 + t^2(x+1)^2 = (1+t^2)x^2 + 2t^2x+t^2\\
+  (1+t^2)x^2 + 2t^2x + (t^2-1)=0
+\end{gather*}
+Solving for $x$ using the quadratic formula (or, alternatively, dividing this polynomial by the known factor $x+1)$, and computing $y$ using the equation of the line, we get
+\[
+  x = \frac{1-t^2}{1+t^2}=1-\frac{2t^2}{1+t^2},\quad y = \frac{2t}{1+t^2}
+\]
+So if both $x$ and $y$ are to be rational, we must have that both
+\[
+  \frac{2t^2}{1+t^2}\quad\text{and}\quad\frac{2t}{1+t^2}
+\]
+are rational, and thus their quotient $t$ must be rational. Writing $t=\frac{q}{p}$, we get
+\[
+  x = \frac{1-t^2}{1+t^2} = \frac{1-\left(\frac{q}{p}\right)^2}{1+\left(\frac{q}{p}\right)^2}
+    = \frac{p^2-q^2}{p^2+q^2},
+  \quad
+  y = \frac{2\frac{q}{p}}{1+\left(\frac{q}{p}\right)^2}=\frac{2pq}{p^2+q^2}
+\]
+and then $x^2+y^2=1$ becomes
+\[
+  (p^2+q^2)^2 = (p^2-q^2)^2 + (2pq)^2
+\]
+which is the desired parametrization of the pythagorean triple.
+%%%%%
+%%%%%
+\end{document}

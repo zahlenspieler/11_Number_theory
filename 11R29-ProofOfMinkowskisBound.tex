@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMinkowskisBound}
+\pmcreated{2013-03-22 18:33:41}
+\pmmodified{2013-03-22 18:33:41}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Minkowski's bound}
+\pmrecord{5}{41284}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R29}
+\pmclassification{msc}{11H06}
+%\pmkeywords{ideal class group}
+%\pmkeywords{lattice}
+\pmrelated{MinkowskisTheorem}
+\pmrelated{MinkowskisConstant}
+\pmrelated{IdealClass}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+The proof of Minkowski's bound will rely on \PMlinkname{Minkowski's lattice point theorem}{MinkowskisTheorem}, but we first need to establish some lemmas.
+
+\begin{lemma}\label{lem:1}
+Let $M$ be a real number and suppose that for every non-zero ideal $\mathfrak{a}$ of the ring of integers $\mathcal{O}_K$ there exists a non-zero $x\in\mathfrak{a}$ with norm $\operatorname{N}(x)\le M \operatorname{N}(\mathfrak{a})$.
+
+Then, every ideal class of $\mathcal{O}_K$ has a representative $\mathfrak{a}$ satisfying $\operatorname{N}(\mathfrak{a})\le M$.
+\end{lemma}
+\begin{proof}
+Let $[\mathfrak{b}]$ be an ideal class represented by the ideal $\mathfrak{b}$. Choosing a non-zero $x\in\mathfrak{b}$ then $x\mathfrak{b}^{-1}$ is an ideal of $\mathcal{O}_K$ and, by the condition of the lemma, contains a non-zero $y$ satisfying $\operatorname{N}(y)\le M \operatorname{N}(x\mathfrak{b}^{-1})$.
+Then, $\mathfrak{a}\equiv x^{-1}y\mathfrak{b}$ is an ideal representing $[\mathfrak{b}]$ and $\operatorname{N}(\mathfrak{a})=\operatorname{N}(y)/\operatorname{N}(x\mathfrak{b}^{-1})\le M$.
+\end{proof}
+
+If the real embeddings of $K$ are denoted by $\sigma_k\colon K\rightarrow\mathbb{R}$ ($k=1,\ldots,r_1$) and the complex embeddings are $\tau_k\colon K\rightarrow\mathbb{C}$ together with their complex conjugates $\bar\tau_k$ ($k=1,\ldots,r_2$), then we define
+\begin{align*}
+&j\colon K\rightarrow\mathbb{R}^{r_1}\times\mathbb{C}^{r_2},\\
+&j(x)=(\sigma_1(x),\ldots,\sigma_{r_1}(x),\tau_1(x),\ldots,\tau_{r_2}(x)).
+\end{align*}
+Also note that $\mathbb{R}^{r_1}\times\mathbb{C}^{r_2}$ is isomorphic as a real vector space to $\mathbb{R}^{r_1+2r_2}=\mathbb{R}^{n}$ given by the isomorphism
+\begin{gather*}
+f\colon\mathbb{R}^{r_1}\times\mathbb{C}^{r_2}\rightarrow\mathbb{R}^n,\\
+f(x_1,\dots,x_{r_1},y_{1},\ldots,y_{r_2})=(x_1,\ldots,x_{r_1},\Re(y_{1}),\ldots,\Re(y_{r_2}),\Im(y_{1}),\ldots,\Im(y_{r_2})).
+\end{gather*}
+As $f$ and $j$ are linear maps (with respect to the field of rationals $\mathbb{Q}$), the combination $f\circ j$ gives a $\mathbb{Q}$-linear map from $K$ to $\mathbb{R}^n$. The image will be a lattice, and we can compute its volume.
+
+\begin{lemma}\label{lem:2}
+If $\mathfrak{a}$ is a non-zero ideal of $\mathcal{O}_K$, then $\Gamma=f\circ j(\mathfrak{a})$ is a \PMlinkname{lattice in $\mathbb{R}^n$}{LatticeInMathbbRn}. Its fundamental mesh has volume
+\begin{equation*}
+\operatorname{vol}(\Gamma)=2^{-r_2}\sqrt{|D_K|}\operatorname{N}(\mathfrak{a}).
+\end{equation*}
+\end{lemma}
+\begin{proof}
+The proof of this is to be added.
+\end{proof}
+
+\begin{lemma}\label{lem:3}
+For any $L>0$, let $S$ be the set in $\mathbb{R}^{r_1}\times\mathbb{C}^{r_2}$ consisting of points $(x_1,\ldots,x_{r_1},y_1,y_{r_2})$ satisfying
+\begin{equation*}
+\sum_{k=1}^{r_1}|x_k|+2\sum_{k=1}^{r_2}|y_k|\le L.
+\end{equation*}
+Then, $f(S)$ has volume $(2^{r_1-r_2}\pi^{r_2}/n!) L^n$.
+\end{lemma}
+\begin{proof}
+The proof of this is to be added.
+\end{proof}
+
+\noindent{\bf Proof of Minkowski's bound}
+
+For an ideal $\mathfrak{a}$ and any constant $b>1$, let $L>0$ be given by
+\begin{equation*}
+\frac{2^{r_1-r_2}\pi^{r_2}}{n!} L^n=2^nb2^{-r_2}\sqrt{|D_K|}\operatorname{N}(\mathfrak{a}).
+\end{equation*}
+Letting $S$ be the set given in Lemma \ref{lem:3} and $\Gamma=f\circ j(\mathfrak{a})$, Lemmas \ref{lem:2} and \ref{lem:3} give $\operatorname{vol}(S)>2^n\operatorname{vol}(\Gamma)$. As $S$ is convex and symmetric about the origin, Minkowski's theorem tells us that there is a non-zero $x\in\mathfrak{a}$ with $f\circ j(x)\in S$.
+
+As the geometric mean is always bounded above by the arithmetic mean, we get the inequality
+\begin{equation*}\begin{split}
+\operatorname{N}(x)&=\prod_{k=1}^{r_1}|\sigma_k(x)|\prod_{k=1}^{r_2}|\tau_k(x)|^2\\
+&\le n^{-n}\left(\sum_{k=1}^{r_1}|\sigma_k(x)|+2\sum_{k=1}^{r_2}|\tau_k(x)|\right)^n\\
+&\le n^{-n}L^n=b M_K\sqrt{|D_K|}\operatorname{N}(\mathfrak{a})
+\end{split}\end{equation*}
+where $M_K=(n!/n^n)(4/\pi)^{r_2}$. If we choose $b$ such that $bM_K\sqrt{|D_K|}\operatorname{N}(\mathfrak{a})$ is less than the smallest integer greater than $M_K\sqrt{|D_K|}\operatorname{N}(\mathfrak{a})$, then this gives $\operatorname{N}(x)\le M_K\sqrt{|D_K|}\operatorname{N}(\mathfrak{a})$ and Minkowski's bound follows from Lemma \ref{lem:1}.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,235 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BaseConversion}
+\pmcreated{2013-03-22 13:03:50}
+\pmmodified{2013-03-22 13:03:50}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{base conversion}
+\pmrecord{12}{33471}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B13}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{url}
+
+\newcommand{\ol}{\overline}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Obj}{\text{Obj}}
+\newcommand{\Mor}{\text{Mor}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\End}{\text{End}}
+\newcommand{\im}{\text{Im}}
+\newcommand{\qbar}{\overline{\mb{Q}}}
+\newcommand{\wideg}{\text{wideg}}
+\newcommand{\Lindent}{0.4in}
+
+
+\newenvironment{Lalgorithm}[4]{
+\textbf{Algorithm} \textsc{#1}\texttt{(#2)}\newline
+\textit{Input}: #3\newline
+\textit{Output}: #4\newline
+}{}
+
+\newenvironment{Lfloatalgorithm}[6][h]{
+\begin{figure}[#1]
+\caption{#2}
+\begin{Lalgorithm}{#3}{#4}{#5}{#6}
+}{
+\end{Lalgorithm}
+\end{figure}
+}
+
+\newcommand{\Lgets}{\ensuremath{\gets}}
+\newcommand{\Lgroup}[1]{\textbf{begin}\\\hspace*{\Lindent}\parbox{\textwidth}{#1}\\\textbf{end}}
+\newcommand{\Lif}[2]{\textbf{if} #1 \textbf{then}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+\newcommand{\Lelse}[1]{\textbf{else}\\\hspace*{\Lindent}\parbox{\textwidth}{#1}}
+\newcommand{\Lelseif}[2]{\textbf{else if} #1 \textbf{then}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+\newcommand{\Lfor}[2]{\textbf{for} #1 \textbf{do}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+\newcommand{\Lwhile}[2]{\textbf{while} #1 \textbf{do}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+\begin{document}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{scheme}
+\PMlinkescapeword{group}
+\PMlinkescapeword{binary}
+\PMlinkescapeword{focus}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{represent}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{representations}
+
+The PlanetMath entry bases gives a good overview over the symbolic representation of numbers, something which we use every day.  This entry will give a simple overview and method of converting numbers between bases: that is, taking one representation of a number and converting it to another.  When dealing with extremely large numbers, base conversion may become quite slow.  Fortunately, methods exist which are significantly more efficient than those listed here; see Knuth, The Art of Computer Programming.  The simplest of these work by divide-and-conquer, converting groups of digits at once.  In this article, we focus on a more naive approach.
+
+Perhaps the simplest way to explain base conversion is to describe the conversion to and from base 10 (in which everyone is accustomed to performing arithmetic).  We will begin with the easier method, which is the conversion from some other base to base 10.
+
+\subsection*{Conversion to Base 10}
+
+Suppose we have a number represented in base $b$.  This number is given as a sequence of symbols $s_n s_{n-1} \cdots s_2 s_1 . t_1 t_2 \cdots t_m$.  This sequence represents
+
+$$
+s_n b^{n-1} + s_{n-1} b^{n-2} + \cdots + s_2 b + s_1 + t_1 b^{-1} + t_2 b^{-2} + \cdots + t_m b^{-m}
+$$
+
+This is straight-forward enough.  All we need to do is convert each symbol $s$ to its decimal equivalent.  Typically this is simple.  The symbols $0,1,\cdots, 9$ usually represent the same value in any other base.  For $b > 9$, the letters of the alphabet begin to be used, with $a = 10, b = 11,$ and so on.  This serves up to $b = 36$.  Since the most common bases used are binary ($b = 2$), octal ($b = 8$), decimal ($b = 10$), and hexadecimal ($b = 16$), this scheme is generally sufficient.
+
+Once we map symbols to values, we can easily apply the formula above, adding and multiplying as we go along.
+
+\subsection*{Example of Conversion to Base 10}
+
+\begin{enumerate}
+  \item{\textbf{Binary to Decimal}}
+    Let $b = 2$.  Convert \verb!10010.011! to decimal.
+
+\begin{eqnarray*}
+\texttt{10010.011}&=&1\cdot2^4+0\cdot2^3+0\cdot2^2+1\cdot2+0+0\cdot2^{-1}+1\cdot2^{-2}+1\cdot2^{-3}\\
+&=&16+2+\frac{1}{4}+\frac{1}{8}\\
+&=&18.375
+\end{eqnarray*}
+
+  \item{\textbf{Ternary to Decimal}}
+    Let $b = 3$.  Convert \verb!10210.21! to decimal.
+
+\begin{eqnarray*}
+\texttt{10210.21}&=&1\cdot3^4+0\cdot3^3+2\cdot3^2+1\cdot3+0+2\cdot3^{-1}+1\cdot3^{-2}\\
+&=&1\cdot81+2\cdot9+1\cdot3+\frac{2}{3}+\frac{1}{9}\\
+&=&102.777777\dots
+\end{eqnarray*}
+
+Note that there is no exact decimal representation of the ternary value \verb!10210.21!.  This happens often with conversions between bases.  This is why many decimal values (such as $0.1$) cannot be represented precisely in binary floating point (generally used in computers for non-integral arithmetic).
+
+\item{\textbf{Hexadecimal to Decimal}}
+Let $b = 16$.  Convert \verb!4ad9.e3! to decimal.
+
+\begin{eqnarray*}
+\texttt{4ad9.e3}&=&4\cdot16^3+10\cdot16^2+13\cdot16+9+14\cdot16^{-1}+3\cdot16^{-2}\\
+&=&4\cdot4096+10\cdot256+13\cdot16+9+\frac{14}{16}+\frac{3}{256}\\
+&=&16384+2560+208+9+\frac{227}{256}\\
+&=&19161.88671875
+\end{eqnarray*}
+\end{enumerate}
+
+\subsection*{Iterative Method}
+
+Obviously base conversion can become very tedious.  It would make sense to write a computer program to perform these operations.  What follows is a simple algorithm that iterates through the symbols of a representation, accumulating a value as it goes along.  Once all the symbols are iterated, the result is in the accumulator.  This method only works for whole numbers.  The fractional part of a number could be converted in the same manner, but it would have to be a separate process, working from the end of the number rather than the beginning.
+
+\begin{Lalgorithm}
+    {Parse}
+    {$(A, n, b)$}
+    {Sequence $A$, where $0 \leq A[i] < b$ for $1 \leq i \leq n$, $b > 1$}
+    {The value represented by $A$ in base $b$ (where $A[1]$ is the left-most digit)}
+$v \gets 0$\\
+\Lfor{$i \gets 1$ \textbf{to} $n$}{
+$v \gets b * v + A[i]$\\
+\texttt{Parse}$\gets v$}
+\end{Lalgorithm}
+
+\noindent This is a simple enough method that it could even be done in one's head.
+
+\subsection*{Example of Iterative Method}
+
+Let $b = 2$.  Convert \verb!101101! to decimal.
+
+\begin{tabular}{|c|r|}
+Remaining Digits&Accumulator\\
+\hline
+\texttt{101101}&0 \\
+\texttt{01101}&$0*2 + 1 = 1$\\
+\texttt{1101}&$1*2 + 0 = 2$\\
+\texttt{101}&$2*2+1 = 5$\\
+\texttt{01}&$5*2+1 = 11$\\
+\texttt{1}&$11*2+0 = 22$\\
+&$22*2+1 = 45$
+\end{tabular}
+
+This is a bit easier than remembering that the first digit corresponds to the
+$2^5 = 32$ place.
+
+\subsection*{Conversion From Base 10}
+
+To convert a value to some base $b$ simply consists of inverse application of the iterative method.  As the iterative method for ``parsing'' a symbolic representation of a value consists of multiplication and addition, the iterative method for forming a symbolic representation of a value will consist of division and subtraction.
+
+\begin{Lalgorithm}
+    {Generate}
+    {$(A, n, b)$}
+    {Array $A$ of sufficient size to store the representation, $n > 0, b > 1$}
+    {The representation of $n$ in base $b$ will be stored in array $A$ in \textit{reverse} order}
+$i \gets 1$\\
+\Lwhile{$n > 0$}{
+$A[i] \gets n$ mod $b$ \textit{(remainder of $n/b$)}\\
+$n \gets n / b$ \textit{(integral division)}\\
+$i \gets i + 1$}
+\end{Lalgorithm}
+
+\subsection*{Example of Conversion from Base 10}
+
+Convert the decimal value 20000 to hexadecimal.
+
+\begin{tabular}{|c|r|r|}
+$n$ & Value Sequence & Symbolic Sequence \\
+\hline
+20000 & $\left\{\right\}$ & \\
+1250 & $\left\{ 0 \right\}$ & 0 \\
+78 & $\left\{ 2, 0 \right\}$ & 20 \\
+4 & $\left\{ 14, 2, 0 \right\}$ & e20 \\
+0 & $\left\{ 4, 14, 2, 0 \right\}$ & 4e20
+\end{tabular}
+
+Note how we obtain the symbols from the right.  We get the next symbol (moving left) by taking the value of $n$ mod $16$.  We then replace $n$ with the whole part of $n / 16$, and repeat until $n = 0$.
+
+This isn't as easy to do in one's head as the other direction, though for small bases (e.g. $b = 2$) it is feasible.  For example, to convert 20000 to binary:
+
+\begin{tabular}{|c|r|}
+$n$ & Representation \\
+20000 & \\
+10000 & 0 \\
+5000 & 00 \\
+2500 & 000 \\
+1250 & 0000 \\
+625 & 0 0000 \\
+312 & 10 0000 \\
+156 & 010 0000 \\
+78 & 0010 0000 \\
+39 & 0 0010 0000 \\
+19 & 10 0010 0000 \\
+9 & 110 0010 0000 \\
+4 & 1110 0010 0000 \\
+2 & 0 1110 0010 0000 \\
+1 & 00 1110 0010 0000 \\
+0 & 100 1110 0010 0000
+\end{tabular}
+
+Of course, remembering that many digits (15) might be difficult.
+
+\subsection*{Conversion Between Similar Bases}
+
+The digits in the previous example are grouped into sets of four both to ease readability, and to highlight the relationship between binary and hexadecimal.  Since $2^4 = 16$, each group of four binary digits is the representation of a hexadecimal digit in the same position of the sequence.
+
+It is trivial to get the octal and hexadecimal representations of any number once one has the binary representation.  For instance, since $2^3 = 8$, the octal representation can be obtained by grouping the binary digits into groups of 3, and converting each group to an octal digit.
+
+$$
+100 \: 111 \: 000 \: 100 \: 000 = 47040
+$$
+
+Even base $2^5 = 32$ could be obtained:
+
+$$
+10011 \: 10001 \: 00000 = jh0
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrdersAndStructureOfClassicalGroups}
+\pmcreated{2013-03-22 15:56:45}
+\pmmodified{2013-03-22 15:56:45}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{orders and structure of classical groups}
+\pmrecord{10}{37956}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E57}
+\pmclassification{msc}{05E15}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{thm}\label{thm:lin}
+\[
+\begin{array}{cc}
+|SL(d,q)| = q^{\binom{d}{2}} \prod_{i=2}^d (q^i-1), 
+  & |PSL(d,q)|=\frac{|SL(d,q)|}{(d,q-1)},\\
+|GL(d,q)|  =  q^{\binom{d}{2}} \prod_{i=1}^d (q^i-1), 
+  & |PGL(d,q)|=\frac{|GL(d,q)|}{q-1},\\
+|\Gamma L(d,q)|  =  (q-1) q^{\binom{d}{2}} \prod_{i=1}^d (q^i-1),
+  & |P\Gamma L(d,q)|=\frac{|\Gamma L(d,q)|}{q-1}.
+\end{array}
+\]
+\end{thm}
+
+A proof of this theorem can proceed in many directions which each explain more of the structure of the these groups so each approach is considered equally valid and presented here.  We list them from most elementary to most theoretical.
+\begin{enumerate}
+\item \PMlinkname{Elementary linear algebra proof}{ElementaryProofOfOrders}
+\item \PMlinkname{Proof from subgroups of $GL(V)$}{TheoryFromOrdersOfClassicalGroups2}
+\item Proof from Lie theory/Chevally groups. [PENDING.]
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

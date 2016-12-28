@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfCyclotomicPolynomials}
+\pmcreated{2013-03-22 17:20:03}
+\pmmodified{2013-03-22 17:20:03}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of cyclotomic polynomials}
+\pmrecord{10}{39688}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R60}
+\pmclassification{msc}{11R18}
+\pmclassification{msc}{11C08}
+\pmsynonym{calculating cyclotomic polynomials}{ExamplesOfCyclotomicPolynomials}
+\pmrelated{PrimeFactorsOfXn1}
+\pmrelated{RootOfUnity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+In this entry we calculate a number of cyclotomic polynomials, $\Phi_d(x)\in\Rats[x]$, for various $d\geq 1$. The interested reader can find specific examples at the bottom of the entry. We will concentrate first on the theory details which allow us to calculate these polynomials. 
+
+\section{The theory behind the examples}
+The following simple lemma is also useful when calculating cyclotomic polynomials:
+\begin{lemma}
+Let $n,d\geq 2$ be positive integers. If $d$ divides $n$ then $\Phi_d(x)$ divides $q_n(x)=\frac{x^n-1}{x-1}$.
+\end{lemma}
+\begin{proof}
+Let $\zeta_d$ be a primitive $d$th root of unity and let $\Phi_d(x)$ be the $d$th cyclotomic polynomial (which is the minimal polynomial of $\zeta_d$ over $\Rats$). If $d$ divides $n$ then there is a natural number $m\geq 1$ such that $n=dm$. Thus 
+$$\zeta_d^n=(\zeta_d^d)^m=1^m=1$$
+and so, $\zeta_d$ is also an $n$th root of unity and, in particular, it is a root of $q_n(x)$. By the properties of minimal polynomials, $\Phi_d(x)$ must divide $q_n(x)$.  
+\end{proof}
+
+\begin{lemma}
+The polynomial $\Phi_d(x)$ is of degree $\varphi(d)$, where $\varphi$ is Euler's phi function.
+\end{lemma}
+\begin{proof}
+This is an immediate consequence of the definition: for any positive integer $d$, we define $\Phi_n(x)$, the $d$th {\em cyclotomic
+polynomial}, by
+\[\Phi_d(x)=\prod_{\stackrel{j=1,}{\scriptscriptstyle{(j,d)=1}}}^d(x-{\zeta_d}^j)\]
+where $\zeta_d=e^{\frac{2\pi i}{d}}$, i.e. $\zeta_d$ is an $d$th root of unity. Therefore, the degree is $\varphi(d)$.
+\end{proof}
+
+We begin with the $p$th cyclotomic polynomials for a prime $p\geq 2$.
+
+\begin{prop}
+The polynomial $$q_p(x)=\frac{x^p-1}{x-1}=x^{p-1}+x^{p-2}+\cdots+x^2+x+1$$ is irreducible over $\Rats$.
+\end{prop}
+\begin{proof}
+In order to show that $q(x)=q_p(x)$ is irreducible, we perform a change of variables $x\mapsto x+1$, and define $q'(x)=q(x+1)$. Clearly, $q'(x)$ is irreducible over $\Rats$ if and only if $q(x)$ is irreducible. Also:
+\begin{eqnarray*}
+q'(x) &=& q(x+1)=\frac{(x+1)^p-1}{(x+1)-1}\\
+&=& \frac{x^p+{p\choose 1}x^{p-1}+{p\choose 2}x^{p-2}+\cdots +{p\choose p-2}x^2 + {p\choose p-1}x}{x} \\
+&=&  
+x^{p-1}+{p\choose 1}x^{p-2}+{p\choose 2}x^{p-3}+\cdots +{p\choose p-2}x +{p\choose p-1}
+\end{eqnarray*}
+Since all the binomial coefficients ${p\choose n} = \frac{p!}{(p-n)!n!}$, for $n=1,\ldots,p-1$, are integers divisible by $p$, and ${p\choose p-1}=p$ is not divisible by $p^2$, we can use Eisenstein's criterion to conclude that $q'(x)$ is irreducible over $\Rats$. Thus $q(x)$ is irreducible as well, as desired.
+\end{proof}
+
+As a corollary, we obtain:
+
+\begin{thm}
+Let $p\geq 2$ be a prime. Then  the $p$th cyclotomic polynomial is given by $$\Phi_p(x)=\frac{x^p-1}{x-1}=x^{p-1}+x^{p-2}+\cdots+x+1.$$
+\end{thm}
+\begin{proof}
+By the lemma, the polynomial $\Phi_p(x)\in \Rats[x]$ divides $q(x)=\frac{x^p-1}{x-1}$ and, by the proposition above, $q(x)$ is irreducible. Hence $\Phi_p(x)=q(x)$ as claimed. 
+\end{proof}
+
+The following proposition will be very useful as well:
+\begin{prop}
+Let $n$ be a positive integer.\, Then the binomial\, $x^n\!-\!1$\, has as many \PMlinkname{prime factors}{PrimeFactorsOfXn1} with integer coefficients as the integer $n$ has positive divisors, both numbers thus being \PMlinkname{$\tau(n)$}{TauFunction}.
+\end{prop}
+\begin{proof}
+A proof can be found \PMlinkname{in this entry}{FactorsOfNAndXn1}.
+\end{proof}
+
+\section{The examples}
+
+A generous list of examples can be found \PMlinkname{in this entry}{PrimeFactorsOfXn1}. The examples of $\Phi_d(x)$ can be calculated by recursively factoring the polynomials $x^n-1$, for $n\geq 1$, using (a) the fact that $\Phi_p(x)=(x^p-1)/(x-1)$ for primes $p\geq 2$ and (b) the polynomial $\Phi_d(x)$ is a divisor of $x^n-1$ if and only if $n$ is a multiple of $d$ (and $\Phi_d(x)$ appears with multiplicity one as a factor, because $x^n-1$ does not have repeated roots). Hence, we can calculate:
+$$x-1,\ x^2-1=(x-1)(x+1),\ x^3-1=(x-1)(x^2+x+1)$$
+and deduce 
+$$\Phi_1(x)=x-1,\ \Phi_2(x)=x+1,\  \Phi_3(x)=x^2+x+1.$$ 
+Before factoring $x^4-1$, note that we know that $(x-1)$ divides it, $\Phi_2(x)$ divides it and $x^4-1$ has as many divisors as $\tau(4)=3$. Therefore $\Phi_4(x)=(x^4-1)/((x-1)(x+1))=x^2+1$.
+
+The polynomial $\Phi_5(x)$ is $x^4+x^3+x^2+x+1$ (by the Theorem). In order to calculate $\Phi_6(x)$ we factor $x^6-1$. Once again, note that $6$ has $4$ positive divisors, and we already know the following divisors: $x-1$, $\Phi_2(x)$, $\Phi_3(x)$. Hence:
+$$\Phi_6(x)=\frac{x^6-1}{(x-1)(x+1)(x^2+x+1)}=x^2-x+1.$$
+Notice that we knew {\it a priori} (by a Lemma above) that the degree of $\Phi_6(x)$ is in fact $\varphi(6)=2$. Similarly, suppose we want to calculate $\Phi_{12}$. This is a polynomial of degree $\varphi(12)=4$, and divides $x^{12}-1$. On the other hand, $x^{12}-1$ has $\tau(12)=6$ irreducible factors and we already know the factors corresponding to $n=1,2,3,4,6$. Thus:
+$$\Phi_{12}(x)=\frac{x^{12}-1}{(x-1)(x+1)(x^2+x+1)(x^2+1)(x^2-x+1)}=x^4-x^2+1.$$
+Incidentally, we can find an explicit root of $\Phi_{12}(x)$ in terms of radicals. The roots are simply given by:
+$$x^2=\frac{1\pm\sqrt{-3}}{2}, \quad x=\pm \sqrt{\frac{1\pm\sqrt{-3}}{2}}.$$
+%%%%%
+%%%%%
+\end{document}

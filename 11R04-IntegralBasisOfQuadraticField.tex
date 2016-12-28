@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralBasisOfQuadraticField}
+\pmcreated{2014-02-27 10:24:31}
+\pmmodified{2014-02-27 10:24:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral basis of quadratic field}
+\pmrecord{11}{40490}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmsynonym{canonical basis of quadratic field}{IntegralBasisOfQuadraticField}
+\pmsynonym{quadratic integers}{IntegralBasisOfQuadraticField}
+\pmrelated{PropertiesOfQuadraticEquation}
+\pmrelated{Gcd}
+\pmrelated{ExamplesOfRingOfIntegersOfANumberField}
+\pmrelated{SomethingRelatedToFundamentalUnits}
+\pmrelated{CanonicalBasis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{order}
+Let $m$ be a squarefree integer $\neq 1$.  All numbers of the 
+quadratic field $\mathbb{Q}(\sqrt{m})$ may be written in the 
+form
+\begin{align}
+\alpha \;=\; \frac{j+k\sqrt{m}}{l},
+\end{align}
+where $j,\,k,\,l$ are integers with\, $\gcd(j,\,k,\,l) = 1$\, 
+and\, $l > 0$.\, Then $\alpha$ (and its algebraic conjugate\, 
+$\alpha' = \frac{j-k\sqrt{m}}{l}$) satisfies the equation
+\begin{align}
+x^2+px+q \;=\; 0,
+\end{align}
+where
+\begin{align}
+p \;=\; -\frac{2j}{l}, \qquad q \;=\; \frac{j^2-k^2m}{l^2}.
+\end{align}
+We will find out when the number (1) is an algebraic integer, i.e. when the coefficients $p$ and $q$ are rational integers.
+
+Naturally, $p$ and $q$ are integers always when\, $l = 1$.\, We 
+suppose now that\, $l > 1$.\, The latter of the equations (3) 
+says that $q$ can be integer only when
+$$(\gcd(j,\,l))^2 = \gcd(j^2,\,l^2) \mid k^2m$$
+(see divisibility in rings).\, Because\, $\gcd(j,\,k,\,l) = 1$,\, 
+we have by Euclid's lemma that\, $\gcd(j,\,l) \mid m$.\, Since 
+$m$ is squarefree, we infer that
+\begin{align}
+\gcd(j,\,l) = 1.
+\end{align}
+In order that also $p$ were an integer, the former of the 
+equations (3) implies that\, $l = 2$.
+
+So, by the latter of the equations (3),\; $4 \mid j^2\!-\!k^2m$, 
+i.e.
+\begin{align}
+k^2m \equiv j^2 \pmod{4}.
+\end{align}
+Since by (4),\, $\gcd(j,\,2) = 1$,\, the integer $j$ has to be odd.\, In order that (5) would be valid, also $k$ must be odd.\, Therefore,\, $j^2 \equiv 1 \pmod{4}$\, and\, $k^2 \equiv 1 \pmod{4}$,\, and thus (5) changes to 
+\begin{align}
+m \equiv 1 \pmod{4}.
+\end{align}
+
+If we conversely assume (6) and that $j,\,k$ are odd and\, $l = 2$, then (5) is true, $p,\,q$ are integers and accordingly (1) is an algebraic integer.
+
+We have now obtained the following result:
+\begin{itemize}
+\item When\, $m \not\equiv 1 \pmod{4}$,\, the integers of the field $\mathbb{Q}(\sqrt{m})$ are
+$$a+b\sqrt{m}$$
+where $a,\,b$ are arbitrary rational integers;
+\item when\, $m \equiv 1 \pmod{4}$,\, in \PMlinkescapetext{addition} to the numbers $a+b\sqrt{m}$, also the numbers
+$$\frac{j+k\sqrt{m}}{2},$$
+with $j,\,k$ arbitrary odd integers, are integers of the field.
+\end{itemize}
+
+Then, it may be easily inferred the 
+
+\textbf{Theorem.}\, If we denote
+%\begin{align*}
+\[ 
+\omega := 
+\begin{cases}
+& \frac{1+\sqrt{m}}{2} \quad \mbox{when  } m \equiv 1\pmod{4},\\
+& \sqrt{m} \quad \mbox{   when  } m \not\equiv 1\pmod{4},
+\end{cases}
+\]
+%\end{align*}
+
+then any integer of the quadratic field $\mathbb{Q}(\sqrt{m})$ 
+may be expressed in the form
+$$a\!+\!b\omega,$$
+where $a$ and $b$ are uniquely determined rational integers.\, 
+Conversely, every number of this form is an integer of the field.\, One says that 1 and $\omega$ form an integral basis of the field.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.} {\sc K. V\"ais\"al\"a}: {\em Lukuteorian ja korkeamman algebran alkeet}.\, Tiedekirjasto No. 17.\quad  Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}\\
+
+
+%%%%%
+%%%%%
+\end{document}

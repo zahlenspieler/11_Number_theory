@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfInfinitudeOfPrimes}
+\pmcreated{2013-12-27 17:11:49}
+\pmmodified{2013-12-27 17:11:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of infinitude of primes}
+\pmrecord{15}{39404}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We begin by noting a fact about factorizations.  Suppose that $n > 0$ is an integer
+which has a prime factorization
+\[
+ n = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m} .
+\]
+Then, because $2$ is the smallest prime number, we must have
+\[
+ p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m} \ge
+ 2^{k_1} 2^{k_2} \cdots 2^{k_m} =
+ 2^{k_1 + k_2 + \cdots + k_m},
+\]
+so $n \ge 2^{k_1 + k_2 + \cdots + k_m}$.
+
+Assume that there were only a finite number of prime numbers $p_1, p_2, \ldots p_m$.
+By the above-noted fact, given a positive integer $j$, every integer n such that $2^j \ge n > 0$ could be
+expressed as
+\[
+ n = p_1^{k_1} p_2^{k_2} \cdots p_m^{k_m}
+\]
+with
+\[
+ k_1 + k_2 + \cdots + k_m \le j .
+\]
+
+This, however, leads to a contradiction because it would imply that there exist more
+integers than possible factorizations despite the fact that every integer is supposed
+to have a prime factorization.  To see this, let us over-count the number of 
+factorizations.  A factorization being specified by an $m$-tuplet of integers
+$k_1, k_2, \ldots, k_n$ such that $k_1 + k_2 + \cdots + k_m \le j$, the number of
+factorizations is equal to the number of such tuplets.  Now, for all $i$ we must have
+$0 \le k_i \le j$, so there are not more than $(j+1)^m$ such tuplets available.
+However, for all $m$, one can choose $j$ such that $2^j > j^m$.  For such a choice
+of $j$ we could not make ends meet --- there are not enough possible factorizations 
+available to handle all integers, so we conclude that there must be more than $m$ primes
+for any integer $m$, i.e. that the number of primes is infinite.
+
+To make this exposition self-contained, we conclude with a proof that, for every $m$,
+there exists a $j$ such that $2^j > (j+1)^m$.  We begin by showing that, 
+for every integer $a \ge 1$, we have $2^a > a$.  This is an easy induction.  When $a = 1$, 
+we have $2^1 = 2 > 1$.  If $2^a > a$ for some $a > 1$, then $2^{a+1} = 2^a + 2^a > a + a > a+1$.  
+Hence, by induction, $2^a > a$ for all $a \ge 1$.
+
+From this starting point, we obtain the desired inequality by algebraic manipulation.
+Suppose that $a > 2$.  Multiplying both sides by $2$, we get $2^{a+1} > 2a > a+2$.
+Setting $a = m - 2$, we have $2^{m-1} > m$, or $2^m > 2 m$.  Raising both sides to the
+$2m$-th power, $2^{2 m^2} > 2^{2m} m^{2m} = 2^m (2 m^2)^m \ge 2 (2 m^2)^m$.  Setting
+$j = (2 m^2 - 1)$, this becomes $2^j > (j+1)^2$.
+
+%%%%%
+%%%%%
+\end{document}

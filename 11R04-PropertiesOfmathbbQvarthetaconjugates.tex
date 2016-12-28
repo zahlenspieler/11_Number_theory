@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfmathbbQvarthetaconjugates}
+\pmcreated{2013-03-22 19:09:14}
+\pmmodified{2013-03-22 19:09:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of $\mathbb{Q}(\vartheta)$-conjugates}
+\pmrecord{7}{42058}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{12F05}
+\pmrelated{ConjugateFields}
+\pmrelated{IndependenceOfCharacteristicPolynomialOnPrimitiveElement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Lemma.}\, Let $\alpha_1,\,\alpha_2,\,\ldots,\,\alpha_s$ be algebraic numbers belonging to the number field 
+$\mathbb{Q}(\vartheta)$ of \PMlinkname{degree}{NumberField} $n$ and $\alpha_i^{(j)}$ their \PMlinkid{$\mathbb{Q}(\vartheta)$-conjugates}{12046}.\, If 
+$P(x_1,\,x_2,\,\ldots,\,x_s)$ is a polynomial with rational coefficients and if
+$$P(\alpha_1,\,\alpha_2,\,\ldots,\,\alpha_s) \;=\; 0,$$
+then also
+$$P(\alpha_1^{(j)},\,\alpha_2^{(j)},\,\ldots,\,\alpha_s^{(j)}) \;=\; 0$$
+for each\, $j = 1,\,2,\,\ldots,\,n$.\, In the special case of two elements $\alpha$ and $\beta$ of 
+$\mathbb{Q}(\vartheta)$ one may infer the formulae
+\begin{align}
+(\alpha\beta)^{(j)} \;=\; \alpha^{(j)}\beta^{(j)}, \quad (\alpha\!+\!\beta)^{(j)} \;=\; \alpha^{(j)}\!+\!\beta^{(j)}.
+\end{align}
+
+
+The lemma implies easily the following theorems.\\
+
+\textbf{Theorem 1.}\, All conjugate fields of $\mathbb{Q}(\vartheta)$ are isomorphic.\\
+
+
+\textbf{Theorem 2.}\, The norm and the trace in the field $\mathbb{Q}(\vartheta)$ satisfy
+$$\mbox{N}(\alpha\beta) \;=\; \mbox{N}(\alpha)\mbox{N}(\beta), \quad 
+\mbox{S}(\alpha\!+\!\beta) \;=\; \mbox{S}(\alpha)\!+\!\mbox{S}(\beta).$$
+
+Cf. the entry norm and trace of algebraic number.
+
+
+
+%%%%%
+%%%%%
+\end{document}

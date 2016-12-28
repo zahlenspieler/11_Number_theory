@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThat4xExceedsTheProductOfThePrimesUpToX}
+\pmcreated{2013-03-22 17:04:48}
+\pmmodified{2013-03-22 17:04:48}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that $4^x$ exceeds the product of the primes up to $x$}
+\pmrecord{7}{39373}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+\pmclassification{msc}{11A25}
+\pmclassification{msc}{11N05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Statement. (Erd\H{o}s \& Sur\'anyi) Given the prime counting function $\pi(x)$ and notating the $i$th prime as $p_i$, the inequality $$4^x > \prod_{i = 1}^{\pi(x)} p_i$$ is always true for any nonnegative $x$. In other words, the $x$th power of 4 is greater than the primorial $\pi(x)\#$.
+
+Note: $\lfloor x \rfloor$ is the integer nearest to the real number $x$ that's not greater than $x$, while $\lceil x \rceil$ is the nearest integer to $x$ that's not smaller than $x$.
+
+Proof. It takes very little computational effort to verify this is true for $x$ set to 1 or 2. For larger $x$ we can high-ball the primorial $\pi(x)\#$ as $$2 \prod_{i = 1}^{\lceil \frac{x}{2} \rceil} 2i + 1$$ (that is, twice the product of the odd numbers from 1 to $x$) and rephrase $4^x$ as $$2 \prod_{i = 1}^{2x - 1} 2.$$ The first factor is obviously the same for both expressions, both iterators have the same start value, but cleary the iterator end values  satisfy the inequality $(2x - 1) > \lceil \frac{x}{2} \rceil$ as long as $x > 2$. The first expression being iteratively multiplied clearly increases, but the second expression being iteratively multiplied is static (being a 2). This line of thought has failed to yield the desired result.
+
+What if instead we divide both expressions by 2 and take their base 2 logarithms? Obviously, for half $4^x$, $$\log_2\left( \prod_{i = 1}^{2x - 1} 2 \right) = 2x - 1,$$ giving us the sequence of odd numbers 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, etc. Not quite so obviously, for half our primorial high-ball, the base 2 logarithm is $$\frac{\log(\lceil \frac{x}{2} \rceil !!)}{log(2)},$$ (where $\log(x)$ is the natural logarithm and $n!!$ is the double factorial), giving us the sequence (to 5 decimal places) 0, 1.58496, 1.58496, 3.90689, 3.90689, 6.71425, 6.71425, 9.88417, 9.88417, 13.3436, 13.3436, 17.044, 17.044, 20.9509, 20.9509, 25.0384, 25.0384, 29.2863, 29.2863, etc.
+
+Unfortunately, both of these strategies are doomed to failure because eventually our high-ball for the primorial overtakes $4^x$. What Erd\H{o}s and Sur\'anyi do instead is rephrase $x$ as $x = 2n + 1$ and then construct the binomial coefficient $\choose{2n + 1}{n}$ and showing the relationship of this to $2^x$.
+
+% It is not even necessary to show that the high-ball really is a highball for $\lfloor x \rfloor > 8$, that is, that not all odd numbers are prime. However, to produce more precise results about the frequency and distribution of primes, more advanced methods are necessary. Erd\H{o}s \& Sur\'anyi, for example, prove the statement using binomial coefficients.
+
+\begin{thebibliography}{1}
+\bibitem{pe} Paul Erd\H{o}s \& J\'anos Sur\'anyi {\it Topics in the theory of numbers} New York: Springer (2003): 5.11
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

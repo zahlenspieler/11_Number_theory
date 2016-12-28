@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquareRootsOfRationals}
+\pmcreated{2013-03-22 18:30:28}
+\pmmodified{2013-03-22 18:30:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{square roots of rationals}
+\pmrecord{9}{41192}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+\pmclassification{msc}{12F05}
+\pmsynonym{accurate square roots of rationals}{SquareRootsOfRationals}
+\pmrelated{SquareFree}
+\pmrelated{Gcd}
+\pmrelated{SquareRootOfSquareRootBinomial}
+\pmrelated{NumberField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{simple}
+
+\subsection{Illustrative examples}
+The square roots of the positive rational numbers are either rational or irrational algebraic numbers of \PMlinkname{degree}{DegreeOfAnAlgebraicNumber} two.
+
+Here we consider the much used standard form into which the irrational square roots of positive rational numbers have to be simplified in \PMlinkescapetext{order} that, for example, one could easily compare the results gotten by different pupils.\\
+
+
+Such forms as
+$$\sqrt{\frac{6}{7}} \quad \mbox{and} \quad \sqrt{1.8}$$
+are ordinarily not used as final forms of calculations, i.e. one should not leave a fractional number for the radicand.\, One can without greater trouble convert these cases such that the only radicand is a positive integer (which is not divisible by a square of an integer greater than 1):
+\begin{align}
+\sqrt{\frac{6}{7}} \,=\, \sqrt{\frac{42}{49}} \,=\, \frac{\sqrt{42}}{7},
+\end{align}
+\begin{align}
+\sqrt{1.8} \,=\, \sqrt{\frac{18}{10}} \,=\, \sqrt{\frac{9}{5}} \,=\, \frac{3}{\sqrt{5}}.
+\end{align}
+
+Both of these results are quite simple, consisting only of the quotient of two numbers, one of which is a square root of an integer and the other an integer.\, But the latter result is not standard because of that the square root is in the denominator; this situation can be changed by multiplying the numerator and the denominator by the square root:
+\begin{align}
+\sqrt{1.8} \,=\, \sqrt{\frac{18}{10}} \,=\, \sqrt{\frac{9}{5}} \,=\, \frac{3}{\sqrt{5}} 
+\,=\, \frac{3\sqrt{5}}{(\sqrt{5})^2} \,=\, \frac{3\sqrt{5}}{5}
+\end{align}
+True, the last form of (3) isn't as simple as in (2), and of course it could be obtained more directly by multiplying the numerator and the denominator of the original \PMlinkescapetext{reduced} radicand $\frac{9}{5}$ by 5 such that its denominator would be the square number 25:
+$$\sqrt{1.8} \,=\, \sqrt{\frac{18}{10}} \,=\, \sqrt{\frac{9}{5}} \,=\, \sqrt{\frac{9\cdot5}{25}} 
+\,=\, \frac{3\sqrt{5}}{5}$$
+
+In some situations, one may however prefer the result of (2) (cf. properties of regular tetrahedron).\, Such forms have, though, the drawback that inexperienced pupils may give such results as $\frac{6}{\sqrt{2}}$ or \PMlinkescapetext{even} $\frac{5}{\sqrt{5}}$, which are \PMlinkescapetext{expressible} without any division. \\
+
+\subsection{General formula}
+Generally, the square root of any positive rational $\frac{m}{n}$ (where\, $m,\,n \in \mathbb{Z}_+$) is \PMlinkescapetext{expressible} in the form
+\begin{align}
+\sqrt{\frac{m}{n}} \;=\; \frac{p\sqrt{d}}{q} \;=\; \frac{p}{q}\sqrt{d},
+\end{align}
+where\, $p,\,q,\,d \in \mathbb{Z}_+$,\, $\gcd(p,\,q) = 1$\, and $d$ is squarefree.\, If\, $\gcd(m,\,n) = 1$,\, one has\, $q = n$.\, The result is justified via the intermediate form $\displaystyle\sqrt{\frac{mn}{n^2}}$.\,  The form (4) demonstrates, that the square roots of positive rationals belong always to a real quadratic field 
+$\mathbb{Q}(\sqrt{d})$ or to $\mathbb{Q}$.\\
+
+All values of the square roots of positive rational numbers belong to the real field 
+$$\mathbb{Q}(\sqrt{2},\,\sqrt{3},\,\sqrt{5},\,\sqrt{7},\,\sqrt{11},\,\sqrt{13},\,\ldots)$$
+of infinite degree over $\mathbb{Q}$.\\
+
+\textbf{Remark 1.}\, The square roots of negative rationals have the correspondent form (4)
+where $d$ now is a negative squarefree integer and (4) belongs to the imaginary quadratic field $\mathbb{Q}(\sqrt{d})$.
+
+
+%%%%%
+%%%%%
+\end{document}

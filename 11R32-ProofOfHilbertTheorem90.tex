@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHilbertTheorem90}
+\pmcreated{2013-03-22 15:19:27}
+\pmmodified{2013-03-22 15:19:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Hilbert Theorem 90}
+\pmrecord{8}{37134}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R32}
+\pmclassification{msc}{11S25}
+\pmclassification{msc}{11R34}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Remember that two cocycles $a, a^\prime\colon G\to L^*$ are called cohomologous, denoted by $a\sim a^\prime$, if there exists $b\in L^*$, such that $a^\prime(\tau)=ba(\tau)\tau(b^{-1})$ for all $\tau\in G$. Then 
+$$H^1(G,L^*)=\{a\colon G\to L^*|a\text{ is a cocycle}\}/\sim.$$
+Now let $a\colon G\to L^*$ be a cocycle. Then consider the map 
+$$\alpha\colon L\to L, c\mapsto\sum_{\tau\in G}a(\tau)\tau(c).$$
+Since elements of the Galois group are linearly independent, $\alpha$ is not $0$. So we can choose $c\in L$, such that $b=\alpha(c)\neq 0$. Then for $\sigma\in G$ we have
+\begin{align*}
+\sigma(b)&=\sum_{\tau\in G}\sigma(a(\tau)\tau(c))\\
+&=\sum_{\tau\in G}\sigma(a(\tau))(\sigma\tau)(c)\\
+&=\sum_{\tau\in G}a(\sigma)^{-1}a(\sigma\tau)(\sigma\tau)(c),
+\end{align*}
+since $a$ is a cocycle, i.e. $a(\sigma\tau)=a(\sigma)\sigma(a(\tau))$. Then we get
+\begin{align*}
+\sigma(b)&=a(\sigma)^{-1}\sum_{\tau\in G}a(\sigma\tau)(\sigma\tau)(c)\\
+&=a(\sigma)^{-1}b.
+\end{align*}
+Thus we have that $a(\sigma)=b\sigma(b)^{-1}$ is a 1-coboundary.
+
+Now we prove the corollary. Denote the norm by $N$. Now if $x=\frac{y}{\sigma(y)}$, we have
+$$N(x)=N\left(\frac{y}{\sigma(y)}\right)=\prod_{\tau\in G}\frac{\tau(y)}{\tau(\sigma(y))}=1.$$
+Now let $N(x)=1$, $n=|G|$. Since $G$ is assumed cyclic, let $\sigma$ be a generator of $G$. $G$ is isomorphic to $\mathbb{Z}/n\mathbb{Z}$. We define the map $\tilde{x}\colon \mathbb{Z}/n\mathbb{Z}\to L^*$ by
+$$\tilde{x}([i])=\prod_{0\leq j\leq i-1}\sigma^j(x),$$
+where $[i]$ denotes the class of $i\in\mathbb{Z}$ in $\mathbb{Z}/n\mathbb{Z}$. Since $N(x)=1$, $\tilde{x}$ is well defined. We have
+\begin{align*}
+\tilde{x}([i+k])&=\prod_{0\leq j\leq i+k-1}\sigma^j(x)\\
+&=\left(\prod_{0\leq j\leq i-1}\sigma^j(x)\right)\sigma^i\left(\prod_{0\leq j\leq k-1}\sigma^j(x)\right)\\
+&=\tilde{x}([i])\sigma^i(\tilde{x}([j])).
+\end{align*}
+Therefore $\tilde{x}$ is a cocycle. Because of Hilberts Theorem 90, there exists $y\in L^*$, such that $x=\tilde{x}([1])=y\sigma(y)^{-1}$.
+%%%%%
+%%%%%
+\end{document}

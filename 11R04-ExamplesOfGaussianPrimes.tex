@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfGaussianPrimes}
+\pmcreated{2013-03-22 16:52:15}
+\pmmodified{2013-03-22 16:52:15}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of Gaussian primes}
+\pmrecord{9}{39121}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Even when we limit the real part to the range 1 to 100 and the imaginary part to $i$ to $100i$, we come up with more than a thousand Gaussian primes. Limiting the real part to 1 to 25 and the imaginary part to $i$ to $25i$ gives us a list approximately a quarter of the size.
+
+It makes sense to limit the listing to the positive-positive quadrant of the complex plane, since if $a + bi$ is prime then so is $a - bi$, $-a + bi$ and $-a - bi$. The list could be narrowed down even further by removing associates (e.g., $13 + 8i$ because $8 + 13i$ appears first), but they have been left in. Thus, assuming the list has no mistakes, plotting these values should give the same result as plotting all Gaussian primes under (or over) the $x + xi$ axis in the positive-positive quadrant and then reflecting them to the other side of that axis.
+
+$1 + i$, $1 + 2i$, $1 + 4i$, $1 + 6i$, $1 + 10i$, $1 + 14i$, $1 + 16i$, $1 + 20i$, $1 + 24i$
+
+$2 + i$, $2 + 3i$, $2 + 5i$, $2 + 7i$, $2 + 13i$, $2 + 15i$, $2 + 17i$
+
+$3 + 2i$, $3 + 8i$, $3 + 10i$, $3 + 20i$
+
+$4 + i$, $4 + 5i$, $4 + 9i$, $4 + 11i$, $4 + 15i$, $4 + 21i$, $4 + 25i$
+
+$5 + 2i$, $5 + 4i$, $5 + 6i$, $5 + 8i$, $5 + 16i$, $5 + 18i$, $5 + 22i$, $5 + 24i$
+
+$6 + i$, $6 + 5i$, $6 + 11i$, $6 + 19i$, $6 + 25i$
+
+$7 + 2i$, $7 + 8i$, $7 + 10i$, $7 + 12i$, $7 + 18i$, $7 + 20i$
+
+$8 + 3i$, $8 + 5i$, $8 + 7i$, $8 + 13i$, $8 + 17i$, $8 + 23i$
+
+$9 + 4i$, $9 + 10i$, $9 + 14i$, $9 + 16i$
+
+$10 + i$, $10 + 3i$, $10 + 7i$, $10 + 9i$, $10 + 13i$, $10 + 17i$, $10 + 19i$, $10 + 21i$
+
+$11 + 4i$, $11 + 6i$, $11 + 14i$, $11 + 20i$, $12 + 7i$, $12 + 13i$, $12 + 17i$, $12 + 23i$, $12 + 25i$
+
+$13 + 2i$, $13 + 8i$, $13 + 10i$, $13 + 12i$, $13 + 20i$, $13 + 22i$
+
+$14 + i$, $14 + 9i$, $14 + 11i$, $14 + 15i$, $14 + 19i$, $14 + 25i$
+
+$15 + 2i$, $15 + 4i$, $15 + 14i$, $15 + 22i$
+
+$16 + i$, $16 + 5i$, $16 + 9i$, $16 + 19i$, $16 + 25i$
+
+$17 + 2i$, $17 + 8i$, $17 + 10i$, $17 + 12i$, $17 + 18i$, $17 + 22i$
+
+$18 + 5i$, $18 + 7i$, $18 + 17i$, $18 + 23i$
+
+$19 + 6i$, $19 + 10i$, $19 + 14i$, $19 + 16i$, $19 + 20i$, $19 + 24i$
+
+$20 + i$, $20 + 3i$, $20 + 7i$, $20 + 11i$, $20 + 13i$, $20 + 19i$, $20 + 23i$
+
+$21 + 4i$, $21 + 10i$
+
+$22 + 5i$, $22 + 13i$, $22 + 15i$, $22 + 17i$, $22 + 23i$, $22 + 25i$
+
+$23 + 8i$, $23 + 12i$, $23 + 18i$, $23 + 20i$, $23 + 22i$
+
+$24 + i$, $24 + 5i$, $24 + 19i$, $24 + 25i$
+
+$25 + 4i$, $25 + 6i$, $25 + 12i$, $25 + 14i$, $25 + 16i$, $25 + 22i$, $25 + 24i$
+
+As you may notice from the listing above, the real and the imaginary parts must be of different parity. Thus, 2, which is a prime among the real primes, is not a prime among the Gaussian primes, since its complex notation $2 + 0i$ shows that its real and imaginary parts are both even.
+
+For a rational prime to be a Gaussian prime of the form $p + 0i$, the real part has to be of the form $p = 4n - 1$. The ones in our sample range are 3, 7, 11, 19 and 23. As it happens, for $0 + pi$ to be a Gaussian prime, $p$ also has to be of the form $4n - 1$. The ones in our sample range are then $3i$, $7i$, $11i$, $19i$ and $23i$, which ought to look a lot like the previous listing because they are the associates of the Gaussian primes with no imaginary part. Thus, the 0 axes are `reflections' of each other and give yet more axes of symmetry of the pattern.
+%%%%%
+%%%%%
+\end{document}

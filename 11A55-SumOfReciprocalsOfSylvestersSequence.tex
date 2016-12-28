@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfReciprocalsOfSylvestersSequence}
+\pmcreated{2013-03-22 15:48:33}
+\pmmodified{2013-03-22 15:48:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{sum of reciprocals of Sylvester's sequence}
+\pmrecord{7}{37773}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A55}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We will show that the sum of the reciprocals of the Sylvester numbers indeed
+converges to 1.  
+
+Let $s_n$ denote a partial sum of the series of reciprocals: 
+\[ s_n = \sum_{i_0}^{n-1} {1 \over a_i} \] 
+We would like to show that $\lim_{n \to \infty} s_n = 1$.  Putting
+over a common denominator, we obtain 
+\[s_n = {\sum_{j=0}^{n-1} \prod\limits_{i \neq j \atop 0 \le i < n}
+a_i \over \prod_{i=0}^{n-1} a_i}. \]
+Define $b_n$ as follows:
+\[ b_n = 1 + \sum_{j=0}^{n-1} \prod_{i \neq j \atop 0 \le i < n} a_i
+\]
+Using this new definition and the definition of the Sylvester numbers,
+we can rewrite the expression for $s_n$ as follows:
+\[ s_n = {b_n + 1 \over a_n - 1}\]
+
+Let us now consider this sequence $b_n$.  We will start by deriving a
+recurrence relation:
+\begin{eqnarray*}
+b_{n+1} - 1 &=&  \sum_{j=0}^n \prod_{i \neq j \atop 0 \le i < n+1} a_i =
+\prod_{i=0}^{n-1} a_i + a_n \sum_{j=0}^{n-1} \prod_{i \neq j \atop 0 \le
+i < n} a_i \\
+&=& (a_n - 1) + a_n (b_n - 1) \\
+\end{eqnarray*}
+Simplifying, we have $b_{n+1} = a_n b_n$.  Now, $b_2 = 1 + a_0 + a_1 =
+6$, hence we can solve the recursion with a product:
+\begin{eqnarray*}
+b_n &=& b_2 \prod_{i=2}^{n-1} a_i \\
+&=& {b_2 \over a_0 a_1} \prod_{1=0}^{n-1} a_i \\
+&=& \prod_{1=0}^{n-1} a_i \\
+&=& a_n - 1
+\end{eqnarray*}
+
+Substituting this in the expression for $s_n$ yields
+\[ s_n = {a_n \over a_n - 1}. \]
+Since $\lim_{n \to \infty} a_n = \infty$,
+it follows that $\lim_{n \to \infty} s_n = 1$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuesOfThePrimeCountingFunctionAndEstimatesForSelectedInputs}
+\pmcreated{2013-03-22 16:38:53}
+\pmmodified{2013-03-22 16:38:53}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{values of the prime counting function and estimates for selected inputs}
+\pmrecord{4}{38852}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In illustrating the degree of error of various estimates of the prime counting function given in connection to the prime number theorem, it is customary to select powers of 10 as the inputs. These are given in the table below, mixed in with primes beginning and ending prime gaps, the fourth primes of selected prime quadruplets and selected record lows of the Mertens function. The values of the logarithmic integral and the division of $n$ by its natural logarithm have been rounded off to the nearest integer.
+
+\begin{tabular}{|c|l|l|l|}
+$n$ & $\pi(n)$ & $\int_2^n \frac{dt}{\log t}$ & $\frac{n}{\log n}$ \\
+2 & 1 & 1 & 3 \\
+3 & 2 & 2 & 3 \\
+5 & 3 & 4 & 3 \\
+7 & 4 & 5 & 4 \\
+10 & 4 & 6 & 4 \\
+11 & 5 & 7 & 5 \\
+23 & 9 & 11 & 7 \\
+29 & 10 & 13 & 9 \\
+89 & 24 & 28 & 20 \\
+97 & 25 & 29 & 21 \\
+100 & 25 & 30 & 22 \\
+110 & 29 & 32 & 23 \\
+113 & 30 & 33 & 24 \\
+127 & 31 & 36 & 26 \\
+523 & 99 & 105 & 84 \\
+541 & 100 & 108 & 86 \\
+829 & 145 & 153 & 123 \\
+887 & 154 & 161 & 131 \\
+907 & 155 & 164 & 133 \\
+1000 & 168 & 178 & 145 \\
+1105 & 185 & 193 & 158 \\
+1129 & 189 & 196 & 161 \\
+1151 & 190 & 199 & 163 \\
+1327 & 217 & 224 & 185 \\
+1361 & 218 & 229 & 189 \\
+1489 & 237 & 246 & 204 \\
+1879 & 289 & 299 & 249 \\
+9551 & 1183 & 1197 & 1042 \\
+9587 & 1184 & 1201 & 1046 \\
+10000 & 1229 & 1246 & 1086 \\
+15683 & 1831 & 1847 & 1623 \\
+15727 & 1832 & 1852 & 1628 \\
+19609 & 2225 & 2249 & 1984 \\
+19661 & 2226 & 2254 & 1989 \\
+23833 & 2652 & 2672 & 2365 \\
+31397 & 3385 & 3412 & 3032 \\
+31469 & 3386 & 3419 & 3038 \\
+99139 & 9520 & 9555 & 8618 \\
+100000 & 9592 & 9630 & 8686 \\
+1000000 & 78498 & 78628 & 72382 \\
+10000000 & 664579 & 664918 & 620421 \\
+100000000 & 5761455 & 5762209 & 5428681 \\
+1000000000 & 50847534 & 50849235 & 48254942 \\
+10000000000 & 455052511 & 455055615 & 434294482 \\
+\end{tabular}
+
+The smaller values (up to $n = 2000$) have been verified by hand. Above that, I have trusted Mathematica 4.2 completely.
+%%%%%
+%%%%%
+\end{document}

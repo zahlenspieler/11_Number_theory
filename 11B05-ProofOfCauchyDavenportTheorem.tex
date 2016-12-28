@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchyDavenportTheorem}
+\pmcreated{2013-03-22 14:34:49}
+\pmmodified{2013-03-22 14:34:49}
+\pmowner{Wolfgang}{5320}
+\pmmodifier{Wolfgang}{5320}
+\pmtitle{proof of Cauchy-Davenport theorem}
+\pmrecord{26}{36141}
+\pmprivacy{1}
+\pmauthor{Wolfgang}{5320}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+There is a proof, essentially from here \PMlinkexternal{(Imre Ruzsa et al.)}{http://www.math.tau.ac.il/~nogaa/PDFS/annr3.pdf}:
+
+Let $|A|=k$ and $|B|=l$ and $|A+B|=n$.
+If $n\ge k+l-1$, the assertion is true, now assume $n<k+l-1$.
+Form the polynomial $f(x,y)=\prod_{c \in A+B} (x+y-c)=\sum_{i+j \le n} f_{ij}*x^i*y^j$.
+The sum is over $i$,$j$ with $i+j\le n$, because there are $n$ factors in the product.
+
+Since $Z_p$ is a field, there are polynomials $g_i$ of degree $<k$ and $h_j$ of degree $<l$ such that $g_i(x)=x^i$ for all $x \in A$ and $h_j(y)=y^j$ for all $y \in B$.
+Define a polynomial $p$ by
+$p(x,y)=\sum_{i<k,\hspace{2 mm}j<l}f_{ij}*x^i*y^j+\sum_{i\ge k,\hspace{2 mm}j\le n-i}f_{ij}*g_i(x)*y^j+\sum_{j\ge l,\hspace{2 mm}i\le n-j}f_{ij}*x^i*h_j(y)$.
+
+This polynomial coincides with $f(x,y)$ for all $x$ in $A$ and $y$ in $B$, for these $x$,$y$ we have, however, $f(x,y)=0$.
+The polynomial $p(x,y)$ is of degree $<k$ in $x$ and of degree $<l$ in $y$.
+Let $x \in A$, then $p(x,y)=\sum p_j(x)*y^j$ is zero for all $y \in B$, and all coefficients must be zero. Finally, $p_j(x)$ is zero for all $x \in A$, and all coefficients $p_{ij}$ of $p(x,y)=\sum p_{ij}*x^i*y^j$ must be zero as elements of $Z_p$.
+
+Should the assertion of the theorem be false, then there are numbers $u$,$v$ with $u+v=n<p$ and $u<k$ and $v<l$.
+
+But the monomial $x^u*y^v$ does not appear in the second and third sum, because for $j=v$ we have $i\le n-j=u<k$, and for $i=u$ we have $j\le n-i=v<l$.
+Then $p_{uv}=0$ is $modulo\hspace{2 mm}p$ equal to $f_{uv}$, this is equal to the binomial coefficient $n \choose v$, which is not divisible by $p$ for $n<p$, a contradiction.
+The Cauchy-Davenport theorem is proved.
+%%%%%
+%%%%%
+\end{document}

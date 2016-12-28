@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatNumberOfSumproductNumbersInAnyBaseIsFinite}
+\pmcreated{2013-03-22 15:47:06}
+\pmmodified{2013-03-22 15:47:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof that number of sum-product numbers in any base is finite}
+\pmrecord{7}{37743}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $b$ be the base of numeration.
+
+Suppose that an integer $n$ has $m$ digits when expressed in base $b$
+(not counting leading zeros, of course).  Then $n \ge b^{m-1}$.
+
+Since each digit is at most $b-1$, we have that the sum of the digits
+is at most $m(b-1)$ and the product is at most $(b-1)^m$, hence the
+sum of the digits of $n$ times the product of the digits of $n$ is at
+most $m(b-1)^{m+1}$.
+
+If $n$ is a sum-product number, then $n$ equals the sum of its digits
+times the product of its digits.  In light of the inequalities of the
+last two paragraphs, this implies that $m(b-1)^{m+1} \ge n \ge
+b^{m-1}$, so $m(b-1)^{m+1} \ge b^{m-1}$.  Dividing both sides, we
+obtain $(b-1)^2 m \ge (b/(b-1))^{m-1}$.  By the growth of exponential
+function, there can only be a finite number of values of $m$ for which
+this is true.  Hence, there is a finite limit to the number of digits
+of $n$, so there can only be a finite number of sum-product numbers to
+any given base $b$.
+%%%%%
+%%%%%
+\end{document}

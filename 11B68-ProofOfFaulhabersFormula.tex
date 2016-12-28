@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFaulhabersFormula}
+\pmcreated{2013-03-22 18:43:50}
+\pmmodified{2013-03-22 18:43:50}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Faulhaber's formula}
+\pmrecord{4}{41499}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B68}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newtheorem{thm}{Theorem}[section]
+
+\begin{document}
+\begin{thm}If $k\in\Nats, 2\leq n\in\Ints$, then
+\[\sum_{m=1}^{n-1}m^k = \frac{1}{k+1}\sum_{i=0}^k \binom{k+1}{i}B_in^{k+1-i}=\int_1^n b_k(x)dx\]
+where the $B_i$ are the Bernoulli numbers and $b_i$ the Bernoulli polynomials.
+\end{thm}
+
+The exponential generating function for the Bernoulli numbers is
+\[\sum_{n=0}^{\infty}B_n\frac{x^n}{n!}=\frac{x}{e^x-1}\]
+We develop an equation involving sums of Bernoulli numbers on one side, and a simple generating involving powers of $e$ that gives us the appropriate sum of powers on the other side. Equating coefficients of powers of $x$ then gives the result.
+
+To get a generating function where the coefficient of $x^n/n!$ is $\sum_{m=1}^{n-1}m^k$, we can use
+\begin{align*}
+  \sum_{m=0}^{n-1} e^{mx} 
+     &= \sum_{m=0}^{n-1} \sum_{k=0}^{\infty} \frac{m^k x^k}{k!}\\
+     &= \sum_{k=0}^{\infty}\left(\sum_{m=1}^{n-1} m^k\right)\frac{x^k}{k!}
+\end{align*}
+But this is also a geometric series, so
+\begin{align*}
+  \sum_{k=0}^{n-1}e^{kx} &= \frac{1-e^{nx}}{1-e^x}\\
+    &= \frac{e^{nx}-1}{x}\cdot\frac{x}{e^x-1} \\
+    &= \frac{e^{nx}-1}{x}\sum_{l=0}^{\infty}B_l\frac{x^l}{l!} \\
+    &= \left(\sum_{k=0}^{\infty}\frac{n^{k+1}}{k+1}\cdot\frac{x^k}{k!}\right)
+       \left(\sum_{l=0}^{\infty}B_l\frac{x^l}{l!}\right) \\
+    &=\sum_{k=0}^{\infty}
+            \left(\sum_{i=0}^j \frac{1}{k-i+1}\binom{k}{i}B_in^{k+1-i}\right)\frac{x^k}{k!}
+\end{align*}
+Equating coefficients of $x^k/k!$ we get
+\begin{align*}\sum_{m=1}^{n-1}m^k&=\sum_{i=0}^k \frac{1}{k-i+1}\binom{k}{i}B_i n^{k+1-i}\\
+&=\sum_{i=0}^k\frac{k!}{(k-i+1)i!(k-i)!}B_in^{k+1-i}=\frac{1}{k+1}\sum_{i=0}^k\binom{k+1}{i}B_in^{k+1-i}
+\end{align*}
+which proves the first equality.
+
+If $f(x)$ is a polynomial, write $[x^r]f(x)$ for the coefficient of $x^r$ in $f(x)$. Then
+\[[x^r]b_k(x)=\frac{1}{r}[x^{r-1}]b_k'(x)=\frac{k}{r}[x^{r-1}]b_{k-1}(x)\]
+and thus if $r\leq k$, iterating, we get
+\[[x^r]b_k(x)=\binom{k}{r}[x^0]b_{k-r}(x)=\binom{k}{r}B_{k-r}\]
+Then using the fact that $b_k'=kb_{k-1}$, we have
+\begin{align*}
+\int_1^n b_k(x)&=\frac{1}{k+1}(b_{k+1}(n)-b_{k+1}(1)) = \frac{1}{k+1}\sum_{r=0}^{k+1}[x^r]b_{k+1}(x)(n^r-1)\\
+&= \frac{1}{k+1}\sum_{r=0}^{k+1}\binom{k+1}{r}B_{k+1-r}(n^r-1) = \frac{1}{k+1}\sum_{r=1}^{k+1}\binom{k+1}{r}B_{k+1-r}n^r
+\end{align*}
+Now reverse the order of summation (i.e. replace $r$ by $k+1-r$) to get
+\[
+\int_1^n b_k(x)=\frac{1}{k+1}\sum_{r=0}^k\binom{k+1}{k+1-r}B_rn^{k+1-r}=\frac{1}{k+1}\sum_{r=0}^k\binom{k+1}{r}B_r n^{k+1-r}\]
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralBinaryQuadraticForms}
+\pmcreated{2013-03-22 16:55:44}
+\pmmodified{2013-03-22 16:55:44}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{integral binary quadratic forms}
+\pmrecord{10}{39194}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E16}
+\pmclassification{msc}{11E12}
+\pmrelated{RepresentationOfIntegersByEquivalentIntegralBinaryQuadraticForms}
+\pmrelated{ReducedIntegralBinaryQuadraticForms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{array}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\begin{document}
+An integral binary quadratic form is a quadratic form (q.v.) in two variables over $\BZ$, i.e. a polynomial
+\[
+  F(x,y)=ax^2+bxy+cy^2, a,b,c\in\BZ
+\]
+$F$ is said to be \emph{primitive} if its coefficients are relatively prime, i.e. $\gcd(a,b,c)=1$, and is said to \emph{represent} an integer $n$ if there are $r,s\in\BZ$ such that $F(r,s)=n$. If $\gcd(r,s)=1$, $F$ is said to represent $n$ \emph{properly}. The theory of integral binary quadratic forms was developed by Gauss, Lagrange, and Legendre.
+
+In what follows, ``form'' means ``integral binary quadratic form''.
+
+Following the article on quadratic forms, two such forms $F(x,y)$ and $G(x,y)$ are \emph{equivalent} if there is a matrix $M\in GL(2,\BZ)$ such that
+\[
+  G(x,y) = F(M(x,y)^T)
+\]
+Matrices in $GL(2,\BZ)$ are matrices with determinant $\pm 1$. So if $\alpha,\beta,\gamma, \delta\in\BZ$ and
+\begin{displaymath}
+det\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right) = \pm 1
+\end{displaymath}
+then if
+\[G(x,y)=F(\alpha x + \beta y, \gamma x+\delta y)\]
+it follows that $G$ is equivalent to $F$. If $M\in SL(2,\BZ)$ (i.e. $\det M = 1$), we say that $F$ and $G$ are \emph{properly equivalent}, written $F\sim G$; otherwise, they are \emph{improperly equivalent}.
+
+Note that while both equivalence and proper equivalence are equivalence relations, improper equivalence is not. For if $F$ is improperly equivalent to $G$ and $G$ is improperly equivalent to $H$, then the product of the transformation matrices has determinant $1$, so that $F$ is properly equivalent to $H$. Since proper equivalence is an equivalence relation, we will say that two forms are in the same \emph{class} if they are properly equivalent.
+
+$GL(2,\BZ)$ is generated as a multiplicative group by the two matrices
+\[\begin{pmatrix}1&0\\1&1\end{pmatrix},\quad\begin{pmatrix}0&1\\1&0\end{pmatrix}\]
+so in particular we see that we can construct all equivalence transformations by composing the following three transformations:
+\begin{center}
+\begin{tabular}{c|c|c}
+Transformation & Matrix & Determinant\\
+	\hline
+$(x,y)\mapsto(y,x)$ & $\left(\begin{array}{cc}0&1\\1&0\end{array}\right)$ & $-1$\\[1.5em]
+$(x,y)\mapsto(y,-x)$ & $\left(\begin{array}{cc}0&-1\\1&0\end{array}\right)$ & $1$\\[1.5em]
+$(x,y)\mapsto(x+dy,y)$ & $\left(\begin{array}{cc}1&0\\d&1\end{array}\right)$ & $1$
+\end{tabular}
+\end{center}
+
+\textbf{Example}: Let $F(x,y)=x^2+xy+6y^2$, $G(x,y)=82x^2+51xy+8y^2$. Then
+\[G(x,y)=F(\alpha x + \beta y, \gamma x+\delta y)=F(4x+y,3x+y)\]
+so
+\begin{displaymath}
+\left( \begin{array}{cc}
+\alpha & \gamma \\
+\beta & \delta
+\end{array}\right)
+=
+\left( \begin{array}{cc}
+4 & 3 \\
+1 & 1
+\end{array}\right)
+\end{displaymath}
+The transformations to map $F$ into $G$ are
+\[
+\begin{array}{rl}
+x^2+xy+6y^2&(x,y)\mapsto(x+y,y)\\[2pt]
+x^2+3xy+8y^2&(x,y)\mapsto(y,x)\\[2pt]
+8x^2+3xy+y^2&(x,y)\mapsto(x+3y,y)\\[2pt]
+8x^2+51xy+82y^2&(x,y)\mapsto(y,x)\\[2pt]
+82x^2+51xy+8y^2
+\end{array}
+\]
+and
+\[
+\left( \begin{array}{cc}
+4 & 3 \\
+1 & 1
+\end{array}\right)=
+\left( \begin{array}{cc}
+0 & 1 \\
+1 & 0
+\end{array}\right)
+\left( \begin{array}{cc}
+1 & 0 \\
+3 & 1
+\end{array}\right)
+\left( \begin{array}{cc}
+0 & 1 \\
+1 & 0
+\end{array}\right)
+\left( \begin{array}{cc}
+1 & 0 \\
+1 & 1
+\end{array}\right)
+\]
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculatingTheSplittingOfPrimes}
+\pmcreated{2013-03-22 13:53:24}
+\pmmodified{2013-03-22 13:53:24}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{calculating the splitting of primes}
+\pmrecord{12}{34635}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmrelated{PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ}
+\pmrelated{PrimeIdealDecompositionInCyclotomicExtensionsOfMathbbQ}
+\pmrelated{NumberField}
+\pmrelated{SplittingAndRamificationInNumberFieldsAndGaloisExtensions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\ab}[1]{{#1}_{\mathrm{ab}}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Aut}{\mathrm{Aut}\,}
+\newcommand{\Aff}[2]{\mathrm{Aff}_{#1} #2}
+\newcommand{\aff}[2]{\mathfrak{aff}_{#1} #2}
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\p}{\mathfrak{p}}
+\renewcommand{\P}{\mathfrak{P}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\bfrac}[2]{\left[\frac{#1}{#2}\\right]}
+\newcommand{\bkh}{\backslash}
+\newcommand{\Cyc}[2]{\mathcal{C}^{#1}_{#2}}
+\newcommand{\Cbar}[2]{\overline{\C{#1}{#2}}}
+%\newcommand{\CD}{\R[\Delta]}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CF}[2]{\ensuremath{\mathfrak{C}(#1,#2)}}
+\newcommand{\Cinf}{\EuScript{C}^{\infty}}
+\newcommand{\cmp}{cyclic mod $p$\xspace}
+\newcommand{\cp}{\mathrm{c.p.}}
+\newcommand{\CS}{\EuScript{CS}}
+\newcommand{\deck}{\EuScript{D}}
+\newcommand{\defl}[1]{\mathfrak{def}_{#1}}
+\newcommand{\Der}{\mathrm{Der}\,}
+\newcommand{\eH}{[X_H]-[Y_H]}
+\newcommand{\EL}{\mathcal{EL}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\ES}[1]{\EuScript{#1}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\fr}[1]{\mathfrak{#1}}
+\newcommand{\Frat}{\mathrm{Frat}\,}
+\newcommand{\Gal}[1]{\Gamma(#1 |\Q)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1} #2}
+\newcommand{\gl}[2]{\mathfrak{gl}_{#1} #2}
+\newcommand{\GrR}[1]{a(#1 G)}
+\newcommand{\Gr}{\mathrm{Gr}\,}
+\newcommand{\mcH}{\mathcal{H}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Hom}[2]{\mathrm{Hom}(#1,#2)}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\ind}[2]{\mathrm{ind}^{#1}_{#2}}
+\newcommand{\indp}[2]{\mathfrak{ind}^{#1}_{#2}}
+\renewcommand{\inf}[1]{\mathfrak{inf}_{#1}}
+\newcommand{\inn}[1]{\langle #1\rangle}
+\renewcommand{\int}{\mathrm{int}}
+\newcommand{\Iso}{\mathrm{Iso}}
+\newcommand{\K}{\mathcal{K}}
+\renewcommand{\ker}{\mathrm{ker}\,}
+\renewcommand{\L}[1]{\mathfrak{L}(#1)}
+\newcommand{\lap}[1]{\Delta_{#1}}
+\newcommand{\lapM}{\Delta_M}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\lineq}{linearly equivalent\xspace}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mG}{m_G}
+\newcommand{\mK}{m_{\K}}
+\newcommand{\mindeg}[1]{\fr{md}(#1)}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\pad}{\hat{\Z}_p}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pderw}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\pdersec}[2]{\frac{\partial^2 #1}{\partial {#2}^2}} 
+\newcommand{\perm}[1]{\pi_{#1}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rad}{\mathrm{rad}\,}
+\newcommand{\res}[2]{\mathrm{res}^{#1}_{#2}}
+\newcommand{\resp}[2]{\mathfrak{res}^{#1}_{#2}}
+\newcommand{\RG}{\EuScript{R}_G}
+\newcommand{\rk}{\mathrm{rk}\,}
+\newcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\vp}{\varphi}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\SL}[2]{\mathrm{SL}_{#1} #2}
+\renewcommand{\sl}[2]{\fr{sl}_{#1} #2}
+\newcommand{\SO}[2]{\mathrm{SO}_{#1} #2}
+\newcommand{\Sp}[2]{\mathrm{Sp}_{#1} #2}
+\renewcommand{\sp}[2]{\fr{sp}_{#1} #2}
+\newcommand{\SU}[1]{\mathrm{SU}( #1)}
+\newcommand{\su}[1]{\fr{su}_{#1}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\sym}{\mathrm{sym}}
+\newcommand{\Tg}{\mc{T}(\fr g)}
+\newcommand{\tom}{\tilde{\omega}}
+\newcommand{\ghtghp}{\fr g/\fr h\oplus(\fr g/\fr h^\perp)^*}
+\newcommand{\ghps}{(\fr g/\fr h^\perp)^*}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\tr}{\mathrm{tr}}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+%\renewcommand{\thesection}{\thechapter.\arabic{section}}
+%\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\newcommand{\Ug}{\mc{U}(\fr g)}
+\newcommand{\Uh}{\mc{U}(\fr h)}
+\renewcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Zp}{\Z/p}
+\begin{document}
+Let $K|L$ be an extension of number fields, with rings of integers $\O_K,\O_L$.  Since this extension is \PMlinkname{separable}{SeparablePolynomial}, there exists $\alpha\in K$ with $L(\alpha)=K$ and by multiplying by a suitable integer, we may assume that $\alpha\in\O_K$ (we do {\em not} require that $\O_L[\alpha]=\O_K$.  There is not, in general, an $\alpha\in\O_L$ with this property).  Let $f\in \O_L[x]$ be the minimal polynomial of $\alpha$.
+
+Now, let $\p$ be a prime ideal of $L$ that does not divide $\Delta(f)\Delta(\O_K)^{-1}$, and let $\bar{f}\in \O_L/\p\O_L[x]$ be the reduction of $f$ mod $\p$, and let $\bar{f}=\bar{f}_1\cdots \bar{f}_n$ be its factorization into irreducible polynomials.  If there are repeated factors, then $p$ splits in $K$ as the product $$\p=(\p,f_1(\alpha))\cdots(\p,f_n(\alpha)),$$ where $f_i$ is any polynomial in $\O_L[x]$ reducing to $\bar{f}_i$.  Note that in this case $\p$ is unramified, since all $f_i$ are pairwise coprime mod $\p$
+
+For example, let $L=\Q, K=\Q(\sqrt{d})$ where $d$ is a square-free integer.
+Then $f=x^2-d$.  For any prime $\p$, $f$ is irreducible mod $\p$ if and only if it has no roots mod $\p$, i.e. $d$ is a quadratic non-residue mod $\p$.  Using quadratic reciprocity, we can obtain a congruence condition mod $4p$ for which primes split and which do not.  In general, this is possible for all fields with abelian Galois groups, using \PMlinkescapetext{class} field \PMlinkescapetext{theory}.
+
+Furthermore, let $K'$ be the splitting field of $L$.  Then $G=\mathrm{Gal}(K'|L)$ acts on the roots of $f$, giving a map $G\to S_m$, where $m=\deg f$.  Given a prime $\p$ of $\O_L$, the Artin symbol $[\P,K'|L]$ for any $\P$ lying over $\p$ is determined up to conjugacy by $\p$.  Its \PMlinkescapetext{image} in $S_n$ is a product of disjoint cycles of length $m_1,\ldots,m_n$ where $m_i=\deg f_i$.
+This \PMlinkescapetext{information} is useful not just for prime splitting, but also for the calculation of Galois groups.
+
+Another useful fact is the Frobenius \PMlinkescapetext{density} theorem, which \PMlinkescapetext{states} that every element of $G$ is $[\P,K'|L]$ for infinitely many primes $\P$ of $\O_{K'}$.
+
+For example, let $f=x^3+x^2+2\in\Z[x]$.  This is irreducible mod 3, and thus irreducible.  Galois theory tells us that $G=\mathrm{Gal}(K'|L)$ is a subgroup of $S_3$, and so is isomorphic to $C_3$ or $S_3$, but it is not obvious which.  But if we consider $p=7$, $f\equiv (x-2)(x^2+3x-1)\pmod 7$, and the quadratic factor is irreducible mod 7.  Thus, $G\cong S_3$.
+
+Or let $f=x^4+ax^2+b$ for some integers $a,b$ and is irreducible.  For a prime $p$, consider the factorization of $f$.  Either it remains irreducible ($G$ contains a 4-cycle), splits as the product of irreducible quadratics ($G$ contains a cycle of the form $(12)(34)$) or $\bar{f}$ has a root.  If $\beta$ is a root of $f$, then so is $-\beta$, and so assuming $p\neq 2$, there are at least two roots, and so a 3-cycle is impossible.  Thus $G\cong C_4$ or $D_4$.
+%%%%%
+%%%%%
+\end{document}

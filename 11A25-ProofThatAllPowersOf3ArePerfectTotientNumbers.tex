@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAllPowersOf3ArePerfectTotientNumbers}
+\pmcreated{2013-03-22 16:34:32}
+\pmmodified{2013-03-22 16:34:32}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that all powers of 3 are perfect totient numbers}
+\pmrecord{11}{38766}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given an integer $x > 0$, it is always the case that $$3^x = \sum_{i = 1}^{c + 1} \phi^i(3^x),$$ where $\phi^i(x)$ is the iterated totient function and $c$ is the integer such that $\phi^c(n) = 2$. That is, all integer powers of three are perfect totient numbers.
+
+The proof of this is easy and even considered trivial. Here it goes anyway:
+
+Accepting as proven that $\phi(p^x) = (p - 1)p^{x - 1}$, we can plug in $p = 3$ and see that $\phi(3^x) = 2(3^{x - 1})$, which falls short of $3^x$ by $3^{x - 1}$. Given the \PMlinkname{proof that Euler $\phi$ is a multiplicative function}{ProofThatEulerPhiIsAMultiplicativeFunction} and the fact that $\phi(2) = 1$, it is obvious that $\phi(2(3^{x - 1})) = \phi(3^{x - 1})$. Therefore, each iterate will be twice a power of three, with the exponent gradually decreasing as the iterator nears $c$. To put it algebraically, $\phi^i(3^x) = 2(3^{c - i})$ for $i \le c$. Adding up in ascending order starting at the $(c + 1)$th iterate, we obtain $1 + 2 + 6 + 18 + \cdots + 2(3^{x - 2}) + 2(3^{x - 1}) = 3^x$.
+
+\begin{thebibliography}{2}
+\bibitem{di} D. E. Ianucci, D. Moujie \& G. L. Cohen, ``On Perfect Totient Numbers'' {\it Journal of Integer Sequences}, {\bf 6}, 2003: 03.4.5
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

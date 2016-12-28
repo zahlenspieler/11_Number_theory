@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBeattysTheorem}
+\pmcreated{2013-03-22 13:18:58}
+\pmmodified{2013-03-22 13:18:58}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{proof of Beatty's theorem}
+\pmrecord{8}{33823}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B83}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We define $a_n:=np$ and $b_n:=nq$. Since $p$ and $q$ are irrational, so are $a_n$ and $b_n$.
+
+It is also the case that $a_n\neq b_m$ for all $m$ and $n$, for if $np=mq$ then $q=1+\frac{n}{m}$ would be rational.
+
+The theorem is equivalent with the statement that for each integer $N\geq 1$ exactly $1$ element of $\{a_n\}\cup\{b_n\}$ lies in $(N,N+1)$.
+
+Choose $N$ integer. Let $s(N)$ be the number of elements of $\{a_n\}\cup\{b_n\}$ less than $N$. 
+
+$$a_n<N\Leftrightarrow np<N\Leftrightarrow n<\frac{N}{p}$$
+
+So there are $\lfloor{\frac{N}{p}}\rfloor$ elements of $\{a_n\}$ less than $N$ and likewise $\lfloor{\frac{N}{q}}\rfloor$ elements of $\{b_n\}$.
+
+By definition,
+
+$$
+\begin{array}{ccccc}
+\frac{N}{p}-1&<& \lfloor {\frac{N}{p}}\rfloor&<&\frac{N}{p}\\
+\frac{N}{q}-1&<& \lfloor {\frac{N}{q}}\rfloor&<&\frac{N}{q}\\
+\end{array}
+$$
+
+and summing these inequalities gives $N-2<s(N)<N$ which gives that $s(N)=N-1$ since $s(N)$ is integer.
+
+The number of elements of $\{a_n\}\cup\{b_n\}$ lying in $(N,N+1)$ is then $s(N+1)-s(N)=1$.
+%%%%%
+%%%%%
+\end{document}

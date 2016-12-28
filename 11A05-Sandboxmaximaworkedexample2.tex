@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sandboxmaximaworkedexample2}
+\pmcreated{2013-12-27 13:29:32}
+\pmmodified{2013-12-27 13:29:32}
+\pmowner{robert_dodier}{1000903}
+\pmmodifier{robert_dodier}{1000903}
+\pmtitle{sandbox-maxima-worked-example-2}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{robert_dodier}{1000903}
+\pmtype{Example}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Converting inches to kilometers.
+First load the `ezunits' package.
+\begin{verbatim}
+load (ezunits) $
+\end{verbatim}
+\begin{verbatim}
+foo : 1 ` inch;
+\end{verbatim}
+$$1\;\mathrm{inch}$$
+Units are converted by the double backtick operator; conversions are not carried out automatically.
+\begin{verbatim}
+bar : foo `` km;
+\end{verbatim}
+$${{127}\over{5000000}}\;\mathrm{km}$$
+As usual, Maxima prefers exact numbers to inexact. 
+We can get a float approximation if we wish.
+\begin{verbatim}
+float (bar);
+\end{verbatim}
+$$2.54 \times 10^{-5}\;\mathrm{km}$$
+A volume conversion. 
+Here `baz' is the volume of one inch of water spread over one acre, while `quux' is the same volume expressed in SI units.
+\begin{verbatim}
+baz : 1 ` (inch * acre);
+\end{verbatim}
+$$1\;\mathrm{inch}\,\mathrm{acre}$$
+\begin{verbatim}
+quux : baz `` m^3;
+\end{verbatim}
+$${{20076201783}\over{195312500}}\;\mathrm{m}^3$$
+\begin{verbatim}
+float (%);
+\end{verbatim}
+$$102.79015312896\;\mathrm{m}^3$$
+
+\end{document}

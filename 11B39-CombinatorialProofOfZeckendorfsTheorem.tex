@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CombinatorialProofOfZeckendorfsTheorem}
+\pmcreated{2013-03-22 19:05:53}
+\pmmodified{2013-03-22 19:05:53}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{combinatorial proof of Zeckendorf's theorem}
+\pmrecord{5}{41990}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B39}
+\pmclassification{msc}{11A63}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+\newtheorem{thm}{Theorem}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{ways}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{row}
+\PMlinkescapeword{point}
+\PMlinkescapeword{rows}
+\begin{thm} Every nonnegative integer has a unique representation as a sum of nonconsecutive Fibonacci numbers, where we do not use $F_1$ and instead use
+\[
+  F_2 = 1, F_3 = 2, F_4 = 3, F_5 = 5, F_6 = 8, \dots
+\]
+\end{thm}
+(Ignoring $F_1$ is necessary only to prevent the trivial counterexamples such as $6 = F_5 + F_2 = F_5 + F_1$).
+
+\begin{proof}
+Given a sum $\sum_{i=2}^n Z_i F_i$ where $Z_i \in \{0,1\}$, we write that as a sequence of binary digits; thus $F_4 + F_2$ is written as $101$, while $F_7 + F_5 + F_2$ is $101001$. Arrange such sequences with no two consecutive $1$'s (i.e. those sequences corresponding to sums of nonconsecutive Fibonacci numbers) in increasing lexicographic order starting from $0$, and assign each one a rank corresponding to its order in the list:
+\[
+\begin{array} {c c c c c | c}
+5 & 4 & 3 & 2 & 1 & rank \\
+\hline
+  &   &   &   & 0 & 0 \\
+  &   &   &   & 1 & 1 \\
+  &   &   & 1 & 0 & 2 \\
+  &   & 1 & 0 & 0 & 3 \\
+  &   & 1 & 0 & 1 & 4 \\
+  & 1 & 0 & 0 & 0 & 5 \\
+  & 1 & 0 & 0 & 1 & 6 \\
+  & 1 & 0 & 1 & 0 & 7 \\
+1 & 0 & 0 & 0 & 0 & 8
+\end{array}
+\]
+Note that the rank is \emph{not} the value of the string as a binary string. In fact, it is the sum of the string when interpreted as a sum of Fibonacci numbers, but we do not assume this; as far as we know up to this point, all the rank is is the row number in this table.
+
+We say that such a sequence has length $n$ if the leftmost $1$ is in position $n$; thus $100$ has length $3$.
+
+Claim that the number of representations with length $\leq n$ is $F_{n+2}$. We prove this by induction on $n$; note that it is true for $n=0$ and for $n=1$. Now, given any representation of length $\leq n$, it either has length $\leq n-1$ or it has length exactly $n$. The number of representations of length $\leq n-1$ is, by induction, $F_{n+1}$. To compute the number of representations of length exactly $n$, note that any such representation starts with $10$ since we cannot have two consecutive $1$'s. The digits after the $10$ are arbitrary as long as there are not two consecutive $1$'s, so that the number of such representations is precisely the number of representations of length $\leq n-2$, or $F_{n}$. Thus the number of representations of length $\leq n$ is $F_{n+1}+F_n = F_{n+2}$. This proves the claim.
+
+We will now prove the theorem by counting the number of rows preceding row $n$ in two different ways. First, the number of such rows is obviously $n$ (since we just numbered the row consecutively). We now count the number of predecessors by looking at the corresponding sequence. Given a sequence $s$, each of its predecessors $p$ first differs from it in some position $k$; since $s>p$ lexicographically, $s$ must be $1$ in that position while $p$ is zero. Since $p$ has a zero in position $k$, the remaining $k-1$ digits of $p$ are arbitrary subject to the consecutivity condition, so the number of possibilities for $p$ is the number of representations of length $\leq k-1$, which is $F_{k+1}$. We can do this for each possible point of difference with $s$ (which occur at the positions in which $s$ has a $1$, and thus must have nonconsecutive indices). This counts each predecessor of $s$ once and only once, and gives a representation of the number of predecessors as a sum of nonconsecutive Fibonacci numbers. But there are $n$ predecessors, so we have written $n$ as the required sum.
+
+As an example of this process, consider the row numbered $7$, which is the sequence $1010$. If a predecessor differs from it at the first $1$, it is of the form $0***$ where the $*$'s are arbitrary (so long as there are no two consecutive $1$'s, so there are $F_5$ of them. If a predecessor differs from it at the second $1$, it is of the form $100*$ and again the $*$'s are arbitrary, so there are $F_3$ of them. Thus $7=F_5+F_3$.
+
+This argument shows existence; uniqueness follows as well from this construction since every possible sum is represented in the list, and each one represents a different integer.
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

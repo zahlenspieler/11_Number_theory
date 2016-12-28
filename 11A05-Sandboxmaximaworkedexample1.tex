@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Sandboxmaximaworkedexample1}
+\pmcreated{2014-12-31 17:36:26}
+\pmmodified{2014-12-31 17:36:26}
+\pmowner{robert_dodier}{1000903}
+\pmmodifier{robert_dodier}{1000903}
+\pmtitle{sandbox-maxima-worked-example-1}
+\pmrecord{2}{88010}
+\pmprivacy{1}
+\pmauthor{robert_dodier}{1000903}
+\pmtype{Example}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Here is some text which opens the discussion.
+I'll find out stuff later.
+Third line in 1st part.
+More text here. I wonder if it makes a separate paragraph.
+2nd line in 2nd part.
+First formula. Something about random blurfage.
+2nd line in 3rd part.
+\begin{verbatim}
+eqn : x^2 + 17*x + 29 = 0;
+\end{verbatim}
+$$x^2+17\,x+29=0$$
+\begin{verbatim}
+solve (eqn, x);
+\end{verbatim}
+$$\left[ x=-{{\sqrt{173}+17}\over{2}} , x={{\sqrt{173}-17}\over{2}}
+  \right] $$
+\begin{verbatim}
+subst (first (%), eqn);
+\end{verbatim}
+$${{\left(\sqrt{173}+17\right)^2}\over{4}}-{{17\,\left(\sqrt{173}+17
+ \right)}\over{2}}+29=0$$
+\begin{verbatim}
+expand (%);
+\end{verbatim}
+$$0=0$$
+More text here. I wonder if percent sign stuff works.
+\begin{verbatim}
+abc : '(def + xyz);
+\end{verbatim}
+$${\it xyz}+{\it def}$$
+$${\mathit xyz}+{\mathit def}$$
+$$xyz + def$$
+\begin{verbatim}
+bcd : '(sin(x)+sin(x))$
+\end{verbatim}
+Dollar sign terminator on previous line. Hmm.
+\begin{verbatim}
+ev (bcd);
+\end{verbatim}
+$$2\,\sin x$$
+Now bcd is simplified.
+\begin{verbatim}
+print(bcd);
+\end{verbatim}
+$$2\,\sin x$$
+bcd was simplified by printing too.
+All finished.
+\includegraphics{foo1_0.png}
+No, really!
+
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfQuadraticReciprocityRule}
+\pmcreated{2013-03-22 13:16:15}
+\pmmodified{2013-03-22 13:16:15}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of quadratic reciprocity rule}
+\pmrecord{12}{33752}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A15}
+%\pmkeywords{reciprocity}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+%11A15
+The quadratic reciprocity law is:
+
+\textbf{Theorem:} (Gauss) Let $p$ and $q$ be distinct odd primes,
+and write $p=2a+1$ and $q=2b+1$. Then
+$\left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{ab}$.
+
+($\left(\frac{v}{w}\right)$ is the Legendre symbol.)
+
+\textbf{Proof:}
+Let $R$ be the subset $[-a,a] \times [-b,b]$
+of ${\mathbb Z} \times {\mathbb Z}$. Let $S$
+be the interval $$[-(pq-1)/2, (pq-1)/2]$$ of ${\mathbb Z}$.
+By the Chinese remainder theorem, there exists a unique
+bijection $f: S\to R$ such that, for any $s\in S$, if we
+write $f(s)=(x,y)$, then
+$ x\equiv s \pmod p $ and
+$ y\equiv s \pmod q$.
+Let $P$ be the subset of $R$ consisting of the values of $f$ on
+$[1, (pq-1)/2 ]$. 
+$P$ contains, say, $u$ elements of the form
+$(x,0)$ such that $x<0$, and $v$ elements of the form
+$(0,y)$ with $y<0$. Intending to apply Gauss's lemma,
+we seek some kind of comparison between $u$ and $v$.
+
+We define three subsets of $P$ by
+\begin{eqnarray*}
+R_{0} & = & \{(x,y) \in P | x > 0, y > 0 \} \\
+R_{1} & = & \{(x,y) \in P | x < 0, y \ge 0 \} \\
+R_{2} & = & \{(x,y) \in P | x \ge 0, y < 0 \}
+\end{eqnarray*}
+and we let $N_{i}$ be the cardinal of $R_{i}$ for each $i$.
+
+$P$ has $ab+b$ elements in the region $y>0$, namely $f(m)$ for all
+$m$ of the form $k+lq$ with
+$1 \le k \le b$ and $0 \le l \le a$.
+Thus
+$$N_{0}+N_{1} = ab + b - (b-v) + u$$
+i.e.
+\begin{eqnarray}
+N_{0}+N_{1} & = & ab+u+v.
+\end{eqnarray}
+Swapping $p$ and $q$, we have likewise
+\begin{eqnarray}
+N_{0}+N_{2} & = & ab+u+v.
+\end{eqnarray}
+
+Furthermore, for any $s \in S$, if $f(s)=(x,y)$ then $f(-s)=(-x,-y)$.
+It follows that for any $(x,y) \in R$
+other than $(0,0)$, either $(x,y)$ or $(-x,-y)$ is
+in $P$, but not both.
+Therefore
+\begin{eqnarray}
+N_{1}+N_{2} & = & ab+u+v.
+\end{eqnarray}
+Adding (1), (2), and (3) gives us
+$$0 \equiv ab + u + v \pmod 2$$ so $$(-1)^{ab}=(-1)^{u}(-1)^{v}$$
+which, in view of Gauss's lemma, is the desired conclusion.
+
+For a bibliography of the more than 200 known proofs of
+the QRL, see
+\PMlinkexternal{Lemmermeyer}{http://www.rzuser.uni-heidelberg.de/~hb3/fchrono.html}
+.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,241 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Summation}
+\pmcreated{2013-03-22 14:43:47}
+\pmmodified{2013-03-22 14:43:47}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{summation}
+\pmrecord{21}{36361}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B25}
+\pmclassification{msc}{00A05}
+\pmsynonym{sum}{Summation}
+\pmsynonym{summing}{Summation}
+\pmsynonym{sigma notation}{Summation}
+\pmsynonym{$\sum$}{Summation}
+%\pmkeywords{sum}
+%\pmkeywords{sigma}
+%\pmkeywords{notation}
+%\pmkeywords{evaluating}
+%\pmkeywords{progression}
+%\pmkeywords{sequence}
+\pmrelated{EinsteinSummationConvention}
+\pmrelated{Series}
+\pmrelated{Addition}
+\pmrelated{PlusSign}
+\pmdefines{running}
+
+\usepackage[fleqn]{amsmath} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\section*{Sigma notation}
+\emph{Sigma notation} is often used to write complicated sums in a concise and compact way. One of the most common forms is
+\begin{equation}\label{sigma}
+\sum_{n=a}^b f(n).
+\end{equation}
+
+The $\sum$ symbol (capital sigma) means \emph{sum} and the expression (\ref{sigma}) is equivalent to the sum
+\[
+f(a)+f(a+1) + f(a+2) + \cdots + f(b)
+\]
+The starting and stopping values are written below and above the $\sum$ symbol respectively, and below we also specify which will be our \emph{running variable} (or \emph{summation index}) that will be changing values. So in the former expression, $n$ is the running variable, taking values starting at $a$ and stopping at $b$.
+Usually it's assumed that $a\leq b$ in (\ref{sigma}) since otherwise there would be no summands. However it is also customary to take the value of the sum as zero when $a>b$.
+
+For instance, if we wanted to represent the sum of all integers between $1$ and $100$ we would write:
+\[
+\sum_{j=1}^{100} j.
+\]
+here we are taking $j$ as summation index, and we are adding $f(j)=j$ where $j$ runs over all the integers starting at $1$ and ending at $100$.
+
+Now suppose we wanted to represent the sum $4^2 + 5^2 + 6^2 + \cdots + 20^2$. The straightforward way to convert it to sigma notation is 
+\[\sum_{k=4}^{20} k^2.\]
+However, it must be noted that such representation is not unique. For instance, here is another way to express the same summation:
+\[\sum_{k=0}^{16} (k+4)^2.\]
+
+
+If we wanted to sum all positive even numbers not greater than $50$ we would write
+\[\sum_{k=1}^{25} 2k\]
+since if we substitute $k=1,2,3,\ldots,25$ into $f(k)=2k$ we get $2,4,6,8,\ldots,50$.
+Now, if we wanted to write all odd numbers not greater than $50$ we would write
+\[\sum_{k=1}^{25} (2k-1)\qquad\mbox{or}\qquad\sum_{k=0}^{24}(2k+1).\]
+
+It must be noted that, although the running variable usually takes integer values, the summation function needs not, and it can lie on any algebraic structure where a sum is defined. 
+So, we can write $\sum_{j=1}^{10} \sqrt{j}$ for representing $\sqrt{1}+\sqrt{2}+\cdots+\sqrt{10}$ even though the summing terms aren't integers. If we wanted to sum all the fifth roots of unity (complex numbers) we could write $\sum_{k=0}^4 e^{2\pi ik/5}$.
+
+There are several variations to the notation. Often the starting and ending values for the running parameter are ommited if the set of values it can take is not relevant or is understood from context. So on some contexts one could see the sum
+\[\sum_{k=1}^\infty \frac{1}{2^k}\]
+written as $\sum_k \frac{1}{2^k}$ where the summation is understood from context to be done over all positive integers.
+
+Also notice another variation in the preceding example: the upper limit is $\infty$, which means the sum doesn't stop after some terms. In other words, the previous example represents the sum
+\[\frac12+\frac14+\frac18+\cdots \]
+where there are an infinite number of summands.
+
+Another variation is to give further specifications for the allowed values of the running parameter. So, if we wanted to sum if we wanted to sum the reciprocals of all prime numbers we could simply write
+\[
+\sum_{p\ \mathrm{prime}}\frac{1}{p},
+\]
+where we also use the previous variation where omitting the omiting starting and stopping values indicates summing over all possible values the context allows. Now, if we wanted to sum all prime numbers between $1$ and $50$ we have choices:
+\[
+\sum_{p=1\atop p\ \mathrm{prime}}^{50} p, \qquad\sum_{p\ \mathrm{prime}\atop p\leq 50}p.
+\]
+
+\section*{Evaluating sums}
+Since we are working with sums, all the usual properties (commutativity, associativity, etc) hold. 
+Two of the most useful formulas for dealing with summations are
+\begin{align}
+\sum_k (a_k+b_k) &= \Big(\sum a_k \Big)+\Big(\sum b_k \Big)\\
+\sum_k (c\cdot a_k) &= c\cdot\sum a_k .
+\end{align}
+The first property allows us to split summations into simpler sums, and the second tells us we can factor out any constant term (actually, any expression not involving the summation index).
+
+We have also a ``changing limits'' property, which we used to give two different expressions for $4^2 + 5^2 + 6^2 + \cdots + 20^2$:
+\begin{equation}
+\sum_{k=a}^b f(k) = \sum_{k=a+r}^{b+r} f(k-r)
+\end{equation}
+where $r$ is any integer.
+
+As example, supose we wanted to sum all the values for $x^2 + 2x + 1$ when $x$ runs from $3$ to $7$. That is, we wish to evaluate $\sum_{j=3}^7 j^2 + 2j + 1$.
+By using the mentioneds properties we have
+\begin{align*}
+\sum (j^2+2j+1) &=\sum j^2 + \sum 2j + \sum 1\\
+&=\sum j^2 + 2\sum j + \sum 1
+\end{align*}
+where context indicates that in all previous sums, $j$ runs from $3$ to $7$. The problem now is reduced to find formulas for the sums in the last expression. 
+
+Notice also that, since $(x^2 + 2x + 1)$ is the same as $(x+1)^2$ we could have also done the following changes:
+\begin{align*}
+\sum_{j=3}^7(j^2+2j+1) &=\sum_{j=3}^7 (j+1)^2 \\
+&=\sum_{j=4}^8 j^2.
+\end{align*}
+and again we are left with the task of evaluating a simpler summation.
+
+\section*{Useful formulas}
+We now give formulas for evaluating many common summations, which can be combined using the mentioned properties to evaluate a wide range of sums.
+
+\medskip\textbf{Constants.}\, The simplest case is when the summation terms do not involve the running variable. Two examples are:
+\[\sum_{k=1}^4 2, \qquad\sum_{k=1}^4 x^2,\]
+which respectively represent the sums $2+2+2+2$ and $x^2 + x^2 + x^2 + x^2$. It's obvious that if the summand does not depend on the running variable, all terms will be the same, and thus the sum will be the product of any summand by the nuber of summands.\, In other words,
+\[
+\sum_{k=1}^n c = nc.
+\]
+Remark: If a summand does not depend on the summation index, we say it is constant (with respect the summation). So in the previous example $x^2$ was ``constant'' since it didn't depend on the running variable $k$, and thus 
+\[\sum_{k=1}^4 x^2 = 4x^2.\] 
+
+%%%%%%%%%%%%%%%%%%%%%%
+\medskip\textbf{Small powers.}
+Suppose we wanted to calculate $1+2+3+\cdots+98+99+100$. In other words, we want to calculate $\sum_{k=1}^{100} k$. We can use the formula
+\[\sum_{k=1}^n k = \frac{n(n+1)}{2}
+\]
+which is credited to Gauss. Applying such formula we find that the sought answer is $100(101)/2 = 5050$.
+Notice that we can use the formula to evaluate sums of consecutive integers not necessarily at $1$. For instance, if we wanted
+$50 + 51 + 52+\cdots+77$ we could proceed as following:
+\begin{align*}
+\sum_{k=50}^{77} k = 50 + 51 + 52+\cdots+77 &= (1 + 2 + \cdots + 77 ) - (1+2+\cdots + 49)\\
+ &=\sum_{k=1}^{77} k - \sum_{k=1}^{49} k\\
+ &=\frac{77\cdot 78}{2}-\frac{49\cdot 50}{2}\\
+ &=3003-225=1778
+\end{align*}
+
+Similar formulas exist for evaluating sums of small powers of consecutive integers:
+\begin{align*}
+\sum_{k=1}^n k^2 &= \frac{n(n+1)(2n+1)}{6}\\
+\sum_{k=1}^n k^3 &= \frac{n^2(n+1)^2}{4}\\
+\sum_{k=1}^n k^4 &= \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\\
+\sum_{k=1}^n k^5 &= \frac{n^2(n+1)^2(2n^2+2n-1)}{12}\\
+\sum_{k=1}^n k^6 &= \frac{n(n+1)(2n+1)(3n^4+6n^3-3n +1)}{42}\\
+\sum_{k=1}^n k^7 &= \frac{n^2(n+1)^2(3n^4 +6n^3-n^2 - 4n +2)}{24}\\
+\sum_{k=1}^n k^8 &= \frac{n(n+1)(2n+1)(5n^6 + 15n^5 +5n^4 -15n^3 -n^2+9n -3)}{90}\\
+\sum_{k=1}^n k^9 &= \frac{n^2(n+1)^2(n^2+n-1)(2n^4 +4n^3-n^2 - 3n +3)}{20}\\
+\sum_{k=1}^n k^{10} &= \frac{n(n+1)(2n+1)(n^2+n-1)(3n^6+9n^5 +2n^4-11n^3+3n^2+10n-5)}{66}
+\end{align*}
+
+\medskip\textbf{Arithmetic progressions.}
+The \emph{arithmetic progression} is a sequence where the difference of each term and the previous is always the same. In other words, is of the form \[a,a+d,a+2d,\ldots , a+nd\] (notice that the previous example has $n+1$ terms).
+
+The corresponding sum $a+(a+d) + (a+2d) + \cdots + (a+nd)$ can be written with sigma notation as
+$\sum_{k=0}^n (a+kd)$. We can use all formulas we have so far to calculate it:
+\begin{align*}
+\sum_{k=0}^n (a+kd) &= \sum_{k=0}^n a + \sum_{k=0}^n kd\\
+&=(n+1)a + d\sum_{k=0}^n k \\
+&=(n+1)a + d\frac{n(n+1)}{2} = \frac{(n+1)(dn +2a)}{2}
+\end{align*}
+If $a_0,a_1,a_2,\ldots,a_n$ represent the terms of the progression, then we can also rewrite the last result as
+\[
+\sum_{k=0}^n (a+kd) = \frac{(n+1)(dn +2a)}{2}=\frac{(n+1)(a_0+a_n)}{2}
+\]
+
+A particular case of arithmetic sequence is summing consecutive odd (or consecutive even ) numbers, since the common difference is always $2$. 
+\begin{align*}
+&\sum_{k=1}^n 2k = 2\sum_{k=1}^n = n(n+1)&\quad\mbox{even numbers}\\
+&\sum_{k=1}^n (2k-1) = 2\sum_{k=1}^n k -\sum_{k=1}^n 1= n(n+1)-n = n^2&\quad\mbox{odd numbers}\\
+\end{align*}
+
+\medskip\textbf{Geometric progressions.}The \emph{geometric progression} is a sequence where the quotient between each term and the previous is always the same. in other words, has the form:
+\[
+a,ar,ar^2,ar^3,\ldots,ar^n.
+\]
+
+The corresponding sum $a+ar+ar^2 + ar^3 + \cdots + ar^n$ can be reduced to calculating $1+r+r^2 + \cdots +r^n$ by factoring $a$ out of the summation. The corresponding formula is
+\[
+\sum_{k=0}^n r^k = 1+r +r^2 +\cdots + r^n = \frac{r^{n+1}-1}{r-1}
+\]
+
+A particularly nice formula is obtained when $r=2$:
+\[
+\sum_{k=0}^n 2^k = 2^{n+1} -1.
+\]
+So, in the old story about a chess board where the board is filled doubling the number of seeds on the previous position, the answer would be
+\[
+\sum_{k=0}^{63} 2^k = 2^{64}-1 = 18446744073709551615.
+\]
+
+When the common quotient $r$ has absolute value smaller than $1$, we can actually calculate the infinite series:
+\[
+\sum_{k=0}^\infty r^k = 1+ r + r^2 + r^3 + \cdots =\frac{1}{1-r}\qquad \mathrm{for\ }|r|<1.
+\]
+
+\medskip\textbf{Other formulas.}
+Many other formulas can be found to evaluate sums. Here is a small miscellanea of remarkable formulas.
+\begin{align*}
+&\sum_{k=1}^n k(k+1) =\frac{n(n+1)(n+2)}{3}\\
+&\sum_{k=1}^n k(k+1)(k+2) =\frac{n(n+1)(n+2)(n+3)}{4}\\
+&\sum_{k=1}^n k(k+1)(k+2)(k+3) =\frac{n(n+1)(n+2)(n+3)(n+4)}{5}
+\end{align*} 
+\begin{align*}
+&\sum_{k=0}^n {n\choose k}=2^n\\
+&\sum_{k=0}^n (-1)^k{n\choose k}=0\\
+&\sum_{k=0}^n k{n\choose k} = n2^{n-1}\\
+&\sum_{k=0}^n k^2{n\choose k} = n(n+1)2^{n-2}\\
+&\sum_{k=0}^n k^3{n\choose k} = n^2(n+3)2^{n-3}\\
+&\sum_{k=0}{n\choose k}^2 ={2n\choose n}
+&\end{align*}
+
+If $f_n$ denotes the $n$-th Fibonacci number, then
+\begin{align*}
+&\sum_{k=0}^n f_k = f_{n+2}-1\\
+&\sum_{k=0}^n f_k^2 = f_nf_{n+1}\\
+&\sum_{k=0}^{\lfloor n/2\rfloor} {n-k-1\choose k}=f_n
+\end{align*}
+
+\subsubsection*{Notes}
+The sigma notation was introduced by the French mathematician 
+Joseph Fourier in 1820 \cite{Higham}.
+
+\begin{thebibliography}{9}
+\bibitem{Higham} N. Higham. \emph{Handbook of writing for the mathematical sciences}. Society for Industrial and Applied Mathematics, 1998.
+(pp. 25)
+\bibitem{GKP} Graham, Knuth, Patashnik. \emph{Concrete mathematics}. Addison-Wesley, 1994
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTriplet}
+\pmcreated{2013-03-22 14:06:52}
+\pmmodified{2013-03-22 14:06:52}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{proof of Pythagorean triplet}
+\pmrecord{12}{35519}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D09}
+%\pmkeywords{primitive pythagorean triplet}
+\pmrelated{ContraharmonicMeansAndPythagoreanHypotenuses}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newtheorem{rmk}{Remark}
+\newtheorem{theo}{Theorem}
+\newtheorem{lem}{Lemma}
+\begin{document}
+\PMlinkescapeword{parity}
+\PMlinkescapeword{opposite}
+Consider the \PMlinkescapetext{identity} $4AB=(A+B)^2 -(A-B)^2$. Assume that $A,B$ are coprime. (This is no \PMlinkescapetext{restriction}: If $d$ is the greatest common divisor of $A,B$, then one can write $A=dA^{'}, B=dB^{'}$ to get $4d^2(A^{'}B^{'})^2=d^2\left((A^{'}+B^{'})^2 -(A^{'} -B^{'})^2\right)$ and cancel $d^2$.)
+
+For $4AB,A+B, A-B$ to form a Pythagorean triple, each of $A, B$ must be squares. So $A=m^2, B=n^2$ where $m,n$ are coprime, $n<m$. So we have
+\begin{equation}
+\label{eq1}
+a=2mn, b=m^2-n^2, c=m^2+n^2
+\end{equation}
+and $\{a,b,c\}$ are a Pythagorean triple. But this needn't be primitive: If $m,n$ are odd, then $2 \mid m^2 \pm n^2$, so not all of $a,b,c$ are relatively prime. 
+
+Suppose $2mn, m^2-n^2, m^2+n^2$ are pairwise coprime. Then $\gcd(2mn, m^2+n^2)=\gcd(2mn, (m+n)^2)=1=\gcd(2mn,(m-n)^2)$, and it follows that $\gcd(2mn,m+n)=1, \gcd(2mn,m-n)=1$. Thus $\gcd(2,m+n)=1$, i.e. $m \pm n$ is odd. Furthermore, $\gcd(2mn,m+n)=1$ implies $\gcd(m,n)=1$. And since the sum/difference of two integers is odd iff one is even, and the other is odd, only one of $m,n$ is odd. Thus, $\gcd(m^2-n^2,m^2+n^2)=\gcd(m^2+n^2,2n^2)=1$. Conversely, if $m,n$ are coprime, and exactly one of $m,n$ is odd, then $\gcd(2,m \pm n)=1$; thus, $2mn$,$m^2-n^2$ are coprime. From the fact that $\gcd(a+b, a-b)=\gcd(a,b)$ if $a,b$ have opposite parity and $\gcd(m^2,n^2)=1$ it follows that $m^2-n^2$,$m^2+n^2$ are also coprime. And since $\gcd(2mn,m^2+n^2)=\gcd(2mn,(m+n)^2)$ and $\gcd(2mn,m+n)=1$ it follows that $2mn,m^2+n^2$ are coprime. So the conditions the Pythagorean triple $\{2mn, m^2-n^2,m^2+n^2\}$ is primitive, $\gcd(2mn,m+n)=1$ and $m,n$ are coprime and exactly one of them is odd are equivalent.
+
+So if $a,b,c$ satisfy $a^2+b^2=c^2$ and $a,b,c$ are pairwise coprime, then $c$ is odd, and exactly one of $a,b$ are odd and the other is even.
+
+Let $n,m$ be coprime positive integers of opposite parity, $n<m$. Set
+\begin{equation}
+n^{'}=m+n, \; m^{'}=n-m
+\end{equation}
+in equation \ref{eq1}
+gives
+\begin{equation}
+b=m^{'}n^{'}, c=\frac{n^2+m^2}{2}=\frac{\left.m^{'}\right.^2 +\left.n^{'}\right.^2}{2}, \;a=\frac{\left.n^{'}\right.^2-\left.m^{'}\right.^2}{2}
+\end{equation}
+since $n=\frac{m^{'}+n^{'}}{2}$, $m=\frac{n^{'}-m^{'}}{2}$. Clearly, $\gcd(m^{'},n^{'})=1$.
+
+Now we prove that any primitive Pythagorean triple can be generated choosing \emph{odd} coprime integers.
+\begin{rmk}
+Let $m,n$ be odd coprime integers, $n<m$. Let $f_1=\frac{n^2-m^2}{2}, f_2=\frac{n^2+m^2}{2}$. Then $\gcd(f_1,f_2)=1$.
+\end{rmk}
+\begin{proof}
+Since $\gcd(n^2, m^2)=1=\gcd(f_1+f_2, f_1-f_2)$, the statement follows from the fact that $f_1, f_2$ have opposite parity since in this case $\gcd(f_1,f_2)=\gcd(f_1+f_2, f_1-f_2)$. Since $4 \mid n^2-m^2$, $f_2$ is odd, and since $f_1=f_2+n^2$ and $n$ is odd, $f_1,f_2$ have opposite parity.
+\end{proof}
+
+Substituting $C=n^2$, $B=m^2$ in $BC=\left(\frac{C+B}{2}\right)^2 -\left(\frac{C-B}{2}\right)^2$ yields that $mn,\, \frac{n^2-m^2}{2},\, \frac{n^2+m^2}{2}$ is a primitive Pythagorean triple.
+
+To see that any primitive Pythagorean triple is of this form:
+\begin{theo}
+Let $a,b$ be positive coprime integers satisfying $a^2+b^2=c^2$. Then $a,b$ have opposite parity, and $c$ is odd. Furthermore $(a,c)=(b,c)=1$.
+\end{theo}
+\begin{proof}
+$a,b$ cannot both be even since $\gcd(a,b)=1$. If both $a,b$ were odd we had $c^2 \equiv 2 \pmod{4}$ which is impossible since the square of any number is either \PMlinkname{congruent}{Congruences} 0 or 1 modulo 4. Thus, $c$ must be odd. Now for any integers $a,b$ the congruence $a^2+b^2 \equiv (a+b)^2 \pmod{2}$ holds. Together with $c^2\equiv 1 \pmod{2}$ this gives $a+b\equiv 1 \pmod{2}$, so $a,b$ have opposite parity.
+\end{proof}
+Suppose $a$ is odd. Since $a^2=(c+b)(c-b)$ is a square, and $(c+b, c-b)=(c+b, 2b)$ and $(2,c+b)=1$ it follows that $c \pm b$ are coprime and consequently each of them is square. This gives $c-b=n^2, c+b=m^2$ where $m,n$ are odd coprime integers, and we get
+\begin{eqnarray}
+a^2=m^2n^2 \Leftrightarrow\\
+ a&=&mn,\\
+b&=(c+b-(c-b))/2&=\frac{m^2-n^2}{2},\\
+c&&=\frac{n^2+m^2}{2}.
+\end{eqnarray}
+
+Now let $A=\frac{ab}{2}$ be a square. Without loss of generality we can set $a=mn$, $b=\frac{n^2-m^2}{2}$ where $m,n$ are odd coprime integers. So we have $A=mn\frac{n^2-m^2}{4}$, and since $mn$ and $\frac{n^2-m^2}{4}$ are coprime, each of them must itself be a square. So we have
+\begin{equation}
+c^2=\left(\frac{n^2+m^2}{2}\right)^2 =(mn)^2 +\left(\frac{n^2-m^2}{2}\right)^2
+\end{equation}
+where the right-hand side numbers are biquadratic integers. So the question if the area of a right triangle with integer sides is square is equivalent to asking if $x^4+y^4=z^2$ has a solution in positive integers.
+%%%%%
+%%%%%
+\end{document}

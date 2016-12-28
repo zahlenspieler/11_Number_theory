@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContraharmonicDiophantineEquation}
+\pmcreated{2013-11-19 21:49:13}
+\pmmodified{2013-11-19 21:49:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{contraharmonic Diophantine equation}
+\pmrecord{5}{87925}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmclassification{msc}{11D09}
+\pmclassification{msc}{11D45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We call {\it contraharmonic Diophantine equation} the equation
+\begin{align}
+u^2+v^2 \;=\; (u+v)c
+\end{align}
+of the three unknowns $u$, $v$, $c$ required to get only positive integer 
+values.\, The equation expresses that $c$ is the contraharmonic 
+mean of $u$ and $v$.\, As proved in the article 
+``contraharmonic means and Pythagorean 
+hypotenuses'', the supposition $u \neq v$ implies that the 
+number $c$ must be the hypotenuse in a Pythagorean triple
+$(a, b, c)$, and if particularly $u < v$, then
+\begin{align}
+u \;=\; \frac{c+b-a}{2}, \quad v \;=\; \frac{c+b+a}{2}.
+\end{align}
+For getting the general solution of the quadratic Diophantine 
+equation (1), one can utilise the general formulas for 
+Pythagorean triples
+\begin{align}
+a \;=\; l\!\cdot\!(m^2-n^2), \quad b \;=\; l\!\cdot\!2mn, 
+\quad c \;=\; l\!\cdot\!(m^2+n^2)
+\end{align}
+where the parameters $l$, $m$, $n$ are arbitrary positive 
+integers with\, $m > n$.\, Using (3) in (2) one obtains the 
+result
+\begin{align}
+\begin{cases}
+  u_1 \;=\; l(m^2-mn),\\
+  u_2 \;=\; l(n^2+mn),\\
+  v \;=\; l(m^2+mn),\\
+  c \;=\; l(m^2+n^2), 
+\end{cases}
+\end{align}
+in which $u_1$ and $u_2$ mean the alternative values for $u$ gotten from (2) by swapping 
+the expressions of $a$ and $b$ in (3). 
+
+It's clear that the contraharmonic Diophantine equation has an 
+infinite set of solutions (4).\, According to the Proposition 
+6 of the article ``integer contraharmonic means'', fixing e.g. 
+the variable $u$ allows for the equation only a restricted 
+number of pertinent values $v$ and $c$.\, See also the 
+alternative expressions (1) and (2) in the article ``sums of 
+two squares''.\\
+
+
+
+\end{document}

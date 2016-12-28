@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFewComplexMultiplicationTables}
+\pmcreated{2013-03-22 16:56:52}
+\pmmodified{2013-03-22 16:56:52}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{a few complex multiplication tables}
+\pmrecord{7}{39216}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Someone putting together a multiplication table of real integers has very few important decisions to make: Will it have as many rows as columns? The answer is usually yes. What range will be covered? Usually 1 to 10, or 1 to 12 in the old days, for both rows and columns. After making those decisions, all the other decisions are probably purely cosmetic: What font to use? What base? Usually base 10. What multiplication operator? The tacit multiplication operator is sometimes used, but the multiplication cross $\times$ is probably preferred.
+
+But for someone wanting to put together a multiplication of complex integers there is suddenly an embarrasse de choix, and the two-dimensional table structure appears inadequate. It would be unfair to expect schoolchildren to memorize complex multiplication tables, and perhaps it might be better to just teach the identity $(a + bi) \times (x + yi) = (ax - by) + (ay + bx)i$. On the other hand, just showing a few complex multiplication tables might help make the subject more ``real'' (atrocious pun fully intended).
+
+To help us orient ourselves, we could imagine our beloved real integer multiplication table as hanging on a wall, with each entry having an additional ``$+ 0i$'' which for convenience we normally leave out. On the wall behind that table there might be a table multiplying numbers of the form $a + i$. Here we'll limit ourselves to five rows and five columns of results to avoid horizontal scrollbars or print-outs chopped off on the right edge. Another convenience we'll avail ourselves to is using $r$ as the row number variable and $c$ as the column number variable.
+
+\begin{tabular}{|r|r|r|r|r|r|}
+$\times$ & $1 + i$ & $2 + i$ & $3 + i$ & $4 + i$ & $5 + i$ \\
+$1 + i$ & $2i$ & $1 + 3i$ & $2 + 4i$ & $3 + 5i$ & $4 + 6i$ \\
+$2 + i$ & $1 + 3i$ & $3 + 4i$ & $5 + 5i$ & $7 + 6i$ & $9 + 7i$ \\
+$3 + i$ & $2 + 4i$ & $5 + 5i$ & $8 + 6i$ & $11 + 7i$ & $14 + 8i$ \\
+$4 + i$ & $3 + 5i$ & $7 + 6i$ & $11 + 7i$ & $15 + 8i$ & $19 + 9i$ \\
+$5 + i$ & $4 + 6i$ & $9 + 7i$ & $14 + 8i$ & $19 + 9i$ & $24 + 10i$ \\
+\end{tabular}
+
+On a perpendicular wall we might have a table in which the operand column is $ci$ and operand row is $1 + ri$:
+
+\begin{tabular}{|r|r|r|r|r|r|}
+$\times$ & $1 + i$ & $1 + 2i$ & $1 + 3i$ & $1 + 4i$ & $1 + 5i$ \\
+$i$ & $-1 + i$ & $-2 + i$ & $-3 + i$ & $-4 + i$ & $-5 + i$ \\
+$2i$ & $-2 + 2i$ & $-4 + 2i$ & $-6 + 2i$ & $-8 + 2i$ & $-10 + 2i$ \\
+$3i$ & $-3 + 3i$ & $-6 + 3i$ & $-9 + 3i$ & $-12 + 3i$ & $-15 + 3i$ \\
+$4i$ & $-4 + 4i$ & $-8 + 4i$ & $-12 + 4i$ & $-16 + 4i$ & $-20 + 4i$ \\
+$5i$ & $-5 + 5i$ & $-10 + 5i$ & $-15 + 5i$ & $-20 + 5i$ & $-25 + 5i$ \\
+\end{tabular}
+
+The real parts are what we would get in our ``normal'' table, though multiplied by $-1$. The imaginary parts are consistently $ri$. Plugging $b = y = 1$ into our identity stated above, it reduces to $(0 - y) + (0 + x)i = -y + xi$ or $-c + ri$, which explains the observation.
+
+Perhaps on the floor we might have a table in which both the rows and columns are of the form $0 + mi$:
+
+\begin{tabular}{|r|r|r|r|r|r|}
+$\times$ & $i$ & $2i$ & $3i$ & $4i$ & $5i$ \\
+$i$ & $-1$ & $-2$ & $-3$ & $-4$ & $-5$ \\
+$2i$ & $-2$ & $-4$ & $-6$ & $-8$ & $-10$ \\
+$3i$ & $-3$ & $-6$ & $-9$ & $-12$ & $-15$ \\
+$4i$ & $-4$ & $-8$ & $-12$ & $-16$ & $-20$ \\
+$5i$ & $-5$ & $-10$ & $-15$ & $-20$ & $-25$ \\
+\end{tabular}
+
+This looks an awful lot like the usual multiplication table. Our diagonal for $r = c$ has numbers of the form $-(n^2)$, which with a little reflection is an obvious consequence of the fact that $\sqrt{-1} = i$.
+
+Things get more interesting when we go down to the basement, where upon the wall is a table in which the operand row has $r + i$ and the operand column has $c - i$:
+
+\begin{tabular}{|r|r|r|r|r|r|} \\
+$\times$ & $1 + i$ & $2 + i$ & $3 + i$ & $4 + i$ & $5 + i$ \\
+$1 - i$ & $2$ & $3 +i$ & $4 + 2i$ & $5 + 3i$ & $6 + 4i$ \\
+$2 - i$ & $3 - i$ & $5$ & $7 +i$ & $9 + 2i$ & $11 + 3i$ \\
+$3 - i$ & $4 - 2i$ & $7 - i$ & $10$ & $13 +i$ & $16 + 2i$ \\
+$4 - i$ & $5 - 3i$ & $9 - 2i$ & $13 - i$ & $17$ & $21 + i$ \\
+$5 - i$ & $6 - 4i$ & $11 - 3i$ & $16 - 2i$ & $21 - i$ & $26$ \\ 
+\end{tabular}
+
+There is an interplay of arithmetic progressions in both the real and imaginary parts. Observartion shows that the real parts follow the pattern $c + cr$ and the imaginary parts follow the pattern $ci - ri$. Plugging $b = 1$ and $y = -1$ into our identity stated above reduces it to $(ax + 1) + (-a + x)i$. A result of this interplay is that our $r = c$ diagonal has numbers with no imaginary parts, some of them we normally consider prime. But since they are on yield cells of a Gaussian integer multiplication table, they are not Gaussian primes.
+%%%%%
+%%%%%
+\end{document}

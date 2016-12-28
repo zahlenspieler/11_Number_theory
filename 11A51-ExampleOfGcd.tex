@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfGcd}
+\pmcreated{2014-10-25 7:09:30}
+\pmmodified{2014-10-25 7:09:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of gcd}
+\pmrecord{19}{37307}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+\pmrelated{Divisibility}
+\pmrelated{GreatestCommonDivisor}
+\pmrelated{Congruences}
+\pmrelated{PolynomialCongruence}
+\pmrelated{GroupingMethodForFactorizingPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+If one calculates values of the polynomial
+     $$f(x) \;:=\; x^4\!+\!x^2\!+\!1$$
+on the successive positive integers $n$, one may observe an interesting thing when factoring the values:
+
+$f(1) \;=\; 3$\\
+$f(2) \;=\; 21 \;=\; 3\cdot 7$\\
+$f(3) \;=\; 91 \;=\; 7\cdot 13$\\
+$f(4) \;=\; 273 \;=\; 3\cdot 7\cdot 13$\\
+$f(5) \;=\; 651 \;=\; 3\cdot 7\cdot31$\\
+$f(6) \;=\; 1333 \;=\; 31\cdot 43$\\
+$f(7) \;=\; 2451 \;=\; 3\cdot 19\cdot 43$\\
+$f(8) \;=\; 4161 \;=\; 3\cdot 19\cdot 73$\\
+$f(9) \;=\; 6643 \;=\; 7\cdot 13\cdot 73$\\
+$f(10) \;=\; 10101 \;=\; 3\cdot 7\cdot 13\cdot 37$\\
+$f(11) \;=\; 14763 \;=\; 3\cdot 7\cdot 19\cdot 37$\\
+$\mbox{ . . . }$
+
+It seems as if two consecutive values always have at least one common odd prime factor, i.e. they have the greatest common divisor $> 2$.
+
+It is indeed true.\, The reason of this fact is not particularly 
+deep.\, It is easily understood if we can 
+\PMlinkname{factorize this polynomial}{GroupingMethodForFactoringPolynomials}:
+    $$f(x) \;=\; (x^2\!-\!x\!+\!1)(x^2\!+\!x\!+\!1)$$
+Then
+\begin{align}
+ f(n) \;=\; (n^2\!-\!n\!+\!1)(n^2\!+\!n\!+\!1),
+\end{align}
+and the next value is
+\begin{align}
+f(n\!+\!1) \;=\; [(n\!+\!1)^2\!-\!(n\!+\!1)\!+\!1][(n\!+\!1)^2\!+\!(n\!+\!1)\!+\!1] \;=\; (n^2\!+\!3n\!+\!3)(n^2\!+\!n\!+\!1).
+\end{align}
+Thus $f(n)$ and $f(n\!+\!1)$ have as their common factor at least the number $n^2\!+\!n\!+\!1$, which is $\geqq 3$.
+
+Moreover, we may show that the greatest common divisor of $f(n)$ and $f(n\!+\!1)$ is $n^2\!+\!n\!+\!1$ except in the case\, $n \equiv 3 \pmod{7}$\, where it is $7(n^2\!+\!n\!+\!1)$.
+
+Let $d$ be a common divisor, greater than 1, of the first factors $n^2\!-\!n\!+\!1$ and $n^2\!+\!3n\!+\!3$ of (1) and (2).\, It's clear that $d$ is \PMlinkname{odd}{OddNumber}.\, Then $d$ must divide the difference\, $(n^2\!+\!3n\!+\!3)-(n^2\!-\!n\!+\!1) = 2(2n\!+\!1)$\, and the sum\, $(n^2\!+\!3n\!+\!3)+3(n^2\!-\!n\!+\!1)= 4n^2\!+\!6$\, and hence also the difference\, $2(2n\!+\!1)+(4n^2\!+\!6)-(2n\!+\!1)^2 = 7$.\, It means that\, $d = 7$.\, Thus the only possible common prime factor of $n^2\!-\!n\!+\!1$ and $n^2\!+\!3n\!+\!3$ is 7.\, If we denote\, $n = 7k+r$\, where\, $r\in\{0,\,1,\,\ldots,\,6\}$,\, we see that
+$$n^2\!-\!n\!+\!1 \;=\; 49k^2\!+\!14kr\!-\!7k\!+\!r^2\!-\!r\!+\!1 \;\;\overline{\equiv}\;\; r^2\!-\!r\!+\!1 \pmod{7},$$
+$$n^2\!+\!3n\!+\!3 \;=\; 49k^2\!+\!14kr\!+\!21k\!+\!r^2\!+\!3r\!+\!3 \;\;\overline{\equiv}\;\; r^2\!+\!3r\!+\!3 \pmod{7}.$$
+It's easy to check that the right hand \PMlinkescapetext{sides} of these polynomial congruences are divisible by 7 only if\, $r = 3$,\, i.e. if\, $n \equiv 3 \pmod{7}$.\\
+
+\textbf{Note.}\, The sequence formed by the successive values 
+of\, $\gcd(f(n), f(n\!+\!1))$ is number A111002 in Sloane's 
+register (\PMlinkexternal{http://www.research.att.com/~njas/sequences/}{https://oeis.org/A111002}).
+%%%%%
+%%%%%
+\end{document}

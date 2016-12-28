@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealDecompositionInDedekindDomain}
+\pmcreated{2015-05-05 19:05:43}
+\pmmodified{2015-05-05 19:05:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ideal decomposition in Dedekind domain}
+\pmrecord{13}{37219}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R37}
+\pmclassification{msc}{11R04}
+\pmrelated{ProductOfFinitelyGeneratedIdeals}
+\pmrelated{PolynomialCongruence}
+\pmrelated{CancellationIdeal}
+\pmrelated{DivisibilityInRings}
+\pmrelated{IdealsOfADiscreteValuationRingArePowersOfItsMaximalIdeal}
+\pmrelated{DivisorTheory}
+\pmrelated{GreatestCommonDivisorOfSeveralIntegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+According to the entry ``\PMlinkname{fractional ideal}{FractionalIdeal}'', we can \PMlinkescapetext{state} that in a Dedekind domain $R$, each non-zero integral ideal $\mathfrak{a}$ may be written as a product of finitely many prime ideals $\mathfrak{p}_i$ of $R$, 
+ $$\mathfrak{a} = \mathfrak{p}_1\mathfrak{p}_2...\mathfrak{p}_k.$$
+The product decomposition is unique up to the order of the factors.\, This is stated and proved, with more general assumptions, in the entry ``\PMlinkname{prime ideal factorisation is unique}{PrimeIdealFactorizationIsUnique}''.\\
+
+\textbf{Corollary.}\, If $\alpha_1$, $\alpha_2$, ..., $\alpha_m$ are elements of a Dedekind domain $R$ and $n$ is a positive integer, then one has
+\begin{align}
+  (\alpha_1,\,\alpha_2,\,...,\,\alpha_m)^n = 
+  (\alpha_1^n,\,\alpha_2^n,\,...,\,\alpha_m^n)
+\end{align}
+for the ideals of $R$.\\
+
+This corollary may be proven by induction on the number $m$ of the \PMlinkescapetext{generators (not on the exponent} $n$).
+%%%%%
+%%%%%
+\end{document}

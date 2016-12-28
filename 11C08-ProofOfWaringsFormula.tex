@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWaringsFormula}
+\pmcreated{2013-03-22 15:34:29}
+\pmmodified{2013-03-22 15:34:29}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Waring's formula}
+\pmrecord{7}{37482}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11C08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The following is a proof of the Waring's formula using formal
+power series. We will work with formal power series in
+indeterminate $z$ with coefficients in the ring
+$\mathbb{Q}[x_1,\ldots,x_n]$. We also need the following equality
+\[
+  -\log(1-z) = \sum_{j=1}^\infty \frac{z^j}{j}.
+\]
+
+Taking log on both sides of
+\[
+  1 - \sigma_1z+\ldots + (-1)^n \sigma_n z^n =
+  \prod_{m=1}^n(1-x_mz),
+\]
+we get
+\begin{equation}
+  \log(1 - \sigma_1z+\ldots + (-1)^n \sigma_n z^n) =
+  \sum_{m=1}^n \log(1-x_mz), \label{eq}
+\end{equation}
+Waring's formula will follow by comparing the coefficients on both
+sides.
+
+
+The right hand side of the above equation equals
+\[
+  \sum_{m=1}^n \sum_{j=1}^\infty \frac{x_m^j}{j}z^j
+\]
+or
+\[
+  \sum_{j=1}^\infty \left( \sum_{m=1}^n  x_m^j \right)
+  \frac{z^j}{j}
+\]
+The  coefficient of $z^k$ is equal to $S_k/k$.
+
+On the other hand, the left hand side of \eqref{eq} can be written
+as
+\[
+ \sum_{j=1}^\infty
+ \frac{1}{j}(\sigma_1z-\sigma_2z^2+\ldots+(-1)^{n-1} \sigma_n
+ z^n)^j.
+\]
+For each $j$, the coefficient of $z^k$ in
+\[(\sigma_1z-\sigma_2z^2+\ldots+(-1)^{n-1} \sigma_n
+ z^n)^j
+\]
+is
+\[\sum_{i_1,\ldots,i_n} (-1)^{i_2+i_4+i_6+\ldots} \frac{j!}{i_1!\cdots
+i_n!}\sigma_1^{i_1} \cdots \sigma_n^{i_n},
+\]
+where the summation is extended over all $n$-tuple
+$(i_1,\ldots,i_n)$ whose entries are non-negative integers, such
+that
+\begin{gather*}
+i_1+i_2+\ldots+i_n = j \\
+i_1+2i_2+\ldots +ni_n = k.
+\end{gather*}
+So the coefficient of $z^k$ in the left hand side of \eqref{eq} is
+\[
+\sum_{j=1}^\infty \sum_{i_1,\ldots,i_n} (-1)^{i_2+i_4+i_6+\ldots}
+\frac{(j-1)!}{i_1!\cdots i_n!}\sigma_1^{i_1} \cdots
+\sigma_n^{i_n},
+\]
+or
+\[\sum (-1)^{i_2+i_4+i_6+\ldots} \frac{(i_1+\ldots+i_n-1)!}{i_1!\cdots
+i_n!}\sigma_1^{i_1} \cdots \sigma_n^{i_n}.
+\]
+The last summation is over all $(i_1,\ldots, i_n)\in \mathbb{Z}^n$
+with non-negative entries such that $i_1+2i_2+\ldots+ni_n=k$.
+%%%%%
+%%%%%
+\end{document}

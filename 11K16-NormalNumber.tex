@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalNumber}
+\pmcreated{2013-03-22 13:33:15}
+\pmmodified{2013-03-22 13:33:15}
+\pmowner{AxelBoldt}{56}
+\pmmodifier{AxelBoldt}{56}
+\pmtitle{normal number}
+\pmrecord{17}{34159}
+\pmprivacy{1}
+\pmauthor{AxelBoldt}{56}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11K16}
+\pmsynonym{normal}{NormalNumber}
+\pmsynonym{absolutely normal}{NormalNumber}
+\pmsynonym{simply normal}{NormalNumber}
+\pmsynonym{normal in base b}{NormalNumber}
+%\pmkeywords{random digits}
+%\pmkeywords{digit sequence}
+\pmdefines{absolutely normal number}
+\pmdefines{simply normal number}
+\pmdefines{Champernowne's number}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{term}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{even}
+
+\subsection{Simply Normal Numbers}
+Let $x\in\mathbb{R}$ and $2\le b\in\mathbb{N}$.  Consider the sequence of digits of $x$ in base $b$:
+$$x=x_1x_2\cdots x_m.x_{m+1}\cdots x_n \cdots,\mbox{ where }x_i\in\{0,\ldots,b-1\}.$$
+We are interested in finding out how often a given digit $s$ shows up in the above representation of $x$. If we denote by $N(s,n)$ the number of occurrences of $s$ in the first $n$ digits of $x$, we can calculate the ratio
+$$\frac{N(s,n)}{n}.$$
+As $n$ approaches $\infty$, this ratio may converge to a limit, called the \emph{frequency} of $s$ in $x$.  The frequency of $s$ in $x$ is necessarily between 0 and 1.  If all base-$b$ digits are equally frequent, i.e. if the frequency of each digit $s$, $0\le s<b$, is $1/b$, then we say that $x$ is \emph{simply normal} in base $b$.  For example, in base $5$, the number
+$$0.1234012340123401234....$$
+is simply normal.
+
+Some real numbers have two digital representations in base $b$. Given such a number $x$, there is no ambiguity as to whether $x$ is simply normal or not, for it is easy to see that 0 occurs in $x$ with frequency 1 in one representation, and $b-1$ occurs in $x$ with frequency 1 in the other.  Hence such a number $x$ is not simply normal.
+
+It is still an open question if the transcendental constants $\pi$, $e$, and $\ln(2)$ are simply normal, although empirical evidence tends to support this claim.  Actually, we don't even know which digits occur infinitely often in the base 10 expansion of $\pi$ (there must be at least two). The following table shows the number of occurrences of each digit as they appear in the decimal representation of $\pi$, evaluated to just over 10,000 places.
+
+\begin{center}
+\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+digit & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+$\#$ of occurrences & 968 & 1027 & 1023 & 978 & 1016 & 1051 & 1027 & 976 & 956 & 1023 \\
+\hline
+ratio (in $\%$) & 9.6 & 10.2 & 10.2 & 9.7 & 10.1 & 10.5 & 10.2 & 9.7 & 9.5 & 10.2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Normal Numbers}
+More generally, if we allow $s$ to be any finite string of digits (in base $b$), then we have the notion of a \emph{normal number}.  However, we have to be careful as to how to count the number of occurrences of $s$ and what is the meaning of the frequency of $s$ in $x$.  Let $x$ be a real number as stated in the previous section.  Let $s$ be a string of digits of length $k$, in base $b$:
+$$s=s_1s_2\cdots s_k,\mbox{ where }0\le s_j< b.$$
+Define $N(s,n)$ to be the number of times the string $s$ occurs among the first $n$ digits of $x$ in base $b$.  For example, if $x=21.131112...$ in base $4$, then $N(1,8)=5$, $N(11,8)=3$, and $N(111,8)=1$.
+
+We say that $x$ is \emph{normal in base $b$} if
+\[
+\lim_{n\to\infty} \frac{N(s,n)}{n} = \frac{1}{b^k}
+\]
+for every finite string $s$ of length $k$.  We see that if $k=1$, we are back to the definition of a simply normal number, so every number normal in base $b$ is in particular simply normal in base $b$.
+
+Intuitively, $x$ is normal in base $b$ if all digits and digit-blocks in the base-$b$ digit sequence of $x$ occur just as often as would be expected if the sequence had been produced completely randomly.
+
+Normal numbers are not as easy to find as simply normal numbers.  One example is Champernowne's number
+\[
+0.1234567891011121314...
+\]
+(obtained by concatentating the decimal expansions of all natural numbers), which is normal in base 10.
+
+Unlike simply normal numbers, normal numbers are necessarily irrational.  However, given an irrational number, it is extremely hard to prove or disprove whether it is normal.  
+
+\subsection{Absolutely Normal Number}
+We say that $x$ is \emph{absolutely normal} if it is normal in every base $b\ge 2$. (Some authors use the term ``normal'' instead of ``absolutely normal''.)
+
+Absolutely normal numbers were first defined by \'{E}mile Borel in 1909. Borel also proved that almost all real numbers are absolutely normal, in the sense that the numbers that are not absolutely normal form a set of Lebesgue measure zero.
+However, for any base $b$, it is easy to construct \PMlinkname{uncountably many}{Uncountable} numbers that are not normal in base $b$ (and therefore not absolutely normal).
+
+As abundant as they are, absolutely normal numbers are very difficult to find!  Even Champernowne's number is not absolutely normal.  The first absolutely normal number was constructed by Sierpinski in 1916, and a related construction led to a computable absolutely normal number in 2002. Maybe the most prominent absolutely normal number is Chaitin's constant $\Omega$, which is not computable. 
+
+Proving the normality of an irrational number is daunting already, proving that it is absolutely normal may even be out of reach. It has been conjectured that "natural" transcendental constants such $\pi$, $e$ and $\ln(2)$ are absolutely normal. It has also been conjectured that all irrational algebraic numbers are absolutely normal since no counterexamples are known. But this is a daring conjecture since not a single irrational algebraic number has ever been proven normal in any base.
+%%%%%
+%%%%%
+\end{document}

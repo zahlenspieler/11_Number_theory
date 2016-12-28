@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ElementaryProofOfOrders}
+\pmcreated{2013-03-22 15:56:52}
+\pmmodified{2013-03-22 15:56:52}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{elementary proof of orders}
+\pmrecord{8}{37959}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E57}
+\pmclassification{msc}{05E15}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+When possible, our proofs avoid matrices so that the proofs retain some value to infinite dimensional settings.  When we use $k$ we mean any field, and $GF(q)$ indicates the special case of a finite field of order $q$.  $V$ is always our vector space.
+
+\begin{remark}
+There are many alternative methods for computing orders of classical groups,
+for instance \PMlinkname{observing special subgroups}{TheoryFromOrdersOfClassicalGroups2} or from Lie theory and
+the study of Chevalley groups.  The method explored here is intended to be
+elementary linear algebra.
+\end{remark}
+
+The basic starting point in computing orders of classical groups is an application of elementary linear algebra rephrased in group theory terms.
+
+\begin{prop}
+$GL(V)$ acts regularly on the set of ordered bases of vector space $V$
+over a field $k$.
+\end{prop}
+\begin{proof}
+Given any two bases $B=\{b_i:i\in I\}$ and $C=\{c_i:i\in I\}$ of 
+a vector space $V$, define the map $f:V\rightarrow V$ by
+\begin{equation}\label{eq:1}
+\left(\sum_{i\in I} l_i b_i\right)f=\sum_{i\in I}l_i c_i.
+\end{equation}
+[Note the above sum has only finitely many non-zero $l_i\in k$.]
+It follows $f$ is an invertible linear transformation so $f\in GL(V)$.
+Furthermore, any linear transformation $g\in GL(V)$ with $(b_i)g=c_i$
+must satisfy (\ref{eq:1}) to be linear so indeed $g=f$.  Therefore
+$GL(V)$ acts regularly on ordered bases of $V$.
+\end{proof}
+
+In the world of group theory, a regular action is a typical substitute for knowing the order of a group.  In particular, any two groups, even infinite, have the same order if they have a regular action on the same set.  However, we are presently after specific order of finite groups so we return to the case of $V$ a finite dimension vector space over a finite field $k=GF(q)$.  We do however attempt to establish the orders through bijections with other sets and groups so that the results apply in more general contexts as well.
+
+
+\begin{thm}\label{thm:lin}
+\[
+\begin{array}{cc}
+|SL(d,q)| = q^{\binom{d}{2}} \prod_{i=2}^d (q^i-1), 
+  & |PSL(d,q)|=\frac{|SL(d,q)|}{(d,q-1)},\\
+|GL(d,q)|  =  q^{\binom{d}{2}} \prod_{i=1}^d (q^i-1), 
+  & |PGL(d,q)|=|SL(d,q)|,\\
+|\Gamma L(d,q)|  =  (q-1) q^{\binom{d}{2}} \prod_{i=1}^d (q^i-1),
+  & |P\Gamma L(d,q)|=\frac{|\Gamma L(d,q)|}{q-1}.
+\end{array}
+\]
+\end{thm}
+\begin{proof}
+When $V=GF(q)^d$, the number of ordered bases can be counted.  A basis
+is a set $B=\{b_1,\dots,b_d\}$ of linearly independent vectors.  So 
+$b_1$ may be chosen freely from $V-\{0\}$, providing $q^d-1$ possible choices.
+Next $b_2$ must be chosen independent form $b_1$ so $b_2$ can be freely 
+chosen from $V-\langle b_1\rangle$ leaving $q^d-q$ choices.  In a similar fashion $b_3$ has $q^d-q^2$ possiblities and so continuing by induction we
+find the total number of ordered bases to be:
+\[(q^d-1)(q^d-q)\cdots (q^d-q^{d-1}).\]
+Now we treat $q$ as the variable of a polynomial and factor this number into:
+\[q^{\binom{d}{2}} \prod_{i=1}^d (q^i-1).\]
+As $GL(V)$ acts regularly on ordered bases of $V$, this is the order of $GL(V)$.
+
+For the order of $SL(V)$ recall the $SL(V)$ is the kernel of the determinant
+homomorphism $\det:GL(V)\rightarrow k^\times$.  Furthermore, $\det$ is
+surjective as a diagonal matrix can be used to exhibit any determinant we seek.  We conclude 
+\[[GL(d,q):SL(d,q)]=|GF(q)^\times|=q-1\]
+so that $|SL(d,q)|=|GL(d,q)|/(q-1)$.
+
+In a similar process, $PGL(V)=GL(V)/Z(GL(V))$ so if we derive the order of the
+center of $GL(V)$ we derive the order of $PGL(V)$.  The central transforms
+are scalar (they must preserve every eigenspace of every linear transform) so 
+$Z(GL(V))$ is isomorphic to $k^\times$.  Thus the order of $PGL(V)$ is the same as the order of $SL(V)$.
+
+For $\Gamma L(V)$ and $P\Gamma L(V)$ simply notice $\Gamma L(V)=GL(V)\rtimes k^\times$ so when $k=GF(q)$ we get an additional $q-1$ term.
+
+Finally, we consider $PSL(V)=SL(V)/(SL(V)\intersect Z(GL(V)))$.  The order of $SL(V)\intersect Z(GL(V))$ must be computed.  So we require scalar transforms with determinant 1.  As the such, if $r$ is the eigen value of the scalar transform we need $r^d=1$ in $GF(q)$.  From finite field theory we know $GF(q)^\times \cong \mathbb{Z}_{q-1}$.  As this group is cyclic we know that every element $r\in GF(q)^\times$ satisfying $r^d=1$ also satisfies $r^{q-1}=1$ and $r$ lies in the unique subgroup of order $(d,q-1)$ of $GF(q)^\times$.
+Thus $|SL(V)\intersect Z(GL(V))|=(d,q-1)$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

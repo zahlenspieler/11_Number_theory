@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PellsEquation}
+\pmcreated{2013-03-22 16:28:07}
+\pmmodified{2013-03-22 16:28:07}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Pell's equation}
+\pmrecord{8}{38629}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section*{Pell's equation}
+\emph{Pell's equation} refers generally to the equation
+\[x^2-Ay^2=1\]
+where $A$ is a positive integer not a square. This equation is now known to have an infinite number of solutions in positive integers $x$ and $y$.
+
+Fermat, in 1657, proposed to English mathematicians that they find a method of solving this equation in general, for integral $x$ and $y$. Fermat apparently already possessed a method, for doing so. According to \cite{bib:edwards}, the Greeks and Indians had detailed knowledge of this problem; the solutions
+\begin{align*}
+577^2 - 2\cdot 408^2=1\\
+1151^2-92\cdot 120^2=1
+\end{align*}
+were both known by Indian mathematicians B.C. In fact, the solution given above for $A=92$ is the smallest solution for this $A$, and was given by Brahmagupta (b. 598 A.D.) together with a method for its derivation. The cyclic method, described in detail below, was given by Bh\'{a}scara Ach\'{a}rya (b. 1114 A.D.).
+
+The English, notably Wallis, developed a different but provably almost identical method, presumably in response to Fermat's challenge. Both methods produce, in time, all integral solutions to the equation.
+
+As can be seen from the entry on Pell's equation and simple continued fractions, solutions of Pell's equation can also be found by developing the continued fraction for $\sqrt{A}$.
+
+Here is a table of the minimum value of $y$ for some values of $A$; a complete table for $A<150$ can be found in \cite{bib:edwards}:\newline
+\begin{center}
+\begin{tabular}{|r|r|}
+\hline
+A&y\\
+\hline
+2&2\\
+22&42\\
+37&12\\
+61&226153980\\
+109&15140424455100\\
+136&3\\
+143&1\\
+\hline
+\end{tabular}
+\end{center}
+
+According to \cite{bib:edwards}, Pell had nothing to do with the development of this problem or its solution; its attribution to Pell is due to an error on the part of Euler.
+
+\section*{The Cyclic Method}
+The cyclic method relies on successive approximation and on a hope that the approximation process will converge. Of course, it can be proven that the process does converge and that it results eventually in all solutions of the Pell equation. The method relies on the well-known identity
+\begin{equation}\label{eqn:id}(x^2-Ay^2)(w^2-Az^2)=(xw+Ayz)^2-A(xz+yw)^2\end{equation}
+Given an equation
+\[c^2-Ad^2=k\]
+this identity can be used to produce another solution.
+
+So, for example, let's take the case $A=22$. Start by choosing $x$ so that $x^2-22\cdot 1^2$ is as small in absolute value as possible, i.e. $x=5$ and $5^2-22\cdot 1^2=3$. If we multiply that by the equation $r^2-22\cdot 1^2=s$, we get, using (\ref{eqn:id}),
+\[(5r+22)^2-22\cdot (r+5)^2=3s\]
+Remember that we are trying to find values so that the right-hand \PMlinkescapetext{side} is $1$. However, simply choosing a value of $r$ that makes $s$ as small as possible will not achieve any progress, since we will then have $r=5$ and $s=3$, so we will get a right-hand side of $9$. Instead, we will choose $r$ so that $r+5$ is divisible by $3$; then $5r+22$ must be divisible by $3$ as well, so $s$ is divisible by $3$ and we may divide the resulting equation through by $9$. To make $r+5\equiv 0\pmod 3$ we need $r\equiv 1\pmod 3$. We want to make $s$ as small as possible in magnitude subject to this condition, so we choose $r=4$ and then $s=-6$. The resulting equation, after dividing through by $9$, is
+\[14^2-22\cdot 3^2=-2\]
+We are not done, so let's repeat the operation. Multiply again by $r^2-22\cdot 1^2=s$ to get
+\[(14r+66)^2-22\cdot(3r+14)^2=-2s\]
+and we must choose $r$ such that $3r+14\equiv 0\pmod 2$ (i.e. $r\equiv 0\pmod 2$) to make $s$ as small as possible in magnitude. This happens for $r=4, s=-6$; substituting and dividing through by $2^2=4$ we get
+\[61^2-22\cdot 13^2=3\]
+Repeating, we get
+\[(61r+22\cdot 13)^2-22\cdot(13r+61)^2=3s\]
+so $13r+61\equiv 0\pmod 3$, or $r\equiv 3\pmod 3$. Minimizing $s$ leads to $r=5$, $s=3$, whence, dividing the result by $3^2=9$ we get
+\[197^2-22\cdot 42^2=1\]
+and we are done. The sequence of equations was
+\begin{gather*}
+1^2-22\cdot 0^2= 1\\
+5^2-22\cdot 1^2=3 \\
+14^2-22\cdot 3^2=-2\\
+61^2-22\cdot 13^2=3\\
+197^2-22\cdot 42^2=1
+\end{gather*}
+
+The fact that the sequence of differences is palindromic is not an accident; it can be proven that this is always the case.
+
+\section*{The English Method}
+The English method uses the same basic algorithm as the cyclic method, except that when choosing $r$, it \PMlinkescapetext{chooses} the largest $r$ such that $r^2<A$, which \PMlinkescapetext{forces} $s<0$. Thus if two successive equations in this method are
+\begin{gather*}
+x^2-Ay^2=k\\
+X^2-AY^2=K
+\end{gather*}
+it is clear that
+\[K=\frac{r^2-A}{k}\]
+and thus that $K$ and $k$ have different signs. So in the English method, the values of $k$ alternate in sign.
+
+For the case $A=22$, above, the sequence of equations is
+\begin{gather*}
+1^2-22\cdot 0^2= 1\\
+4^2-22\cdot 1^2=-6\\
+5^2-22\cdot 1^2=3 \\
+14^2-22\cdot 3^2=-2\\
+61^2-22\cdot 13^2=3\\
+136^2-22\cdot 29^2=-6\\
+197^2-22\cdot 42^2=1
+\end{gather*}
+
+In general, the English method results in the same solutions as the cyclic method, but it gets there more slowly - in the English method, an additional entry is inserted in between any two entries that have the same sign.
+
+\begin{thebibliography}{10}
+\bibitem{bib:edwards}
+H.M.~Edwards, \emph{Fermat's Last Theorem: A Genetic Introduction to Algebraic Number Theory}, Springer-Verlag 1977.
+\bibitem{bib:xx}
+B.L.~van der Waerden, "Pell's Equation in Greek and Hindu Mathematics", Russ. Math Surveys, 1976, 31 (5), 210-225.
+\bibitem{bib:yy}
+C.O.~Selenius, "Rationale of the chakravala process of Jayadeva and Bhaskara II", Historia Mathematica, 2 (1975), 167-184. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

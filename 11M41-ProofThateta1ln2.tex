@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThateta1ln2}
+\pmcreated{2013-03-22 17:57:20}
+\pmmodified{2013-03-22 17:57:20}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that  $\eta (1) =\ln 2$}
+\pmrecord{6}{40455}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11M41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm} $\eta(1) = \ln 2$, where $\eta$ is the Dirichlet eta function.
+\end{thm}
+
+\textbf{Proof. } By definition,
+\[\eta(1) = \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} = -\sum_{n=1}^{\infty} \frac{(-1)^n}{n}.\]
+Applying Abel's Limit Theorem, 
+\[\eta(1)=-\lim_{r\to 1^-} \sum_{n=1}^{\infty}\frac{(-r)^n}{n} = \lim_{r\to 1^-}\ln(1+r) = \ln 2\]
+
+%%%%%
+%%%%%
+\end{document}

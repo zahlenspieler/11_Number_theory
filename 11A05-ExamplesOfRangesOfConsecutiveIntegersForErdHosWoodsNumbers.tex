@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfRangesOfConsecutiveIntegersForErdHosWoodsNumbers}
+\pmcreated{2013-03-22 17:38:16}
+\pmmodified{2013-03-22 17:38:16}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of ranges of consecutive integers for Erd\H{o}s-Woods numbers}
+\pmrecord{5}{40059}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The most famous example of 16 as an \PMlinkname{Erd\H{o}s-Woods number}{ErdHosWoodsNumber} is the range of 16 consecutive integers starting with 2184.
+
+Another $n$ for $k = 16$ is 2044224, which we obtained by multiplying 2184 by 936. The factorization is $2044224 = 2^6 \times 3^3 \times 7 \times 13^2$, while $2044224 + 16 = 2044240 = 2^4 \times 5 \times 11 \times 23 \times 101$. The table of factorizations
+
+\begin{tabular}{|r|l|}
+2044225 & $5^2 \times 81769$ \\
+2044226 & $2 \times 1022113$ \\
+2044227 & $3 \times 681409$ \\
+2044228 & $2^2 \times 511057$ \\
+2044229 & $11 \times 19 \times 9781$ \\
+2044230 & $2 \times 3 \times 5 \times 68141$ \\
+2044231 & $7^2 \times 41719$ \\
+2044232 & $2^3 \times 59 \times 61 \times 71$ \\
+2044233 & $3^2 \times 17 \times 31 \times 431$ \\
+2044234 & $2 \times 1009 \times 1013$ \\
+2044235 & $5 \times 107 \times 3821$ \\
+2044236 & $2^2 \times 3 \times 170353$ \\
+2044237 & $13 \times 67 \times 2347$ \\
+2044238 & $2 \times 7 \times 151 \times 967$ \\
+2044239 & $3 \times 29 \times 23497$ \\
+\end{tabular}
+
+shows that each of the numbers in this range shares at least one factor with one if not both of the numbers capping the range.
+
+Next we have a slightly longer example, this one for $k = 34$. The smallest matching $n$ is 47563752566, a squarefree number with a factorization of $2 \times 11 \times 17 \times 23 \times 41 \times 157 \times 859$. The number capping the end of the range is the decidedly non-squarefree 47563752600, with a factorization of $2^3 \times 3^2 \times 5^2 \times 7 \times 13 \times 17 \times 19 \times 29 \times 31$. While the size of these numbers forbids verification on your typical pocket calculator, these numbers are well within the reach of a Javascript implementation of trial division. Here we could be tempted to omit the even numbers, as they obviously share 2 as a prime factor with the range start and the range end, as well as multiples of 3 or 5 as they thus share factors with the range end. But, on the hope that it turns out to be at least a little bit instructive, the factorizations of all the numbers in our chosen range is given.
+
+\begin{tabular}{|r|l|}
+47563752567 & $3 \times 3719 \times 4263131$ \\
+47563752568 & $2^3 \times 71 \times 199 \times 420799$ \\
+47563752569 & $31 \times 163 \times 9412973$ \\
+47563752570 & $2 \times 3 \times 5 \times 1585458419$ \\
+47563752571 & $29 \times 12941 \times 126739$ \\
+47563752572 & $2^2 \times 7^2 \times 242672207$ \\
+47563752573 & $3^2 \times 4657 \times 1134821$ \\
+47563752574 & $2 \times 13 \times 823 \times 991 \times 2243$ \\
+47563752575 & $5^2 \times 31769 \times 59887$ \\
+47563752576 & $2^7 \times 3 \times 349 \times 354911$ \\
+47563752577 & $11 \times 397 \times 593 \times 18367$ \\
+47563752578 & $2 \times 173 \times 137467493$ \\
+47563752579 & $3 \times 7 \times 3257 \times 695407$ \\
+47563752580 & $2^2 \times 5 \times 83 \times 617 \times 46439$ \\
+47563752581 & $19 \times 2503355399$ \\
+47563752582 & $2 \times 3^4 \times 53 \times 59 \times 93893$ \\
+47563752583 & $17 \times 43 \times 5171 \times 12583$ \\
+47563752584 & $2^3 \times 149 \times 39902477$ \\
+47563752585 & $3 \times 5 \times 67 \times 47327117$ \\
+47563752586 & $2 \times 7 \times 3397410899$ \\
+47563752587 & $13^2 \times 281442323$ \\
+47563752588 & $2^2 \times 3 \times 11 \times 4513 \times 79843$ \\
+47563752589 & $23 \times 61 \times 151 \times 224513$ \\
+47563752590 & $2 \times 5 \times 4756375259$ \\
+47563752591 & $3^2 \times 5284861399$ \\
+47563752592 & $2^4 \times 47 \times 63249671$ \\
+47563752593 & $7 \times 6794821799$ \\
+47563752594 & $2 \times 3 \times 7927292099$ \\
+47563752595 & $5 \times 32503 \times 292673$ \\
+47563752596 & $2^2 \times 11890938149$ \\
+47563752597 & $3 \times 15854584199$ \\
+47563752598 & $2 \times 23781876299$ \\
+47563752599 & $11 \times 37 \times 127 \times 373 \times 2467$ \\
+\end{tabular} 
+%%%%%
+%%%%%
+\end{document}

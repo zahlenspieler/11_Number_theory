@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfGaussSumUpToASign}
+\pmcreated{2013-03-22 13:39:45}
+\pmmodified{2013-03-22 13:39:45}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{derivation of Gauss sum up to a sign}
+\pmrecord{8}{34319}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11L05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\leg}[1]{\left(\frac{#1}{p}\right)}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+The Gauss sum can be easily evaluated up to a sign by squaring the original series 
+\begin{align*}
+g_1^2(\chi) &= \sum_{s \in \Z/p\Z} \leg{s} e^{2 \pi i s/p} \sum_{t \in \Z/p\Z} \leg{t} e^{2 \pi i t/p}\\
+            &= \sum_{s,t \in \Z/p\Z} \leg{st} e^{2 \pi i(s+t)/p}\\
+\intertext{and summing over a new variable $n=s^{-1} t\pmod p$}
+            &= \sum_{s,n \in \Z/p\Z} \leg{n} e^{2 \pi i(s+n s)}\\
+            &= \sum_{n \in \Z/p\Z} \leg{n} \sum_{s \in \Z/p\Z} e^{2 \pi i s(n+1)}\\
+            &= \sum_{n \in \Z/p\Z} \leg{n} (q[n\equiv -1 \pmod p]-1)\\
+            &= p\leg{-1}-\sum_{n \in \Z/p\Z} \leg{n}\\
+            &= p\leg{-1}=\begin{cases}\hphantom{+{}}p,&{\rm if\ }p\equiv 1 \pmod 4 ,\\-p,&{\rm if\ }p\equiv 3 \pmod 4.\end{cases}
+\end{align*}
+% The horrible {\rm if\ } construct is needed to avoid \text or \mbox which 
+% makes LaTeX2HTML to choke
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:davenport_multnumtheory}
+Harold Davenport.
+\newblock {\em Multiplicative Number Theory}.
+\newblock Markham Pub.\ Co., 1967.
+\newblock \PMlinkexternal{Zbl 0159.06303}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0159.06303}.
+
+\end{thebibliography}
+
+%@BOOK{cite:davenport_multnumtheory,
+% author    = {Harold Davenport},
+% title     = "Multiplicative Number Theory",
+% editor    = {William J. Leveque},
+% publisher = {Markham Pub.\ Co.},
+% year      = 1967,
+% notes     = {\PMlinkexternal{Zbl 0159.06303}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0159.06303}}
+%}
+%%%%%
+%%%%%
+\end{document}

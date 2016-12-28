@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExplicitGeneratorsOfAQuotientPolynomialRingAssociatedToAGivenPolynomial}
+\pmcreated{2013-03-22 19:10:01}
+\pmmodified{2013-03-22 19:10:01}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{explicit generators of a quotient polynomial ring associated to a given polynomial}
+\pmrecord{6}{42073}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{13P05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $k$ be a field and consider ring of polynomials $k[X]$. If $F(X)\in k[X]$ and $W(X)\in k[X]$, then we will write $\overline{W(X)}$ to denote element in $k[X]/(F(X))$ represented by $W(X)$.
+
+\textbf{Lemma.} Assume, that $a_1,\ldots, a_n\in k$ are different elements and $F(X)=(X-a_1)\cdots (X-a_n)$. Let $W_i(X)\in k[X]$ be given by $W_i(X)=(X-a_1)\cdots (X-a_{i-1})\cdot (X-a_{i+i})\cdots (X-a_n)$. Then there exist $\lambda_1,\ldots,\lambda_n\in k$ such that $F(X)$ divides polynomial
+$$U(X)=\bigg(\sum_{i=1}^{n} \lambda_i\cdot W_i(X)\bigg)-1.$$
+\textit{Proof.} Note, that $W_i(a_i)\neq 0$ for any $i$. Thus we may define $\lambda_i=\big(W_i(a_i)\big)^{-1}$. Then for any $i$ we have $\lambda_i\cdot W_i(a_i)=1$, therefore
+$$V(X)=\sum_{i=1}^{n} \lambda_i\cdot W_i(X)$$
+is such that $V(a_i)=1$ for any $i$. In particular $U(a_i)=V(a_i)-1=0$ and thus $(X-a_i)$ divides $U(X)$ for any $i$. This completes the proof. $\square$
+
+\textbf{Corollary.} Under the same assumptions as in lemma, we have that ideal $\bigg(\overline{W_1(X)},\ldots,\overline{W_n(X)}\bigg)$ in $k[X]/(F(X))$ is equal to $k[X]/(F(X))$.
+
+\textit{Proof.} Indeed, all we need to show is that we can generate $\overline{1}$. Lemma implies, that there is $V(X)\in k[X]$ such that 
+$$\bigg(\sum_{i=1}^{n} \lambda_i\cdot W_i(X)\bigg)-1=F(X)\cdot V(X).$$
+Now, after aplying quotient homomorphism to both sides we have
+$$\sum_{i=1}^{n} \lambda_i\cdot \overline{W_i(X)}=\overline{1}.$$
+This completes the proof. $\square$
+
+\textbf{Remark.} This gives us an explicit formula for generators of $k[X]/(F(X))$. In particular the dimension over $k$ of this ring is at most $\mathrm{deg}F(X)$. It can be shown that actualy it is equal, even if $F(X)$ is arbitrary.
+%%%%%
+%%%%%
+\end{document}

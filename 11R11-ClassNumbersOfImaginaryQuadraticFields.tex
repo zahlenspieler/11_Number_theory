@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassNumbersOfImaginaryQuadraticFields}
+\pmcreated{2013-03-22 18:31:20}
+\pmmodified{2013-03-22 18:31:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{class numbers of imaginary quadratic fields}
+\pmrecord{10}{41215}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R11}
+\pmclassification{msc}{11R04}
+\pmrelated{LemmaForImaginaryQuadraticFields}
+\pmrelated{QuadraticImaginaryEuclideanNumberFields}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We tabulate the \PMlinkname{ideal class numbers}{ClassNumber} $h$ of first imaginary quadratic number fields $\mathbb{Q}(\sqrt{d})$.\, The table \PMlinkescapetext{contains} all the nine cases where the class number is 1.\\
+
+\begin{center}
+\begin{tabular}{||c|c||c|c||c|c||c|c||}
+\hline\hline
+$d$ & $h$ & $d$ & $h$ & $d$ & $h$ & $d$ & $h$\\
+\hline\hline
+$-1$ & $1!$ & $-47$ & $5$ & $-97$ & $4$& $-146$ & $16$\\
+\hline
+$-2$ & $1!$ & $-51$ & $2$ & $-101$ & $14$& $-149$ & $14$\\
+\hline
+$-3$ & $1!$ & $-53$ & $6$ & $-102$ & $4$& $-151$ & $7$\\
+\hline
+$-5$ & $2$ & $-55$ & $4$ & $-103$ & $5$& $-154$ & $8$\\
+\hline
+$-6$ & $2$ & $-57$ & $4$ & $-105$ & $8$& $-155$ & $4$\\
+\hline
+$-7$ & $1!$ & $-58$ & $2$ & $-106$ & $6$& $-157$ & $6$\\
+\hline
+$-10$ & $2$ & $-59$ & $3$ & $-107$ & $3$& $-158$ & $8$\\
+\hline
+$-11$ & $1!$ & $-61$ & $6$ & $-109$ & $6$& $-159$ & $10$\\
+\hline
+$-13$ & $2$ & $-62$ & $8$ & $-110$ & $12$& $-161$ & $16$\\
+\hline
+$-14$ & $4$ & $-65$ & $8$ & $-111$ & $8$& $-163$ & $1!$\\
+\hline
+$-15$ & $2$ & $-66$ & $8$ & $-113$ & $8$& $-165$ & $8$\\
+\hline
+$-17$ & $4$ & $-67$ & $1!$ & $-114$ & $8$& $-166$ & $10$\\
+\hline
+$-19$ & $1!$ & $-69$ & $8$ & $-115$ & $2$& $-167$ & $11$\\
+\hline
+$-21$ & $4$ & $-70$ & $4$ & $-118$ & $6$& $-170$ & $12$\\
+\hline
+$-22$ & $2$ & $-71$ & $7$ & $-119$ & $10$& $-173$ & $14$\\
+\hline
+$-23$ & $3$ & $-73$ & $4$ & $-122$ & $10$& $-174$ & $12$\\
+\hline
+$-26$ & $6$ & $-74$ & $10$ & $-123$ & $2$& $-177$ & $4$\\
+\hline
+$-29$ & $6$ & $-77$ & $8$ & $-127$ & $5$& $-178$ & $8$\\
+\hline
+$-30$ & $4$ & $-78$ & $4$ & $-129$ & $12$& $-179$ & $5$\\
+\hline
+$-31$ & $3$ & $-79$ & $5$ & $-130$ & $4$& $-181$ & $10$\\
+\hline
+$-33$ & $4$ & $-82$ & $4$ & $-131$ & $5$& $-182$ & $12$\\
+\hline
+$-34$ & $4$ & $-83$ & $3$ & $-133$ & $4$& $-183$ & $8$\\
+\hline
+$-35$ & $2$ & $-85$ & $4$ & $-134$ & $14$& $-185$ & $16$\\
+\hline
+$-37$ & $2$ & $-86$ & $10$ & $-137$ & $8$& $-186$ & $12$\\
+\hline
+$-38$ & $6$ & $-87$ & $6$ & $-138$ & $8$& $-187$ & $2$\\
+\hline
+$-39$ & $4$ & $-89$ & $12$ & $-139$ & $3$& $-190$ & $4$\\
+\hline
+$-41$ & $8$ & $-91$ & $2$ & $-141$ & $8$& $-191$ & $13$\\
+\hline
+$-42$ & $4$ & $-93$ & $4$ & $-142$ & $4$& $-193$ & $4$\\
+\hline
+$-43$ & $1!$ & $-94$ & $8$ & $-143$ & $10$& $-194$ & $20$\\
+\hline
+$-46$ & $4$ & $-95$ & $8$ & $-145$ & $8$& $-195$ & $4$\\
+\hline
+\end{tabular}
+\end{center}
+
+The class numbers of $\mathbb{Q}(\sqrt{d})$ for the squarefree $d$'s form Sloane's \PMlinkexternal{sequence A000924}{http://www.research.att.com/~njas/sequences/?q=A000924&sort=0&fmt=0&language=english&go=Search}.
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfClosedForm}
+\pmcreated{2013-03-22 15:03:07}
+\pmmodified{2013-03-22 15:03:07}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{example of closed form}
+\pmrecord{4}{36769}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B99}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Consider the recurrence given by
+$x_0 = 7$ and $x_n = 2 x_{n-1}$. Then it can be proved by induction that
+$x_n = 2^n\cdot 7$.
+
+The expression $x_n = 2^n \cdot 7$ is a closed form expression the  recurrence given, since it depends exclusively on $n$ , whereas the recurrence depends on $n$ and $x_{n-1}$ (the previous value).
+\bigskip
+
+Now consider Fibonacci's recurrence:
+\[
+f_n = f_{n-1}+ f_{n-2},\qquad f_0 = 1.
+\]
+
+It is not a closed formula, since if we wanted to compute $f_{10}$ we would need to know $f_9$, $f_8$ (and for knowing them, the previous terms too). However, such recurrence has a closed formula, known as Binet formula:
+\[
+f_n = \frac{\left(\frac{1+\sqrt5}{2}\right)^n -\left(\frac{1-\sqrt5}{2}\right)^n }{\sqrt5}.
+\]
+Binet formula is closed, since if we wanted to compute $f_n$ we only need to substitute $n$ on the previous formula, and no additional information is required.
+%%%%%
+%%%%%
+\end{document}

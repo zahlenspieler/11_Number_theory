@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuesOfDedekindZetaFunctionsOfRealQuadraticNumberFieldsAtNegativeIntegers}
+\pmcreated{2013-03-22 16:01:27}
+\pmmodified{2013-03-22 16:01:27}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{values of Dedekind zeta functions of real quadratic number fields at negative integers}
+\pmrecord{5}{38064}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R42}
+\pmclassification{msc}{11M06}
+\pmrelated{FactorizationOfTheDedekindZetaFunctionOfAnAbelianNumberField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Let $K$ be a real quadratic number field of discriminant $D_K$ and let $\zeta(s,K)$ be the Dedekind zeta function associated to $K$. By the Siegel-Klingen Theorem, if $n>0$ then $\zeta(-n,K)$ is a rational number. On the other hand, $K$ is obviously an abelian number field, thus the factorization of the Dedekind zeta function of an abelian number field tells us that:
+$$\zeta(s,K)=\zeta(s)L(s,\chi)$$
+where $\zeta(s)$ is the famous Riemann zeta function and $L(s,\chi)$ is the Dirichlet L-function associated to $\chi$, where $\chi$ is the unique Dirichlet character with conductor $D_K$ such that the group of characters of $K/\Rats$ is $\{ \chi_0, \chi \}$ and $\chi_0$ is the trivial character. In fact, the values of $\chi$ are simply given by $$\chi(a)=\left(\frac{D_K}{a}\right)$$ where the parentheses denote the Kronecker symbol.
+
+Furthermore, if $k$ is a positive integer then:
+\begin{enumerate}
+\item Putting the values of the Riemann zeta function in terms of Bernoulli numbers one gets: $$\zeta(1-k)=-\frac{B_k}{k}$$
+where $B_k$ is the $k$th Bernoulli number;
+
+\item The values of Dirichlet L-series at negative integers can be written in terms of generalized Bernoulli numbers as follows:
+$$L(1-k,\chi)= -\frac{B_{k,\chi}}{k}$$
+where $B_{k,\chi}$ is the $k$th generalized Bernoulli number associated to $\chi$.
+\end{enumerate}
+
+Therefore:
+$$\zeta(1-k,K)=\zeta(1-k)L(1-k,\chi)=\frac{B_k \cdot B_{k,\chi}}{k^2}.$$
+The interested reader can find tables of values at the \PMlinkexternal{author's personal website}{http://www.math.cornell.edu/~alozano/dedekind-values/index.html}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HowToUseATable}
+\pmcreated{2013-03-22 16:36:25}
+\pmmodified{2013-03-22 16:36:25}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{how to use a table}
+\pmrecord{5}{38803}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, how to use a table to multiply numbers will be explained and illustrated with examples.  The general rule is as follows:
+
+Suppose you want to multiply two numbers.  Find the first number
+in the very first column. Follow the row in which this number appears
+until you land in the column which is labelled with the second number on
+top. The number on which you land is your answer.
+
+Let us illustrate with an example.  To keep things simple, we will
+use a 5 by 5 multiplication table
+
+\begin{tabular}
+{|c|l|l|l|l|l|}
+$\times$ & 1 & 2 & 3 & 4 & 5 \\
+1 & 1 & 2 & 3 & 4 & 5 \\
+2 & 2 & 4 & 6 & 8 & 10 \\
+3 & 3 & 6 & 9 & 12 & 15 \\
+4 & 4 & 8 & 12 & 16 & 20 \\
+5 & 5 & 10 & 15 & 20 & 25 \\
+\end{tabular}
+
+Suppose we want to figure out $3 \times 4$.  We first find the
+row which starts with ``3''.  That row is highlighted below:
+
+\begin{tabular}
+{|c|l|l|l|l|l|}
+$\times$ & 1 & 2 & 3 & 4 & 5 \\
+1 & 1 & 2 & 3 & 4 & 5 \\
+2 & 2 & 4 & 6 & 8 & 10 \\
+{\bf 3} & {\bf 3} & {\bf 6} & {\bf 9} & {\bf 12} & {\bf 15} \\
+4 & 4 & 8 & 12 & 16 & 20 \\
+5 & 5 & 10 & 15 & 20 & 25 \\
+\end{tabular}
+
+Next we follow this row until we find the column which has ``4''
+on top.  This column is highlighted below:
+
+\begin{tabular}
+{|c|l|l|l|l|l|}
+$\times$ & 1 & 2 & 3 & {\bf 4} & 5 \\
+1 & 1 & 2 & 3 & {\bf 4} & 5 \\
+2 & 2 & 4 & 6 & {\bf 8} & 10 \\
+{\bf 3} & {\bf 3} & {\bf 6} & {\bf 9} & \underline{\bf 12} & {\bf 15} \\
+4 & 4 & 8 & 12 & {\bf 16} & 20 \\
+5 & 5 & 10 & 15 & {\bf 20} & 25 \\
+\end{tabular}
+
+Note that ``12'' appears where the highlighted row and the highlighted
+column cross.  (For convenience, it has been underlined.) Therefore, 
+we found that $3 \times 4 = 12$.
+%%%%%
+%%%%%
+\end{document}

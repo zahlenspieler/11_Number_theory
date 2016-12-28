@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfRamificationOfArchimedeanPlaces}
+\pmcreated{2013-03-22 15:07:29}
+\pmmodified{2013-03-22 15:07:29}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of ramification of archimedean places}
+\pmrecord{4}{36864}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11S15}
+\pmclassification{msc}{13B02}
+\pmclassification{msc}{12F99}
+\pmrelated{TotallyRealAndImaginaryFields}
+\pmrelated{ExamplesOfPrimeIdealDecompositionInNumberFields}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{exa}
+Let $K=\Rats(\sqrt{-d})$ be a quadratic imaginary number field. Then $K$ has only two embeddings which, in fact, are complex-conjugate embeddings:
+ $$\psi\colon K \to \Complex, \sqrt{-d} \to \sqrt{-d}$$
+$$\overline{\psi}\colon K \to \Complex, \sqrt{-d} \to - \sqrt{-d}$$
+The archimedean place $w=(\psi,\overline{\psi})$ is lying above the unique archimedean place of $\Rats$:
+$$\phi\colon \Rats \to \Reals$$
+and therefore, the place $v=\phi$ ramifies in $K$.
+\end{exa}
+
+\begin{exa}
+Let $K$ be a CM-field i.e. $K$ is a \PMlinkname{totally imaginary}{TotallyRealAndImaginaryFields} quadratic extension of a totally real field $K^+$. Then we claim that the extension $K/K^+$ is totally ramified at the archimedean (or infinite) places. Indeed, let $v$ be an archimedean place of $K^+$. By assumption, $K^+$ is a totally real field, thus all its places are real, and so, $v$ is real. Let $w$ be any archimedean place of $K$ lying above $v$ (i.e. extending $v$ to $K$). Since $K$ is totally imaginary, the place $w$ is a pair of complex embeddings, and therefore $v$ ramifies in $K/K^+$. Thus, all archimedean places of $K^+$ ramify in $K$ and $e(w|v)=2$ for all $w|v$. 
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

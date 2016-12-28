@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTriples1}
+\pmcreated{2013-03-22 17:44:34}
+\pmmodified{2013-03-22 17:44:34}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Pythagorean triples}
+\pmrecord{5}{40192}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Ints}{\mathbb{Z}}
+\DeclareMathOperator{\N}{N}
+\begin{document}
+\PMlinkescapeword{right}
+\PMlinkescapeword{side}
+Suppose that $a^2+b^2=1$ where $a,b\in\Rats$. $a^2+b^2=N_{\Rats(i)/\Rats}(a+bi)$ (here $\N$ is the norm), so $a^2+b^2=1$ if and only if $N_{\Rats(i)/\Rats}(a+bi)=1$. $\Rats(i)$ is cyclic over $\Rats$ with Galois group isomorphic to $\Ints/2\Ints$, so by Hilbert's Theorem 90, there is some element $s+ti\in\Rats(i)$ such that
+\[a+bi=\frac{s+ti}{\sigma(s+ti)}=\frac{s+ti}{s-ti}=\frac{s^2-t^2+2sti}{s^2+t^2}\]
+so that
+\[a=\frac{s^2-t^2}{s^2+t^2}, \qquad b=\frac{2st}{s^2+t^2}\]
+
+Now, given any integer right triangle $p,q,r$ with $p^2+q^2=r^2$, we have
+\[\left(\frac{p}{r}\right)^2+\left(\frac{q}{r}\right)^2=1\]
+where $p/r, q/r\in\Rats$, so for some $s,t\in\Rats$,
+\[\frac{p}{r}=\frac{s^2-t^2}{s^2+t^2}, \qquad \frac{q}{r}=\frac{2st}{s^2+t^2}\]
+Clearing fractions on the right hand side of these equations by multiplying numerator and denominator by the square of the least common multiple of the denominators of $s, t$, we get
+\[\frac{p}{r}=\frac{m^2-n^2}{m^2+n^2}, \qquad \frac{q}{r}=\frac{2mn}{m^2+n^2}\]
+for $m,n\in\Ints$. Thus for some $d\in\Ints$,
+\[p=d(m^2-n^2), \qquad q=2mnd, \qquad r=d(m^2+n^2)\]
+
+%%%%%
+%%%%%
+\end{document}

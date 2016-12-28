@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTranscendentalRootTheorem}
+\pmcreated{2013-03-22 14:11:41}
+\pmmodified{2013-03-22 14:11:41}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{proof of transcendental root theorem}
+\pmrecord{6}{35625}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmrelated{AlgebraicElement}
+\pmrelated{AlgebraicClosure}
+\pmrelated{Algebraic}
+\pmrelated{AlgebraicExtension}
+\pmrelated{AFiniteExtensionOfFieldsIsAnAlgebraicExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{prop}
+Let $F\subset K$ be a field extension with $K$ an algebraically closed field. Let $x\in K$ be transcendental over $F$. Then for any natural number $n\geq 1$, the element $x^{1/n}\in K$ is also transcendental over $F$. 
+\end{prop}
+\begin{proof}
+Suppose $x$ is transcendental over a field $F$, and assume for a contradiction that $x^{1/n}$ is algebraic over $F$. Thus, there is a polynomial $P(y)\in F[y]$ such that $P(x^{1/n})=0$ (note that the polynomial $y^n-x$ is {\it not} a polynomial with coefficients in $F$, so $P(y)$ might be more involved). Then the field $H=F(x^{1/n})\subseteq K$ is a finite algebraic extension of $F$, and every element of $H$ is algebraic over $K$. However $x\in H$, so $x$ is algebraic over $F$ which is a contradiction.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

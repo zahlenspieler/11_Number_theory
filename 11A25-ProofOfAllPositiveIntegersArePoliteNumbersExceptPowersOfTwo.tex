@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAllPositiveIntegersArePoliteNumbersExceptPowersOfTwo}
+\pmcreated{2013-03-22 18:42:47}
+\pmmodified{2013-03-22 18:42:47}
+\pmowner{n847530}{22696}
+\pmmodifier{n847530}{22696}
+\pmtitle{proof of all positive integers are polite numbers except powers of two}
+\pmrecord{8}{41479}
+\pmprivacy{1}
+\pmauthor{n847530}{22696}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem.} All positive integers are polite numbers (that is, can be expressed as the sum of consecutive nonnegative integers in at least one way), with the exception of the powers of two.
+
+Proof. Let k be a positive integer.
+
+Let $k = 2^h$ for $h > 0$. Let's suppose that $k$ is a polite number. We can write
+$$k = \sum_{i=a}^b i$$
+with $b > a$ and $a > -1$.
+
+Then,
+$$k = 2^h = \sum_{i=a}^b i = \sum_{j=0}^{b-a} (j+a) = \sum_{j=0}^{b-a} j + \sum_{j=0}^{b-a} a = \frac{(b-a)(b-a+1)}{2} + (b-a+1)a $$
+Multiplying both sides by two,
+$$ 2^{h+1} = (b-a)(b-a+1) + 2a(b-a+1) = (b-a+1)(b-a-2a)$$
+
+If $b-a$ is even, then $b-a+1$ is odd and then $2^{h+1}$ would have an odd factor, contradiction.
+If $b-a$ is odd, then $b-a-2a$ is odd and then $2^{h+1}$ would have an odd factor, contradiction.
+Then, $k$ is not a polite number.
+
+If $k = 1$, then $k$ is a polite number trivially.
+
+Now, suppose that $k > 1$ is not a power of two. Then we can factor $k$ as $ah$ with $h = 2b+1 > 1$ odd, $a > 0$. Then,
+$$\sum_{i=a-b}^{a+b} i = \sum_{j=-b}^{b} (j + a) = \sum_{j=-b}^b j + \sum_{j=-b}^{b} a = 0 + (2b+1)a = k$$
+
+If $a-b >= 0$ then $k$ is clearly a polite number.
+
+If $a-b < 0$ then
+$$k = \sum_{i=a-b}^{a+b} i = \sum_{i=a-b}^{0} i + \sum_{i=1}^{|a-b|} i + \sum_{|a-b|+1}^{a+b} i = \sum_{|a-b|+1}^{a+b} i$$
+so $k$ is a polite number.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheCompositumOfAGaloisExtensionAndAnotherExtensionIsGalois}
+\pmcreated{2013-03-22 18:41:58}
+\pmmodified{2013-03-22 18:41:58}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that the compositum of a Galois extension and another extension is Galois}
+\pmrecord{6}{41461}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R32}
+\pmclassification{msc}{12F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Gal}{Gal}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+\begin{document}
+\begin{proof}
+The diagram of the situation of the theorem is:
+\[\xymatrix @R1pc@C1pc{
+ & & & \ar@{-}[llld]\ar@{-}[rdd]EF \\
+\ar@{-}[rdd]E \\
+ & & &    & \ar@{-}[llld]F \\ 
+ & \ar@{-}[d]E\cap F \\
+ & K
+}
+\]
+To see that $EF/F$ is Galois, note that since $E/K$ is Galois, $E$ is a splitting field of a set of polynomials over $K$; clearly $EF$ is a splitting field of the same set of polynomials over $F$. Also, if $f\in K[x]$ is separable over $K$, then also $f$ is separable over $F$. Thus $EF$ is normal and separable over $F$, so is Galois. $E$ is obviously Galois over $E\cap F$ since $E\cap F\supset K$.
+
+Let $r$ be the restriction map
+\[ r: H = \Gal(EF/F) \to \Gal(E/K) : \sigma \mapsto \sigma |_E\]
+$r$ is clearly a group homomorphism, and since $E$ is normal over $K$, $r$ is well-defined.
+
+Claim $r$ is injective. For suppose $\sigma\in\Gal(EF/F)$ and $\sigma|_E$ is the identity. Then $\sigma$ is fixed on $F$ (since it is in $\Gal(EF/F)$ and on $E$ (since its restriction to $E$ is the identity), so is fixed on $EF$ and thus is itself the identity.
+
+Now, the image of $r$ is a subgroup of $\Gal(E/K)$ with fixed field $L$, and thus the image of $r$ is $\Gal(E/L)$. Claim $E\cap F=L$. $\subset$ is obvious: any element  $x\in E\cap F$ is fixed by $\sigma|_E$ for each $\sigma\in H$ since $\sigma$ fixes $F$. Thus $E\cap F\subset L$. To see the reverse inclusion, choose $x\in L$; then $x$ is fixed by each $r(\sigma)$ for $\sigma\in H$. But $x\in L\subset E$, so that (as an element of $E$), $x$ is fixed by each $\sigma\in H$. Thus $x\in F$ so that $x\in E\cap F$.
+
+Thus $L = E\cap F$, and $r$ is then an isomorphism $\Gal(EF/F)\cong \Gal(E/E\cap F)$.
+\end{proof}
+
+\begin{thebibliography}{10}
+\bibitem{bib:df}
+Morandi,~P., \emph{Field and Galois Theory}, Springer, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

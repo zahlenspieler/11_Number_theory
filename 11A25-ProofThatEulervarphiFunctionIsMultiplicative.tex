@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEulervarphiFunctionIsMultiplicative}
+\pmcreated{2013-03-22 15:03:40}
+\pmmodified{2013-03-22 15:03:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that Euler $\varphi$ function is multiplicative}
+\pmrecord{12}{36781}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+\pmrelated{EulerPhiFunction}
+\pmrelated{MultiplicativeFunction}
+\pmrelated{EulerPhifunction}
+
+\usepackage{amsmath}
+\begin{document}
+\PMlinkescapeword{words}
+
+Suppose that $t=mn$ where $m,n$ are coprime.  The \PMlinkname{Chinese remainder theorem}{ChineseRemainderTheorem} states that $\gcd(a,t)=1$ if and only if $\gcd(a,m)=1$ and $\gcd(a,n)=1$. 
+
+In other words, there is a bijective correspondence between these two sets:
+
+\begin{itemize}
+\item $\{a : a\equiv 1\pmod{t}\}$
+\item $\{a : a\equiv1\pmod{m}\text{ and } a\equiv1\pmod{ n} \}$
+\end{itemize}
+
+Now the number of positive integers not greater than $t$ and coprime with $t$ is precisely $\varphi(t)$, but it is also the number of pairs $(u,v)$, where $u$ not greater than $m$ and coprime with $m$, and $v$ not greater than $n$ and coprime with $n$.  Thus, $\varphi(mn)=\varphi(m)\varphi(n)$.
+%%%%%
+%%%%%
+\end{document}

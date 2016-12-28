@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfPrimitiveRoots}
+\pmcreated{2013-03-22 18:43:48}
+\pmmodified{2013-03-22 18:43:48}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of properties of primitive roots}
+\pmrecord{4}{41498}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\UI}[1]{(\Ints/{#1}\Ints)^{\times}}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\begin{document}
+The material in the main article is conveniently recast in terms of the groups $\UI{m}$, the multiplicative group of units in $\Ints/m\Ints$. Note that the order of this group is exactly $\phi(m)$ where $\phi$ is the Euler phi function. Then saying that an integer $g$ is a primitive root of $m$ is equivalent to saying that the residue class of $g \pmod m$ generates $\UI{m}$.
+
+\begin{proof}(of Theorem):
+\newline
+The proof of the theorem is an immediate consequence of the structure of $\UI{m}$ as an abelian group; $\UI{m}$ is cyclic precisely for $m=2, 4, p^k$, or $2p^k$.
+\end{proof}
+
+\begin{proof}(of Proposition):
+
+\begin{enumerate}
+\item Restated, this says that if the residue class of $g\pmod m$ generates $\UI{m}$, then the set $\{1,g,g^2,\ldots,g^{\phi(m)}\}$ is a complete set of representatives for $\UI{m}$; this is obvious.
+
+\item Restated, this says that $g\pmod m$ generates $\UI{m}$ if and only if $g$ has exact order $m$, which is also obvious.
+
+\item If $g\pmod m$ generates $\UI{m}$, then $g$ has exact order $\phi(m)$ and thus $g^s=g^t\pmod m$ if and only if $g^{s-t}=1$ if and only if $\phi(m)\mid s-t$.
+
+\item Suppose $g$ generates $\UI{m}$. Then $(g^k)^r=1$ if and only if $g^{kr}=1$ if and only if $\phi(m)\mid kr$. Clearly we can choose $r<\phi(m)$ if and only if $\gcd(k,\phi(m))>1$.
+
+\item This follows immediately from (4).\qedhere
+\end{enumerate}
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

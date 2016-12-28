@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoefficientsOfBernoulliPolynomials}
+\pmcreated{2013-03-22 17:46:08}
+\pmmodified{2013-03-22 17:46:08}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{coefficients of Bernoulli polynomials}
+\pmrecord{4}{40224}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B68}
+\pmrelated{BernoulliPolynomialsAndNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The coefficient of $x^k$ in $b_r(x)$ for $k=1,2,\ldots,r$ is $\binom{r}{k}B_{r-k}$.
+
+The proof is by induction on $r$. For $r=1$, note that $b_1(x)=x-\frac{1}{2}$, so that $[x]b_1(x)=1=\binom{1}{1}B_0$.
+
+Writing $[x^k]f(x)$ for the coefficient of $x^k$ in a polynomial $f(x)$, note that for $k=1,2,\ldots,r$,
+\[[x^k]b_r(x)=\frac{1}{k}[x^{k-1}]b_r'(x)=\frac{r}{k}[x^{k-1}]b_{r-1}(x)\]
+since $b_r'(x)=rb_{r-1}(x)$. By induction,
+\[\frac{r}{k}[x^{k-1}]b_{r-1}(x)=\frac{r}{k}\binom{r-1}{k-1}B_{r-k}=\binom{r}{k}B_{r-k}\]
+
+Thus the Bernoulli polynomials can be written
+\[b_r(x) = \sum_{k=1}^r \binom{r}{k}B_{r-k}x^k + B_r\]
+%%%%%
+%%%%%
+\end{document}

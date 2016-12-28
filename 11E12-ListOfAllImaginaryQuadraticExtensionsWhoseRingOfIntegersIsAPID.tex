@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ListOfAllImaginaryQuadraticExtensionsWhoseRingOfIntegersIsAPID}
+\pmcreated{2013-03-22 16:56:42}
+\pmmodified{2013-03-22 16:56:42}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{list of all imaginary quadratic extensions whose ring of integers is a PID}
+\pmrecord{7}{39213}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E12}
+\pmclassification{msc}{11R29}
+\pmclassification{msc}{11E16}
+\pmrelated{EuclideanNumberField}
+\pmrelated{ImaginaryQuadraticField}
+\pmrelated{LemmaForImaginaryQuadraticFields}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+\renewcommand{\frak}[1]{\mathfrak{#1}}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\begin{document}
+Gauss conjectured that for any $\Delta<0$, $\Delta\equiv 0,1\pmod 4$, then $\mathcal{C}_{\Delta}=1$ precisely when
+\[
+\Delta = -3,-4,-7,-8,-11,-12,-16,-19,-27,-28,-43,-67,-163
+\]
+In fact, he believed that as $\Delta \rightarrow -\infty, \Delta\equiv 0,1\pmod 4$, so does the number of classes of (primitive positive integral binary quadratic) forms with \PMlinkid{discriminant}{IntegralBinaryQuadraticForms} $\Delta$.
+
+It is relatively easy to show that the only $\Delta\equiv 0\pmod 4$ with this property are the ones in this list; that proof is given in an addendum to this article.
+
+However, proving the remainder of Gauss' hypotheses, regarding the odd values in the list, proved significantly harder. In the first half of the $20^{\mathrm{th}}$ century, Siegel showed that there was at most one such value beyond what Gauss had found. Heegner, Stark, and Baker showed, about $30$ years later, that there are in fact no more (\cite{bib:Heegner},\cite{bib:Stark},\cite{bib:Baker}). 
+
+Thus given an imaginary quadratic extension $K$, it follows that the ring of integers of $K$, denoted $\Alg_K$, is a PID if and only if the class group of $K$ is trivial if and only if there is only one class of primitive quadratic forms of the appropriate \PMlinkid{discriminant}{DiscriminantOfANumberField} $d_K$ if and only if $d_K$ is in the set above. So in particular, there are a finite number of imaginary quadratic extensions of $\Rats$ whose ring of integers is a PID (and hence a UFD).
+
+The values of $\Delta$ above that correspond to $\Alg_K$ for some $K$ are:
+\begin{center}
+\begin{tabular}{c|c|c}
+$\Delta=d_K$ & $K$ & $\Alg_K$\\
+	\hline
+$-3$& $\Rats(\sqrt{-3})$ & $\Ints\left[\frac{1+\sqrt{-3}}{2}\right]$\\
+$-4$ & $\Rats(\sqrt{-1})$ & $\Ints[\sqrt{-1}]$\\
+$-7$ & $\Rats(\sqrt{-7})$ & $\Ints\left[\frac{1+\sqrt{-7}}{2}\right]$\\
+$-8$ & $\Rats(\sqrt{-2})$ & $\Ints[\sqrt{-2}]$\\
+$-11$ & $\Rats(\sqrt{-11})$ & $\Ints\left[\frac{1+\sqrt{-11}}{2}\right]$\\
+$-19$ & $\Rats(\sqrt{-19})$ & $\Ints\left[\frac{1+\sqrt{-19}}{2}\right]$\\
+$-43$ & $\Rats(\sqrt{-43})$ & $\Ints\left[\frac{1+\sqrt{-43}}{2}\right]$\\
+$-67$ & $\Rats(\sqrt{-67})$ & $\Ints\left[\frac{1+\sqrt{-67}}{2}\right]$\\
+$-163$ & $\Rats(\sqrt{-163})$ & $\Ints\left[\frac{1+\sqrt{-163}}{2}\right]$
+\end{tabular}
+\end{center}
+
+We therefore get
+\begin{thm} (Stark-Heegner)
+\newline
+If $d < 0$, then the class number of $\Rats(\sqrt{d})$ is equal to $1$ if and only if
+\[d = -1, -2, -3, -7, -11, -19, -43, -67, \text{ or }-163\]
+(where $d=-1,-2$ correspond to $\Delta=-4,-8$ and otherwise $d=\Delta$).
+\end{thm}
+
+How about the other four values $\Delta=-12,-16,-27,-28$? Each of these corresponds to a non-maximal \PMlinkid{order}{OrderInAnAlgebra} in a quadratic extension (i.e. a proper subring of the ring of algebraic integers). Specifically, we have
+\begin{align*}
+\Delta=-12\quad&\leftrightarrow\quad \Ints\left[2\frac{1+\sqrt{-3}}{2}\right]=\Ints[\sqrt{-3}]\subsetneq \Alg_K\text{ for }K=\Rats(\sqrt{-3})\\
+\Delta=-16\quad&\leftrightarrow\quad \Ints[2\sqrt{-1}]\subsetneq \Alg_K\text{ for }K=\Rats(\sqrt{-1})\\
+\Delta=-27\quad&\leftrightarrow\quad \Ints\left[3\frac{1+\sqrt{-3}}{2}\right]\subsetneq \Alg_K\text{ for }K=\Rats(\sqrt{-3})\\
+\Delta=-28\quad&\leftrightarrow\quad \Ints\left[2\frac{1+\sqrt{-7}}{2}\right]=\Ints[\sqrt{-7}]\subsetneq \Alg_K\text{ for }K=\Rats(\sqrt{-7})
+\end{align*}
+Note that this does \emph{not} mean that these rings are PIDs, since the invertible ideals in an order that is not the entire ring of integers do not include all ideals.
+\begin{thebibliography}{10}
+\bibitem{bib:cox}
+Cox,~D.A. \emph{Primes of the Form $x^2 + ny^2$: Fermat, Class Field Theory, and Complex Multiplication}, Wiley 1997.
+\bibitem{bib:Heegner}
+Heegner,~K., \emph{Diophantische Analysis und Modulfunktionen}, Math. Zeit., 56 (1952), pp. 227-253. 
+\bibitem{bib:Stark}
+Stark,~H.M., \emph{A complete determination of the complex quadratic fields with class number one}, Mich. Math. J., 14 (1967), pp. 1-27.
+\bibitem{bib:Baker}
+Baker,~A., \emph{Linear forms in the logarithms of algebraic numbers}, Mathematika, 13 (1966), pp. 204-216. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

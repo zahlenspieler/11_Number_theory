@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfRecurrenceForSylvestersSequence}
+\pmcreated{2013-03-22 15:48:27}
+\pmmodified{2013-03-22 15:48:27}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of recurrence for Sylvester's sequence}
+\pmrecord{4}{37771}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A55}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let us begin with the product:
+
+\[a_n = 1 + \prod_{i = 0}^{n - 1} a_i\]
+
+Adding $1$ to $n$ and manipulating the result:
+\begin{eqnarray*}
+a_{n+1} &=& 1 + \prod_{i = 0}^n a_i \\
+&=& 1 + a_n \prod_{i = 0}^{n - 1} a_i \\
+&=& 1 + a_n (a_n - 1) = 1 + (a_n)^2 - a_n \\
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

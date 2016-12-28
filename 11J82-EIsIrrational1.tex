@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EIsIrrational1}
+\pmcreated{2013-03-22 17:02:32}
+\pmmodified{2013-03-22 17:02:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{e is irrational}
+\pmrecord{8}{39330}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J82}
+\pmclassification{msc}{11J72}
+\pmrelated{LeibnizEstimateForAlternatingSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We have the series
+\[
+e^{-1} = \sum_{k=0}^\infty {(-1)^k \over k!}
+\]
+Note that this is an alternating series and that the magnitudes of the
+terms decrease.  Hence, for every integer $n > 0$, we have the bound
+\[
+0 <
+\left| \sum_{k=0}^{n} {(-1)^k \over k!} - e^{-1} \right| <
+{1 \over (n+1)!},
+\]
+by the \PMlinkname{Leibniz' estimate for alternating 
+series}{LeibnizEstimateForAlternatingSeries}.\, Assume 
+that $e = n/m$, where $m$ and $n$ are integers and $n > 0$.\, 
+Then we would have
+\[
+0 <
+\left| \sum_{k=0}^{n} {(-1)^k \over k!} - 
+{m \over n} \right| <
+{1 \over (n+1)!} .
+\]
+Multiplying both sides by $n!$, this would imply
+\[
+0 <
+\left| \sum_{k=0}^{n} {(-1)^k n! \over k!} - 
+m (n-1)! \right| <
+{1 \over n+1} ,
+\]
+which is a contradiction because every term in the sum is an integer,
+but there are no integers between $0$ and $1/(n+1)$.
+%%%%%
+%%%%%
+\end{document}

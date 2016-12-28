@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequencesB2n1AndB2n11AreDivisibleByB1}
+\pmcreated{2013-03-22 16:14:19}
+\pmmodified{2013-03-22 16:14:19}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{sequences $b^{2n}-1$ and $b^{2n-1}+1$ are divisible by $b+1$}
+\pmrecord{6}{38340}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider the alternating geometric finite series
+\begin{align}
+S_{m+1}(\mu)=\sum_{i=0}^m(-1)^{i+\mu}b^i,
+\end{align} 
+where $\mu=1,2$ and $b\geq 2$ an integer. Multiplying (1) by $-b$ and subtracting from it
+\begin{align*}
+(b+1)S_{m+1}(\mu)=\sum_{i=0}^m(-1)^{i+\mu}b^i-\sum_{i=0}^m(-1)^{i+1+\mu}b^{i+1}
+\end{align*}
+and by elemental manipulations, we obtain
+\begin{align}
+S_{m+1}(\mu)=\frac{(-1)^\mu[1-(-1)^{m+1}b^{m+1}]}{b+1}=
+\sum_{i=0}^m(-1)^{i+\mu}b^i.
+\end{align}
+Let $\mu=1$, $m=2n-1$. Then
+\begin{align}
+\frac{b^{2n}-1}{b+1}=-\sum_{i=0}^{2n-1}(-1)^ib^i.
+\end{align}
+Likewise, for $\mu=2$, $m=2n-2$
+\begin{align}
+\frac{b^{2n-1}+1}{b+1}=\sum_{i=0}^{2n-2}(-1)^ib^i,
+\end{align}
+as desired.
+\paragraph{Palindromic numbers of even length}
+As an application of above sequences, let us consider an even palindromic number (EPN) of arbitrary length $2n$ which can be expressed in any base $b$ as
+\begin{align}
+(EPN)_n=\sum_{k=0}^{n-1}b_k(b^{2n-1-k}+b^k)=
+\sum_{k=0}^{n-1}\frac{b_k}{b^k}[(b^{2n-1}+1)+(b^{2k}-1)],
+\end{align}
+where $0\leq b_k\leq b-1$.It is clear, from (3) and (4), that $(EPN)_n$ is divisible by $b+1$. Indeed this one can be given by
+\begin{align}
+(EPN)_n=(b+1)\sum_{k=0}^{n-1}\sum_{j=0}^{2(n-1-k)}b_k(-1)^jb^{k+j}.
+\end{align} 
+
+
+%%%%%
+%%%%%
+\end{document}

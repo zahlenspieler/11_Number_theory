@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{sqrtn2IsIrrationalForNge3proofUsingFermatsLastTheorem}
+\pmcreated{2013-03-22 13:38:32}
+\pmmodified{2013-03-22 13:38:32}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{$\sqrt[n]{2}$ is irrational for $n\ge 3$ (proof using Fermat's last theorem)}
+\pmrecord{13}{34292}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J72}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{states}
+
+\begin{thm} If $n\ge 3$, then $\sqrt[n]{2}$ is irrational.
+\end{thm}
+
+The below proof can be seen as an example of a pathological proof. 
+It gives no information to ``why" the result holds, or 
+how non-trivial the result is. 
+Yet, assuming Wiles' proof does not use the above theorem anywhere, 
+it proves the statement. Otherwise, the below proof would be an
+example of a circular argument. 
+
+\begin{proof}
+Suppose $\sqrt[n]{2}=a/b$ for some positive integers $a,b$. It follows that
+$2=a^n/b^n$, or
+\begin{eqnarray}
+\label{fermat}
+b^n + b^n &=& a^n.
+\end{eqnarray}
+We can now apply a recent result of Andrew Wiles \cite{wiles},
+which states that there are no non-zero integers $a$, $b$ satisfying equation \eqref{fermat}.
+Thus $\sqrt[n]{2}$ is irrational. 
+\end{proof}
+ 
+The above proof is given in \cite{abobs}, where it is attributed to W.H. Schultz.
+ 
+\begin{thebibliography}{99}
+\bibitem{wiles} A. Wiles, \emph{Modular elliptic curves and Fermat's last theorem},
+Annals of Mathematics, Volume 141, No. 3 May, 1995, 443-551. 
+\bibitem{abobs} W.H. Schultz, \emph{An observation},
+American Mathematical Monthly, Vol. 110, Nr. 5, May 2003.
+(submitted by R. Ehrenborg).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

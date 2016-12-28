@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculatorAndCASSupportForVariousPositionalBases}
+\pmcreated{2013-03-22 16:54:57}
+\pmmodified{2013-03-22 16:54:57}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{calculator and CAS support for various positional bases}
+\pmrecord{4}{39177}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-01}
+\pmclassification{msc}{11A63}
+\pmrelated{Calculator}
+\pmrelated{AlgebraicComputation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A typical basic calculator may do its computations in binary, but is usually only capable of displaying the results in decimal. Many (but not all) scientific calculators are capable of accepting input and showing output in binary, octal, decimal and hexadecimal, usually accessed with shifted keys (e.g., Shift-+ for binary, Shift-$-$ for octal, Shift-$\times$ for decimal, Shift-$\div$ is one possible layout, such as on the Sharp EL-305V), less commonly by a mode change. A value displayed in one may be taken to another, subject to the following pretty-much-standard caveats:
+
+a) Only integers are allowed in binary, octal and hexadecimal. For example, taking $\pi$ to binary will change it to just plain 11. The calculator will usually ignore the fractional part, simply discarding it, though a few might round up if the fractional part is more than 0.5 or some arbitrary limit (the Windows Calculator 5.1 for Windows XP will change 3.9 to 3 in hexadecimal, but 3.999999999999999999999999999999 becomes 4 in hexadecimal).
+
+b) Scientific notation is understandably unavailable in binary, but it's not available in octal or hexadecimal either. Therefore, the number must be less than $b^{k - 1} - 1$, where $k$ is the number of digits in the display (ignoring the two digits the exponent for scientic notation), usually 10 in most scientific calculators. This means the highest numbers that may be displayed in binary, octal and hexadecimal are usually 511, 134217727 and 68719476735, respectively. The Windows Calculator allows one to choose between byte, word, double word and quadruple word for display limit.
+
+c) Negative numbers from decimal are converted to two's complement. So, for example, taking $-1$ to hexadecimal with quadruple word size turns it to FFFFFFFFFFFFFFFF, which back to decimal is the Mersenne number 18446744073709551615.
+
+In the Mac OS X Calculator, binary, octal and hexadecimal have been removed from the Scientific mode and shifted to the new Programmer mode. The limitation to positive integers still applies. % MacFans correct me if I'm wrong on this
+
+Computer algebra systems like Maple and Mathematica have more built-in support for various positional bases. For example, Mathematica can handle anything from binary to base 36, providing not only entry of operands and display of output in those bases, but also string manipulation (e.g., reinterpreting the vigesimal digits of a number backwards). Floating point values can be displayed in bases other than decimal (e.g., $\pi \approx 3.243F6A888_{16}$). Negative numbers are displayed with negative signs, but two's complement is also available. If one needs support for other bases, it can be programmed, but of course one must make a decision about symbols.
+%%%%%
+%%%%%
+\end{document}

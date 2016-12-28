@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoryOfRationalAndIrrationalNumbers}
+\pmcreated{2013-03-22 15:14:10}
+\pmmodified{2013-03-22 15:14:10}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{theory of rational and irrational numbers}
+\pmrecord{15}{37007}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+%\pmkeywords{rational}
+%\pmkeywords{irrational}
+%\pmkeywords{algebraic}
+%\pmkeywords{transcendental}
+\pmrelated{TheoryOfAlgebraicNumbers}
+\pmrelated{AlgebraicNumberTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+The following entry is some sort of index of articles in PlanetMath about the basic theory of rational and irrational numbers, and it should be studied together with its complement: the \PMlinkname{theory of algebraic and transcendental numbers}{TheoryOfAlgebraicNumbers}. The reader should follow the links in each bullet-point to learn more about each topic. For a somewhat deeper approach to the subject, the reader should read about Algebraic Number Theory. In this entry we will concentrate on the properties of the complex numbers and the extension $\Complex/\Rats$.
+
+There is also a topic entry on rational numbers.
+
+\section{Basic Definitions}
+
+\begin{enumerate}
+\item A number is said to be rational if it can be expressed as a quotient of integers (with non-zero denominator). The set of all rational numbers forms a field, denoted by $\Rats$. 
+
+\item Such rational numbers, which are not integers, may be expressed as sum of partial fractions (the denominators being powers of distinct prime numbers). 
+
+\item The real numbers are the set of all possible decimal expansions (where we don't allow any expansion to end in all $9$'s). For the formal definition please see the entry \PMlinkname{real number}{RealNumber}. The real numbers form a field, usually denoted by $\Reals$.
+
+\item A real number is said to be \PMlinkname{irrational}{IrrationalNumber} if it is not rational, i.e. it cannot be expressed as a quotient of integers. \,The decimal expansion is non-periodic for any irrational, but periodic for any rational number.
+
+\item For example, $\sqrt{2}$ is irrational.
+
+\item Commensurable numbers have a rational ratio.\, See also \PMlinkid{sine at irrational multiples of full angle.}{12150}
+
+\end{enumerate}
+
+
+\section{Small Results}
+
+\begin{enumerate}
+
+\item The field $\Rats$ is, up to an isomorphism, subfield (prime subfield) in  every field where no sum of unities can be 0. \,One may also say that $\Rats$ is the least {\em field of numbers}.
+
+\item \PMlinkname{$\sqrt{2}$ is irrational}{SquareRootOf2IsIrrationalProof}. Similarly $\sqrt{d}$ is irrational as long as $d\in \Nats$ is not a perfect square.
+
+\item The sum of \PMlinkname{two square roots of positive squarefree integers}{UsingThePrimitiveElementOfBiquadraticField} is irrational.
+
+\item Rational and irrational: \,the sum, difference, \PMlinkname{product}{Ring} and quotient of two non-zero real numbers, from which one is rational and the other irrational, is irrational.
+
+\item There exists real functions, which are continuous at any irrational but discontinuous at any rational number (e.g. the Dirichlet's function).
+
+\item Every irrational (and also rational) number is a limit of sequence of rational numbers (see \PMlinkname{real numbers}{RealNumber}). \,An example: \,the sequence \,$(1+\frac{1}{1})^1,\, (1+\frac{1}{2})^2,\, (1+\frac{1}{3})^3,\, ...$\, converges to the number $e$.
+
+\item The number e is irrational (this is not as difficult to prove as it is to show that e is transcendental). In fact, if $r\in \Rats \setminus \{0\}$ then \PMlinkname{$e^r$ is also irrational}{ErIsIrrationalForRinmathbbQsetminus0}. There is an easier way to show that e is not a quadratic irrational.
+
+\item Every real transcendental number (such as $e$) is irrational, but not all irrational numbers are transcendental --- some (such as $\sqrt{2}$) are algebraic.
+
+\item \PMlinkname{``Most'' logarithms}{RationalBriggsianLogarithmsOfIntegers} of positive integers are irrational (and transcendental).
+
+\item If $a^n$ is irrational then $a$ is irrational (see \PMlinkname{here}{IfAnIsIrrationalThenAIsIrrational}).
+
+\item A surprising fact: an irrational to an irrational power can be rational.
+
+\item \PMlinkname{$\pi$ and $\pi^2$ are irrational}{PiAndPi2AreIrrational}.
+
+\end{enumerate}
+
+\section{BIG Results}
+
+The irrational numbers are, in general, ``easily'' understood. The BIG theorems appear in the theory of transcendental numbers. Still, there are some open problems: \,is Euler's constant irrational? is $\pi+e$ rational?
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncircleRadiusDeterminedByPythagoreanTriple}
+\pmcreated{2013-03-22 17:45:46}
+\pmmodified{2013-03-22 17:45:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{incircle radius determined by Pythagorean triple}
+\pmrecord{14}{40216}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+\pmsynonym{incircle radius of right triangle}{IncircleRadiusDeterminedByPythagoreanTriple}
+\pmrelated{Triangle}
+\pmrelated{PythagoreanTriple}
+\pmrelated{DifferenceOfSquares}
+\pmrelated{FirstPrimitivePythagoreanTriplets}
+\pmrelated{X4Y4z2HasNoSolutionsInPositiveIntegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If the sides of a right triangle are integers, then so is the radius of the incircle of this triangle.\\
+For example, the incircle radius of the Egyptian triangle is 1.\\
+
+{\em Proof.}\, The sides of such a right triangle may be expressed by the integer parametres $m,\,n$ with\,
+$m > n > 0$\, as 
+\begin{align}
+       a \;=\; 2mn, \quad b \;=\; m^2\!-\!n^2, \quad c \;=\; m^2\!+\!n^2;
+\end{align}
+the \PMlinkname{radius of the incircle}{Incircle} is
+\begin{align}
+       r \;=\; \frac{2A}{a\!+\!b\!+\!c},
+\end{align}
+where $A$ is the area of the triangle.\, Using (1) and (2) we obtain
+$$r \;=\; \frac{2\cdot2mn\cdot(m^2\!-\!n^2)/2}{2mn\!+\!(m^2\!-\!n^2)\!+\!(m^2\!+\!n^2)} \;=\; 
+      \frac{2mn(m\!+\!n)(m\!-\!n)}{2m(m\!+\!n)} \;=\; (m\!-\!n)n,$$
+which is a positive integer.\\
+
+
+\textbf{Remark.}\, The corresponding radius of the circumcircle need not to be integer, since by Thales' theorem, the radius is always half of the hypotenuse which may be odd (e.g. 5).
+
+
+
+%%%%%
+%%%%%
+\end{document}

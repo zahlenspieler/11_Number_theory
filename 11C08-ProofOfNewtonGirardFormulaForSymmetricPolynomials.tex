@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfNewtonGirardFormulaForSymmetricPolynomials}
+\pmcreated{2013-03-22 15:34:37}
+\pmmodified{2013-03-22 15:34:37}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Newton-Girard formula for symmetric polynomials}
+\pmrecord{4}{37485}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11C08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The following is a proof of Newton-Girard formula using formal
+power series. Let $z$ be an indeterminate and $f(z)$ be the
+polynomial
+\[1-E_1z+\ldots+(-1)^nE_nz^n.\]
+Take log and differentiate both sides of the equation
+\[ f(z) = \prod_{i=1}^n (1-x_iz).\]
+
+We obtain
+\begin{equation} f'(z)/f(z) = \sum_{i=1}^n
+\frac{-x_i}{1-x_iz}, \label{eq2}
+\end{equation}
+where $f'(z)$ is the  derivative of $f(z)$
+\[
+ f'(z) =  -E_1 + 2E_2z - \ldots +(-1)^{n}nE_n z^{n-1}.
+\]
+
+The right hand side of \eqref{eq2} is equal to
+\[
+  -\sum_{i=1}^n \sum_{k=0}^\infty x_i^{k+1} z^{k} =
+  -\sum_{k=0}^\infty S_{k+1} z^{k}.
+\]
+
+By equating coefficients of
+\[
+ f'(z) = -f(z)(S_1+S_2z+S_3z^2+\ldots)
+\]
+we get the Newton-Girard formula.
+%%%%%
+%%%%%
+\end{document}

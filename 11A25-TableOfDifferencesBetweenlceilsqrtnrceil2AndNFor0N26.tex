@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfDifferencesBetweenlceilsqrtnrceil2AndNFor0N26}
+\pmcreated{2013-03-22 18:10:20}
+\pmmodified{2013-03-22 18:10:20}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of differences between $\lceil \sqrt{n!} \rceil^2$ and $n!$ for $0 < n < 26$}
+\pmrecord{5}{40735}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+There are only three known solutions to Brocard's problem, and the near misses all seem to occur early on. Notice how, for example, 3! is just 3 shy of a square (compared to 1 shy of a square which is what Brocard's problem asks for). Still, the differences between a factorial and the next higher perfect square don't make for a consistently ascending order sequence. For a few values of $n$, (such as 4, 7, 10, 24, 26, 42, 117, 135) this difference is smaller than the previous difference. In general, however, the difference between a factorial and the next perfect square widens as $n$ gets larger.
+
+The following table gives the square root of $n!$ to six decimal places, and then the difference between the factorial and the next higher square (obtained by taking the ceiling of the square root of $n!$ and squaring that integer).
+
+\begin{tabular}{|r|r|r|}
+$n$ & $\sqrt{n!}$ & $\lceil \sqrt{n!} \rceil^2 - n!$ \\
+1 & 1.000000 & 0 \\ 
+2 & 1.414214 & 2 \\ 
+3 & 2.449489 & 3 \\ 
+4 & 4.898979 & 1 \\ 
+5 & 10.954451 & 1 \\ 
+6 & 26.832816 & 9 \\ 
+7 & 70.992957 & 1 \\ 
+8 & 200.798406 & 81 \\ 
+9 & 602.395219 & 729 \\ 
+10 & 1904.940944 & 225 \\ 
+11 & 6317.974359 & 324 \\ 
+12 & 21886.105181 & 39169 \\ 
+13 & 78911.474451 & 82944 \\ 
+14 & 295259.701280 & 176400 \\ 
+15 & 1143535.905864 & 215296 \\ 
+16 & 4574143.623456 & 3444736 \\ 
+17 & 18859677.306253 & 26167684 \\ 
+18 & 80014834.285449 & 114349225 \\ 
+19 & 348776576.634429 & 255004929 \\ 
+20 & 1559776268.628498 & 1158920361 \\ 
+21 & 7147792818.185865 & 11638526761 \\ 
+22 & 33526120082.371712 & 42128246889 \\ 
+23 & 160785623545.405884 & 191052974116 \\ 
+24 & 787685471322.938354 & 97216010329 \\ 
+25 & 3938427356614.691406 & 2430400258225 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

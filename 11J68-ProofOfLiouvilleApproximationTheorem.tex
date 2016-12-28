@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLiouvilleApproximationTheorem}
+\pmcreated{2013-03-22 13:19:22}
+\pmmodified{2013-03-22 13:19:22}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{proof of Liouville approximation theorem}
+\pmrecord{6}{33833}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J68}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\alpha$ satisfy the equation $f(\alpha)=a_n\alpha^n+a_{n-1}\alpha^{n-1}+\dots+a_0=0$ where the $a_i$ are integers. Choose $M$ such that $M>\max_{\alpha-1\leq x\leq\alpha+1}|f'(x)|$.
+
+Suppose $\frac{p}{q}$ lies in $(\alpha-1,\alpha+1)$ and $f\left(\frac{p}{q}\right)\neq 0$.
+
+$$\left|f\left(\frac{p}{q}\right)\right|=\frac{\left|a^np^n+a_{n-1}p^{n-1}q+\dots+a_0q^n\right|}{q^n}\geq\frac{1} {q^n}$$
+
+since the numerator is a non-zero integer.
+
+By the mean-value theorem 
+
+$$\frac{1}{q^n}\leq \left|f\left(\frac{p}{q}\right)-f(\alpha)\right|=\left|\left(\frac{p}{q}-\alpha\right)f'(x)\right|<M\left|\frac{p}{q}-\alpha\right|.$$
+%%%%%
+%%%%%
+\end{document}

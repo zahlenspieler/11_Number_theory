@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegerHarmonicMeans}
+\pmcreated{2013-11-06 17:18:49}
+\pmmodified{2013-11-06 17:18:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integer harmonic means}
+\pmrecord{20}{42182}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11Z05}
+\pmclassification{msc}{11D45}
+\pmclassification{msc}{11D09}
+\pmclassification{msc}{11A05}
+\pmrelated{HarmonicMean}
+\pmrelated{HarmonicMeanInTrapezoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $u$ and $v$ be positive integers.\, As is seen in the \PMlinkname{parent entry}{IntegerContraharmonicMeans}, there exist nontrivial cases 
+($u \neq v$) where their contraharmonic mean
+\begin{align}
+c \;:=\; \frac{u^2\!+\!v^2}{u\!+\!v} \;=\; u\!+\!v-\frac{2uv}{u\!+\!v}
+\end{align}
+is an integer.\,  Because the subtrahend of the last \PMlinkescapetext{form} is the harmonic mean of $u$ and $v$, the equation means that the contraharmonic mean $c$ and the harmonic mean 
+\begin{align}
+h \;:=\; \frac{2uv}{u\!+\!v}
+\end{align}
+of $u$ and $v$ are simultaneously integers.
+
+The integer contraharmonic mean of two distinct positive 
+integers ranges exactly the set of hypotenuses of Pythagorean 
+triples (see contraharmonic integers), but the integer harmonic 
+mean of two distinct positive integers the wider set\, 
+$\{3,\,4,\,5,\,6,\,\ldots\}$.\, As a matter of fact, one 
+cathetus of a right triangle is the harmonic mean of the same 
+positive integers $u$ and $v$ the contraharmonic mean of which 
+is the hypotenuse of the triangle (see 
+\PMlinkname{Pythagorean triangle}{PythagoreanTriangle}).\\
+
+The following table allows to compare the values of $u$, $v$, 
+$c$, $h$ when\, $1\,<\,u\,<\,v$.
+
+\begin{center}
+\begin{tabular}{||c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c||}
+\hline
+$u$ & $2$ & $3$ & $3$ & $4$ & $4$ & $5$ & $5$ & $6$
+& $6$ & $6$ & $6$ & $7$ & $7$ & $8$ & $8$ & $8$ & $9$ & $9$ & $...$\\
+\hline
+$v$ & $6$ & $6$ & $15$ & $12$ & $28$ & $20$ & $45$ & $12$ & $18$
+& $30$ & $66$ & $42$ & $91$ & $24$ & $56$ & $120$ & $18$ & $45$ & $...$\\
+\hline
+$c$ & $5$ & $5$ & $13$ & $10$ & $25$ & $17$ & $41$ & $10$ & $15$
+& $26$ & $61$ & $37$ & $85$ & $20$ & $50$& $113$ & $15$ & $39$ & $...$\\
+\hline
+$h$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $8$ & $9$
+& $10$ & $11$ & $12$ & $13$ & $12$ & $14$& $15$ & $12$ & $15$ & $...$\\
+\hline
+\end{tabular}
+\end{center}
+
+Some of the propositions concerning the integer contraharmonic means directly imply corresponding propositions of the integer harmonic means:\\
+
+\textbf{Proposition 1.}\, For any value of $u > 2$, there are at least two \textbf{greater} values  
+\begin{align}
+v_1 \;:=\; (u\!-\!1)u, \quad v_2 \;:=\; (2u\!-\!1)u
+\end{align}
+of $v$ such that $h$ in (2) is an integer.\\
+
+
+\textbf{Proposition 2.}\, For all\, $u > 1$, a necessary condition for $h \in \mathbb{Z}$\, is that
+                       $$\gcd(u,\,v) \;>\; 1.$$
+
+
+\textbf{Proposition 3.}\, If $u$ is an odd prime number, then the values (3) are the only possibilities for\, $v > u$\, enabling integer harmonic means with $u$.\\
+
+
+
+\textbf{Proposition 5.}\, When the harmonic mean of two different positive integers $u$ and $v$ is an integer, their sum is never squarefree.\\
+
+
+\textbf{Proposition 6.}\, For each integer $u > 0$ there are only a finite number of solutions\, $(u,\,v,\,h)$\, of the Diophantine equation (2).\\
+
+Proposition 6 follows also from the inequality
+$$\frac{1}{h} \;=\; \frac{1}{2}\!\left(\frac{1}{u}+\frac{1}{v}\right) \;>\; \frac{1}{2u}$$
+which yields the estimation
+\begin{align}
+0 \;<\; h \;<\; 2u
+\end{align}
+(cf. the above table).\, This is of course true for any harmonic means $h$ of positive numbers $u$ and $v$.\, The difference of $2u$ and $h$ is $\frac{2u^2}{u+v}$.
+
+The estimation (4) implies that the number of solutions is less than $2u$.\, From the proof of the corresponding proposition in the \PMlinkid{parent entry}{11241} one can see that the number in fact does not exceed $u\!-\!1$.
+
+
+%%%%%
+%%%%%
+\end{document}

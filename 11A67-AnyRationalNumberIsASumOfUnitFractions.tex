@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnyRationalNumberIsASumOfUnitFractions}
+\pmcreated{2013-03-22 12:48:31}
+\pmmodified{2013-03-22 12:48:31}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{any rational number is a sum of unit fractions}
+\pmrecord{7}{33127}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A67}
+\pmsynonym{Egyptian algorithm}{AnyRationalNumberIsASumOfUnitFractions}
+%\pmkeywords{greedy algorithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+\subsubsection*{Representation}
+Any rational number $\frac{a}{b}\in\Rats$ between 0 and 1 can be represented as a sum of different unit fractions.  This result was known to the Egyptians, whose way for representing rational numbers was as a sum of different unit fractions.
+
+The following greedy algorithm can represent any $0\le \frac{a}{b} <1$ as such a sum:
+\begin{enumerate}
+\item Let
+$$
+n = \left \lceil \frac{b}{a} \right \rceil
+$$
+be the smallest natural number for which $\frac{1}{n} \le \frac{a}{b}$.  If $a=0$, terminate.
+\item Output $\frac{1}{n}$ as the next term of the sum.
+\item Continue from step 1, setting
+$$\frac{a'}{b'} = \frac{a}{b}-\frac{1}{n}.$$
+\end{enumerate}
+
+\subsubsection*{Proof of correctness}
+\begin{proof}
+The algorithm can never output the same unit fraction twice.  Indeed, any $n$ selected in step 1 is at least 2, so $\frac{1}{n-1} < \frac{2}{n}$ -- so the same $n$ cannot be selected twice by the algorithm, as then $n-1$ could have been selected instead of $n$.
+
+It remains to prove that the algorithm terminates.  We do this by induction on $a$.
+\begin{description}
+\item[For $a=0$:] The algorithm terminates immediately.
+\item[For $a>0$:]
+The $n$ selected in step 1 satisfies
+$$b \le an < b+a.$$
+So
+$$
+\frac{a}{b}-\frac{1}{n} = \frac{an-b}{bn},
+$$
+and $0 \le an-b < a$ -- by the induction hypothesis, the algorithm terminates for $\frac{a}{b}-\frac{1}{n}$.
+\end{description}
+\end{proof}
+
+\subsubsection*{Problems}
+\begin{enumerate}
+\item
+The greedy algorithm always works, but it tends to produce unnecessarily large denominators.  For instance, $$\frac{47}{60}=\frac{1}{3}+\frac{1}{4}+\frac{1}{5},$$
+but the greedy algorithm selects $\frac{1}{2}$, leading to the representation
+$$
+\frac{47}{60}=\frac{1}{2}+\frac{1}{4}+\frac{1}{30}.
+$$
+\item
+The representation is \emph{never} unique.  For instance, for any $n$ we have the representations
+$$
+\frac{1}{n} = \frac{1}{n+1} + \frac{1}{n\cdot(n+1)}
+$$
+So given any one representation of $\frac{a}{b}$ as a sum of different unit fractions we can take the largest denominator appearing $n$ and replace it with two (larger) denominators.  Continuing the process indefinitely, we see infinitely many such representations, always.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

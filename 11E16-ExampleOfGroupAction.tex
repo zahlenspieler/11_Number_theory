@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfGroupAction}
+\pmcreated{2013-03-22 13:50:00}
+\pmmodified{2013-03-22 13:50:00}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{example of group action}
+\pmrecord{11}{34567}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E16}
+\pmclassification{msc}{16W22}
+\pmclassification{msc}{20M30}
+%\pmkeywords{GroupAction}
+%\pmkeywords{Substitution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newenvironment{vect}{\left(\begin{array}{l}}{\end{array}\right)}
+\begin{document}
+Let $a,b,c$ be integers and let $[a,b,c]$ denote the mapping
+\begin{equation*}
+[a,b,c]\colon \Z \times \Z \to \Z, (x,y) \mapsto ax^2 +bxy +cy^2.
+\end{equation*}
+Let $G$ be the group of $2\times 2$ matrices such that $\det{A}=\pm
+1\;\forall\;A\in G$. The substitution
+\begin{equation*}
+\begin{vect} x \\ y \end{vect} \mapsto A \begin{vect} x \\ y
+\end{vect}
+\end{equation*}
+leads to
+\begin{equation*}
+[a,b,c](a_{11}x +a_{12}y, a_{21}x+a_{22}y)
+=a^{'}x^2+b^{'}xy+c^{'}y^2,
+\end{equation*}
+where
+\begin{eqnarray}
+\label{eq:1}
+a^{'}&=& aa_{11}^2 +ba_{11}a_{21} +ca_{21}^2 \\
+\nonumber b^{'}&=& 2aa_{11}a_{12} +2ca_{21}a_{22}
++b(a_{11}a_{22} +a_{12}a_{21}) \\ \nonumber 
+c^{'}&=& aa_{12}^2 +ba_{12} a_{22} +ca_{22}^2
+\end{eqnarray}
+So we define
+\begin{equation*}
+[a,b,c]\ast A :=[a^{'}, b^{'}, c^{'}]
+\end{equation*}
+to be the binary quadratic form with coefficients $a^{'},b^{'}, c^{'}$
+of $x^2, xy, y^2$, respectively as in (\ref{eq:1}). Putting in
+$A=\begin{matrix}
+1&0 \\ 0&1
+\end{matrix}$  we have
+$[a,b,c]\ast A=[a,b,c]$ for any binary quadratic form $[a,b,c]$.
+Now let $B$ be another matrix in $G$. We must show that
+\begin{equation*}
+[a,b,c] \ast (AB)=([a,b,c] \ast A)\ast B.
+\end{equation*}
+Set $[a,b,c]\ast (AB):=[a^{''}, b^{''}, c^{''}]$. So we have
+\begin{eqnarray}
+\label{eq:3}
+a^{''}&=&a\left(a_{11}b_{11} +a_{12}b_{21}\right)^2 +c\left(a_{21}b_{11}
++a_{22}b_{21}\right)^2 +b\left(a_{11}b_{11} +a_{12}b_{21}\right)(a_{21}b_{11}
++a_{22}b_{21}) \\
+\nonumber &=&a^{'}b_{11}^2 +c^{'}b_{21}^2 +\left(2a\cdot
+a_{11}a_{12} +2c\cdot
+a_{21}a_{22}+b\left(a_{11}a_{22}+a_{12}a_{21}\right)\right)b_{11}b_{21} \\
+c^{''}&=&a\left(a_{11}b_{12}+a_{12}b_{22}\right)^2+c\cdot
+\left(a_{21}b_{12}+a_{22}b_{22}\right)^2 +b\cdot
+\left(a_{11}b_{12}+a_{12}b_{22}\right)\left(a_{21}b_{12}+a_{22}b_{22}\right) \\
+\nonumber &=&a^{'}b_{12}^2+c^{'}b_{22}^2+\left(2a\cdot
+a_{11}a_{12}+2ca_{21}a_{22} +b\left(a_{11}a_{22}
++a_{12}a_{21}\right)\right)b_{12}b_{22}
+\end{eqnarray}
+as desired.
+For the coefficient $b^{''}$ we get
+\begin{eqnarray*}
+\label{eq:4}
+b^{''}&=&2a
+\left(a_{11}b_{11}+a_{12}b_{21}\right)\left(a_{11}b_{12}+a_{12}b_{22}\right) \\ 
+&+&2c\cdot
+\left(a_{21}b_{11}+a_{22}b_{21}\right)\left(a_{21}b_{12} +a_{22}b_{22}\right)\\
+&+&b\left(\left(a_{11}b_{11} +a_{12}b_{21}\right)\left(a_{21}b_{12}
++a_{22}b_{22}\right)
++\left(a_{11}b_{12}+a_{12}b_{22}\right)\left(a_{21}b_{11}+a_{22}b_{21}\right)\right)
+\end{eqnarray*}
+and by evaluating the factors of $b_{11}b_{12}, b_{21}b_{22}$, and
+$b_{11}b_{22}+b_{21}b_{12}$, it can be checked that
+\begin{equation*}
+b^{''} =2a^{'}b_{11}b_{12}+2c^{'}b_{21}b_{22} \\
+\nonumber +\left(b_{11}b_{22}+b_{21}b_{12}\right)\left(2aa_{11}a_{12}+2c\cdot
+a_{21}a_{22}+b\left(a_{11}a_{22}+a_{12}a_{21}\right)\right).
+\end{equation*}
+This shows that
+\begin{equation}
+[a^{''},b^{''},c^{''}]=[a^{'},b^{'},c^{'}] \ast B
+\end{equation}
+and therefore $[a,b,c] \ast (AB)=([a,b,c]\ast A) \ast B$. Thus,
+(\ref{eq:1}) defines an action of $G$ on the set of (integer) binary
+quadratic forms.
+Furthermore, the discriminant of each quadratic form in the orbit of $[a,b,c]$ under $G$ is 
+$b^2-4ac$.
+%%%%%
+%%%%%
+\end{document}

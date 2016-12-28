@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfFactorsOfSmallMersenneNumbers}
+\pmcreated{2013-03-22 18:05:55}
+\pmmodified{2013-03-22 18:05:55}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of factors of small Mersenne numbers}
+\pmrecord{5}{40640}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following table lists the prime factors for some small Mersenne numbers, specifically, numbers of the form $2^p - 1$ where $p$ is a prime in the range $1 < p < 200$ and $2^p - 1$ is composite. Thus, the following values of $p$ have been left off the table: 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127 and all primes greater than 199 (see table of Mersenne primes). The numbers get quite large, and correspondingly, so do their factors. All these numbers are squarefree (given the M\"obius function, $\mu(2^p - 1) \neq 0$). Their factors are all of the form $2mp + 1$, with $m$ in the range $0 < m < 2^{p - 1}$.
+
+\begin{tabular}{|r|l|}
+$p$ & Factors of $2^p - 1$ \\
+11 & 23, 89 \\ 
+23 & 47, 178481 \\ 
+29 & 233, 1103, 2089 \\ 
+37 & 223, 616318177 \\ 
+41 & 13367, 164511353 \\ 
+43 & 431, 9719, 2099863 \\ 
+47 & 2351, 4513, 13264529 \\ 
+53 & 6361, 69431, 20394401 \\ 
+59 & 179951, 3203431780337 \\ 
+67 & 193707721, 761838257287 \\ 
+71 & 228479, 48544121, 212885833 \\ 
+73 & 439, 2298041, 9361973132609 \\ 
+79 & 2687, 202029703, 1113491139767 \\ 
+83 & 167, 57912614113275649087721 \\
+97 & 11447, 13842607235828485645766393 \\
+101 & 7432339208719, 341117531003194129 \\ 
+103 & 2550183799, 3976656429941438590393 \\ 
+109 & 745988807, 870035986098720987332873 \\ 
+113 & 3391, 23279, 65993, 1868569, 1066818132868207 \\ 
+131 & 263, 10350794431055162386718619237468234569 \\ 
+137 & 32032215596496435569, 5439042183600204290159 \\ 
+139 & 5625767248687, 123876132205208335762278423601 \\ 
+149 & 86656268566282183151, 8235109336690846723986161 \\ 
+151 & 18121, 55871, 165799, 2332951, 7289088383388253664437433 \\ 
+157 & 852133201, 60726444167, 1654058017289, 2134387368610417 \\ 
+163 & 150287, 704161, 110211473, 27669118297, 36230454570129675721 \\ 
+167 & 2349023, 79638304766856507377778616296087448490695649 \\ 
+173 & 730753, 1505447, 70084436712553223, 155285743288572277679887 \\ 
+179 & 359, 1433, 1489459109360039866456940197095433721664951999121 \\ 
+181 & 43441, 1164193, 7648337, 7923871097285295625344647665764672671 \\ 
+191 & 383, 7068569257, 39940132241, 332584516519201, 87274497124602996457 \\ 
+193 & 13821503, 61654440233248340616559, 14732265321145317331353282383 \\ 
+197 & 7487, 26828803997912886929710867041891989490486893845712448833 \\ 
+199 & 164504919713, 4884164093883941177660049098586324302977543600799 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

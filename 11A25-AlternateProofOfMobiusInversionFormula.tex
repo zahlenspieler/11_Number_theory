@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateProofOfMobiusInversionFormula}
+\pmcreated{2013-03-22 16:30:31}
+\pmmodified{2013-03-22 16:30:31}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{alternate proof of M\"obius inversion formula}
+\pmrecord{4}{38684}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The M\"obius inversion theorem can also be proved elegantly using the fact that arithmetic functions form a ring under $+$ and $*$. 
+
+Let $I$ be the arithmetic function that is everywhere $1$. Then obviously if $\mu$ is the M\"obius function,
+\[(\mu *I)(n) = \sum_{d|n}\mu(d)I\left(\frac{n}{d}\right) = \sum_{d|n}\mu(d) = \begin{cases}1&$n=1$\\0&\text{otherwise}\end{cases}\]
+and thus $I*\mu=e$, where $e$ is the identity of the ring.
+
+But then
+\[f(n)=\sum_{d|n}g(d)=\sum_{d|n}g(d)I\left(\frac{n}{d}\right)\]
+and so $f=g*I$. Thus $f*\mu=g*I*\mu=g$. But $g=f*\mu$ means precisely that
+\[g(n)=\sum_{d|n}\mu(d)f\left(\frac{n}{d}\right)\]
+and we are done.
+
+The reverse equivalence is similar ($f*\mu=g\Rightarrow f*\mu*I=g*I\Rightarrow f=g*I$).
+%%%%%
+%%%%%
+\end{document}

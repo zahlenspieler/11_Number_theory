@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquareRootOfSquareRootBinomial}
+\pmcreated{2013-03-22 15:21:21}
+\pmmodified{2013-03-22 15:21:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{square root of square root binomial}
+\pmrecord{10}{37178}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+%\pmkeywords{nested square roots}
+\pmrelated{TakingSquareRootAlgebraically}
+\pmrelated{SquareRootsOfRationals}
+\pmdefines{square root binomial}
+\pmdefines{square root polynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Some people call the expressions of the form\, $a\!+\!b\sqrt{c}$\, the \PMlinkescapetext{{\em square root binomials}}, especially when $c$ is an square-free integer greater than 1 (and $a$ and $b$  rational numbers).\, On the high school \PMlinkescapetext{level one may learn to perform arithmetic operations between such binomials} (see e.g. division), or also polynomials containing several square root \PMlinkescapetext{terms}.\, Taking the square root of a square root binomial is more difficult and usually results nested square roots.\, However, there are some exceptions if the numbers are appropriate.\, We have the \PMlinkescapetext{formulae}
+$$\sqrt{a+\sqrt{b}} = \sqrt{\frac{a+\sqrt{a^2-b}}{2}}+\sqrt{\frac{a-\sqrt{a^2-b}}{2}}$$
+and
+$$\sqrt{a-\sqrt{b}} = \sqrt{\frac{a+\sqrt{a^2-b}}{2}}-\sqrt{\frac{a-\sqrt{a^2-b}}{2}}.$$
+If\, $a^2\!-\!b$\, happens to be square of a rational number, then the \PMlinkescapetext{formulae allow to convert the square roots on the left side} into expressions without nested square roots.
+
+For example, because\, $6^2\!-\!20 = 16 = 4^2$,\, we obtain
+$$\sqrt{6\!+\!2\sqrt{5}} = \sqrt{6\!+\!\sqrt{20}} = 
+\sqrt{\frac{6\!+\!4}{2}}+\sqrt{\frac{6\!-\!4}{2}} = 1\!+\!\sqrt{5},$$
+and because\, $4^2\!-\!7 = 9 = 3^2$,\, we get
+$$\sqrt{4\!-\!\sqrt{7}} = \sqrt{\frac{4\!+\!3}{2}}-\sqrt{\frac{4\!-\!3}{2}}
+= \frac{\sqrt{7}\!-\!1}{\sqrt{2}} = \frac{\sqrt{14}\!-\!\sqrt{2}}{2}.$$
+
+\begin{thebibliography}{9}
+\bibitem{VA}{\sc K. V\"ais\"al\"a:} {\em Algebran oppi- ja esimerkkikirja} I.  \, -- Werner S\"oderstr\"om osakeyhti\"o, Porvoo \& Helsinki (1952).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

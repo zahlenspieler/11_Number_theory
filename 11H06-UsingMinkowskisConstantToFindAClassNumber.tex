@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingMinkowskisConstantToFindAClassNumber}
+\pmcreated{2013-03-22 15:05:38}
+\pmmodified{2013-03-22 15:05:38}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{using Minkowski's constant to find a class number}
+\pmrecord{4}{36822}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11H06}
+\pmclassification{msc}{11R29}
+%\pmkeywords{computing class numbers}
+\pmrelated{ClassNumbersAndDiscriminantsTopicsOnClassGroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+We will use the theorem of Minkowski (see \PMlinkname{the parent entry}{MinkowskisConstant}).
+
+\begin{thm}[Minkowski's Theorem]
+\label{thm1}
+Let $K$ be a number field and let $D_K$ be its discriminant. Let $n=r_1+2r_2$ be the degree of $K$ over $\Rats$, where $r_1$ and $r_2$ are the number of real and complex embeddings, respectively. The class group of $K$ is denoted by $\Cl(K)$. In any ideal class $C\in \Cl(K)$, there exists an ideal $\mathfrak{A}\in C$ such that:
+$$|{\bf N}(\mathfrak{A})| \leq M_K \sqrt{|D_K|}$$
+where ${\bf N}(\mathfrak{A})$ denotes the absolute norm of $\mathfrak{A}$ and 
+$$M_K=\frac{n!}{n^n} \left(\frac{4}{\pi}\right)^{r_2}.$$
+\end{thm}
+
+\begin{exa}
+The discriminants of the quadratic fields $K_2=\Rats(\sqrt{2}),\ K_3=\Rats(\sqrt{3})$ and $K_{13}=\Rats(\sqrt{13})$ are $D_{K_2}=8,\ D_{K_3}=12$ and $D_{K_{13}}=13$ respectively. For all three $n=2=r_1$ and $r_2=0$. Therefore, the Minkowski's constants are:
+$$M_{K_i}=\frac{1}{2}\sqrt{|D_{K_i}|},\quad i=2,3,13$$
+so in the three cases:
+$$M_{K_i}\leq \frac{1}{2}\sqrt{13}=1.802\ldots$$
+Now, suppose that $C$ is an arbitrary class in $\Cl(K_i)$. By the theorem, there exists an ideal $\mathfrak{A}$, representative of $C$, such that:
+$$|{\bf N}(\mathfrak{A})|<1.802\ldots <2$$ 
+and therefore ${\bf N}(\mathfrak{A})=1$. Since the only ideal of norm one is the trivial ideal $\mathcal{O}_{K_i}$, which is principal, the class $C$ is also the trivial class in $\Cl(K_i)$. Hence there is only one class in the class group, and the class number is one for the three fields $K_2,\ K_3$ and $K_{13}$.\\
+\end{exa}
+
+\begin{exa}
+Let $K=\Rats(\sqrt{17})$. The discriminant is $D_K=17$ and the Minkowski's bound reads:
+$$M_K=\frac{1}{2}\sqrt{17}=2.06\ldots$$
+Suppose that $C$ is an arbitrary class in $\Cl(K)$. By the theorem, there exists an ideal $\mathfrak{A}$, representative of $C$, such that:
+$$|{\bf N}(\mathfrak{A})|<2.06\ldots$$ 
+and therefore ${\bf N}(\mathfrak{A})=1$ or $2$. However,
+$$2=\frac{-3+\sqrt{17}}{2}\cdot \frac{3+\sqrt{17}}{2}$$
+so the ideal $2\mathcal{O}_K$ is split in $K$ and the prime ideals 
+$$\left(\frac{-3+\sqrt{17}}{2} \right), \quad \left( \frac{3+\sqrt{17}}{2}\right)$$
+are the only ones of norm $2$. Since they are principal, the class $C$ is the trivial class, and the class group $\Cl(K)$ is trivial. Hence, the class number of $\Rats(\sqrt{17})$ is one.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

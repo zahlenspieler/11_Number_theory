@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatN2n41IsPrimeFor0leqNleq40}
+\pmcreated{2013-03-22 16:55:48}
+\pmmodified{2013-03-22 16:55:48}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that $n^2-n+41$ is prime for $0\leq n\leq 40$}
+\pmrecord{7}{39195}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We show that for $0\leq n\leq 40$, $n^2-n+41$ is prime. Of course, this can easily be seen by considering the $41$ cases, but the proof given here is illustrative of why the statement is true.
+
+Recall that there is only one \PMlinkname{reduced}{IntegralBinaryQuadraticForms} integral binary quadratic form of discriminant $-163$; that form is $x^2+xy+41y^2$. The smallest prime that is represented by that form is $41$. For suppose $p=x^2+xy+41y^2$ and $p<41$. Then obviously $y=0$, so $p=x^2$, which is impossible. Since equivalent forms represent the same set of integers, it follows that any form of discriminant $-163$ represents no primes less than $41$.
+
+Now suppose $n^2-n+41$ is composite for some $n\leq 40$. Then
+\[n^2-n+41\leq 40^2-40+41<41^2\]
+and thus $n^2-n+41$ has a prime factor $q<41$. Write $n^2-n+41=qc$; then $qx^2+(2n-1)xy+cy^2$ represents $q$ ($x=1,y=0$); its discriminant is 
+\[(2n-1)^2-4qc=4n^2-4n+1-4(n^2-n+41)=-163\]
+Since there is only one equivalence class of forms with discriminant $-163$, $qx^2+(2n-1)xy+cy^2$ is equivalent to $x^2+xy+41y^2$ and thus represents the same integers. But we know that $x^2+xy+41y^2$ cannot represent any prime $<41$, so cannot represent $q$. Contradiction. So $n^2-n+41$ is prime for $n\leq 40$.
+
+This proof works equally well for the other cases mentioned in the parent article, since for each of those cases, there is only one \PMlinkname{reduced form}{IntegralBinaryQuadraticForms} of the appropriate discriminant, which is $1-4p$.
+%%%%%
+%%%%%
+\end{document}

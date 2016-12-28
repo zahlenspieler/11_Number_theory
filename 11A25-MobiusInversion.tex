@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MobiusInversion}
+\pmcreated{2013-03-22 11:46:58}
+\pmmodified{2013-03-22 11:46:58}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{M\"obius inversion}
+\pmrecord{25}{30252}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+\pmsynonym{Moebius inversion}{MobiusInversion}
+%\pmkeywords{number theory}
+\pmrelated{MoebiusFunction}
+\pmdefines{Mobius inversion formula}
+\pmdefines{Mobius transform}
+\pmdefines{Mobius function}
+\pmdefines{Mobius-Rota inversion}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem{Theo}{Theorem}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Nstar}{\mathbb{N}^{*}}
+\begin{document}
+\PMlinkescapeword{proposition} \PMlinkescapeword{clearly}
+\PMlinkescapeword{fix} \PMlinkescapeword{connection}
+\PMlinkescapeword{inversion}
+
+\begin{Theo}[Moebius Inversion]
+Let $\mu$ be the Moebius function, and let $f$ and $g$ be two functions on the positive integers.  Then the following two conditions are equivalent:
+\begin{eqnarray}
+f(n)&=&\sum_{d|n}g(d)\textrm{ for all }n\in\Nstar \\
+g(n)&=&\sum_{d|n}\mu(d)f\left(\frac{n}{d}\right)\textrm{ for all }n\in\Nstar
+\end{eqnarray}
+\end{Theo}
+
+\noindent
+\textbf{Proof:} Fix some $n\in\Nstar$. Assuming (1), we have
+\begin{eqnarray*}
+\sum_{d|n}\mu(d)f\left(\frac{n}{d}\right)
+&=&\sum_{d|n}\mu(d)\sum_{e|n/d}g(e) \\
+&=&\sum_{k|n}\sum_{d|k}\mu(d)g\left(\frac{n}{k}\right) \\
+&=&\sum_{k|n}g\left(\frac{n}{k}\right)\sum_{d|k}\mu(d) \\
+&=&g(n),
+\end{eqnarray*}
+the last step following from the identity given in the Mobius function entry.
+
+Conversely, assuming (2), we get
+\begin{eqnarray*}
+\sum_{d|n}g(d)
+&=&\sum_{d|n}\sum_{e|d}\mu(e)f\left(\frac{d}{e}\right) \\
+&=&\sum_{k|n}f\left(\frac{n}{k}\right)\sum_{e|k}\mu\left(\frac{k}{e}\right) \\
+&=&f(n)\qquad\text{(by the same identity)}
+\end{eqnarray*}
+as claimed.
+
+\textbf{Definitions: }
+In the notation above, $f$ is called the M\"obius transform
+of $g$, and formula (2) is called the M\"obius inversion formula.
+
+\section*{M\"obius-Rota inversion}
+G.-C. Rota has described a generalization of the M\"obius formalism.
+In it, the set $\Nstar$, ordered by the relation $x|y$ between elements
+$x$ and $y$, is replaced by a more general ordered set, and $\mu$
+is replaced by a function of two variables.
+
+Let $(S,\le)$ be a locally finite ordered set, i.e. an ordered set such that
+$\{z\in S|x\le z\le y\}$ is a finite set for all $x,y\in S$. Let $A$ be the set
+of functions $\alpha:S\times S\to\Z$ such that
+\begin{eqnarray}
+\alpha(x,x)&=&1\textrm{ for all }x\in S \\
+\alpha(x,y)&\neq&0\textrm{ implies }x\leq y
+\end{eqnarray}
+$A$ becomes a monoid if we define the product of any two of its
+elements, say $\alpha$ and $\beta$, by
+$$(\alpha\beta)(x,y)=\sum_{t\in S}\alpha(x,t)\beta(t,y).$$
+The sum makes sense because $\alpha(x,t)\beta(t,y)$ is nonzero
+for only finitely many values of $t$.
+(Clearly this definition is akin to the definition of the product
+of two square matrices.)
+
+Consider the element $\iota$ of $A$ defined simply by
+\[\iota(x,y)=
+\begin{cases}
+1 & \textrm{ if $x\le y$} \\ 0 & \text{otherwise.}
+\end{cases}\]
+The function $\iota$, regarded as a matrix over $\Z$, has an inverse
+matrix, say $\nu$. That means
+\[
+\sum_{t\in S}\iota(x,t)\nu(t,y)=
+\begin{cases}
+1 & \text{if $x=y$,} \\ 0 & \text{otherwise.}
+\end{cases}
+\]
+Thus for any $f,g\in A$, the equations
+\begin{eqnarray}
+f&=&\iota g \\
+g&=&\nu f
+\end{eqnarray}
+are equivalent.
+
+Now let's sketch out how the traditional M\"obius inversion is a special
+case of Rota's notion. Let $S$ be the set $\Nstar$, ordered by the relation
+$x|y$ between elements $x$ and $y$. In this case, $\nu$ is essentially
+a function of only one variable:
+
+\textbf{Proposition 3:} With the above notation, $\nu(x,y)=\mu(y/x)$
+for all $x,y\in\Nstar$ such that $x|y$.
+
+The proof is fairly straightforward, by induction on the number
+of elements of the interval $\{z\in S|x\le z\le y\}$.
+
+Now let $g$ be a function from $\Nstar$ to some additive group,
+and write $\overline{g}(x,y)=g(y/x)$ for all pairs $(x,y)$ such
+that $x|y$. 
+
+\textbf{Example: }Let $E$ be a set, and let $S$ be the set of all
+finite subsets of $E$, ordered by inclusion. The ordered set $S$ is
+left-finite, and for any $x,y\in S$ such that $x\subset y$,
+we have $\nu(x,y)=(-1)^{|y-x|}$, where $|z|$ denotes the cardinal
+of the finite set $z$.
+
+A slightly more sophisticated example comes up in
+connection with the chromatic polynomial of a graph or matroid.
+
+\section*{An Additional Generalization}
+
+A final generalization of Moebius inversion occurs when the sum is taken over all integers less than some real value $x$ rather than over the divisors of an integer.  Specifically, let $f:\mathbb{R}\rightarrow\mathbb{C}$ and define $F:\mathbb{R}\rightarrow \mathbb{C}$ by $F(x)=\sum_{n\leq x} f(\frac{x}{n})$.  
+
+Then
+
+\begin{align*}
+f(x)=\sum_{n\leq x} \mu(n) F\left(\frac{x}{n}\right).
+\end{align*}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,172 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticMap}
+\pmcreated{2013-03-22 16:27:55}
+\pmmodified{2013-03-22 16:27:55}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{quadratic map}
+\pmrecord{9}{38625}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11E08}
+\pmclassification{msc}{11E04}
+\pmclassification{msc}{15A63}
+\pmrelated{QuadraticJordanAlgebra}
+\pmrelated{IsotropicQuadraticSpace}
+\pmdefines{quadratic map}
+\pmdefines{totally singular}
+\pmdefines{totally isotropic}
+\pmdefines{polarization formula}
+\pmdefines{polarization identity}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Given a commutative ring $K$ and two $K$-modules $M$ and $N$ then a map
+$q:M\rightarrow N$ is called \emph{quadratic} if
+\begin{enumerate}
+\item $q(\alpha x)=\alpha^2 q(x)$ for all $x\in M$ and $\alpha\in K$.
+\item $b(x,y):=q(x+y)-q(x)-q(y)$, for $x,y\in M$, is a bilinear map.
+\end{enumerate}
+
+
+The only difference between quadratic maps and quadratic forms is the insistence on the codomain $N$ instead of a $K$.  So in this way every quadratic form is a special case of a quadratic map.  Most of the properties for quadratic forms apply to quadratic maps as well.  For instance, if $K$ has no 2-torsion ($2x=0$ implies $x=0$) then 
+    \[2c(x,y)=q(x+y)-q(x)-q(y).\]
+defines a symmetric $K$-bilinear map $c:M\times M\to N$ with $c(x,x)=q(x)$.  In particular if $1/2\in K$ then 
+$c(x,y)=\frac{1}{2}b(x,y)$.
+This definition is one instance of a polarization (i.e.: substituting a single
+variable in a formula with $x+y$ and comparing the result with the formula over $x$ and $y$ separately.)  Continuing
+without $2$-torsion, if $b$ is a symmetric $K$-bilinear map (perhaps not a form) then defining
+$q_b(x)=b(x,x)$ determines a quadratic map since
+   \[q_b(\alpha x)=b(\alpha x,\alpha x)=\alpha^2 b(x,x)=\alpha^2 q(x)\]
+and
+\[q_b(x+y)-q_b(x)-q_b(y)
+     =b(x+y,x+y)-b(x,x)-b(y,y)=b(x,y)+b(y,x)=2 b(x,y).\]
+Have have no $2$-torsion we can recover $b$ form $q_b$.  So in odd and 0 characteristic rings we find symmetric 
+bilinear maps and quadratic maps are in 1-1 correspondence.
+
+An alternative understanding of $b$ is to treat this as the obstruction to
+$q$ being an additive homomorphism.  Thus a submodule $T$ of $M$ for which $b(T,T)=0$ is a submodule of $M$ on which $q|_T$ is an additive homomorphism.
+Of course because of the first condition, $q$ is semi-linear on $T$ only when $\alpha\mapsto \alpha^2$ is an automorphism of $K$, in particular, if $K$ has characteristic 2.  When the characteristic of $K$ is odd or 0 then $q(T)=0$ 
+if and only if $b(T,T)=0$ simply because $q(x)=b(x,x)$ (or up to a $1/2$
+multiple depending on conventions).  However, in characteristic 2 it is 
+possible for $b(T,T)=0$ yet $q(T)\neq 0$.  For instance, we can have 
+$q(x)\neq 0$ yet $b(x,x)=q(2x)-q(x)-q(x)=0$.  This is summed up in the following
+definition:
+
+A subspace $T$ of $M$ is called \emph{totally singular} if $q(T)=0$ and
+totally isotropic if $b(T,T)=0$.  In odd or 0 characteristic, totally singular
+subspaces are precisely totally isotropic subspaces.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

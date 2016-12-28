@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfEulerPhifunction}
+\pmcreated{2013-03-22 17:42:52}
+\pmmodified{2013-03-22 17:42:52}
+\pmowner{jwaixs}{18148}
+\pmmodifier{jwaixs}{18148}
+\pmtitle{derivation of Euler phi-function}
+\pmrecord{22}{40159}
+\pmprivacy{1}
+\pmauthor{jwaixs}{18148}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this ``proof" we will construct the solution for the Euler phi-function, $ \phi(n) = n \prod_{ p | n } ( 1 - \frac{1}{n} ) $.
+
+We will do this for the natural number $ n > 0 $.
+Keep in mind that $ \gcd(a,n) = 1 \Longleftrightarrow $ $ a $ is not divisible by $ p $ for all primes $ p $ dividing $ n $. 
+
+Let $ n \ge 2 $ and $ p_1,p_2,\cdots,p_r $ be all prime divisors of n.
+Let $ N=\{a \mid 0 \leq a < n, \gcd(a,n) = 1\} $ and $ A_i := \{ a \mid 0 \leq a < n, p_i | a \} $.
+If $ J \subset \{ 1,2,\cdots,r \} $ than $ p_J := \prod_{j \in J} p_i $. 
+
+Thus, $ \# ( A_J ) = \# ( \bigcap_{ j \in J } A_j ) = \# ( \{ a \in A : p_J | a \} ) = \frac{ n }{ p_J } $ 
+
+Using inclusion-exclusion, 
+\begin{align*}
+\phi(n) 
+= \# ( N )
+= \sum_{ J \subset \{ 1,2,\cdots,r \} } (-1)^{ \# ( J ) } \# ( A_J )
+= \sum_{ J \subset \{ 1,2,\cdots,r \}} (-1)^{ \# ( J ) } \frac{ n }{ p_J } 
+= n \sum_{ J \subset \{ 1,2,\cdots,r \}} (-1)^{ \# ( J ) } \frac{ 1 }{ p_J }
+& \\ = n (1 - (\frac{1}{p_1} + \frac{1}{p_2} + \cdots + \frac{1}{p_r}) + \cdots (-1)^r \frac{1}{p_1 p_2 \cdots p_r})
+= n \prod_{ p | n } ( 1 - \frac{1}{p} ). 
+\end{align*} $ \Box $
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPrimeIdealDecompositionInNumberFields}
+\pmcreated{2013-03-22 13:53:05}
+\pmmodified{2013-03-22 13:53:05}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of prime ideal decomposition in number fields}
+\pmrecord{12}{34628}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11S15}
+%\pmkeywords{decomposition}
+%\pmkeywords{inertia}
+%\pmkeywords{prime ideal decomposition}
+\pmrelated{DecompositionGroup}
+\pmrelated{Discriminant}
+\pmrelated{NumberField}
+\pmrelated{PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ}
+\pmrelated{PrimeIdealDecompositionInCyclotomicExtensionsOfMathbbQ}
+\pmrelated{ExamplesOfRamificationOfArchimedeanPlaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Here we follow the notation of the entry on the decomposition
+group. See also \PMlinkexternal{this entry}{http://planetmath.org/encyclopedia/PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ.html}.
+
+{\bf Example 1}
+
+Let $K=\Rats(\sqrt{-7})$; then
+$\operatorname{Gal}(K/\Rats)=\{\operatorname{Id},\sigma\} \cong
+\Ints/2\Ints$, where $\sigma$ is the complex conjugation map. Let
+$\mathcal{O}_K$ be the ring of integers of $K$. In this case:$$
+\mathcal{O}_K=\Ints\left[\frac{1+\sqrt{-7}}{2}\right]$$ The
+discriminant of this field is $D_{K/\Rats}=-7$. We look at the
+decomposition in prime ideals of some prime ideals in $\Ints$:
+\begin{enumerate}
+\item The only prime ideal in $\Ints$ that ramifies is $(7)$:
+$$(7)\mathcal{O}_K=(\sqrt{-7})^2$$ and we have $e=2,f=g=1$. Next
+we compute the decomposition and inertia groups from the
+definitions. Notice that both $\operatorname{Id}, \sigma$ fix the
+ideal $(\sqrt{-7})$. Thus:
+$$D((\sqrt{-7})/(7))=\operatorname{Gal}(K/\Rats)$$
+For the inertia group, notice that $\sigma\equiv
+\operatorname{Id}\ \operatorname{mod}\ (\sqrt{-7})$. Hence:
+$$T((\sqrt{-7})/(7))=\operatorname{Gal}(K/\Rats)$$
+Also note that this is trivial if we use the properties of the
+fixed field of $D((\sqrt{-7})/(7))$ and $T((\sqrt{-7})/(7))$ (see
+the section on ``decomposition of extensions'' in the entry on
+decomposition group), and the fact that $e\cdot f\cdot g=n$, where
+$n$ is the degree of the extension ($n=2$ in our case).
+
+\item The primes $(5),(13)$ are inert, i.e. they are prime ideals
+in $\mathcal{O}_K$. Thus $e=1=g,f=2$. Obviously the conjugation
+map $\sigma$ fixes the ideals $(5),(13)$, so
+$$D(5\mathcal{O}_K/(5))=\operatorname{Gal}(K/\Rats)=D(13\mathcal{O}_K/(13))$$
+On the other hand $\sigma(\sqrt{-7})\equiv-\sqrt{-7}\
+\operatorname{mod} (5),(13)$, so $\sigma\neq \operatorname{Id}\
+\operatorname{mod} (5),(13)$ and
+$$T(5\mathcal{O}_K/(5))=\{\operatorname{Id}\}=T(13\mathcal{O}_K/(13))$$
+
+\item The primes $(2),(29)$ are split:
+$$2\mathcal{O}_K={\left( 2,\frac{1+\sqrt{-7}}{2}\right)}{\left(
+2,\frac{1-\sqrt{-7}}{2}\right)}=\mathcal{P}\cdot\mathcal{P'}$$
+$$29\mathcal{O}_K=\left(29,14+\sqrt{-7}\right)\left(29,14-\sqrt{-7}\right)=\mathcal{R}\cdot\mathcal{R'}$$
+so $e=f=1,g=2$ and
+$$D(\mathcal{P}/(2))=T(\mathcal{P}/(2))=\{\operatorname{Id}\}=D(\mathcal{R}/(29))=T(\mathcal{R}/(29))$$
+
+\end{enumerate}
+
+{\bf Example 2}
+
+Let $\zeta_7=e^{\frac{2\pi i}{7}}$, i.e. a $7^{th}$-root of unity,
+and let $L=\Rats(\zeta_7)$. This is a cyclotomic extension of
+$\Rats$ with Galois group
+$$\operatorname{Gal}(L/\Rats)\cong
+\left(\Ints/7\Ints\right)^{\times}\cong \Ints/6\Ints$$
+Moreover
+$$\operatorname{Gal}(L/\Rats)=\{\sigma_a\colon L\to L \mid
+\sigma_a(\zeta_7)=\zeta_7^a,\quad a\in
+\left(\Ints/7\Ints\right)^{\times} \}$$
+
+Galois theory gives us the subfields of $L$:
+$\xymatrix@dr@C=1pc{
+ L=\Rats(\zeta_7) \ar@{-}[r] \ar@{-}[d] & \Rats(\zeta_7+\zeta_7^6) \ar@{-}[d] \\
+ \Rats(\sqrt{-7}) \ar@{-}[r]       & \Rats }$
+
+The discriminant of the extension ${L/\Rats}$ is
+$D_{L/\Rats}=-7^5$. Let $\mathcal{O}_L$ denote the ring of
+integers of $L$, thus $\mathcal{O}_L=\Ints[\zeta_7]$. We use the results of \PMlinkexternal{this entry}{http://planetmath.org/encyclopedia/PrimeIdealDecompositionInCyclotomicExtensionsOfMathbbQ.html} to find the decomposition of the primes $2,5,7,13,29$:
+
+$\xymatrix{
+{L=\Rats(\zeta_7)} \ar@{-}[d]^3 & {(1-\zeta_7)^6} \ar@{-}[d] & {\mathfrak{P}\cdot\mathfrak{P}'} \ar@{-}[d] & {(5)} \ar@{-}[d] & {\mathfrak{Q}_1\cdot\mathfrak{Q}_2\cdot\mathfrak{Q}_3} \ar@{-}[d] \\
+{K=\Rats(\sqrt{-7})}\ar@{-}[d]^2 & {(\sqrt{-7})^2} \ar@{-}[d] & {\left( 2,\frac{1+\sqrt{-7}}{2}\right)}{\left( 2,\frac{1-\sqrt{-7}}{2}\right)}\ar@{-}[d] & (5) \ar@{-}[d]& (13) \ar@{-}[d]\\
+\Rats & (7) & (2) & (5) & (13) }$
+
+\begin{enumerate}
+\item The prime ideal $7\Ints$ is totally ramified in $L$, and the
+only prime ideal that ramifies:
+$$7\mathcal{O}_L=(1-\zeta_7)^6=\mathfrak{T}^6$$
+Thus
+$$e(\mathfrak{T}/(7))=6,\quad f(\mathfrak{T}/(7))=g(\mathfrak{T}/(7))=1$$
+Note that, by the properties of the fixed fields of decomposition
+and inertia groups, we must have
+$L^{T(\mathfrak{T}/(7))}=\Rats=L^{D(\mathfrak{T}/(7))}$, thus, by
+Galois theory,
+$$D(\mathfrak{T}/(7))=T(\mathfrak{T}/(7))=\operatorname{Gal}(L/\Rats)$$
+
+\item The ideal $2\Ints$ factors in $K$ as above,
+$2\mathcal{O}_K=\mathcal{P}\cdot\mathcal{P'}$, and each of the
+prime ideals $\mathcal{P},\mathcal{P'}$ remains inert from $K$ to
+$L$, i.e. $\mathcal{P}\mathcal{O}_L=\mathfrak{P}$, a prime ideal
+of $L$. Note also that the order of $2\ \operatorname{mod}\ 7$ is $3$, and since $g$ is at least $2$, $2\cdot3=6$, so $e$ must equal $1$ (recall that $efg=n$):
+$$e(\mathfrak{P}/(2))=1,\quad f(\mathfrak{P}/(2))=3,\quad g(\mathfrak{P}/(2))=2$$
+Since $e=1$, $L^{T(\mathfrak{P}/(2))}=L$, and $[L\colon
+L^{D(\mathfrak{P}/(2))}]=3$, so
+$$D(\mathfrak{P}/(2))=<\sigma_2>\cong \Ints/3\Ints,\quad
+T(\mathfrak{P}/(2))=\{\operatorname{Id}\}$$
+
+\item The ideal $(5)$ is inert, $5\mathcal{O}_L=\mathfrak{S}$ is
+prime and the order of $5$ modulo $7$ is $6$. Thus:
+$$e(\mathfrak{S}/(5))=1,\quad f(\mathfrak{S}/(5))=6,\quad
+g(\mathfrak{S}/(5))=1$$
+$$D(\mathfrak{S}/(5))=\operatorname{Gal}(L/\Rats),\quad
+T(\mathfrak{S}/(5))=\{\operatorname{Id}\}$$
+
+\item The prime ideal $13\Ints$ is inert in $K$ but it splits in
+$L$,
+$13\mathcal{O}_L=\mathfrak{Q}_1\cdot\mathfrak{Q}_2\cdot\mathfrak{Q}_3$, and $13\equiv 6\equiv -1\ \operatorname{mod}\ 7$, so the order of $13$ is $2$:
+$$e(\mathfrak{Q}_i/(13))=1,\quad f(\mathfrak{Q}_i/(13))=2,\quad
+g(\mathfrak{Q}_i/(13))=3$$
+$$D(\mathfrak{Q}_i/(13))=<\sigma_6>\cong\Ints/2\Ints,\quad
+T(\mathfrak{Q}_i/(13))=\{\operatorname{Id}\}$$
+
+\item The prime ideal $29\Ints$ is splits completely in $L$,
+$$29\mathcal{O}_L=\mathfrak{R}_1\cdot\mathfrak{R}_2\cdot\mathfrak{R}_3\cdot\mathfrak{R'}_1\cdot\mathfrak{R'}_2\cdot\mathfrak{R'}_3$$
+Also $29\equiv 1\ \operatorname{mod}\ 7$, so $f=1$,
+$$e(\mathfrak{R}_i/(29))=1,\quad f(\mathfrak{R}_i/(29)=1,\quad
+g(\mathfrak{R}_i/(29))=6$$
+$$D(\mathfrak{R}_i/(29))=T(\mathfrak{R}_i/(29))=\{\operatorname{Id}\}$$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

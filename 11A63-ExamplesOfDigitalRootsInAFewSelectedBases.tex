@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfDigitalRootsInAFewSelectedBases}
+\pmcreated{2013-03-22 16:00:10}
+\pmmodified{2013-03-22 16:00:10}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of digital roots in a few selected bases}
+\pmrecord{6}{38030}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In base 10, the digital roots of the first few integers are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, ... (listed in A010888 of Sloane's OEIS), exhibiting a period of 9. Thus, all multiples of 9 have digital root 9 in base 10 (in fact, this is the divisibility rule for 9).
+
+A prime in base 10 can have a digital root of 1, 2, 3, 4, 5, 7 or 8, or put another way, it can't have a digital root of 6 or 9. The exclusion of 9 is not surprising, given that it is $b - 1$. The inclusion of 3 is actually a special case: the only prime with that digital root is 3 itself. All others with digital root of 3 are multiples of 3, and the same goes for 6.
+
+A square can have a digital root of 1, 4, 7 or 9, while a cube can have a digital root of 1, 8 or 9. Other figurate numbers show similar patterns in relation to their digital roots.
+
+All factorials for $n > 5$ have digital root 9, since from that point forward they are all divisible by 9.
+
+All perfect numbers have a digital root 1 in base 10, with the exception of 6. At least this is the case for the first 39 perfect numbers. It's possible that if an odd perfect number exists it might have a different digital root.
+
+A similar situation seems to hold in base 4, in which 6 has digital root 3 and the next ten or so all have a digital root of 1. They show more diversity in octal and hexadecimal.
+
+In binary and factorial base, all positive integers have a digital root of 1. So, in a trivial sense, the digital root is a multiplicative function in those bases.
+%%%%%
+%%%%%
+\end{document}

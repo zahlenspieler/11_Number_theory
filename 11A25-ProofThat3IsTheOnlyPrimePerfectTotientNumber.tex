@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThat3IsTheOnlyPrimePerfectTotientNumber}
+\pmcreated{2013-03-22 16:34:29}
+\pmmodified{2013-03-22 16:34:29}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that 3 is the only prime perfect totient number}
+\pmrecord{5}{38765}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a prime number $p$, only $p = 3$ satisfies the equation $$p = \sum_{i = 1}^{c + 1} \phi^i(n),$$ where $\phi^i(x)$ is the iterated totient function and $c$ is the integer such that $\phi^c(n) = 2$. That is, 3 is the only perfect totient number that is prime.
+
+The first four primes are most easily examined empirically. Since $\phi(2) = 1$, 2 is deficient totient number. $\phi(3) = 2$, so, per the previous remark, it is a perfect totient number. For 5, the iterates are 4, 2 and 1, adding up to 7, hence 5 is an abundant totient number. The same goes for 7, with its iterates being 7, 6, 2, 1.
+
+It is for $p > 7$ that we can avail ourselves of the inequality $\phi(n) > \sqrt{n}$ (true for all $n > 6$). It is obvious that $\phi(p) = p - 1$, and by the foregoing, $\phi^2(p) > 3.162278$ (that is, it is sure to be more than the square root of 10), so it follows that $\phi(p) + \phi^2(p) > p + 2.162278$ and thus it is not necessary to examine any further iterates to see that all such primes are abundant totient numbers.
+%%%%%
+%%%%%
+\end{document}

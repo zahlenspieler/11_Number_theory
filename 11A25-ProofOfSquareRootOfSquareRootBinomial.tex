@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSquareRootOfSquareRootBinomial}
+\pmcreated{2013-03-22 17:42:45}
+\pmmodified{2013-03-22 17:42:45}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of square root of square root binomial}
+\pmrecord{5}{40157}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We square the expression on the right-hand-side and expand
+using the binomial formula:
+\begin{align*}
+ \left(
+  \sqrt{\frac{a+\sqrt{a^2-b}}{2}} \pm
+  \sqrt{\frac{a-\sqrt{a^2-b}}{2}}
+ \right)^2 &=
+ \left( \sqrt{\frac{a+\sqrt{a^2-b}}{2}} \right)^2 \\ &+
+ \left( \sqrt{\frac{a-\sqrt{a^2-b}}{2}} \right)^2 \pm 
+ 2 \sqrt{\frac{a+\sqrt{a^2-b}}{2}}
+   \sqrt{\frac{a-\sqrt{a^2-b}}{2}}
+\end{align*} 
+Since the squaring operation undoes the square roots, we
+obtain the following:
+\[
+ \left( \sqrt{\frac{a+\sqrt{a^2-b}}{2}} \right)^2 +
+ \left( \sqrt{\frac{a-\sqrt{a^2-b}}{2}} \right)^2 =
+ \frac{a+\sqrt{a^2-b}}{2} +
+ \frac{a-\sqrt{a^2-b}}{2} = a
+\] 
+Since the product of square roots equals the square root
+of the product, we have the following:
+\begin{align*}
+ \sqrt{\frac{a+\sqrt{a^2-b}}{2}}
+ \sqrt{\frac{a-\sqrt{a^2-b}}{2}} &=
+ \sqrt{\frac{a+\sqrt{a^2-b}}{2} \cdot
+       \frac{a-\sqrt{a^2-b}}{2}} \\ &=
+ \sqrt{\frac{a^2 - (\sqrt{a^2-b})^2}{4}} \\ &=
+ \sqrt{\frac{a^2 - (a^2-b)}{4}} \\ &=
+ \sqrt{\frac{b}{4}} = 
+  \frac{\sqrt{b}}{2}
+\end{align*}
+Combining what we have calculated above, we obtain
+\[
+\left(
+  \sqrt{\frac{a+\sqrt{a^2-b}}{2}} \pm
+  \sqrt{\frac{a-\sqrt{a^2-b}}{2}}
+ \right)^2 =
+ a \pm \sqrt{b} .
+\]
+Because the square of the asserted value of the square root equals the radicand ($a\pm\sqrt{b}$) of the square root, and the asserted value of the square root is clearly non-negative, we have justified the validity of the formulas
+\[
+ \sqrt{a \pm \sqrt{b}} =
+ \sqrt{\frac{a+\sqrt{a^2-b}}{2}} \pm
+ \sqrt{\frac{a-\sqrt{a^2-b}}{2}}.
+\]
+%%%%%
+%%%%%
+\end{document}

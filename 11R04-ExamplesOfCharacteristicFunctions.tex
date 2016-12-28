@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfCharacteristicFunctions}
+\pmcreated{2013-03-22 17:54:28}
+\pmmodified{2013-03-22 17:54:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{examples of characteristic functions}
+\pmrecord{11}{40401}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+\pmclassification{msc}{11A25}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\usepackage{tabls}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ipart}{\operatorname{Im}}
+\newcommand{\norm}{\operatorname{N}}
+\newcommand{\order}{\mathcal{O}}
+\newcommand{\real}{\operatorname{Re}}
+\begin{document}
+\PMlinkescapephrase{closed form}
+
+In this entry, we give some examples of characteristic functions written in closed form (\PMlinkname{i.e.}{Ie}, not piecewise defined).
+
+We use the following conventions:
+
+\begin{itemize}
+\item $X$ denotes the \PMlinkname{domain}{Domain} of the characteristic function
+\item $A$ denotes a subset of $X$
+\item $\chi_A$ denotes the characteristic function of $A$
+\item $|\cdot|$ denotes distance from $0$ (\PMlinkname{e.g.}{Eg} absolute value or \PMlinkname{modulus}{Modulus2})
+\item $\lfloor\cdot\rfloor$ denotes the floor function
+\item $\lceil\cdot\rceil$ denotes the ceiling function
+\item $\real$ denotes the real part of a complex number
+\item $\ipart$ denotes the imaginary part of a complex number
+\item $\mathbb{N}$ denotes the positive integers
+\item $\mu$ denotes the M\"{o}bius function
+\item $\varphi$ denotes the Euler totient function
+\item $\order_K$ denotes the ring of integers of a number field $K$
+\item $\norm_K$ denotes the norm on a number field $K$
+\end{itemize}
+
+Below is a \PMlinkescapetext{chart} of characteristic functions:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$X$ & $A$ & $\chi_A(x)$ \\
+\hline \hline
+$\mathbb{Z}$ & evens & $\ds \frac{1+(-1)^x}{2}$ \\
+\hline
+$\mathbb{Z}$ & \PMlinkname{odds}{OddNumber} & $\ds \frac{1-(-1)^x}{2}$ \\
+\hline
+$\mathbb{R}$ & positive reals & $\ds \frac{|x|+x}{2}$ \\
+\hline
+$\mathbb{R}$ & negative reals & $\ds \frac{|x|-x}{2}$ \\
+\hline
+$\mathbb{R}$ & $\mathbb{Z}$ & $\lfloor \cos^2(\pi x) \rfloor$ \\
+\hline
+$\mathbb{R}$ & $\mathbb{R}\setminus\mathbb{Z}$ & $\lceil \sin^2(\pi x) \rceil$ \\
+\hline
+$\mathbb{C}\setminus\{0\}$ & $\mathbb{R}\setminus\{0\}$ & $\ds \left\lfloor \frac{\real{x}}{|x|} \right\rfloor$ \\
+\hline
+$\mathbb{C}\setminus\{0\}$ & $\mathbb{C}\setminus\mathbb{R}$ & $\ds \left\lceil \frac{\ipart{x}}{|x|} \right\rceil$ \\
+\hline
+$\mathbb{N}$ & positive squarefree integers & $\mu^2(x)$ \\
+\hline
+$\mathbb{N}\setminus\{1\}$ & primes & $\ds \left\lfloor \frac{\varphi(x)+1}{x} \right\rfloor$ \\
+\hline
+$\order_K\setminus\{0\}$ & units of $\order_K$ & $\ds \left\lfloor \frac{1}{|\norm_K(x)|} \right\rfloor$ \\
+\hline
+\end{tabular}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

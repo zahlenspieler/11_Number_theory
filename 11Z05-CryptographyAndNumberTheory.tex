@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CryptographyAndNumberTheory}
+\pmcreated{2013-03-22 14:10:09}
+\pmmodified{2013-03-22 14:10:09}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{cryptography and number theory}
+\pmrecord{12}{35593}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11Z05}
+\pmclassification{msc}{68W99}
+\pmclassification{msc}{11Y40}
+\pmclassification{msc}{11Y11}
+\pmclassification{msc}{11Y05}
+\pmrelated{PollardsRhoMethod}
+\pmrelated{ArithmeticOfEllipticCurves}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{state}
+\PMlinkescapeword{order}
+\PMlinkescapeword{scheme}
+\PMlinkescapeword{basis}
+\PMlinkescapeword{open}
+\PMlinkescapephrase{almost all}
+\PMlinkescapeword{range}
+\PMlinkescapeword{schemes}
+\PMlinkescapeword{sites}
+\section*{Introduction}
+
+Prior to the 1970s, cryptography was (publicly, anyway) seen as an essentially nonmathematical subject; it was studied primarily by crossword-puzzle enthusiasts, armchair spies, and secretive government agencies.\footnote{There is evidence, such as the DES coefficients' resistance to differential cryptanalysis, that suggest that the American National Security Agency (supposedly the world's largest single employer of mathematicians) was about fifteen years ahead of the public state of the art in cryptanalysis, so they may have known some or all of the material discussed here well before the public.  They may still be fifteen years ahead, although the open cryptographic community has become very active since then.} 
+
+However, Whitfield Diffie and Martin Hellman devised a novel encryption system.  Ordinary cryptosystems rely on a small secret $S$, known to both parties (conventionally called ``Alice'' and ``Bob'').  Such a system includes two functions $E$ and $D$.  Given any message $M$, this secret $K$ (called a key) is used to produce some ciphertext $C=E(M,K)$.  Upon reception of $C$, $K$ is again used to reproduce $M=D(C,K)$.  The functions $E$ and $D$ should be chosen so that it is computationally infeasible to recover $M$ from $C$ without knowing $S$.  This is useful; if Alice and Bob can exchange a small secret once, they can exchange larger secrets at any later time.  But in many situations, Alice and Bob cannot exchange such secrets ahead of time; moreover, if there are $n$ parties who wish to communicate, $n^2$ secrets must be generated and exchanged (in a naive protocol).  The new class of cryptosystems has a pair of keys $P$ and $S$.  Now $E$ is a function of $M$ and $P$; $D$ is a function of $C$ and $S$.  Furthermore, it is computationally infeasible to recover $S$ from $P$.  This means that Alice can publicise $P$, and if Bob wants to send her a message, he has only to look up $P$ in the phone book and send Alice $E(M,P)$.  Alice then computes $D(C,S)$ and obtains $M$, but nobody else can do this since they do not know $S$.  Such systems are called \emph{asymmetric cryptosystems} or \emph{public-key cryptosystems}. 
+
+\section*{Brief survey}
+
+Many public-key cryptosystems have been proposed, and many elaborate protocols to do improbable things (such as playing poker over the telephone) have been written.  It is not the goal of this entry to discuss these in detail.
+
+The essential new feature of public key cryptosystems, for mathematicians, is that they derive their security from the difficulty of solving some mathematical problem.  Symmetric cryptosystems generally construct difficult functions to work with by long sequences of bit operations with little or no mathematical structure.  Asymmetric cryptosystems require their functions to have more elaborate structure (sometimes called trapdoor one-way functions); in order to produce this structure, mathematical problems seem to be the best choice.\footnote{Some schemes for constructing asymmetric systems on top of symmetric primitives, such as cryptographic hash functions, have been proposed, but none has seen wide acceptance.  Of course genuine protocols usually use many symmetric primitives, but the asymmetric parts of their machinery seem to be mathematical.}
+
+Of the asymmetric cryptosystems currently under wide use, almost all are based the difficulty of one of two types of problem:
+\begin{description}
+\item[Integer factorization.]  Given two large prime numbers, $p$ and $q$, their product $pq$ can easily be computed.  However, given $pq$, the best known algorithms to recover $p$ and $q$ require time asymptotically greater than any polynomial in the length of $p$ and $q$.
+\item[Discrete logarithm.] Let $G$ be a group in which computations are reasonably efficient.  Then given $g$ and $n$, computing $g^n$ is not too expensive.  However, for some groups $G$, computing $n$ given $g$ and $g^n$, called computing the discrete logarithm, is difficult.  The commonly used groups are:
+\begin{description}
+\item[Discrete logarithms modulo $p$] If $G$ is the multiplicative group of units modulo some prime number $p$, discrete logarithms in $G$ seem to be about as difficult as factoring integers of the same size as $p$.  
+\item[\PMlinkname{Elliptic curve discrete logarithms}{EllipticCurveDiscreteLogarithmProblem}] If $G$ is an elliptic curve over some finite field, and the elliptic curve does not fall into one of several known families, the best known algorithms are not much better than brute-force search.
+\end{description}
+\end{description}
+
+A number of other problems have been used as the basis for cryptosystems; however, designing a secure cryptosystem is extremely difficult.  A proof of security is almost never possible, and so a cryptosystem can come to be trusted only after withstanding years of determined attacks by experts.  As a result, the cryptography community is extremely conservative when it comes to new cryptosystems.  Many cryptosystems (symmetric and asymmetric) have been put forward only to be proven insecure within weeks.  That said, there have been designs for asymmetric cryptosystems based on:
+\begin{itemize}
+\item Knapsack problems (also called subset-sum problems) (Merkle-Hellman, etc.)
+\item Error-correcting codes (decoding a permuted code) (McEliece, etc.)
+\item Finding the shortest-length vector in a lattice (some instances are now solvable by the Lenstra-Lenstra-Lovasz algorithm) (NTRU)
+\item Discrete logarithms in various other groups:
+\begin{itemize}
+\item Lucas sequences (LUC)
+\item The multiplicative group in a finite field of order $p^6$ (XTR)
+\end{itemize}
+\item Finite automata
+\item Cellular automata
+\item Braid groups
+\end{itemize}
+
+\section*{Number theory}
+
+As a result of the mathematical nature of most asymmetric cryptosystems and the wide range of applications for asymmetric cryptography on the Internet, much research has gone into these problems.  
+Many new number-theoretical algorithms have been developed, and many previously-known ones improved or studied.  The asymptotic efficiency of these methods, which is of great practical importance, often depends on the truth of some number-theoretic conjecture, such as the Riemann hypothesis or the \PMlinkname{$abc$ conjecture}{ABCConjecture}.
+
+Some relevant number-theoretic algorithms include the number field sieve, the Lenstra-Lenstra-Lovasz algorithm, Schoof's algorithm for counting points on an elliptic curve, Pollard's rho method for factorization, and the Pollard $\rho$ and $\lambda$ methods for extracting discrete logarithms.
+
+\section*{Algebraic Geometry}
+
+Cryptosystems based on the discrete logarithm must choose the group in which to pose the prblem carefully. For the group of nonzero integers modulo a prime number, there is a family of algorithms called \emph{index calculus}.  These algorithms can be generalized to other groups, provided that these other groups have what is called a factor base: a list of elements such that a significant fraction of elements in the group can be factored efficiently into products of the elements of the factor base.  Such a procedure allows one to compute discrete logarithms of the entire factor base, and thence of any element, much more quickly than generic discrete logarithm methods. For the integers modulo a prime, a suitable factor base is a collection of small primes; as a result, one must choose the prime to be larger than about $2^{1000}$. For elliptic curves, no way of constructing a factor base is known, so elliptic curves having only about $2^{200}$ points are considered safe. For some other groups, such as abelian varieties or Jacobians of hyperelliptic curves, index calculus algorithms are known, although the best known algorithm for abelian varieties is extremely slow (it requires a Grobner basis calculation at every step).
+
+Elliptic curves are inherently geometric objects, although to study them over finite fields the tools of algebraic geometry are needed (in particular they are most naturally regarded as schemes).  So several attacks on elliptic curve discrete logarithms have applied geometric techniques to reduce the problem to one in which discrete logarithms can be applied. Such attacks have used the Weil pairing, the Tate pairing, and Weil restriction of scalars. All these attacks have succeeded only against a tiny proportion of exceptional curves, although it may be possible to extend the last attack.  In particular, it is possible to apply any of these attacks to an elliptic curve with an explicit isogeny to a susceptible elliptic curve. Algorithms exist which can construct such isogenies in some situations.
+
+\section*{References}
+
+Many books have been written on cryptography, and cryptanalysis, and many Web sites exist discussing both sides of this subject. The parts of this entry discussing various exotic cryptosystems were largely drawn from the \PMlinkexternal{SSH FAQ}{http://www.ssh.com/support/cryptography/algorithms/asymmetric.html}.  The cryptographic research literature is also surprisingly readable, and is usually available as e-prints.
+
+The cryptanalysis books, beginning with the World War II, and post-WW II Friedman books, are found on Aegean Park Press.
+%%%%%
+%%%%%
+\end{document}

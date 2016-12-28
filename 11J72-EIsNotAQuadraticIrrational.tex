@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EIsNotAQuadraticIrrational}
+\pmcreated{2013-03-22 14:04:06}
+\pmmodified{2013-03-22 14:04:06}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{e is not a quadratic irrational}
+\pmrecord{11}{35426}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J72}
+\pmclassification{msc}{26E99}
+\pmrelated{EIsIrrationalProof}
+\pmrelated{ErIsIrrationalForRinmathbbQsetminus0}
+\pmrelated{EIsTranscendental}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\begin{document}
+We wish to show that $e$ is not a quadratic irrational, i.e. $\mathbb{Q}(e)$ is not a quadratic extension of $\mathbb{Q}$.  To do this, we show that it can not be the root of any quadratic polynomial with integer coefficients.
+
+We begin by looking at the Taylor series for $e^x$:
+\begin{equation*}
+  e^x=\sum_{k=0}^{\infty}\frac{x^k}{k!}.
+\end{equation*}
+
+This converges for every $x\in\mathbb{R}$, so $e=\sum_{k=0}^{\infty}\frac{1}{k!}$ and $e^{-1}=\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!}$. Arguing
+by contradiction, assume $ae^2+be+c=0$ for integers
+$a$, $b$ and $c$. That is the same as $ae+b+ce^{-1}=0$. 
+
+Fix $n>\abs{a}+\abs{c}$, then $a,c\mid n!$ and $\forall k\le n$, $k!\mid n!\;$. 
+Consider
+\begin{align*}
+0=n!(ae+b+ce^{-1})&=an!\sum_{k=0}^{\infty}\frac{1}{k!}+b+ cn!\sum_{k=0}^{\infty}(-1)^k\frac{1}{k!}\\
+&=b+\sum_{k=0}^n (a+c(-1)^k)\frac{n!}{k!}+\sum_{k=n+1}^\infty (a+c(-1)^k)\frac{n!}{k!}
+\end{align*}
+Since $k!\mid n!$ for $k\le n$, the first two terms are integers. So the third term should be an integer. However,
+\begin{align*}
+\abs{\sum_{k=n+1}^\infty (a+c(-1)^k)\frac{n!}{k!}}&\le (\abs{a}+\abs{c})\sum_{k=n+1}^\infty \frac{n!}{k!}\\
+&=(\abs{a}+\abs{c})\sum_{k=n+1}^\infty \frac{1}{(n+1)(n+2)\dotsb k}\\
+&\le (\abs{a}+\abs{c})\sum_{k=n+1}^\infty (n+1)^{n-k}\\
+&=(\abs{a}+\abs{c})\sum_{t=1}^\infty (n+1)^{-t}\\
+&=(\abs{a}+\abs{c})\frac{1}{n}
+\end{align*}
+is less than $1$ by our assumption that $n>\abs{a}+\abs{c}$. Since there is only one integer which is less than $1$ in absolute value, this means that $\sum_{k=n+1}^\infty (a+c(-1)^k)\frac{1}{k!}=0$ for every sufficiently large $n$ which is not the case because
+\begin{equation*}
+\sum_{k=n+1}^\infty (a+c(-1)^k)\frac{1}{k!}-\sum_{k=n+2}^\infty (a+c(-1)^k)\frac{1}{k!}=(a+c(-1)^{n+1})\frac{1}{(n+1)!}
+\end{equation*}
+is not identically zero. The contradiction completes the proof.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMinkowskisTheorem}
+\pmcreated{2013-03-22 17:53:41}
+\pmmodified{2013-03-22 17:53:41}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Minkowski's theorem}
+\pmrecord{5}{40383}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11H06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Reg}{\mathfrak{K}}
+\newcommand{\Lat}{\mathcal{L}}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+Let $\Lat$ be an arbitrary lattice in $\Reals^n$ and let $\Delta$ be the area of a fundamental parallelepiped. Any convex region $\Reg$ symmetrical about the origin with $\mu(\Reg)>2^n\Delta$ contains a point of the lattice $\Lat$ other than the origin.
+\end{thm}
+
+\textbf{Proof.}\  Let $D$ be any fundamental parallelepiped. Then obviously
+\[\Reals^n = \coprod_{x\in\Lat} (D+x)\]
+(where $\coprod$ means disjoint union) and thus
+\[\frac{1}{2}\Reg = \coprod_{x\in\Lat} \left(\frac{1}{2}\Reg\cap(D+x)\right).\]
+Now, note that
+\[\frac{1}{2}\Reg\cap (D+x)=\left(\left(\frac{1}{2}\Reg-x\right)\cap D\right)-x\]
+(draw a picture!) and thus, since measure is preserved by translation,
+\[\mu\left(\frac{1}{2}\Reg\cap (D+x)\right)=\mu\left(\left(\frac{1}{2}\Reg-x\right)\cap D\right)\]
+so that if all the $\frac{1}{2}\Reg-x$ are disjoint, we have
+\[2^{-n}\mu(\Reg)=\mu\left(\frac{1}{2}\Reg\right) = \mu\left(\coprod_{x\in\Lat} \left(\frac{1}{2}\Reg\cap(D+x)\right)\right)=\sum_{x\in\Lat}\mu\left(\left(\frac{1}{2}\Reg-x\right)\cap D\right)\leq \mu(D) = \Delta\]
+which is a contradiction. Thus there must exist $x\neq y\in\Lat$ and $c_1,c_2\in \Reg$ such that 
+\[\frac{1}{2}c_1-x = \frac{1}{2}c_2-y.\]
+Thus $x-y=\frac{1}{2}(c_2-c_1)\in \Reg$ since $\Reg$ is convex and centrally symmetric, and certainly $x-y\in\Lat$, so we have found a nonzero element of $\Reg\cap\Lambda$.
+
+\begin{cor} Let $\Lat$ be an arbitrary lattice in $\Reals^n$ and let $\Delta$ be the area of a fundamental parallelepiped. Any compact convex region $\Reg$ symmetrical about the origin with $\mu(\Reg)\geq 2^n\Delta$ contains a point of the lattice $\Lat$ other than the origin.
+\end{cor}
+Note that this corollary requires that $\Reg$ be compact in addition to being convex and centrally symmetric, but slightly relaxes the volume condition on $\Reg$.
+
+\textbf{Proof.}\ Apply the previous case to $C_n=\left(1+\frac{1}{n}\right)C$, i.e. dilate $C$. This gives a sequence of points $x_1, x_2, \ldots, x_n, \ldots$ with $x_i\in \Lambda\cap C_i-\{0\}$. But $\Lambda$ is discrete, so there must be a subsequence constant at a nonzero element
+\[x \in \Lambda \bigcap \left( \bigcap_{i=1}^{\infty} C_i-\{0\} \right) = \Lambda \cap \overline{C}-\{0\}.\]
+Since $C$ is compact and thus closed, $x\in C$.
+%%%%%
+%%%%%
+\end{document}

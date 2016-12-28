@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalenceOfDefinitionsOfValuation}
+\pmcreated{2013-03-22 14:56:00}
+\pmmodified{2013-03-22 14:56:00}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of equivalence of definitions of valuation}
+\pmrecord{12}{36622}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R99}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{13F30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We will start with a lemma:
+
+\textbf{Lemma}  Let $| \cdot |$ be a valuation according to the definition of the parent entry with constant $C \le 2$.  Then $\left| \sum_{i=1}^n x_i \right| \le 2n \max_{i=1}^n |x_i|$.
+
+\emph{Proof:} \, We will start with the case where $n$ is a power of two: $n = 2^r$  We shall prove that $\left| \sum_{i=1}^{2^r} x_i \right| \le 2^r \max_{i=1}^n |x_i|$ by induction.  The assertion is certainly true when $n = 2$ by hypothesis.  Assume that it also holds when $n = 2^{r-1}$.  Then we have
+ $$\left| \sum_{i=1}^n x_i \right| = \left| \sum_{i=1}^{2^{r-1}} x_i + \sum_{i=2^{r-1}+1}^{2^r} x_i \right| \le 2 \cdot 2^{r-1} \max_{i=1}^{2^{r-1}} |x_i| + 2 \cdot 2^{r-1} \max_{i=2^{r-1}+1}^{2^r} |x_i| \le 2 \cdot 2^r \max_{i=1}^{2^r} |x_i|$$
+
+To deal with the case where $n$ is not a power of two, we shall pad the sum with zeros.  That is to say, we shall define $x_i = 0$ when $i > n$.  Let $r$ be the greatest integer such that $2^r \le n$.  Then $2 n > 2^r$ and we have 
+ $$\left| \sum_{i=1}^n x_i \right| = \left| \sum_{i=1}^{2^r} x_i \right| \le 2^r \max_{i=1}^{2^r} |x_i| \le 2n \max_{i=1}^n |x_i|$$
+\rightline{Q.E.D.}
+
+\textbf{Corollary}  Let $| \cdot |$ be a valuation according to the definition of the parent entry with constant $C \le 2$.  Then, if $n$ is a positive integer, $|n| < 2 n$.
+
+\emph{Proof:} \, Write $n = \sum_{i=1} ^n 1$.  Then, by the lemma,
+ $$|n| = \left| \sum_{i=1} ^n 1 \right| < 2n |1|$$
+However, since $| \cdot |$ is a valuation $|1| \neq 0$ since $1 \neq 0$ and $|1| = |1| \cdot |1|$ so $|1| = 1$, hence
+ $$|n| \le 2n.$$
+\rightline{Q.E.D.}
+
+Having established this lemma, we will now use it to prove the main theorem:
+
+\textbf{Theorem}  If $| \cdot |$ is a valuation according to the definition of the parent entry with constant $C \le 2$, then $| \cdot |$ satisfies the identity
+ $$| x + y | \le |x| + |y|.$$
+
+\emph{Proof:}  \, Let $n$ be a positive integer.  Then we have
+ $$|x + y|^n = |(x+y)^n| = \left| \sum_{m=0}^n {n \choose m} x^m y^{n-m} \right|$$
+Using the lemma, we can bound this:
+ $$|x + y|^n \le 2 (n+1) \max_{m=0}^n \left| {n \choose m} x^m y^{n-m} \right|$$
+Using the corollary to the lemma, we can bound the binomial coefficient to obtain
+ $$|x + y|^n \le 4 (n+1) \max_{m=0}^n {n \choose m} |x|^m |y|^{n-m}$$
+Using the obvious inequality
+ $$\max_{m=0}^n {n \choose m} |x|^m |y|^{n-m} \le \sum_{m=0}^n {n \choose m} |x|^m |y|^{n-m},$$
+we obtain
+ $$|x + y|^n \le \sum_{m=0}^n 4 (n+1) {n \choose m} |x|^m |y|^{n-m} = 4 (n+1) (|x| + |y|)^n.$$
+
+If either $x = 0$ or $y = 0$, then the theorem to be proven is trivial.  If not, then $|x| + |y| \neq 0$ and we can divide by $(|x| + |y|)^n$ to obtain
+ $$\left( {|x+y| \over |x| + |y|} \right)^n \le 4 (n+1)$$
+
+By the theorem on the growth of exponential function, it follows that this inequality could not hold for all $n$ unless
+ $${|x+y| \over |x| + |y|} \le 1,$$
+in other word, unless $|x + y| \le |x| + |y|$.
+\rightline{Q.E.D.}
+%%%%%
+%%%%%
+\end{document}

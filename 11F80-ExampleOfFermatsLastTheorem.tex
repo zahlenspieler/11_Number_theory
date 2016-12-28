@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfFermatsLastTheorem}
+\pmcreated{2013-03-22 14:09:51}
+\pmmodified{2013-03-22 14:09:51}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{example of Fermat's last theorem}
+\pmrecord{9}{35588}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11F80}
+\pmclassification{msc}{14H52}
+\pmclassification{msc}{11D41}
+\pmrelated{InfiniteDescent}
+\pmrelated{X4Y4z2HasNoSolutionsInPositiveIntegers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+Fermat stated that for any $n > 2$ the Diophantine equation $x^n+y^n=z^n$ has no solution in positive integers. For $n=4$ this follows from the following
+\begin{theorem}
+$x^4+y^4 =z^2$ has no solution in positive integers.
+\end{theorem}
+\begin{proof}
+Suppose we had a positive $z$ such that $x^4+y^4=z^2$ holds. We may assume $\gcd(x,y,z)=1$. Then $z$ must be odd, and $x,y$ have opposite parity. Since $(x^2)^2 +(y^2)^2 =z^2$ is a primitive Pythagorean triple, we have
+\begin{equation}
+\label{eq1}
+x^2=2pq, y^2 =q^2-p^2, z=p^2+q^2
+\end{equation}
+where $p,q \in \N$, $p<q$ are coprime and have opposite parity. Since $y^2+p^2=q^2$ is a primitive Pythagorean triple, we have coprime $s,r \in \N$, $s<r$ of opposite parity satisfying
+\begin{equation}
+\label{eq2}
+q=r^2+s^2, y=r^2-s^2, p=2rs.
+\end{equation}
+From $\gcd(r^2, s^2)=1$ it follows that $\gcd(r^2, r^2+s^2)=1=\gcd(s^2, r^2+s^2)$, which implies $\gcd(rs, r^2+s^2)=1$. Since $\left(\frac{x}{2}\right)^2 = \frac{pq}{2} = rs(r^2+s^2)$ is a square, each of $r,s,r^2+s^2$ is a square.
+
+Setting $Z^2 =q$, $X^2 =r$, $Y^2=s$ $q=r^2+s^2$ leads to
+\begin{equation}
+\label{eq3}
+Z^2=X^4+Y^4
+\end{equation}
+where $Z^2=q<q^2+p^2=z <z^2$. Thus, equation \ref{eq3} gives a solution where $Z< z$. Applying the above steps repeatedly would produce an infinite sequence $z > Z > z_2 > \ldots$ of positive integers, each of which was the sum of two fourth powers. But there cannot be infinitely many positive integers smaller than a given one; in particular this contradicts to the fact that there must exist a smallest $z$ for which (\ref{eq1}) is solvable. So there are no solutions in positive integers for this equation.
+\end{proof}
+
+A consequence of the above theorem is that the area of a right triangle with integer sides is not a square; equivalently, a right triangle with rational sides has an area which is not the square of a rational.
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{parity}
+%%%%%
+%%%%%
+\end{document}

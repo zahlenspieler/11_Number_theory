@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGeneralizedRuizsIdentity}
+\pmcreated{2013-03-22 14:32:02}
+\pmmodified{2013-03-22 14:32:02}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{proof of generalized Ruiz's identity}
+\pmrecord{8}{36078}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{05A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\begin{document}
+\begin{thm}
+Consider the polynomials $c_{i,j}(x)=(x+i)^{j}-(x+i-1)^{j}$. Then, for every positive natural number $n$,
+\[ \det (c_{i,j})_{i,j=1}^n = \prod_{k=1}^{n} k! \]
+\end{thm}
+\begin{proof}
+Consider the matrices $M,C$ defined by $M_{i,j}=(-1)^j{i-1 \choose j-1}$ and $C_{i,j}=(x+i)^j-(x+i-1)^j$.
+\[\begin{aligned}
+(MC)_{i,j}&=\sum_{k=1}^n (-1)^k {i-1 \choose k-1}\bigl((x+k)^j-(x+k-1)^j\bigr) \\
+          &=\sum_{k=0}^n (-1)^k \left({i-1 \choose k-1}+{i-1 \choose k}\right)(x+k)^j \\
+          &=\sum_{k=0}^n (-1)^k {i \choose k}(x+k)^j \\
+          &=(-1)^j\sum_{k=0}^i (-1)^{k} {i \choose k}(-x-k)^j
+\end{aligned}\]
+Therefore, by Ruiz's identity, $(MC)_{i,i}=(-1)^i i!$ for every $i \in \{1,...,d\}$ and $(MC)_{i,j}=0$ for every $i,j \in \{1,...,n\}$ such that $i>j$. This
+means that $MC$ is an upper triangular matrix whose main diagonal is $-1!,2!,-3!,...,(-1)^n n!$. Since the determinant of such a matrix is
+the product of the elements in the main diagonal, we get that $\det MC=(-1)^{n} \prod_{k=1}^{n}k!$. It is easy to see that $M$ itself is lower
+triangular with determinant $(-1)^n$. Therefore $\det C=\prod_{k=1}^{n}k!$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

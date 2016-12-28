@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEulersCriterion}
+\pmcreated{2013-03-22 12:41:53}
+\pmmodified{2013-03-22 12:41:53}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Euler's criterion}
+\pmrecord{7}{32980}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\im}{\mathit{i}}
+
+\newcommand{\angbr}[1]{\left< #1 \right>}
+\newcommand{\rndbr}[1]{\left( #1 \right)}
+\newcommand{\sqrbr}[1]{\left[ #1 \right]}
+\newcommand{\barbr}[1]{\left| #1 \right|}
+\newcommand{\curbr}[1]{\left\{ #1 \right\}}
+\newcommand{\abs}[1]{{\left| #1 \right|}}
+\newcommand{\setof}[1]{\curbr{\ #1\ }}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\divides}{\mid}
+\newcommand{\union}{\cup}
+\newcommand{\intersection}{\cap}
+\newcommand{\bigunion}{\bigcup}
+\newcommand{\bigintersection}{\bigcap}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+
+\newcommand{\st}{\textrm{such that}}
+\newcommand{\WLoG}{\textrm{ \scriptsize W.L.O.G. }}
+\newcommand{\ord}[1]{\Theta\rndbr{ #1 }}
+
+\renewcommand{\mod}[1]{\;\rndbr{\mathrm{mod}\ #1}}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\begin{document}
+\emph{(All congruences are modulo $p$ for the proof; omitted for clarity.)}
+
+Let
+\[ x = a^{(p-1)/2} \]
+
+\noindent Then $x^2 \equiv 1$ by Fermat's Little Theorem. Thus:
+\[ x \equiv \pm 1 \]
+
+Now consider the two possibilities:
+
+\begin{itemize}
+
+\item If $a$ is a quadratic residue then by definition, $a \equiv b^2$ for some
+$b$. Hence:
+\[ x \equiv a^{(p-1)/2} \equiv b^{p-1} \equiv 1 \]
+
+\item It remains to show that $a^{(p-1)/2} \equiv -1$ if $a$ is a quadratic
+non-residue. We can proceed in two ways:
+
+\begin{description}
+
+\item[Proof (a)] Partition the set $\setof{1, \ldots, p - 1}$ into
+pairs $\setof{c, d}$ \st $c d \equiv a$. Then $c$ and $d$ must
+always be distinct since $a$ is a non-residue. Hence, the product of
+the union of the partitions is:
+\[ (p - 1)! \equiv a^{(p-1)/2} \equiv -1 \]
+
+\noindent and the result follows by Wilson's Theorem.
+
+\item[Proof (b)] The equation:
+\[ z^{(p-1)/2} \equiv 1 \]
+
+\noindent has at most $(p-1)/2$ roots. But we already know of $(p-1)/2$
+distinct roots of the above equation, these being the quadratic residues modulo
+$p$. So $a$ can't be a root, yet $a^{(p-1)/2} \equiv \pm 1$. Thus we must have:
+\[ a^{(p-1)/2} \equiv -1 \]
+
+\end{description}
+
+\end{itemize}
+
+\noindent QED.
+%%%%%
+%%%%%
+\end{document}

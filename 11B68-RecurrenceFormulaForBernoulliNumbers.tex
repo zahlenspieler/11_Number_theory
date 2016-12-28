@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RecurrenceFormulaForBernoulliNumbers}
+\pmcreated{2013-03-22 17:46:19}
+\pmmodified{2013-03-22 17:46:19}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{recurrence formula for Bernoulli numbers}
+\pmrecord{4}{40228}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11B68}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This article establishes a well-known recurrence formula for the Bernoulli numbers.
+
+The Bernoulli polynomials $b_r(x), r\geq 1$ can be written explicitly as
+\[b_r(x) = \sum_{k=1}^r \binom{r}{k}B_{r-k}x^k + B_r\]
+(see \PMlinkname{this article}{CoefficientsOfBernoulliPolynomials}).
+
+For $r\geq 2$, we have
+\[0=\int_0^1 b_{r-1}(x)dx = \frac{1}{r}b_r(x)\big\lvert_0^1=\frac{1}{r}(b_r(1)-b_r(0))\]
+and thus
+\[B_r=b_r(0)=b_r(1)=\sum_{k=1}^r \binom{r}{k}B_{r-k} + B_r\]
+
+It follows that (still when $r\geq 2$)
+\[\sum_{k=1}^r \binom{r}{k}B_{r-k}=0\]
+so that
+\[\binom{r}{1}B_{r-1} = -\sum_{k=2}^r \binom{r}{k}B_{r-k}\]
+Replacing $r$ by $r+1$ and simplifying, we see that for $r\geq 1$,
+\[B_r = \frac{-1}{r+1}\sum_{k=2}^{r+1}\binom{r+1}{k}B_{r+1-k} = \frac{-1}{r+1}\sum_{k=1}^r\binom{r+1}{k+1}B_{r-k}\]
+
+%%%%%
+%%%%%
+\end{document}

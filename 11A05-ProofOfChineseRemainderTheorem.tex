@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChineseRemainderTheorem}
+\pmcreated{2013-03-22 12:57:20}
+\pmmodified{2013-03-22 12:57:20}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{proof of Chinese remainder theorem}
+\pmrecord{8}{33316}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+\pmclassification{msc}{11N99}
+\pmclassification{msc}{13A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% ideal in a commutative ring
+\newcommand{\cidl}[1]{\mathfrak{{#1}}}
+\begin{document}
+First we prove that $\cidl{a}_i + \prod_{j \neq i} \cidl{a}_j = R$ for each $i$.  Without loss of generality, assume that $i = 1$.  Then
+$$
+R = (\cidl{a}_1 + \cidl{a}_2) (\cidl{a}_1 + \cidl{a}_3) \dotsm (\cidl{a}_1 + \cidl{a}_n) ,
+$$
+since each factor $\cidl{a}_1 + \cidl{a}_j$ is $R$.  Expanding the product, each term will contain $\cidl{a}_1$ as a factor, except the term $\cidl{a}_2 \cidl{a}_2 \dotsm \cidl{a}_n$.  So we have
+$$
+(\cidl{a}_1 + \cidl{a}_2) (\cidl{a}_1 + \cidl{a}_3) \dotsm (\cidl{a}_1 + \cidl{a}_n) \subseteq \cidl{a}_1 + \cidl{a}_2 \cidl{a}_2 \dotsm \cidl{a}_n ,
+$$
+and hence the expression on the right hand side must equal $R$.
+
+Now we can prove that $\prod \cidl{a}_i = \bigcap \cidl{a}_i$, by induction.  The statement is trivial for $n = 1$.  For $n = 2$, note that
+$$
+\cidl{a}_1 \cap \cidl{a}_2 = (\cidl{a}_1 \cap \cidl{a}_2) R = (\cidl{a}_1 \cap \cidl{a}_2) (\cidl{a}_1 + \cidl{a}_2)
+\subseteq \cidl{a}_2 \cidl{a}_1 + \cidl{a}_1 \cidl{a}_2 = \cidl{a}_1 \cidl{a}_2 ,
+$$
+and the reverse inclusion is obvious, since each $\cidl{a}_i$ is an ideal.
+Assume that the statement is proved for $n-1$, and condsider it for $n$.  Then
+$$
+\bigcap_1^n \cidl{a}_i = \cidl{a}_1 \cap \bigcap_2^n \cidl{a}_i = \cidl{a}_1 \cap \prod_2^n \cidl{a}_i ,
+$$
+using the induction hypothesis in the last step.
+But using the fact proved above and the $n = 2$ case, we see that
+$$
+\cidl{a}_1 \cap \prod_2^n \cidl{a}_i = \cidl{a}_1 \cdot \prod_2^n \cidl{a}_i = \prod_1^n \cidl{a}_i .
+$$
+
+Finally, we are ready to prove the \PMlinkescapetext{Chinese remainder theorem}.  Consider the ring homomorphism $R \to \prod R/\cidl{a}_i$ defined by projection on each component of the product: $x \mapsto (\cidl{a}_1 + x, \cidl{a}_2 + x, \dots , \cidl{a}_n + x)$.  It is easy to see that the kernel of this map is $\bigcap \cidl{a}_i$, which is also $\prod \cidl{a}_i$ by the earlier part of the proof.  So it only remains to show that the map is surjective.
+
+Accordingly, take an arbitrary element $(\cidl{a}_1 + x_1, \cidl{a}_2 + x_2, \dots, \cidl{a}_n + x_n)$ of $\prod R/\cidl{a}_i$.  Using the first part of the proof, for each $i$, we can find elements $y_i \in \cidl{a}_i$ and $z_i \in \prod_{j \neq i} \cidl{a}_j$ such that $y_i + z_i = 1$.  Put
+$$
+x = x_1 z_1 + x_2 z_2 + \dots + x_n z_n.
+$$
+Then for each $i$,
+$$\cidl{a}_i + x = \cidl{a}_i + x_i z_i,$$
+since $x_j z_j \in \cidl{a}_i$ for all $j \neq i$,
+$$=\cidl{a}_i + x_i y_i + x_i z_i,$$
+since $x_i y_i \in \cidl{a}_i$,
+$$=\cidl{a}_i + x_i (y_i + z_i) = \cidl{a}_i + x_i \cdot 1 = \cidl{a}_i + x_i.$$
+Thus the map is surjective as required, and induces the isomorphism
+$$\frac{R}{\prod \cidl{a}_i} \to \prod \frac{R}{\cidl{a}_i}.$$
+%%%%%
+%%%%%
+\end{document}

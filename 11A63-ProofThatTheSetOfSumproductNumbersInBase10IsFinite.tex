@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheSetOfSumproductNumbersInBase10IsFinite}
+\pmcreated{2013-03-22 15:46:58}
+\pmmodified{2013-03-22 15:46:58}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that the set of sum-product numbers in base 10 is finite}
+\pmrecord{6}{37740}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+\pmsynonym{Proof that the set of sum-product numbers in decimal is finite}{ProofThatTheSetOfSumproductNumbersInBase10IsFinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This was first proven by David Wilson, a major contributor to Sloane's Online Encyclopedia of Integer Sequences.
+
+First, Wilson proved that $10^{m - 1} \le n$ (where $m$ is the number of digits of $n$) and that $$\sum_{i = 1}^m d_i \le 9m$$ and $$\prod_{i = 1}^m d_i \le 9^m$$. The only way to fulfill the inequality $10^{m - 1} \le 9^m9m$ is for $m \le 84$.
+
+Thus, a base 10 sum-product number can't have more than 84 digits. From the first $10^{84}$ integers, we can discard all those integers with 0's in their decimal representation. We can further eliminate those integers whose product of digits is not of the form $2^i3^j7^k$ or $3^i5^j7^k$.
+
+Having thus reduced the number of integers to consider, a brute force search by computer yields the finite set of sum-product numbers in base 10: 0, 1, 135 and 144.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,242 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrunsPureSieve}
+\pmcreated{2013-03-22 14:10:54}
+\pmmodified{2013-03-22 14:10:54}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Brun's pure sieve}
+\pmrecord{11}{35608}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11N36}
+\pmclassification{msc}{11N35}
+%\pmkeywords{inclusion-exclusion}
+%\pmkeywords{twin primes}
+%\pmkeywords{Bonferroni inequalities}
+\pmrelated{PrincipleOfInclusionExclusion}
+\pmrelated{SieveOfEratosthenes2}
+\pmrelated{BrunsConstant}
+\pmrelated{BonferroniInequalities}
+\pmdefines{combinatorial sieve}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem*{theorem}{Theorem}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{information}
+\PMlinkescapeword{order}
+\PMlinkescapeword{name}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{observation}
+
+In the first quarter of the twentieth century Viggo Brun developed
+an extension of the sieve of Eratosthenes that yielded good
+estimates on the number of elements of a set $\mathcal{A}$ that
+are not \PMlinkname{divisible}{Divisibility} by any of the primes $p_1,\dotsc,p_k$ provided
+only that $\mathcal{A}$ is ``sufficiently regularly distributed''
+modulo these primes. That allowed him to prove that the sum of
+reciprocals of twin primes converges (the limit is now known as
+Brun's constant), and that every sufficiently large even number is
+a sum of two numbers each having at most $9$ prime factors. In
+what follows we describe the simplest form of Brun's sieve, known
+as Brun's pure sieve.
+
+The \PMlinkname{sieve of Eratosthenes}{SieveOfEratosthenes2} is
+based on the principle of inclusion-exclusion in the form
+\begin{align}\notag
+\sum_{n\in\mathcal{A}}\sum_{\substack{p_1\nmid n\\\dots\\p_k\nmid
+n}}1&=\sum_{n\in\mathcal{A}}\sum_{(n,p_1\dotsb p_k)=1}
+1=\sum_{n\in\mathcal{A}} \sum_{d\mid (n,p_1\dotsb p_k)}\mu(d)\\
+\notag&=\sum_{d\mid p_1\dotsb
+p_k}\mu(d)\sum_{\substack{n\mid\mathcal{A}\\d\mid n}}1=\sum_{d\mid
+p_1\dotsb p_k}\mu(d)A_d\\\label{eq:incl_ex} &=A_1-\sum_{p\mid
+p_1\dotsb p_k} A_p+\sum_{pq\mid p_1\dotsb p_k} A_{pq}+\dotsb.
+\end{align}
+Brun's sieve is based on the observation that the partial sums 
+of~\eqref{eq:incl_ex} alternatively overcount and
+undercount the number of elements of $\mathcal{A}$ counted by the
+left side, that is,
+\begin{equation}\label{eq:bonf_ineq}
+\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq
+2h-1}}\mu(d)A_d\leq \sum_{n\in\mathcal{A}}\sum_{\substack{p_1\nmid
+n\\\dots\\p_k\nmid n}}1\leq \sum_{\substack{d\mid p_1\dotsb
+p_k\\\nu(d)\leq 2h}} \mu(d)A_d
+\end{equation}
+where $\nu(d)$ denotes the number of \PMlinkname{prime}{Prime} factors of $d$. In
+applications $A_d$ can usually be approximated by a multiple of a
+multiplicative function, that is,
+\begin{equation*}
+A_d=X w(d)/d+R_d
+\end{equation*}
+where $w(d)$ is some multiplicative function of $d$, and $R_d$ is
+small compared to $X w(d)/d$. Then the estimate
+in~\eqref{eq:bonf_ineq} takes the form
+\begin{align}\notag
+\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq t}}
+\mu(d)A_d&=\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq t}}
+\mu(d)(X w(d)/d+R_d)
+\\\label{eq:intmd}
+&=X\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq t}} \mu(d)
+\frac{w(d)}{d}+O\left(\sum_{\substack{d\mid p_1\dotsb
+p_k\\\nu(d)\leq t}} R_d
+\right)
+\end{align}
+If the truncated sum is a good approximation to the full sum, then
+this formula is an improvement over the 
+\PMlinkname{sieve of Eratosthenes}{SieveOfEratosthenes2} because the sum over error
+terms $R_d$ is shorter.
+
+Since $u^{\nu(d)-t}$ is greater than $1$ for every $u>1$ and every
+$d$ such that $\nu(d)>t$, we have that
+\begin{align*}
+\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq t}} \mu(d)
+\frac{w(d)}{d}&=\sum_{d\mid p_1\dotsb p_k} \mu(d)
+\frac{w(d)}{d}+O\left(\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)>
+t}} \frac{w(d)}{d}\right)\\
+&=\sum_{d\mid p_1\dotsb p_k} \mu(d)
+\frac{w(d)}{d}+O\left(\sum_{d\mid p_1\dotsb p_k}
+\frac{w(d)}{d}u^{\nu(d)-t}\right)\\
+&=\sum_{d\mid p_1\dotsb p_k} \mu(d)
+\frac{w(d)}{d}+O\left(u^{-t}\sum_{d\mid p_1\dotsb p_k}
+\frac{w(d)}{d}u^{\nu(d)}\right)\\
+\intertext{and since the sum of a multiplicative function can be
+written as an Euler product, we get} &=\prod_{p\in \mathcal{P}}
+\left(1-\frac{w(p)}{p}\right)+O\left(u^{-t}\prod_{p\in
+\mathcal{P}} \left(1+u\frac{w(p)}{p}\right) \right)\\
+&=\prod_{p\in \mathcal{P}}
+\left(1-\frac{w(p)}{p}\right)+O\left(u^{-t}\prod_{p\in
+\mathcal{P}} \left(1+\frac{w(p)}{p}\right)^u \right)\\
+\intertext{to minimize the error term we choose
+$u=t/\sum_{p\in\mathcal{P}} \log(1+\frac{w(p)}{p})$, and get}
+&=\prod_{p\in \mathcal{P}}
+\left(1-\frac{w(p)}{p}\right)+O\left(\frac{1}{t}\sum_{p\in\mathcal{P}}
+\frac{w(p)}{p} \right)^t
+\end{align*}
+Combining this with~\eqref{eq:intmd} and~\eqref{eq:bonf_ineq} we
+obtain
+\begin{equation}
+\sum_{n\in\mathcal{A}}\sum_{\substack{p_1\nmid n\\\dots\\p_k\nmid
+n}}1=X\prod_{p\in \mathcal{P}}
+\left(1-\frac{w(p)}{p}\right)+X\cdot
+O\left(\frac{1}{t}\sum_{p\in\mathcal{P}} \frac{w(p)}{p}
+\right)^t+O\left(\sum_{\substack{d\mid p_1\dotsb p_k\\\nu(d)\leq
+t}} R_d\right)\label{eq:brunpure}
+\end{equation}
+provided that $u=t/\sum_{p\in\mathcal{P}}
+\log(1+\frac{w(p)}{p})\geq 1$.
+
+\emph{Example. (Upper bound on the number of primes.)} If we set
+$\mathcal{P}$ to be all the primes less $y$, and
+$\mathcal{A}=\{1,2,\dotsc,x\}$, then the right hand side
+of~\eqref{eq:brunpure} provides an upper bound for the number of
+primes between $y$ and $x$.
+
+We have that $w(d)=1$ and $R_d\leq 1$. The second error term
+in~\eqref{eq:brunpure} has at most $y^t$ summands, and the first
+error term is bounded by $(\frac{c}{t}\log\log y)^t$ by Merten's
+theorem. Thus, the estimate~\eqref{eq:brunpure} becomes
+\begin{equation*}
+\pi(x)-\pi(y)\leq x\frac{e^{-\gamma}+o(1)}{\log y}+x\cdot
+O\left(\frac{1}{t}\log\log y\right)^t+O(y^t)
+\end{equation*}
+In order to squeeze out the best upper bound on the number of primes
+not exceeding $x$ we have to minimize the right side of the
+inequality above. The nearly optimal choice is $t=c\log \log x$,
+and $y=x^{1/2c\log\log x}$ for a sufficiently large constant $c$.
+With this choice we obtain
+\begin{equation*}
+\pi(x)\leq O\left(\frac{x\log\log x}{\log x}\right).
+\end{equation*}
+This inequality is stronger than the one obtained by an
+application of the \PMlinkname{sieve of Eratosthenes}{SieveOfEratosthenes2}.
+
+\emph{Example. (Upper bound on the number of twin primes.)} If
+$p<n$ and $p\mid n(n+2)$, then the integers $n$ and $n+2$ cannot
+both be primes. Let $\mathcal{P}$ be as above, and set
+$\mathcal{A}=\{ n(n+1) : n\in [y..x]\}$. Then $w(2)=1$, and
+$w(p)=2$ if $p>2$. The remainder $R_d$ does not exceed
+$2^{\nu(d)}$. Like above we obtain
+\begin{equation*}
+\pi_2(x)-\pi_2(y)\leq x\frac{c}{(\log y)^2}+x\cdot
+O\left(\frac{1}{t}\log\log y\right)^t+O((2y)^t)
+\end{equation*}
+where $\pi_2(x)$ denotes the number of twin primes not exceeding
+$x$. Upon setting $t=c\log \log x$, and $y=x^{1/2c\log\log x}$ we
+obtain
+\begin{equation*}
+\pi_2(x)\leq O\left(\frac{x(\log\log x)^2}{(\log x)^2}\right).
+\end{equation*}
+This is the original result for which Viggo Brun developed the
+sieve now bearing his name. This result can be put in following
+striking form:
+\begin{theorem}The sum
+\begin{equation*}
+\sum_{p,p+2\text{ primes}} \left(\frac{1}{p}+\frac{1}{p+2}\right)
+\end{equation*}
+converges.
+\end{theorem}
+
+\section*{General combinatorial sieve}
+The inequality~\eqref{eq:bonf_ineq} was based on the observation
+that
+\begin{equation}\label{eq:gen_ineq}
+\sum_{d\mid n}\mu(d)\chi_-(d)\leq \sum_{d\mid n} \mu(d)\leq
+\sum_{d\mid n}\mu(d)\chi_+(d)
+\end{equation}
+where $\chi_-$ is the characteristic function of the set of
+integers with no more than $2h-1$ prime factors, and $\chi_+$ is
+the characteristic function of the set of integers with no more
+than $2h$ prime factors. It is possible to choose different
+functions $\chi_-$ and $\chi_+$ that satisfy the
+inequality~\eqref{eq:gen_ineq} to obtain bounds similar
+to~\eqref{eq:brunpure}. The problem of optimal choice of these
+functions in general is very hard. For more detailed information
+on Brun's sieve and sieves in general one should consult the
+monographs
+\cite{cite:greaves_sieves,cite:halberstam_richert_sieves,cite:hooley_appsievemethods}.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:greaves_sieves}
+George Greaves.
+\newblock {\em Sieves in number theory}.
+\newblock Springer, 2001.
+\newblock \PMlinkexternal{Zbl 1003.11044}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=1003.11044}.
+
+\bibitem{cite:halberstam_richert_sieves}
+H.~Halberstam and H.-E. Richert.
+\newblock {\em Sieve methods}, volume~4 of {\em London Mathematical Society
+  Monographs}.
+\newblock 1974.
+\newblock \PMlinkexternal{Zbl 0298.10026}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0298.10026}.
+
+\bibitem{cite:hooley_appsievemethods}
+C.~Hooley.
+\newblock {\em Application of sieve methods to the theory of numbers},
+  volume~70 of {\em Cambridge Tracts in Mathematics}.
+\newblock Cambridge Univ. Press, 1976.
+\newblock \PMlinkexternal{Zbl 0327.10044}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0327.10044}.
+
+\bibitem{cite:tenenbaum_analytic_prob_numth}
+G{\'e}rald Tenenbaum.
+\newblock {\em Introduction to Analytic and Probabilistic Number Theory},
+  volume~46 of {\em Cambridge Studies in Advanced Mathematics}.
+\newblock Cambridge Univ. Press.
+\newblock \PMlinkexternal{Zbl 0831.11001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0831.11001}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

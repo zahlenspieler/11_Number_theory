@@ -1,0 +1,204 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationOfRealNumbers}
+\pmcreated{2013-03-22 19:10:36}
+\pmmodified{2013-03-22 19:10:36}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{representation of real numbers}
+\pmrecord{10}{42084}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+\pmrelated{UniquenessOfDigitalRepresentation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{lemma*}{Lemma}
+
+\begin{document}
+\subsection{Introduction}
+It is well-known that there are several methods to introduce the {\em real numbers}. We shall follow an inductive method which is instructive as well as elementary. Apart from that such treatment is modern, interesting and is obtained through two theorems and a lemma, which are relatively easy to understand. So that our aim will be to prove the above propositions.  Our starting point is the following theorem.
+\begin{theorem}
+Let $\{a_i\}$ be a sequence of positive integers such that $a_i>1$, for all $i\geq 1$. Then any real number $\rho$ is uniquely expressible by
+\begin{equation}
+\rho = b_0 + \sum_{i=1}^\infty \frac{b_i}{\prod_{j=1}^i a_j},
+\end{equation}
+where the $b_i$ are integers satisfying the inequalities $0\leq b_i\leq a_i-1$ for all $i\geq 1$, and $b_i<a_i-1$ for infinitely many $i$.
+\end{theorem} 
+\begin{proof}
+Let $\{b_i\}_0^\infty$ be a sequence of integers and $\{\rho_i\}_1^\infty$ a sequence of real numbers defined by the equations
+\begin{equation}
+b_0 = [\rho], \qquad \rho_1 = \rho - b_0,
+\end{equation}
+and for all $i\geq 1$
+\begin{equation}
+b_i = [a_i\rho_i], \qquad \rho_{i+1} = a_i\rho_i - b_i,
+\end{equation}
+denoting $[\cdot]$ the integral part function. Clearly $\rho_{i+1}$ is the fractional part of $a_i\rho_i$, therefore for all $i\geq 1$ we have,
+\begin{equation}
+0 \leq \rho_i < 1.
+\end{equation}
+Next we multiply (4) by $a_i$ whence $0 \leq a_i\rho_i < a_i$, but $b_i = [a_i\rho_i]$, so that
+\begin{equation*}
+0 \leq b_i \leq a_i - 1,
+\end{equation*}
+an inequality required by the theorem. \\
+Now, by (3) and (4), and applying induction on $\rho_i$, we can establish that
+\begin{equation*}
+\rho=b_0+\rho_1=b_0+\frac{b_1}{a_1}+\frac{\rho_2}{a_1}=b_0+\frac{b_1}{a_1}+\frac{b_2}{a_1a_2}+\frac{\rho_3}{a_1a_2}
+\end{equation*}
+\begin{equation}
+= \cdots = b_0 + \sum_{i=1}^n \frac{b_i}{\prod_{j=1}^i a_j} + \frac{\rho_{n+1}}{\prod_{j=1}^n a_j}.
+\end{equation}
+Now we define
+\begin{equation*}
+d_n = b_0 + \sum_{i=1}^n \frac{b_i}{\prod_{j=1}^i a_j},
+\end{equation*}
+thus from (4), (5) and by the hypothesis $a_i \geq 2$, we arrive to
+\begin{equation*}
+0 \leq \rho - d_n =  \frac{\rho_{n+1}}{\prod_{j=1}^n a_j} < \frac{1}{2^n},
+\end{equation*}
+because the fractional part $\rho_{n+1} < 1$. Then if we let $n$ grows beyond of any bound, $\rho - d_n$ will be so close to zero as we want and such a observation implies the representation (1). \\
+We still need to prove the another inequality of the theorem, i.e. $b_i < a_i - 1$ for infinitely many $i$, but also the uniqueness of representation (1). To do that we need to make use of the identity
+\begin{equation}
+\sum_{i=1}^\infty \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = 1.
+\end{equation}
+(It is legitimate to consider this identity as a lemma, as we need it to prove this theorem as well as the next one).\\
+We shall prove later this identity. Let us prove the inequality $b_i < a_i - 1$ by \emph{tertio excluso}; thus suppose that there is a fixed integer $n$ such that $b_i = a_i - 1$ for all $i > n$. From (1) and (6) we get
+\begin{align*}
+\rho ={}& b_0 + \sum_{i=1}^n \frac{b_i}{\prod_{j=1}^i a_j} + \sum_{i=n+1}^\infty \frac{a_i - 1}{\prod_{j=1}^i a_j} \\ 
+     ={}& b_0 + \sum_{i=1}^n\frac{b_i}{\prod_{j=1}^i a_j} + \frac{1}{\prod_{j=1}^n a_j}\sum_{i=1}^\infty\frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} \\
+     ={}& b_0 + \sum_{i=1}^n\frac{b_i}{\prod_{j=1}^i a_j} + \frac{1}{\prod_{j=1}^n a_j},
+\end{align*}
+and comparing this with (5) one realizes that $\rho_{n+1} = 1$, contradicting (4). \\
+Finally we must prove the uniqueness of the representation (1). So that we suppose
+\begin{equation*}
+\rho = c_0 + \sum_{i=1}^\infty \frac{c_i}{\prod_{j=1}^i a_j}.
+\end{equation*}
+Here the integers $c_i$ satisfy the same conditions as do the $b_i$. It is necessary (and sufficient!) to show that $c_i = b_i$ for every $i$. The condition $c_i < a_i - 1$, for infinitely many $i$, altogether with the identity (6) imply that
+\begin{equation*}
+\sum_{i=1}^\infty \frac{c_i}{\prod_{j=1}^i a_j} < 1,
+\end{equation*}
+so we see that $c_0$ is the integral part of $\rho$, i.e. $c_0 = [\rho]$, but also from (2) $b_0 = [\rho]$, therefore $c_0 = b_0$. Next we shall again use \emph{tertio excluso}. On this way let us suppose that for some $n \geq 1$ the pair $b_n$ and $c_n$ are unequal. There is no loss of generality in assuming that $n$ is the smallest integer with this property (which is justified by a simple inductive argument), and that $b_n > c_n$, so that $b_n - c_n \geq 1$. Thus we have
+\begin{equation*}
+\sum_{i=n}^\infty \frac{b_i}{\prod_{j=1}^i a_j} = \sum_{i=n}^\infty \frac{c_i}{\prod_{j=1}^i a_j}.
+\end{equation*}
+(There is no contradiction at all in this equality, as it is easily seen in the next below equation). \\
+It is obvious that these series are absolutely convergent, so we may rearrange terms to obtain
+\begin{equation*}
+\sum_{i=n+1}^\infty \frac{c_i-b_i}{\prod_{j=1}^i a_j} = \frac{b_n-c_n}{\prod_{j=1}^n a_j}\geq\frac{1}{\prod_{j=1}^n a_j}.
+\end{equation*}
+But then recalling that $c_i < a_i - 1$, we see tat $c_i - b_i < a_i - 1$. From this fact and (6), we can write
+\begin{equation*}
+\sum_{i=n+1}^\infty \frac{c_i-b_i}{\prod_{j=1}^i a_j}<\sum_{i=n+1}^\infty \frac{a_i-1}{\prod_{j=1}^i a_j}
+\end{equation*}
+\begin{equation*}
+= \frac{1}{\prod_{j=1}^n a_j}\sum_{i=1}^\infty \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = \frac{1}{\prod_{j=1}^n a_j}.
+\end{equation*}
+This is a contradiction with respect to the inequality found before, thus the proof of this theorem is complete.
+\end{proof}
+\subsection{Some implications}
+First we remarked that Theorem 1 is a generalization of the standard decimal expansion for a real number $\rho$. This may be seen by taking all the integers $a_i = 10$. Thus, if $\rho > 0$, (1) gives the decimal representation
+\begin{equation}
+\rho = b_0 + \sum_{i=1}^\infty \frac{b_i}{10^i} = b_0.b_1b_2 \cdots.
+\end{equation}
+Second, if $\rho <0$, we must write its decimal representation on the form (7)and then changing all signs.
+Third, any real $\rho$ could have an ambiguous decimal representation, e.g. $\rho = 1.5699 \cdots$, having an infinite successive sequence of $9$'s, which also involves a geometric series in $10^{-i}$ in turns implying (at the limit) that also $\rho = 1.57$. For that reason, (7) represents that number with an infinite succession of $0$,s, that is, $\rho = 1.57 = 1.5700\cdots$. The reason for this resides in that an infinite succession of $9$'s  is ruled out by the condition of the theorem that $b_i < a_i - 1$ for infinitely many $i$, a condition that in the present example takes the form $b_i < 9$ for infinitely many $i$. \\     
+Now we prove (6).
+\begin{lemma*}
+For the integers sequence $\{a_i\}$, where $a_i > 1$ for every $i \geq 1$, we have
+\begin{equation*}
+\sum_{i=1}^\infty \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = 1.
+\end{equation*}
+\end{lemma*}
+\begin{proof}
+Let us take the partial sum
+\begin{equation*}
+S_m = \sum_{i=1}^m \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = \sum_{i=1}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} -  \sum_{i=1}^m \frac{1}{\prod_{j=1}^i a_{n+j}}
+\end{equation*}
+\begin{equation*}
+= \frac{a_{n+1}}{a_{n+1}} + \sum_{i=2}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \sum_{i=1}^m \frac{1}{\prod_{j=1}^i a_{n+j}}
+\end{equation*} 
+\begin{equation*}
+= 1 + \sum_{i=2}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \sum_{i=2}^{m+1} \frac{1}{\prod_{j=1}^i a_{n+j-1}}
+\end{equation*} 
+\begin{equation*}
+= 1 + \sum_{i=2}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \sum_{i=2}^{m+1} \frac{a_{n+i}}{a_{n+i}\prod_{j=1}^i a_{n+j-1}}
+\end{equation*} 
+\begin{equation*}
+= 1 + \sum_{i=2}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \sum_{i=2}^{m} \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \frac{n+m+1}{(n+m+1)\prod_{j=1}^{m+1} a_{n+j-1}}
+\end{equation*}
+\begin{equation*}
+= 1 +  \sum_{i=2}^m \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \sum_{i=2}^{m} \frac{a_{n+i}}{\prod_{j=1}^i a_{n+j}} - \frac{1}{\prod_{j=1}^m a_{n+j}},  
+\end{equation*}
+since when in the $\prod$ operator $a_{n+j-1}\mapsto a_{n+j}$, then the index value of $j$, at its upper limit, $m+1\mapsto m$, but its lower limit does not. Thus, central sums cancel and the last term vanishes because, by hypothesis, we have
+\begin{equation*}
+\lim_{m\to\infty} S_m = \sum_{i=1}^\infty \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = 1 - \lim_{m\to\infty}\frac{1}{\prod_{j=1}^m a_{n+j}},
+\end{equation*} 
+and the lemma is proved. 
+\end{proof} 
+Theorem 1 also represents an \emph{irrational} number whenever we add a couple of additional conditions. Thus we have the following important theorem.
+\begin{theorem}
+Let us consider the same integers sequence $\{a_i\}$ described in the preceding theorem, and that the integers $b_i$ satisfying the inequalities of that result. In addition, let us assume that infinite integers $b_i$ are positive, and that each \emph{prime number} divides infinitely many $a_i$. Then $\rho$ is irrational.
+\end{theorem}
+\begin{proof}
+We contradict the thesis by supposing $\rho = p/q$ is rational ($p$, $q$, coprime). By the last hypothesis in the preceding theorem, we can choose an integer $n$ sufficiently large in order to $q$ be a divisor of $\prod_{j=1}^n a_j$. Now we may use (1) replacing the LHS by our rational number assumption, next multiplying both side by the latter product, and rearranging terms we get (we do the partition sum $i=1,\ldots,n; n+1, \ldots \infty$)
+\begin{equation}
+\frac{\prod_{j=1}^n a_j(p - b_0 q)}{q} - \sum_{i=1}^n \frac{b_0\prod_{j=1}^n a_j}{\prod_{j=1}^i a_j} = \sum_{i=1}^\infty \frac{b_{n+i}}{\prod_{j=1}^i a_{n+j}}.
+\end{equation}
+By hypothesis, the LHS of (8) is obviously an integer. However, we have proved already that the last inequality of theorem 1 requires that $b_{n+i} < a_{n+i} - 1$ for infinitely many $i$, so that, from the RHS of (8) and the lemma we see that
+\begin{equation*}
+\sum_{i=1}^\infty \frac{b_{n+i}}{\prod_{j=1}^i a_{n+j}} < \sum_{i=1}^\infty \frac{a_{n+i}-1}{\prod_{j=1}^i a_{n+j}} = 1,
+\end{equation*}
+a clear contradiction, proving the theorem.
+\end{proof}  
+\subsection{Example}
+$e$ is \emph{irrational}. \\
+All we know there are different ways to prove the irrationality of $e$. In particular, it results illustrative if we adapt our theorems and its hypotheses (all of which are true in this case) to this problem. From Taylor's expansion
+\begin{equation*}
+e = \sum_{i=0}^\infty \frac{1}{i!}.
+\end{equation*}         
+Let us use (1), by setting $\rho = e$, $b_0 = 2$, $b_{i-1} = 1$ for all $i \geq 2$, and $a_j = j+1$, $0\leq j \leq i-1$. Thus,
+\begin{equation*}
+e = 2 + \sum_{i=1}^\infty \frac{1}{\prod_{j=1}^i j}. 
+\end{equation*} 
+So far our discussion on real numbers. An interesting approach on transcendental numbers as well as and extensive bibliography on real numbers are given, for instance, in \cite{cite:Niven}. \\
+
+
+\begin{thebibliography}{1}
+\bibitem{cite:Niven}
+I. Niven, \emph{IRRATIONAL NUMBERS}, Ch. VII, pp. 83-88; also p. 157, The Mathematical Association of America, 2005.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfUniquenessOfDigitalRepresentationOfSmallNumbersInAFewBases}
+\pmcreated{2013-03-22 18:52:25}
+\pmmodified{2013-03-22 18:52:25}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of uniqueness of digital representation of small numbers in a few bases}
+\pmrecord{4}{41721}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A63}
+\pmclassification{msc}{11A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+While a string of digits is not unique to any base $b$, within each base $b$ the base $b$ representation of an integer $n$ is unique. The following table gives the base 2 (binary) through base 10 (decimal) representations of $n$ from 1 to 50. It will be seen how ``10'' occurs in several cells diagonally in the table, but in each column it corresponds to the case $n = b$ only. Likewise, ``11'' also occurs diagonally, but in each column it corresponds to $n = b + 1$ only. One other generality to mention: the representation $n$ is the same for all bases $b > n$.
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|}
+$b = 2$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+10 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\
+11 & 10 & 3 & 3 & 3 & 3 & 3 & 3 & 3 \\
+100 & 11 & 10 & 4 & 4 & 4 & 4 & 4 & 4 \\
+101 & 12 & 11 & 10 & 5 & 5 & 5 & 5 & 5 \\
+110 & 20 & 12 & 11 & 10 & 6 & 6 & 6 & 6 \\
+111 & 21 & 13 & 12 & 11 & 10 & 7 & 7 & 7 \\
+1000 & 22 & 20 & 13 & 12 & 11 & 10 & 8 & 8 \\
+1001 & 100 & 21 & 14 & 13 & 12 & 11 & 10 & 9 \\
+1010 & 101 & 22 & 20 & 14 & 13 & 12 & 11 & 10 \\
+1011 & 102 & 23 & 21 & 15 & 14 & 13 & 12 & 11 \\
+1100 & 110 & 30 & 22 & 20 & 15 & 14 & 13 & 12 \\
+1101 & 111 & 31 & 23 & 21 & 16 & 15 & 14 & 13 \\
+1110 & 112 & 32 & 24 & 22 & 20 & 16 & 15 & 14 \\
+1111 & 120 & 33 & 30 & 23 & 21 & 17 & 16 & 15 \\
+10000 & 121 & 100 & 31 & 24 & 22 & 20 & 17 & 16 \\
+10001 & 122 & 101 & 32 & 25 & 23 & 21 & 18 & 17 \\
+10010 & 200 & 102 & 33 & 30 & 24 & 22 & 20 & 18 \\
+10011 & 201 & 103 & 34 & 31 & 25 & 23 & 21 & 19 \\
+10100 & 202 & 110 & 40 & 32 & 26 & 24 & 22 & 20 \\
+10101 & 210 & 111 & 41 & 33 & 30 & 25 & 23 & 21 \\
+10110 & 211 & 112 & 42 & 34 & 31 & 26 & 24 & 22 \\
+10111 & 212 & 113 & 43 & 35 & 32 & 27 & 25 & 23 \\
+11000 & 220 & 120 & 44 & 40 & 33 & 30 & 26 & 24 \\
+11001 & 221 & 121 & 100 & 41 & 34 & 31 & 27 & 25 \\
+11010 & 222 & 122 & 101 & 42 & 35 & 32 & 28 & 26 \\
+11011 & 1000 & 123 & 102 & 43 & 36 & 33 & 30 & 27 \\
+11100 & 1001 & 130 & 103 & 44 & 40 & 34 & 31 & 28 \\
+11101 & 1002 & 131 & 104 & 45 & 41 & 35 & 32 & 29 \\
+11110 & 1010 & 132 & 110 & 50 & 42 & 36 & 33 & 30 \\
+11111 & 1011 & 133 & 111 & 51 & 43 & 37 & 34 & 31 \\
+100000 & 1012 & 200 & 112 & 52 & 44 & 40 & 35 & 32 \\
+100001 & 1020 & 201 & 113 & 53 & 45 & 41 & 36 & 33 \\
+100010 & 1021 & 202 & 114 & 54 & 46 & 42 & 37 & 34 \\
+100011 & 1022 & 203 & 120 & 55 & 50 & 43 & 38 & 35 \\
+100100 & 1100 & 210 & 121 & 100 & 51 & 44 & 40 & 36 \\
+100101 & 1101 & 211 & 122 & 101 & 52 & 45 & 41 & 37 \\
+100110 & 1102 & 212 & 123 & 102 & 53 & 46 & 42 & 38 \\
+100111 & 1110 & 213 & 124 & 103 & 54 & 47 & 43 & 39 \\
+101000 & 1111 & 220 & 130 & 104 & 55 & 50 & 44 & 40 \\
+101001 & 1112 & 221 & 131 & 105 & 56 & 51 & 45 & 41 \\
+101010 & 1120 & 222 & 132 & 110 & 60 & 52 & 46 & 42 \\
+101011 & 1121 & 223 & 133 & 111 & 61 & 53 & 47 & 43 \\
+101100 & 1122 & 230 & 134 & 112 & 62 & 54 & 48 & 44 \\
+101101 & 1200 & 231 & 140 & 113 & 63 & 55 & 50 & 45 \\
+101110 & 1201 & 232 & 141 & 114 & 64 & 56 & 51 & 46 \\
+101111 & 1202 & 233 & 142 & 115 & 65 & 57 & 52 & 47 \\
+110000 & 1210 & 300 & 143 & 120 & 66 & 60 & 53 & 48 \\
+110001 & 1211 & 301 & 144 & 121 & 100 & 61 & 54 & 49 \\
+110010 & 1212 & 302 & 200 & 122 & 101 & 62 & 55 & 50 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PositiveMultipleOfASemiperfectNumberIsAlsoSemiperfect}
+\pmcreated{2013-03-22 16:18:57}
+\pmmodified{2013-03-22 16:18:57}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{positive multiple of a semiperfect number is also semiperfect}
+\pmrecord{4}{38441}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Just as the theorem on multiples of abundant numbers shows that multiples of abundant numbers are also abundant, it is also true that multiples of semiperfect numbers are also semiperfect, and T. Foregger's proof of the abundant number theorem lays bare a simple mechanism that we can also employ for semiperfect numbers.
+
+Given the divisors $d_1, \ldots, d_{k - 1}$ of $n$ (where $k = \tau(n)$ and $\tau(x)$ is the divisor function), sorted in ascending order for our convenience, and with a smart iterator $i$ that somehow knows to skip over those divisors that contribute to $n$'s abundance, we can show that the divisors of $nm$ (with $m > 0$) will include $d_1m, \ldots, d_{k - 1}m$. With our smart iterator $i$ and thanks to the distributive property of multiplication, it follows that $$\sum_{i = 1}^{k - 1} d_im = nm,$$ our desired result.
+%%%%%
+%%%%%
+\end{document}

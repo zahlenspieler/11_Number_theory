@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLucassTheorem}
+\pmcreated{2013-03-22 13:22:56}
+\pmmodified{2013-03-22 13:22:56}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Lucas's theorem}
+\pmrecord{7}{33917}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A07}
+\pmrelated{BinomialCoefficient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\pfac}[1]{\left(#1!\right)_p}
+\begin{document}
+
+Let $n \ge m \in \mathbb{N}$. Let $a_0, b_0$ be the least non-negative residues
+of $n,m \pmod{p}$, respectively. (Additionally, we set $r=n-m$, and $r_0$ is the
+least non-negative residue of $r$ modulo $p$.) Then the statement follows from
+\begin{displaymath}
+\binom{n}{m} \equiv \binom{a_0}{b_0}\binom{\left\lfloor
+\frac{n}{p}\right\rfloor}{\left\lfloor\frac{m}{p}\right\rfloor} \pmod{p}.
+\end{displaymath}
+
+We define the 'carry indicators' $c_i$ for all $i \ge 0$ as
+\begin{displaymath}
+c_i =\left(
+\begin{array}{lll}
+1 & \mbox{if}
+ & b_i +r_i \ge p \\
+0 & \mbox{otherwise}
+\end{array}\right.,
+\end{displaymath}
+and additionally $c_{-1} =0$.
+
+The special case $s=1$ of Anton's congruence is:
+\begin{equation}
+\pfac{n} \equiv \left(- 1\right)^{\left\lfloor \frac{n}{p}\right\rfloor}\cdot
+a_0! \pmod{p},
+\end{equation}
+where $a_0$ as defined above, and $\pfac{n}$ is the product of numbers $\le n$
+not divisible by $p$.
+So we have
+\begin{displaymath}
+\frac{n!}{\left\lfloor
+\frac{n}{p}\right\rfloor!p^{\left\lfloor\frac{n}{p}\right\rfloor}} =\pfac{n}
+\equiv (-1)^{\left\lfloor\frac{n}{p}\right\rfloor}\cdot a_0! \pmod{p}
+\end{displaymath}
+When dividing  by the left-hand terms of the congruences for $m$ and $r$, we see
+that the power of $p$ is
+\begin{displaymath}
+\left\lfloor\frac{n}{p}\right\rfloor -\left\lfloor\frac{m}{p}\right\rfloor
+-\left\lfloor\frac{r}{p}\right\rfloor =c_0
+\end{displaymath}
+So we get the congruence
+\begin{displaymath}
+\frac{\binom{n}{m}}{\binom{\left\lfloor\frac{n}{p}\right\rfloor}{\left\lfloor\frac{m}{p}\right\rfloor}\cdot
+p^{c_0}} \equiv (-1)^{c_0}\cdot \binom{a_0}{b_0},
+\end{displaymath}
+or equivalently
+\begin{equation}
+\label{L1}
+\left(\frac{-1}{p}\right)^{c_0}\cdot \binom{n}{m} \equiv
+\binom{a_0}{b_0}\binom{\left\lfloor\frac{n}{p}\right\rfloor}{\left\lfloor\frac{m}{p}\right\rfloor} \pmod{p}.
+\end{equation}
+
+Now we consider $c_0 =1$. Since
+\[a_0 =b_0 +r_0 -\underbrace{pc_0=p},\]
+$b_0 +r_0 < b_0 \leftrightarrow c_0 =1 \leftrightarrow b_0 -(p -r_0) =a_0 <b_0
+\leftrightarrow \binom{a_0}{b_0}=0 $. So both congruences--the one in the
+statement and (\ref{L1})-- produce the same results.
+%%%%%
+%%%%%
+\end{document}

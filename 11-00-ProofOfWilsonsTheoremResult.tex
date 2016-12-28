@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWilsonsTheoremResult}
+\pmcreated{2013-03-22 15:07:08}
+\pmmodified{2013-03-22 15:07:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of Wilson's theorem result}
+\pmrecord{15}{36856}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+
+% This is Cosmin's PlanetMath preamble.
+
+% Packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+%%%\usepackage{xypic}
+
+% Theorem Environments
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+% New Commands
+  %Sets
+    \newcommand{\bbP}{\mathbb{P}}
+    \newcommand{\bbN}{\mathbb{N}}
+    \newcommand{\bbZ}{\mathbb{Z}}
+    \newcommand{\bbQ}{\mathbb{Q}}
+    \newcommand{\bbR}{\mathbb{R}}
+    \newcommand{\bbC}{\mathbb{C}}
+    \newcommand{\bbK}{\mathbb{K}}
+    \newcommand{\bbB}{\mathbb{B}}
+    \newcommand{\bbS}{\mathbb{S}}
+    \newcommand{\bbA}{\mathbb{A}}
+    \newcommand{\bbT}{\mathbb{T}}
+  %Script and Cal Letters
+    \newcommand{\scP}{\mathscr{P}}
+    \newcommand{\scF}{\mathscr{F}}
+    \newcommand{\scC}{\mathscr{C}}
+    \newcommand{\scL}{\mathscr{L}}
+    \newcommand{\caA}{\mathcal{A}}
+    \newcommand{\caB}{\mathcal{B}}
+    \newcommand{\caC}{\mathcal{C}}
+    \newcommand{\caD}{\mathcal{D}}
+    \newcommand{\caE}{\mathcal{E}}
+    \newcommand{\caF}{\mathcal{F}}
+    \newcommand{\caR}{\mathcal{R}}
+    \newcommand{\caP}{\mathcal{P}}
+    \newcommand{\caM}{\mathcal{M}}
+    \newcommand{\caS}{\mathcal{S}}
+    \newcommand{\caH}{\mathcal{H}}
+    \newcommand{\caT}{\mathcal{T}}
+    \newcommand{\caU}{\mathcal{U}}
+    \newcommand{\caX}{\mathcal{X}}
+    \newcommand{\caY}{\mathcal{Y}}
+    \newcommand{\caZ}{\mathcal{Z}}
+  %Other Commands
+    \newcommand{\vect}[1]{\boldsymbol{#1}}
+    \renewcommand{\div}{\!\mid\!}
+\begin{document}
+\PMlinkescapephrase{set of primes}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{inverses}
+We denote by $\bbP$ the set of primes and by $\overline{x}$ the multiplicative inverse of $x$ in $\bbZ_p$.
+\begin{thm}[Generalisation of Wilson's Theorem]
+For all integers $1 \leq k \leq p-1,\;p\in\bbP \Leftrightarrow (p-k)!(k-1)!\equiv (-1)^k \pmod{p}$
+\end{thm}
+\begin{proof}If $p$ is a prime, then:
+\begin{multline*}(p-k)! \equiv (p-1)!\overline{(p-1)}\dotsm\overline{(p-k+1)} \equiv (p-1)!\overline{(-1)}\dotsm\overline{(1-k)}=\\ =(p-1)!(-1)^{k-1}\overline{(k-1)!} \pmod{p},\end{multline*}
+and since $(p-1)! \equiv -1\pmod{p}$ (Wilson's Theorem, simply pair up each number --- except \(p-1\) and \(1\), the only numbers in \(\bbZ_p\) which are their own inverses --- with its inverse),  the first implication follows.
+
+Now, if $p\div (p-1)!(k-1)! - (-1)^k$, then $p\in\bbP$ as the opposite would mean that $p=ab$, for some integers $1<a,b < p$, and so $p$ would not be relatively prime to $(p-1)!(k-1)!$ as the initial hypothesis implies.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

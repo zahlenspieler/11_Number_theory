@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImplicationsOfHavingDivisorTheory}
+\pmcreated{2013-03-22 17:59:13}
+\pmmodified{2013-03-22 17:59:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{implications of having divisor theory}
+\pmrecord{6}{40497}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+\pmclassification{msc}{13A05}
+\pmsynonym{properties of rings having a divisor theory}{ImplicationsOfHavingDivisorTheory}
+\pmrelated{DivisorTheoryAndExponentValuations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{factors}
+
+The existence of a divisor theory restricts strongly the \PMlinkescapetext{type} of an integral domain, as is seen from the following propositions.\\
+
+\textbf{Proposition 1.}\, An integral domain $\mathcal{O}$ which has a divisor theory \,$\mathcal{O}^*\to\mathfrak{D}$,\, is integrally closed in its quotient field.
+
+{\em Proof.}\, Let $\xi$ be an element of the quotient field of $\mathcal{O}$ which is integral over $\mathcal{O}$.\, Then $\xi$ satisfies an equation
+\begin{align}
+\xi^n+\alpha_1\xi^{n-1}+\ldots+\alpha_n = 0
+\end{align}
+where\, $\alpha_1,\,\ldots,\,\alpha_n \in \mathcal{O}$.\, Now, we can write\, 
+$\displaystyle\xi = \frac{\varkappa}{\lambda}$\, with\, $\varkappa,\,\lambda \in \mathcal{O}$,\, whence (1) may be written
+\begin{align}
+\varkappa^n = -\alpha_1\lambda\varkappa^{n-1}-\alpha_2\lambda^2\varkappa^{n-2}-\ldots-\alpha_n\lambda^n.
+\end{align}
+Let us make the antithesis that $\xi$ does not belong to $\mathcal{O}$ itself.\, Then\, $\lambda \nmid \varkappa$\, and therefore we have for the corresponding principal divisors \,$(\lambda) \nmid (\varkappa)$.\, We infer that there is a prime divisor factor $\mathfrak{p}$ of $(\lambda)$ and an integer $k \geqq 0$ such that 
+$$\mathfrak{p}^k \mid (\varkappa),\quad \mathfrak{p}^{k+1} \nmid (\varkappa),\quad \mathfrak{p}^{k+1} \mid (\lambda).$$
+By the condition 2 of the \PMlinkname{definition of divisor theory}{DivisorTheory}, the right hand side of the equation (2) is divisible by
+$$\mathfrak{p}^{(k+1)+(n-1)k} = \mathfrak{p}^{kn+1}.$$
+On the other side, the highest power of $\mathfrak{p}$, by which the divisor $(\varkappa^n)$ is divisible, is $\mathfrak{p}^{kn}$.\, Accordingly, the different sides of (2) show different divisibility by powers of $\mathfrak{p}$.\, This contradictory situation means that the antithesis was wrong and thus the proposition has been proven.\\
+
+\textbf{Proposition 2.}\, When an integral domain $\mathcal{O}$ has a divisor theory \,$\mathcal{O}^*\to\mathfrak{D}$,\, then each element of $\mathcal{O}^*$ has only a finite number of \PMlinkname{non-associated}{Associates} \PMlinkname{factors}{DivisibilityInRings}.
+
+{\em Proof.}\, Let $\xi$ be an arbitrary non-zero element of $\mathcal{O}$.\, We form the prime factor presentation of the corresponding principal divisor $(\xi)$:
+$$(\xi) = \mathfrak{p}_1\mathfrak{p}_2\cdots\mathfrak{p}_r$$
+This is unique up to the ordering of the factors;\, $r \geqq 0$.\, Then we form of the prime divisors $\mathfrak{p}_i$ all products having $k$ factors 
+($0 \leqq k \leqq r$) and choose from the products those which are principal divisors.\, Thus we obtain a set of factors of $(\xi)$ containing at most $\displaystyle r \choose k$ elements.\, All different principal divisor factors of $(\xi)$ are gotten, as $k$ runs all integers from 0 to $r$, and their number is at most equal to
+$$\sum_{k=0}^r{r \choose k} = 2^r$$
+(see 5. in the binomial coefficients).\, To every principal divisor \PMlinkescapetext{factor}, there corresponds a \PMlinkname{class}{EquivalenceClass} of associate factors of $\xi$, and the elements of distinct \PMlinkname{classes}{EquivalenceClass} are non-associates.\, Since $\xi$ has not other factors, the number of its non-associated factors is at most $2^r$.
+
+%%%%%
+%%%%%
+\end{document}

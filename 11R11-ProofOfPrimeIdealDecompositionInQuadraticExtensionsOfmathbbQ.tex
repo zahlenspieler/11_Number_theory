@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPrimeIdealDecompositionInQuadraticExtensionsOfmathbbQ}
+\pmcreated{2013-03-22 15:59:06}
+\pmmodified{2013-03-22 15:59:06}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of prime ideal decomposition in quadratic extensions of $\mathbb{Q}$}
+\pmrecord{20}{38002}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R11}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{prime}
+\PMlinkescapeword{root}
+
+Much of the proof of this theorem is given in Marcus' \PMlinkname{\em Number Fields}{NumberField}; however, all of the details will be filled in here, and some aspects of the proof here will differ from those of Marcus.
+
+Note that $\gcd(a,b)$ refers to the greatest common divisor in $\mathbb{Z}$ of $a$ and $b$ (which must necessarily be rational integers).
+
+\begin{proof}
+Let $d$ be a squarefree integer with $d \neq 1$ and $K=\mathbb{Q}(\sqrt{d})$.
+
+If $p$ is a rational prime that divides $d$, then
+
+\begin{center}
+$\begin{array}{ll}
+\langle p, \sqrt{d} \rangle^2 & = \langle p^2, p \sqrt{d}, d \rangle \\
+& = \langle \gcd(p^2,d) , p \sqrt{d} \rangle \\
+& = \langle p, p \sqrt{d} \rangle \\
+& = \langle p \rangle \\
+& = p \mathcal{O}_K. \end{array}$
+\end{center}
+
+Note that $\langle p, \sqrt{d} \rangle \neq \mathcal{O}_K$.  (If they were equal, then $\langle p, \sqrt{d} \rangle^2$ would equal $\mathcal{O}_K$.)
+
+If $d \equiv 3 \operatorname{mod} 4$, then $\operatorname{disc}(K)=4d$.  Note that $2$ divides $\operatorname{disc}(K)$.  Thus, $2$ ramifies in $\mathcal{O}_K$.  Therefore, $2\mathcal{O}_K=P^2$ for some prime ideal $P$ of $\mathcal{O}_K$.  Moreover, $P$ is the unique ideal of $\mathcal{O}_K$ of \PMlinkname{norm}{IdealNorm} $2$.  Since $\sqrt{d} \equiv -1 \operatorname{mod} \langle 2, 1+\sqrt{d} \rangle$, then
+
+\begin{center}
+$\begin{array}{ll}
+\mathcal{O}_K / \langle 2, 1+\sqrt{d} \rangle & = \{a+b\sqrt{d}+\langle 2, 1+\sqrt{d} \rangle : a,b \in \mathbb{Z} \} \\
+& = \{a-b+\langle 2, 1+\sqrt{d} \rangle : a,b \in \mathbb{Z} \} \\
+& = \{0+\langle 2, 1+\sqrt{d} \rangle , 1+\langle 2, 1+\sqrt{d} \rangle \}. \end{array}$
+\end{center}
+
+Since $\langle 2, 1+\sqrt{d} \rangle$ has \PMlinkescapetext{norm} $2$, it follows that $P=\langle 2, 1+\sqrt{d} \rangle$ and $2\mathcal{O}_K=\langle 2, 1+\sqrt{d} \rangle^2$.
+
+If $d \equiv 1 \operatorname{mod} 8$, then $\operatorname{disc}(K)=d$.  Note that $2$ does not divide $\operatorname{disc}(K)$.  Thus, $2$ does not ramify in $\mathcal{O}_K$.  Since
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \left\langle 2, \frac{1+\sqrt{d}}{2} \right\rangle \left\langle 2, \frac{1-\sqrt{d}}{2} \right\rangle & \displaystyle = \left\langle 4, 1+\sqrt{d}, 1-\sqrt{d}, \frac{1-d}{4} \right\rangle \\
+& \displaystyle = \left\langle 4, 2, 2\left( \frac{1-\sqrt{d}}{2} \right), \frac{1-d}{4} \right\rangle \\
+& = \langle 2 \rangle \\
+& = 2\mathcal{O}_K, \end{array}$
+\end{center}
+
+we have that $\displaystyle \left\langle 2, \frac{1+\sqrt{d}}{2} \right\rangle$ and $\displaystyle \left\langle 2, \frac{1-\sqrt{d}}{2} \right\rangle$ must be distinct.  Proving that these ideals are indeed \PMlinkescapetext{prime is similar to an argument} given below.
+
+If $d \equiv 5 \operatorname{mod} 8$, then consider the minimal polynomial $f(x) \in \mathbb{Z}[x]$ for $\displaystyle \frac{1+\sqrt{d}}{2}$.  Since $\displaystyle \frac{1+\sqrt{d}}{2} \notin \mathbb{Q}$, it must be the case that $\operatorname{deg}f \ge 2$.
+
+\begin{center}
+$\begin{array}{rl}
+\alpha & \displaystyle = \frac{1+\sqrt{d}}{2} \\
+& \\
+2\alpha - 1 & = \sqrt{d} \\
+(2\alpha - 1)^2 & = d \\
+4\alpha^2 - 4\alpha + 1 & = d \\
+4\alpha^2 - 4\alpha + 1 - d & = 0 \\
+& \\
+\displaystyle \alpha^2 - \alpha + \frac{1-d}{4} & = 0 \end{array}$
+\end{center}
+
+Thus, $\displaystyle f(x)=x^2-x+\frac{1-d}{4}$.
+
+Let $P$ be a \PMlinkescapetext{prime} lying over $2$ in $\mathcal{O}_K$.  Note that $f(x)$ has a \PMlinkname{root}{Root} in $\mathcal{O}_K$ and thus in $\mathcal{O}_K/P$.  On the other hand, since $f(x) \equiv x^2+x+1 \operatorname{mod} 2$, $f(x)$ considered as an element of $\mathbb{F}_2[x]$ has no root in $\mathbb{F}_2$.  Thus, $\mathcal{O}_K/P$ and $\mathbb{F}_2$ are not isomorphic.  Therefore, $[\mathcal{O}_K/P \!:\! \mathbb{F}_2]>1$.  Since $1<[\mathcal{O}_K/P \!:\! \mathbb{F}_2]=f(P|2) \le [K \!:\! \mathbb{Q}]=2$, we have that $f(P|2)=2$.  Thus, $2$ is inert in $\mathcal{O}_K$.  It follows that $2\mathcal{O}_K$ is \PMlinkescapetext{prime} in $\mathcal{O}_K$.
+
+If $p$ is an odd \PMlinkname{prime}{Prime} that does not divide $d$ and $d \equiv n^2 \operatorname{mod} p$, then $p$ does not divide $\operatorname{disc}(K)$ (which equals either $d$ or $4d$).  Thus, $p$ does not ramify in $\mathcal{O}_K$.  Also, $p$ does not divide $n$.  Since
+
+\begin{center}
+$\begin{array}{ll}
+\langle p, n+\sqrt{d} \rangle \langle p, n-\sqrt{d} \rangle & = \langle p^2, pn+p\sqrt{d}, pn-p\sqrt{d}, n^2-d \rangle \\
+& = \langle p^2, 2pn, pn-p\sqrt{d}, n^2-d \rangle \\
+& = \langle \gcd(p^2,2pn), pn-p\sqrt{d}, n^2-d \rangle \\
+& = \langle p, pn-p\sqrt{d}, n^2-d \rangle \\
+& = \langle p \rangle \\
+& = p\mathcal{O}_K, \end{array}$
+\end{center}
+
+we have that $\langle p, n+\sqrt{d} \rangle$ and $\langle p, n-\sqrt{d} \rangle$ must be distinct.  It will be proven that these ideals are indeed \PMlinkescapetext{prime}.
+
+Let $\Vert I \Vert$ denote the \PMlinkname{norm of the ideal $I$}{IdealNorm} of $\mathcal{O}_K$ and $\sigma \in \operatorname{Gal}(K/\mathbb{Q})$ with $\sigma(\sqrt{d})=-\sqrt{d}$.  Then
+
+\begin{center}
+$\begin{array}{ll}
+\Vert \langle p, n+\sqrt{d} \rangle \Vert & = \sigma \left( \Vert \langle p, n+\sqrt{d} \rangle \Vert \right) \\
+& = \left\Vert \sigma \left( \langle p, n+\sqrt{d} \rangle \right) \right\Vert \\
+& = \Vert \langle \sigma(p), \sigma(n+\sqrt{d}) \rangle \Vert \\
+& = \Vert \langle p,n-\sqrt{d} \rangle \Vert. \end{array}$
+\end{center}
+
+Note that $p^2=\Vert p\mathcal{O}_K \Vert = \Vert \langle p,n+\sqrt{d} \rangle \Vert \, \Vert \langle p,n-\sqrt{d} \rangle \Vert = \Vert \langle p,n-\sqrt{d} \rangle \Vert^2$.  Therefore, $\Vert \langle p,n+\sqrt{d} \rangle \Vert = \Vert \langle p,n-\sqrt{d} \rangle \Vert = p$.  It follows that the indicated ideals are \PMlinkescapetext{prime}.
+
+Finally, if $p$ is an odd prime that does not divide $d$ and $d$ is not a square $\operatorname{mod} p$, then consider the minimal polynomial $g(x)=x^2-d$ for $\sqrt{d}$ over $\mathbb{Q}$.  Let $P$ be a \PMlinkescapetext{prime} lying over $p$ in $\mathcal{O}_K$.  Note that $g(x)$ has a root in $\mathcal{O}_K$ and thus in $\mathcal{O}_K/P$.  On the other hand, since $\operatorname{disc} g(x)=-4(-d)=4d$, which is not a square in $\mathbb{F}_p$, then $g(x)$ considered as an element of $\mathbb{F}_p[x]$ has no root in $\mathbb{F}_p$.  Thus, $\mathcal{O}_K/P$ and $\mathbb{F}_p$ are not isomorphic.  Therefore, $[\mathcal{O}_K/P \!:\! \mathbb{F}_p]>1$.  Note that $1<[\mathcal{O}_K/P \!:\! \mathbb{F}_p]=f(P|p) \le [K \!:\! \mathbb{Q}]=2$.  Thus, $f(P|p)=2$.  Therefore, $p$ is inert in $\mathcal{O}_K$.  It follows that $p\mathcal{O}_K$ is \PMlinkescapetext{prime} in $\mathcal{O}_K$.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{marcus} Marcus, Daniel A. {\em Number Fields}.  New York: Springer-Verlag, 1977.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

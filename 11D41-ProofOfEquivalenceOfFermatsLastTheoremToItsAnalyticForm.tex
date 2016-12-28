@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalenceOfFermatsLastTheoremToItsAnalyticForm}
+\pmcreated{2013-03-22 16:19:04}
+\pmmodified{2013-03-22 16:19:04}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{proof of equivalence of Fermat's Last Theorem to its analytic form}
+\pmrecord{7}{38444}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider the Taylor expansion of the cosine function.  We have 
+
+${\rm lim}_{s \to \infty} (A_s)=2-{\rm cos}\, x - {\rm cos}\, y$
+
+and
+
+${\rm lim}_{s \to \infty} (B_s)=1- {\rm cos}\, z$.
+
+For $r>x,y$ the sequence $a_r$ is decreasing as the denominator grows faster than the numerator. 
+Hence for $s>x,y$ the sequence $A_s$ is increasing as $A_{s+4}=A_s+a_{s+2}-a_{s+4}$ and
+$a_{s+2}>a_{s+4}$.   So if $A_N>0$ for some $N>x,y$, we have $2-{\rm cos}\, x - {\rm cos}\, y>0$. 
+Conversely if no such $N$ exists then $A_s \leq 0$ for $s>x,y$, so its limit, $2-{\rm cos}\, x - {\rm cos}\, y$, is also  less than or equal to $0$.  However as this
+expression cannot be negative we would have $2-{\rm cos}\, x - {\rm cos}\, y =0$.
+
+
+Similarly for $r>z$ the sequence $b_r$ is decreasing, and for $s>z$ the sequence $B_s$ is
+increasing.  So if $B_M>0$ for some $M>z$ we have $1- {\rm cos}\, z>0$. 
+Conversely if no such $M$ exists then $1- {\rm cos}\, z \leq 0$.  However as this
+expression cannot be negative we would have $1- {\rm cos}\, z = 0$.
+
+Note that $2-{\rm cos}\, x - {\rm cos}\, y =0$ precisely when $x,y \in 2\pi \mathbb{Z}$.  Also 
+$1- {\rm cos}\, z = 0$ precisely when $z \in 2\pi \mathbb{Z}$.
+
+So the \PMlinkescapetext{analytic} form of the theorem may be read:
+
+If for positive reals $x,y,z$ we have $x^n+y^n=z^n$ for some odd integer $n>2$, then either $x$ or
+$y$ not in $2\pi \mathbb{Z}$ or $z$ not in $2\pi \mathbb{Z}$.
+
+Clearly this only fails if for positive integers $a,b,c$ and some odd $n>2$, we have 
+
+$(2\pi a)^n+(2\pi b)^n = (2\pi c)^n$.
+
+Dividing through by $(2\pi)^n$ we see that $a^n + b^n =c^n$.
+
+Conversely suppose we have non-zero integers satisfying $a^n + b^n =c^n$ for some $n>2$.  If 
+$n=4k$ we have $(a^k)^4+(b^k)^4=(c^k)^4$, contradicting 
+example of Fermat's last theorem.  Hence if $n$ is even we may replace $a,b,c$ with
+$a^2,b^2,c^2$ and $n$ with $n/2$, which will be odd and greater than 1 (and hence greater than 2 as it is odd).  So without loss of generality we may 
+assume $n$ odd. 
+
+Finally replace $a,b,c$ with their absolute values and if 
+\PMlinkescapetext{necessary} reorder to obtain a positive 
+integer solution.  This would be a counterexample to the 
+\PMlinkescapetext{analytic} form of the theorem as stated above.
+
+
+
+%%%%%
+%%%%%
+\end{document}

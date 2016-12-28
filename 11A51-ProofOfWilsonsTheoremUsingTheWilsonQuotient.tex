@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWilsonsTheoremUsingTheWilsonQuotient}
+\pmcreated{2013-03-22 17:58:57}
+\pmmodified{2013-03-22 17:58:57}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof of Wilson's theorem using the Wilson quotient}
+\pmrecord{5}{40492}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem}. An integer $n > 1$ is prime only if the Wilson quotient $\displaystyle \frac{(n - 1)! + 1}{n}$ is an integer.
+
+\begin{proof}
+If $n$ is composite, then its greatest prime factor is at most $\displaystyle \frac{n}{2}$, and $\displaystyle \frac{n}{2} < (n - 1)$ as long as $n > 2$ (and the smallest positive composite number is 4). Therefore, $(n - 1)!$ being the product of the numbers from 1 to $n - 1$ includes among its divisors the greatest prime factor of $n$, and indeed all its divisors. Since two consecutive integers are always coprime, it is the case that $\gcd((n - 1)!, (n - 1)! + 1) = 1$. Therefore $n$ will divide $(n - 1)!$ evenly but not $(n - 1)! + 1$. So the Wilson quotient will be a rational number but not an integer.
+
+If we only meant to prove the converse of Wilson's theorem we'd be done at this point. But we set out to prove that not only is the stated relation false for composite numbers, but that it is true for primes. Proving the former is quite easy. Proving the latter is harder, and in fact neither Edward Waring nor John Wilson left a proof. (Koshy, 2007)
+
+If $n$ is prime, then obviously its greatest prime factor is itself, and $(n - 1)!$ will have only 1 as a divisor in common with $n$. But how do we prove that the next number after $(n - 1)!$ is a multiple of $n$ without having to factorize several values of $(n - 1)!$ and hoping the proof makes itself apparent thus? Modular multiplication comes to the rescue. Since $n$ is prime, we can multiply any number from 2 to $n - 2$ by another of the same range and the product will be congruent to 1 modulo $n$.
+
+For example, $n = 7$. We verify that $2 \times 4 = 8 \equiv 1 \mod 7$ and $3 \times 5 = 15 \equiv 1 \mod 7$. Since $1 \times 1 = 1$, multiplying the range 2 to 5 will give a number that satisfies the same congruence.
+
+So in general multiplying the range 2 to $n - 2$ gives a number that is congruent to 1 modulo $n$ if $n$ is prime. (With $n$ composite, modular multiplication causes a zeroing out of the range's overall product). $n - 1$ is different, satisfying $(n - 1) \equiv (n - 1) \mod n \equiv -1 \mod n$. And since $1 \times -1 = -1$, modular multiplication of the range 2 to $n - 1$ gives $-1$. Thus $(n - 1)! \equiv -1 \mod n$ when $n$ is prime, so $(n - 1)! + 1 \equiv 0 \mod n$. Therefore, $(n - 1)! + 1$, which is greater than $n$, is also divisible by it, and thus dividing it by $n$ yields an integer.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{tk} Thomas Kochy, {\it Elementary Number Theory with Applications}, 2nd Edition. London: Elsevier (2007): 321 - 323
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

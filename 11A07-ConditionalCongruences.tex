@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionalCongruences}
+\pmcreated{2013-03-22 18:52:23}
+\pmmodified{2013-03-22 18:52:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conditional congruences}
+\pmrecord{6}{41720}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A07}
+\pmclassification{msc}{11A05}
+\pmrelated{LinearCongruence}
+\pmrelated{QuadraticCongruence}
+\pmdefines{degree of congruence}
+\pmdefines{root of congruence}
+\pmdefines{root}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{solution}
+
+Consider \PMlinkname{congruences}{Congruences} of the form
+\begin{align}
+f(x) \;:=\; a_nx^n+a_{n-1}x^{n-1}+\ldots+a_0 \;\equiv\; 0 \pmod{m}
+\end{align}
+where the coefficients $a_i$ and $m$ are rational integers.\, \emph{Solving} the congruence means finding all the integer values of $x$ which satisfy (1).
+
+\begin{itemize}
+
+\item If\, $a_i \equiv 0 \pmod{m}$\, for all $i$'s, the congruence is satisfied by each integer, in which case the congruence is identical (cf. the formal congruence).\, Therefore one can assume that at least
+$$a_n \not\equiv 0 \pmod{m},$$
+since one would otherwise have\, $a_nx^n \equiv 0 \pmod{m}$\, and the first term could be left out of (1).\, Now, we say that the \emph{degree of the congruence} (1) is $n$.
+
+\item If\, $x = x_0$\, is a solution of (1) and\, $x_1 \equiv x_0 \pmod{m}$,\, then by the properties of \PMlinkname{congruences}{Congruences}, 
+$$f(x_1) \;\equiv\; f(x_0) \;\equiv\; 0 \pmod{m},$$
+and thus also\, $x = x_1$\, is a solution.\, Therefore, one regards as different \emph{roots} of a congruence modulo 
+$m$ only such values of $x$ which are incongruent modulo $m$.
+
+\item One can think that the congruence (1) has as many roots as is found in a complete residue system modulo $m$.
+
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

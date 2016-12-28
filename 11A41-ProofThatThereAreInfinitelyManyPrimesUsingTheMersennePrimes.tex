@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatThereAreInfinitelyManyPrimesUsingTheMersennePrimes}
+\pmcreated{2013-03-22 18:05:14}
+\pmmodified{2013-03-22 18:05:14}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof that there are infinitely many primes using the Mersenne primes}
+\pmrecord{7}{40625}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Like Euclid's classic proof, this is also a proof by contradiction which starts out from the  assumption that there is a largest prime number. But instead of building a primorial or a factorial, a Mersenne number is computed instead.
+
+\begin{proof}
+Assume that the odd prime $p$ is the largest prime number. Then $2^p - 1$ is composite, not a Mersenne prime. So what is the integer factorization of $2^p - 1$? By Fermat's little theorem we have $2^{p - 1} \equiv 1 \mod p$, doubling that we get $2^p \equiv 2 \mod p$, therefore $2^p - 1 \mod p$. Since $2^p - 1$ is composite, it must have at least two prime factors.
+
+If a prime number $q$ is a factor of $2^p - 1$ (that is, $2^p - 1 \equiv 0 \mod q$) then, since $2^{q - 1} - 1 \equiv 0 \mod q$, assigning $d = \gcd(p, q - 1)$, we have $2^d - 1 \equiv 0 \mod q$. Then $d$ can not be 1 (for 2 - 1 is not congruent to 0 modulo $q$). Therefore $d = p$ and $q - 1$ is multiple of $p$, and thus we derive that $q = np + 1$.
+
+Because we stipulated that $p$ is an odd prime and $2^p - 1$ is also an odd number, $n$ in the formula $np + 1$ must be an even number, so we can then set $m = \frac{n}{2}$, giving us the form of the prime factors of $2^p - 1$ as $2mp + 1$.
+
+So now we have to solve for $m$. There must be solutions in the range $0 < m < (2^{p - 1} - 1)$. If $m = 1$, that gives us $2p + 1$ as a prime factor of $2^p - 1$, but since $(2p + 1) > p$ (regardless of which odd prime $p$ is), that also contradicts our first statement that $p$ is the largest prime. With any larger $m$, the number $2mp + 1$ is even larger than $p$, and thus our initial statement is contradicted regardless of the primality of $2^p - 1$.
+\end{proof}
+
+Two examples to show both scenarios: first, $p = 29$ is the largest prime. The corresponding Mersenne number is 536870911, which must be composite. In fact, its factorization, stated in relation to 2 and 29, is $(1 + 2 \times 4 \times 29)(1 + 2 \times 19 \times 29)(1 + 2 \times 36 \times 29)$. Already the least prime factor, 233, is larger than 29, thus 29 can't be the largest prime.
+
+Second example, $p = 31$ is the largest prime. The corresponding Mersenne number is 2147483647, which must be composite. But a search for solutions to $(2mp + 1) | (2^p - 1)$, solving for $m$, yields only two solutions, $m = 0$ and $m = 2^{p - 1} - 1$, corresponding to 1 and $2^p - 1$. This means 2147483647 is divisible only by 1 and itself, and is therefore prime, and is in fact a much larger prime than 31.
+
+Note, however, that while this proves there are infinitely many primes, it does not resolve the issue of whether or not there are infinitely many Mersenne primes.
+%%%%%
+%%%%%
+\end{document}

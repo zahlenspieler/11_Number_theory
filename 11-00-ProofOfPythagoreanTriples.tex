@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPythagoreanTriples}
+\pmcreated{2013-03-22 14:28:05}
+\pmmodified{2013-03-22 14:28:05}
+\pmowner{fredlb}{5992}
+\pmmodifier{fredlb}{5992}
+\pmtitle{proof of Pythagorean triples}
+\pmrecord{9}{35989}
+\pmprivacy{1}
+\pmauthor{fredlb}{5992}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $a,\,b$, and $c$ are positive integers such that
+\begin{equation}
+\label{eq:p1}
+    a^2+b^2=c^2
+\end{equation}
+then $(a,b,c)$ is a Pythagorean triple. If $a,\,b$, and $c$ are
+relatively prime in pairs then $(a,b,c)$ is a primitive
+Pythagorean triple. Clearly, if $k$ divides any two of $a,\,b$,
+and $c$ it divides all three. And if $a^2+b^2=c^2$ then
+$k^2a^2+k^2b^2=k^2c^2$. That is, for a positive integer $k$, if
+$(a,b,c)$ is a Pythagorean triple then so is $(ka,kb,kc)$.
+Hence, to find all Pythagorean triples, it's sufficient to find
+all primitive Pythagorean triples.
+
+Let $a, b$, and $c$ be relatively prime positive integers such
+that $a^2+b^2=c^2$. Set
+
+$$\frac{m}{n}=\frac{a+c}{b}$$ reduced to
+lowest terms, That is, $\gcd(m,n)=1$. From the triangle inequality
+$m > n$. Then
+\begin{equation}
+    \frac{m}{n}\,b-a=c.
+\label{eq:p2}
+\end{equation}
+Squaring both sides of (\ref{eq:p2}) and multiplying through by $n^2$
+we get
+\[
+    m^2b^2-2mnab+n^2a^2=n^2a^2+n^2b^2;
+\]
+which, after cancelling and rearranging terms, becomes
+\begin{equation}
+    b\left(m^2-n^2\right)=a(2mn).
+\label{eq:p3}
+\end{equation}
+There are two cases, either $m$ and $n$ are of opposite parity, or
+they or both odd. Since $\gcd(m,n)=1$, they can not both be
+even.\\[3pt]
+
+
+ \textbf{Case 1.}     $m$ and $n$ of opposite parity, i.e., $m
+\not\equiv \pm n (\, mod \,\,2\, )$. So 2 divides b since
+$m^2-n^2$ is odd. From equation (\ref{eq:p2}), $n$ divides $b$.
+Since $\gcd(m,n)=1$ then $\gcd(m,m^2-n^2)=1$, therefore $m$ also
+divides $b$. And since $\gcd(a,b)=1$, $b$ divides $2mn$. Therefore
+$b=2mn$. Then
+
+\begin{equation}
+    a=m^2-n^2,  \quad b=2mn,\quad \mbox{and from
+    (\ref{eq:p2})},\,\, c=\frac{m}{n}\,2mn-(m^2-n^2)=m^2+n^2.
+\label{eq:p4}
+\end{equation}
+
+\textbf{Case 2.} $m$ and $n$ both odd, i.e., $m \equiv \pm n (\,
+mod \,\,2\, )$. So 2 divides $m^2-n^2$. Then by the same process
+as in the first case we have
+\begin{equation}
+    a=\frac{m^2-n^2}{2}, \quad b=mn,\quad and \quad
+    c=\frac{m^2+n^2}{2}.
+\label{eq:p5}
+\end{equation}
+
+The parametric equations in (\ref{eq:p4}) and (\ref{eq:p5}) appear
+to be different but they generate the same solutions. To show
+this, let
+\[
+    u=\frac{m+n}{2}\,\, \mbox{ and } \,\,v=\frac{m-n}{2}\,.
+\]
+Then $m=u+v$, and $n=u-v$. Substituting those values for $m$ and
+$n$ into (\ref{eq:p5}) we get
+\begin{equation}
+  a=2uv, \,\,\,  b=u^2-v^2, \quad \mbox{and} \quad c=u^2+v^2
+\label{eq:p6}
+\end{equation}
+where $u > v$, $gcd(u,v)=1$, and $u$ and $v$ are of opposite
+parity. Therefore (\ref{eq:p6}), with  a and b
+interchanged, is identical to (\ref{eq:p4}). Thus since
+$\left(m^2-n^2,2mn,m^2+n^2\right)$, as in (\ref{eq:p4}), is a
+primitive Pythagorean triple, we can say that $(a,b,c)$ is a
+primitive pythagorean triple if and only if there exists
+relatively prime, positive integers $m$ and $n$, $m>n$, such that
+$a=m^2-n^2,\,\, b=2mn,\,\,\mbox{ and } \,\,\, c=m^2+n^2$\,.
+%%%%%
+%%%%%
+\end{document}

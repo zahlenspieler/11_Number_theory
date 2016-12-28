@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfPseudoprimesBelow2000InBases2To16}
+\pmcreated{2013-03-22 16:50:15}
+\pmmodified{2013-03-22 16:50:15}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{table of pseudoprimes below 2000 in bases 2 to 16}
+\pmrecord{5}{39081}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This table lists \PMlinkname{pseudoprimes}{PseudoprimeP} $p$ of the form $b^{p - 1} \equiv 1 \mod b$ below 2000.
+
+\begin{tabular}{|r|l|l|}
+Base $b$ & \PMlinkescapetext{Pseudoprimes} to base $b$ & OEIS reference \\
+2 & 341, 561, 645, 1105, 1387, 1729, 1905 & A001567 \\
+3 & 91, 121, 286, 671, 703, 949, 1105, 1541, 1729, 1891 & A005935 \\
+4 & 15, 85, 91, 341, 435, 451, 561, 645, 703, 1105, 1247, 1271, 1387, 1581, 1695, 1729, 1891, 1905 & A020136 \\
+5 & 4, 124, 217, 561, 781, 1541, 1729, 1891 & A005936 \\
+6 & 35, 185, 217, 301, 481, 1105, 1111, 1261, 1333, 1729 & A005937 \\
+7 & 6, 25, 325, 561, 703, 817, 1105, 1825 & A005938 \\
+8 & 9, 21, 45, 63, 65, 105, 117, 133, 153, 231, 273, 341, 481, 511, 561, 585, 645, 651, 861, 949, 1001, 1105, 1281, 1365, 1387, 1417, 1541, 1649, 1661, 1729, 1785, 1905 & A020137 \\
+9 & 4, 8, 28, 52, 91, 121, 205, 286, 364, 511, 532, 616, 671, 697, 703, 946, 949, 1036, 1105, 1288, 1387, 1541, 1729, 1891 & A020138 \\
+10 & 9, 33, 91, 99, 259, 451, 481, 561, 657, 703, 909, 1233, 1729 & A005939 \\
+11 & 10, 15, 70, 133, 190, 259, 305, 481, 645, 703, 793, 1105, 1330, 1729 & A020139 \\
+12 & 65, 91, 133, 143, 145, 247, 377, 385, 703, 1045, 1099, 1105, 1649, 1729, 1885, 1891 & A020140 \\
+13 & 4, 6, 12, 21, 85, 105, 231, 244, 276, 357, 427, 561, 1099, 1785, 1891 & A020141 \\
+14 & 15, 39, 65, 195, 481, 561, 781, 793, 841, 985, 1105, 1111, 1541, 1891 & A020142 \\
+15 & 14, 341, 742, 946, 1477, 1541, 1687, 1729, 1891, 1921 & A020143 \\
+16 & 15, 51, 85, 91, 255, 341, 435, 451, 561, 595, 645, 703, 1105, 1247, 1261, 1271, 1285, 1387, 1581, 1687, 1695, 1729, 1891, 1905 & A020144 \\
+\end{tabular}
+
+As you may have noticed, 1729 appears in all of these except for bases 7, 13 and 14, which share factors 7, 13 and 7, respectively, with 1729.
+%%%%%
+%%%%%
+\end{document}

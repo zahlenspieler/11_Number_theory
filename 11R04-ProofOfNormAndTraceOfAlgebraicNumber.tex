@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfNormAndTraceOfAlgebraicNumber}
+\pmcreated{2013-03-22 15:58:53}
+\pmmodified{2013-03-22 15:58:53}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of norm and trace of algebraic number}
+\pmrecord{27}{37998}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{lem*}{Lemma}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm}
+\, Let $K$ be a number field and $\alpha \in K$.\, The norm $N(\alpha)$ and the trace $T(\alpha)$ of $\alpha$ in the field extension $K/\mathbb{Q}$ both are rational numbers and especially rational integers in the case $\alpha$ is an algebraic integer.\, If $\beta$ is another element of $K$, then $N(\alpha\beta) = N(\alpha)N(\beta)$ and $T(\alpha+\beta) = T(\alpha)+T(\beta)$. \, If \,
+$[K\!:\!\mathbb{Q}] = n$\, and\, $a\in\mathbb{Q}$, then $N(a) = a^n$ and $T(a) = na$.
+\end{thm}
+
+Before proving this theorem, a lemma will be stated and proven.
+
+\begin{lem*}
+\, Let $K$ be a number field with $[K\!:\!\mathbb{Q}]=n$, $\alpha \in K$ such that $[\mathbb{Q}(\alpha)\!:\!\mathbb{Q}]=d$, and $N^*(\alpha)$ and $T^*(\alpha)$ denote the \PMlinkname{absolute norm}{AbsoluteNorm} and \PMlinkname{absolute trace}{AbsoluteTrace} of $\alpha$, respectively. \, Then $d$ divides $n$, $\displaystyle N(\alpha)=(N^*(\alpha))^{\frac{n}{d}},$ and $\displaystyle T(\alpha)=\frac{n}{d}T^*(\alpha)$.
+\end{lem*}
+
+\begin{proof}
+Note that $d$ divides $n$ because $n=[K\!:\!\mathbb{Q}]=[K\!:\!\mathbb{Q}(\alpha)][\mathbb{Q}(\alpha)\!:\!\mathbb{Q}]=[K\!:\!\mathbb{Q}(\alpha)]d$.
+
+Note also that each of the $d$ embeddings of $\mathbb{Q}(\alpha)$ into $\mathbb{C}$ extends to exactly $\displaystyle \frac{n}{d}$ embeddings of $K$ into $\mathbb{C}$.  Thus,
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle N(\alpha) & \displaystyle =\prod_{\sigma \text{ emb. of }K} \sigma(\alpha) \\
+\\
+& \displaystyle =\prod_{\sigma \text{ emb. of }K} \left. \sigma \right|_{\mathbb{Q}(\alpha)} (\alpha) \\
+\\
+& \displaystyle =\left( \prod_{\tau \text{ emb. of }\mathbb{Q}(\alpha)} \tau(\alpha) \right)^{\frac{n}{d}} \\
+\\
+& \displaystyle =\left(N^*(\alpha) \right)^{\frac{n}{d}} \\
+\\
+\end{array}$
+\end{center}
+
+and
+
+\begin{center}
+$\begin{array}{ll}
+\\
+\displaystyle T(\alpha) & \displaystyle =\sum_{\sigma \text{ emb. of }K} \sigma(\alpha) \\
+\\
+& \displaystyle =\sum_{\sigma \text{ emb. of }K} \left. \sigma \right|_{\mathbb{Q}(\alpha)} (\alpha) \\
+\\
+& \displaystyle =\frac{n}{d} \sum_{\tau \text{ emb. of }\mathbb{Q}(\alpha)} \tau(\alpha) \\
+\\
+& \displaystyle =\frac{n}{d} T^*(\alpha). \end{array}$
+\end{center}
+
+\end{proof}
+
+Now, the above theorem will be proven.
+
+\emph{Proof of theorem 1.}  Let $f(x) \in \mathbb{Q}[x]$ be the minimal polynomial for $\alpha$ over $\mathbb{Q}$.  Then $\operatorname{deg} f=d$, where $d$ is as in the previous lemma.  Note that $|N^*(\alpha)|$ is equal to the absolute value of the constant term of $f$ and that $T^*(\alpha)$ is equal to the opposite of the coefficient of $x^{d-1}$ of $f$.  Thus, $N^*(\alpha), T^*(\alpha) \in \mathbb{Q}$.  Therefore, $\displaystyle N(\alpha)=(N^*(\alpha))^{\frac{n}{d}} \in \mathbb{Q}$ and $\displaystyle T(\alpha)=\frac{n}{d}T^*(\alpha) \in \mathbb{Q}$.  Moreover, if $\alpha$ is an algebraic integer, then $f(x) \in \mathbb{Z}[x]$, $N^*(\alpha), T^*(\alpha) \in \mathbb{Z}$, $\displaystyle N(\alpha)=(N^*(\alpha))^{\frac{n}{d}} \in \mathbb{Z}$, and $\displaystyle T(\alpha)=\frac{n}{d}T^*(\alpha) \in \mathbb{Z}$.
+
+If $a \in \mathbb{Q}$, then $d=1$, $N(a)=(N^*(a))^n=a^n$, and $T(a)=nT^*(a)=na$.
+
+Finally, if $\alpha, \beta \in K$, then
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle N(\alpha \beta) & \displaystyle =\prod_{\sigma \text{ emb. of }K} \sigma(\alpha \beta) \\
+\\
+& \displaystyle =\prod_{\sigma \text{ emb. of }K} \sigma(\alpha) \sigma(\beta) \\
+\\
+& \displaystyle =\left( \prod_{\sigma \text{ emb. of }K} \sigma(\alpha) \right) \left( \prod_{\sigma \text{ emb. of }K} \sigma(\beta) \right) \\
+\\
+& \displaystyle =N(\alpha)N(\beta) \\
+\\
+\end{array}$
+\end{center}
+
+and
+
+\begin{center}
+$\begin{array}{ll}
+\\
+\displaystyle T(\alpha + \beta) & \displaystyle =\sum_{\sigma \text{ emb. of }K} \sigma(\alpha + \beta) \\
+\\
+& \displaystyle =\sum_{\sigma \text{ emb. of }K} \sigma(\alpha)+\sigma(\beta) \\
+\\
+& \displaystyle =\prod_{\sigma \text{ emb. of }K} \sigma(\alpha)+\sum_{\sigma \text{ emb. of }K} \sigma(\beta) \\
+\\
+& \displaystyle =T(\alpha)+T(\beta). \end{array}$
+\end{center}
+
+$\qedsymbol$
+
+\begin{thm}
+An algebraic integer $\varepsilon$ is a unit if and only if its \PMlinkescapetext{absolute norm} $N^*(\varepsilon)=\pm 1,$. \, Thus, \PMlinkescapetext{the constant term} in the minimal polynomial of an algebraic unit is always \,$\pm 1$.
+\end{thm}
+
+\begin{proof}
+Let $K=\mathbb{Q}(\varepsilon)$.  Since $\varepsilon$ is an algebraic integer, $d=[K\!:\!\mathbb{Q}]$ is finite.  Let $\mathcal{O}_K$ denote the ring of integers of $K$.
+
+If $N^*(\varepsilon) = \pm 1$, then let $f(x) \in \mathbb{Z}[x]$ be the minimal polynomial of $\varepsilon$ over $\mathbb{Q}$.  Let $a_1, \cdots , a_{d-1} \in \mathbb{Z}$ such that $\displaystyle f(x)=x^d+\sum_{j=1}^{d-1} a_j x^j \pm 1$.  Then $\displaystyle 0=f(\varepsilon)=\varepsilon^d+\sum_{j=1}^{d-1} a_j \varepsilon^j \pm 1$.  Thus, $\displaystyle \varepsilon \left( \varepsilon^{d-1}+\sum_{j=1}^{d-1} a_j \varepsilon^{j-1} \right) = \pm 1$.  Since $\displaystyle \varepsilon^{d-1}+\sum_{j=1}^{d-1} a_j \varepsilon^{j-1} \in \mathcal{O}_K$, it follows that $\varepsilon$ is a unit in $\mathcal{O}_K$.
+
+Conversely, let $\varepsilon$ be a unit in $\mathcal{O}_K$.  Let $\upsilon \in \mathcal{O}_K$ with $\varepsilon \upsilon = 1$.  Since $N^*(\varepsilon) N^*(\upsilon) = N^*(\varepsilon \upsilon)=N^*(1)=1$ and $N^*(\varepsilon), N^*(\upsilon) \in \mathbb{Z}$, it follows that $N^*(\varepsilon) = \pm 1$.  \end{proof}
+\begin{thebibliography}{9}
+\bibitem{marcus} Marcus, Daniel A. {\em Number Fields}.  New York: Springer-Verlag, 1977.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

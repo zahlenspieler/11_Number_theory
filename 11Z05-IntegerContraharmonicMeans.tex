@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegerContraharmonicMeans}
+\pmcreated{2013-12-04 10:25:44}
+\pmmodified{2013-12-04 10:25:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integer contraharmonic means}
+\pmrecord{45}{41241}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11Z05}
+\pmclassification{msc}{11D45}
+\pmclassification{msc}{11D09}
+\pmclassification{msc}{11A05}
+\pmsynonym{integer contraharmonic means of integers}{IntegerContraharmonicMeans}
+\pmrelated{ComparisonOfPythagoreanMeans}
+\pmrelated{DivisibilityInRings}
+\pmrelated{Gcd}
+\pmdefines{contraharmonic integer}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{root}
+
+Let $u$ and $v$ be positive integers.\, There exist nontrivial cases where their contraharmonic mean
+\begin{align}
+c \;:=\; \frac{u^2\!+\!v^2}{u\!+\!v}
+\end{align}
+is an integer, too.\, For example, the values\, $u = 3,\; v = 15$\, have the contraharmonic mean\, $c =13$.\, The only ``trivial cases'' are those with\, $u = v$,\, when\, $c = u = v$.\\
+
+\begin{center}
+\begin{tabular}{||c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c||}
+\hline
+$u$ & $2$ & $3$ & $3$ & $4$ & $4$ & $5$ & $5$ & $6$
+& $6$ & $6$ & $6$ & $7$ & $7$ & $8$ & $8$ & $8$ & $9$ & $9$ & $...$\\
+\hline
+$v$ & $6$ & $6$ & $15$ & $12$ & $28$ & $20$ & $45$ & $12$ & $18$
+& $30$ & $66$ & $42$ & $91$ & $24$ & $56$ & $120$ & $18$ & $45$ & $...$\\
+\hline
+$c$ & $5$ & $5$ & $13$ & $10$ & $25$ & $17$ & $41$ & $10$ & $15$
+& $26$ & $61$ & $37$ & $85$ & $20$ & $50$& $113$ & $15$ & $39$ & $...$\\
+\hline
+\end{tabular}
+\end{center}
+
+The nontrivial integer contraharmonic means form Sloane's sequence 
+\PMlinkexternal{A146984}{http://oeis.org/search?q=A146984&language=english&go=Search}.\\
+
+\textbf{Proposition 1.}\, For any value of $u > 2$, there are at least two \textbf{greater} values of $v$ such that\, 
+$c \in \mathbb{Z}$.
+
+\emph{Proof.}\, One has the identities
+\begin{align}
+\frac{u^2\!+\!((u\!-\!1)u)^2}{u+(u\!-\!1)u} \;=\; u^2\!-\!2u\!+\!2,
+\end{align}
+\begin{align}
+\frac{u^2\!+\!((2u\!-\!1)u)^2}{u+(2u\!-\!1)u} \;=\; 2u^2\!-\!2u\!+\!1,
+\end{align}
+the right hand sides of which are positive integers and different for\, $u \neq 1$.\, The value\, $u = 2$\, is an exception, since it has only\, $v = 6$\, with which its contraharmonic mean is an integer.\\
+
+In (2) and (3), the value of $v$ is a multiple of $u$, but it needs not be always so in \PMlinkescapetext{order} to $c$ be an integer, e.g. we have\, $u = 12,\; v = 20,\; c = 17$.\\
+
+\textbf{Proposition 2.}\, For all\, $u > 1$, a necessary condition for $c \in \mathbb{Z}$\, is that
+                       $$\gcd(u,\,v) > 1.$$
+
+\emph{Proof.}\, Suppose that we have positive integers $u,\,v$ such that\, $\gcd(u,\,v) = 1$.\, Then as well,\, $\gcd(u\!+\!v,\,uv) = 1$,\, since otherwise both $u\!+\!v$ and $uv$ would be divisible by a prime $p$, and thus also one of the \PMlinkname{factors}{Product} $u$ and $v$ of $uv$ would be divisible by $p$; then however\, $p \mid u\!+\!v$ would imply that\, $p \mid u$\, and\, $p \mid v$, whence we would have\, $\gcd(u,\,v) \geqq p$.\, Consequently, we must have\, $\gcd(u\!+\!v,\,uv) = 1$.
+
+We make the additional supposition that $\displaystyle\frac{u^2\!+\!v^2}{u\!+\!v}$ is an integer, i.e. that
+                   $$u^2\!+\!v^2 = (u\!+\!v)^2\!-\!2uv$$
+is divisible by $u\!+\!v$.\, Therefore also $2uv$ is divisible by this sum.\, But because\, $\gcd(u\!+\!v,\,uv) = 1$, the factor 2 must be divisible by $u\!+\!v$, which is at least 2.\, Thus\, $u = v = 1$.
+
+The conclusion is, that only the ``most trivial case''\, $u = v = 1$\, allows that\, $\gcd(u,\,v) = 1$.\, This settles the proof.\\
+
+
+\textbf{Proposition 3.}\, If $u$ is an odd prime number, then (2) and (3) are the only possibilities enabling integer contraharmonic means.\\
+
+\emph{Proof.}\, Let $u$ be a positive odd prime.\, The values\, $v = (u\!-\!1)u$\, and\, $v = (2u\!-\!1)u$\, do always.\, As for other possible values of $v$, according to the Proposition 2, they must be multiples of the prime number $u$:
+$$v = nu, \quad n \in \mathbb{Z}$$
+Now
+$$\mathbb{Z} \ni \frac{u^2\!+\!v^2}{u\!+\!v} \;=\; \frac{(n^2\!+\!1)u}{n\!+\!1},$$
+and since $u$ is prime, either\, $u \mid n\!+\!1$\, or\, $n\!+\!1 \mid n^2\!+\!1$.
+
+In the former case\, $n+1 = ku$,\, one obtains
+$$c = \frac{(n^2\!+\!1)u}{n\!+\!1} \;=\; \frac{(k^2u^2\!-\!2ku\!+\!2)u}{ku} \;=\; ku^2\!-\!2\!+\!\frac{2}{k},$$
+which is an integer only for\, $k = 1$\, and\, $k = 2$, corresponding (2) and (3).
+
+In the latter case, there must be a prime number $p$ dividing both $n\!+\!1$ and $n^2\!+\!1$, whence\, $p \nmid n$.\, The equation
+$$n^2\!+\!1 \;=\; (n\!+\!1)^2\!-\!2n$$
+then implies that\, $p \mid 2n$.\, So we must have\, $p \mid 2$,\, i.e. necessarily\, $p = 2$.\, Moreover, if we had\, 
+$4 \mid n\!+\!1$\, and\, $4 \mid n^2\!+\!1$,\, then we could write\, $n\!+\!1 = 4m$,\, and thus 
+$$n^2\!+\!1 \;=\; (4m\!-\!1)^2\!+\!1 \;=\; 16m^2\!-\!8m\!+\!2 \not\equiv 0 \pmod{4},$$
+which is impossible.\, We infer, that now\, $\gcd(n\!+\!1,\,n^2\!+\!1) = 2$,\, and in any case
+$$\gcd(n\!+\!1,\,n^2\!+\!1) \;\leqq\; 2.$$
+Nevertheless, since\, $n\!+\!1 \geqq 3$\, and\, $n\!+\!1 \mid n^2\!+\!1$,\, we should have\, 
+$\gcd(n\!+\!1,\,n^2\!+\!1) \geqq 3$.\, The contradiction means that the latter case is not possible, and the Proposition 3 has been proved.\\
+
+
+\textbf{Proposition 4.}\,  If\, $(u_1,\,v,\,c)$\, is a nontrivial solution of (1) with\,  $u_1 < c < v$,\, then there is always another nontrivial solution\, $(u_2,\,v,\,c)$\, with\, $u_2 < v$.\, On the contrary, if\, $(u,\,v_1,\,c)$\, is a nontrivial solution of (1) with\,  $u < c < v_1$,\, there exists no different solution\, $(u,\,v_2,\,c)$.
+
+
+For example, there are the solutions\, $(2,\,6,\,5)$\, and\, $(3,\,6,\,5)$;\, 
+$(5,\,20,\,17)$\, and\, $(12,\,20,\,17)$.\\
+
+\emph{Proof.}\, The Diophantine equation (1) may be written
+\begin{align}
+u^2\!-\!cu\!+\!(v^2\!-\!cv) \;=\; 0,
+\end{align}
+whence 
+\begin{align}
+u \;=\; \frac{c\!\pm\!\sqrt{c^2\!+\!4cv\!-\!4v^2}}{2},
+\end{align}
+and the discriminant of (4) must be nonnogative because of the existence of the real \PMlinkname{root}{Equation} $u_1$.\, But if it were zero, i.e. if the equation \,$c^2\!+\!4cv\!-\!4v^2 = 0$\, were true, this would imply for $v$ the irrational value 
+$\frac{1}{2}(1\!+\!\sqrt{2})c$.\, Thus the discriminant must be positive, and then also the smaller root $u$ of (4) gotten with ``$-$'' in front of the square root is positive, since we can rewrite it 
+$$\frac{c\!-\!\sqrt{c^2\!+\!4cv\!-\!4v^2}}{2} 
+\;=\; \frac{c^2\!-\!(c^2\!+\!4cv\!-\!4v^2)}{2(c+\sqrt{c^2\!+\!4cv\!-\!4v^2})}
+\;=\; \frac{2(v\!-\!c)v}{c\!+\!\sqrt{c^2\!+\!4cv\!-\!4v^2}}$$
+and the numerator is positive because\, $v > c$.\, Thus, when the discriminant of the equation (4) is positive, the equation has always two distinct positive roots $u$.\, When one of the roots ($u_1$) is an integer, the other is an integer, too, because in the numerator of (5) the sum and the difference of two integers are simultaneously even.\, It follows the existence of $u_2$, distinct from $u_1$.
+
+If one solves (1) for $v$, the smaller root
+$$\frac{c\!-\!\sqrt{c^2\!+\!4cu\!-\!4u^2}}{2}  \;=\; \frac{2(u\!-\!c)u}{c\!+\!\sqrt{c^2\!+\!4cu\!-\!4u^2}}$$
+is negative.\, Thus there cannot be any\, $(u,\,v_2,\,c)$.\\
+
+
+\textbf{Proposition 5.}\, When the contraharmonic mean of two different positive integers $u$ and $v$ is an integer, their sum is never squarefree.
+
+\emph{Proof.}\, By Proposition 2 we have
+$$\gcd(u,\,v) \;=:\; d \;>\; 1.$$
+Denote
+$$u \;=\; u'd, \quad v \;=\; v'd,$$
+when\, $\gcd(u',\,v') \,=\, 1$.\, Then
+$$c \;=\; \frac{(u'^{\,2}\!+\!v'^{\,2})d}{u'\!+\!v'},$$
+whence
+\begin{align}
+(u'\!+\!v')c \;=\; (u'^{\,2}\!+\!v'^{\,2})d \;\equiv\; [(u'\!+\!v')^2\!-\!2u'v']d.
+\end{align}
+If $p$ is any odd prime factor of $u'\!+\!v'$, the last equation implies that
+$$p \nmid u', \quad p \nmid v', \quad p \nmid [\;\;],$$
+and consequently\, $p \mid d$.\, Thus we see that
+$$p^2 \mid (u'\!+\!v')d \;=\; u\!+\!v.$$
+This means that the sum $u\!+\!v$ is not squarefree.\, The same result is easily got also in the case that $u$ and $v$ both are even.\\
+
+\textbf{Note 1.}\, Cf.\, $u\!+\!v = c\!+\!b$\, in $2^\circ$ of 
+the proof of 
+\PMlinkname{this theorem}{ContraharmonicMeansAndPythagoreanHypotenuses} 
+and the Note 4 of \PMlinkid{this entry}{138}.\\
+
+\textbf{Proposition 6.}\, For each integer \,$u > 0$\, there are only a finite number of solutions\, $(u,\,v,\,c)$\, of the Diophantine equation (1).\, The number does not exceed $u\!-\!1$.
+
+\emph{Proof.}\, The expression of the contraharmonic mean in (1) may be edited as follows:
+$$c \;=\; \frac{(u\!+\!v)^2-2uv}{u\!+\!v} \;=\; u\!+\!v-\frac{2u(u\!+\!v\!-\!u)}{u\!+\!v} 
+\;=\; v\!-\!u+\frac{2u^2}{u\!+\!v}$$
+In \PMlinkescapetext{order} to $c$ be an integer, the quotient
+$$w \;:=\; \frac{2u^2}{u\!+\!v}$$
+must be integer; rewriting this last equation as
+\begin{align}
+v \;=\; \frac{2u^2}{w}\!-\!u
+\end{align}
+we infer that $w$ has to be a \PMlinkid{divisor}{923} of $2u^2$ (apparently\, $1 \leqq w < u$\, for getting values of 
+$v$ greater than $u$).\, The amount of such divisors is quite restricted, not more than $u\!-\!1$, and consequently there is only a finite number of suitable values of $v$.\\
+
+\textbf{Note 2.}\, The equation (7) explains the result of Proposition 1 ($w = 1$,\, $w = 2$).\, As well, if $u$ is an odd prime number, then the only factors of $2u^2$ less than $u$ are 1 and 2, and for these the equation (7) gives the values\, $v := (2u\!-\!1)u$\, and\, $v := (u\!-\!1)u$\, which explains Proposition 3.
+
+\begin{thebibliography}{8}
+\bibitem{K}{\sc J. Pahikkala}: ``On contraharmonic mean and Pythagorean triples''.\, -- \emph{Elemente der Mathematik} \textbf{65}:2 (2010).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

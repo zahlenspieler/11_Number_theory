@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FurstenbergsProofOfTheInfinitudeOfPrimes}
+\pmcreated{2013-03-22 14:42:10}
+\pmmodified{2013-03-22 14:42:10}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{F\"urstenberg's proof of the infinitude of primes}
+\pmrecord{8}{36315}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11A41}
+\pmrelated{HausdorffSpaceNotCompletelyHausdorff}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+F\"urstenberg's proof (\cite{fberg}, \cite{priben}) that there are infinitely many primes is an amusing and beautiful blend of elementary number theory and point-set topology.
+
+Consider the arithmetic progression topology on the positive integers, where a basis of open sets is given by subsets of the form $U_{a,b}=\{n\in\Z^+|n\equiv b\mod a\}$.  Arithmetic progressions themselves are by definition open, and in fact clopen, since
+
+\begin{align*}
+U_{a,b}^c=\bigcup_{c\neq b} U_{a,c}
+\end{align*}
+
+where the union is taken over a set of distinct residue classes modulo $a$.  Hence the complement of $U_{a,b}$ is a union of open sets and so is open, so $U_{a,b}$ itself is closed (and hence clopen).
+
+Consider the set $U=\cup_p U_{p,0}$, where the union runs over all primes $p$.  Then the complement of $U$ in $\Z^+$ is the single element $\{1\}$, which is clearly not an open set (every open set is infinite in this topology).  Thus $U$ is not closed, but since we have written $U$ as a union of closed sets and a \emph{\PMlinkescapetext{finite}} union of closed sets is again closed, this implies that there must be infinitely many terms appearing in that union, i.e. that there must be infinitely many distinct primes.
+
+\begin{thebibliography}{9}
+\bibitem{fberg} 
+Furstenberg, Harry, 
+\emph{On the infinitude of primes}, 
+American Mathematical Monthly, Vol. 62, 1955, p. 353. 
+\bibitem{priben}
+Ribenboim, Paulo.  \emph{The New Book of Prime Number Records}.  Springer, 1996.  p. 10
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

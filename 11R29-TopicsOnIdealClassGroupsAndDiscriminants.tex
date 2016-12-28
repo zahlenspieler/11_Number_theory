@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopicsOnIdealClassGroupsAndDiscriminants}
+\pmcreated{2013-03-22 15:07:44}
+\pmmodified{2013-03-22 15:07:44}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{topics on ideal class groups and discriminants}
+\pmrecord{13}{36869}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R29}
+\pmrelated{IdealClass}
+\pmrelated{BibliographyForNumberTheory}
+\pmrelated{ClassNumberDivisibilityInCyclicExtensions}
+\pmrelated{ClassNumberDivisibilityInPExtensions}
+\pmrelated{ClassNumberFormula}
+\pmrelated{UnramifiedExtensionsAndClassNumberDivisibility}
+\pmrelated{PushDownTheoremOnClassNumbers}
+\pmrelated{ClassNumberDivisibilityInExtension}
+\pmdefines{ideal class group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\section*{Ideal Class Groups, Class Numbers and Discriminants (\PMlinkexternal{MSC 11R29}{http://planetmath.org/browse/objects/11R29/})}
+
+Let $K$ be a number field (that is, a finite extension of the rational numbers $\Rats$) and let $\mathcal{O}_K$ be the ring of integers in $K$. The ring of integers of $K$ is the analogue of $\Ints$ in $\Rats$. As we know, $\Ints$ enjoys the property that any number can be factored uniquely as a product of powers of primes. In particular, $\Ints$ is a UFD and a PID (principal ideal domain). When is $\mathcal{O}_K$ a UFD or a PID? This is a very hard question to answer. The {\it ideal class group} and {\it class number} of $K$ are objects that measures how far $\mathcal{O}_K$ is from actually being a PID. In that sense, the class groups measure the arithmetic complexity of a number field. We include the basic definition of class group here for convenience of the reader:
+
+\begin{defn}
+The class group, $\Cl(K)$, of a number field $K$ is defined to be the quotient group of all fractional ideals of $K$ modulo principal fractional ideals. The size of the class group $|\Cl(K)|$ is called the class number of $K$ and it is usually written $h_K$.
+\end{defn}
+
+\addtocounter{section}{1}
+\subsection{Basic Definitions}
+\begin{enumerate}
+\item The definition of class group and class number can be found at the entry ideal class. Notice that the ideal classes form an abelian group (the entry also discusses properties of ideal classes).
+\item The Hilbert class field of $K$, usually denoted by $H$, is the maximal unramified abelian extension of $K$. In particular, the Galois group $\Gal(H/K)$ is isomorphic to the class group of $K$ which is the link between ramification, class field theory and class numbers. The entry on the \PMlinkname{existence of the Hilbert class field}{ExistenceOfHilbertClassField} discusses alternative characterizations of $H$. 
+\item The concept of ray class group is a generalization of the class group of a field. See also ray class field. 
+\end{enumerate}
+
+\subsection{Computing Class Groups and Class Numbers}
+\begin{enumerate}
+\item The class number formula is one of the most important results in number theory. It relates Dedekind zeta functions and class numbers (and other invariants of the field).
+
+\item Minkowski's theorem on lattices provides the well-known Minkowski's constant, which in turn can be used to bound class numbers and discriminants.
+
+\item Using Minkowski's constant to find a class number (contains examples).
+\end{enumerate}
+
+\subsection{Divisibility Properties of Class Numbers}
+The entry on unramified extensions and class number divisibility is a corollary of the existence of the Hilbert class field and clarifies the connection between the prime divisors of $h_K$ and the unramified abelian extensions of $K$.
+
+The following are theorems that explain the properties of class numbers in extensions of number fields:
+\begin{enumerate}
+\item Class number divisibility in extensions: $F/K$ Galois, $[F:K]$ not divisible by $p$. Then $p|h_K$ implies $p|h_F$.
+\item Class number divisibility in cyclic extensions: $F/K$ Galois and cyclic with $[F:K]$ not divisible by $p$ and $p$ does not divide the class number of intermediate extensions. Then if $p|h_F$ then $p^f|h_F$ for some $f$ (see entry for details).
+\item Extensions without unramified subextensions and class number divisibility: $F/K$ such that there are no non-trivial abelian unramified subextensions. Then $h_K|h_F$. 
+\item \PMlinkname{Class number divisibility in $p$-extensions}{ClassNumberDivisibilityInPExtensions}: $F/K$ is a Galois $p$-extension which is ramified at most at one prime. If $p|h_F$ then $p|h_K$.
+
+\item Push-down theorem on class numbers: $F/K$ is a $p$-extension which is ramified exactly at one prime and this prime is totally ramified. If $p|h_F$ then $p|h_K$. 
+\end{enumerate}
+\subsection{Class Numbers of Cyclotomic Fields}
+Cyclotomic fields have been the object of extensive study. For example, they are crucial in some of the ``easy'' cases of Fermat's Last Theorem. For any number $n$, let $\zeta_n$ be a primitive $n$th root of unity. The field $K=\Rats(\zeta_n)$ is a cyclotomic field. We denote its class number by $h_n$.
+\begin{enumerate}
+\item A prime number $p$ is said to be an irregular prime if $h_p$ is divisible by $p$ (the entry on regular primes contains Kummer's criterion for irregularity in terms of Bernoulli numbers). See some examples of regular primes. 
+
+\item Herbrand's theorem relates Bernoulli numbers and certain subgroups (or $\chi$-components) of the ideal class group.
+
+\item Stickelberger's theorem on annihilators of the ideal class group of $\Rats(\zeta_p)$ (it also defines the Stickelberger elements). 
+
+\item Thaine's theorem is the counterpart of Stickelberger's theorem for totally real fields.
+
+\item Vandiver's conjecture states that a prime number $p$ cannot divide the class number of the maximal real subfield of $\Rats(\zeta_p)$.
+
+\item The index of the group of cyclotomic units in the full unit groups is exactly the class number of the maximal real subfield of $\Rats(\zeta_p)$.
+\end{enumerate}
+
+\subsection{Discriminants and Related Results}
+\begin{enumerate}
+\item \PMlinkname{Definition of discriminant}{Discriminant} (also discusses the relationship with discriminants in other contexts).
+\item A related concept: the root-discriminant.
+\item Hermite's theorem on extensions which are unramified outside a fixed set of primes.
+
+\end{enumerate}
+\section*{References}
+\begin{enumerate}
+\item Serge Lang, {\em Algebraic Number Theory}. Springer-Verlag, New York.
+\item Daniel A. Marcus, {\em Number Fields}, Springer, New York.
+\item K. Ireland, M. Rosen, {\em A Classical Introduction to Modern Number Theory}, Springer-Verlag, 1998.
+\item Lawrence C. Washington, {\em Introduction to Cyclotomic Fields}, Springer-Verlag, New York.
+\end{enumerate}
+{\it Note: If you would like to contribute to this entry, please send an email to the author (alozano).}
+%%%%%
+%%%%%
+\end{document}

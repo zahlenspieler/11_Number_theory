@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatsqrt2IsIrrational}
+\pmcreated{2013-03-22 12:39:13}
+\pmmodified{2013-03-22 12:39:13}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that $\sqrt{2}$ is irrational}
+\pmrecord{11}{32920}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11J72}
+\pmrelated{Irrational}
+\pmrelated{Surd}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\N{{\mathbb N}}
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{hypothesis}
+\PMlinkescapeword{order}
+
+Assume that the \PMlinkname{square root of $2$}{SquareRootOf2} is rational.  Then we can write
+
+\begin{equation*}
+ \sqrt{2} = \frac{a}{b},
+\end{equation*}
+where $a,b\in\N$ and $a$ and $b$ are relatively prime.  Then $\displaystyle 2=(\sqrt{2})^2=\left(\frac{a}{b}\right)^2=\frac{a^2}{b^2}$.  Thus, $a^2=2b^2$.  Therefore, $2\mid a^2$.  Since $2$ is prime, it must divide $a$.  Then $a=2c$ for some $c\in\N$.  Thus, $2b^2=a^2=(2c)^2=4c^2$, yielding that $b^2=2c^2$.  Therefore, $2\mid b^2$.  Since $2$ is prime, it must divide $b$.
+
+Since $2\mid a$ and $2\mid b$, we have that $a$ and $b$ are not relatively prime, which contradicts the hypothesis.  Hence, the initial assumption is false.  It follows $\sqrt{2}$ is irrational.
+
+With a little bit of work, this argument can be generalized to any positive integer that is not a square.  Let $n$ be such an integer.  Then there must exist a prime $p$ and $k,m\in\N$ such that $n=p^km$, where $p\nmid m$ and $k$ is odd. Assume that $\sqrt{n}=a/b$, where $a,b\in\N$ and are relatively prime. Then $\displaystyle p^km=n=(\sqrt{n})^2=\left(\frac{a}{b}\right)^2=\frac{a^2}{b^2}$. Thus, $a^2=p^kmb^2$.  From the fundamental theorem of arithmetic, it is clear that the maximum powers of $p$ that divides $a^2$ and $b^2$ are even.  Since $k$ is odd and $p$ does not divide $m$, the maximum power of $p$ that divides $p^kmb^2$ is also odd.  Thus, the same should be true for $a^2$.  Hence, we have reached a contradiction and $\sqrt{n}$ must be irrational.
+
+The same argument can be generalized even more, for example to the case of nonsquare irreducible fractions and to higher order roots.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoryOfAlgebraicAndTranscendentalNumbers}
+\pmcreated{2013-03-22 15:14:01}
+\pmmodified{2013-03-22 15:14:01}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{theory of algebraic and transcendental numbers}
+\pmrecord{32}{37004}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11R04}
+%\pmkeywords{algebraic}
+%\pmkeywords{irrational}
+%\pmkeywords{transcendental}
+\pmrelated{AlgebraicNumberTheory}
+\pmrelated{TheoryOfRationalAndIrrationalNumbers}
+\pmrelated{MultiplesOfAnAlgebraicNumber}
+\pmrelated{NormAndTraceOfAlgebraicNumber}
+\pmrelated{AlgebraicSumAndProduct}
+\pmrelated{DegreeOfAnAlgebraicNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+The following entry is some sort of index of articles in PlanetMath about the basic theory of algebraic and transcendental numbers, and it should be studied together with its complement: the theory of rational and irrational numbers. The reader should follow the links in each bullet-point to learn more about each topic. For a somewhat deeper approach to the subject, the reader should read about Algebraic Number Theory. In this entry we will concentrate on the properties of the complex numbers and the extension $\Complex/\Rats$, however, in general, one can talk about numbers of any field $F$ which are algebraic over a subfield $K$.
+
+\section{Basic Definitions}
+
+\begin{enumerate}
+\item A number $\alpha\in \Complex$ is said to be \PMlinkname{algebraic}{Algebraic} (over $\Rats$), or an algebraic number, if there is a polynomial $p(x)$ with integer coefficients such that $\alpha$ is a root of $p(x)$ (i.e. $p(\alpha)=0$). 
+
+\item Similarly as the rational numbers may be classified to integer and non-integer (fractional) numbers, also the algebraic numbers may be classified to algebraic integers or \PMlinkescapetext{entire} algebraic numbers and non-integer algebraic numbers. \,The algebraic integers form an integral domain.
+
+\item The numbers $-12$, $\sqrt{2}$, $\sqrt[3]{7}$, $\sqrt{2}+\sqrt[3]{7}$, $\zeta_{7}=e^{2\pi i/7}$ (that is, a $7$th root of unity), are all algebraic integers, $\frac{\sqrt{2}}{2}$ is a non-integer algebraic number (its \PMlinkescapetext{minimal polynomial} is $2x^2-1$).\, See also rational algebraic integers.
+
+\item A number $\alpha\in \Complex$ is said to be transcendental if it is not algebraic.
+
+\item For example, e is transcendental, where e is the natural $\log$ base (also called the Euler number). The number Pi ($\pi$) is also transcendental. The proofs of these two facts are HARD!
+
+\item A field extension $L/K$ is said to be an algebraic extension if every element of $L$ is algebraic over $K$. An extension which is not algebraic is said to be transcendental. For example $\Rats(\sqrt{2})/\Rats$ is algebraic while $\Rats(e)/\Rats$ is transcendental (see the simple field extensions).
+
+\item The algebraic closure of a field $\Rats$ is the union of all algebraic extension fields $L$ of $\Rats$. The algebraic closure of $\Rats$ is usually denoted by $\overline{\Rats}$. In other words, $\overline{\Rats}$ is the union of all complex numbers which are algebraic.
+
+\item The set $\overline{\Rats}$ of all algebraic numbers is a field. \,It has as a subfield the $\overline{\Rats}\cap\Reals$, the set of all real algebraic numbers, and as a subring the set of all algebraic integers.\, See the field of algebraic numbers and the ring of algebraic integers.
+
+\item The ring of all algebraic integers $\mathbb{A}$ contains \PMlinkname{no irreducible elements}{RingWithoutIrreducibles}. 
+
+\item The height of an algebraic number is a way to measure the complexity of the number.
+
+\end{enumerate}
+
+\section{Small Results}
+
+\begin{enumerate}
+\item A finite extension of fields is an algebraic extension.
+
+\item \PMlinkname{The extension $\Reals/\Rats$ is not finite}{ExtensionMathbbRmathbbQIsNotFinite}.
+
+\item For every algebraic number $\alpha$, there exists an irreducible minimal polynomial  $m_\alpha(x)$ such that $m_\alpha(\alpha)=0$ (see existence of the minimal polynomial).
+
+\item For any algebraic number $\alpha$, there is a nonzero multiple $n\alpha$ which is an algebraic integer (see multiples of an algebraic number):
+
+\item Some examples of algebraic numbers are the sine, cosine and tangent of the angles $r\pi$ where $r$ is a rational number (see \PMlinkname{this entry}{AlgebraicSinesAndCosines}).\, More usual are the root expressions of rational numbers.
+
+\item The \PMlinkname{transcendental root theorem}{ProofOfTranscendentalRootTheorem}: Let $F\subset K$ be a field extension with $K$ an algebraically closed field. Let $x\in K$ be transcendental over $F$. Then for any natural number $n\geq 1$, the element $x^{1/n}\in K$ is also transcendental over $F$.
+
+\item An example of transcendental number (as an application of Liouville's approximation theorem).
+
+\item The algebraic numbers are countable. In other words, $\overline{\Rats}$ is a countable subset of $\Complex$. Since $\Complex$ is uncountable, we conclude that there are infinitely many transcendental numbers (uncountably many!). \,See also the proof of the existence of transcendental numbers.
+
+\item Algebraic and transcendental: \,the sum, difference, and quotient of two non-zero complex numbers, from which one is algebraic and the other transcendental, is transcendental.
+
+\item All transcendental extension fields $\Rats(\alpha)$ of $\Rats$ are isomorphic (see the simple transcendental field extensions).
+
+\end{enumerate}
+\section{BIG Results}
+
+\begin{enumerate}
+\item Steinitz Theorem: There exists an algebraic closure of a field.
+\item The Gelfond-Schneider Theorem: Let $\alpha$ and $\beta$ be algebraic over $\mathbb{Q}$, with $\beta$ irrational and $\alpha$ not equal to 0 or 1. Then $\alpha^{\beta}$ is transcendental over $\mathbb{Q}$.
+
+\item The Lindemann-Weierstrass Theorem.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

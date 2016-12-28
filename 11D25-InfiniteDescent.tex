@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfiniteDescent}
+\pmcreated{2013-03-22 14:07:56}
+\pmmodified{2013-03-22 14:07:56}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{infinite descent}
+\pmrecord{13}{35542}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{11D25}
+\pmrelated{ExampleOfFermatsLastTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newtheorem{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{theo}{Theorem}
+\begin{document}
+Fermat invented this method of infinite descent. The idea is: If a given natural number $n$
+with certain properties implies that there exists a smaller one with these properties, then
+there are infinitely many of these, which is impossible.
+
+Here is an example:
+
+Let $m,n$ be coprime positive integers with opposite parity, $m<n$, and, say, $m$ is even.
+
+Let $a=2mn$, $b=n^2 -m^2$, $c=m^2 +n^2$. Then $\{a,b,c\}$ is a primitive Pythagorean triple,
+and the area $A$ of the right triangle with sides $a, b, c$ is $ab/2=mn(n^2-m^2)$.
+
+Suppose $A$ is a square. Then, since $m,n$ are coprime and of opposite parity,
+$\gcd(m+n, m-n)=\gcd(m,n)=1$. Thus, for $A$ to be a square, each of $m,n,m-n,m+n$ must be
+squares itself. Setting $r^2 =m$, $s^2 =n$, we have $A=(rs)^2(s^4-r^4)$.
+
+We prove that the Diophantine equation $x^4-y^4=z^2$ has no solution in natural numbers.
+\begin{rmk}
+Suppose that $z^2+y^4=x^4$, where $\gcd(x,y,z)=1$, $x,y,z \in \N$. Then $x$ is odd, and
+$y,z$ have opposite parity.
+\end{rmk}
+\begin{proof}
+If $x$ was even, then $x^4=z^2+y^4 \equiv (z+y^2)^2 \equiv 0 \pmod{2}$, so $z, y^2 \equiv 0
+\pmod{2}$ or $z, y^2 \equiv 1 \pmod{2}$. But $z, y^2 \equiv 0 \pmod{2}$ conflicts with
+$\gcd(x,y,z)=1$. And $z,y^2 \equiv 1 \pmod 2$ implies $y^2+(z^2)^2\equiv 2 \pmod{4}$
+contradicting $x^4 \equiv 0 \pmod{4}$. Thus, $x$ is odd, and $x^4=z^2+(y^2)^2 \equiv (z+y^2)^2 \equiv 1 \pmod{2}$ implies that $z,y^2$ have opposite parity.
+\end{proof}
+Suppose $x$ is odd and $z$ is even. Then we have $z=2pq$, $y^2 =q^2-p^2$ and $x^2 =q^2 +p^2$, where $p,q$ have opposite parity and are coprime. Since $z$ is odd, this implies $(xy)^2=q^4 -p^4$, so it is sufficient to show that there is no solution for odd $z$. 
+
+Now $x,z$ are assumed odd. Then $y$ is even, and there exist $m,n \in \N$,
+$m<n$,$(2mn,m+n)=1$ such that
+\begin{eqnarray}
+\label{eq1}
+y^2&=2mn \\
+x^2&=n^2&+m^2 \\
+z&=n^2&-m^2.
+\end{eqnarray}
+Since $m^2+n^2=x^2$ is a primitive Pythagorean triple, there exist $p,q \in \N$, $p<q$,
+$(2pq,p+q)=1$ satisfiying
+\begin{eqnarray}
+\label{eq2}
+m&=2pq \\
+n&=q^2&-p^2 \\
+x&=q^2+p^2.
+\end{eqnarray}
+Since $2mn$ is a square and $m,n$ are coprime and, say, $n$ is odd, $n$ is a square, and we have $m=2r^2$, $n=s^2$.
+
+From the primitive Pythagorean triple $m^2+n^2=x^2$ we get $x=u^2 +v^2$, $n=u^2 -v^2$, $m=2uv$. Since $2uv=2r^2$ $uv$ is a square, and each of $u$ and $v$ is a square: $u=g^2$, $v=h^2$. 
+
+Substituting $n,u, v$ in $n=u^2 -v^2$ we have $s^2 =g^4-h^4$. 
+But since $n+(1/2) <m$ this implies $n=s^2 <z=n^2-m^2 <z^2$, thus we have another solution with odd $s<z$. This contradicts to the fact that there exists a smallest solution.
+
+See \PMlinkexternal{here}{http://mathpages.com/home/kmath144.htm} for a discussion of 
+infinite descent vs. induction.
+%%%%%
+%%%%%
+\end{document}
