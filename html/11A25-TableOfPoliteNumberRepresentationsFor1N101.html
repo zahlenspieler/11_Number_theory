@@ -1,0 +1,1205 @@
+<!DOCTYPE html><html>
+<head>
+<title>table of polite number representations for 1&lt;n&lt;101</title>
+<!--Generated on Fri Feb  9 15:15:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">table of polite number representations for <math id="m1" class="ltx_Math" alttext="1&lt;n&lt;101" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mn>101</mn></mrow></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">There clearly are patterns to the number of ways to represent a positive integer as a sum of consecutive nonnegative integers. There is only one way to represent odd primes in this manner, whereas composite odd numbers tend to have more representations.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To try to make the relationship between integer factorization and number of representations as a sum of consecutive integers, the following table, in addition to listing the different sums and tallying them, also gives the value of the number of (nondistinct) prime factors function (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/NumberOfNondistinctPrimeFactorsFunction</span>) <math id="p2.m1" class="ltx_Math" alttext="\Omega(n)" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> and the difference between the two. But to avoid needless repetition, the sums given are only of positive numbers; the only cases this makes a difference is for the triangular numbers <math id="p2.m2" class="ltx_Math" alttext="T_{n}" display="inline"><msub><mi>T</mi><mi>n</mi></msub></math>, which in addition to being representable as</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\sum_{i=1}^{n}i" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>i</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are also representable as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\sum_{i=0}^{n}i." display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>i</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For sums with more than three addends, the middle addends have been replaced by three dots.</p>
+</div>
+<div id="p4" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r"><math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></th>
+<td class="ltx_td ltx_align_left ltx_border_r">Rep 1</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Rep 2</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Rep 3</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Rep 4</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Rep 5</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m2" class="ltx_Math" alttext="N_{p}(n)" display="inline"><mrow><msub><mi>N</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m3" class="ltx_Math" alttext="\Omega(n)" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m4" class="ltx_Math" alttext="\Omega(n)-N_{p}(n)" display="inline"><mrow><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>N</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">2</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">3</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1 + 2</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">4</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">5</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2 + 3</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">6</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1 + 2 + 3</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">7</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3 + 4</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">8</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">9</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4 + 5</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 + 3 + 4</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">10</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 4</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">11</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5 + 6</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">12</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3 + 4 + 5</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">13</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6 + 7</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">14</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 5</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">15</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7 + 8</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 + 5 + 6</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 5</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">16</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">17</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8 + 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">18</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5 + 6 + 7</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 6</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">19</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9 + 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">20</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 6</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">21</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10 + 11</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6 + 7 + 8</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 6</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m5" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">22</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 7</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">23</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11 + 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">24</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7 + 8 + 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">25</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12 + 13</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 7</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">26</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 8</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">27</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13 + 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8 + 9 + 10</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 7</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">28</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 7</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">29</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14 + 15</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">30</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9 + 10 + 11</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 9</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 8</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">31</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15 + 16</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">32</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">33</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16 + 17</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10 + 11 + 12</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 8</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m6" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">34</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">35</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17 + 18</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 9</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 8</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">36</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11 + 12 + 13</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 8</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m8" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">37</th>
+<td class="ltx_td ltx_align_left ltx_border_r">18 + 19</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">38</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">39</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19 + 20</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12 + 13 + 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m9" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">40</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">41</th>
+<td class="ltx_td ltx_align_left ltx_border_r">20 + 21</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">42</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13 + 14 + 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9 … 12</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">43</th>
+<td class="ltx_td ltx_align_left ltx_border_r">21 + 22</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">44</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 11</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">45</th>
+<td class="ltx_td ltx_align_left ltx_border_r">22 + 23</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14 + 15 + 16</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 10</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 9</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m10" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">46</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">47</th>
+<td class="ltx_td ltx_align_left ltx_border_r">23 + 24</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">48</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15 + 16 + 17</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">49</th>
+<td class="ltx_td ltx_align_left ltx_border_r">24 + 25</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">50</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11 … 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">51</th>
+<td class="ltx_td ltx_align_left ltx_border_r">25 + 26</td>
+<td class="ltx_td ltx_align_left ltx_border_r">16 + 17 + 18</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m11" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">52</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">53</th>
+<td class="ltx_td ltx_align_left ltx_border_r">26 + 27</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">54</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17 + 18 + 19</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12 … 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">55</th>
+<td class="ltx_td ltx_align_left ltx_border_r">27 + 28</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9 … 13</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 10</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m12" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">56</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">57</th>
+<td class="ltx_td ltx_align_left ltx_border_r">28 + 29</td>
+<td class="ltx_td ltx_align_left ltx_border_r">18 + 19 + 20</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m13" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">58</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13 … 16</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">59</th>
+<td class="ltx_td ltx_align_left ltx_border_r">29 + 30</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">60</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19 + 20 + 21</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10 … 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">61</th>
+<td class="ltx_td ltx_align_left ltx_border_r">30 + 31</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">62</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14 … 17</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">63</th>
+<td class="ltx_td ltx_align_left ltx_border_r">31 + 32</td>
+<td class="ltx_td ltx_align_left ltx_border_r">20 + 21 + 22</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8 … 13</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 12</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 11</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m14" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">64</th>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+<td class="ltx_td ltx_align_right ltx_border_r">6</td>
+<td class="ltx_td ltx_align_right ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">65</th>
+<td class="ltx_td ltx_align_left ltx_border_r">32 + 33</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11 … 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m15" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">66</th>
+<td class="ltx_td ltx_align_left ltx_border_r">21 + 22 + 23</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15 … 18</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 11</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">67</th>
+<td class="ltx_td ltx_align_left ltx_border_r">33 + 34</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">68</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">69</th>
+<td class="ltx_td ltx_align_left ltx_border_r">34 + 35</td>
+<td class="ltx_td ltx_align_left ltx_border_r">22 + 23 + 24</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9 … 14</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m16" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">70</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16 … 19</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12 … 16</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">71</th>
+<td class="ltx_td ltx_align_left ltx_border_r">35 + 36</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">72</th>
+<td class="ltx_td ltx_align_left ltx_border_r">23 + 24 + 25</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">73</th>
+<td class="ltx_td ltx_align_left ltx_border_r">36 + 37</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">74</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17 … 20</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">75</th>
+<td class="ltx_td ltx_align_left ltx_border_r">37 + 38</td>
+<td class="ltx_td ltx_align_left ltx_border_r">24 + 25 + 26</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13 … 17</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10 … 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 12</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m17" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">76</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">77</th>
+<td class="ltx_td ltx_align_left ltx_border_r">38 + 39</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8 … 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m18" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">78</th>
+<td class="ltx_td ltx_align_left ltx_border_r">25 + 26 + 27</td>
+<td class="ltx_td ltx_align_left ltx_border_r">18 … 21</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 12</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">79</th>
+<td class="ltx_td ltx_align_left ltx_border_r">39 + 40</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">80</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14 … 18</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">6</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">81</th>
+<td class="ltx_td ltx_align_left ltx_border_r">40 + 41</td>
+<td class="ltx_td ltx_align_left ltx_border_r">26 + 27 + 28</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11 … 16</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">82</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19 … 22</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">83</th>
+<td class="ltx_td ltx_align_left ltx_border_r">41 + 42</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">84</th>
+<td class="ltx_td ltx_align_left ltx_border_r">27 + 28 + 29</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9 … 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 14</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">85</th>
+<td class="ltx_td ltx_align_left ltx_border_r">42 + 43</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15 … 19</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m19" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">86</th>
+<td class="ltx_td ltx_align_left ltx_border_r">20 … 23</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">87</th>
+<td class="ltx_td ltx_align_left ltx_border_r">43 + 44</td>
+<td class="ltx_td ltx_align_left ltx_border_r">28 + 29 + 30</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12 … 17</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m20" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">88</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">89</th>
+<td class="ltx_td ltx_align_left ltx_border_r">44 + 45</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">90</th>
+<td class="ltx_td ltx_align_left ltx_border_r">29 + 30 + 31</td>
+<td class="ltx_td ltx_align_left ltx_border_r">21 … 24</td>
+<td class="ltx_td ltx_align_left ltx_border_r">16 … 20</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6 … 14</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2 … 13</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">4</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m21" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">91</th>
+<td class="ltx_td ltx_align_left ltx_border_r">45 + 46</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10 … 16</td>
+<td class="ltx_td ltx_align_left ltx_border_r">1 … 13</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m22" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">92</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8 … 15</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">93</th>
+<td class="ltx_td ltx_align_left ltx_border_r">46 + 47</td>
+<td class="ltx_td ltx_align_left ltx_border_r">30 + 31 + 32</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13 … 18</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m23" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">94</th>
+<td class="ltx_td ltx_align_left ltx_border_r">22 … 25</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">95</th>
+<td class="ltx_td ltx_align_left ltx_border_r">47 + 48</td>
+<td class="ltx_td ltx_align_left ltx_border_r">17 … 21</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5 … 14</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m24" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">96</th>
+<td class="ltx_td ltx_align_left ltx_border_r">31 + 32 + 33</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">6</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">97</th>
+<td class="ltx_td ltx_align_left ltx_border_r">48 + 49</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">98</th>
+<td class="ltx_td ltx_align_left ltx_border_r">23 … 26</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11 … 17</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">99</th>
+<td class="ltx_td ltx_align_left ltx_border_r">49 + 50</td>
+<td class="ltx_td ltx_align_left ltx_border_r">32 + 33 + 34</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14 … 19</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7 … 15</td>
+<td class="ltx_td ltx_align_left ltx_border_r">4 … 14</td>
+<td class="ltx_td ltx_align_right ltx_border_r">5</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p4.m25" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">100</th>
+<td class="ltx_td ltx_align_left ltx_border_r">18 … 22</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9 … 16</td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">2</td>
+<td class="ltx_td ltx_align_right ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1</td>
+</tr>
+</tbody>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">table of polite number representations for <math id="p4.m26" class="ltx_Math" alttext="1&lt;n&lt;101" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mn>101</mn></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TableOfPoliteNumberRepresentationsFor1N101</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:45:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:45:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:15:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

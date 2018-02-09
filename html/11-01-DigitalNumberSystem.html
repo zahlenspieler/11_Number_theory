@@ -1,0 +1,155 @@
+<!DOCTYPE html><html>
+<head>
+<title>digital number system</title>
+<!--Generated on Fri Feb  9 15:09:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">digital number system</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Digital System</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Most<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>but not all– see Roman numerals for an example of a baseless number system.</span></span></span> written number systems are built upon the concept of a <em class="ltx_emph ltx_font_italic">digital system</em> (or <em class="ltx_emph ltx_font_italic">positional system</em>) for their functioning and conveying of quantitative meaning. In these systems, meaning is derived from two things: symbols and positions. A particular symbol in a specific place is called a <em class="ltx_emph ltx_font_italic">digit</em>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The representation of a value in a digital system follows the schema:</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\ldots s_{2}s_{1}s_{0}.s_{-1}s_{-2}s_{-3}\ldots" display="block"><mrow><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>0</mn></msub></mrow><mo>.</mo><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>3</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Where each <math id="S1.p4.m1" class="ltx_Math" alttext="s_{i}" display="inline"><msub><mi>s</mi><mi>i</mi></msub></math> is some symbol that has a quantitative value (a digit). Places to the left of the point (<math id="S1.p4.m2" class="ltx_Math" alttext="." display="inline"><mrow><mi></mi><mo>.</mo></mrow></math>) are worth whole units, and places to the right are worth fractional units. It is the <em class="ltx_emph ltx_font_italic">base</em> that tells us how much of a fraction or how many whole units. Once a base <math id="S1.p4.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is chosen, the value of a number <math id="S1.p4.m4" class="ltx_Math" alttext="s_{2}s_{1}s_{0}.s_{-1}s_{-2}s_{-3}" display="inline"><mrow><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>0</mn></msub></mrow><mo>.</mo><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>3</mn></mrow></msub></mrow></mrow></math> would be calculated like:</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="s_{2}s_{1}s_{0}.s_{-1}s_{-2}s_{-3}=s_{2}\cdot b^{2}+s_{1}\cdot b^{1}+s_{0}%
+\cdot b^{0}+s_{-1}\cdot b^{-1}+s_{-2}\cdot b^{-2}+s_{-3}\cdot b^{-3}" display="block"><mrow><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>0</mn></msub></mrow><mo>.</mo><mrow><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mo>-</mo><mn>3</mn></mrow></msub></mrow><mo>=</mo><mrow><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⋅</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⋅</mo><msup><mi>b</mi><mn>1</mn></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>⋅</mo><msup><mi>b</mi><mn>0</mn></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⋅</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⋅</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mrow><mo>-</mo><mn>3</mn></mrow></msub><mo>⋅</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">In our now-standard, Arabic-derived decimal system, the base <math id="S1.p6.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is equal to 10. Other very common (and useful) systems are binary, hexadecimal, and octal, having <math id="S1.p6.m2" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math>, <math id="S1.p6.m3" class="ltx_Math" alttext="b=16" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>16</mn></mrow></math>, and <math id="S1.p6.m4" class="ltx_Math" alttext="b=8" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>8</mn></mrow></math> respectively <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>These are generic systems which are capable of representing any number. By contrast, our system of written time is a curious hybrid of bases (60, 60, and then 10 from there on) and has a fixed number of whole places and a different number of symbols (24) in the highest place, making it capable only of representing the same discrete, finite set of values over and over again.</span></span></span>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Each <math id="S1.p7.m1" class="ltx_Math" alttext="s_{i}" display="inline"><msub><mi>s</mi><mi>i</mi></msub></math> is a member of an alphabet of symbols which must have <math id="S1.p7.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> members. Intuitively this makes sense: when we try to represent the number which follows “9” in the decimal system, we know it must be “10”, since there is no symbol after “9.” Hence, position as well as symbol conveys the meaning, and base tells us how much a unit in each position is worth.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Remark</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Curiously, though one would think that the choice of base leads to merely a different way of rendering the same information, there are instances where things are variously provable or proven in some bases, but not others. For instance, there exists a non-recursive formula for the <math id="S2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th <span class="ltx_text ltx_font_bold">binary</span> digit of <math id="S2.p1.m2" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, but not for decimal– one still must calculate all of the <math id="S2.p1.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> preceding decimal digits of <math id="S2.p1.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> to get the <math id="S2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th (see <span class="ltx_text ltx_font_typewriter">http://www.nersc.gov/ dhbailey/dhbpapers/digits.pdf</span>this paper).
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">digital number system</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DigitalNumberSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">akrowne (2)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">akrowne (2)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">akrowne (2)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11-01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DecimalExpansion</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">base</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">numerical base</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">digital base</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">positional systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">positional number systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">place systems</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">digit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:09:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

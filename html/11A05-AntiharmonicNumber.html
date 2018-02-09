@@ -1,0 +1,160 @@
+<!DOCTYPE html><html>
+<head>
+<title>antiharmonic number</title>
+<!--Generated on Fri Feb  9 15:09:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">antiharmonic number</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The antiharmonic, a.k.a. contraharmonic mean of some set of
+positive numbers is defined as the sum of their squares
+divided by their sum.  There exist positive integers <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+whose sum <math id="p1.m2" class="ltx_Math" alttext="\sigma_{1}(n)" display="inline"><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> of all their positive divisors divides
+the sum <math id="p1.m3" class="ltx_Math" alttext="\sigma_{2}(n)" display="inline"><mrow><msub><mi>σ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> of the squares of those divisors.  For
+example, 4 is such an integer:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="1+2+4\,=\,7\,\mid\,21\,=\,1^{2}+2^{2}+4^{2}" display="block"><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mpadded width="+1.7pt"><mn>4</mn></mpadded><mo>=</mo><mpadded width="+1.7pt"><mn> 7</mn></mpadded><mo>∣</mo><mpadded width="+1.7pt"><mn> 21</mn></mpadded><mo>=</mo><msup><mn> 1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><msup><mn>4</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Such integers are called
+<span class="ltx_text ltx_font_italic">antiharmonic numbers</span> (or <span class="ltx_text ltx_font_italic">contraharmonic numbers</span>),
+since the contraharmonic mean of their positive divisors is an
+integer.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The antiharmonic numbers form the
+<span class="ltx_text ltx_font_typewriter">HTTP://oeis.org/</span>OEIS integer sequence
+<span class="ltx_text ltx_font_typewriter">http://oeis.org/search?q=A020487&amp;language=english&amp;go=Search</span>A020487:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="1,\,4,\,9,\,16,\,20,\,25,\,36,\,49,\,50,\,64,\,81,\,100,\,117,\,121,\,144,\,16%
+9,\,180,\,\ldots" display="block"><mrow><mn>1</mn><mo>,</mo><mn> 4</mn><mo>,</mo><mn> 9</mn><mo>,</mo><mn> 16</mn><mo>,</mo><mn> 20</mn><mo>,</mo><mn> 25</mn><mo>,</mo><mn> 36</mn><mo>,</mo><mn> 49</mn><mo>,</mo><mn> 50</mn><mo>,</mo><mn> 64</mn><mo>,</mo><mn> 81</mn><mo>,</mo><mn> 100</mn><mo>,</mo><mn> 117</mn><mo>,</mo><mn> 121</mn><mo>,</mo><mn> 144</mn><mo>,</mo><mn> 169</mn><mo>,</mo><mn> 180</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Using the expressions of divisor function (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DivisorFunction</span>)
+<math id="p3.m1" class="ltx_Math" alttext="\sigma_{z}(n)" display="inline"><mrow><msub><mi>σ</mi><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the condition for an
+integer <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to be an antiharmonic number, is that the quotient</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sigma_{2}(n):\sigma_{1}(n)\;=\;\sum_{0&lt;d\mid n}\!d^{2}:\!\sum_{0&lt;d\mid n}\!d%
+\;=\;\prod_{i=1}^{k}\frac{p_{i}^{2(m_{i}+1)}-1}{p_{i}^{2}-1}:\prod_{i=1}^{k}%
+\frac{p_{i}^{m_{i}+1}-1}{p_{i}-1}" display="block"><mrow><mrow><msub><mi>σ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>0</mn><mo>⁢</mo><mrow><mo>&lt;</mo><mi>d</mi><mo fence="true">∣</mo></mrow><mo>⁢</mo><mi>n</mi></mrow></munder></mpadded><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow><mo rspace="0.8pt">:</mo><mrow><mrow><mpadded width="-1.7pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mn>0</mn><mo>⁢</mo><mrow><mo>&lt;</mo><mi>d</mi><mo fence="true">∣</mo></mrow><mo>⁢</mo><mi>n</mi></mrow></munder></mpadded><mpadded width="+2.8pt"><mi>d</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mfrac><mrow><msubsup><mi>p</mi><mi>i</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msubsup><mo>-</mo><mn>1</mn></mrow><mrow><msubsup><mi>p</mi><mi>i</mi><mn>2</mn></msubsup><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></mrow><mo>:</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mfrac><mrow><msubsup><mi>p</mi><mi>i</mi><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msubsup><mo>-</mo><mn>1</mn></mrow><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an integer; here the <math id="p3.m3" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>’s are the distinct prime divisors
+of <math id="p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="p3.m5" class="ltx_Math" alttext="m_{i}" display="inline"><msub><mi>m</mi><mi>i</mi></msub></math>’s their multiplicities.  The last form is
+simplified to</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\prod_{i=1}^{k}\frac{p_{i}^{m_{i}+1}+1}{p_{i}+1}." display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msubsup><mi>p</mi><mi>i</mi><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msubsup><mo>+</mo><mn>1</mn></mrow><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The OEIS sequence A020487 contains all nonzero perfect squares,
+since in the case of such numbers the antiharmonic mean (1) of
+the divisors has the form</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\prod_{i=1}^{k}\frac{p_{i}^{2m_{i}+1}+1}{p_{i}+1}\;=\;\prod_{i=1}^{k}\left(p_{%
+i}^{2m_{i}}-p_{i}^{2m_{i}-1}-\!+\ldots-p_{i}+1\right)" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mpadded width="+2.8pt"><mfrac><mrow><msubsup><mi>p</mi><mi>i</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub></mrow><mo>+</mo><mn>1</mn></mrow></msubsup><mo>+</mo><mn>1</mn></mrow><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></mfrac></mpadded><mo rspace="5.3pt">=</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mo>(</mo><msubsup><mi>p</mi><mi>i</mi><mrow><mn>2</mn><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub></mrow></msubsup><mo>-</mo><msubsup><mi>p</mi><mi>i</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub></mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo rspace="0.8pt">-</mo><mo>+</mo><mi mathvariant="normal">…</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(cf. irreducibility of binomials with unity coefficients).
+<br class="ltx_break"></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Note.</span>  It would in a manner be legitimated to define
+a positive integer to be an antiharmonic number (or an
+antiharmonic integer) if it is the antiharmonic mean of two
+distinct positive integers; see integer contraharmonic mean
+and contraharmonic Diophantine equation (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ContraharmonicDiophantineEquation</span>).</p>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">antiharmonic number</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AntiharmonicNumber</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-11-28 10:15:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-11-28 10:15:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:09:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

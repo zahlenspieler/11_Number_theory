@@ -1,0 +1,110 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof that τ⁢(n) is the number of positive divisors of n</title>
+<!--Generated on Fri Feb  9 15:14:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof that <math id="m1" class="ltx_Math" alttext="\tau(n)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of positive divisors of <math id="m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The following is a proof that <math id="p1.m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> counts the positive divisors of its input (which must be a positive integer).</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Recall that <math id="p2.m1" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> behaves according to the following two rules:</p>
+</div>
+<div id="p3" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a prime and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a nonnegative integer, then <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\tau(p^{k})=k+1" display="inline"><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\gcd(a,b)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\tau(ab)=\tau(a)\tau(b)" display="inline"><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime. Then <math id="p4.m2" class="ltx_Math" alttext="p^{0}=1" display="inline"><mrow><msup><mi>p</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow></math>. Note that 1 is the only positive divisor of 1 and <math id="p4.m3" class="ltx_Math" alttext="\tau(1)=\tau(p^{0})=0+1=1" display="inline"><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mn>0</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Suppose that, for all positive integers <math id="p5.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> smaller than <math id="p5.m2" class="ltx_Math" alttext="z\in\mathbb{Z}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> with <math id="p5.m3" class="ltx_Math" alttext="z&gt;1" display="inline"><mrow><mi>z</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, the number of positive divisors of <math id="p5.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is <math id="p5.m5" class="ltx_Math" alttext="\tau(m)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Since <math id="p5.m6" class="ltx_Math" alttext="z&gt;1" display="inline"><mrow><mi>z</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, there exists a prime divisor <math id="p5.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> of <math id="p5.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Let <math id="p5.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> be a positive integer such that <math id="p5.m10" class="ltx_Math" alttext="p^{k}" display="inline"><msup><mi>p</mi><mi>k</mi></msup></math> exactly divides <math id="p5.m11" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Let <math id="p5.m12" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be a positive integer such that <math id="p5.m13" class="ltx_Math" alttext="z=p^{k}a" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><msup><mi>p</mi><mi>k</mi></msup><mo>⁢</mo><mi>a</mi></mrow></mrow></math>. Then <math id="p5.m14" class="ltx_Math" alttext="\gcd(a,p)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Thus, <math id="p5.m15" class="ltx_Math" alttext="\gcd(a,p^{k})=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Since <math id="p5.m16" class="ltx_Math" alttext="1\leq a&lt;z" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>z</mi></mrow></math>, by the induction hypothesis, there are <math id="p5.m17" class="ltx_Math" alttext="\tau(a)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> positive divisors of <math id="p5.m18" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> be a positive divisor of <math id="p6.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Let <math id="p6.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> be a nonnegative integer such that <math id="p6.m4" class="ltx_Math" alttext="p^{y}" display="inline"><msup><mi>p</mi><mi>y</mi></msup></math> exactly divides <math id="p6.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Thus, <math id="p6.m6" class="ltx_Math" alttext="0\leq y\leq x" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>y</mi><mo>≤</mo><mi>x</mi></mrow></math>, and there are <math id="p6.m7" class="ltx_Math" alttext="k+1" display="inline"><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></math> choices for <math id="p6.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>. Let <math id="p6.m9" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be a positive integer such that <math id="p6.m10" class="ltx_Math" alttext="d=p^{y}c" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><msup><mi>p</mi><mi>y</mi></msup><mo>⁢</mo><mi>c</mi></mrow></mrow></math>. Then <math id="p6.m11" class="ltx_Math" alttext="\gcd(c,p)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Since <math id="p6.m12" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> divides <math id="p6.m13" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> and <math id="p6.m14" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="p6.m15" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, we conclude that <math id="p6.m16" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> divides <math id="p6.m17" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Since <math id="p6.m18" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> divides <math id="p6.m19" class="ltx_Math" alttext="p^{k}a" display="inline"><mrow><msup><mi>p</mi><mi>k</mi></msup><mo>⁢</mo><mi>a</mi></mrow></math> and <math id="p6.m20" class="ltx_Math" alttext="\gcd(c,p)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, it must be the case that <math id="p6.m21" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> divides <math id="p6.m22" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. Thus, there are <math id="p6.m23" class="ltx_Math" alttext="\tau(a)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> choices for <math id="p6.m24" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Since there are <math id="p6.m25" class="ltx_Math" alttext="k+1" display="inline"><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></math> choices for <math id="p6.m26" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and there are <math id="p6.m27" class="ltx_Math" alttext="\tau(a)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> choices for <math id="p6.m28" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, there are <math id="p6.m29" class="ltx_Math" alttext="(k+1)\tau(a)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> choices for <math id="p6.m30" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Hence, there are <math id="p6.m31" class="ltx_Math" alttext="(k+1)\tau(a)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> positive divisors of <math id="p6.m32" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Since <math id="p6.m33" class="ltx_Math" alttext="\tau(z)=\tau(p^{k}a)=\tau(p^{k})\tau(a)=(k+1)\tau(a)" display="inline"><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>p</mi><mi>k</mi></msup><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, it follows that, for every positive integer <math id="p6.m34" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the number of positive divisors of <math id="p6.m35" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is <math id="p6.m36" class="ltx_Math" alttext="\tau(n)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof that <math id="p7.m1" class="ltx_Math" alttext="\tau(n)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of positive divisors of <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofThattaunIsTheNumberOfPositiveDivisorsOfN</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:30:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:30:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:14:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

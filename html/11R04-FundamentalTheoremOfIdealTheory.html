@@ -1,0 +1,264 @@
+<!DOCTYPE html><html>
+<head>
+<title>fundamental theorem of ideal theory</title>
+<!--Generated on Fri Feb  9 15:41:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">fundamental theorem of ideal theory</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem.</span>  Every nonzero ideal of the ring of integers of an algebraic number field can be written as product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProductOfIdeals</span>) of prime ideals of the ring.  The prime ideal  of the factors (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Product</span>).
+<br class="ltx_break"></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In this entry we consider the ring <math id="p3.m1" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> of the integers of a number field <math id="p3.m2" class="ltx_Math" alttext="\mathbb{Q}(\vartheta)" display="inline"><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϑ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.  We use as starting  the fact that the ideals of <math id="p3.m3" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> are finitely generated submodules of <math id="p3.m4" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> (cf. basis of ideal in algebraic number field) and that its prime ideals <math id="p3.m5" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> are maximal ideals, i.e. the only ideal factors of <math id="p3.m6" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> are <math id="p3.m7" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> itself and the unit ideal  <math id="p3.m8" class="ltx_Math" alttext="(1)=\mathcal{O}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mi class="ltx_font_mathcaligraphic">𝒪</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">For proving the above fundamental theorem of ideal theory, we present and prove some lemmata.
+<br class="ltx_break"></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 1.</span>  The equation  <math id="p5.m1" class="ltx_Math" alttext="\mathfrak{a=bc}" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔠</mi></mrow></mrow></math>  between the ideals of <math id="p5.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> implies that 
+<math id="p5.m3" class="ltx_Math" alttext="\mathfrak{a\subseteq c}" display="inline"><mrow><mi>𝔞</mi><mo>⊆</mo><mi>𝔠</mi></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Let  <math id="p6.m1" class="ltx_Math" alttext="\mathfrak{b}=(\beta_{1},\ldots,\beta_{s})" display="inline"><mrow><mi>𝔟</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>β</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>β</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>  and  <math id="p6.m2" class="ltx_Math" alttext="\mathfrak{c}=(\gamma_{1},\ldots,\gamma_{t})" display="inline"><mrow><mi>𝔠</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>γ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>γ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>.  If</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\alpha\;\in\;\mathfrak{a}\;=\;(\beta_{1}\gamma_{1},\ldots,\beta_{i}\gamma_{j},%
+\ldots,\beta_{s}\gamma_{t})," display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>α</mi></mpadded><mo rspace="5.3pt">∈</mo><mpadded width="+2.8pt"><mi>𝔞</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>β</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>β</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>γ</mi><mi>j</mi></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>β</mi><mi>s</mi></msub><mo>⁢</mo><msub><mi>γ</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then there are the elements <math id="p6.m3" class="ltx_Math" alttext="\lambda_{ij}" display="inline"><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> of <math id="p6.m4" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> such that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\alpha\;=\;\sum_{i}\sum_{j}\lambda_{ij}\beta_{i}\gamma_{j}\;=\;\sum_{j}\left(%
+\sum_{i}\lambda_{ij}\beta_{i}\right)\gamma_{j}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>α</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>j</mi></munder><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>β</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>γ</mi><mi>j</mi></msub></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>j</mi></munder><mrow><mrow><mo>(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>β</mi><mi>i</mi></msub></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>γ</mi><mi>j</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But the  of <math id="p6.m5" class="ltx_Math" alttext="\gamma_{j}" display="inline"><msub><mi>γ</mi><mi>j</mi></msub></math> in the parentheses are elements of the ring <math id="p6.m6" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>, whence the last sum form of <math id="p6.m7" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> shows that  <math id="p6.m8" class="ltx_Math" alttext="\alpha\in\mathfrak{c}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝔠</mi></mrow></math>.  Consequently, <math id="p6.m9" class="ltx_Math" alttext="\mathfrak{a\subseteq c}" display="inline"><mrow><mi>𝔞</mi><mo>⊆</mo><mi>𝔠</mi></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 2.</span>  Any nonzero element <math id="p7.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> of <math id="p7.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> belongs only to a finite number of ideals of <math id="p7.m3" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Let  <math id="p8.m1" class="ltx_Math" alttext="\mathfrak{a}=(\alpha_{1},\ldots,\alpha_{r})" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>r</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>  be any ideal containing <math id="p8.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and let 
+<math id="p8.m3" class="ltx_Math" alttext="\{\varrho_{1},\ldots,\varrho_{m}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>ϱ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>ϱ</mi><mi>m</mi></msub><mo stretchy="false">}</mo></mrow></math>  be a complete residue system modulo <math id="p8.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> (cf. congruence in algebraic number field).  Then
+</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\alpha_{i}\;=\;\alpha\lambda_{i}\!+\!\varrho_{n_{i}}\qquad(i\;=\;1,\,\ldots,\,r)" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>α</mi><mi>i</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mi>α</mi><mpadded width="-1.7pt"><msub><mi>λ</mi><mi>i</mi></msub></mpadded><mo rspace="0.8pt">+</mo><msub><mi>ϱ</mi><msub><mi>n</mi><mi>i</mi></msub></msub><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mpadded width="+2.8pt"><mi>i</mi></mpadded><mo>=</mo><mn> 1</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the numbers <math id="p8.m5" class="ltx_Math" alttext="\lambda_{i}" display="inline"><msub><mi>λ</mi><mi>i</mi></msub></math> belong to <math id="p8.m6" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>.  Since we have</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathfrak{a}\;=\;(\alpha_{1},\,\ldots,\,\alpha_{r},\,\alpha)\;=\;(\alpha%
+\lambda_{1}\!+\!\varrho_{n_{1}},\,\ldots,\,\alpha\lambda_{r}\!+\!\varrho_{n_{r%
+}},\,\alpha)\;=\;(\varrho_{n_{1}},\,\ldots,\,\varrho_{n_{r}},\,\alpha)," display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>𝔞</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>r</mi></msub><mo rspace="4.2pt">,</mo><mi>α</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mpadded width="-1.7pt"><msub><mi>λ</mi><mn>1</mn></msub></mpadded></mrow><mo rspace="0.8pt">+</mo><msub><mi>ϱ</mi><msub><mi>n</mi><mn>1</mn></msub></msub></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mpadded width="-1.7pt"><msub><mi>λ</mi><mi>r</mi></msub></mpadded></mrow><mo rspace="0.8pt">+</mo><msub><mi>ϱ</mi><msub><mi>n</mi><mi>r</mi></msub></msub></mrow><mo rspace="4.2pt">,</mo><mi>α</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϱ</mi><msub><mi>n</mi><mn>1</mn></msub></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>ϱ</mi><msub><mi>n</mi><mi>r</mi></msub></msub><mo rspace="4.2pt">,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">there can be different ideals <math id="p8.m7" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> only a finite number, at most
+<math id="p8.m8" class="ltx_Math" alttext="1\!+\!m\!+\!{n\choose 2}\!+\ldots+\!{m\choose m}=2^{m}" display="inline"><mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mpadded><mo rspace="0.8pt">+</mo><mi mathvariant="normal">…</mi><mo rspace="0.8pt">+</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>m</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><msup><mn>2</mn><mi>m</mi></msup></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 3.</span>  Each ideal <math id="p9.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> of <math id="p9.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> has only a finite number of ideal factors.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  If  <math id="p10.m1" class="ltx_Math" alttext="\mathfrak{c\mid a}" display="inline"><mrow><mi>𝔠</mi><mo>∣</mo><mi>𝔞</mi></mrow></math>  and  <math id="p10.m2" class="ltx_Math" alttext="\alpha\in\mathfrak{a}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝔞</mi></mrow></math>,  then by Lemma 1, 
+<math id="p10.m3" class="ltx_Math" alttext="\alpha\in\mathfrak{c}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>𝔠</mi></mrow></math>,  whence Lemma 2 implies that there is only a finite number of such factors <math id="p10.m4" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 4.</span>  All nonzero ideals of <math id="p11.m1" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> are cancellative (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CancellationIdeal</span>), i.e. if  <math id="p11.m2" class="ltx_Math" alttext="\mathfrak{ac=ad}" display="inline"><mrow><mrow><mi>𝔞</mi><mo>⁢</mo><mi>𝔠</mi></mrow><mo>=</mo><mrow><mi>𝔞</mi><mo>⁢</mo><mi>𝔡</mi></mrow></mrow></math>  then  <math id="p11.m3" class="ltx_Math" alttext="\mathfrak{c=d}" display="inline"><mrow><mi>𝔠</mi><mo>=</mo><mi>𝔡</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  The theorem of <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/3154</span>Steinitz (1911) guarantees an ideal <math id="p12.m1" class="ltx_Math" alttext="\mathfrak{g}" display="inline"><mi>𝔤</mi></math> of <math id="p12.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> such that the product <math id="p12.m3" class="ltx_Math" alttext="\mathfrak{ga}" display="inline"><mrow><mi>𝔤</mi><mo>⁢</mo><mi>𝔞</mi></mrow></math> is a principal ideal <math id="p12.m4" class="ltx_Math" alttext="(\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math>.  Then we may write</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(\omega)\mathfrak{c}\;=\;\mathfrak{(ga)c}\;=\;\mathfrak{g(ac)}\;=\;\mathfrak{g%
+(ad)}\;=\;\mathfrak{(ga)d}\;=\;(\omega)\mathfrak{d}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>𝔠</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝔤</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>𝔠</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mi>𝔤</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔞</mi><mo>⁢</mo><mi>𝔠</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mi>𝔤</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔞</mi><mo>⁢</mo><mi>𝔡</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝔤</mi><mo>⁢</mo><mi>𝔞</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>𝔡</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝔡</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If  <math id="p12.m5" class="ltx_Math" alttext="\mathfrak{c}=(\gamma_{1},\ldots,\gamma_{s})" display="inline"><mrow><mi>𝔠</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>γ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>γ</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>  and  <math id="p12.m6" class="ltx_Math" alttext="\mathfrak{d}=(\delta_{1},\ldots,\delta_{t})" display="inline"><mrow><mi>𝔡</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>δ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>δ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>,  we thus have the equation</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="(\omega\gamma_{1},\ldots,\omega\gamma_{s})\;=\;(\omega\delta_{1},\ldots,\omega%
+\delta_{t})" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>γ</mi><mi>s</mi></msub></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>δ</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>δ</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">by which there must exist the elements <math id="p12.m7" class="ltx_Math" alttext="\lambda_{i1},\ldots,\lambda_{it}" display="inline"><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow></math> of <math id="p12.m8" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> such that</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\omega\gamma_{i}\;=\;\lambda_{i1}\omega\delta_{1}+\ldots+\lambda_{it}\omega%
+\delta_{t}." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>γ</mi><mi>i</mi></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>δ</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>δ</mi><mi>t</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consequently, the <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/7040</span>generators  <math id="p12.m9" class="ltx_Math" alttext="\gamma_{i}=\lambda_{i1}\delta_{1}+\ldots+\lambda_{it}\delta_{t}" display="inline"><mrow><msub><mi>γ</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>δ</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>λ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>⁢</mo><msub><mi>δ</mi><mi>t</mi></msub></mrow></mrow></mrow></math>  of <math id="p12.m10" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math> belong to the ideal <math id="p12.m11" class="ltx_Math" alttext="\mathfrak{d}" display="inline"><mi>𝔡</mi></math>, and therefore  <math id="p12.m12" class="ltx_Math" alttext="\mathfrak{c\subseteq d}" display="inline"><mrow><mi>𝔠</mi><mo>⊆</mo><mi>𝔡</mi></mrow></math>.  Similarly one gets the reverse containment.
+<br class="ltx_break"></p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 5.</span>  If  <math id="p13.m1" class="ltx_Math" alttext="\mathfrak{a=bc}" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔠</mi></mrow></mrow></math>  and  <math id="p13.m2" class="ltx_Math" alttext="\mathfrak{b}\neq(1)" display="inline"><mrow><mi>𝔟</mi><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>,  then <math id="p13.m3" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math> has less ideal factors than <math id="p13.m4" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>.
+</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Evidently, any factor of <math id="p14.m1" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math> is a factor of <math id="p14.m2" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>.  But 
+<math id="p14.m3" class="ltx_Math" alttext="\mathfrak{a\mid a}" display="inline"><mrow><mi>𝔞</mi><mo>∣</mo><mi>𝔞</mi></mrow></math>  and  <math id="p14.m4" class="ltx_Math" alttext="\mathfrak{a\nmid c}" display="inline"><mrow><mi>𝔞</mi><mo>∤</mo><mi>𝔠</mi></mrow></math>, since otherwise we had 
+<math id="p14.m5" class="ltx_Math" alttext="\mathfrak{c=ad=bcd}" display="inline"><mrow><mi>𝔠</mi><mo>=</mo><mrow><mi>𝔞</mi><mo>⁢</mo><mi>𝔡</mi></mrow><mo>=</mo><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔠</mi><mo>⁢</mo><mi>𝔡</mi></mrow></mrow></math>  whence <math id="p14.m6" class="ltx_Math" alttext="(1)=\mathfrak{bd}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mi>𝔟</mi><mo>⁢</mo><mi>𝔡</mi></mrow></mrow></math> which would, by Lemma 4, imply <math id="p14.m7" class="ltx_Math" alttext="\mathfrak{b}=(1)" display="inline"><mrow><mi>𝔟</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 6.</span>  Any proper ideal <math id="p15.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> of <math id="p15.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> has a prime ideal factor.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Let <math id="p16.m1" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math> be such a factor of <math id="p16.m2" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> that has as few factors as possible.  Then
+<math id="p16.m3" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math> must be a prime ideal, because otherwise we had  <math id="p16.m4" class="ltx_Math" alttext="\mathfrak{c}=\mathfrak{c}_{1}\mathfrak{d}" display="inline"><mrow><mi>𝔠</mi><mo>=</mo><mrow><msub><mi>𝔠</mi><mn>1</mn></msub><mo>⁢</mo><mi>𝔡</mi></mrow></mrow></math>  where
+<math id="p16.m5" class="ltx_Math" alttext="\mathfrak{c}_{1}" display="inline"><msub><mi>𝔠</mi><mn>1</mn></msub></math> and <math id="p16.m6" class="ltx_Math" alttext="\mathfrak{d}" display="inline"><mi>𝔡</mi></math> are proper ideals of <math id="p16.m7" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> and, by Lemma 5, the ideal <math id="p16.m8" class="ltx_Math" alttext="\mathfrak{c}_{1}" display="inline"><msub><mi>𝔠</mi><mn>1</mn></msub></math> would have less factors than <math id="p16.m9" class="ltx_Math" alttext="\mathfrak{c}" display="inline"><mi>𝔠</mi></math>; this however contradicts the fact  <math id="p16.m10" class="ltx_Math" alttext="\mathfrak{c}_{1}\mid\mathfrak{a}" display="inline"><mrow><msub><mi>𝔠</mi><mn>1</mn></msub><mo>∣</mo><mi>𝔞</mi></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 7.</span>  Every nonzero proper ideal <math id="p17.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> of <math id="p17.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> can be written as a product
+<math id="p17.m3" class="ltx_Math" alttext="\mathfrak{p}_{1}\cdots\mathfrak{p}_{k}" display="inline"><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mi>k</mi></msub></mrow></math> where  <math id="p17.m4" class="ltx_Math" alttext="k&gt;0" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow></math>  and the factors <math id="p17.m5" class="ltx_Math" alttext="\mathfrak{p}_{i}" display="inline"><msub><mi>𝔭</mi><mi>i</mi></msub></math> are prime ideals.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  If <math id="p18.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> has only one factor <math id="p18.m2" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> distinct from <math id="p18.m3" class="ltx_Math" alttext="(1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, then  <math id="p18.m4" class="ltx_Math" alttext="\mathfrak{a}=\mathfrak{p}" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mi>𝔭</mi></mrow></math>  is a prime ideal.
+<br class="ltx_break">Induction hypothesis:  Lemma 7 is in  always when <math id="p18.m5" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> has at most <math id="p18.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> factors.  Let <math id="p18.m7" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> now have <math id="p18.m8" class="ltx_Math" alttext="n\!+\!1" display="inline"><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></math> factors.  Lemma 6 implies that there is a prime ideal <math id="p18.m9" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math> such that 
+<math id="p18.m10" class="ltx_Math" alttext="\mathfrak{a=pd}" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mi>𝔭</mi><mo>⁢</mo><mi>𝔡</mi></mrow></mrow></math>  where  <math id="p18.m11" class="ltx_Math" alttext="\mathfrak{d}\neq(1)" display="inline"><mrow><mi>𝔡</mi><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>  and <math id="p18.m12" class="ltx_Math" alttext="\mathfrak{d}" display="inline"><mi>𝔡</mi></math> has, by Lemma 5, at most <math id="p18.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> factors.  Hence,  <math id="p18.m14" class="ltx_Math" alttext="\mathfrak{d}=\mathfrak{p}_{1}\cdots\mathfrak{p}_{k}" display="inline"><mrow><mi>𝔡</mi><mo>=</mo><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mi>k</mi></msub></mrow></mrow></math>  and therefore, 
+<math id="p18.m15" class="ltx_Math" alttext="\mathfrak{a}=\mathfrak{p}\mathfrak{p}_{1}\cdots\mathfrak{p}_{k}" display="inline"><mrow><mi>𝔞</mi><mo>=</mo><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔭</mi><mi>k</mi></msub></mrow></mrow></math>  where all <math id="p18.m16" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math>’s are prime ideals.
+<br class="ltx_break"></p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 8.</span>  Any two prime factor</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\mathfrak{a}\;=\;\mathfrak{p}_{1}\cdots\mathfrak{p}_{r}\;=\;\mathfrak{q}_{1}%
+\cdots\mathfrak{q}_{s}" display="block"><mrow><mpadded width="+2.8pt"><mi>𝔞</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><msub><mi>𝔭</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>𝔭</mi><mi>r</mi></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><msub><mi>𝔮</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>𝔮</mi><mi>s</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of a nonzero ideal <math id="p19.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math> of <math id="p19.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> are identical, i.e.  <math id="p19.m3" class="ltx_Math" alttext="r=s" display="inline"><mrow><mi>r</mi><mo>=</mo><mi>s</mi></mrow></math>  and each prime factor <math id="p19.m4" class="ltx_Math" alttext="\mathfrak{p}_{i}" display="inline"><msub><mi>𝔭</mi><mi>i</mi></msub></math> is equal to a prime factor <math id="p19.m5" class="ltx_Math" alttext="\mathfrak{q}_{j}" display="inline"><msub><mi>𝔮</mi><mi>j</mi></msub></math> and vice versa.</p>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Any prime ideal has the property that if it divides a product of ideals, it divides one of the factors of the product; now these factors are prime ideals and therefore the prime ideal coincides with one of the factors.  Similarly as in the proof of the fundamental theorem of arithmetics, one sees the uniqueness of the prime factorisation of <math id="p20.m1" class="ltx_Math" alttext="\mathfrak{a}" display="inline"><mi>𝔞</mi></math>.
+</p>
+</div>
+<div id="p21" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">fundamental theorem of ideal theory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalTheoremOfIdealTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:12:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:12:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11R04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">principal theorem of ideal theory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicNumberTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DedekindDomain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EveryIdealInADedekindDomainIsAFactorOfAPrincipalIdeal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeIdealFactorizationIsUnique</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UniqueFactorizationAndIdealsInRingOfIntegers</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">CancellativeSemigroup</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:41:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Wilson’s theorem result</title>
+<!--Generated on Fri Feb  9 15:08:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Wilson’s theorem result</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break"><span class="ltx_ERROR undefined">\PMlinkescapephrase</span>
+<p class="ltx_p">set of primes
+
+
+We denote by <math id="p1.m1" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math> the set of primes and by <math id="p1.m2" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> the multiplicative inverse of <math id="p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="p1.m4" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi>ℤ</mi><mi>p</mi></msub></math>.</p>
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span> (Generalisation of Wilson’s Theorem).</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all integers <math id="Thmthmx1.p1.m1" class="ltx_Math" alttext="1\leq k\leq p-1,\;p\in\mathbb{P}\Leftrightarrow(p-k)!(k-1)!\equiv(-1)^{k}\pmod%
+{p}" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>k</mi><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" rspace="5.3pt">,</mo><mi>p</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">P</mi><mo mathvariant="normal">⇔</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>p</mi><mo mathvariant="normal">-</mo><mi>k</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo lspace="0pt" mathvariant="normal" rspace="3.5pt">!</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>k</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo lspace="0pt" mathvariant="normal" rspace="3.5pt">!</mo><mo mathvariant="normal">≡</mo><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow><mi>k</mi></msup><mrow><mo lspace="8.1pt" mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">mod</mo><mi>p</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If <math id="p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a prime, then:</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="p2.m2" class="ltx_Math" alttext="\displaystyle(p-k)!\equiv(p-1)!\overline{(p-1)}\cdots\overline{(p-k+1)}\equiv(%
+p-1)!\overline{(-1)}\cdots\overline{(1-k)}=\\
+\displaystyle=(p-1)!(-1)^{k-1}\overline{(k-1)!}\pmod{p}," display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>≡</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mover accent="true"><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>¯</mo></mover><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mover accent="true"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>-</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>¯</mo></mover></mrow><mo>≡</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mover accent="true"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>¯</mo></mover><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mover accent="true"><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo>¯</mo></mover></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mover accent="true"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>¯</mo></mover></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and since <math id="p2.m3" class="ltx_Math" alttext="(p-1)!\equiv-1\pmod{p}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> (Wilson’s Theorem, simply pair up each number — except <math id="p2.m4" class="ltx_Math" alttext="p-1" display="inline"><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></math> and <math id="p2.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, the only numbers in <math id="p2.m6" class="ltx_Math" alttext="\mathbb{Z}_{p}" display="inline"><msub><mi>ℤ</mi><mi>p</mi></msub></math> which are their own inverses — with its inverse), the first implication follows.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Now, if <math id="p3.m1" class="ltx_Math" alttext="p\!\mid\!(p-1)!(k-1)!-(-1)^{k}" display="inline"><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">∣</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></math>, then <math id="p3.m2" class="ltx_Math" alttext="p\in\mathbb{P}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>ℙ</mi></mrow></math> as the opposite would mean that <math id="p3.m3" class="ltx_Math" alttext="p=ab" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math>, for some integers <math id="p3.m4" class="ltx_Math" alttext="1&lt;a,b&lt;p" display="inline"><mrow><mrow><mn>1</mn><mo>&lt;</mo><mi>a</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>&lt;</mo><mi>p</mi></mrow></mrow></math>, and so <math id="p3.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> would not be relatively prime to <math id="p3.m6" class="ltx_Math" alttext="(p-1)!(k-1)!" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> as the initial hypothesis implies.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Wilson’s theorem result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfWilsonsTheoremResult</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:07:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:08:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

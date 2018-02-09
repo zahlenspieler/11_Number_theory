@@ -1,0 +1,416 @@
+<!DOCTYPE html><html>
+<head>
+<title>classical groups</title>
+<!--Generated on Fri Feb  9 15:33:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">classical groups</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Classical Groups</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">It is commonplace to express the classical groups with explicit matrices; however, the theory and classification of classical groups can benefit from a basis free consideration.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Given a finite dimensional vector space <math id="S1.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> over any field <math id="S1.p2.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, the set of all linear transformations on <math id="S1.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is denoted <math id="S1.p2.m4" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> and called the <em class="ltx_emph ltx_font_italic">general linear group</em>. We now define several significant related groups of <math id="S1.p2.m5" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span> (Birkhoff-von Neumann).</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a reflexive non-degenerate sesquilinear form <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="b:V\times V\rightarrow k" display="inline"><mrow><mi>b</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi>V</mi><mo mathvariant="normal">×</mo><mi>V</mi></mrow><mo mathvariant="normal">→</mo><mi>k</mi></mrow></mrow></math>, then
+up to a constant <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is one of the following:</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Alternating: that is </span><math id="I1.i1.p1.m1" class="ltx_Math" alttext="b(v,v)=0" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Hermitian: so </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="b(v,w)=b(w,v)^{\sigma}" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup></mrow></mrow></math><span class="ltx_text ltx_font_italic"> where </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math><span class="ltx_text ltx_font_italic"> is a field
+automorphism of </span><math id="I1.i2.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math><span class="ltx_text ltx_font_italic"> of order </span><math id="I1.i2.p1.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Symmetric: so </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="b(v,w)=b(w,v)" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">(Refer to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>, Theorem 7.1]</cite> and <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, Chapter V]</cite>.)
+We prefer the definition <math id="S1.p3.m1" class="ltx_Math" alttext="b(v,v)=0" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> over <math id="S1.p3.m2" class="ltx_Math" alttext="b(v,w)=-b(w,v)" display="inline"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> so that we can accommodate the fields of characteristic 2. In all other characteristics these two properties are equivalent.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">In keeping with tradition for group theory, we let <math id="S1.p4.m1" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> act on the vector space <math id="S1.p4.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> on the right hand side. This means given <math id="S1.p4.m3" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="S1.p4.m4" class="ltx_Math" alttext="f\in GL(V)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="S1.p4.m5" class="ltx_Math" alttext="vf" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mi>f</mi></mrow></math> corresponds the vector in <math id="S1.p4.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> which <math id="S1.p4.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> sends <math id="S1.p4.m8" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> to. If one thinks of <math id="S1.p4.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> as a matrix this requires <math id="S1.p4.m10" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> to be a row vector. It is also common to consider <math id="S1.p4.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> as a function and use the notation <math id="S1.p4.m12" class="ltx_Math" alttext="f(v)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a reflexive non-degenerate sesquilinear form <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="b:V\times V\rightarrow k" display="inline"><mrow><mi>b</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi>V</mi><mo mathvariant="normal">×</mo><mi>V</mi></mrow><mo mathvariant="normal">→</mo><mi>k</mi></mrow></mrow></math>
+we define</span></p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="Isom(b)=\{f\in GL(V):b(vf,wf)=b(v,w),v,w\in V\}." display="block"><mrow><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mi>f</mi></mrow><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>v</mi></mrow></mrow><mo>,</mo><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">This is called the isometry group of <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> in <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo mathvariant="italic">⁢</mo><mi>L</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm3.p1.m1" class="ltx_Math" alttext="Isom(b)" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is a subgroup of <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo mathvariant="italic">⁢</mo><mi>L</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Given <math id="S1.p5.m1" class="ltx_Math" alttext="f,g\in Isom(b)" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S1.p5.m2" class="ltx_Math" alttext="v,w\in V" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> then</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="b(v(fg),w(fg))=b((vf)g,(wf)g)=b(vf,wf)=b(v,w)." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mi>f</mi></mrow><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence <math id="S1.p5.m3" class="ltx_Math" alttext="fg\in Isom(b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Clearly <math id="S1.p5.m4" class="ltx_Math" alttext="1\in Isom(b)" display="inline"><mrow><mn>1</mn><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> as well. Finally,</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="b(vf^{-1},wf^{-1})=b((vf^{-1})f,(wf^{-1})f)=b(v,w)." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So <math id="S1.p5.m5" class="ltx_Math" alttext="f^{-1}\in Isom(b)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>∈</mo><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S1.p5.m6" class="ltx_Math" alttext="Isom(b)" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a subgroup of <math id="S1.p5.m7" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Now if we return to Theorem <a href="#Thmthm1" title="Theorem 1 (Birkhoff-von Neumann). ‣ 1 Classical Groups ‣ classical groups" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> we find that there are only three isometry group types, as there are only three types of reflexive non-degenerate sesquilinear forms. These receive the well-known names:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Symplectic group <math id="I2.i1.p1.m1" class="ltx_Math" alttext="Sp(V,b)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="I2.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is alternating.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Unitary group <math id="I2.i2.p1.m1" class="ltx_Math" alttext="U(V,b)" display="inline"><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="I2.i2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is hermitian.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Orthogonal group <math id="I2.i3.p1.m1" class="ltx_Math" alttext="O(V,b)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="I2.i3.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is symmetric.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">A vector space <math id="S1.p7.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> equipped with a reflexive non-degenerated sesquilinear form <math id="S1.p7.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is also given the designation symplectic, unitary, and orthogonal based on the classification of the form.</p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">Because symplectic spaces have a standard hyperbolic basis it follows every symplectic group over a vector space of the same dimension is isometric, meaning isomorphic as vector spaces but with an isomorphism which respects the forms. Thus we can write <math id="S1.p8.m1" class="ltx_Math" alttext="Sp(V)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> instead of <math id="S1.p8.m2" class="ltx_Math" alttext="Sp(V,b)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math>. For unitary and orthogonal groups more care is required.</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A <em class="ltx_emph ltx_font_upright">classical group</em> is any one of the family of groups derived from these three and the general linear group.</span></p>
+</div>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Classical Groups as Matrices</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">When expressing these groups with matrices it becomes necessary to establish the bilinear forms with matrices. Given any <math id="S2.p1.m1" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math>-matrix <math id="S2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> over some field <math id="S2.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and row vectors <math id="S2.p1.m4" class="ltx_Math" alttext="v,w\in k^{n}" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><msup><mi>k</mi><mi>n</mi></msup></mrow></math> we have a reflexive bilinear form defined by</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="b(v,w)=vBw^{t}." display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mi>w</mi><mi>t</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Whence <math id="S2.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is non-degenerate if and only if <math id="S2.p1.m6" class="ltx_Math" alttext="\det B\neq 0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mi>B</mi></mrow><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The most common example is the identity matrix <math id="S2.p2.m1" class="ltx_Math" alttext="B=I_{n}" display="inline"><mrow><mi>B</mi><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></math>. For then</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="b(v,w)=vw^{t}" display="block"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><msup><mi>w</mi><mi>t</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is the usual dot product, only perhaps without the positive definite axiom which makes sense only for ordered fields like the rationals <math id="S2.p2.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> and reals
+<math id="S2.p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">The isometry group of <math id="S2.p3.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is nothing more than the invertible matrices <math id="S2.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> where</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="AIA^{t}=I;\qquad AA^{t}=I." display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>I</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup></mrow><mo>=</mo><mi>I</mi></mrow><mo rspace="22.5pt">;</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup></mrow><mo>=</mo><mi>I</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus it is common for <math id="S2.p3.m3" class="ltx_Math" alttext="O(n)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> to denote the orthogonal group over <math id="S2.p3.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and be given by</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="O(n)=\{A\in GL(n):AA^{t}=I\}." display="block"><mrow><mrow><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>A</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup></mrow><mo>=</mo><mi>I</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">For symplectic groups the form is the typical <math id="S2.p4.m1" class="ltx_Math" alttext="J=\begin{bmatrix}0&amp;I\\
+-I&amp;0\end{bmatrix}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>I</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>I</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math> matrix found in the definition of symplectic matrices.
+Hence the isometry condition for an alternating form</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="b(vA,wA)=vAJA^{t}w^{t}=vJw^{t}=b(v,w)" display="block"><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⁢</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>w</mi><mo>⁢</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup><mo>⁢</mo><msup><mi>w</mi><mi>t</mi></msup></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><msup><mi>w</mi><mi>t</mi></msup></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">show that <math id="S2.p4.m2" class="ltx_Math" alttext="AJA^{t}=J" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup></mrow><mo>=</mo><mi>J</mi></mrow></math>. Thus it is common to define</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="Sp(2m)=\{A\in GL(2m):AJA^{t}=J\}." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>A</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><msup><mi>A</mi><mi>t</mi></msup></mrow><mo>=</mo><mi>J</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the symplectic matrices form a group of isometries.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Special subgroups</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The commutator of <math id="S3.p1.m1" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the special linear group <math id="S3.p1.m2" class="ltx_Math" alttext="SL(V)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> composed of all invertible linear transformations of determinant 1. Given a reflexive non-degenerate sesquilinear form <math id="S3.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> on <math id="S3.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, we can create the groups</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="SIsom(V,b)=Isom(V,b)\cap SL(V)." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These get the names</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="Sp(V),\quad SU(V,b),\textnormal{ and }SO(V,b)." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mtext> and </mtext><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that <math id="S3.p1.m5" class="ltx_Math" alttext="Sp(V)\leq SL(V)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> so we do not require a new name.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Projective groups</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">The projective geometry of a vector space <math id="S4.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, denoted <math id="S4.p1.m2" class="ltx_Math" alttext="PG(V)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is its lattice of subspaces. Clearly invertible linear maps act on the projective geometry because they send points (1-dimensional subspaces) to points, and lines (2-dimensional subspaces) to lines, and in general <math id="S4.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional subspaces to other <math id="S4.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional subspaces.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">However, the scalar transformations, i.e.: those <math id="S4.p2.m1" class="ltx_Math" alttext="f\in GL(V)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that <math id="S4.p2.m2" class="ltx_Math" alttext="vf=v\lambda" display="inline"><mrow><mrow><mi>v</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>λ</mi></mrow></mrow></math> for some fixed <math id="S4.p2.m3" class="ltx_Math" alttext="\lambda\in k" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>k</mi></mrow></math>, do not move any of the subspaces of <math id="S4.p2.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> – they fix <math id="S4.p2.m5" class="ltx_Math" alttext="PG(V)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Therefore when we consider the action of <math id="S4.p2.m6" class="ltx_Math" alttext="GL(V)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> on <math id="S4.p2.m7" class="ltx_Math" alttext="PG(V)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> we factor out the kernel of the action – that is the scalar transforms (matrices.) We denote this group by <math id="S4.p2.m8" class="ltx_Math" alttext="PGL(V)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Because scalar matrices commute with all other, and not other matrices do, we notice this is the same as factoring by the center <math id="S4.p2.m9" class="ltx_Math" alttext="Z(GL(V))" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Immediately this gives rise the projective versions of each of the classical groups: Let <math id="S4.p3.m1" class="ltx_Math" alttext="Z=Z(GL(V))" display="inline"><mrow><mi>Z</mi><mo>=</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> – the set of scalar transformations (a group isomorphic to <math id="S4.p3.m2" class="ltx_Math" alttext="k^{\times}" display="inline"><msup><mi>k</mi><mo>×</mo></msup></math>.)</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="PGL(V)=GL(V)/Z" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>Z</mi></mrow></mrow></math>, <math id="I3.i1.p1.m2" class="ltx_Math" alttext="PSL(V)=SL(V)/(Z\cap SL(V))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>S</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="PSp(V)=Sp(V)/(Z\cap Sp(V))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="PU(V)=U(V,b)/(Z\cap U(V,b))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="I3.i3.p1.m2" class="ltx_Math" alttext="PSU(V,b)=SU(V,b)/(Z\cap SU(V,b))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>S</mi><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i4.p1.m1" class="ltx_Math" alttext="PO(V)=O(V,b)/(Z\cap O(V,b))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="I3.i4.p1.m2" class="ltx_Math" alttext="PSO(V,b)=SO(V,b)/(Z\cap SO(V,b))" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>∩</mo><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">Most of the time the projective special isometry groups are simple groups.
+The exceptions arise for small dimensional vector spaces and/or small fields, or with the orthogonal groups.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Gruenberg, K. W. and Weir, A.J.
+<em class="ltx_emph ltx_font_italic">Linear Geometry 2nd Ed.</em> (English)
+[B] Graduate Texts in Mathematics. 49. New York - Heidelberg - Berlin: Springer-Verlag. (1977), pp. x-198.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Kantor, W. M.
+<em class="ltx_emph ltx_font_italic">Lectures notes on Classical Groups</em>.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Taylor, Donald E.
+<em class="ltx_emph ltx_font_italic">The geometry of the classical groups</em>
+Sigma Series in Pure Mathematics. 9.
+Heldermann Verlag, Berlin, xii+229, (1992), ISBN 3-88538-009-9.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">classical groups</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ClassicalGroups</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:50:13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:50:13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11E57</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">linear algebraic groups</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SemilinearTransformation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PolaritiesAndForms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SesquilinearFormsOverGeneralFields</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">classical group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">isometry</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:33:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

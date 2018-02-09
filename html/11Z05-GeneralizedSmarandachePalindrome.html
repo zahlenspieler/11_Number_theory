@@ -1,0 +1,137 @@
+<!DOCTYPE html><html>
+<head>
+<title>generalized Smarandache palindrome</title>
+<!--Generated on Fri Feb  9 15:47:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">generalized Smarandache palindrome</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">generalized Smarandache palindrome</em> (GSP) is a concatenated number of the form: <math id="p1.m1" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n}a_{n}\ldots a_{2}a_{1}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow></math>, for <math id="p1.m2" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math>, or <math id="p1.m3" class="ltx_Math" alttext="a_{1}a_{2}\ldots a_{n-1}a_{n}a_{n-1}\ldots a_{2}a_{1}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow></math>, for <math id="p1.m4" class="ltx_Math" alttext="n\geq 2" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow></math>, where all <math id="p1.m5" class="ltx_Math" alttext="a_{1},a_{2},\ldots,a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math> are positive integers of various number of digits in a given base <math id="p1.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposed Problem</span></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Find the number of GSP of four digits that are not palindromic numbers in base 10.
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">M. Khoshnevisan, Griffith University, Gold Coast, Queensland 9726, Australia.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Solution</span></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Before solving the problem, let see some examples:</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">1) 1235656312 is a GSP because we can group it as (12)(3)(56)(56)(3)(12), i.e. ABCCBA.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">2) The number 5675 is also a GSP because it can be written as (5)(67)(5).</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">3) Obviously, any palindromic number is a GSP number as well.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">A palindromic number of four digits has the concatenated form: abba, where <math id="p10.m1" class="ltx_Math" alttext="a\in\{1,2,\ldots,9\}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="p10.m2" class="ltx_Math" alttext="b\in\{0,1,2,\ldots,9\}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow></math>. There are <math id="p10.m3" class="ltx_Math" alttext="9\times 10=90" display="inline"><mrow><mrow><mn>9</mn><mo>×</mo><mn>10</mn></mrow><mo>=</mo><mn>90</mn></mrow></math> palindromic numbers of four digits. For example, 1551, or 2002 are palindromic (and, of course, GSP too); yet 3753 is not palindromic but it is a GSP for 3753=3(75)3, i.e. of the form ABA; similarly 4646, for it can be organized as (46)(46), i.e. of the form CC.
+Therefore, a SGP, different from a palindromic number, should have the concatenated forms:
+1) ABA, where <math id="p10.m4" class="ltx_Math" alttext="A\in\{1,2,\ldots,9\}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>9</mn><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="p10.m5" class="ltx_Math" alttext="B\in\{00,01,02,03,\ldots,99\}-\{00,11,22,33,\ldots,99\}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">{</mo><mn>00</mn><mo>,</mo><mn>01</mn><mo>,</mo><mn>02</mn><mo>,</mo><mn>03</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>99</mn><mo stretchy="false">}</mo></mrow><mo>-</mo><mrow><mo stretchy="false">{</mo><mn>00</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>22</mn><mo>,</mo><mn>33</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>99</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>;
+2) or CC, where <math id="p10.m6" class="ltx_Math" alttext="C\in\{10,11,12,\ldots,99\}-\{11,22,33,\ldots,99\}" display="inline"><mrow><mi>C</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">{</mo><mn>10</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>12</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>99</mn><mo stretchy="false">}</mo></mrow><mo>-</mo><mrow><mo stretchy="false">{</mo><mn>11</mn><mo>,</mo><mn>22</mn><mo>,</mo><mn>33</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>99</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.
+In the first case, one has <math id="p10.m7" class="ltx_Math" alttext="9\times(100-10)=9\times 90=810" display="inline"><mrow><mrow><mn>9</mn><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mn>100</mn><mo>-</mo><mn>10</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>9</mn><mo>×</mo><mn>90</mn></mrow><mo>=</mo><mn>810</mn></mrow></math>. In the second case, one has <math id="p10.m8" class="ltx_Math" alttext="90-9=81" display="inline"><mrow><mrow><mn>90</mn><mo>-</mo><mn>9</mn></mrow><mo>=</mo><mn>81</mn></mrow></math>.
+Total: <math id="p10.m9" class="ltx_Math" alttext="810+81=891" display="inline"><mrow><mrow><mn>810</mn><mo>+</mo><mn>81</mn></mrow><mo>=</mo><mn>891</mn></mrow></math> GSP numbers of four digits which are not palindromic.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">References</span></p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">1. Charles Ashbacher, Lori Neirynck, <span class="ltx_text ltx_font_typewriter">www.gallup.unm.edu/ smarandache/GeneralizedPalindromes.htm</span>The Density of Generalized Smarandache Palindromes, Journal of Recreational Mathematics, Vol. 33 (2), 2006</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">2. G. Gregory, <span class="ltx_text ltx_font_typewriter">http://www.gallup.unm.edu/ smarandache/GSP.htm</span>Generalized Smarandache Palindromes</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">3. M. Khoshnevisan, ”Generalized Smarandache Palindrome”, Mathematics Magazine, Aurora, Canada, 10/2003.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">4. M. Khoshnevisan, Proposed Problem <math id="p15.m1" class="ltx_Math" alttext="\sharp" display="inline"><mi mathvariant="normal">♯</mi></math>1062 (on Generalized Smarandache Palindrome), The <math id="p15.m2" class="ltx_Math" alttext="\Pi" display="inline"><mi mathvariant="normal">Π</mi></math>ME Epsilon, USA, Vol. 11, No. 9, p. 501, Fall 2003.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">5. Mark Evans, Mike Pinter, Carl Libis, Solutions to Problem <math id="p16.m1" class="ltx_Math" alttext="\sharp" display="inline"><mi mathvariant="normal">♯</mi></math>1062 (on Generalized Smarandache Palindrome), The <math id="p16.m2" class="ltx_Math" alttext="\Pi" display="inline"><mi mathvariant="normal">Π</mi></math>ME Epsilon, Vol. 12, No. 1, 54-55, Fall 2004.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">6. N. Sloane, <span class="ltx_text ltx_font_typewriter">http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A082461</span>Encyclopedia of Integers, Sequence A082461</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">7. F. Smarandache, <span class="ltx_text ltx_font_typewriter">http://www.gallup.unm.edu/ smarandache/Sequences-book.pdf</span>Sequences of Numbers Involved in Unsolved Problems, Hexis, 1990, 2006</p>
+</div>
+<div id="p19" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">generalized Smarandache palindrome</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneralizedSmarandachePalindrome</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:03:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:03:25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dankomed (17058)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dankomed (17058)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dankomed (17058)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11Z05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">FlorentinSmarandache</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:47:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

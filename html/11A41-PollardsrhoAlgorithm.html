@@ -1,0 +1,127 @@
+<!DOCTYPE html><html>
+<head>
+<title>Pollard’s ρ algorithm</title>
+<!--Generated on Fri Feb  9 15:17:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Pollard’s <math id="m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Pollard’s <math id="p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm</span> is an integer factorization algorithm devised by John Pollard in 1975 to take advantage of Floyd’s cycle-finding algorithm and pseudorandom number generation. Theoretically, trial division always returns a result (though of course in practice the computing engine’s resources could be exhausted or the user might not to be around to care for the result). Pollard’s <math id="p1.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm, on the other hand, was designed from the outset to cope with the possibility of failure to return a result.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">It can be left up to the implementer to choose a function <math id="p2.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> with a finite set of values that can be guaranteed to become cyclic quickly enough after few iterations. Crandall and Pomerance recommend <math id="p2.m2" class="ltx_Math" alttext="f(x)=x^{2}+a\mod n" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>a</mi></mrow><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>n</mi></mrow></mrow></math>, where <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the number to be factored and <math id="p2.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is a pseudorandom number chosen based on <math id="p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Choose a function <math id="p3.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> per the given requirements and call Pollard’s <math id="p3.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm with <math id="p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> a positive integer.</p>
+</div>
+<div id="p4" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Choose random <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> from the ranges <math id="I1.i1.p1.m3" class="ltx_Math" alttext="1&lt;a&lt;(n-3)" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="0&lt;b&lt;(n-1)" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and set <math id="I1.i1.p1.m5" class="ltx_Math" alttext="c=a" display="inline"><mrow><mi>c</mi><mo>=</mo><mi>a</mi></mrow></math> and <math id="I1.i1.p1.m6" class="ltx_Math" alttext="d=b" display="inline"><mrow><mi>d</mi><mo>=</mo><mi>b</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Set <math id="I1.i2.p1.m1" class="ltx_Math" alttext="g=1" display="inline"><mrow><mi>g</mi><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">While <math id="I1.i3.p1.m1" class="ltx_Math" alttext="g==1" display="inline"><mrow><mi>g</mi><mo>=</mo><mo>=</mo><mn>1</mn></mrow></math> and allowed number of iterations not exceeded, iterate <math id="I1.i3.p1.m2" class="ltx_Math" alttext="c=f(c)" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> once and <math id="I1.i3.p1.m3" class="ltx_Math" alttext="d=f(d)" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> twice and compute <math id="I1.i3.p1.m4" class="ltx_Math" alttext="g=GCD(c-d,n)" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mi>G</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>d</mi></mrow><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The implementer may choose to take the absolute value of <math id="I1.i3.p1.m5" class="ltx_Math" alttext="c-d" display="inline"><mrow><mi>c</mi><mo>-</mo><mi>d</mi></mrow></math>, though some implementations of GCD don’t mind being given negative arguments.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i4.p1.m1" class="ltx_Math" alttext="g&gt;1" display="inline"><mrow><mi>g</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, it is a factor of <math id="I1.i4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Otherwise, the algorithm has failed.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Take for example, <math id="p5.m1" class="ltx_Math" alttext="n=42" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>42</mn></mrow></math>. Suppose our dice give us <math id="p5.m2" class="ltx_Math" alttext="a=12" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>12</mn></mrow></math> and <math id="p5.m3" class="ltx_Math" alttext="b=37" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>37</mn></mrow></math>. I promise I didn’t choose these values consciously, but it happens that 37 does not change when input to <math id="p5.m4" class="ltx_Math" alttext="f(x)=x^{2}+12\mod 42" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>12</mn></mrow><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>42</mn></mrow></mrow></math>! 12 will change however, giving a sequence that continues 0, 20, 13. At 13, we find that <math id="p5.m5" class="ltx_Math" alttext="37-13=24" display="inline"><mrow><mrow><mn>37</mn><mo>-</mo><mn>13</mn></mrow><mo>=</mo><mn>24</mn></mrow></math>, and computing <math id="p5.m6" class="ltx_Math" alttext="GCD(24,42)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>24</mn><mo>,</mo><mn>42</mn><mo stretchy="false">)</mo></mrow></mrow></math> gives up 6, which is not a prime, but is easily enough taken care of by trial division. The factorization is therefore <math id="p5.m7" class="ltx_Math" alttext="42=2\cdot 3\cdot 7" display="inline"><mrow><mn>42</mn><mo>=</mo><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>7</mn></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">To date, the most well-known success of this algorithm was when Pollard and Richard Brent factored 115792089237316195423570985008687907853269984665640564039457584007913129639937 (the eighth Fermat number) in less than two hours, which was an impressive feat in 1975 for a UNIVAC 1100/42. Today, Mathematica running on a Dell with Windows XP factors that number in about 12 seconds (Mathematica’s <code class="ltx_verbatim ltx_font_typewriter">FactorInteger</code> function has always used Pollard’s <math id="p6.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm as one of the algorithms it uses).
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Pollard’s <math id="p6.m2" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PollardsrhoAlgorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:44:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:44:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Pollard <math id="p6.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Pollard’s rho algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Pollard rho algorithm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:17:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

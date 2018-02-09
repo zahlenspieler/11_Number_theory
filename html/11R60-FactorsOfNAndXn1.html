@@ -1,0 +1,117 @@
+<!DOCTYPE html><html>
+<head>
+<title>factors of n and x^n-1</title>
+<!--Generated on Fri Feb  9 15:45:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">factors of <math id="m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="m2" class="ltx_Math" alttext="x^{n}-1" display="inline"><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be a positive integer.  Then the binomial  <math id="p2.m2" class="ltx_Math" alttext="x^{n}\!-\!1" display="inline"><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></math>  has as many prime factors (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PrimeFactorsOfXn1</span>) with integer coefficients as the integer <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has positive divisors, both numbers thus being <math id="p2.m4" class="ltx_Math" alttext="\tau(n)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TauFunction</span>).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof.</span>  If  <math id="p3.m1" class="ltx_Math" alttext="\Phi_{d}(x)" display="inline"><mrow><msub><mi mathvariant="normal">Φ</mi><mi>d</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> generally means the <math id="p3.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>th cyclotomic polynomial</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Phi_{d}(x):=(x-\zeta_{1})(x-\zeta_{2})\ldots(x-\zeta_{\varphi(d)})," display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Φ</mi><mi>d</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>ζ</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>ζ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>ζ</mi><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the <math id="p3.m3" class="ltx_Math" alttext="\zeta_{j}" display="inline"><msub><mi>ζ</mi><mi>j</mi></msub></math>s are the primitive <math id="p3.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>th roots of unity, then the equation</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\prod_{d|n,\,\,d&gt;0}\!\Phi_{d}(x)=x^{n}\!-\!1" display="block"><mrow><mrow><mpadded width="-1.7pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo fence="true" stretchy="false">|</mo><mrow><mi>n</mi><mo rspace="5.8pt">,</mo><mi>d</mi></mrow><mo>&gt;</mo></mrow><mo>⁢</mo><mn>0</mn></mrow></munder></mpadded><mrow><msub><mi mathvariant="normal">Φ</mi><mi>d</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mi>n</mi></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is true, because each <math id="p3.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th root of unity is also a primitive (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RootOfUnity</span>) <math id="p3.m6" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>th root of unity for one and only one positive divisor of <math id="p3.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  The cyclotomic factor polynomials <math id="p3.m8" class="ltx_Math" alttext="\Phi_{d}(x)" display="inline"><mrow><msub><mi mathvariant="normal">Φ</mi><mi>d</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> have integer coefficients and are irreducible (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/IrreduciblePolynomial2</span>).  Thus the number of them is same as the number <math id="p3.m9" class="ltx_Math" alttext="\tau(n)" display="inline"><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> of positive divisors of <math id="p3.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">For illustrating the proof, let  <math id="p4.m1" class="ltx_Math" alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math> (divisors 1, 2, 3, 6); think the sixth roots of unity:  <math id="p4.m2" class="ltx_Math" alttext="\zeta^{0}" display="inline"><msup><mi>ζ</mi><mn>0</mn></msup></math>, <math id="p4.m3" class="ltx_Math" alttext="\zeta^{1}" display="inline"><msup><mi>ζ</mi><mn>1</mn></msup></math>, <math id="p4.m4" class="ltx_Math" alttext="\zeta^{2}" display="inline"><msup><mi>ζ</mi><mn>2</mn></msup></math>, <math id="p4.m5" class="ltx_Math" alttext="\zeta^{3}" display="inline"><msup><mi>ζ</mi><mn>3</mn></msup></math>, <math id="p4.m6" class="ltx_Math" alttext="\zeta^{4}" display="inline"><msup><mi>ζ</mi><mn>4</mn></msup></math>, <math id="p4.m7" class="ltx_Math" alttext="\zeta^{5}" display="inline"><msup><mi>ζ</mi><mn>5</mn></msup></math>
+(where  <math id="p4.m8" class="ltx_Math" alttext="\zeta=e^{i\pi/3}=\frac{1+i\sqrt{3}}{2}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><msup><mi>e</mi><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mn>3</mn></mrow></msup><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac></mrow></math>).  From them, <math id="p4.m9" class="ltx_Math" alttext="\zeta^{0}=1" display="inline"><mrow><msup><mi>ζ</mi><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow></math>  is the primitive 1st root, <math id="p4.m10" class="ltx_Math" alttext="\zeta^{3}" display="inline"><msup><mi>ζ</mi><mn>3</mn></msup></math> the primitive 2nd root, <math id="p4.m11" class="ltx_Math" alttext="\zeta^{2}" display="inline"><msup><mi>ζ</mi><mn>2</mn></msup></math> and <math id="p4.m12" class="ltx_Math" alttext="\zeta^{4}" display="inline"><msup><mi>ζ</mi><mn>4</mn></msup></math> the primitive 3rd roots, <math id="p4.m13" class="ltx_Math" alttext="\zeta^{1}" display="inline"><msup><mi>ζ</mi><mn>1</mn></msup></math> and <math id="p4.m14" class="ltx_Math" alttext="\zeta^{5}" display="inline"><msup><mi>ζ</mi><mn>5</mn></msup></math> the primitive 6th roots of unity.</p>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">factors of <math id="p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="p5.m2" class="ltx_Math" alttext="x^{n}-1" display="inline"><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FactorsOfNAndXn1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:35:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:35:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11R60</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11C08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11R18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">PrimeFactorsOfXn1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:45:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

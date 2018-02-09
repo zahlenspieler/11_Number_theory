@@ -1,0 +1,195 @@
+<!DOCTYPE html><html>
+<head>
+<title>examples supporting the Erdős-Straus conjecture</title>
+<!--Generated on Fri Feb  9 15:24:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">examples supporting the Erdős-Straus conjecture</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">As with any conjecture, a million examples are not enough to prove the Erdős-Straus conjecture, but a single counterexample is enough to disprove. But if these examples at least provide a slightly better understanding of the problem at hand, the effort is not entirely wasted.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Most users are well aware that a computer algebra system (and even fraction-capable scientific calculators) will automatically express a fraction by the lowest common denominator. This presents no problem for smaller instances, such as <math id="p2.m1" class="ltx_Math" alttext="\frac{4}{8}" display="inline"><mfrac><mn>4</mn><mn>8</mn></mfrac></math>, but for larger denominators it might not always be obvious that, for example, <math id="p2.m2" class="ltx_Math" alttext="\frac{2}{1729}=\frac{4}{3458}" display="inline"><mrow><mfrac><mn>2</mn><mn>1729</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>3458</mn></mfrac></mrow></math>. If one is unsure, one can always enter the fraction <math id="p2.m3" class="ltx_Math" alttext="\frac{4}{n}" display="inline"><mfrac><mn>4</mn><mi>n</mi></mfrac></math> by itself and the CAS will dutifully respond with the LCD expression, which will hopefully match the sum of three unit fractions entered earlier.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">I say we start with <math id="p3.m1" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math> if for no other reason than to start at the beginning. The only possible solution is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{4}{2}=1+\frac{1}{2}+\frac{1}{2}." display="block"><mrow><mrow><mfrac><mn>4</mn><mn>2</mn></mfrac><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, for <math id="p3.m2" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math> we have</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{4}{3}=\frac{1}{2}+\frac{1}{2}+\frac{1}{3}." display="block"><mrow><mrow><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is with <math id="p3.m3" class="ltx_Math" alttext="n=4" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow></math> that solutions with distinct denominators become available:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{4}{4}=\frac{1}{2}+\frac{1}{3}+\frac{1}{6}," display="block"><mrow><mrow><mfrac><mn>4</mn><mn>4</mn></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">easily suggested by the study of perfect numbers. Some may consider solutions with distinct denominators more elegant, some are just happy to find any solution for a given <math id="p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Since addition is commutative, it does not matter in what order we list the unit fractions that add up to our desired <math id="p4.m1" class="ltx_Math" alttext="\frac{4}{n}" display="inline"><mfrac><mn>4</mn><mi>n</mi></mfrac></math>. However, by tradition, they are listed in descending order: the biggest fraction (the one with the smallest denominator) is listed first, the smallest last.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The following table lists some distinct denominator solutions for <math id="p5.m1" class="ltx_Math" alttext="4&lt;n&lt;21" display="inline"><mrow><mn>4</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mn>21</mn></mrow></math>, with the numerators omitted for compactness:
+</p>
+</div>
+<div id="p6" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">5</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2, 5, 10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">6</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2, 8, 24; 3, 4, 12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">7</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2, 21, 42; 3, 6, 14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">8</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3, 6, 42; 3, 8, 24; 4, 6, 12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">9</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3, 12, 36; 4, 6, 36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">10</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3, 20, 60; 5, 6, 30; 4, 10, 20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">11</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3, 44, 132; 4, 11, 44; 4, 12, 33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">12</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4, 18, 36; 4, 16, 48; 6, 8, 24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">13</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4, 26, 52</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">14</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4, 42, 84; 5, 70, 140; 6, 14, 21; 7, 8, 56; 6, 12, 28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">15</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4, 90, 180; 5, 18, 90; 6, 15, 30; 7, 10, 42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">16</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5, 30, 60; 6, 12, 84; 8, 12, 24; 6, 20, 30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">17</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5, 30, 510; 6, 17, 102</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">18</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6, 24, 72; 8, 12, 72</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">19</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6, 38, 57</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">20</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7, 20, 140</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">As the table shows, solutions for prime <math id="p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> are harder to come by than for composite <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. When <math id="p7.m3" class="ltx_Math" alttext="n=pq" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>, with <math id="p7.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> prime and <math id="p7.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> any other integer, solutions for <math id="p7.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> can be simply derived from those for <math id="p7.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> by multiplying those denominators by <math id="p7.m8" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>. For example, for <math id="p7.m9" class="ltx_Math" alttext="n=42" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>42</mn></mrow></math>, we can take the solutions for <math id="p7.m10" class="ltx_Math" alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math>, multiply those denominators by 7 and voilà:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{4}{42}=\frac{1}{12}+\frac{1}{126}+\frac{1}{252}." display="block"><mrow><mrow><mfrac><mn>4</mn><mn>42</mn></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mn>12</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>126</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>252</mn></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">examples supporting the Erdős-Straus conjecture</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExamplesSupportingTheErdHosStrausConjecture</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:54:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:54:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:24:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

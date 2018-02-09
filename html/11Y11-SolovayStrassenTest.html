@@ -1,0 +1,193 @@
+<!DOCTYPE html><html>
+<head>
+<title>Solovay-Strassen test</title>
+<!--Generated on Fri Feb  9 15:47:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Solovay-Strassen test</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">It is known that an odd number <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is prime if and only if for every <math id="p1.m2" class="ltx_Math" alttext="1&lt;a&lt;n" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mi>n</mi></mrow></math> such that <math id="p1.m3" class="ltx_Math" alttext="(a,n)=1" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> we have</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="{\genfrac{(}{)}{}{}{a}{n}}\equiv a^{\frac{n-1}{2}}\pmod{n}" display="block"><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>n</mi></mfrac><mo>)</mo></mrow><mo>≡</mo><mrow><msup><mi>a</mi><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m4" class="ltx_Math" alttext="{\genfrac{(}{)}{}{}{a}{n}}" display="inline"><mrow><mo>(</mo><mfrac><mi>a</mi><mi>n</mi></mfrac><mo>)</mo></mrow></math> is the Jacobi symbol. (The only if part is obvious; the if part follows from Theorem <a href="#Thmtheorem1" title="Theorem 1. ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>.) From this we can derive the following algorithm.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Choose a random number <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> between <math id="I1.i1.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="I1.i1.p1.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Check if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="(a,n)=1" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> (for example using the Euclidean algorithm). If it is not, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is not prime and <math id="I1.i2.p1.m3" class="ltx_Math" alttext="(a,n)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math> is a divisor of <math id="I1.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Check if Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) holds. If it does not, then <math id="I1.i3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is not prime. Otherwise <math id="I1.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a candidate for primality.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">By repeating this algorithm we can increase the chance that the result is correct. In order to estimate the probability of error, we make use of Theorem <a href="#Thmtheorem1" title="Theorem 1. ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>, which says that every independent iteration of the algorithm has a chance of at most <math id="p1.m5" class="ltx_Math" alttext="50\%" display="inline"><mrow><mn>50</mn><mo lspace="0pt" rspace="3.5pt">%</mo></mrow></math> of being wrong. Hence, after <math id="p1.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> iterations there is at most a <math id="p1.m7" class="ltx_Math" alttext="2^{-t}" display="inline"><msup><mn>2</mn><mrow><mo>-</mo><mi>t</mi></mrow></msup></math> chance of getting a wrong result.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="n\geq 3" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">3</mn></mrow></math> be an odd composite integer. Then at least half of the
+elements of <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\mathbb{Z}_{n}^{*}" display="inline"><msubsup><mi mathvariant="normal">Z</mi><mi>n</mi><mo mathvariant="normal">*</mo></msubsup></math> do not satisfy Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">It suffices to exhibit one element <math id="p2.m1" class="ltx_Math" alttext="a\in\mathbb{Z}_{n}^{*}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msubsup><mi>ℤ</mi><mi>n</mi><mo>*</mo></msubsup></mrow></math> which does not satisfy Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>). Indeed, if there exists one such element, then the set of
+all elements which do satisfy Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) forms a proper subgroup of <math id="p2.m2" class="ltx_Math" alttext="\mathbb{Z}_{n}^{*}" display="inline"><msubsup><mi>ℤ</mi><mi>n</mi><mo>*</mo></msubsup></math>, from which we
+conclude that the elements satisfying Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) number no more than half of the elements
+of <math id="p2.m3" class="ltx_Math" alttext="\mathbb{Z}_{n}^{*}" display="inline"><msubsup><mi>ℤ</mi><mi>n</mi><mo>*</mo></msubsup></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We consider separately the cases where <math id="p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is squarefree and not
+squarefree. If <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is squarefree, let <math id="p3.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime dividing <math id="p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and
+let <math id="p3.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> be a quadratic non-residue mod <math id="p3.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Using the Chinese
+Remainder Theorem, choose an integer <math id="p3.m7" class="ltx_Math" alttext="a\in\mathbb{Z}_{n}^{*}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msubsup><mi>ℤ</mi><mi>n</mi><mo>*</mo></msubsup></mrow></math> such that:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle a" display="inline"><mi>a</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle\equiv b\pmod{p}," display="inline"><mrow><mrow><mi></mi><mo>≡</mo><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle a" display="inline"><mi>a</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\equiv 1\pmod{\frac{n}{p}}." display="inline"><mrow><mrow><mi></mi><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mstyle displaystyle="true"><mfrac><mi>n</mi><mi>p</mi></mfrac></mstyle></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The Jacobi symbol <math id="p3.m8" class="ltx_Math" alttext="{\genfrac{(}{)}{}{}{a}{n}}" display="inline"><mrow><mo>(</mo><mfrac><mi>a</mi><mi>n</mi></mfrac><mo>)</mo></mrow></math> is given by</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="{\genfrac{(}{)}{}{}{a}{n}}={\genfrac{(}{)}{}{}{a}{p}}{\genfrac{(}{)}{}{}{a}{n/%
+p}}={\genfrac{(}{)}{}{}{b}{p}}{\genfrac{(}{)}{}{}{1}{n/p}}=(-1)\cdot 1=-1." display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>n</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>p</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mfrac><mi>a</mi><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac><mi>b</mi><mi>p</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mn>1</mn></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will assume that <math id="p3.m9" class="ltx_Math" alttext="a^{\frac{n-1}{2}}\equiv-1\pmod{n}" display="inline"><mrow><msup><mi>a</mi><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and derive
+a contradiction. The equation <math id="p3.m10" class="ltx_Math" alttext="a^{\frac{n-1}{2}}\equiv-1\pmod{n}" display="inline"><mrow><msup><mi>a</mi><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+implies that <math id="p3.m11" class="ltx_Math" alttext="a^{\frac{n-1}{2}}\equiv-1\pmod{\frac{n}{p}}" display="inline"><mrow><msup><mi>a</mi><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+However, since <math id="p3.m12" class="ltx_Math" alttext="a\equiv 1\pmod{\frac{n}{p}}" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we must have
+<math id="p3.m13" class="ltx_Math" alttext="a^{\frac{n-1}{2}}\equiv 1\pmod{\frac{n}{p}}" display="inline"><mrow><msup><mi>a</mi><mfrac><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so that <math id="p3.m14" class="ltx_Math" alttext="1\equiv-1\pmod{\frac{n}{p}}" display="inline"><mrow><mn>1</mn><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is a contradiction.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now suppose that <math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is not squarefree. Let <math id="p4.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime such that
+<math id="p4.m3" class="ltx_Math" alttext="p^{2}\mid n" display="inline"><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>∣</mo><mi>n</mi></mrow></math>, and set <math id="p4.m4" class="ltx_Math" alttext="a=1+\frac{n}{p}" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow></mrow></math>. By the binomial theorem,
+we have</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="a^{p}=\left(1+\frac{n}{p}\right)^{p}=1+\binom{p}{1}\left(n/p\right)+\binom{p}{%
+2}\left(n/p\right)^{2}+\cdots+\binom{p}{p}\left(n/p\right)^{p}\equiv 1\pmod{n}," display="block"><mrow><mrow><msup><mi>a</mi><mi>p</mi></msup><mo>=</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mo>)</mo></mrow><mi>p</mi></msup><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>p</mi><mn>1</mn></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>p</mi><mn>2</mn></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>p</mi><mi>p</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow><mo>)</mo></mrow><mi>p</mi></msup></mrow></mrow><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so the multiplicative order of <math id="p4.m5" class="ltx_Math" alttext="a\bmod n" display="inline"><mrow><mi>a</mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>n</mi></mrow></math> is equal to <math id="p4.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, and hence
+in particular <math id="p4.m7" class="ltx_Math" alttext="a^{n-1}\neq 1\pmod{n}" display="inline"><mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>≠</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, since <math id="p4.m8" class="ltx_Math" alttext="p\nmid n-1" display="inline"><mrow><mi>p</mi><mo>∤</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>. On the
+other hand,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="{\genfrac{(}{)}{}{}{a}{n}}={\genfrac{(}{)}{}{}{1+\frac{n}{p}}{n}}={\genfrac{(}%
+{)}{}{}{1+\frac{n}{p}}{p}}{\genfrac{(}{)}{}{}{1+\frac{n}{p}}{n/p}}={\genfrac{(%
+}{)}{}{}{1}{p}}{\genfrac{(}{)}{}{}{1}{n/p}}=1," display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>n</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mi>n</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mi>p</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>n</mi><mi>p</mi></mfrac></mrow><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mfrac><mn>1</mn><mi>p</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>/</mo><mi>p</mi></mrow></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="p4.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> does not satisfy Equation (<a href="#S0.E1" title="(1) ‣ Solovay-Strassen test" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).
+∎</p>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Solovay-Strassen test</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SolovayStrassenTest</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:27:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:27:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11Y11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">MillerRabinPrimeTest</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:47:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

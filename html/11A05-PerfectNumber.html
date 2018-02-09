@@ -1,0 +1,232 @@
+<!DOCTYPE html><html>
+<head>
+<title>perfect number</title>
+<!--Generated on Fri Feb  9 15:10:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">perfect number</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">An positive integer <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is called <em class="ltx_emph ltx_font_italic">perfect</em> if it is the sum of all positive divisors of <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> less than <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> itself. It is not known if there are any odd perfect numbers, but all even perfect numbers have been classified according to the following lemma:</p>
+</div>
+<div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 1</span>.</h6>
+<div id="Thmlemma1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">An even number is perfect if and only if it equals <math id="Thmlemma1.p1.m1" class="ltx_Math" alttext="2^{k-1}(2^{k}-1)" display="inline"><mrow><msup><mn mathvariant="normal">2</mn><mrow><mi>k</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><msup><mn mathvariant="normal">2</mn><mi>k</mi></msup><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> for some integer <math id="Thmlemma1.p1.m2" class="ltx_Math" alttext="k&gt;1" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">1</mn></mrow></math> and <math id="Thmlemma1.p1.m3" class="ltx_Math" alttext="2^{k}-1" display="inline"><mrow><msup><mn mathvariant="normal">2</mn><mi>k</mi></msup><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></math> is prime.
+<br class="ltx_break"></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> denote the sum of divisors function. Recall that this function is multiplicative.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Necessity: Let <math id="p4.m1" class="ltx_Math" alttext="p=2^{k}-1" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow></mrow></math> be prime and <math id="p4.m2" class="ltx_Math" alttext="n=2^{k-1}p" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>p</mi></mrow></mrow></math>. We have that</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\sigma(n)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\sigma(2^{k-1}p)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\sigma(2^{k-1})\sigma(p)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle(2^{k}-1)(p+1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle(2^{k}-1)2^{k}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mn>2</mn><mi>k</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle 2n," display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which shows that <math id="p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is perfect.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Sufficiency: Assume <math id="p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is an even perfect number. Write <math id="p5.m2" class="ltx_Math" alttext="n=2^{k-1}m" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>m</mi></mrow></mrow></math> for some odd <math id="p5.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and some <math id="p5.m4" class="ltx_Math" alttext="k&gt;1" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Then we have <math id="p5.m5" class="ltx_Math" alttext="\gcd(2^{k-1},m)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Thus,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\sigma(n)=\sigma(2^{k-1}m)=\sigma(2^{k-1})\sigma(m)=(2^{k}-1)\sigma(m)." display="block"><mrow><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p5.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is perfect, <math id="p5.m7" class="ltx_Math" alttext="\sigma(n)=2n" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></math> by definition. Therefore, <math id="p5.m8" class="ltx_Math" alttext="\sigma(n)=2n=2^{k}m" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>m</mi></mrow></mrow></math>. Piecing together the two formulas for <math id="p5.m9" class="ltx_Math" alttext="\sigma(n)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> yields</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="2^{k}m=(2^{k}-1)\sigma(m)." display="block"><mrow><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>m</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, <math id="p5.m10" class="ltx_Math" alttext="(2^{k}-1)\mid 2^{k}m" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∣</mo><msup><mn>2</mn><mi>k</mi></msup><mi>m</mi></mrow></math>, which forces <math id="p5.m11" class="ltx_Math" alttext="(2^{k}-1)\mid m" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>∣</mo><mi>m</mi></mrow></math>. Write <math id="p5.m12" class="ltx_Math" alttext="m=(2^{k}-1)M" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>M</mi></mrow></mrow></math>. Note that <math id="p5.m13" class="ltx_Math" alttext="1\leq M&lt;m" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>M</mi><mo>&lt;</mo><mi>m</mi></mrow></math>. From above, we have:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle 2^{k}m" display="inline"><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>m</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle(2^{k}-1)\sigma(m)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle 2^{k}(2^{k}-1)M" display="inline"><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>M</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle(2^{k}-1)\sigma(m)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle 2^{k}M" display="inline"><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\sigma(m)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p5.m14" class="ltx_Math" alttext="m\mid m" display="inline"><mrow><mi>m</mi><mo>∣</mo><mi>m</mi></mrow></math> by definition of divides (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Divides</span>) and <math id="p5.m15" class="ltx_Math" alttext="M\mid m" display="inline"><mrow><mi>M</mi><mo>∣</mo><mi>m</mi></mrow></math> by assumption, we have</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="2^{k}M=\sigma(m)\geq m+M=2^{k}M," display="block"><mrow><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow><mo>=</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>⁢</mo><mi>M</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which forces <math id="p5.m16" class="ltx_Math" alttext="\sigma(m)=m+M" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mrow></math>. Therefore, <math id="p5.m17" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> has only two positive divisors, <math id="p5.m18" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p5.m19" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Hence, <math id="p5.m20" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> must be prime, <math id="p5.m21" class="ltx_Math" alttext="M=1" display="inline"><mrow><mi>M</mi><mo>=</mo><mn>1</mn></mrow></math>, and <math id="p5.m22" class="ltx_Math" alttext="m=(2^{k}-1)M=2^{k}-1" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>M</mi></mrow><mo>=</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow></mrow></math>, from which the result follows.
+∎</p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The lemma can be used to produce examples of (even) perfect numbers:</p>
+</div>
+<div id="p7" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="k=2" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow></math>, then <math id="I1.i1.p1.m2" class="ltx_Math" alttext="2^{k}-1=2^{2}-1=3" display="inline"><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mn>3</mn></mrow></math>, which is prime. According to the lemma, <math id="I1.i1.p1.m3" class="ltx_Math" alttext="2^{k-1}(2^{k}-1)=2^{2-1}\cdot 3=6" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mn>2</mn><mrow><mn>2</mn><mo>-</mo><mn>1</mn></mrow></msup><mo>⋅</mo><mn>3</mn></mrow><mo>=</mo><mn>6</mn></mrow></math> is perfect. Indeed, <math id="I1.i1.p1.m4" class="ltx_Math" alttext="1+2+3=6" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mo>=</mo><mn>6</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="k=3" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math>, then <math id="I1.i2.p1.m2" class="ltx_Math" alttext="2^{k}-1=2^{3}-1=7" display="inline"><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mn>7</mn></mrow></math>, which is prime. According to the lemma, <math id="I1.i2.p1.m3" class="ltx_Math" alttext="2^{k-1}(2^{k}-1)=2^{3-1}\cdot 7=28" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mn>2</mn><mrow><mn>3</mn><mo>-</mo><mn>1</mn></mrow></msup><mo>⋅</mo><mn>7</mn></mrow><mo>=</mo><mn>28</mn></mrow></math> is perfect. Indeed, <math id="I1.i2.p1.m4" class="ltx_Math" alttext="1+2+4+7+14=28" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>14</mn></mrow><mo>=</mo><mn>28</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i3.p1.m1" class="ltx_Math" alttext="k=5" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>5</mn></mrow></math>, then <math id="I1.i3.p1.m2" class="ltx_Math" alttext="2^{k}-1=2^{5}-1=31" display="inline"><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mn>31</mn></mrow></math>, which is prime. According to the lemma, <math id="I1.i3.p1.m3" class="ltx_Math" alttext="2^{k-1}(2^{k}-1)=2^{5-1}\cdot 31=496" display="inline"><mrow><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mn>2</mn><mrow><mn>5</mn><mo>-</mo><mn>1</mn></mrow></msup><mo>⋅</mo><mn>31</mn></mrow><mo>=</mo><mn>496</mn></mrow></math> is perfect. Indeed, <math id="I1.i3.p1.m4" class="ltx_Math" alttext="1+2+4+8+16+31+62+124+248=496" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>8</mn><mo>+</mo><mn>16</mn><mo>+</mo><mn>31</mn><mo>+</mo><mn>62</mn><mo>+</mo><mn>124</mn><mo>+</mo><mn>248</mn></mrow><mo>=</mo><mn>496</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Note that <math id="p8.m1" class="ltx_Math" alttext="k=4" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>4</mn></mrow></math> yields that <math id="p8.m2" class="ltx_Math" alttext="2^{k}-1=2^{4}-1=15" display="inline"><mrow><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mn>15</mn></mrow></math>, which is not prime.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The sequence of known perfect numbers appears in the OEIS as sequence <span class="ltx_text ltx_font_typewriter">http://www.research.att.com/ njas/sequences/?q=A000396</span>A000396.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">perfect number</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PerfectNumber</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:45:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:45:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20D99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20D06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:10:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

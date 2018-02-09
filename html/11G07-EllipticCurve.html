@@ -1,0 +1,375 @@
+<!DOCTYPE html><html>
+<head>
+<title>elliptic curve</title>
+<!--Generated on Fri Feb  9 15:34:46 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">elliptic curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Basics</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">An <span class="ltx_text ltx_font_italic">elliptic curve</span> over a field <math id="S1.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a projective nonsingular algebraic curve <math id="S1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> over <math id="S1.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of genus 1 together with a point <math id="S1.p1.m4" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> of <math id="S1.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> defined over <math id="S1.p1.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. The word “genus” is taken here in the algebraic geometry sense, and has no relation with the topological notion of genus (defined as <math id="S1.p1.m7" class="ltx_Math" alttext="1-\chi/2" display="inline"><mrow><mn>1</mn><mo>-</mo><mrow><mi>χ</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>, where <math id="S1.p1.m8" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> is the Euler characteristic) except when the field of definition <math id="S1.p1.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is the complex numbers <math id="S1.p1.m10" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Using the Riemann-Roch theorem for curves, one can show that every elliptic curve <math id="S1.p2.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is the zero set of a <span class="ltx_text ltx_font_italic">Weierstrass equation</span> of the form</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="E:y^{2}+a_{1}xy+a_{3}y=x^{3}+a_{2}x^{2}+a_{4}x+a_{6}," display="block"><mrow><mrow><mi>E</mi><mo>:</mo><mrow><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>4</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>a</mi><mn>6</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="S1.p2.m2" class="ltx_Math" alttext="a_{i}\in K" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mi>K</mi></mrow></math>, where the polynomial on the right hand side has no double roots. When <math id="S1.p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> has characteristic other than 2 or 3, one can further simpify this Weierstrass equation into the form</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="E:y^{2}=x^{3}-27c_{4}x-54c_{6}." display="block"><mrow><mrow><mi>E</mi><mo>:</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mrow><mn>27</mn><mo>⁢</mo><msub><mi>c</mi><mn>4</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>54</mn><mo>⁢</mo><msub><mi>c</mi><mn>6</mn></msub></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The extremely strange numbering of the coefficients is an artifact of the process by which the above equations are derived. Also, note that these equation are for affine curves; to translate them to projective curves, one has to homogenize the equations (replace <math id="S1.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with <math id="S1.p2.m5" class="ltx_Math" alttext="X/Z" display="inline"><mrow><mi>X</mi><mo>/</mo><mi>Z</mi></mrow></math>, and <math id="S1.p2.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> with <math id="S1.p2.m7" class="ltx_Math" alttext="Y/Z" display="inline"><mrow><mi>Y</mi><mo>/</mo><mi>Z</mi></mrow></math>).</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">We present here some pictures of elliptic curves over the field <math id="S2.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> of real numbers. These pictures are in some sense <span class="ltx_text ltx_font_bold">not</span> representative of most of the elliptic curves that people work with, since many of the interesting cases tend to be of elliptic curves over algebraically closed fields. However, curves over the complex numbers (or, even worse, over algebraically closed fields in characteristic <math id="S2.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>) are very difficult to graph in three dimensions, let alone two.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Figure <a href="#S2.F1" title="Figure 1 ‣ 2 Examples ‣ elliptic curve" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> is a graph of the elliptic curve <math id="S2.p2.m1" class="ltx_Math" alttext="y^{2}=x^{3}-x" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><img src="graph1.eps" id="S2.F1.g1" class="ltx_graphics" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Graph of <math id="S2.F1.m2" class="ltx_Math" alttext="y^{2}=x(x-1)(x+1)" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></figcaption>
+</figure>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Figure <a href="#S2.F2" title="Figure 2 ‣ 2 Examples ‣ elliptic curve" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> shows the graph of <math id="S2.p3.m1" class="ltx_Math" alttext="y^{2}=x^{3}-x+1" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>:</p>
+</div>
+<figure id="S2.F2" class="ltx_figure"><img src="graph2.eps" id="S2.F2.g1" class="ltx_graphics" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Graph of <math id="S2.F2.m2" class="ltx_Math" alttext="y^{2}=x^{3}-x+1" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math></figcaption>
+</figure>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Finally, Figures <a href="#S2.F3" title="Figure 3 ‣ 2 Examples ‣ elliptic curve" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> and <a href="#S2.F4" title="Figure 4 ‣ 2 Examples ‣ elliptic curve" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> are examples of algebraic curves that are <span class="ltx_text ltx_font_bold">not</span> elliptic curves. Both of these curves have singularities at the origin.</p>
+</div>
+<figure id="S2.F3" class="ltx_figure"><img src="graph3.eps" id="S2.F3.g1" class="ltx_graphics" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 3: </span>Graph of <math id="S2.F3.m2" class="ltx_Math" alttext="y^{2}=x^{2}(x+1)" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Has two tangents at the origin.</figcaption>
+</figure>
+<figure id="S2.F4" class="ltx_figure"><img src="graph4.eps" id="S2.F4.g1" class="ltx_graphics" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 4: </span>Graph of <math id="S2.F4.m2" class="ltx_Math" alttext="y^{2}=x^{3}" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>. Has a cusp at the origin.</figcaption>
+</figure>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The Group Law</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The points on an elliptic curve have a natural group structure, which makes the elliptic curve into an abelian variety. There are many equivalent ways to define this group structure; two of the most common are:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Every Weyl divisor on <math id="I1.i1.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is linearly equivalent to a unique divisor of the form <math id="I1.i1.p1.m2" class="ltx_Math" alttext="[P]-[O]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>P</mi><mo stretchy="false">]</mo></mrow><mo>-</mo><mrow><mo stretchy="false">[</mo><mi>O</mi><mo stretchy="false">]</mo></mrow></mrow></math> for some <math id="I1.i1.p1.m3" class="ltx_Math" alttext="P\in E" display="inline"><mrow><mi>P</mi><mo>∈</mo><mi>E</mi></mrow></math>, where <math id="I1.i1.p1.m4" class="ltx_Math" alttext="O\in E" display="inline"><mrow><mi>O</mi><mo>∈</mo><mi>E</mi></mrow></math> is the base point. The divisor class group of <math id="I1.i1.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> then yields a group structure on the points of <math id="I1.i1.p1.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, by way of this correspondence.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i2.p1.m1" class="ltx_Math" alttext="O\in E" display="inline"><mrow><mi>O</mi><mo>∈</mo><mi>E</mi></mrow></math> denote the base point. Then one can show that every line joining two points on <math id="I1.i2.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> intersects a unique third point of <math id="I1.i2.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> (after properly accounting for tangent lines as a multiple intersection). For any two points <math id="I1.i2.p1.m4" class="ltx_Math" alttext="P,Q\in E" display="inline"><mrow><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow><mo>∈</mo><mi>E</mi></mrow></math>, define their sum as:</p>
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Form the line between <math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="I1.I1.i1.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>; let <math id="I1.I1.i1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be the third point on <math id="I1.I1.i1.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> that intersects this line;</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Form the line between <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> and <math id="I1.I1.i2.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>; define <math id="I1.I1.i2.p1.m3" class="ltx_Math" alttext="P+Q" display="inline"><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow></math> to be the third point on <math id="I1.I1.i2.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> that intersects this line.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">This addition operation yields a group operation on the points of <math id="I1.i2.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> having the base point <math id="I1.i2.p1.m6" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> for identity.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Elliptic Curves over <math id="S4.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>
+</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Over the complex numbers, the general correspondence between algebraic and analytic theory specializes in the elliptic curves case to yield some very useful insights into the structure of elliptic curves over <math id="S4.p1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. The starting point for this investigation is the Weierstrass <math id="S4.p1.m2" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math>–function, which we define here.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">lattice</span> in <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> is a subgroup <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> of the additive group <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> which is generated by two elements <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\omega_{1},\omega_{2}\in\mathbb{C}" display="inline"><mrow><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ω</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math> that are linearly independent over <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">For any lattice <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> in <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, the <span class="ltx_text ltx_font_italic">Weierstrass <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="{\mathfrak{p}}_{L}" display="inline"><msub><mi mathvariant="normal">p</mi><mi>L</mi></msub></math>–function</span> of <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is the function <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="{\mathfrak{p}}_{L}:\mathbb{C}\longrightarrow\mathbb{C}" display="inline"><mrow><msub><mi>𝔭</mi><mi>L</mi></msub><mo>:</mo><mrow><mi>ℂ</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> given by</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="{\mathfrak{p}}_{L}(z):=\frac{1}{z^{2}}+\sum_{\omega\in L\setminus\{0\}}\left(%
+\frac{1}{(z-\omega)^{2}}-\frac{1}{\omega^{2}}\right)." display="block"><mrow><mrow><mrow><msub><mi>𝔭</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mfrac><mn>1</mn><msup><mi>z</mi><mn>2</mn></msup></mfrac><mo>+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>ω</mi><mo>∈</mo><mrow><mi>L</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></munder><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>-</mo><mfrac><mn>1</mn><msup><mi>ω</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">When the lattice <math id="S4.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is clear from context, it is customary to suppress it from the notation and simply write <math id="S4.p2.m2" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> for the Weierstrass <math id="S4.p2.m3" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math>–function.
+</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Properties of the Weierstrass <math id="S4.p3.m1" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi mathvariant="normal">p</mi></math>–function:</span></p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="{\mathfrak{p}}(z)" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a meromorphic function with double poles at points in <math id="I2.i1.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="{\mathfrak{p}}(z)" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is constant on each coset of <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\mathbb{C}/L" display="inline"><mrow><mi>ℂ</mi><mo>/</mo><mi>L</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="{\mathfrak{p}}(z)" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies the differential equation</p>
+<table id="S4.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex4.m1" class="ltx_Math" alttext="{\mathfrak{p}}^{\prime}(z)^{2}=4{\mathfrak{p}}(z)^{3}-g_{2}{\mathfrak{p}}(z)-g%
+_{3}" display="block"><mrow><mrow><msup><mi>𝔭</mi><mo>′</mo></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>𝔭</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the constants <math id="I2.i3.p1.m2" class="ltx_Math" alttext="g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math> and <math id="I2.i3.p1.m3" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math> are given by</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S4.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex5.m1" class="ltx_Math" alttext="\displaystyle g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex5.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex5.m3" class="ltx_Math" alttext="\displaystyle 60\sum_{\omega\in L\setminus\{0\}}\frac{1}{\omega^{4}}" display="inline"><mrow><mn>60</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>ω</mi><mo>∈</mo><mrow><mi>L</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></munder></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>ω</mi><mn>4</mn></msup></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S4.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex6.m1" class="ltx_Math" alttext="\displaystyle g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex6.m2" class="ltx_Math" alttext="\displaystyle:=" display="inline"><mo>:=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex6.m3" class="ltx_Math" alttext="\displaystyle 140\sum_{\omega\in L\setminus\{0\}}\frac{1}{\omega^{6}}" display="inline"><mrow><mn>140</mn><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>ω</mi><mo>∈</mo><mrow><mi>L</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></munder></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>ω</mi><mn>6</mn></msup></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">The last property above implies that, for any <math id="S4.p5.m1" class="ltx_Math" alttext="z\in\mathbb{C}/L" display="inline"><mrow><mi>z</mi><mo>∈</mo><mrow><mi>ℂ</mi><mo>/</mo><mi>L</mi></mrow></mrow></math>, the point <math id="S4.p5.m2" class="ltx_Math" alttext="({\mathfrak{p}}(z),{\mathfrak{p}}^{\prime}(z))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msup><mi>𝔭</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> lies on the elliptic curve <math id="S4.p5.m3" class="ltx_Math" alttext="E:y^{2}=4x^{3}-g_{2}x-g_{3}" display="inline"><mrow><mi>E</mi><mo>:</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></mrow></mrow></math>. Let <math id="S4.p5.m4" class="ltx_Math" alttext="\phi:\mathbb{C}/L\longrightarrow E" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mrow><mi>ℂ</mi><mo>/</mo><mi>L</mi></mrow><mo>⟶</mo><mi>E</mi></mrow></mrow></math> be the map given by</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="\phi(z):=\begin{cases}({\mathfrak{p}}(z),{\mathfrak{p}}^{\prime}(z))&amp;z\notin L%
+\\
+\infty&amp;z\in L\end{cases}" display="block"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mo stretchy="false">(</mo><mrow><mi>𝔭</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msup><mi>𝔭</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>z</mi><mo>∉</mo><mi>L</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mi mathvariant="normal">∞</mi></mtd><mtd columnalign="left"><mrow><mi>z</mi><mo>∈</mo><mi>L</mi></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(where <math id="S4.p5.m5" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> denotes the point at infinity on <math id="S4.p5.m6" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>). Then <math id="S4.p5.m7" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is actually a bijection (!), and moreover the map <math id="S4.p5.m8" class="ltx_Math" alttext="\phi:\mathbb{C}/L\longrightarrow E" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mrow><mi>ℂ</mi><mo>/</mo><mi>L</mi></mrow><mo>⟶</mo><mi>E</mi></mrow></mrow></math> is an isomorphism of Riemann surfaces as well as a group isomorphism (with the addition operation on <math id="S4.p5.m9" class="ltx_Math" alttext="\mathbb{C}/L" display="inline"><mrow><mi>ℂ</mi><mo>/</mo><mi>L</mi></mrow></math> inherited from <math id="S4.p5.m10" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, and the elliptic curve group operation on <math id="S4.p5.m11" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>).</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">We can go even further: it turns out that <span class="ltx_text ltx_font_bold">every</span> elliptic curve <math id="S4.p6.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> over <math id="S4.p6.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> can be obtained in this way from some lattice <math id="S4.p6.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. More precisely, the following is true:</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For every elliptic curve </span><math id="I3.i1.p1.m1" class="ltx_Math" alttext="E:y^{2}=4x^{3}-bx-c" display="inline"><mrow><mi>E</mi><mo>:</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>c</mi></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> over </span><math id="I3.i1.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math><span class="ltx_text ltx_font_italic">, there is a unique lattice </span><math id="I3.i1.p1.m3" class="ltx_Math" alttext="L\subset\mathbb{C}" display="inline"><mrow><mi>L</mi><mo>⊂</mo><mi>ℂ</mi></mrow></math><span class="ltx_text ltx_font_italic"> whose constants </span><math id="I3.i1.p1.m4" class="ltx_Math" alttext="g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i1.p1.m5" class="ltx_Math" alttext="g_{3}" display="inline"><msub><mi>g</mi><mn>3</mn></msub></math><span class="ltx_text ltx_font_italic"> satisfy </span><math id="I3.i1.p1.m6" class="ltx_Math" alttext="b=g_{2}" display="inline"><mrow><mi>b</mi><mo>=</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i1.p1.m7" class="ltx_Math" alttext="c=g_{3}" display="inline"><mrow><mi>c</mi><mo>=</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Two elliptic curves </span><math id="I3.i2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i2.p1.m2" class="ltx_Math" alttext="E^{\prime}" display="inline"><msup><mi>E</mi><mo>′</mo></msup></math><span class="ltx_text ltx_font_italic"> over </span><math id="I3.i2.p1.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math><span class="ltx_text ltx_font_italic"> are isomorphic if and only if their corresponding lattices </span><math id="I3.i2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i2.p1.m5" class="ltx_Math" alttext="L^{\prime}" display="inline"><msup><mi>L</mi><mo>′</mo></msup></math><span class="ltx_text ltx_font_italic"> satisfy the equation </span><math id="I3.i2.p1.m6" class="ltx_Math" alttext="L^{\prime}=\alpha L" display="inline"><mrow><msup><mi>L</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mi>L</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"> for some scalar </span><math id="I3.i2.p1.m7" class="ltx_Math" alttext="\alpha\in\mathbb{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>ℂ</mi></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> Dale Husemoller, <span class="ltx_text ltx_font_italic">Elliptic Curves</span>. Springer–Verlag, New York, 1997.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> James Milne, <span class="ltx_text ltx_font_italic">Elliptic Curves</span>, online course notes. <span class="ltx_text ltx_font_typewriter">http://www.jmilne.org/math/CourseNotes/math679.html</span>http://www.jmilne.org/math/CourseNotes/math679.html
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> Joseph H. Silverman, <span class="ltx_text ltx_font_italic">The Arithmetic of Elliptic Curves</span>. Springer–Verlag, New York, 1986.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">elliptic curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:03:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:03:02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11G07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14H52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Isogeny</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ComplexMultiplication</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RankOfAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HeightFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LSeriesOfAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BirchAndSwinnertonDyerConjecture</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">JInvariant</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MordellWeilTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ConductorOfAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">
+<math id="p2.m1" class="ltx_Math" alttext="\mathfrak{p}" display="inline"><mi>𝔭</mi></math>-function</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:34:46 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

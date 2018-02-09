@@ -1,0 +1,312 @@
+<!DOCTYPE html><html>
+<head>
+<title>expressing fractions in factorial base</title>
+<!--Generated on Fri Feb  9 15:22:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">expressing fractions in factorial base</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given a fraction <math id="p1.m1" class="ltx_Math" alttext="p/q" display="inline"><mrow><mi>p</mi><mo>/</mo><mi>q</mi></mrow></math>, one may re-express it in factorial
+base as follows. For simplicity, we assume that the
+fraction is already written in lowest terms, i.e. that
+<math id="p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p1.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> have no common factor. As in the parent (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FactorialBaseRepresentationOfFractions</span>)
+entry, we assume the both <math id="p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are positive and
+that <math id="p1.m6" class="ltx_Math" alttext="p&lt;q" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>q</mi></mrow></math>, so our fraction is less than 1.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To begin, determine the smallest integer <math id="p2.m1" class="ltx_Math" alttext="d(q)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="p2.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>
+divides (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Divisibility</span>) <math id="p2.m3" class="ltx_Math" alttext="d(q)!" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Rewrite the fraction with <math id="p3.m1" class="ltx_Math" alttext="d(q)!" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> as denominator:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="{p\over q}={p\cdot d(q)!/q\over d(q)!}" display="block"><mrow><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo><mfrac><mrow><mrow><mrow><mi>p</mi><mo>⋅</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>/</mo><mi>q</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Successively split off terms as follows: given a
+fraction <math id="p4.m1" class="ltx_Math" alttext="m/n!" display="inline"><mrow><mi>m</mi><mo>/</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>, write  <math id="p4.m2" class="ltx_Math" alttext="m=k\cdot n+r" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mi>k</mi><mo>⋅</mo><mi>n</mi></mrow><mo>+</mo><mi>r</mi></mrow></mrow></math>  where
+<math id="p4.m3" class="ltx_Math" alttext="r&lt;n" display="inline"><mrow><mi>r</mi><mo>&lt;</mo><mi>n</mi></mrow></math> and then write</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{m\over n!}:={k\over(n-1)!}+{r\over n!}" display="block"><mrow><mfrac><mi>m</mi><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>:=</mo><mrow><mfrac><mi>k</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>+</mo><mfrac><mi>r</mi><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Initially, we choose <math id="p4.m4" class="ltx_Math" alttext="m=p\cdot d(q)!/q" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mrow><mi>p</mi><mo>⋅</mo><mi>d</mi></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>/</mo><mi>q</mi></mrow></mrow></math> and
+<math id="p4.m5" class="ltx_Math" alttext="n=d(q)" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. At each successive repetition of the
+procedure, set <math id="p4.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> to be the value of <math id="p4.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> from
+the previous step and decrease <math id="p4.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> by 1.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let us illustrate this with an example. We
+will rewrite <math id="p5.m1" class="ltx_Math" alttext="7/8" display="inline"><mrow><mn>7</mn><mo>/</mo><mn>8</mn></mrow></math> in factorial base. Looking
+at factorials, we see that <math id="p5.m2" class="ltx_Math" alttext="8" display="inline"><mn>8</mn></math> does not divide
+either <math id="p5.m3" class="ltx_Math" alttext="2!" display="inline"><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> or <math id="p5.m4" class="ltx_Math" alttext="3!" display="inline"><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>, but it does divide <math id="p5.m5" class="ltx_Math" alttext="4!" display="inline"><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>,
+so we have <math id="p5.m6" class="ltx_Math" alttext="d(8)=4" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>4</mn></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Next we rewrite the fraction with <math id="p6.m1" class="ltx_Math" alttext="4!" display="inline"><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> as
+denominator. Since <math id="p6.m2" class="ltx_Math" alttext="4!=24" display="inline"><mrow><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>24</mn></mrow></math> and <math id="p6.m3" class="ltx_Math" alttext="24/8=3" display="inline"><mrow><mrow><mn>24</mn><mo>/</mo><mn>8</mn></mrow><mo>=</mo><mn>3</mn></mrow></math>,
+we should multiply both numerator and denominator
+of our fraction by <math id="p6.m4" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> to obtain <math id="p6.m5" class="ltx_Math" alttext="7/8=21/24=21/4!" display="inline"><mrow><mrow><mn>7</mn><mo>/</mo><mn>8</mn></mrow><mo>=</mo><mrow><mn>21</mn><mo>/</mo><mn>24</mn></mrow><mo>=</mo><mrow><mn>21</mn><mo>/</mo><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now, we split off terms. We have <math id="p7.m1" class="ltx_Math" alttext="21=5\cdot 4+1" display="inline"><mrow><mn>21</mn><mo>=</mo><mrow><mrow><mn>5</mn><mo>⋅</mo><mn>4</mn></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, so</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{21}{4!}=\frac{5}{3!}+\frac{1}{4!}." display="block"><mrow><mrow><mfrac><mn>21</mn><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>5</mn><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Next, <math id="p7.m2" class="ltx_Math" alttext="5=1\cdot 3+2" display="inline"><mrow><mn>5</mn><mo>=</mo><mrow><mrow><mn>1</mn><mo>⋅</mo><mn>3</mn></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math>, so</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\frac{5}{3!}" display="inline"><mstyle displaystyle="true"><mfrac><mn>5</mn><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2!}+\frac{2}{3!}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\frac{21}{4!}" display="inline"><mstyle displaystyle="true"><mfrac><mn>21</mn><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2!}+\frac{2}{3!}+\frac{1}{4!}." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p7.m3" class="ltx_Math" alttext="1&lt;2" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mn>2</mn></mrow></math>, we are done. Thus, we see that the
+factorial base representation of <math id="p7.m4" class="ltx_Math" alttext="7/8" display="inline"><mrow><mn>7</mn><mo>/</mo><mn>8</mn></mrow></math> is
+<math id="p7.m5" class="ltx_Math" alttext="0\,.\,1\,2\,1" display="inline"><mn>0 . 1 2 1</mn></math> as in the table in the
+parent entry.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">We can make the calculation more concise by noting
+that the splitting off of terms can also be described
+as follows: the factorial base representation of
+<math id="p8.m1" class="ltx_Math" alttext="m/n!" display="inline"><mrow><mi>m</mi><mo>/</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> is the factorial base representation of
+<math id="p8.m2" class="ltx_Math" alttext="k/(n-1)!" display="inline"><mrow><mi>k</mi><mo>/</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> followed by <math id="p8.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, where  <math id="p8.m4" class="ltx_Math" alttext="m=k\cdot n+r" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mrow><mi>k</mi><mo>⋅</mo><mi>n</mi></mrow><mo>+</mo><mi>r</mi></mrow></mrow></math>  as above. For example, let us compute the
+factorial base representation of <math id="p8.m5" class="ltx_Math" alttext="7/9" display="inline"><mrow><mn>7</mn><mo>/</mo><mn>9</mn></mrow></math> using this
+trick. Looking at factorials, we see that <math id="p8.m6" class="ltx_Math" alttext="d(9)=6" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>6</mn></mrow></math>.
+We express our fraction with a denominator of <math id="p8.m7" class="ltx_Math" alttext="6!=720" display="inline"><mrow><mrow><mn>6</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>720</mn></mrow></math>:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\frac{7}{9}=\frac{80\cdot 7}{80\cdot 9}=\frac{560}{720}=\frac{560}{6!}" display="block"><mrow><mfrac><mn>7</mn><mn>9</mn></mfrac><mo>=</mo><mfrac><mrow><mn>80</mn><mo>⋅</mo><mn>7</mn></mrow><mrow><mn>80</mn><mo>⋅</mo><mn>9</mn></mrow></mfrac><mo>=</mo><mfrac><mn>560</mn><mn>720</mn></mfrac><mo>=</mo><mfrac><mn>560</mn><mrow><mn>6</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We now split of digits like follows:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\frac{560}{6!}" display="inline"><mstyle displaystyle="true"><mfrac><mn>560</mn><mrow><mn>6</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\frac{93}{5!}\,2" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>93</mn><mrow><mn>5</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mn> 2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\frac{18}{4!}\,3\,2" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>18</mn><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mn> 3 2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\frac{4}{3!}\,2\,3\,2" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mn> 2 3 2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2!}\,1\,2\,3\,2" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mn> 1 2 3 2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, we see that the factorial base representation
+of <math id="p8.m8" class="ltx_Math" alttext="7/9" display="inline"><mrow><mn>7</mn><mo>/</mo><mn>9</mn></mrow></math> is <math id="p8.m9" class="ltx_Math" alttext="0\,.\,1\,1\,2\,3\,2" display="inline"><mn>0 . 1 1 2 3 2</mn></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The following LISP program computes factorial base
+representations of rational numbers using this method.
+It was used to compute the table of factorial base
+representations in the parent entry.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(defun factorial) (n)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(cond ((= n 0) 1)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(t (* n (factorial (- n 1))))))</span></p>
+</div>
+<div id="p11" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(defun d-tilde (n m)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(cond ((= (% (factorial m) n) 0) m)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(t (d-tilde n (+ m 1))))) </span></p>
+</div>
+<div id="p12" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(defun d (n) (d-tilde n 1))</span></p>
+</div>
+<div id="p13" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(defun s (p q)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(cond ((= q 1) nil)</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(t (append</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(s (/ p q) (- q 1))</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(list (% p q)))))) </span></p>
+</div>
+<div id="p14" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(defun r (p q)
+  (s</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(* p (/ (f (d q)) q))</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">(d q))) </span></p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Since LISP can look rather confusing to someone who is not familiar
+with its notational conventions — all functions are written as
+prefixes and parentheses are used a bit differently than usually,
+a translation into more typical mathematical notation may be helpful.
+To do this, let us define a few symbols. Let ‘<math id="p15.m1" class="ltx_Math" alttext="\ast" display="inline"><mo>∗</mo></math>’ denote the
+concatenaton of tuplets — given an <math id="p15.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuplet <math id="p15.m3" class="ltx_Math" alttext="(x1,x_{2},\ldots,x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mn>1</mn></mrow><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>
+and an <math id="p15.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-tuplet <math id="p15.m5" class="ltx_Math" alttext="(y_{1},y_{2},\ldots,y_{m})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></math>, we set
+<math id="p15.m6" class="ltx_Math" alttext="(x1,x_{2},\ldots,x_{n})\ast(y_{1},y_{2},\ldots,y_{m})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mn>1</mn></mrow><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∗</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> to be the
+<math id="p15.m7" class="ltx_Math" alttext="m+n" display="inline"><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></math>-tuplet <math id="p15.m8" class="ltx_Math" alttext="(x1,x_{2},\ldots,x_{n},y_{1},y_{2},\ldots y_{m})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mn>1</mn></mrow><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>y</mi><mi>m</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math>.
+Let “<math id="p15.m9" class="ltx_Math" alttext="m\div n" display="inline"><mrow><mi>m</mi><mo>÷</mo><mi>n</mi></mrow></math>” denote the integer part of <math id="p15.m10" class="ltx_Math" alttext="m/n" display="inline"><mrow><mi>m</mi><mo>/</mo><mi>n</mi></mrow></math> and let
+“<math id="p15.m11" class="ltx_Math" alttext="m\operatorname{\%}n" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mrow><mi mathvariant="normal">%</mi><mo>⁡</mo><mi>n</mi></mrow></mrow></math> denote the remainder of dividing <math id="p15.m12" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> by <math id="p15.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For
+instance, <math id="p15.m14" class="ltx_Math" alttext="13\div 5=2" display="inline"><mrow><mrow><mn>13</mn><mo>÷</mo><mn>5</mn></mrow><mo>=</mo><mn>2</mn></mrow></math> and <math id="p15.m15" class="ltx_Math" alttext="13\operatorname{\%}5=3" display="inline"><mrow><mrow><mn>13</mn><mo>⁢</mo><mrow><mi mathvariant="normal">%</mi><mo>⁡</mo><mn>5</mn></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>. With these notational
+conventions, we may re-express our program as follows:</p>
+</div>
+<div id="p16" class="ltx_para">
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="n!:=\begin{cases}1&amp;n=0\\
+n\cdot(n-1)!&amp;\textrm{otherwise}\end{cases}" display="block"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>:=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mi>n</mi><mo>⋅</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mtd><mtd columnalign="left"><mtext>otherwise</mtext></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="{\tilde{d}}(n,m):=\begin{cases}m&amp;m!\operatorname{\%}n=0\\
+{\tilde{d}}(n,m+1)&amp;\textrm{otherwise}\end{cases}" display="block"><mrow><mrow><mover accent="true"><mi>d</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mi>m</mi></mtd><mtd columnalign="left"><mrow><mrow><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">%</mi><mo>⁡</mo><mi>n</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mover accent="true"><mi>d</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mtext>otherwise</mtext></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="d(n):={\tilde{d}}(n,1)" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mover accent="true"><mi>d</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="s(p,q):=\begin{cases}()&amp;q=1\\
+s(p\div q,q-1)\ast(p\operatorname{\%}q)&amp;\mathrm{otherwise}\end{cases}" display="block"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></mtd><mtd columnalign="left"><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>÷</mo><mi>q</mi></mrow><mo>,</mo><mrow><mi>q</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∗</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mi mathvariant="normal">%</mi><mo>⁡</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mi>otherwise</mi></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="r(p,q):=s(p\cdot f(d(q))/q,d(q)" display="block"><mrow><mi>r</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>⋅</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>d</mi><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi>q</mi><mo>,</mo><mi>d</mi><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p21" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">expressing fractions in factorial base</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExpressingFractionsInFactorialBase</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:46:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:46:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A63</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:22:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

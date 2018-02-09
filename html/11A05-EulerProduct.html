@@ -1,0 +1,205 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euler product</title>
+<!--Generated on Fri Feb  9 15:09:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euler product</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">If <math id="p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a multiplicative function, then</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}f(n)=\prod_{p\text{ is prime}}(1+f(p)+f(p^{2})+\cdots)" display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>p</mi><mo>⁢</mo><mtext> is prime</mtext></mrow></munder><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">provided the sum on the left converges absolutely. The product
+on the right is called the <em class="ltx_emph ltx_font_italic">Euler product</em> for the sum on the
+left.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of (<a href="#S0.E1" title="(1) ‣ Euler product" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Expand partial products on right of (<a href="#S0.E1" title="(1) ‣ Euler product" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) to
+obtain by fundamental theorem of arithmetic</p>
+<table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\prod_{p&lt;y}(1+f(p)+f(p^{2})+\cdots)" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>p</mi><mo>&lt;</mo><mi>y</mi></mrow></munder></mstyle><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k_{1}}f(p_{1}^{k_{1}})\sum_{k_{2}}f(p_{2}^{k_{2}})\cdots%
+\sum_{k_{t}}f(p_{t}^{k_{t}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><msub><mi>k</mi><mn>1</mn></msub></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>k</mi><mn>1</mn></msub></msubsup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><msub><mi>k</mi><mn>2</mn></msub></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>k</mi><mn>2</mn></msub></msubsup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><msub><mi>k</mi><mi>t</mi></msub></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mi>t</mi><msub><mi>k</mi><mi>t</mi></msub></msubsup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k_{1},k_{2},\ldots,k_{t}}f(p_{1}^{k_{1}})f(p_{2}^{k_{2}})%
+\cdots f(p_{t}^{k_{t}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>t</mi></msub></mrow></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mn>1</mn><msub><mi>k</mi><mn>1</mn></msub></msubsup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>k</mi><mn>2</mn></msub></msubsup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>p</mi><mi>t</mi><msub><mi>k</mi><mi>t</mi></msub></msubsup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\sum_{k_{1},k_{2},\ldots,k_{t}}f(p_{1}^{k_{1}}p_{2}^{k_{2}}%
+\cdots p_{t}^{k_{t}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>t</mi></msub></mrow></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>p</mi><mn>1</mn><msub><mi>k</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><msubsup><mi>p</mi><mn>2</mn><msub><mi>k</mi><mn>2</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>p</mi><mi>t</mi><msub><mi>k</mi><mi>t</mi></msub></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\sum_{P_{+}(n)&lt;y}f(n)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>y</mi></mrow></munder></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m1" class="ltx_Math" alttext="p_{1},p_{2},\ldots,p_{t}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><msub><mi>p</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>t</mi></msub></mrow></math> are all the primes between <math id="p2.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="p2.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="p2.m4" class="ltx_Math" alttext="P_{+}(n)" display="inline"><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the largest prime factor of <math id="p2.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Since
+every natural number less than <math id="p2.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> has no factors exceeding <math id="p2.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> we have
+that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left\lvert\sum_{n=1}^{\infty}f(n)-\sum_{P_{+}(n)&lt;y}f(n)\right\rvert\leq\sum_{%
+n=y}^{\infty}\left\lvert f(n)\right\rvert" display="block"><mrow><mrow><mo fence="true">|</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>y</mi></mrow></munder><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo fence="true">|</mo></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mi>y</mi></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mo fence="true">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which tends to zero as <math id="p2.m8" class="ltx_Math" alttext="y\to\infty" display="inline"><mrow><mi>y</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Examples</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If the function <math id="I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is defined on prime powers by
+<math id="I1.i1.p1.m2" class="ltx_Math" alttext="f(p^{k})=1/p^{k}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>/</mo><msup><mi>p</mi><mi>k</mi></msup></mrow></mrow></math> for all <math id="I1.i1.p1.m3" class="ltx_Math" alttext="p&lt;x" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>x</mi></mrow></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="f(p^{k})=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="I1.i1.p1.m5" class="ltx_Math" alttext="p\geq x" display="inline"><mrow><mi>p</mi><mo>≥</mo><mi>x</mi></mrow></math>,
+then  allows one to estimate <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\prod_{p&lt;x}(1+1/(p-1))" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>p</mi><mo>&lt;</mo><mi>x</mi></mrow></msub><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+<table id="Sx1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex6.m1" class="ltx_Math" alttext="\prod_{p&lt;x}\left(1+\frac{1}{p-1}\right)=\prod_{p&lt;x}\left(1+\frac{1}{p}+\frac{1%
+}{p^{2}}+\cdots\right)=\sum_{P_{+}(n)&lt;x}\frac{1}{n}&gt;\sum_{n&lt;x}\frac{1}{n}&gt;\ln x." display="block"><mrow><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>p</mi><mo>&lt;</mo><mi>x</mi></mrow></munder><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>p</mi><mo>&lt;</mo><mi>x</mi></mrow></munder><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>p</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><msup><mi>p</mi><mn>2</mn></msup></mfrac><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>x</mi></mrow></munder><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>&gt;</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>&lt;</mo><mi>x</mi></mrow></munder><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>&gt;</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One of the consequences of this formula is that there are
+infinitely many primes.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The Riemann zeta function is defined by the means of the
+series</p>
+<table id="Sx1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex7.m1" class="ltx_Math" alttext="\zeta(s)=\sum_{n=1}^{\infty}n^{-s}\qquad\text{for $\Re s&gt;1$}." display="block"><mrow><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi>n</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mtext>for </mtext><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&gt;</mo><mn>1</mn></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the series converges absolutely, the Euler product for the zeta function is</p>
+<table id="Sx1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex8.m1" class="ltx_Math" alttext="\zeta(s)=\prod_{p}\frac{1}{1-p^{-s}}\qquad\text{for $\Re s&gt;1$}." display="block"><mrow><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mi>p</mi></munder><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><msup><mi>p</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup></mrow></mfrac></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mtext>for </mtext><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&gt;</mo><mn>1</mn></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we set <math id="I1.i2.p1.m1" class="ltx_Math" alttext="s=2" display="inline"><mrow><mi>s</mi><mo>=</mo><mn>2</mn></mrow></math>, then on the one hand <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\zeta(s)=\sum_{n}1/n^{2}" display="inline"><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>n</mi></msub><mrow><mn>1</mn><mo>/</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow></mrow></math> is
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="\pi^{2}/6" display="inline"><mrow><msup><mi>π</mi><mn>2</mn></msup><mo>/</mo><mn>6</mn></mrow></math> (proof is
+here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ValueOfTheRiemannZetaFunctionAtS2</span>)), an
+irrational number, and on the other hand <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\zeta(2)" display="inline"><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> is a product of rational functions of primes. This yields yet another proof of infinitude of
+primes.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euler product</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EulerProduct</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:10:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:10:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MultiplicativeFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">RiemannZetaFunction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:09:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

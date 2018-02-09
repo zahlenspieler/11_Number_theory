@@ -1,0 +1,246 @@
+<!DOCTYPE html><html>
+<head>
+<title>Wolstenholme’s theorem</title>
+<!--Generated on Fri Feb  9 15:31:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Wolstenholme’s theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We want to show first that the harmonic number</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H_{n}\;=:\;1+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{n}\,\;=\;\int_{0}^{1}%
+\frac{1\!-\!x^{n}}{1\!-\!x}\,dx" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>H</mi><mi>n</mi></msub></mpadded><mo>=</mo><mo>:</mo><mn> 1</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mpadded width="+4.4pt"><mfrac><mn>1</mn><mi>n</mi></mfrac></mpadded><mo rspace="5.3pt">=</mo><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup><mpadded width="+1.7pt"><mfrac><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>x</mi></mrow></mfrac></mpadded><mi>d</mi><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is never an integer (<math id="p1.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Denote by <math id="p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> the greatest prime number not exceeding <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  By Bertrand’s postulate there is a prime <math id="p2.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> with 
+<math id="p2.m4" class="ltx_Math" alttext="p&lt;q&lt;2p" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>q</mi><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow></math>.  Therefore we have  <math id="p2.m5" class="ltx_Math" alttext="n&lt;2p" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow></math>.  If <math id="p2.m6" class="ltx_Math" alttext="H_{n}" display="inline"><msub><mi>H</mi><mi>n</mi></msub></math> were an integer, then the sum</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="n!H_{n}\;=\;\sum_{i=1}^{n}\frac{n!}{i}" display="block"><mrow><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>H</mi><mi>n</mi></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>i</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">had to be divisible by <math id="p2.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.  However its addend <math id="p2.m8" class="ltx_Math" alttext="\displaystyle\frac{n!}{p}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>p</mi></mfrac></mstyle></math> is not divisible by <math id="p2.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> but all other addends are, whence the sum cannot be divisible by <math id="p2.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.  The contradictory situation means that <math id="p2.m11" class="ltx_Math" alttext="H_{n}" display="inline"><msub><mi>H</mi><mi>n</mi></msub></math> is not integer when  <math id="p2.m12" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem (Wolstenholme).</span>  If <math id="p3.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a prime number greater than 3, then the numerator of the harmonic number</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="H_{p-1}\;=\;1+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{p-1}" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>H</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msub></mpadded><mo>=</mo><mrow><mn> 1</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is always divisible by <math id="p3.m2" class="ltx_Math" alttext="p^{2}" display="inline"><msup><mi>p</mi><mn>2</mn></msup></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em>  Consider the polynomial</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="f(x)\;=:\;(x\!-\!1)(x\!-\!2)\cdots(x\!-\!p\!+\!1)." display="block"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo>=</mo><mo rspace="5.3pt">:</mo><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">⋯</mi><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One has</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle f(0)\;=\;(p\!-\!1)!\;=\;f(p)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo rspace="5.3pt">=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle f(x)\;=\;x^{p-1}+a_{1}x^{p-2}+a_{2}x^{p-3}+\ldots+a_{p-2}x+(p\!-%
+1\!)!" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p4.m1" class="ltx_Math" alttext="a_{1},\,a_{2},\,\ldots,\,a_{p-2}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>a</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msub></mrow></math> are integers.  Because <math id="p4.m2" class="ltx_Math" alttext="1,\,2,\,\ldots,\,p\!-\!1" display="inline"><mrow><mn>1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mrow></math> form a set of all modulo <math id="p4.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> incongruent roots of the Fermat’s congruence (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FermatsTheorem</span>)  <math id="p4.m4" class="ltx_Math" alttext="x^{p-1}\equiv 1\pmod{p}" display="inline"><mrow><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,  one may write the identical congruence</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle x^{p-1}\!-\!1\;\equiv\;x^{p-1}+a_{1}x^{p-2}+a_{2}x^{p-3}+\ldots+%
+a_{p-2}x+(p\!-1\!)!\pmod{p}." display="inline"><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo rspace="0.8pt">-</mo><mpadded width="+2.8pt"><mn>1</mn></mpadded></mrow><mo rspace="5.3pt">≡</mo><mrow><mrow><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It may be written by Wilson’s theorem  <math id="p4.m5" class="ltx_Math" alttext="(p\!-1\!)!\equiv-1\pmod{p}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>  as
+</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle a_{1}x^{p-2}+a_{2}x^{p-3}+\ldots+a_{p-2}x\;\equiv\;0\pmod{p}," display="inline"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow><mo>≡</mo><mrow><mn> 0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">being thus true for any integer <math id="p4.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.  From (4) one can successively infer that <math id="p4.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> divides all coefficients <math id="p4.m8" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math>, i.e. that (4) actually is a formal congruence.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For the derivative of the polynomial <math id="p5.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> one has</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="f^{\prime}(x)\;=\;(x\!-\!2)\cdots(x\!-\!p\!+\!1)+\ldots+(x\!-\!1)\cdots(x\!-\!%
+p\!+\!2)" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>p</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>p</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle f^{\prime}(0)\;=\;-2\cdot 3\cdots(p\!-\!1)-\ldots-1\cdot 2\cdots%
+(p\!-\!2)." display="inline"><mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><mrow><mrow><mn>1</mn><mo>⋅</mo><mn>2</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The Taylor series (Taylor polynomial) of <math id="p5.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> coincides with <math id="p5.m3" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="f(x)\;=\;f(0)+\frac{f^{\prime}(0)}{1!}x+\frac{f^{\prime\prime}(0)}{2!}x^{2}+%
+\ldots+\frac{f^{(p-1)}(0)}{(p\!-\!1)!}x^{p-1}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mfrac><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mfrac><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By (1), this equation implies</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E6.m1" class="ltx_Math" alttext="\displaystyle 0\;=\;f^{\prime}(0)+\frac{f^{\prime\prime}(0)}{2}p+\ldots+\frac{%
+f^{(p-1)}(0)}{(p\!-\!1)!}p^{p-2}" display="inline"><mrow><mpadded width="+2.8pt"><mn>0</mn></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>p</mi><mrow><mi>p</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since  <math id="p5.m4" class="ltx_Math" alttext="p\mid a_{p-3}=\frac{f^{\prime\prime}(0)}{2}" display="inline"><mrow><mi>p</mi><mo>∣</mo><msub><mi>a</mi><mrow><mi>p</mi><mo>-</mo><mn>3</mn></mrow></msub><mo>=</mo><mfrac><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac></mrow></math>,  one has  <math id="p5.m5" class="ltx_Math" alttext="p\mid f^{\prime\prime}(0)" display="inline"><mrow><mi>p</mi><mo>∣</mo><msup><mi>f</mi><mo>′′</mo></msup><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.  It then follows by (6) that  <math id="p5.m6" class="ltx_Math" alttext="p^{2}\mid f^{\prime}(0)" display="inline"><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>∣</mo><msup><mi>f</mi><mo>′</mo></msup><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.  And since (5) divided by <math id="p5.m7" class="ltx_Math" alttext="-(p\!-\!1)!" display="inline"><mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> gives</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="1+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{p-1}\;=\;-\frac{f^{\prime}(0)}{(p\!-%
+\!1)!}," display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mpadded width="+2.8pt"><mfrac><mn>1</mn><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mfrac><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the assertion has been proved.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">L. Kuipers</span>: “Der Wolstenholmesche Satz”.  – <em class="ltx_emph ltx_font_italic">Elemente der Mathematik</em> <span class="ltx_text ltx_font_bold">35</span> (1980).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Wolstenholme’s theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">WolstenholmesTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:14:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:14:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11C08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">HarmonicNumber</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:31:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

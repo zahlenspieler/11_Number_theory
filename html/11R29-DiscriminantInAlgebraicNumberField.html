@@ -1,0 +1,157 @@
+<!DOCTYPE html><html>
+<head>
+<title>discriminant in algebraic number field</title>
+<!--Generated on Fri Feb  9 15:43:51 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">discriminant in algebraic number field</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let us consider the elements <math id="p1.m1" class="ltx_Math" alttext="\alpha_{1},\,\alpha_{2},\,\ldots,\,\alpha_{n}" display="inline"><mrow><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>n</mi></msub></mrow></math> of an algebraic number field
+<math id="p1.m2" class="ltx_Math" alttext="\mathbb{Q}(\vartheta)" display="inline"><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϑ</mi><mo stretchy="false">)</mo></mrow></mrow></math> of degree (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/NumberField</span>) <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  Let
+<math id="p1.m4" class="ltx_Math" alttext="\vartheta_{1}=\vartheta,\,\vartheta_{2},\,\ldots,\,\vartheta_{n}" display="inline"><mrow><msub><mi>ϑ</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>ϑ</mi><mo rspace="4.2pt">,</mo><msub><mi>ϑ</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>ϑ</mi><mi>n</mi></msub></mrow></mrow></math> be the algebraic conjugates of the primitive element <math id="p1.m5" class="ltx_Math" alttext="\vartheta" display="inline"><mi>ϑ</mi></math> and
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\alpha_{i}\;=\;r_{i}(\vartheta)\quad(i\;=\;1,\,2,\,\ldots,\,n)" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>α</mi><mi>i</mi></msub></mpadded><mo rspace="5.3pt">=</mo><msub><mi>r</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mi>ϑ</mi><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mpadded width="+2.8pt"><mi>i</mi></mpadded><mo>=</mo><mn> 1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the canonical forms of the elements <math id="p1.m6" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math>.  Then the <math id="p1.m7" class="ltx_Math" alttext="\mathbb{Q}(\vartheta)" display="inline"><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϑ</mi><mo stretchy="false">)</mo></mrow></mrow></math>-conjugates (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CharacteristicPolynomialOfAlgebraicNumber</span>) of those elements are</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\alpha_{i}^{(j)}\;=\;r_{i}(\vartheta_{j})." display="block"><mrow><mrow><mpadded width="+2.8pt"><msubsup><mi>α</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup></mpadded><mo rspace="5.3pt">=</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using these, one can define the <em class="ltx_emph ltx_font_italic">discriminant</em>  <math id="p1.m8" class="ltx_Math" alttext="\Delta(\alpha_{1},\,\alpha_{2},\,\ldots,\,\alpha_{n})" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> of the elenents <math id="p1.m9" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math> as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Delta(\alpha_{1},\,\alpha_{2},\,\ldots,\,\alpha_{n})\;:=\;\det(r_{i}(%
+\vartheta_{j}))^{2}\;=\;\det\!\left(\alpha_{i}^{(j)}\right)^{2}\!," display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mpadded width="+2.8pt"><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo movablelimits="false" rspace="0.8pt">det</mo><mo>⁡</mo><mpadded width="-1.7pt"><msup><mrow><mo>(</mo><msubsup><mi>α</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>)</mo></mrow><mn>2</mn></msup></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\Delta(\alpha_{1},\,\alpha_{2},\,\ldots,\,\alpha_{n})\;:=\;\left|\begin{array}%
+[]{cccc}r_{1}(\vartheta_{1})&amp;r_{1}(\vartheta_{2})&amp;\ldots&amp;r_{1}(\vartheta_{n})%
+\\
+r_{2}(\vartheta_{1})&amp;r_{2}(\vartheta_{2})&amp;\ldots&amp;r_{2}(\vartheta_{n})\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+r_{n}(\vartheta_{1})&amp;r_{n}(\vartheta_{2})&amp;\ldots&amp;r_{n}(\vartheta_{n})\end{%
+array}\right|^{2}\;=\;\left|\begin{array}[]{cccc}\alpha_{1}^{(1)}&amp;\alpha_{1}^{%
+(2)}&amp;\ldots&amp;\alpha_{1}^{(n)}\\
+\alpha_{2}^{(1)}&amp;\alpha_{2}^{(2)}&amp;\ldots&amp;\alpha_{2}^{(n)}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\alpha_{n}^{(1)}&amp;\alpha_{n}^{(2)}&amp;\ldots&amp;\alpha_{n}^{(n)}\end{array}\right|^{2%
+}\!." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mpadded width="+2.8pt"><msup><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>r</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><msub><mi>r</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϑ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>|</mo></mrow><mn>2</mn></msup></mpadded><mo rspace="5.3pt">=</mo><mpadded width="-1.7pt"><msup><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msubsup><mi>α</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>α</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>α</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi>α</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr></mtable><mo>|</mo></mrow><mn>2</mn></msup></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Basing on the properties of determinants, one sees at once that the discriminant is  of the numbers <math id="p2.m1" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math>.  The entry independence of characteristic polynomial on primitive element allows to see that the discriminant also does not depend on the used primitive element of the field.  Moreover, the method for multiplying the determinants enables to convert the discriminant into the form</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\Delta(\alpha_{1},\,\alpha_{2},\,\ldots,\,\alpha_{n})\;=\;\left|\begin{array}[%
+]{cccc}\mbox{S}(\alpha_{1}\alpha_{1})&amp;\mbox{S}(\alpha_{1}\alpha_{2})&amp;\ldots&amp;%
+\mbox{S}(\alpha_{1}\alpha_{n})\\
+\mbox{S}(\alpha_{2}\alpha_{1})&amp;\mbox{S}(\alpha_{2}\alpha_{2})&amp;\ldots&amp;\mbox{S}(%
+\alpha_{2}\alpha_{n})\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\mbox{S}(\alpha_{n}\alpha_{1})&amp;\mbox{S}(\alpha_{n}\alpha_{2})&amp;\ldots&amp;\mbox{S}(%
+\alpha_{n}\alpha_{n})\end{array}\right|\!," display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>α</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>α</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>α</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mrow><mtext>S</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>α</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo rspace="0.8pt">|</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span class="ltx_text ltx_markedasmath">S</span> is the trace function defined in <math id="p2.m3" class="ltx_Math" alttext="\mathbb{Q}(\vartheta)" display="inline"><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϑ</mi><mo stretchy="false">)</mo></mrow></mrow></math>; therefore the discriminant is always a rational number (and an integer if every <math id="p2.m4" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math> is an algebraic integer of the field).  Cf. the parent entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DiscriminantOfANumberField</span>).</p>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">discriminant in algebraic number field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DiscriminantInAlgebraicNumberField</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:09:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:09:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11R29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">discriminant in terms of conjugates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">IndependenceOfCharacteristicPolynomialOnPrimitiveElement</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">discriminant</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:43:51 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

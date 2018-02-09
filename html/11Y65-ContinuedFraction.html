@@ -1,0 +1,334 @@
+<!DOCTYPE html><html>
+<head>
+<title>continued fraction</title>
+<!--Generated on Fri Feb  9 15:47:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">continued fraction</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given a sequence of positive real numbers <math id="p1.m1" class="ltx_Math" alttext="(a_{n})_{n\geq 1}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></msub></math>, with <math id="p1.m2" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> any real number. Consider the sequence</p>
+</div>
+<div id="p2" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle c_{1}" display="inline"><msub><mi>c</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=a_{0}+\cfrac{1}{a_{1}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>a</mi><mn>1</mn></msub></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle c_{2}" display="inline"><msub><mi>c</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=a_{0}+\cfrac{1}{a_{1}+\cfrac{1}{a_{2}}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>a</mi><mn>2</mn></msub></mfrac></mstyle></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle c_{3}" display="inline"><msub><mi>c</mi><mn>3</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=a_{0}+\cfrac{1}{a_{1}+\cfrac{1}{a_{2}+\cfrac{1}{a_{3}}}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>a</mi><mn>3</mn></msub></mfrac></mstyle></mrow></mfrac></mstyle></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle c_{4}" display="inline"><msub><mi>c</mi><mn>4</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\ldots" display="inline"><mrow><mi></mi><mo>=</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The limit <math id="p3.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> of this sequence, if it exists, is called the value or limit of the <em class="ltx_emph ltx_font_italic">infinite continued fraction</em> with <em class="ltx_emph ltx_font_italic">convergents</em> <math id="p3.m2" class="ltx_Math" alttext="(c_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>, and is denoted by</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="a_{0}+\cfrac{1}{a_{1}+\cfrac{1}{a_{2}+\cfrac{1}{a_{3}+\ldots}}}" display="block"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mfrac></mstyle></mrow></mfrac></mstyle></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or by</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="a_{0}+\frac{1}{a_{1}+}\frac{1}{a_{2}+}\frac{1}{a_{3}+}\ldots" display="block"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo></mrow></mfrac><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the same way, a finite sequence</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="(a_{n})_{1\leq n\leq k}" display="block"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></msub></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defines a finite sequence</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="(c_{n})_{1\leq n\leq k}\;." display="block"><mrow><mpadded width="+2.8pt"><msub><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mi>k</mi></mrow></msub></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We then speak of a finite continued fraction with value <math id="p4.m1" class="ltx_Math" alttext="c_{k}" display="inline"><msub><mi>c</mi><mi>k</mi></msub></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">An archaic word for a continued fraction is <em class="ltx_emph ltx_font_italic">anthyphairetic ratio</em>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">If the denominators <math id="p6.m1" class="ltx_Math" alttext="a_{n}" display="inline"><msub><mi>a</mi><mi>n</mi></msub></math> are all (positive) integers, we speak of a <em class="ltx_emph ltx_font_italic">simple</em> continued fraction. We then use the notation <math id="p6.m2" class="ltx_Math" alttext="q=\langle a_{0};a_{1},a_{2},a_{3},\ldots\rangle" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>0</mn></msub><mo>;</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> or, in the finite case, <math id="p6.m3" class="ltx_Math" alttext="q=\langle a_{0};a_{1},a_{2},a_{3},\ldots,a_{n}\rangle\;." display="inline"><mrow><mrow><mi>q</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>0</mn></msub><mo>;</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>a</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo rspace="5.3pt" stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">It is not hard to prove that any irrational number <math id="p7.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is the value of a unique infinite simple continued fraction. Moreover, if <math id="p7.m2" class="ltx_Math" alttext="c_{n}" display="inline"><msub><mi>c</mi><mi>n</mi></msub></math> denotes its <math id="p7.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th convergent, then <math id="p7.m4" class="ltx_Math" alttext="c-c_{n}" display="inline"><mrow><mi>c</mi><mo>-</mo><msub><mi>c</mi><mi>n</mi></msub></mrow></math> is an alternating sequence and <math id="p7.m5" class="ltx_Math" alttext="|c-c_{n}|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>c</mi><mo>-</mo><msub><mi>c</mi><mi>n</mi></msub></mrow><mo stretchy="false">|</mo></mrow></math> is decreasing (as well as convergent to zero). Also, the value of an infinite simple continued fraction is perforce
+irrational.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Any rational number is the value of two and only two finite continued fractions; in one of them, the last denominator is 1. E.g.</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\frac{43}{30}=\langle 1;2,3,4\rangle=\langle 1;2,3,3,1\rangle\;." display="block"><mrow><mrow><mfrac><mn>43</mn><mn>30</mn></mfrac><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>1</mn><mo>;</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>1</mn><mo>;</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo rspace="5.3pt" stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">These two conditions on a real number <math id="p9.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are equivalent:</p>
+</div>
+<div id="p10" class="ltx_para ltx_noindent">
+<p class="ltx_p">1. <math id="p10.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is a root of an irreducible quadratic polynomial with
+integer coefficients.</p>
+</div>
+<div id="p11" class="ltx_para ltx_noindent">
+<p class="ltx_p">2. <math id="p11.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is irrational and its simple
+continued fraction is “eventually periodic”; i.e.</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="c=\langle a_{0};a_{1},a_{2},\ldots\rangle" display="block"><mrow><mi>c</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>0</mn></msub><mo>;</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and, for some integer <math id="p11.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and some integer <math id="p11.m3" class="ltx_Math" alttext="k&gt;0" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we have <math id="p11.m4" class="ltx_Math" alttext="a_{n}=a_{n+k}" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mi>k</mi></mrow></msub></mrow></math>
+for all <math id="p11.m5" class="ltx_Math" alttext="n\geq m" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>m</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">For example, consider the quadratic equation for the golden ratio:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="x^{2}=x+1" display="block"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or equivalently</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="x=1+\frac{1}{x}\;." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mpadded width="+2.8pt"><mfrac><mn>1</mn><mi>x</mi></mfrac></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We get</p>
+</div>
+<div id="p13" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle 1+\cfrac{1}{1+\cfrac{1}{x}}" display="inline"><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle 1+\cfrac{1}{1+\cfrac{1}{1+\cfrac{1}{x}}}" display="inline"><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow></mfrac></mstyle></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">and so on.
+If <math id="p14.m1" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we therefore expect</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="x=\langle 1;1,1,1,\ldots\rangle" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>1</mn><mo>;</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which indeed can be proved. As an exercise, you might like to look for a continued fraction expansion of the <em class="ltx_emph ltx_font_italic">other</em> solution of <math id="p14.m2" class="ltx_Math" alttext="x^{2}=x+1" display="inline"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Although <math id="p15.m1" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> is transcendental, there is a surprising pattern in its simple continued fraction expansion.</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="e=\langle 2;1,2,1,1,4,1,1,6,1,1,8,1,1,10,\ldots\rangle" display="block"><mrow><mi>e</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>2</mn><mo>;</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>10</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">No pattern is apparent in the expansions some other well-known transcendental constants, such as <math id="p15.m2" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and Apéry’s constant <math id="p15.m3" class="ltx_Math" alttext="\zeta(3)" display="inline"><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Owing to a kinship with the Euclidean division algorithm, continued fractions arise naturally in number theory. An
+interesting example is the Pell diophantine equation</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="x^{2}-Dy^{2}=1" display="block"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mi>D</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p16.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is a nonsquare integer <math id="p16.m2" class="ltx_Math" alttext="&gt;0" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>0</mn></mrow></math>. It turns out that if <math id="p16.m3" class="ltx_Math" alttext="(x,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> is any solution of the Pell equation other than <math id="p16.m4" class="ltx_Math" alttext="(\pm 1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>±</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, then <math id="p16.m5" class="ltx_Math" alttext="|\frac{x}{y}|" display="inline"><mrow><mo stretchy="false">|</mo><mfrac><mi>x</mi><mi>y</mi></mfrac><mo stretchy="false">|</mo></mrow></math> is a convergent to <math id="p16.m6" class="ltx_Math" alttext="\sqrt{D}" display="inline"><msqrt><mi>D</mi></msqrt></math>.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p"><math id="p17.m1" class="ltx_Math" alttext="\frac{22}{7}" display="inline"><mfrac><mn>22</mn><mn>7</mn></mfrac></math> and <math id="p17.m2" class="ltx_Math" alttext="\frac{355}{113}" display="inline"><mfrac><mn>355</mn><mn>113</mn></mfrac></math> are well-known rational approximations to <math id="p17.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, and indeed both are convergents to <math id="p17.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>:</p>
+</div>
+<div id="p18" class="ltx_para">
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle 3.14159265\ldots" display="inline"><mrow><mn>3.14159265</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m3" class="ltx_Math" alttext="\displaystyle\pi=\langle 3;7,15,1,292,...\rangle" display="inline"><mrow><mi>π</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>3</mn><mo>;</mo><mn>7</mn><mo>,</mo><mn>15</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>292</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle 3.14285714\ldots" display="inline"><mrow><mn>3.14285714</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m3" class="ltx_Math" alttext="\displaystyle\frac{22}{7}=\langle 3;7\rangle" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>22</mn><mn>7</mn></mfrac></mstyle><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>3</mn><mo>;</mo><mn>7</mn><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle 3.14159292\ldots" display="inline"><mrow><mn>3.14159292</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m3" class="ltx_Math" alttext="\displaystyle\frac{355}{113}=\langle 3;7,15,1\rangle=\langle 3;7,16\rangle" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>355</mn><mn>113</mn></mfrac></mstyle><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>3</mn><mo>;</mo><mn>7</mn><mo>,</mo><mn>15</mn><mo>,</mo><mn>1</mn><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mn>3</mn><mo>;</mo><mn>7</mn><mo>,</mo><mn>16</mn><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">For one more example, the distribution of leap years in the 4800-month cycle of the Gregorian calendar can be interpreted (loosely speaking) in terms of the continued fraction expansion of the number of days
+in a solar year.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">continued fraction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ContinuedFraction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:47:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:47:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">29</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11Y65</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11J70</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">chain fraction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FareySequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AdjacentFraction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SternBrocotTree</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FareyPair</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">anthyphairetic ratio</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">simple continued fraction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:47:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html><html>
+<head>
+<title>existence and uniqueness of decimal expansion</title>
+<!--Generated on Fri Feb  9 15:25:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">existence and uniqueness of decimal expansion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The existence and uniqueness of decimal expansions
+(or more generally, base-<math id="p1.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansions)
+is taken for granted
+by most grade school students,
+but they are facts that need to be rigorously proven if one wants to understand
+the real numbers thoroughly.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We mention the following fact about natural numbers <math id="p2.m1" class="ltx_Math" alttext="n,m\in\mathbb{N}_{0}" display="inline"><mrow><mrow><mi>n</mi><mo>,</mo><mi>m</mi></mrow><mo>∈</mo><msub><mi>ℕ</mi><mn>0</mn></msub></mrow></math>,
+which we will use many times implicitly:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="n&lt;m\Leftrightarrow n\leq m-1\," display="block"><mrow><mrow><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow><mo>⇔</mo><mrow><mi>n</mi><mo>≤</mo><mrow><mi>m</mi><mo>-</mo><mpadded width="+1.7pt"><mn>1</mn></mpadded></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This fact can be proven by mathematical induction on <math id="p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="#S1" title="1 Proof of Existence ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Proof of Existence</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S1.SS1" title="1.1 Expansions for non-negative integers ‣ 1 Proof of Existence ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Expansions for non-negative integers</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S1.SS2" title="1.2 Reduction to numbers in [ 0 , 1 ) ‣ 1 Proof of Existence ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Reduction to numbers in <math class="ltx_Math" alttext="[0,1)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S1.SS3" title="1.3 Expansion of numbers in [ 0 , 1 ) ‣ 1 Proof of Existence ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Expansion of numbers in <math class="ltx_Math" alttext="[0,1)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="#S2" title="2 Proof of uniqueness ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Proof of uniqueness</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S2.SS1" title="2.1 Uniqueness for non-negative integers ‣ 2 Proof of uniqueness ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>Uniqueness for non-negative integers</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S2.SS2" title="2.2 Near-uniqueness for non-negative numbers ‣ 2 Proof of uniqueness ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Near-uniqueness for non-negative numbers</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Every base- b expansion represents a real number ‣ existence and uniqueness of decimal expansion" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Every base-<math class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion represents a real number</span></a></li>
+</ul>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Proof of Existence</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be a number for which we want to write a base-<math id="S1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion
+for any natural number <math id="S1.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> greater than one.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">We shall assume <math id="S1.p2.m1" class="ltx_Math" alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>, since the base-<math id="S1.p2.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+expansion of a negative number is by definition
+the negative of the expansion for its absolute value.</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Expansions for non-negative integers</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">First we prove the existence of expansions of the form</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="x=\sum_{i=0}^{k}a_{i}b^{i}\,,\quad 0\leq a_{i}&lt;b\,,a_{i}\in\mathbb{N}_{0}" display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>&lt;</mo><mpadded width="+1.7pt"><mi>b</mi></mpadded></mrow></mrow><mo>,</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><msub><mi>ℕ</mi><mn>0</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for non-negative integers <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+using mathematical induction. (This proof is essentially the formal
+statement of how to do addition by base-<math id="S1.SS1.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> digits.)</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p">The number <math id="S1.SS1.p2.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> obviously has the expansion <math id="S1.SS1.p2.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">Suppose that we know the existence of expansions for a number <math id="S1.SS1.p3.m1" class="ltx_Math" alttext="x-1" display="inline"><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></math>.
+We prove the existence of an expansion for <math id="S1.SS1.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.SS1.p4.m1" class="ltx_Math" alttext="x-1" display="inline"><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></math> be expanded as</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="x-1=\sum_{i=0}^{k}a_{i}b^{i}\,,\quad 0\leq a_{i}&lt;b\,,a_{i}\in\mathbb{N}_{0}\,,%
+a_{k+1}=0\,." display="block"><mrow><mrow><mrow><mrow><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>&lt;</mo><mpadded width="+1.7pt"><mi>b</mi></mpadded></mrow></mrow><mo>,</mo><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>∈</mo><mpadded width="+1.7pt"><msub><mi>ℕ</mi><mn>0</mn></msub></mpadded></mrow><mo>,</mo><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the above equation, add <math id="S1.SS1.p4.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to both sides:</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="x=(a_{0}+1)+\sum_{i=1}^{k}a_{i}b^{i}\,." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S1.SS1.p4.m3" class="ltx_Math" alttext="a_{0}&lt;b-1" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>&lt;</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>, then we are done. Otherwise,
+<math id="S1.SS1.p4.m4" class="ltx_Math" alttext="(a_{0}+1)=b" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>b</mi></mrow></math>, and therefore we may write instead</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="x=0+(a_{1}+1)b+\sum_{i=2}^{k}a_{i}b^{i}\,." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>2</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S1.SS1.p4.m5" class="ltx_Math" alttext="a_{1}&lt;b-1" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>&lt;</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>, then we can stop. Otherwise,
+repeat the process and continue carrying digits
+until we reach some <math id="S1.SS1.p4.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> for which <math id="S1.SS1.p4.m7" class="ltx_Math" alttext="a_{i}&lt;b-1" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>&lt;</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>.
+Since <math id="S1.SS1.p4.m8" class="ltx_Math" alttext="a_{k+1}=0" display="inline"><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>, this process is guaranteed to stop.
+At the end we will have expressed <math id="S1.SS1.p4.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in base <math id="S1.SS1.p4.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Reduction to numbers in <math id="S1.SS2.m1" class="ltx_Math" alttext="[0,1)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>
+</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.SS2.p1.m1" class="ltx_Math" alttext="\lfloor x\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow></math> be the greatest integer less than or equal to <math id="S1.SS2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+otherwise known as the floor of <math id="S1.SS2.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+We prove that the floor of <math id="S1.SS2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> exists.</p>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">The set</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="A=\{n\in\mathbb{N}_{0}\colon n\leq x\}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>n</mi><mo>∈</mo><msub><mi>ℕ</mi><mn>0</mn></msub></mrow><mo>:</mo><mrow><mi>n</mi><mo>≤</mo><mi>x</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is bounded above by <math id="S1.SS2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+However, by the Archimedean
+property, the set of natural numbers is <em class="ltx_emph ltx_font_italic">not</em> bounded
+above, so <math id="S1.SS2.p2.m2" class="ltx_Math" alttext="\mathbb{N}_{0}\setminus A" display="inline"><mrow><msub><mi>ℕ</mi><mn>0</mn></msub><mo>∖</mo><mi>A</mi></mrow></math> must be non-empty,
+and have a smallest element <math id="S1.SS2.p2.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>
+(formally, by the well-ordering principle).
+For every <math id="S1.SS2.p2.m4" class="ltx_Math" alttext="n\in A" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>A</mi></mrow></math>, we have
+<math id="S1.SS2.p2.m5" class="ltx_Math" alttext="n\leq x&lt;u" display="inline"><mrow><mi>n</mi><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>u</mi></mrow></math>.
+The latter condition is equivalent to <math id="S1.SS2.p2.m6" class="ltx_Math" alttext="n\leq u-1&lt;x" display="inline"><mrow><mi>n</mi><mo>≤</mo><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi></mrow></math>,
+so <math id="S1.SS2.p2.m7" class="ltx_Math" alttext="u-1" display="inline"><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow></math> is the maximum element of <math id="S1.SS2.p2.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+In other words, <math id="S1.SS2.p2.m9" class="ltx_Math" alttext="\lfloor x\rfloor=u-1" display="inline"><mrow><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow><mo>=</mo><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">Since <math id="S1.SS2.p3.m1" class="ltx_Math" alttext="u-1\leq x&lt;u" display="inline"><mrow><mrow><mi>u</mi><mo>-</mo><mn>1</mn></mrow><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>u</mi></mrow></math>, we have
+<math id="S1.SS2.p3.m2" class="ltx_Math" alttext="0\leq x-\lfloor x\rfloor&lt;1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>x</mi><mo>-</mo><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.
+We shall obtain the base <math id="S1.SS2.p3.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion of <math id="S1.SS2.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>
+as the sum of the expansion of <math id="S1.SS2.p3.m5" class="ltx_Math" alttext="\lfloor x\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow></math> and
+<math id="S1.SS2.p3.m6" class="ltx_Math" alttext="x-\lfloor x\rfloor" display="inline"><mrow><mi>x</mi><mo>-</mo><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S1.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Expansion of numbers in <math id="S1.SS3.m1" class="ltx_Math" alttext="[0,1)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>
+</h3>
+
+<div id="S1.SS3.p1" class="ltx_para">
+<p class="ltx_p">Given <math id="S1.SS3.p1.m1" class="ltx_Math" alttext="x\in[0,1)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>,
+let <math id="S1.SS3.p1.m2" class="ltx_Math" alttext="a_{1}=\lfloor bx\rfloor" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">⌊</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">⌋</mo></mrow></mrow></math>.
+Then <math id="S1.SS3.p1.m3" class="ltx_Math" alttext="0\leq a_{1}\leq bx&lt;b" display="inline"><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mn>1</mn></msub><mo>≤</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mi>b</mi></mrow></math>, so we can take <math id="S1.SS3.p1.m4" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> as the first
+digit of the base-<math id="S1.SS3.p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion of <math id="S1.SS3.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+Next, write</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="x=a_{1}b^{-1}+yb^{-1}\,," display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and observe that <math id="S1.SS3.p1.m7" class="ltx_Math" alttext="0\leq x-a_{1}b^{-1}=b^{-1}(bx-\lfloor bx\rfloor)&lt;b^{-1}" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>x</mi><mo>-</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mo stretchy="false">⌊</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">⌋</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
+so it is possible to get the next digit of the expansion by
+expanding <math id="S1.SS3.p1.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.
+We do this recursively, leading to these recursive relations:</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="y_{i}=a_{i}b^{-1}+y_{i+1}b^{-1}\,,\quad 0\leq a_{i}=\lfloor by_{i}\rfloor&lt;b\,,%
+\quad 0\leq y_{i}&lt;1\,,\quad y_{1}=x\,." display="block"><mrow><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>y</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>=</mo><mrow><mo stretchy="false">⌊</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mo stretchy="false">⌋</mo></mrow><mo>&lt;</mo><mpadded width="+1.7pt"><mi>b</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>y</mi><mi>i</mi></msub><mo>&lt;</mo><mpadded width="+1.7pt"><mn>1</mn></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">More explicitly, we have</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex9.m1" class="ltx_Math" alttext="\displaystyle x-(a_{1}b^{-1}+a_{2}b^{-2}+\cdots+a_{k}b^{-k})" display="inline"><mrow><mi>x</mi><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex9.m2" class="ltx_Math" alttext="\displaystyle=b^{-1}\bigl{(}y_{2}-(a_{2}b^{-1}+\cdots+a_{k}b^{-k+1})\bigr{)}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mrow><mo>-</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex10.m2" class="ltx_Math" alttext="\displaystyle=b^{-2}\bigl{(}y_{3}-(a_{3}b^{-1}+\cdots+a_{k}b^{-k+2})\bigr{)}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>y</mi><mn>3</mn></msub><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mrow><mo>-</mo><mi>k</mi></mrow><mo>+</mo><mn>2</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex11.m2" class="ltx_Math" alttext="\displaystyle=\cdots" display="inline"><mrow><mi></mi><mo>=</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex12.m2" class="ltx_Math" alttext="\displaystyle=b^{-k+1}(y_{k}-a_{k}b^{-1})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>b</mi><mrow><mrow><mo>-</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>-</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex13.m2" class="ltx_Math" alttext="\displaystyle=b^{-k}y_{k+1}\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>y</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p2" class="ltx_para">
+<p class="ltx_p">It is easy to prove that the expansion</p>
+<table id="S1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex14.m1" class="ltx_Math" alttext="a_{1}b^{-1}+a_{2}b^{-2}+\cdots+a_{k}b^{-k}+\cdots" display="block"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">converges to <math id="S1.SS3.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>:</p>
+<table id="S1.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex15.m1" class="ltx_Math" alttext="0\leq x-\sum_{i=1}^{k}a_{i}b^{-i}=b^{-k}y_{k+1}&lt;\frac{1}{b^{k}}\to 0\,,\quad%
+\text{as $k\to\infty$.}" display="block"><mrow><mrow><mn>0</mn><mo>≤</mo><mrow><mi>x</mi><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mi>i</mi></mrow></msup></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi>b</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup><mo>⁢</mo><msub><mi>y</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>&lt;</mo><mfrac><mn>1</mn><msup><mi>b</mi><mi>k</mi></msup></mfrac><mo>→</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mtext>as </mtext><mrow><mi>k</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Formally, the “<math id="S1.SS3.p2.m2" class="ltx_Math" alttext="\to 0" display="inline"><mrow><mi></mi><mo>→</mo><mn>0</mn></mrow></math>” part appeals to the Archimedean property.)</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Proof of uniqueness</h2>
+
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Uniqueness for non-negative integers</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Suppose that
+</p>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="x=\sum_{i=0}^{k}a_{i}b^{i}\,,\quad 0\leq a_{i}&lt;b\,." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>i</mi></msub><mo>&lt;</mo><mpadded width="+1.7pt"><mi>b</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now</p>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="a_{k}b^{k}\leq\sum_{i=0}^{k}a_{i}b^{i}\leq a_{k}b^{k}+\sum_{i=0}^{k-1}(b-1)b^{%
+i}=a_{k}b^{k}+(b^{k}-1)&lt;(a_{k}+1)b^{k}\,," display="block"><mrow><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>i</mi></msup></mrow></mrow><mo>≤</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mi>i</mi></msup></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>k</mi></msup></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the intervals <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="[a_{k}b^{k},(a_{k}+1)b^{k})" display="inline"><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo stretchy="false">)</mo></mrow></math> are disjoint for each
+value of <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="a_{k}" display="inline"><msub><mi>a</mi><mi>k</mi></msub></math>, so <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="a_{k}" display="inline"><msub><mi>a</mi><mi>k</mi></msub></math> is uniquely determined by where <math id="S2.SS1.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> lies
+in amongst these intervals.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">Then we can consider</p>
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="x-a_{k}b^{k}=\sum_{i=0}^{k-1}a_{i}b^{i}\,." display="block"><mrow><mrow><mrow><mi>x</mi><mo>-</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mi>i</mi></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Repeating the previous argument with <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> replaced by <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="k-1" display="inline"><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></math>,
+we see that <math id="S2.SS1.p2.m3" class="ltx_Math" alttext="a_{k-1}" display="inline"><msub><mi>a</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></math> is uniquely determined.
+Then we can consider <math id="S2.SS1.p2.m4" class="ltx_Math" alttext="x-a_{k}b^{k}-a_{k-1}b^{k-1}" display="inline"><mrow><mi>x</mi><mo>-</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>-</mo><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math> and so on.
+Continuing this way, we see that all the digits <math id="S2.SS1.p2.m5" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> are uniquely
+determined.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Near-uniqueness for non-negative numbers</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">If</p>
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="x=a_{k}b^{k}+\cdots+a_{1}b+a_{0}+a_{-1}b^{-1}+a_{-2}b^{-2}+\cdots" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="a_{0},\ldots,a_{k}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>k</mi></msub></mrow></math> are uniquely determined,
+since <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="a_{k}b^{k}+\cdots+a_{1}+a_{0}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></math>
+is the expansion for the non-negative integer <math id="S2.SS2.p1.m3" class="ltx_Math" alttext="\lfloor x\rfloor" display="inline"><mrow><mo stretchy="false">⌊</mo><mi>x</mi><mo stretchy="false">⌋</mo></mrow></math>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">The argument to prove that <math id="S2.SS2.p2.m1" class="ltx_Math" alttext="a_{-i}" display="inline"><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub></math> are uniquely determined proceeds
+similarly as before.
+We have</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex20.m1" class="ltx_Math" alttext="\displaystyle a_{-1}b^{-1}" display="inline"><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex20.m2" class="ltx_Math" alttext="\displaystyle\leq a_{-1}b^{-1}+a_{-2}b^{-2}+\cdots" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex21.m2" class="ltx_Math" alttext="\displaystyle\leq a_{-1}b^{-1}+\sum_{i=2}^{\infty}(b-1)b^{-i}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>2</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mi>i</mi></mrow></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">(geometric series)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex22.m2" class="ltx_Math" alttext="\displaystyle=a_{-1}b^{-1}+\frac{(b-1)b^{2}}{1-b^{-1}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex23.m2" class="ltx_Math" alttext="\displaystyle=(a_{-1}+1)\,b^{-1}\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where equality on the second line occurs if and only if
+<math id="S2.SS2.p2.m2" class="ltx_Math" alttext="a_{-i}=b-1" display="inline"><mrow><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> for every <math id="S2.SS2.p2.m3" class="ltx_Math" alttext="i\geq 2" display="inline"><mrow><mi>i</mi><mo>≥</mo><mn>2</mn></mrow></math>.
+If we insist that <math id="S2.SS2.p2.m4" class="ltx_Math" alttext="a_{-i}" display="inline"><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub></math> is never eventually the same
+digit <math id="S2.SS2.p2.m5" class="ltx_Math" alttext="b-1" display="inline"><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></math>,
+then this shows that the digit <math id="S2.SS2.p2.m6" class="ltx_Math" alttext="a_{-1}" display="inline"><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub></math> is uniquely determined by
+where the original number <math id="S2.SS2.p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in the disjoint intervals <math id="S2.SS2.p2.m8" class="ltx_Math" alttext="[a_{-1}b^{-1},(a_{-1}+1)b^{-1})" display="inline"><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S2.SS2.p3" class="ltx_para">
+<p class="ltx_p">This argument may be repeated, to show that <math id="S2.SS2.p3.m1" class="ltx_Math" alttext="a_{-i}" display="inline"><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub></math> are uniquely
+determined, under the assumption that the expansion
+does not end in all digits being <math id="S2.SS2.p3.m2" class="ltx_Math" alttext="b-1" display="inline"><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S2.SS2.p4" class="ltx_para">
+<p class="ltx_p">If the assumption is not made, then
+numbers which have an expansion ending in all digits <math id="S2.SS2.p4.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>
+have an alternate expansion ending in all digits <math id="S2.SS2.p4.m2" class="ltx_Math" alttext="b-1" display="inline"><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></math>,
+but other numbers still have unique base-<math id="S2.SS2.p4.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansions.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Every base-<math id="S3.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion represents a real number</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">We also want to prove that for every sequence of digits <math id="S3.p1.m1" class="ltx_Math" alttext="a_{k},a_{k-1},\ldots,a_{1},a_{0},a_{-1},a_{-2},\ldots" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>a</mi><mrow><mo>-</mo><mn>2</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math>
+there exists a real number <math id="S3.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>
+with the base-<math id="S3.p1.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> expansion</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="x=\sum_{i=0}^{k}a_{i}b^{i}+\sum_{i=0}^{\infty}a_{-i}b^{-i}\,." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>i</mi></msup></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mrow><mo>-</mo><mi>i</mi></mrow></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">This is the  where we use the least upper bounds property of the
+real numbers. (So far we have only used the Archimedean property,
+so what we have done so far is also valid for <math id="S3.p2.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.)</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Consider the sequence <math id="S3.p3.m1" class="ltx_Math" alttext="\{s_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> with the</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="s_{n}=\sum_{i=0}^{k}a_{i}b^{i}+\sum_{i=0}^{n}a_{-i}b^{-i}\,." display="block"><mrow><mrow><msub><mi>s</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>k</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>i</mi></msup></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>b</mi><mrow><mo>-</mo><mi>i</mi></mrow></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This sequence, considered as a set,
+is bounded above, for <math id="S3.p3.m2" class="ltx_Math" alttext="s_{n}\leq a_{k}b^{k}+\cdots+a_{0}+1" display="inline"><mrow><msub><mi>s</mi><mi>n</mi></msub><mo>≤</mo><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow></mrow></math>.
+So it has a least upper bound <math id="S3.p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+Since the sequence <math id="S3.p3.m4" class="ltx_Math" alttext="\{s_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is also <em class="ltx_emph ltx_font_italic">increasing</em>,
+its least upper bound is the same as its
+limit.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">existence and uniqueness of decimal expansion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExistenceAndUniquenessOfDecimalExpansion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:42:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:42:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">every decimal expansion represents a real number</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CantorsDiagonalArgument</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DecimalExpansion</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:25:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html><html>
+<head>
+<title>partial fractions</title>
+<!--Generated on Fri Feb  9 15:16:57 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">partial fractions</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Every <span class="ltx_text ltx_font_italic">fractional number</span>, i. e. such a rational number <math id="p1.m1" class="ltx_Math" alttext="\frac{m}{n}" display="inline"><mfrac><mi>m</mi><mi>n</mi></mfrac></math> that the integer <math id="p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is not divisible by the integer <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, can be decomposed to a sum of <span class="ltx_text ltx_font_italic">partial fractions</span> as follows:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{m}{n}\;=\;\frac{m_{1}}{p_{1}^{\nu_{1}}}+\frac{m_{2}}{p_{2}^{\nu_{2}}}+%
+\cdots+\frac{m_{t}}{p_{t}^{\nu_{t}}}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mi>m</mi><mi>n</mi></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mfrac><msub><mi>m</mi><mn>1</mn></msub><msubsup><mi>p</mi><mn>1</mn><msub><mi>ν</mi><mn>1</mn></msub></msubsup></mfrac><mo>+</mo><mfrac><msub><mi>m</mi><mn>2</mn></msub><msubsup><mi>p</mi><mn>2</mn><msub><mi>ν</mi><mn>2</mn></msub></msubsup></mfrac><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mfrac><msub><mi>m</mi><mi>t</mi></msub><msubsup><mi>p</mi><mi>t</mi><msub><mi>ν</mi><mi>t</mi></msub></msubsup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here, the <math id="p1.m4" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>’s are distinct positive prime numbers, the <math id="p1.m5" class="ltx_Math" alttext="\nu_{i}" display="inline"><msub><mi>ν</mi><mi>i</mi></msub></math>’s positive integers and the <math id="p1.m6" class="ltx_Math" alttext="m_{i}" display="inline"><msub><mi>m</mi><mi>i</mi></msub></math>’s some integers.  Cf. the partial fractions of expressions.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples:</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{6}{289}\;=\;\frac{6}{17^{2}}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mn>6</mn><mn>289</mn></mfrac></mpadded><mo rspace="5.3pt">=</mo><mfrac><mn>6</mn><msup><mn>17</mn><mn>2</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="-\frac{1}{24}\;=\;-\frac{3}{2^{3}}+\frac{1}{3^{1}}" display="block"><mrow><mrow><mo>-</mo><mpadded width="+2.8pt"><mfrac><mn>1</mn><mn>24</mn></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mfrac><mn>3</mn><msup><mn>2</mn><mn>3</mn></msup></mfrac></mrow><mo>+</mo><mfrac><mn>1</mn><msup><mn>3</mn><mn>1</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{1}{504}\;=\;-\frac{1}{2^{3}}+\frac{32}{3^{2}}-\frac{24}{7^{1}}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mn>1</mn><mn>504</mn></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mo>-</mo><mfrac><mn>1</mn><msup><mn>2</mn><mn>3</mn></msup></mfrac></mrow><mo>+</mo><mfrac><mn>32</mn><msup><mn>3</mn><mn>2</mn></msup></mfrac></mrow><mo>-</mo><mfrac><mn>24</mn><msup><mn>7</mn><mn>1</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">How to get the numerators <math id="p3.m1" class="ltx_Math" alttext="m_{i}" display="inline"><msub><mi>m</mi><mi>i</mi></msub></math> for decomposing a fractional number <math id="p3.m2" class="ltx_Math" alttext="\frac{1}{n}" display="inline"><mfrac><mn>1</mn><mi>n</mi></mfrac></math> to partial fractions?  First one can take the highest power <math id="p3.m3" class="ltx_Math" alttext="p^{\nu}" display="inline"><msup><mi>p</mi><mi>ν</mi></msup></math> of a prime <math id="p3.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> which divides the denominator <math id="p3.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.  Then  <math id="p3.m6" class="ltx_Math" alttext="n=p^{\nu}u" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msup><mi>p</mi><mi>ν</mi></msup><mo>⁢</mo><mi>u</mi></mrow></mrow></math>,  where  <math id="p3.m7" class="ltx_Math" alttext="\gcd{(u,\,p^{\nu})}=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo rspace="4.2pt">,</mo><msup><mi>p</mi><mi>ν</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.  Euclid’s algorithm gives some integers <math id="p3.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p3.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="1\;=\;xu\!+\!yp^{\nu}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mn>1</mn></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>u</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>y</mi><mo>⁢</mo><msup><mi>p</mi><mi>ν</mi></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing this equation by <math id="p3.m10" class="ltx_Math" alttext="p^{\nu}u" display="inline"><mrow><msup><mi>p</mi><mi>ν</mi></msup><mo>⁢</mo><mi>u</mi></mrow></math> gives the</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\frac{1}{n}\;=\;\frac{1}{p^{\nu}u}\;=\;\frac{x}{p^{\nu}}\!+\!\frac{y}{u}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mfrac><mn>1</mn><mi>n</mi></mfrac></mpadded><mo rspace="5.3pt">=</mo><mpadded width="+2.8pt"><mfrac><mn>1</mn><mrow><msup><mi>p</mi><mi>ν</mi></msup><mo>⁢</mo><mi>u</mi></mrow></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><mfrac><mi>x</mi><msup><mi>p</mi><mi>ν</mi></msup></mfrac></mpadded><mo rspace="0.8pt">+</mo><mfrac><mi>y</mi><mi>u</mi></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p3.m11" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> has more than one distinct prime factors, a similar procedure can be made for the fraction <math id="p3.m12" class="ltx_Math" alttext="\frac{y}{u}" display="inline"><mfrac><mi>y</mi><mi>u</mi></mfrac></math>, and so on.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Note.</span>  The numerators  <math id="p4.m1" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math>, <math id="p4.m2" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math>, …, <math id="p4.m3" class="ltx_Math" alttext="m_{t}" display="inline"><msub><mi>m</mi><mi>t</mi></msub></math>  in the decomposition are not unique.  E. g., we have also</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="-\frac{1}{24}\;=\;-\frac{11}{2^{3}}+\frac{4}{3^{1}}." display="block"><mrow><mrow><mrow><mo>-</mo><mpadded width="+2.8pt"><mfrac><mn>1</mn><mn>24</mn></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mfrac><mn>11</mn><msup><mn>2</mn><mn>3</mn></msup></mfrac></mrow><mo>+</mo><mfrac><mn>4</mn><msup><mn>3</mn><mn>1</mn></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Cf. the programme “Murto” (in Finnish) or “Murd” (in Estonian) or “Bruch” (in German) or “Bråk” (in Swedish) or “Fraction”(in French) <span class="ltx_text ltx_font_typewriter">http://www.wakkanet.fi/ pahio/ohjelmi.html</span>here.</p>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">partial fractions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialFractions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:18:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:18:10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">partial fractions of fractional numbers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfAdditiveFractions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">fractional number</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:16:57 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

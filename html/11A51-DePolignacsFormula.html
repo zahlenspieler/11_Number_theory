@@ -1,0 +1,91 @@
+<!DOCTYPE html><html>
+<head>
+<title>de Polignac’s formula</title>
+<!--Generated on Fri Feb  9 15:19:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">de Polignac’s formula</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the prime factorization of <math id="p1.m2" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> can be obtained by applying <span class="ltx_text ltx_font_italic">de Polignac’s formula</span>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\prod_{i=1}^{\pi(n)}{p_{i}}^{\displaystyle\sum_{j=1}^{\lfloor\log_{p_{i}}n%
+\rfloor}\lfloor\frac{n}{{p_{i}}^{j}}\rfloor}," display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></munderover><mmultiscripts><mi>p</mi><mi>i</mi><none></none><none></none><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" mathsize="100%" movablelimits="false" stretchy="false" symmetric="true">∑</mo><mrow><mi mathsize="140%">j</mi><mo mathsize="140%" stretchy="false">=</mo><mn mathsize="140%">1</mn></mrow><mrow><mo maxsize="140%" minsize="140%">⌊</mo><mrow><msub><mi mathsize="140%">log</mi><msub><mi>p</mi><mi>i</mi></msub></msub><mo>⁡</mo><mi mathsize="140%">n</mi></mrow><mo maxsize="140%" minsize="140%">⌋</mo></mrow></munderover></mstyle><mrow><mo maxsize="142%" minsize="142%">⌊</mo><mstyle displaystyle="true" scriptlevel="-1"><mfrac><mi>n</mi><mmultiscripts><mi>p</mi><mi>i</mi><none></none><none></none><mi>j</mi></mmultiscripts></mfrac></mstyle><mo maxsize="142%" minsize="142%">⌋</mo></mrow></mrow></mmultiscripts></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m3" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> is the <math id="p1.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th prime and <math id="p1.m5" class="ltx_Math" alttext="\pi(n)" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the prime counting function. For both the product and the summation, the iterator’s end value can be set to infinity and the formula is still correct. When <math id="p1.m6" class="ltx_Math" alttext="n&lt;{p_{i}}^{j}" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mmultiscripts><mi>p</mi><mi>i</mi><none></none><none></none><mi>j</mi></mmultiscripts></mrow></math>, dividing the former by the latter gives a value that floors to zero, and then <math id="p1.m7" class="ltx_Math" alttext="{p_{i}}^{0}=1" display="inline"><mrow><mmultiscripts><mi>p</mi><mi>i</mi><none></none><none></none><mn>0</mn></mmultiscripts><mo>=</mo><mn>1</mn></mrow></math>. And when <math id="p1.m8" class="ltx_Math" alttext="i&gt;\pi(n)" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then all <math id="p1.m9" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> give zero in the summation, and the multiplicand for the product is also 1. It is for the sake of a computer implementation that it is necessary to stop the iterations when they no longer give useful results.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A small disadvantage of de Polignac’s formula is that it is necessary to know all the primes up to <math id="p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. If the implementation mistakenly iterates through a composite value, the error might not be detected, while even with a dumb implementation of trial division (e.g., one that tries odd composite values) the worst that can happen is that time is wasted by trying to divide by a composite value whose prime factors have already been divided out of the factorial.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let’s work out an example: factoring 10!. The primes less than 10 are 2, 3, 5 and 7. The base 2 logarithm of 10 is approximately 3.32, meaning we only need to divide and floor up to 2’s cube. Half 10 is 5, a quarter of 10 is 2.5 and an eighth of 10 is 1.25; adding up the integer parts of these gives us 8, so the exponent for 2 in the factorization of 10! is 8. The base 3 logarithm of 10 is approximately 2.0959. A third of 10 is about 3.3333 and a ninth of 10 is about 1.1111; the integer parts of these added up gives 4, so the exponent for 3 in the factorization is 4. For both bases 5 and 7, the logarithm of 10 is more than 1 but less than 2. 10 divided by 5 is 2, so that’s our exponent for 5. 10 divided by 7 is about 1.42857, so 1 is our exponent for 7. Then we verify that indeed <math id="p3.m1" class="ltx_Math" alttext="2^{8}\times 3^{4}\times 5^{2}\times 7^{1}=3628800=10!" display="inline"><mrow><mrow><msup><mn>2</mn><mn>8</mn></msup><mo>×</mo><msup><mn>3</mn><mn>4</mn></msup><mo>×</mo><msup><mn>5</mn><mn>2</mn></msup><mo>×</mo><msup><mn>7</mn><mn>1</mn></msup></mrow><mo>=</mo><mn>3628800</mn><mo>=</mo><mrow><mn>10</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">de Polignac’s formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DePolignacsFormula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:59:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:59:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A51</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:19:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

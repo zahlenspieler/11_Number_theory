@@ -1,0 +1,208 @@
+<!DOCTYPE html><html>
+<head>
+<title>canonical height on an elliptic curve</title>
+<!--Generated on Fri Feb  9 15:34:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">canonical height on an elliptic curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="E/\mathbb{Q}" display="inline"><mrow><mi>E</mi><mo>/</mo><mi>ℚ</mi></mrow></math> be an elliptic curve. It is often useful to have a notion of <span class="ltx_text ltx_font_italic">height</span> of a point, in order to talk about the arithmetic complexity of a point <math id="p1.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> in <math id="p1.m3" class="ltx_Math" alttext="E(\mathbb{Q})" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. For this, one defines height functions. For example, in <math id="p1.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> one can define a height by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H(p/q)=max(|p|,|q|)." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>/</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">|</mo><mi>p</mi><mo stretchy="false">|</mo></mrow><mo>,</mo><mrow><mo stretchy="false">|</mo><mi>q</mi><mo stretchy="false">|</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Following the example of <math id="p1.m5" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>, one may define a height on <math id="p1.m6" class="ltx_Math" alttext="E/\mathbb{Q}" display="inline"><mrow><mi>E</mi><mo>/</mo><mi>ℚ</mi></mrow></math> by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="h_{x}(P)=\begin{cases}\log H(x(P))&amp;\text{if }P\neq O\\
+0&amp;\text{if }P=O.\end{cases}" display="block"><mrow><mrow><msub><mi>h</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mi>log</mi><mo>⁡</mo><mi>H</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>P</mi></mrow><mo>≠</mo><mi>O</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>O</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In fact, given any even function <math id="p1.m7" class="ltx_Math" alttext="f:E(\mathbb{Q})\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> on <math id="p1.m8" class="ltx_Math" alttext="E(\mathbb{Q})" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></mrow></math> (i.e. <math id="p1.m9" class="ltx_Math" alttext="f(P)=f(-P)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for any <math id="p1.m10" class="ltx_Math" alttext="P\in E(\mathbb{Q})" display="inline"><mrow><mi>P</mi><mo>∈</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>) one can define a height by:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="h_{f}(P)=\log H(f(P))." display="block"><mrow><mrow><mrow><msub><mi>h</mi><mi>f</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>log</mi><mo>⁡</mo><mi>H</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">However, one can refine this definition so that the height function satisfies some very nice properties (see below).</p>
+</div>
+<div id="Thmdefnx1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefnx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmdefnx1.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math> be a number field and let <math id="Thmdefnx1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be an elliptic curve defined over <math id="Thmdefnx1.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math>. The canonical height (or Néron-Tate height) on <math id="Thmdefnx1.p1.m4" class="ltx_Math" alttext="E/\mathbb{Q}" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">/</mo><mi mathvariant="normal">Q</mi></mrow></math>, denoted by <math id="Thmdefnx1.p1.m5" class="ltx_Math" alttext="\hat{h}" display="inline"><mover accent="true"><mi>h</mi><mo mathvariant="normal" stretchy="false">^</mo></mover></math>, is the function on <math id="Thmdefnx1.p1.m6" class="ltx_Math" alttext="E(\mathbb{Q})" display="inline"><mrow><mi>E</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Q</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> (with real values) defined by:</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\hat{h}(P)=\frac{1}{\deg f}\lim_{N\to\infty}\frac{h_{f}([2^{N}]P)}{4^{N}}" display="block"><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>deg</mi><mo>⁡</mo><mi>f</mi></mrow></mfrac><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>N</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><mrow><msub><mi>h</mi><mi>f</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mi>N</mi></msup><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mn>4</mn><mi>N</mi></msup></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for any even function <math id="Thmdefnx1.p1.m7" class="ltx_Math" alttext="f:E(\mathbb{Q})\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi>E</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Q</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The fact that the definition does not depend on the choice of even function <math id="p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is due to J. Tate. In particular, one can simply choose <math id="p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to be the <math id="p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-function, whose degree is <math id="p2.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>. The canonical height satisfies the following properties:</p>
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthmx1.p1.m1" class="ltx_Math" alttext="E/\mathbb{Q}" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">/</mo><mi mathvariant="normal">Q</mi></mrow></math> and let <math id="Thmthmx1.p1.m2" class="ltx_Math" alttext="\hat{h}" display="inline"><mover accent="true"><mi>h</mi><mo mathvariant="normal" stretchy="false">^</mo></mover></math> be the canonical height on <math id="Thmthmx1.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. Then:</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The height </span><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\hat{h}" display="inline"><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover></math><span class="ltx_text ltx_font_italic"> satisfies the parallelogram law:</span></p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\hat{h}(P+Q)+\hat{h}(P-Q)=2\hat{h}(P)+2\hat{h}(Q)" display="block"><mrow><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>-</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="P,Q\in E(\overline{\mathbb{Q}})" display="inline"><mrow><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow><mo>∈</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ℚ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="m\in\mathbb{Z}" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></math><span class="ltx_text ltx_font_italic"> and all </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="P\in E(\overline{\mathbb{Q}})" display="inline"><mrow><mi>P</mi><mo>∈</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ℚ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">:</span></p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\hat{h}([m]P)=m^{2}\hat{h}(P)." display="block"><mrow><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">[</mo><mi>m</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The height </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\hat{h}" display="inline"><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover></math><span class="ltx_text ltx_font_italic"> is even and the pairing:</span></p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle:E(\overline{\mathbb{Q}})\times E(\overline{\mathbb{Q%
+}})\to\mathbb{R},\quad\langle P,Q\rangle=\hat{h}(P+Q)-\hat{h}(P)-\hat{h}(Q)" display="block"><mrow><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow><mo>:</mo><mrow><mrow><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ℚ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><mi>E</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ℚ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>ℝ</mi></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>P</mi><mo>,</mo><mi>Q</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is bilinear (usually called the Néron-Tate pairing on </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="E/\mathbb{Q}" display="inline"><mrow><mi>E</mi><mo>/</mo><mi>ℚ</mi></mrow></math><span class="ltx_text ltx_font_italic">).</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">4.</span></span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all </span><math id="I1.i4.p1.m1" class="ltx_Math" alttext="P\in E(\overline{\mathbb{Q}})" display="inline"><mrow><mi>P</mi><mo>∈</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ℚ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> one has </span><math id="I1.i4.p1.m2" class="ltx_Math" alttext="\hat{h}(P)\geq 0" display="inline"><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i4.p1.m3" class="ltx_Math" alttext="\hat{h}(P)=0" display="inline"><mrow><mrow><mover accent="true"><mi>h</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> if and only if </span><math id="I1.i4.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math><span class="ltx_text ltx_font_italic"> is a torsion point.
+</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">canonical height on an elliptic curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CanonicalHeightOnAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:23:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:23:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11G07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14H52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Neron-Tate height</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HeightFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RegulatorOfAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">canonical height</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:34:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

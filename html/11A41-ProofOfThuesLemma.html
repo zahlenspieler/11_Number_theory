@@ -1,0 +1,283 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Thue’s Lemma</title>
+<!--Generated on Fri Feb  9 15:17:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Thue’s Lemma</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime congruent to 1 mod 4.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We prove the uniqueness first: Suppose</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle a^{2}+b^{2}=p=c^{2}+d^{2}," display="inline"><mrow><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><mi>p</mi><mo>=</mo><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where without loss of generality, we can assume <math id="p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> even, <math id="p2.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="p2.m4" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> odd, <math id="p2.m5" class="ltx_Math" alttext="c&gt;a" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mi>a</mi></mrow></math>, and thus that <math id="p2.m6" class="ltx_Math" alttext="b&gt;d" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mi>d</mi></mrow></math>. Let <math id="p2.m7" class="ltx_Math" alttext="c=2x+a" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>a</mi></mrow></mrow></math> and <math id="p2.m8" class="ltx_Math" alttext="d=b-2y" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>, and compute</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle p=c^{2}+d^{2}=p+4ax+4x^{2}-4by+4y^{2}," display="inline"><mrow><mrow><mi>p</mi><mo>=</mo><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mrow><mi>p</mi><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence <math id="p3.m1" class="ltx_Math" alttext="x(a+x)=y(b-y)" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If <math id="p3.m2" class="ltx_Math" alttext="(x,y)=d" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>d</mi></mrow></math>, cancel the factor of <math id="p3.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> to get a new equation <math id="p3.m4" class="ltx_Math" alttext="X(a+x)=Y(b-y)" display="inline"><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with <math id="p3.m5" class="ltx_Math" alttext="(X,Y)=1" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>, so we can write</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle mY=a+x=a+dX" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle mX=b-y=b-dY" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>X</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some positive integer <math id="p3.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. Then</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle p=a^{2}+b^{2}=(mY-dX)^{2}+(mX+dY)^{2}=(m^{2}+d^{2})(X^{2}+Y^{2})," display="inline"><mrow><mrow><mi>p</mi><mo>=</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>Y</mi></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>X</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>Y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>+</mo><msup><mi>Y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which contradicts the primality of <math id="p3.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> since we have both <math id="p3.m8" class="ltx_Math" alttext="m^{2}+d^{2}\geq 2" display="inline"><mrow><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo>≥</mo><mn>2</mn></mrow></math> and <math id="p3.m9" class="ltx_Math" alttext="X^{2}+Y^{2}\geq 2" display="inline"><mrow><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>+</mo><msup><mi>Y</mi><mn>2</mn></msup></mrow><mo>≥</mo><mn>2</mn></mrow></math>. We now proceed to existence.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By Euler’s criterion (or by
+Gauss’s lemma), the congruence</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="x^{2}\equiv-1\pmod{p}" display="block"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>≡</mo><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">has a solution. By Dirichlet’s approximation theorem, there exist
+integers <math id="p4.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p4.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> such that</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\left|a\frac{x}{p}-b\right|\leq\frac{1}{[\sqrt{p}]+1}&lt;\frac{1}{\sqrt{p}}" display="block"><mrow><mrow><mo>|</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mfrac><mi>x</mi><mi>p</mi></mfrac></mrow><mo>-</mo><mi>b</mi></mrow><mo>|</mo></mrow><mo>≤</mo><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">[</mo><msqrt><mi>p</mi></msqrt><mo stretchy="false">]</mo></mrow><mo>+</mo><mn>1</mn></mrow></mfrac><mo>&lt;</mo><mfrac><mn>1</mn><msqrt><mi>p</mi></msqrt></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="1\leq a\leq[\sqrt{p}]&lt;\sqrt{p}" display="block"><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo>≤</mo><mrow><mo stretchy="false">[</mo><msqrt><mi>p</mi></msqrt><mo stretchy="false">]</mo></mrow><mo>&lt;</mo><msqrt><mi>p</mi></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(2) tells us</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="|ax-bp|&lt;\sqrt{p}\;." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>p</mi></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mpadded width="+2.8pt"><msqrt><mi>p</mi></msqrt></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Write <math id="p4.m3" class="ltx_Math" alttext="u=|ax-bp|" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>p</mi></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></math>. We get</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="u^{2}+a^{2}\equiv a^{2}x^{2}+a^{2}\equiv 0\pmod{p}" display="block"><mrow><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>≡</mo><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="0&lt;u^{2}+a^{2}&lt;2p\;," display="block"><mrow><mrow><mn>0</mn><mo>&lt;</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="+2.8pt"><mi>p</mi></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence <math id="p4.m4" class="ltx_Math" alttext="u^{2}+a^{2}=p" display="inline"><mrow><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msup><mi>a</mi><mn>2</mn></msup></mrow><mo>=</mo><mi>p</mi></mrow></math>, as desired.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">To prove Thue’s lemma in another way, we will imitate a part
+of the proof of Lagrange’s four-square theorem. From (1), we
+know that the equation</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="x^{2}+y^{2}=mp" display="block"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">has a solution <math id="p5.m1" class="ltx_Math" alttext="(x,y,m)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></math> with, we may assume, <math id="p5.m2" class="ltx_Math" alttext="1\leq m&lt;p" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>m</mi><mo>&lt;</mo><mi>p</mi></mrow></math>. It is enough to
+show that if <math id="p5.m3" class="ltx_Math" alttext="m&gt;1" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, then there exists <math id="p5.m4" class="ltx_Math" alttext="(u,v,n)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="p5.m5" class="ltx_Math" alttext="1\leq n&lt;m" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math> and</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="u^{2}+v^{2}=np\;." display="block"><mrow><mrow><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msup><mi>v</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>p</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p5.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is even, then <math id="p5.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p5.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are both even or both odd; therefore,
+in the identity</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\left(\frac{x+y}{2}\right)^{2}+\left(\frac{x-y}{2}\right)^{2}=\frac{x^{2}+y^{2%
+}}{2}" display="block"><mrow><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">both summands are integers, and we can just take <math id="p5.m9" class="ltx_Math" alttext="n=m/2" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> and conclude.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">If <math id="p6.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is odd, write <math id="p6.m2" class="ltx_Math" alttext="a\equiv x\pmod{m}" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>x</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p6.m3" class="ltx_Math" alttext="b\equiv y\pmod{m}" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>y</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with
+<math id="p6.m4" class="ltx_Math" alttext="|a|&lt;m/2" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>a</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> and <math id="p6.m5" class="ltx_Math" alttext="|b|&lt;m/2" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>b</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>. We get</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="a^{2}+b^{2}=nm" display="block"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>m</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="p6.m6" class="ltx_Math" alttext="n&lt;m" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math>. But consider the identity</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="(a^{2}+b^{2})(x^{2}+y^{2})=(ax+by)^{2}+(ay-bx)^{2}\;." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mpadded width="+2.8pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">On the left is <math id="p6.m7" class="ltx_Math" alttext="nm^{2}p" display="inline"><mrow><mi>n</mi><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mi>p</mi></mrow></math>, and on the right we see</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle ax+by\equiv x^{2}+y^{2}" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>≡</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle 0\pmod{m}" display="inline"><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle ay-bx\equiv xy-yx" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>≡</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle 0\pmod{m}\;." display="inline"><mrow><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mpadded width="+2.8pt"><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we can divide the equation</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="nm^{2}p=(ax+by)^{2}+(ay-bx)^{2}" display="block"><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">through by <math id="p6.m8" class="ltx_Math" alttext="m^{2}" display="inline"><msup><mi>m</mi><mn>2</mn></msup></math>, getting an expression
+for <math id="p6.m9" class="ltx_Math" alttext="np" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></math> as a sum of two squares. The proof is complete.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark: </span>The solutions of the congruence (1) are
+explicitly
+</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="x\equiv\pm\left(\frac{p-1}{2}\right)!\pmod{p}\;." display="block"><mrow><mrow><mi>x</mi><mo>≡</mo><mrow><mrow><mo>±</mo><mrow><mrow><mo>(</mo><mfrac><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mspace width="veryverythickmathspace"></mspace><mpadded width="+2.8pt"><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Thue’s Lemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfThuesLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:19:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:19:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A41</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:17:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

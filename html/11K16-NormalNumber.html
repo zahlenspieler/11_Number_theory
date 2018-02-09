@@ -1,0 +1,258 @@
+<!DOCTYPE html><html>
+<head>
+<title>normal number</title>
+<!--Generated on Fri Feb  9 15:36:34 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">normal number</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Simply Normal Numbers</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> and <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="2\leq b\in\mathbb{N}" display="inline"><mrow><mn>2</mn><mo>≤</mo><mi>b</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Consider the sequence of digits of <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in base <math id="S0.SS1.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x=x_{1}x_{2}\cdots x_{m}.x_{m+1}\cdots x_{n}\cdots,\mbox{ where }x_{i}\in\{0,%
+\ldots,b-1\}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>x</mi><mi>m</mi></msub></mrow></mrow><mo>.</mo><mrow><mrow><mrow><msub><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow><mo>,</mo><mrow><mtext> where </mtext><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We are interested in finding out how often a given digit <math id="S0.SS1.p1.m5" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> shows up in the above representation of <math id="S0.SS1.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. If we denote by <math id="S0.SS1.p1.m7" class="ltx_Math" alttext="N(s,n)" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> the number of occurrences of <math id="S0.SS1.p1.m8" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in the first <math id="S0.SS1.p1.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> digits of <math id="S0.SS1.p1.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, we can calculate the ratio</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{N(s,n)}{n}." display="block"><mrow><mfrac><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mi>n</mi></mfrac><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S0.SS1.p1.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> approaches <math id="S0.SS1.p1.m12" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>, this ratio may converge to a limit, called the <em class="ltx_emph ltx_font_italic">frequency</em> of <math id="S0.SS1.p1.m13" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in <math id="S0.SS1.p1.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. The frequency of <math id="S0.SS1.p1.m15" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in <math id="S0.SS1.p1.m16" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is necessarily between 0 and 1. If all base-<math id="S0.SS1.p1.m17" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> digits are equally frequent, i.e. if the frequency of each digit <math id="S0.SS1.p1.m18" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>, <math id="S0.SS1.p1.m19" class="ltx_Math" alttext="0\leq s&lt;b" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>s</mi><mo>&lt;</mo><mi>b</mi></mrow></math>, is <math id="S0.SS1.p1.m20" class="ltx_Math" alttext="1/b" display="inline"><mrow><mn>1</mn><mo>/</mo><mi>b</mi></mrow></math>, then we say that <math id="S0.SS1.p1.m21" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is <em class="ltx_emph ltx_font_italic">simply normal</em> in base <math id="S0.SS1.p1.m22" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. For example, in base <math id="S0.SS1.p1.m23" class="ltx_Math" alttext="5" display="inline"><mn>5</mn></math>, the number</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="0.1234012340123401234...." display="block"><mrow><mrow><mn>0.1234012340123401234</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is simply normal.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">Some real numbers have two digital representations in base <math id="S0.SS1.p2.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. Given such a number <math id="S0.SS1.p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, there is no ambiguity as to whether <math id="S0.SS1.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is simply normal or not, for it is easy to see that 0 occurs in <math id="S0.SS1.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with frequency 1 in one representation, and <math id="S0.SS1.p2.m5" class="ltx_Math" alttext="b-1" display="inline"><mrow><mi>b</mi><mo>-</mo><mn>1</mn></mrow></math> occurs in <math id="S0.SS1.p2.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with frequency 1 in the other. Hence such a number <math id="S0.SS1.p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is not simply normal.</p>
+</div>
+<div id="S0.SS1.p3" class="ltx_para">
+<p class="ltx_p">It is still an open question if the transcendental constants <math id="S0.SS1.p3.m1" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, <math id="S0.SS1.p3.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>, and <math id="S0.SS1.p3.m3" class="ltx_Math" alttext="\ln(2)" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> are simply normal, although empirical evidence tends to support this claim. Actually, we don’t even know which digits occur infinitely often in the base 10 expansion of <math id="S0.SS1.p3.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> (there must be at least two). The following table shows the number of occurrences of each digit as they appear in the decimal representation of <math id="S0.SS1.p3.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, evaluated to just over 10,000 places.</p>
+</div>
+<div id="S0.SS1.p4" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">digit</span></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">0</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">2</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">3</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">4</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">5</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">6</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">7</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">8</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">9</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">
+<math id="S0.SS1.p4.m1" class="ltx_Math" alttext="\#" display="inline"><mi mathsize="90%" mathvariant="normal">#</mi></math><span class="ltx_text" style="font-size:90%;"> of occurrences</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">968</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1027</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1023</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">978</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1016</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1051</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1027</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">976</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">956</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">1023</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">
+<span class="ltx_text" style="font-size:90%;">ratio (in </span><math id="S0.SS1.p4.m2" class="ltx_Math" alttext="\%" display="inline"><mo lspace="0pt" mathsize="90%" rspace="3.5pt" stretchy="false">%</mo></math><span class="ltx_text" style="font-size:90%;">)</span>
+</th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">9.6</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.2</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.2</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">9.7</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.1</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.5</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.2</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">9.7</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">9.5</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t"><span class="ltx_text" style="font-size:90%;">10.2</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Normal Numbers</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">More generally, if we allow <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to be any finite string of digits (in base <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>), then we have the notion of a <em class="ltx_emph ltx_font_italic">normal number</em>. However, we have to be careful as to how to count the number of occurrences of <math id="S0.SS2.p1.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and what is the meaning of the frequency of <math id="S0.SS2.p1.m4" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> in <math id="S0.SS2.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. Let <math id="S0.SS2.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> be a real number as stated in the previous section. Let <math id="S0.SS2.p1.m7" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> be a string of digits of length <math id="S0.SS2.p1.m8" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, in base <math id="S0.SS2.p1.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="s=s_{1}s_{2}\cdots s_{k},\mbox{ where }0\leq s_{j}&lt;b." display="block"><mrow><mrow><mrow><mi>s</mi><mo>=</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>s</mi><mi>k</mi></msub></mrow></mrow><mo>,</mo><mrow><mrow><mtext> where </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>≤</mo><msub><mi>s</mi><mi>j</mi></msub><mo>&lt;</mo><mi>b</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Define <math id="S0.SS2.p1.m10" class="ltx_Math" alttext="N(s,n)" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be the number of times the string <math id="S0.SS2.p1.m11" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> occurs among the first <math id="S0.SS2.p1.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> digits of <math id="S0.SS2.p1.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in base <math id="S0.SS2.p1.m14" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. For example, if <math id="S0.SS2.p1.m15" class="ltx_Math" alttext="x=21.131112..." display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>21.131112</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> in base <math id="S0.SS2.p1.m16" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>, then <math id="S0.SS2.p1.m17" class="ltx_Math" alttext="N(1,8)=5" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>5</mn></mrow></math>, <math id="S0.SS2.p1.m18" class="ltx_Math" alttext="N(11,8)=3" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>11</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>3</mn></mrow></math>, and <math id="S0.SS2.p1.m19" class="ltx_Math" alttext="N(111,8)=1" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>111</mn><mo>,</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">We say that <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is <em class="ltx_emph ltx_font_italic">normal in base <math id="S0.SS2.p2.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math></em> if</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\lim_{n\to\infty}\frac{N(s,n)}{n}=\frac{1}{b^{k}}" display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mi>n</mi></mfrac></mrow><mo>=</mo><mfrac><mn>1</mn><msup><mi>b</mi><mi>k</mi></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every finite string <math id="S0.SS2.p2.m3" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> of length <math id="S0.SS2.p2.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. We see that if <math id="S0.SS2.p2.m5" class="ltx_Math" alttext="k=1" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math>, we are back to the definition of a simply normal number, so every number normal in base <math id="S0.SS2.p2.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is in particular simply normal in base <math id="S0.SS2.p2.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>.</p>
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">Intuitively, <math id="S0.SS2.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is normal in base <math id="S0.SS2.p3.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> if all digits and digit-blocks in the base-<math id="S0.SS2.p3.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> digit sequence of <math id="S0.SS2.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> occur just as often as would be expected if the sequence had been produced completely randomly.</p>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">Normal numbers are not as easy to find as simply normal numbers. One example is Champernowne’s number</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="0.1234567891011121314..." display="block"><mrow><mn>0.1234567891011121314</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(obtained by concatentating the decimal expansions of all natural numbers), which is normal in base 10.</p>
+</div>
+<div id="S0.SS2.p5" class="ltx_para">
+<p class="ltx_p">Unlike simply normal numbers, normal numbers are necessarily irrational. However, given an irrational number, it is extremely hard to prove or disprove whether it is normal.</p>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Absolutely Normal Number</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">We say that <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is <em class="ltx_emph ltx_font_italic">absolutely normal</em> if it is normal in every base <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="b\geq 2" display="inline"><mrow><mi>b</mi><mo>≥</mo><mn>2</mn></mrow></math>. (Some authors use the term “normal” instead of “absolutely normal”.)</p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">Absolutely normal numbers were first defined by Émile Borel in 1909. Borel also proved that almost all real numbers are absolutely normal, in the sense that the numbers that are not absolutely normal form a set of Lebesgue measure zero.
+However, for any base <math id="S0.SS3.p2.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, it is easy to construct uncountably many (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Uncountable</span>) numbers that are not normal in base <math id="S0.SS3.p2.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> (and therefore not absolutely normal).</p>
+</div>
+<div id="S0.SS3.p3" class="ltx_para">
+<p class="ltx_p">As abundant as they are, absolutely normal numbers are very difficult to find! Even Champernowne’s number is not absolutely normal. The first absolutely normal number was constructed by Sierpinski in 1916, and a related construction led to a computable absolutely normal number in 2002. Maybe the most prominent absolutely normal number is Chaitin’s constant <math id="S0.SS3.p3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, which is not computable.</p>
+</div>
+<div id="S0.SS3.p4" class="ltx_para">
+<p class="ltx_p">Proving the normality of an irrational number is daunting already, proving that it is absolutely normal may even be out of reach. It has been conjectured that ”natural” transcendental constants such <math id="S0.SS3.p4.m1" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, <math id="S0.SS3.p4.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and <math id="S0.SS3.p4.m3" class="ltx_Math" alttext="\ln(2)" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> are absolutely normal. It has also been conjectured that all irrational algebraic numbers are absolutely normal since no counterexamples are known. But this is a daring conjecture since not a single irrational algebraic number has ever been proven normal in any base.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">normal number</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NormalNumber</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:33:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:33:15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AxelBoldt (56)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AxelBoldt (56)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AxelBoldt (56)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11K16</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">normal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">absolutely normal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simply normal</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">normal in base b</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">absolutely normal number</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">simply normal number</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Champernowne’s number</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:36:34 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

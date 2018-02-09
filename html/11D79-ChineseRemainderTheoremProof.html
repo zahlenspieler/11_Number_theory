@@ -1,0 +1,303 @@
+<!DOCTYPE html><html>
+<head>
+<title>Chinese remainder theorem proof</title>
+<!--Generated on Fri Feb  9 15:32:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Chinese remainder theorem proof</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We first prove the following lemma: if
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="a\equiv b\pmod{p}" display="block"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="a\equiv b\pmod{q}" display="block"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\gcd(p,q)=1" display="block"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="a\equiv b\pmod{pq}" display="block"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We know that for some <math id="p2.m1" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, <math id="p2.m2" class="ltx_Math" alttext="a-b=kp" display="inline"><mrow><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math>; likewise, for some <math id="p2.m3" class="ltx_Math" alttext="j\in\mathbb{Z}" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>, <math id="p2.m4" class="ltx_Math" alttext="a-b=jq" display="inline"><mrow><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>, so <math id="p2.m5" class="ltx_Math" alttext="kp=jq" display="inline"><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>. Therefore <math id="p2.m6" class="ltx_Math" alttext="kp-jq=0" display="inline"><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mi>j</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">It is a well-known theorem that, given <math id="p3.m1" class="ltx_Math" alttext="a,b,c,x_{0},y_{0}\in\mathbb{Z}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo>∈</mo><mi>ℤ</mi></mrow></math> such that <math id="p3.m2" class="ltx_Math" alttext="x_{0}a+y_{0}b=c" display="inline"><mrow><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math> and <math id="p3.m3" class="ltx_Math" alttext="d=\gcd(a,b)" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, any solutions to the diophantine equation <math id="p3.m4" class="ltx_Math" alttext="ax+by=c" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math> are given by</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="x=x_{0}+\frac{b}{d}n" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mrow><mfrac><mi>b</mi><mi>d</mi></mfrac><mo>⁢</mo><mi>n</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="y=y_{0}+\frac{a}{d}n" display="block"><mrow><mi>y</mi><mo>=</mo><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>+</mo><mrow><mfrac><mi>a</mi><mi>d</mi></mfrac><mo>⁢</mo><mi>n</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m5" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We apply this theorem to the diophantine equation <math id="p4.m1" class="ltx_Math" alttext="kp-jq=0" display="inline"><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mi>j</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Clearly one solution of this diophantine equation is <math id="p4.m2" class="ltx_Math" alttext="k=0,j=0" display="inline"><mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow></mrow></math>. Since <math id="p4.m3" class="ltx_Math" alttext="\gcd(q,p)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, all solutions of this equation are given by <math id="p4.m4" class="ltx_Math" alttext="k=nq" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math> and <math id="p4.m5" class="ltx_Math" alttext="j=np" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math> for any <math id="p4.m6" class="ltx_Math" alttext="n\in\mathbb{Z}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>. So we have <math id="p4.m7" class="ltx_Math" alttext="a-b=npq" display="inline"><mrow><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>; therefore <math id="p4.m8" class="ltx_Math" alttext="pq" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow></math> divides <math id="p4.m9" class="ltx_Math" alttext="a-b" display="inline"><mrow><mi>a</mi><mo>-</mo><mi>b</mi></mrow></math>, so <math id="p4.m10" class="ltx_Math" alttext="a\equiv b\pmod{pq}" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mrow><mi>p</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, thus completing the lemma.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now, to prove the Chinese remainder theorem, we first show that <math id="p5.m1" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math> must exist for any natural <math id="p5.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> where <math id="p5.m3" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>. If</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="y_{i}\frac{P}{p_{i}}\equiv 1\pmod{p_{i}}" display="block"><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then by definition there exists some <math id="p5.m4" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math> such that</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="y_{i}\frac{P}{p_{i}}-1=kp_{i}" display="block"><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which in turn implies that</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="y_{i}\frac{P}{p_{i}}-kp_{i}=1" display="block"><mrow><mrow><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>-</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is a diophantine equation with <math id="p5.m5" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math> and <math id="p5.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> being the unknown integers. It is a well-known theorem that a diophantine equation of the form</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="ax+by=c" display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">has solutions for <math id="p5.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p5.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> if and only if <math id="p5.m9" class="ltx_Math" alttext="\gcd(a,b)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> divides <math id="p5.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>. Since <math id="p5.m11" class="ltx_Math" alttext="\frac{P}{p_{i}}" display="inline"><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></math> is the product of each <math id="p5.m12" class="ltx_Math" alttext="p_{j}" display="inline"><msub><mi>p</mi><mi>j</mi></msub></math> (<math id="p5.m13" class="ltx_Math" alttext="j\in\mathbb{N}" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="p5.m14" class="ltx_Math" alttext="1\leq j\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></math>) except <math id="p5.m15" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>, and every <math id="p5.m16" class="ltx_Math" alttext="p_{j}" display="inline"><msub><mi>p</mi><mi>j</mi></msub></math> is relatively prime to <math id="p5.m17" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>, <math id="p5.m18" class="ltx_Math" alttext="\frac{P}{p_{i}}" display="inline"><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></math> and <math id="p5.m19" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> are relatively prime. Therefore, by definition, <math id="p5.m20" class="ltx_Math" alttext="\gcd(\frac{P}{p_{i}},p_{i})=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac><mo>,</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>; since <math id="p5.m21" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> divides <math id="p5.m22" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, there are integers <math id="p5.m23" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and <math id="p5.m24" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math> that satisfy the above equation.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Consider some <math id="p6.m1" class="ltx_Math" alttext="j\in\mathbb{N}" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="p6.m2" class="ltx_Math" alttext="1\leq j\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></math>. For any <math id="p6.m3" class="ltx_Math" alttext="i\in\mathbb{N}" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="p6.m4" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>, either <math id="p6.m5" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math> or <math id="p6.m6" class="ltx_Math" alttext="i=j" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow></math>. If <math id="p6.m7" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>, then</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="a_{i}y_{i}\frac{P}{p_{i}}=\left(a_{i}y_{i}\frac{P}{p_{i}p_{j}}\right)p_{j}" display="block"><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="p6.m8" class="ltx_Math" alttext="p_{j}" display="inline"><msub><mi>p</mi><mi>j</mi></msub></math> divides <math id="p6.m9" class="ltx_Math" alttext="a_{i}y_{i}\frac{P}{p_{i}}" display="inline"><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow></math>, and we know</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="a_{i}y_{i}\frac{P}{p_{i}}\equiv 0\pmod{p_{j}}" display="block"><mrow><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now consider the case that <math id="p7.m1" class="ltx_Math" alttext="i=j" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow></math>. <math id="p7.m2" class="ltx_Math" alttext="y_{j}" display="inline"><msub><mi>y</mi><mi>j</mi></msub></math> was selected so that</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="y_{j}\frac{P}{p_{j}}\equiv 1\pmod{p_{j}}" display="block"><mrow><mrow><msub><mi>y</mi><mi>j</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>j</mi></msub></mfrac></mrow><mo>≡</mo><mrow><mn>1</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so we know</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="a_{j}y_{j}\frac{P}{p_{j}}\equiv a_{i}\pmod{p_{j}}" display="block"><mrow><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>j</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>j</mi></msub></mfrac></mrow><mo>≡</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">So we have a set of <math id="p8.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> congruences <math id="p8.m2" class="ltx_Math" alttext="\bmod\ p_{j}" display="inline"><mrow><mi></mi><mo lspace="2.5pt" rspace="7.5pt">mod</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></math>; summing them shows that</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\sum_{i=1}^{n}a_{i}y_{i}\frac{P}{p_{i}}\equiv a_{i}\pmod{p_{j}}" display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow></mrow><mo>≡</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore <math id="p8.m3" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> satisfies all the congruences.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Suppose we have some</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="x\equiv x_{0}\pmod{P}" display="block"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This implies that for some <math id="p9.m1" class="ltx_Math" alttext="k\in\mathbb{Z}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>,</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="x-x_{0}=kP" display="block"><mrow><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>P</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, for any <math id="p9.m2" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>, we know that</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="x-x_{0}=\left(k\frac{P}{p_{i}}\right)p_{i}" display="block"><mrow><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mi>k</mi><mo>⁢</mo><mfrac><mi>P</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="p9.m3" class="ltx_Math" alttext="x\equiv x_{0}\pmod{p_{i}}" display="inline"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Since congruence is transitive, <math id="p9.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> must in turn satisfy all the original congruences.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Likewise, suppose we have some <math id="p10.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> that satisfies all the original congruences. Then, for any <math id="p10.m2" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>, we know that</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="x\equiv a_{i}\pmod{p_{i}}" display="block"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and since
+</p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="x_{0}\equiv a_{i}\pmod{p_{i}}" display="block"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>≡</mo><mrow><msub><mi>a</mi><mi>i</mi></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the transitive and symmetric properties of congruence imply that</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="x\equiv x_{0}\pmod{p_{i}}" display="block"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="p10.m3" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math>. So, by our lemma, we know that</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="x\equiv x_{0}\pmod{p_{1}p_{2}\dots p_{n}}" display="block"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>p</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>p</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="x\equiv x_{0}\pmod{P}" display="block"><mrow><mi>x</mi><mo>≡</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Chinese remainder theorem proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ChineseRemainderTheoremProof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:59:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:59:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">vampyr (22)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">vampyr (22)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">vampyr (22)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11D79</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:32:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

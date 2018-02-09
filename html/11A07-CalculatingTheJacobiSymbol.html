@@ -1,0 +1,141 @@
+<!DOCTYPE html><html>
+<head>
+<title>calculating the Jacobi symbol</title>
+<!--Generated on Fri Feb  9 15:11:02 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">calculating the Jacobi symbol</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">To calculate the Jacobi symbol <math id="p1.m1" class="ltx_Math" alttext="\left(\frac{a}{m}\right)" display="inline"><mrow><mo>(</mo><mfrac><mi>a</mi><mi>m</mi></mfrac><mo>)</mo></mrow></math> for positive integers <math id="p1.m2" class="ltx_Math" alttext="a,m" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>m</mi></mrow></math>, <math id="p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> odd, we apply the quadratic reciprocity law and the fact that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\left(\frac{a}{m}\right)=\left(\frac{b}{m}\right)" display="block"><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">if <math id="p1.m4" class="ltx_Math" alttext="a\equiv b\mod m" display="inline"><mrow><mi>a</mi><mo>≡</mo><mrow><mi>b</mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>m</mi></mrow></mrow></math>. So if <math id="p1.m5" class="ltx_Math" alttext="\gcd(a,m)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> (otherwise the Jacobi symbol is <math id="p1.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>) and <math id="p1.m7" class="ltx_Math" alttext="a&gt;m" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mi>m</mi></mrow></math> choose <math id="p1.m8" class="ltx_Math" alttext="b\equiv a\mod m" display="inline"><mrow><mi>b</mi><mo>≡</mo><mrow><mi>a</mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>m</mi></mrow></mrow></math> with <math id="p1.m9" class="ltx_Math" alttext="b&lt;m" display="inline"><mrow><mi>b</mi><mo>&lt;</mo><mi>m</mi></mrow></math>. Then <math id="p1.m10" class="ltx_Math" alttext="\left(\frac{a}{m}\right)=\left(\frac{b}{m}\right)" display="inline"><mrow><mrow><mo>(</mo><mfrac><mi>a</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow></math>. To apply the quadratic reciprocity law, which basically allows us to exchange <math id="p1.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="p1.m12" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, we need to make <math id="p1.m13" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> odd if it is even. Writing <math id="p1.m14" class="ltx_Math" alttext="b=2^{s}c" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><msup><mn>2</mn><mi>s</mi></msup><mo>⁢</mo><mi>c</mi></mrow></mrow></math> with odd <math id="p1.m15" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> does the trick since</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\left(\frac{b}{m}\right)=\left(\frac{2}{m}\right)^{s}\left(\frac{c}{m}\right)." display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><mo>)</mo></mrow><mi>s</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mfrac><mi>c</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the fact that</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\left(\frac{2}{m}\right)=(-1)^{\frac{m^{2}-1}{8}}" display="block"><mrow><mrow><mo>(</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow><mn>8</mn></mfrac></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">we compute <math id="p1.m16" class="ltx_Math" alttext="\left(\frac{2}{m}\right)" display="inline"><mrow><mo>(</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><mo>)</mo></mrow></math> to be <math id="p1.m17" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> if <math id="p1.m18" class="ltx_Math" alttext="m\equiv\pm 1\mod 8" display="inline"><mrow><mi>m</mi><mo>≡</mo><mrow><mrow><mo>±</mo><mn>1</mn></mrow><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>8</mn></mrow></mrow></math> and <math id="p1.m19" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> if <math id="p1.m20" class="ltx_Math" alttext="m\equiv\pm 3\mod 8" display="inline"><mrow><mi>m</mi><mo>≡</mo><mrow><mrow><mo>±</mo><mn>3</mn></mrow><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>8</mn></mrow></mrow></math>.
+Now we apply the quadratic reciprocity law:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\left(\frac{c}{m}\right)=(-1)^{\frac{(c-1)(m-1)}{4}}\left(\frac{m}{c}\right)." display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mi>c</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>4</mn></mfrac></msup><mo>⁢</mo><mrow><mo>(</mo><mfrac><mi>m</mi><mi>c</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The factor <math id="p1.m21" class="ltx_Math" alttext="(-1)^{\frac{(c-1)(m-1)}{4}}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>4</mn></mfrac></msup></math> is equal to <math id="p1.m22" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> if <math id="p1.m23" class="ltx_Math" alttext="c,m\equiv 3\mod 4" display="inline"><mrow><mrow><mi>c</mi><mo>,</mo><mi>m</mi></mrow><mo>≡</mo><mrow><mn>3</mn><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>4</mn></mrow></mrow></math> and <math id="p1.m24" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> if at least one of the numbers <math id="p1.m25" class="ltx_Math" alttext="c,m" display="inline"><mrow><mi>c</mi><mo>,</mo><mi>m</mi></mrow></math> is congruent to <math id="p1.m26" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> modulo <math id="p1.m27" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>. At this point we can start thw whole procedure over again for <math id="p1.m28" class="ltx_Math" alttext="\left(\frac{m}{c}\right)" display="inline"><mrow><mo>(</mo><mfrac><mi>m</mi><mi>c</mi></mfrac><mo>)</mo></mrow></math>. Eventually we can apply the equation <math id="p1.m29" class="ltx_Math" alttext="\left(\frac{-1}{m}\right)=(-1)^{\frac{m-1}{2}}" display="inline"><mrow><mrow><mo>(</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mi>m</mi></mfrac><mo>)</mo></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mfrac><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac></msup></mrow></math>, which is equal to <math id="p1.m30" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> if <math id="p1.m31" class="ltx_Math" alttext="m\equiv 1\mod 4" display="inline"><mrow><mi>m</mi><mo>≡</mo><mrow><mn>1</mn><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>4</mn></mrow></mrow></math> and <math id="p1.m32" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> otherwise.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example:</span> We try to calculate <math id="p2.m1" class="ltx_Math" alttext="\left(\frac{107}{23}\right)" display="inline"><mrow><mo>(</mo><mfrac><mn>107</mn><mn>23</mn></mfrac><mo>)</mo></mrow></math>. Since <math id="p2.m2" class="ltx_Math" alttext="\gcd(107,23)=1" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>107</mn><mo>,</mo><mn>23</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="107\equiv 15\mod 23" display="inline"><mrow><mn>107</mn><mo>≡</mo><mrow><mn>15</mn><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>23</mn></mrow></mrow></math> we find <math id="p2.m4" class="ltx_Math" alttext="\left(\frac{107}{23}\right)=\left(\frac{15}{23}\right)" display="inline"><mrow><mrow><mo>(</mo><mfrac><mn>107</mn><mn>23</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mfrac><mn>15</mn><mn>23</mn></mfrac><mo>)</mo></mrow></mrow></math>. Since both <math id="p2.m5" class="ltx_Math" alttext="15" display="inline"><mn>15</mn></math> and <math id="p2.m6" class="ltx_Math" alttext="23" display="inline"><mn>23</mn></math> are congruent <math id="p2.m7" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> modulo <math id="p2.m8" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math> we have</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\left(\frac{15}{23}\right)=-\left(\frac{23}{15}\right)=-\left(\frac{8}{15}%
+\right)=-\left(\frac{2}{15}\right)." display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mn>15</mn><mn>23</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>(</mo><mfrac><mn>23</mn><mn>15</mn></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>(</mo><mfrac><mn>8</mn><mn>15</mn></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>(</mo><mfrac><mn>2</mn><mn>15</mn></mfrac><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This can be evaluated using equation (<a href="#S0.E1" title="(1) ‣ calculating the Jacobi symbol" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) and we find</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left(\frac{107}{23}\right)=-1." display="block"><mrow><mrow><mrow><mo>(</mo><mfrac><mn>107</mn><mn>23</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">calculating the Jacobi symbol</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CalculatingTheJacobiSymbol</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:55:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:55:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11Y99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:11:02 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

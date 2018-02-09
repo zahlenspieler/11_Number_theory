@@ -1,0 +1,320 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Lagrange’s four-square theorem</title>
+<!--Generated on Fri Feb  9 15:40:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Lagrange’s four-square theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The following proof is essentially Lagrange’s original, from around 1770. First, we need three lemmas.</p>
+</div>
+<div id="Thmlem1" class="ltx_theorem ltx_theorem_lem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 1</span>.</h6>
+<div id="Thmlem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any integers <math id="Thmlem1.p1.m1" class="ltx_Math" alttext="a,b,c,d,w,x,y,z" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal">,</mo><mi>c</mi><mo mathvariant="normal">,</mo><mi>d</mi><mo mathvariant="normal">,</mo><mi>w</mi><mo mathvariant="normal">,</mo><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi><mo mathvariant="normal">,</mo><mi>z</mi></mrow></math>,</span></p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle(a^{2}+b^{2}+c^{2}+d^{2})(w^{2}+x^{2}+y^{2}+z^{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle(aw+bx+cy+dz)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle(ax-bw-cz+dy)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>w</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle(ay+bz-cw-dx)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>w</mi></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle(az-by+cx-dw)^{2}." display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This is the Euler four-square identity, q.v., with different notation.</p>
+</div>
+<div id="Thmlem2" class="ltx_theorem ltx_theorem_lem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 2</span>.</h6>
+<div id="Thmlem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmlem2.p1.m1" class="ltx_Math" alttext="2m" display="inline"><mrow><mn mathvariant="normal">2</mn><mo mathvariant="italic">⁢</mo><mi>m</mi></mrow></math> is a sum of two squares, then so is <math id="Thmlem2.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Say <math id="p4.m1" class="ltx_Math" alttext="2m=x^{2}+y^{2}" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math>. Then <math id="p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p4.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are both even or both odd.
+Therefore, in the identity</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="m=\Big{(}\frac{x-y}{2}\Big{)}^{2}+\Big{(}\frac{x+y}{2}\Big{)}^{2}," display="block"><mrow><mrow><mi>m</mi><mo>=</mo><mrow><msup><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mn>2</mn></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">both fractions on the right side are integers. ∎</p>
+</div>
+</div>
+<div id="Thmlem3" class="ltx_theorem ltx_theorem_lem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 3</span>.</h6>
+<div id="Thmlem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmlem3.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is an odd prime,
+then <math id="Thmlem3.p1.m2" class="ltx_Math" alttext="a^{2}+b^{2}+1=kp" display="inline"><mrow><mrow><msup><mi>a</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal">+</mo><msup><mi>b</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal">=</mo><mrow><mi>k</mi><mo mathvariant="italic">⁢</mo><mi>p</mi></mrow></mrow></math> for some integers <math id="Thmlem3.p1.m3" class="ltx_Math" alttext="a,b,k" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal">,</mo><mi>k</mi></mrow></math> with <math id="Thmlem3.p1.m4" class="ltx_Math" alttext="0&lt;k&lt;p" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">&lt;</mo><mi>k</mi><mo mathvariant="normal">&lt;</mo><mi>p</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="p=2n+1" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>. Consider the sets</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="A:=\{a^{2}\mid a=0,1,...,n\}\quad\mbox{ and }\quad B:=\{-b^{2}-1\mid b=0,1,...%
+,n\}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>:=</mo><mrow><mrow><mo stretchy="false">{</mo><msup><mi>a</mi><mn>2</mn></msup><mo>∣</mo><mrow><mi>a</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo stretchy="false">}</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mtext> and </mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mi>B</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo>-</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><mo>-</mo><mn>1</mn></mrow><mo>∣</mo><mrow><mi>b</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We have the following facts:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">No two elements in <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are congruent mod <math id="I1.i1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, for if <math id="I1.i1.p1.m3" class="ltx_Math" alttext="a^{2}\equiv c^{2}\pmod{p}" display="inline"><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>≡</mo><mrow><msup><mi>c</mi><mn>2</mn></msup><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then either <math id="I1.i1.p1.m4" class="ltx_Math" alttext="p\mid(a-c)" display="inline"><mrow><mi>p</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>-</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> or <math id="I1.i1.p1.m5" class="ltx_Math" alttext="p\mid(a+c)" display="inline"><mrow><mi>p</mi><mo>∣</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> by unique factorization of primes. Since <math id="I1.i1.p1.m6" class="ltx_Math" alttext="a-c,a+c\leq 2n&lt;p" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>-</mo><mi>c</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>+</mo><mi>c</mi></mrow></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>&lt;</mo><mi>p</mi></mrow></math>, and <math id="I1.i1.p1.m7" class="ltx_Math" alttext="0\leq a,c" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow></mrow></math>, we must have <math id="I1.i1.p1.m8" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Similarly, no two elements in <math id="I1.i2.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are congruent mod <math id="I1.i2.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Furthermore, <math id="I1.i3.p1.m1" class="ltx_Math" alttext="A\cap B=\varnothing" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> since elements of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are all non-negative, while elements of <math id="I1.i3.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are all negative.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Therefore, <math id="I1.i4.p1.m1" class="ltx_Math" alttext="C:=A\cup B" display="inline"><mrow><mi>C</mi><mo>:=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math> has <math id="I1.i4.p1.m2" class="ltx_Math" alttext="2n+2" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow></math>, or <math id="I1.i4.p1.m3" class="ltx_Math" alttext="p+1" display="inline"><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></math> elements.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Therefore, by the pigeonhole principle, two elements in <math id="p5.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> must be congruent mod <math id="p5.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. In addition, by the first two facts, the two elements must come from different sets. As a result, we have the following equation:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="a^{2}+b^{2}+1=kp" display="block"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="p5.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Clearly <math id="p5.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is positive. Also, <math id="p5.m6" class="ltx_Math" alttext="p^{2}=(2n+1)^{2}&gt;2n^{2}+1\geq a^{2}+b^{2}+1=kp" display="inline"><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>&gt;</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>1</mn></mrow><mo>≥</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math>, so <math id="p5.m7" class="ltx_Math" alttext="p&gt;k" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mi>k</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Basically, Lemma 3 says that for any prime <math id="p6.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, some multiple <math id="p6.m2" class="ltx_Math" alttext="0&lt;m&lt;p" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>m</mi><mo>&lt;</mo><mi>p</mi></mrow></math> of <math id="p6.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a sum of four squares, since <math id="p6.m4" class="ltx_Math" alttext="a^{2}+b^{2}+1=a^{2}+b^{2}+1^{2}+0^{2}" display="inline"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mn>1</mn><mn>2</mn></msup><mo>+</mo><msup><mn>0</mn><mn>2</mn></msup></mrow></mrow></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of Theorem.</h6>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">By Lemma 1 we need only show that an arbitrary prime <math id="p7.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a sum of
+four squares. Since that is trivial for <math id="p7.m2" class="ltx_Math" alttext="p=2" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math>, suppose <math id="p7.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is odd. By Lemma 3, we know</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="mp=a^{2}+b^{2}+c^{2}+d^{2}" display="block"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="p7.m4" class="ltx_Math" alttext="m,a,b,c,d" display="inline"><mrow><mi>m</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> with <math id="p7.m5" class="ltx_Math" alttext="0&lt;m&lt;p" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>m</mi><mo>&lt;</mo><mi>p</mi></mrow></math>. If <math id="p7.m6" class="ltx_Math" alttext="m=1" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow></math>, then we are done. To complete the proof, we will show that if <math id="p7.m7" class="ltx_Math" alttext="m&gt;1" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mn>1</mn></mrow></math> then <math id="p7.m8" class="ltx_Math" alttext="np" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></math> is a sum of four squares for some <math id="p7.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> with <math id="p7.m10" class="ltx_Math" alttext="1\leq n&lt;m" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">If <math id="p8.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is even, then none, two, or all four of <math id="p8.m2" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> are even; in any of those cases, we may break up <math id="p8.m3" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> into two groups, each group containing elements of the same parity. Then Lemma 2 allows us to take <math id="p8.m4" class="ltx_Math" alttext="n=m/2" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Now assume <math id="p9.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is odd but <math id="p9.m2" class="ltx_Math" alttext="&gt;1" display="inline"><mrow><mi></mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Write</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle w" display="inline"><mi>w</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle a\pmod{m}" display="inline"><mrow><mi>a</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle b\pmod{m}" display="inline"><mrow><mi>b</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle c\pmod{m}" display="inline"><mrow><mi>c</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle d\pmod{m}" display="inline"><mrow><mi>d</mi><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p9.m3" class="ltx_Math" alttext="w,x,y,z" display="inline"><mrow><mi>w</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math> are all in the interval <math id="p9.m4" class="ltx_Math" alttext="(-m/2,m/2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo>,</mo><mrow><mi>m</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math>. We have</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="w^{2}+x^{2}+y^{2}+z^{2}&lt;4\cdot\frac{m^{2}}{4}=m^{2}" display="block"><mrow><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>&lt;</mo><mrow><mn>4</mn><mo>⋅</mo><mfrac><msup><mi>m</mi><mn>2</mn></msup><mn>4</mn></mfrac></mrow><mo>=</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="w^{2}+x^{2}+y^{2}+z^{2}\equiv 0\pmod{m}." display="block"><mrow><mrow><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So <math id="p9.m5" class="ltx_Math" alttext="w^{2}+x^{2}+y^{2}+z^{2}=nm" display="inline"><mrow><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>m</mi></mrow></mrow></math> for some integer non-negative <math id="p9.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Since <math id="p9.m7" class="ltx_Math" alttext="w^{2}+x^{2}+y^{2}+z^{2}&lt;m^{2}" display="inline"><mrow><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>&lt;</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></math>, <math id="p9.m8" class="ltx_Math" alttext="n&lt;m" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math>. In addition, if <math id="p9.m9" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>, then <math id="p9.m10" class="ltx_Math" alttext="w=x=y=z=0" display="inline"><mrow><mi>w</mi><mo>=</mo><mi>x</mi><mo>=</mo><mi>y</mi><mo>=</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>, so that <math id="p9.m11" class="ltx_Math" alttext="a\equiv b\equiv c\equiv d\equiv 0\pmod{m}" display="inline"><mrow><mi>a</mi><mo>≡</mo><mi>b</mi><mo>≡</mo><mi>c</mi><mo>≡</mo><mi>d</mi><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo>mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which implies <math id="p9.m12" class="ltx_Math" alttext="mp=a^{2}+b^{2}+c^{2}+d^{2}=m^{2}q" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mi>q</mi></mrow></mrow></math>, or that <math id="p9.m13" class="ltx_Math" alttext="m|p" display="inline"><mrow><mi>m</mi><mo stretchy="false">|</mo><mi>p</mi></mrow></math>. But <math id="p9.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is prime, forcing <math id="p9.m15" class="ltx_Math" alttext="m=p" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>p</mi></mrow></math>, and contradicting <math id="p9.m16" class="ltx_Math" alttext="m&lt;p" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>p</mi></mrow></math>. So <math id="p9.m17" class="ltx_Math" alttext="0&lt;n&lt;m" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math>. Look at the product <math id="p9.m18" class="ltx_Math" alttext="(a^{2}+b^{2}+c^{2}+d^{2})(w^{2}+x^{2}+y^{2}+z^{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and examine Lemma 1. On the left is <math id="p9.m19" class="ltx_Math" alttext="nm^{2}p" display="inline"><mrow><mi>n</mi><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mi>p</mi></mrow></math>. One the right, we have a sum of four squares. Evidently three of them</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="ax-bw-cz+dy=(ax-bw)+(dy-cz)" display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>w</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="ay+bz-cw-dx=(ay-cw)+(bz-dx)" display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>w</mi></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="az-by+cx-dw=(az-dw)+(cx-by)" display="block"><mrow><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>d</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are multiples of <math id="p9.m20" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. The same is true of the other sum on the
+right in Lemma 1:
+</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="aw+bx+cy+dz\equiv w^{2}+x^{2}+y^{2}+z^{2}\equiv 0\pmod{m}." display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>≡</mo><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>≡</mo><mrow><mn>0</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The equation in Lemma 1 can therefore be divided through by <math id="p9.m21" class="ltx_Math" alttext="m^{2}" display="inline"><msup><mi>m</mi><mn>2</mn></msup></math>.
+The result is an expression for <math id="p9.m22" class="ltx_Math" alttext="np" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></math> as a sum of four squares.
+Since <math id="p9.m23" class="ltx_Math" alttext="0&lt;n&lt;m" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mi>m</mi></mrow></math>, the proof is complete.
+∎</p>
+</div>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark:</span> Lemma 3 can be improved: it is enough for
+<math id="p10.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> to be an odd number, not necessarily prime.
+But that stronger statement requires a longer proof.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Lagrange’s four-square theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfLagrangesFoursquareTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:21:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:21:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11P05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:40:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

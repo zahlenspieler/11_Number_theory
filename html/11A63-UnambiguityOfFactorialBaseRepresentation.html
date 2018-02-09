@@ -1,0 +1,210 @@
+<!DOCTYPE html><html>
+<head>
+<title>unambiguity of factorial base representation</title>
+<!--Generated on Fri Feb  9 15:24:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">unambiguity of factorial base representation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all positive integers <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, it is the case that</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="n!=1+\sum_{k=1}^{n-1}k\cdot k!" display="block"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>k</mi><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We first consider two degenerate cases. When <math id="p2.m1" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>
+or <math id="p2.m2" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, the sum has no terms because the lower limit
+is bigger than the upper limit. By the convention that
+a sum with no terms equals zero, the equation reduces
+to <math id="p2.m3" class="ltx_Math" alttext="0!=1" display="inline"><mrow><mrow><mn>0</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> or <math id="p2.m4" class="ltx_Math" alttext="1!=1" display="inline"><mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>, which is correct.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Next, assume that <math id="p3.m1" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Note that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="k\cdot k!=(k+1)k!-k!=(k+1)!-k!," display="block"><mrow><mrow><mrow><mi>k</mi><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>-</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>-</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence, we have a telescoping sum:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sum_{k=1}^{n-1}k\cdot k!=\sum_{k=1}^{n-1}\left((k+1)!-k!\right)=n!-1" display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>k</mi><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mo>(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>-</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Adding 1, we conclude that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="n!=1+\sum_{k=1}^{n-1}k\cdot k!" display="block"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>k</mi><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="d_{m}\ldots d_{2}d_{1}" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><msub><mi>d</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="italic">⁢</mo><msub><mi>d</mi><mn mathvariant="normal">1</mn></msub></mrow></math> is the factoradic representation of
+a positive integer <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, then <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="(d_{m}+1)\,m!&gt;n\geq d_{m}\cdot m!" display="inline"><mrow><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" rspace="4.2pt" stretchy="false">)</mo></mrow><mo mathvariant="italic">⁢</mo><mrow><mi>m</mi><mo lspace="0pt" mathvariant="normal" rspace="3.5pt">!</mo></mrow></mrow><mo mathvariant="normal">&gt;</mo><mi>n</mi><mo mathvariant="normal">≥</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo mathvariant="normal">⋅</mo><mrow><mi>m</mi><mo lspace="0pt" mathvariant="normal" rspace="3.5pt">!</mo></mrow></mrow></mrow></math></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By definition,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="n=d_{m}\cdot m!+\sum_{k=1}^{m-1}d_{k}\cdot k!." display="block"><mrow><mrow><mi>n</mi><mo>=</mo><mrow><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⋅</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>d</mi><mi>k</mi></msub><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since each term of the sum is nonnegative, the sum is positive,
+hence <math id="p4.m1" class="ltx_Math" alttext="n\geq d_{m}\cdot m!" display="inline"><mrow><mi>n</mi><mo>≥</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⋅</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math>. Using the fact that <math id="p4.m2" class="ltx_Math" alttext="0\leq d_{k}&lt;k" display="inline"><mrow><mn>0</mn><mo>≤</mo><msub><mi>d</mi><mi>k</mi></msub><mo>&lt;</mo><mi>k</mi></mrow></math>
+to bound each term in the sum, we have
+</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="n\leq d_{m}\cdot m!+\sum_{k=1}^{m-1}k\cdot k!." display="block"><mrow><mrow><mi>n</mi><mo>≤</mo><mrow><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⋅</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>k</mi><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By theorem 1, the right-hand side equals <math id="p4.m3" class="ltx_Math" alttext="m!-1" display="inline"><mrow><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>-</mo><mn>1</mn></mrow></math>, so we have
+<math id="p4.m4" class="ltx_Math" alttext="n\leq d_{m}\cdot m!+m!-1" display="inline"><mrow><mi>n</mi><mo>≤</mo><mrow><mrow><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⋅</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, which is the same as saying
+<math id="p4.m5" class="ltx_Math" alttext="(d_{m}+1)\,m!&gt;n" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>&gt;</mo><mi>n</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="d_{m}\ldots d_{2}d_{1}" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><msub><mi>d</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="italic">⁢</mo><msub><mi>d</mi><mn mathvariant="normal">1</mn></msub></mrow></math> and <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="{d^{\prime}}_{m^{\prime}}\ldots{d^{\prime}}_{2}{d^{\prime}}_{1}" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo mathvariant="normal">′</mo><msup><mi>m</mi><mo mathvariant="normal">′</mo></msup><none></none></mmultiscripts><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><mmultiscripts><mi>d</mi><none></none><mo mathvariant="normal">′</mo><mn mathvariant="normal">2</mn><none></none></mmultiscripts><mo mathvariant="italic">⁢</mo><mmultiscripts><mi>d</mi><none></none><mo mathvariant="normal">′</mo><mn mathvariant="normal">1</mn><none></none></mmultiscripts></mrow></math> are
+distinct factoradic representations with <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="d_{m}\neq 0" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math> and <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="{d^{\prime}}_{m^{\prime}}\neq 0" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo mathvariant="normal">′</mo><msup><mi>m</mi><mo mathvariant="normal">′</mo></msup><none></none></mmultiscripts><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math> (i.e. not padded with leading zeros), then they denote
+distinct integers.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="n=\sum_{k=1}^{m}d_{k}\cdot k!" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><mrow><msub><mi>d</mi><mi>k</mi></msub><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></math> and let <math id="p5.m2" class="ltx_Math" alttext="n^{\prime}=\sum_{k=1}^{m^{\prime}}{d^{\prime}}_{k}\cdot k!" display="inline"><mrow><msup><mi>n</mi><mo>′</mo></msup><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><msup><mi>m</mi><mo>′</mo></msup></msubsup><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mi>k</mi><none></none></mmultiscripts><mo>⋅</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p6.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p6.m2" class="ltx_Math" alttext="m^{\prime}" display="inline"><msup><mi>m</mi><mo>′</mo></msup></math> are distinct. Without loss of generality,
+we may assume that <math id="p6.m3" class="ltx_Math" alttext="m&lt;m^{\prime}" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><msup><mi>m</mi><mo>′</mo></msup></mrow></math>. Then, <math id="p6.m4" class="ltx_Math" alttext="(m+1)!\leq{m^{\prime}}!" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>≤</mo><mrow><msup><mi>m</mi><mo>′</mo></msup><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>. By theorem 2,
+we have <math id="p6.m5" class="ltx_Math" alttext="n&lt;(d_{m}+1)\,m!" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math> and <math id="p6.m6" class="ltx_Math" alttext="d_{m^{\prime}}\cdot{m^{\prime}}!\leq n^{\prime}" display="inline"><mrow><mrow><msub><mi>d</mi><msup><mi>m</mi><mo>′</mo></msup></msub><mo>⋅</mo><mrow><msup><mi>m</mi><mo>′</mo></msup><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>≤</mo><msup><mi>n</mi><mo>′</mo></msup></mrow></math>. Because
+<math id="p6.m7" class="ltx_Math" alttext="d_{m}\leq m" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>≤</mo><mi>m</mi></mrow></math>, we have <math id="p6.m8" class="ltx_Math" alttext="(d_{m}+1)\,m!\leq(m+1)\,m!=(m+1)!" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>.
+Because <math id="p6.m9" class="ltx_Math" alttext="d_{m^{\prime}}\neq 0" display="inline"><mrow><msub><mi>d</mi><msup><mi>m</mi><mo>′</mo></msup></msub><mo>≠</mo><mn>0</mn></mrow></math>, we have <math id="p6.m10" class="ltx_Math" alttext="n^{\prime}&gt;{m^{\prime}}!" display="inline"><mrow><msup><mi>n</mi><mo>′</mo></msup><mo>&gt;</mo><mrow><msup><mi>m</mi><mo>′</mo></msup><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>. Hence, <math id="p6.m11" class="ltx_Math" alttext="n&lt;n^{\prime}" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><msup><mi>n</mi><mo>′</mo></msup></mrow></math>, so <math id="p6.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+does not equal <math id="p6.m13" class="ltx_Math" alttext="n^{\prime}" display="inline"><msup><mi>n</mi><mo>′</mo></msup></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">To complete the proof, we use the method of infinite descent. Assume
+that factoradic representations are not unique. Then there must exist
+a least integer <math id="p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> has two distinct factoradic
+representations <math id="p7.m3" class="ltx_Math" alttext="d_{m}\ldots d_{2}d_{1}" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>d</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>d</mi><mn>1</mn></msub></mrow></math> and <math id="p7.m4" class="ltx_Math" alttext="{d^{\prime}}_{m^{\prime}}\ldots{d^{\prime}}_{2}{d^{\prime}}_{1}" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><msup><mi>m</mi><mo>′</mo></msup><none></none></mmultiscripts><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mn>2</mn><none></none></mmultiscripts><mo>⁢</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mn>1</mn><none></none></mmultiscripts></mrow></math>
+with <math id="p7.m5" class="ltx_Math" alttext="d_{m}\neq 0" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> and <math id="p7.m6" class="ltx_Math" alttext="{d^{\prime}}_{m^{\prime}}\neq 0" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><msup><mi>m</mi><mo>′</mo></msup><none></none></mmultiscripts><mo>≠</mo><mn>0</mn></mrow></math>. By the conclusion of the
+previous paragraph, we must have <math id="p7.m7" class="ltx_Math" alttext="m=m^{\prime}" display="inline"><mrow><mi>m</mi><mo>=</mo><msup><mi>m</mi><mo>′</mo></msup></mrow></math>. By theorem 2, we must have
+<math id="p7.m8" class="ltx_Math" alttext="d_{m}={d^{\prime}}_{m}" display="inline"><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>=</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mi>m</mi><none></none></mmultiscripts></mrow></math>. Let <math id="p7.m9" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> be the chosen such
+that <math id="p7.m10" class="ltx_Math" alttext="d_{m_{1}}\neq 0" display="inline"><mrow><msub><mi>d</mi><msub><mi>m</mi><mn>1</mn></msub></msub><mo>≠</mo><mn>0</mn></mrow></math> but <math id="p7.m11" class="ltx_Math" alttext="d_{m_{1}+1}=\cdots=d_{m-1}=0" display="inline"><mrow><msub><mi>d</mi><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>d</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math> and let
+<math id="p7.m12" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math> be the chosen such that <math id="p7.m13" class="ltx_Math" alttext="{d^{\prime}}_{m_{2}}\neq 0" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><msub><mi>m</mi><mn>2</mn></msub><none></none></mmultiscripts><mo>≠</mo><mn>0</mn></mrow></math> but <math id="p7.m14" class="ltx_Math" alttext="{d^{\prime}}_{m_{2}+1}=\cdots={d^{\prime}}_{m-1}=0" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>+</mo><mn>1</mn></mrow><none></none></mmultiscripts><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow><none></none></mmultiscripts><mo>=</mo><mn>0</mn></mrow></math>. Then <math id="p7.m15" class="ltx_Math" alttext="d_{m_{1}}\ldots d_{2}d_{1}" display="inline"><mrow><msub><mi>d</mi><msub><mi>m</mi><mn>1</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>d</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>d</mi><mn>1</mn></msub></mrow></math> and <math id="p7.m16" class="ltx_Math" alttext="{d^{\prime}}_{m_{2}}\ldots{d^{\prime}}_{2}{d^{\prime}}_{1}" display="inline"><mrow><mmultiscripts><mi>d</mi><none></none><mo>′</mo><msub><mi>m</mi><mn>2</mn></msub><none></none></mmultiscripts><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mn>2</mn><none></none></mmultiscripts><mo>⁢</mo><mmultiscripts><mi>d</mi><none></none><mo>′</mo><mn>1</mn><none></none></mmultiscripts></mrow></math> would be distinct factoradic representations of
+<math id="p7.m17" class="ltx_Math" alttext="n-d_{m}\cdot m!" display="inline"><mrow><mi>n</mi><mo>-</mo><mrow><msub><mi>d</mi><mi>m</mi></msub><mo>⋅</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math> whose leading digits are not zero but this would
+contradict the assumption that <math id="p7.m18" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the smallest number with this
+property.
+∎</p>
+</div>
+</div>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">unambiguity of factorial base representation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">UnambiguityOfFactorialBaseRepresentation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:38:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:38:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11A63</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">UniquenessOfDigitalRepresentation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:24:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

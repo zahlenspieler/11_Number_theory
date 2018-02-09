@@ -1,0 +1,173 @@
+<!DOCTYPE html><html>
+<head>
+<title>fundamental theorem of arithmetic, proof of the</title>
+<!--Generated on Fri Feb  9 15:07:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">fundamental theorem of arithmetic, proof of the</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">To prove the fundamental theorem of arithmetic, we must show that each
+positive integer has a prime decomposition and that each such
+decomposition is unique up to the order (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrderingRelation</span>) of the factors. Before
+proceeding with the proof, we note that in any integral domain, every
+prime is an irreducible element. Furthermore, by Euclid’s lemma, every irreducible element in <math id="p1.m1" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math> is prime. As a result, prime elements and irreducible elements are equivalent in <math id="p1.m2" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. We will use this fact to prove the theorem.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Note: all our arithmetic will be carried out in the natural numbers, not the integers.</p>
+</div>
+<div id="p3" class="ltx_para">
+<dl id="I1" class="ltx_description">
+<dt id="I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description">Existence</span></dt>
+<dd class="ltx_item">
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">Now we prove the existence of a prime decomposition. Since 1 has a
+prime decomposition and any prime has a prime decomposition, it
+suffices to show that any composite number has a prime decomposition.
+We claim that any composite number is divisible by some prime number.
+To see this, assume <span class="ltx_text ltx_font_italic">n</span> is a composite positive integer. Then
+there exist positive integers <span class="ltx_text ltx_font_italic">a</span> and <span class="ltx_text ltx_font_italic">b</span>, necessarily strictly
+smaller than <span class="ltx_text ltx_font_italic">n</span>, such that <span class="ltx_text ltx_font_italic">n</span> = <span class="ltx_text ltx_font_italic">ab</span>. If <span class="ltx_text ltx_font_italic">a</span> is not
+prime we can write it as a product of smaller positive integers in the
+same way. Continuing this process, we obtain a strictly decreasing
+sequence of natural numbers. By the well-ordering principle, this
+sequence must terminate, and by construction, it must terminate in a
+prime number. Hence <span class="ltx_text ltx_font_italic">n</span> is divisible by a prime number, as
+desired.</p>
+</div>
+<div id="I1.ix1.p2" class="ltx_para">
+<p class="ltx_p">To complete the proof of existence, we apply the well-ordering
+principle again. If <span class="ltx_text ltx_font_italic">n</span> is composite, then it is divisible by some
+prime. Moreover, the quotient is strictly smaller than <span class="ltx_text ltx_font_italic">n</span>. If
+the quotient is not prime then as before we find a prime that divides
+it; continuing this process, we produce a strictly decreasing sequence
+of natural numbers. By the well-ordering principle, this sequence
+terminates in a prime number. The product of the prime numbers we
+found in the construction of this sequence is simply <span class="ltx_text ltx_font_italic">n</span>. Thus
+every composite number has a prime decomposition.</p>
+</div>
+</dd>
+<dt id="I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description">Uniqueness</span></dt>
+<dd class="ltx_item">
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">Now we show uniqueness up to order of factors. Suppose we are given
+two prime decompositions</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="n=p_{1}\cdots p_{k}=q_{1}\cdots q_{\ell}" display="block"><mrow><mi>n</mi><mo>=</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>p</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>q</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of <span class="ltx_text ltx_font_italic">n</span>, where <math id="I1.ix2.p1.m1" class="ltx_Math" alttext="k\leq\ell" display="inline"><mrow><mi>k</mi><mo>≤</mo><mi mathvariant="normal">ℓ</mi></mrow></math> and the factors in each prime decomposition
+are arranged in nondecreasing order. Since <math id="I1.ix2.p1.m2" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> divides <span class="ltx_text ltx_font_italic">n</span>, it
+divides the product <math id="I1.ix2.p1.m3" class="ltx_Math" alttext="q_{1}\cdots q_{\ell}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>q</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></math>, so by primality must divide
+some <math id="I1.ix2.p1.m4" class="ltx_Math" alttext="q_{i}" display="inline"><msub><mi>q</mi><mi>i</mi></msub></math>. Thus there is a natural number <span class="ltx_text ltx_font_italic">b</span> such that <math id="I1.ix2.p1.m5" class="ltx_Math" alttext="q_{i}=b\cdot p_{1}" display="inline"><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>b</mi><mo>⋅</mo><msub><mi>p</mi><mn>1</mn></msub></mrow></mrow></math>. Since <math id="I1.ix2.p1.m6" class="ltx_Math" alttext="q_{i}" display="inline"><msub><mi>q</mi><mi>i</mi></msub></math> is an irreducible element and <math id="I1.ix2.p1.m7" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> is not a
+unit, it must be that <span class="ltx_text ltx_font_italic">b</span> is a unit, that is, <span class="ltx_text ltx_font_italic">b</span> = 1. Hence
+<math id="I1.ix2.p1.m8" class="ltx_Math" alttext="p_{1}=q_{i}\geq q_{1}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>=</mo><msub><mi>q</mi><mi>i</mi></msub><mo>≥</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></math>. Similarly, there is some <span class="ltx_text ltx_font_italic">j</span> such that <math id="I1.ix2.p1.m9" class="ltx_Math" alttext="q_{1}=p_{j}\geq p_{1}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>=</mo><msub><mi>p</mi><mi>j</mi></msub><mo>≥</mo><msub><mi>p</mi><mn>1</mn></msub></mrow></math>. Since <math id="I1.ix2.p1.m10" class="ltx_Math" alttext="p_{1}\geq q_{1}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>≥</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></math> and <math id="I1.ix2.p1.m11" class="ltx_Math" alttext="q_{1}\geq p_{1}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>≥</mo><msub><mi>p</mi><mn>1</mn></msub></mrow></math>, it follows that
+<math id="I1.ix2.p1.m12" class="ltx_Math" alttext="p_{1}=q_{1}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></math>. Cancelling these factors yields the simpler equation</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="p_{2}\cdots p_{k}=q_{2}\cdots q_{\ell}." display="block"><mrow><mrow><mrow><msub><mi>p</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>p</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mi>q</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>q</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By repeating the above procedure we can show that <math id="I1.ix2.p1.m13" class="ltx_Math" alttext="p_{i}=q_{i}" display="inline"><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></math> for all
+<span class="ltx_text ltx_font_italic">i</span> from 0 to <span class="ltx_text ltx_font_italic">k</span>. Cancelling these factors gives the equation</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="1=q_{k+1}\cdots q_{\ell}." display="block"><mrow><mrow><mn>1</mn><mo>=</mo><mrow><msub><mi>q</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>q</mi><mi mathvariant="normal">ℓ</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since a nontrivial product of primes is greater than 1, the right-hand
+side of this equation is the empty product. We conclude that <span class="ltx_text ltx_font_italic">k</span> =
+<span class="ltx_text ltx_font_italic">l</span>. Hence all prime decompositions of <span class="ltx_text ltx_font_italic">n</span> use the same number
+of factors, and the factors which appear are unique up to the order in
+which they appear. This completes the proof of uniqueness and thereby
+the proof of the theorem.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark</span>. Note that Euclid’s Lemma is necessary in order to prove the uniqueness portion of the theorem. Also, an alternative way of proving the existence portion of the theorem is to use induction: if <math id="p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is composite, then <math id="p4.m2" class="ltx_Math" alttext="n=ab" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></math> for some integers <math id="p4.m3" class="ltx_Math" alttext="a,b&lt;n" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>&lt;</mo><mi>n</mi></mrow></math> (this is true, for if one of <math id="p4.m4" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> is <math id="p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, then the other integer must be <math id="p4.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>). By induction, both <math id="p4.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p4.m8" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> can be written as product of primes, which implies that <math id="p4.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a product of primes.</p>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">fundamental theorem of arithmetic, proof of the</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalTheoremOfArithmeticProofOfThe</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:48:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:48:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mps (409)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 16U99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 13A99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:07:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html><html>
+<head>
+<title>trial division</title>
+<!--Generated on Fri Feb  9 15:18:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">trial division</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Factoring by <span class="ltx_text ltx_font_italic">trial division</span> is an algorithm where a given integer <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is tested for divisibility by each prime <math id="p1.m2" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> in order until all its factors are discovered. It is the easiest algorithm to understand and the simplest to implement, but not always the most efficient.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Depending on the implementation, the algorithm can be provided with a list of primes. If, for example, the implementation is to be limited to 16-bit unsigned integers, it might make sense to provide a list of the primes up to 257. Otherwise, the list of primes could be gathered on the fly, or a performance penalty could be accepted by allowing certain “could-be primes”.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Call the trial division algorithm with an integer <math id="p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Initialize <math id="I1.i1.p1.m1" class="ltx_Math" alttext="i=1" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></math>, length of factor list to 0, (if used) all exponents to 1, prime flag to true, test cap to <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\sqrt{n}" display="inline"><msqrt><mi>n</mi></msqrt></math>, test remainder <math id="I1.i1.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> to equal <math id="I1.i1.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Test if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\frac{m}{p_{i}}" display="inline"><mfrac><mi>m</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></math> is an integer. If it is, reset <math id="I1.i2.p1.m2" class="ltx_Math" alttext="m=\frac{m}{p_{i}}" display="inline"><mrow><mi>m</mi><mo>=</mo><mfrac><mi>m</mi><msub><mi>p</mi><mi>i</mi></msub></mfrac></mrow></math>, set prime flag to false and test if <math id="I1.i2.p1.m3" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> will divide again. As many times as indicated, add <math id="I1.i2.p1.m4" class="ltx_Math" alttext="p_{i}" display="inline"><msub><mi>p</mi><mi>i</mi></msub></math> to the list of factors, or add it once to the list of factors and increment the appropriate exponent accordingly. Increment once the length of the factor list.
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Increment <math id="I1.i3.p1.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and see if <math id="I1.i3.p1.m2" class="ltx_Math" alttext="p_{i}&lt;\sqrt{n}" display="inline"><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>&lt;</mo><msqrt><mi>n</mi></msqrt></mrow></math>. Also check that <math id="I1.i3.p1.m3" class="ltx_Math" alttext="m&gt;1" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. If both of these conditions are true, repeat the previous step.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If prime flag is true, place <math id="I1.i4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in the first spot of the factor list and set factor list length to 1.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Return the factor list (and if applicable, the exponent list). It might or might not be a good idea to expose the prime flag to the calling function.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For example, <math id="p5.m1" class="ltx_Math" alttext="n=32851" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>32851</mn></mrow></math>. Clearly 2 doesn’t divide evenly, a human can tell on sight. Since it’s a small number, the digit sum test for 3 is applied quickly enough, and it returns false. We don’t need to try 5, though a computer does. Then, dividing by 7, we get the integer 4693, but 7 doesn’t divide again. Neither does 11. 4693 divided by 13 gives us 361. If this was a recursive implementation, it would recognize that 361 is 19 squared. Ergo, the factorization is <math id="p5.m2" class="ltx_Math" alttext="32851=7\cdot 13\cdot 19^{2}" display="inline"><mrow><mn>32851</mn><mo>=</mo><mrow><mn>7</mn><mo>⋅</mo><mn>13</mn><mo>⋅</mo><msup><mn>19</mn><mn>2</mn></msup></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">To give another example: given <math id="p6.m1" class="ltx_Math" alttext="n=1411041" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1411041</mn></mrow></math>, trial division would take 196 divisions. The second division would find 3 is a factor, the third would confirm 3’s exponent is 1, and it would take almost a couple hundred more divisions to get to 1187 and the certainty that 470347 must be a prime and the factors are hence 3 and 470347. Of course, with numbers of this size, a computer can perform hundreds of divisions in the blink of an eye.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let’s try 522611488293. This number is almost “unfair” to an implementation lacking a list of primes provided beforehand, or even an implementation that remembers the primes it has tried. The second factor, 370373, ends a prime gap of 110 consecutive composites. It’s enough to slow down a computer implementation of trial division, even one that actually wastes time trying on such composites as 370263, 370267, 370269, etc. but not by much.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">This last example, 4393547637856664251490043044051018234292171475232959, is an example of what not to even try to factor with trial division. Its square root is more than <math id="p8.m1" class="ltx_Math" alttext="6\cdot 10^{25}" display="inline"><mrow><mn>6</mn><mo>⋅</mo><msup><mn>10</mn><mn>25</mn></msup></mrow></math>, and the logarithmic integral tells us there might be about <math id="p8.m2" class="ltx_Math" alttext="10^{24}" display="inline"><msup><mn>10</mn><mn>24</mn></msup></math> primes to test divide in trying to factor this number.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The speed of the algorithm depends perhaps more in the size of the smallest prime factor than it does on the size of <math id="p9.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For example, PrimeFan’s Integer Factorer (a Javascript implementation) takes 2 to 3 seconds to factor 2432902008176640000 (which is 20!), but fails to give an answer for 2432902008176639999 before Internet Explorer asks the user if they want to abort the script. Henry Bottomley’s Javascript implementation handles factorials better than PrimeFan’s (responding to 20! instantaneously), but still freezes on <math id="p9.m2" class="ltx_Math" alttext="20!-1" display="inline"><mrow><mrow><mn>20</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>-</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>External links</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">http://www.btinternet.com/ se16/js/factor.htm</span>Henry Bottomley’s Prime Factors Calculator</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">http://www.geocities.com/primefan/Factorer.html</span>PrimeFan’s Number Factorer
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">trial division</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TrialDivision</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:39:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:39:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CompositeFan (12809)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CompositeFan (12809)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CompositeFan (12809)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11A41</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:18:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

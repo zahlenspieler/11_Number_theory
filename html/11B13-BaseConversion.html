@@ -1,0 +1,489 @@
+<!DOCTYPE html><html>
+<head>
+<title>base conversion</title>
+<!--Generated on Fri Feb  9 15:26:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">base conversion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The PlanetMath entry bases gives a good overview over the symbolic representation of numbers, something which we use every day. This entry will give a simple overview and method of converting numbers between bases: that is, taking one representation of a number and converting it to another. When dealing with extremely large numbers, base conversion may become quite slow. Fortunately, methods exist which are significantly more efficient than those listed here; see Knuth, The Art of Computer Programming. The simplest of these work by divide-and-conquer, converting groups of digits at once. In this article, we focus on a more naive approach.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Perhaps the simplest way to explain base conversion is to describe the conversion to and from base 10 (in which everyone is accustomed to performing arithmetic). We will begin with the easier method, which is the conversion from some other base to base 10.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Conversion to Base 10</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Suppose we have a number represented in base <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. This number is given as a sequence of symbols <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="s_{n}s_{n-1}\cdots s_{2}s_{1}.t_{1}t_{2}\cdots t_{m}" display="inline"><mrow><mrow><msub><mi>s</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>s</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>.</mo><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>t</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>t</mi><mi>m</mi></msub></mrow></mrow></math>. This sequence represents</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="s_{n}b^{n-1}+s_{n-1}b^{n-2}+\cdots+s_{2}b+s_{1}+t_{1}b^{-1}+t_{2}b^{-2}+\cdots%
++t_{m}b^{-m}" display="block"><mrow><mrow><msub><mi>s</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>s</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><msub><mi>s</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>t</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>b</mi><mrow><mo>-</mo><mi>m</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SSx1.p3" class="ltx_para">
+<p class="ltx_p">This is straight-forward enough. All we need to do is convert each symbol <math id="S0.SSx1.p3.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to its decimal equivalent. Typically this is simple. The symbols <math id="S0.SSx1.p3.m2" class="ltx_Math" alttext="0,1,\cdots,9" display="inline"><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mn>9</mn></mrow></math> usually represent the same value in any other base. For <math id="S0.SSx1.p3.m3" class="ltx_Math" alttext="b&gt;9" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>9</mn></mrow></math>, the letters of the alphabet begin to be used, with <math id="S0.SSx1.p3.m4" class="ltx_Math" alttext="a=10,b=11," display="inline"><mrow><mrow><mrow><mi>a</mi><mo>=</mo><mn>10</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>=</mo><mn>11</mn></mrow></mrow><mo>,</mo></mrow></math> and so on. This serves up to <math id="S0.SSx1.p3.m5" class="ltx_Math" alttext="b=36" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>36</mn></mrow></math>. Since the most common bases used are binary (<math id="S0.SSx1.p3.m6" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math>), octal (<math id="S0.SSx1.p3.m7" class="ltx_Math" alttext="b=8" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>8</mn></mrow></math>), decimal (<math id="S0.SSx1.p3.m8" class="ltx_Math" alttext="b=10" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>10</mn></mrow></math>), and hexadecimal (<math id="S0.SSx1.p3.m9" class="ltx_Math" alttext="b=16" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>16</mn></mrow></math>), this scheme is generally sufficient.</p>
+</div>
+<div id="S0.SSx1.p4" class="ltx_para">
+<p class="ltx_p">Once we map symbols to values, we can easily apply the formula above, adding and multiplying as we go along.</p>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Example of Conversion to Base 10</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Binary to Decimal</span>
+Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math>. Convert <code class="ltx_verbatim ltx_font_typewriter">10010.011</code> to decimal.</p>
+</div>
+<div id="I1.i1.p2" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">10010.011</span></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle 1\cdot 2^{4}+0\cdot 2^{3}+0\cdot 2^{2}+1\cdot 2+0+0\cdot 2^{-1}+%
+1\cdot 2^{-2}+1\cdot 2^{-3}" display="inline"><mrow><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>0</mn><mo>⋅</mo><msup><mn>2</mn><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>0</mn><mo>⋅</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><mn>2</mn></mrow><mo>+</mo><mn>0</mn><mo>+</mo><mrow><mn>0</mn><mo>⋅</mo><msup><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><msup><mn>2</mn><mrow><mo>-</mo><mn>3</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle 16+2+\frac{1}{4}+\frac{1}{8}" display="inline"><mrow><mn>16</mn><mo>+</mo><mn>2</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>8</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle 18.375" display="inline"><mn>18.375</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Ternary to Decimal</span>
+Let <math id="I1.i2.p1.m1" class="ltx_Math" alttext="b=3" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>3</mn></mrow></math>. Convert <code class="ltx_verbatim ltx_font_typewriter">10210.21</code> to decimal.</p>
+</div>
+<div id="I1.i2.p2" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">10210.21</span></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle 1\cdot 3^{4}+0\cdot 3^{3}+2\cdot 3^{2}+1\cdot 3+0+2\cdot 3^{-1}+%
+1\cdot 3^{-2}" display="inline"><mrow><mrow><mn>1</mn><mo>⋅</mo><msup><mn>3</mn><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>0</mn><mo>⋅</mo><msup><mn>3</mn><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⋅</mo><msup><mn>3</mn><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><mn>3</mn></mrow><mo>+</mo><mn>0</mn><mo>+</mo><mrow><mn>2</mn><mo>⋅</mo><msup><mn>3</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><msup><mn>3</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle 1\cdot 81+2\cdot 9+1\cdot 3+\frac{2}{3}+\frac{1}{9}" display="inline"><mrow><mrow><mn>1</mn><mo>⋅</mo><mn>81</mn></mrow><mo>+</mo><mrow><mn>2</mn><mo>⋅</mo><mn>9</mn></mrow><mo>+</mo><mrow><mn>1</mn><mo>⋅</mo><mn>3</mn></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>3</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>9</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle 102.777777\dots" display="inline"><mrow><mn>102.777777</mn><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="I1.i2.p3" class="ltx_para">
+<p class="ltx_p">Note that there is no exact decimal representation of the ternary value <code class="ltx_verbatim ltx_font_typewriter">10210.21</code>. This happens often with conversions between bases. This is why many decimal values (such as <math id="I1.i2.p3.m1" class="ltx_Math" alttext="0.1" display="inline"><mn>0.1</mn></math>) cannot be represented precisely in binary floating point (generally used in computers for non-integral arithmetic).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Hexadecimal to Decimal</span>
+Let <math id="I1.i3.p1.m1" class="ltx_Math" alttext="b=16" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>16</mn></mrow></math>. Convert <code class="ltx_verbatim ltx_font_typewriter">4ad9.e3</code> to decimal.</p>
+</div>
+<div id="I1.i3.p2" class="ltx_para">
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath ltx_font_typewriter">4ad9.e3</span></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle 4\cdot 16^{3}+10\cdot 16^{2}+13\cdot 16+9+14\cdot 16^{-1}+3\cdot
+1%
+6^{-2}" display="inline"><mrow><mrow><mn>4</mn><mo>⋅</mo><msup><mn>16</mn><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>10</mn><mo>⋅</mo><msup><mn>16</mn><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>13</mn><mo>⋅</mo><mn>16</mn></mrow><mo>+</mo><mn>9</mn><mo>+</mo><mrow><mn>14</mn><mo>⋅</mo><msup><mn>16</mn><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⋅</mo><msup><mn>16</mn><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle 4\cdot 4096+10\cdot 256+13\cdot 16+9+\frac{14}{16}+\frac{3}{256}" display="inline"><mrow><mrow><mn>4</mn><mo>⋅</mo><mn>4096</mn></mrow><mo>+</mo><mrow><mn>10</mn><mo>⋅</mo><mn>256</mn></mrow><mo>+</mo><mrow><mn>13</mn><mo>⋅</mo><mn>16</mn></mrow><mo>+</mo><mn>9</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>14</mn><mn>16</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>256</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle 16384+2560+208+9+\frac{227}{256}" display="inline"><mrow><mn>16384</mn><mo>+</mo><mn>2560</mn><mo>+</mo><mn>208</mn><mo>+</mo><mn>9</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>227</mn><mn>256</mn></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle 19161.88671875" display="inline"><mn>19161.88671875</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Iterative Method</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Obviously base conversion can become very tedious. It would make sense to write a computer program to perform these operations. What follows is a simple algorithm that iterates through the symbols of a representation, accumulating a value as it goes along. Once all the symbols are iterated, the result is in the accumulator. This method only works for whole numbers. The fractional part of a number could be converted in the same manner, but it would have to be a separate process, working from the end of the number rather than the beginning.</p>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithm</span> <span class="ltx_text ltx_font_smallcaps">Parse</span><span class="ltx_text ltx_font_typewriter">(<math id="S0.SSx3.p2.m1" class="ltx_Math" alttext="(A,n,b)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">A</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">n</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">b</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>)
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">Input</span>: Sequence <math id="S0.SSx3.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, where <math id="S0.SSx3.p2.m3" class="ltx_Math" alttext="0\leq A[i]&lt;b" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow></mrow><mo>&lt;</mo><mi>b</mi></mrow></math> for <math id="S0.SSx3.p2.m4" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>, <math id="S0.SSx3.p2.m5" class="ltx_Math" alttext="b&gt;1" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow></math>
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Output</span>: The value represented by <math id="S0.SSx3.p2.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in base <math id="S0.SSx3.p2.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> (where <math id="S0.SSx3.p2.m8" class="ltx_Math" alttext="A[1]" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> is the left-most digit)
+<br class="ltx_break">
+<math id="S0.SSx3.p2.m9" class="ltx_Math" alttext="v\leftarrow 0" display="inline"><mrow><mi>v</mi><mo>←</mo><mn>0</mn></mrow></math>
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">for</span> <math id="S0.SSx3.p2.m10" class="ltx_Math" alttext="i\leftarrow 1" display="inline"><mrow><mi>i</mi><mo>←</mo><mn>1</mn></mrow></math> <span class="ltx_text ltx_font_bold">to</span> <math id="S0.SSx3.p2.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> <span class="ltx_text ltx_font_bold">do
+<br class="ltx_break"></span>         
+<span class="ltx_inline-block ltx_parbox ltx_align_middle" style="width:433.6pt;">
+<span class="ltx_p"><math id="S0.SSx3.p2.m12" class="ltx_Math" alttext="v\leftarrow b*v+A[i]" display="inline"><mrow><mi>v</mi><mo>←</mo><mrow><mrow><mi>b</mi><mo>*</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math></span>
+</span></p>
+</div>
+<div id="S0.SSx3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">Parse<math id="S0.SSx3.p3.m1" class="ltx_Math" alttext="\leftarrow v" display="inline"><mrow><mi></mi><mo mathvariant="normal">←</mo><mi mathvariant="normal">v</mi></mrow></math></span></p>
+</div>
+<div id="S0.SSx3.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">This is a simple enough method that it could even be done in one’s head.</p>
+</div>
+</section>
+<section id="S0.SSx4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Example of Iterative Method</h2>
+
+<div id="S0.SSx4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SSx4.p1.m1" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math>. Convert <code class="ltx_verbatim ltx_font_typewriter">101101</code> to decimal.</p>
+</div>
+<div id="S0.SSx4.p2" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r">Remaining Digits</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r">Accumulator</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_typewriter">101101</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r"><span class="ltx_text ltx_font_typewriter">01101</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m1" class="ltx_Math" alttext="0*2+1=1" display="inline"><mrow><mrow><mrow><mn>0</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r"><span class="ltx_text ltx_font_typewriter">1101</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m2" class="ltx_Math" alttext="1*2+0=2" display="inline"><mrow><mrow><mrow><mn>1</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r"><span class="ltx_text ltx_font_typewriter">101</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m3" class="ltx_Math" alttext="2*2+1=5" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>5</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r"><span class="ltx_text ltx_font_typewriter">01</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m4" class="ltx_Math" alttext="5*2+1=11" display="inline"><mrow><mrow><mrow><mn>5</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>11</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r"><span class="ltx_text ltx_font_typewriter">1</span></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m5" class="ltx_Math" alttext="11*2+0=22" display="inline"><mrow><mrow><mrow><mn>11</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mn>22</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_th ltx_th_row ltx_border_l ltx_border_r"></th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx4.p2.m6" class="ltx_Math" alttext="22*2+1=45" display="inline"><mrow><mrow><mrow><mn>22</mn><mo>*</mo><mn>2</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>45</mn></mrow></math></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S0.SSx4.p3" class="ltx_para">
+<p class="ltx_p">This is a bit easier than remembering that the first digit corresponds to the
+<math id="S0.SSx4.p3.m1" class="ltx_Math" alttext="2^{5}=32" display="inline"><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>=</mo><mn>32</mn></mrow></math> place.</p>
+</div>
+</section>
+<section id="S0.SSx5" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Conversion From Base 10</h2>
+
+<div id="S0.SSx5.p1" class="ltx_para">
+<p class="ltx_p">To convert a value to some base <math id="S0.SSx5.p1.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> simply consists of inverse application of the iterative method. As the iterative method for “parsing” a symbolic representation of a value consists of multiplication and addition, the iterative method for forming a symbolic representation of a value will consist of division and subtraction.</p>
+</div>
+<div id="S0.SSx5.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithm</span> <span class="ltx_text ltx_font_smallcaps">Generate</span><span class="ltx_text ltx_font_typewriter">(<math id="S0.SSx5.p2.m1" class="ltx_Math" alttext="(A,n,b)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">A</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">n</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">b</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>)
+<br class="ltx_break"></span><span class="ltx_text ltx_font_italic">Input</span>: Array <math id="S0.SSx5.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of sufficient size to store the representation, <math id="S0.SSx5.p2.m3" class="ltx_Math" alttext="n&gt;0,b&gt;1" display="inline"><mrow><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow></mrow></math>
+<br class="ltx_break"><span class="ltx_text ltx_font_italic">Output</span>: The representation of <math id="S0.SSx5.p2.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in base <math id="S0.SSx5.p2.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> will be stored in array <math id="S0.SSx5.p2.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <span class="ltx_text ltx_font_italic">reverse</span> order
+<br class="ltx_break">
+<math id="S0.SSx5.p2.m7" class="ltx_Math" alttext="i\leftarrow 1" display="inline"><mrow><mi>i</mi><mo>←</mo><mn>1</mn></mrow></math>
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">while</span> <math id="S0.SSx5.p2.m8" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <span class="ltx_text ltx_font_bold">do
+<br class="ltx_break"></span>         
+<span class="ltx_inline-block ltx_parbox ltx_align_middle" style="width:433.6pt;">
+<span class="ltx_p"><math id="S0.SSx5.p2.m9" class="ltx_Math" alttext="A[i]\leftarrow n" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow></mrow><mo>←</mo><mi>n</mi></mrow></math> mod <math id="S0.SSx5.p2.m10" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> <span class="ltx_text ltx_font_italic">(remainder of <math id="S0.SSx5.p2.m11" class="ltx_Math" alttext="n/b" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">/</mo><mi>b</mi></mrow></math>)</span></span>
+</span></p>
+</div>
+<div id="S0.SSx5.p3" class="ltx_para">
+<p class="ltx_p"><math id="S0.SSx5.p3.m1" class="ltx_Math" alttext="n\leftarrow n/b" display="inline"><mrow><mi>n</mi><mo>←</mo><mrow><mi>n</mi><mo>/</mo><mi>b</mi></mrow></mrow></math> <span class="ltx_text ltx_font_italic">(integral division)</span></p>
+</div>
+<div id="S0.SSx5.p4" class="ltx_para">
+<p class="ltx_p"><math id="S0.SSx5.p4.m1" class="ltx_Math" alttext="i\leftarrow i+1" display="inline"><mrow><mi>i</mi><mo>←</mo><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mrow></math></p>
+</div>
+</section>
+<section id="S0.SSx6" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Example of Conversion from Base 10</h2>
+
+<div id="S0.SSx6.p1" class="ltx_para">
+<p class="ltx_p">Convert the decimal value 20000 to hexadecimal.</p>
+</div>
+<div id="S0.SSx6.p2" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r"><math id="S0.SSx6.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r">Value Sequence</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r">Symbolic Sequence</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">20000</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t"><math id="S0.SSx6.p2.m2" class="ltx_Math" alttext="\left\{\right\}" display="inline"><mrow><mo>{</mo><mo>}</mo></mrow></math></td>
+<td class="ltx_td ltx_border_r ltx_border_t"></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">1250</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx6.p2.m3" class="ltx_Math" alttext="\left\{0\right\}" display="inline"><mrow><mo>{</mo><mn>0</mn><mo>}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">78</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx6.p2.m4" class="ltx_Math" alttext="\left\{2,0\right\}" display="inline"><mrow><mo>{</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo>}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r">20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">4</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx6.p2.m5" class="ltx_Math" alttext="\left\{14,2,0\right\}" display="inline"><mrow><mo>{</mo><mn>14</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo>}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r">e20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">0</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="S0.SSx6.p2.m6" class="ltx_Math" alttext="\left\{4,14,2,0\right\}" display="inline"><mrow><mo>{</mo><mn>4</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo>}</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_r">4e20</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S0.SSx6.p3" class="ltx_para">
+<p class="ltx_p">Note how we obtain the symbols from the right. We get the next symbol (moving left) by taking the value of <math id="S0.SSx6.p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> mod <math id="S0.SSx6.p3.m2" class="ltx_Math" alttext="16" display="inline"><mn>16</mn></math>. We then replace <math id="S0.SSx6.p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> with the whole part of <math id="S0.SSx6.p3.m4" class="ltx_Math" alttext="n/16" display="inline"><mrow><mi>n</mi><mo>/</mo><mn>16</mn></mrow></math>, and repeat until <math id="S0.SSx6.p3.m5" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S0.SSx6.p4" class="ltx_para">
+<p class="ltx_p">This isn’t as easy to do in one’s head as the other direction, though for small bases (e.g. <math id="S0.SSx6.p4.m1" class="ltx_Math" alttext="b=2" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>2</mn></mrow></math>) it is feasible. For example, to convert 20000 to binary:</p>
+</div>
+<div id="S0.SSx6.p5" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r"><math id="S0.SSx6.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r">Representation</th>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r">20000</th>
+<th class="ltx_td ltx_th ltx_th_column ltx_border_r"></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">10000</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">5000</th>
+<td class="ltx_td ltx_align_right ltx_border_r">00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">2500</th>
+<td class="ltx_td ltx_align_right ltx_border_r">000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">1250</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">625</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">312</th>
+<td class="ltx_td ltx_align_right ltx_border_r">10 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">156</th>
+<td class="ltx_td ltx_align_right ltx_border_r">010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">78</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">39</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">19</th>
+<td class="ltx_td ltx_align_right ltx_border_r">10 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">9</th>
+<td class="ltx_td ltx_align_right ltx_border_r">110 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">4</th>
+<td class="ltx_td ltx_align_right ltx_border_r">1110 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">2</th>
+<td class="ltx_td ltx_align_right ltx_border_r">0 1110 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">1</th>
+<td class="ltx_td ltx_align_right ltx_border_r">00 1110 0010 0000</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r">0</th>
+<td class="ltx_td ltx_align_right ltx_border_r">100 1110 0010 0000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S0.SSx6.p6" class="ltx_para">
+<p class="ltx_p">Of course, remembering that many digits (15) might be difficult.</p>
+</div>
+</section>
+<section id="S0.SSx7" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Conversion Between Similar Bases</h2>
+
+<div id="S0.SSx7.p1" class="ltx_para">
+<p class="ltx_p">The digits in the previous example are grouped into sets of four both to ease readability, and to highlight the relationship between binary and hexadecimal. Since <math id="S0.SSx7.p1.m1" class="ltx_Math" alttext="2^{4}=16" display="inline"><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mn>16</mn></mrow></math>, each group of four binary digits is the representation of a hexadecimal digit in the same position of the sequence.</p>
+</div>
+<div id="S0.SSx7.p2" class="ltx_para">
+<p class="ltx_p">It is trivial to get the octal and hexadecimal representations of any number once one has the binary representation. For instance, since <math id="S0.SSx7.p2.m1" class="ltx_Math" alttext="2^{3}=8" display="inline"><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>=</mo><mn>8</mn></mrow></math>, the octal representation can be obtained by grouping the binary digits into groups of 3, and converting each group to an octal digit.
+</p>
+</div>
+<div id="S0.SSx7.p3" class="ltx_para">
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="100\&gt;111\&gt;000\&gt;100\&gt;000=47040" display="block"><mrow><mn>100 111 000 100 000</mn><mo>=</mo><mn>47040</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SSx7.p4" class="ltx_para">
+<p class="ltx_p">Even base <math id="S0.SSx7.p4.m1" class="ltx_Math" alttext="2^{5}=32" display="inline"><mrow><msup><mn>2</mn><mn>5</mn></msup><mo>=</mo><mn>32</mn></mrow></math> could be obtained:</p>
+</div>
+<div id="S0.SSx7.p5" class="ltx_para">
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="10011\&gt;10001\&gt;00000=jh0" display="block"><mrow><mn>10011 10001 00000</mn><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">base conversion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BaseConversion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:03:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:03:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Application</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11B13</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:26:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

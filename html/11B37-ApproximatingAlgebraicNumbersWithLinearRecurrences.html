@@ -1,0 +1,316 @@
+<!DOCTYPE html><html>
+<head>
+<title>approximating algebraic numbers with linear recurrences</title>
+<!--Generated on Fri Feb  9 15:26:54 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">approximating algebraic numbers with linear recurrences</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Linear recurrences can be used to obtain rational approximations for real
+algebraic numbers. Suppose that <math id="p1.m1" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is the root of a polynomial
+<math id="p1.m2" class="ltx_Math" alttext="p(x)=\sum_{k=0}^{n}c_{k}x^{k}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup></mrow></mrow></mrow></math> with rational coefficients <math id="p1.m3" class="ltx_Math" alttext="c_{k}" display="inline"><msub><mi>c</mi><mi>k</mi></msub></math> and
+further assume that the roots of <math id="p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> are distinct and that all the
+other roots of <math id="p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> are strictly smaller in absolute value than <math id="p1.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Consider the recursion</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\sum_{k=0}^{n}c_{k}a_{m+k}=0." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mi>k</mi></mrow></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As discussed in the parent entry, the solution of this recurrence
+is</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="a_{m}=\sum_{k=1}^{n}b_{k}r_{k}^{m}," display="block"><mrow><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>b</mi><mi>k</mi></msub><mo>⁢</mo><msubsup><mi>r</mi><mi>k</mi><mi>m</mi></msubsup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m1" class="ltx_Math" alttext="r_{1},\ldots,r_{n}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>r</mi><mi>n</mi></msub></mrow></math> are the roots of <math id="p2.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> — let us agree that
+<math id="p2.m3" class="ltx_Math" alttext="r_{1}=\rho" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mi>ρ</mi></mrow></math> — and the <math id="p2.m4" class="ltx_Math" alttext="b_{k}" display="inline"><msub><mi>b</mi><mi>k</mi></msub></math>’s are determined by the initial conditions
+of the recurrence. If <math id="p2.m5" class="ltx_Math" alttext="b_{1}\neq 0" display="inline"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>, we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="{a_{m+1}\over a_{m}}={b_{1}\rho^{m+1}+\sum_{k=2}^{n}b_{k}r_{k}^{m+1}\over b_{1%
+}\rho^{m}+\sum_{k=1}^{n}b_{k}r_{k}^{m}}=\rho{1+\sum_{k=2}^{n}\left({b_{k}\over
+b%
+_{1}}\right)\left({r_{k}\over\rho}\right)^{m+1}\over 1+\sum_{k=2}^{n}\left({b_%
+{k}\over b_{1}}\right)\left({r_{k}\over\rho}\right)^{m}}." display="block"><mrow><mrow><mfrac><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>a</mi><mi>m</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>ρ</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>b</mi><mi>k</mi></msub><mo>⁢</mo><msubsup><mi>r</mi><mi>k</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></mrow></mrow><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>ρ</mi><mi>m</mi></msup></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>b</mi><mi>k</mi></msub><mo>⁢</mo><msubsup><mi>r</mi><mi>k</mi><mi>m</mi></msubsup></mrow></mrow></mrow></mfrac><mo>=</mo><mrow><mi>ρ</mi><mo>⁢</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mfrac><msub><mi>b</mi><mi>k</mi></msub><msub><mi>b</mi><mn>1</mn></msub></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><msub><mi>r</mi><mi>k</mi></msub><mi>ρ</mi></mfrac><mo>)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mrow><mn>1</mn><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></msubsup><mrow><mrow><mo>(</mo><mfrac><msub><mi>b</mi><mi>k</mi></msub><msub><mi>b</mi><mn>1</mn></msub></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><msub><mi>r</mi><mi>k</mi></msub><mi>ρ</mi></mfrac><mo>)</mo></mrow><mi>m</mi></msup></mrow></mrow></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="p2.m6" class="ltx_Math" alttext="|\frac{r_{k}}{\rho}|&lt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mfrac><msub><mi>r</mi><mi>k</mi></msub><mi>ρ</mi></mfrac><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> when <math id="p2.m7" class="ltx_Math" alttext="k&gt;1" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, we have <math id="p2.m8" class="ltx_Math" alttext="\lim_{m\to\infty}(r_{k}/\rho)^{m}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>m</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mi>k</mi></msub><mo>/</mo><mi>ρ</mi></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup></mrow><mo>=</mo><mn>0</mn></mrow></math>, and hence</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\lim_{m\to\infty}{a_{m+1}\over a_{m}}=\rho." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>m</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>a</mi><mi>m</mi></msub></mfrac></mrow><mo>=</mo><mi>ρ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To illustrate this method, we will compute the square root of two. Now,
+we cannot use the equation <math id="p3.m1" class="ltx_Math" alttext="x^{2}-2=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>2</mn></mrow><mo>=</mo><mn>0</mn></mrow></math> because it has two roots,
+<math id="p3.m2" class="ltx_Math" alttext="+\sqrt{2}" display="inline"><mrow><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math> and <math id="p3.m3" class="ltx_Math" alttext="-\sqrt{2}" display="inline"><mrow><mo>-</mo><msqrt><mn>2</mn></msqrt></mrow></math>, which are equal in absolute value. So what
+we shall do instead is to use the equation <math id="p3.m4" class="ltx_Math" alttext="(x-1)^{2}=2" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow></math>, or <math id="p3.m5" class="ltx_Math" alttext="x^{2}-2x-3=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mn>3</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>, whose roots are <math id="p3.m6" class="ltx_Math" alttext="1-\sqrt{2}" display="inline"><mrow><mn>1</mn><mo>-</mo><msqrt><mn>2</mn></msqrt></mrow></math> and <math id="p3.m7" class="ltx_Math" alttext="1+\sqrt{2}" display="inline"><mrow><mn>1</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>. Since
+<math id="p3.m8" class="ltx_Math" alttext="|1+\sqrt{2}|&gt;|1-\sqrt{2}|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">|</mo></mrow></mrow></math>, we can use our method to approximate
+the larger of these roots, namely <math id="p3.m9" class="ltx_Math" alttext="1+\sqrt{2}" display="inline"><mrow><mn>1</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow></math>; to approximate <math id="p3.m10" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>,
+we subtract <math id="p3.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> from our answer. The recursion we should use is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="a_{m+2}-2a_{m+1}-a_{m}=0" display="block"><mrow><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>-</mo><msub><mi>a</mi><mi>m</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or, moving terms around,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="a_{m+2}=2a_{m+1}+a_{m}." display="block"><mrow><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><msub><mi>a</mi><mi>m</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we choose <math id="p3.m12" class="ltx_Math" alttext="b_{1}=-b_{2}=1/(2\sqrt{2})" display="inline"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>-</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then we have</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=b_{1}\left(1+\sqrt{2}\right)^{0}+b_{2}\left(1-\sqrt{2}\right)^{0%
+}=b_{1}+b_{2}=0" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow><mn>0</mn></msup></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow><mn>0</mn></msup></mrow></mrow><mo>=</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=b_{1}\left(1+\sqrt{2}\right)^{1}+b_{2}\left(1-\sqrt{2}\right)^{1%
+}=b_{1}+b_{2}+(b_{1}-b_{2})\sqrt{2}=1." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow><mn>1</mn></msup></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mn>2</mn></msqrt></mrow><mo>)</mo></mrow><mn>1</mn></msup></mrow></mrow><mo>=</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>-</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mn>2</mn></msqrt></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Starting with these values, we obtain the following sequence:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=1" display="inline"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle a_{2}" display="inline"><msub><mi>a</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=2" display="inline"><mrow><mi></mi><mo>=</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle a_{3}" display="inline"><msub><mi>a</mi><mn>3</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=5" display="inline"><mrow><mi></mi><mo>=</mo><mn>5</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle a_{4}" display="inline"><msub><mi>a</mi><mn>4</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=12" display="inline"><mrow><mi></mi><mo>=</mo><mn>12</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle a_{5}" display="inline"><msub><mi>a</mi><mn>5</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=29" display="inline"><mrow><mi></mi><mo>=</mo><mn>29</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle a_{6}" display="inline"><msub><mi>a</mi><mn>6</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=70" display="inline"><mrow><mi></mi><mo>=</mo><mn>70</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle a_{7}" display="inline"><msub><mi>a</mi><mn>7</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=169" display="inline"><mrow><mi></mi><mo>=</mo><mn>169</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle a_{8}" display="inline"><msub><mi>a</mi><mn>8</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle=408" display="inline"><mrow><mi></mi><mo>=</mo><mn>408</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle a_{9}" display="inline"><msub><mi>a</mi><mn>9</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle=985" display="inline"><mrow><mi></mi><mo>=</mo><mn>985</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle a_{10}" display="inline"><msub><mi>a</mi><mn>10</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=2738" display="inline"><mrow><mi></mi><mo>=</mo><mn>2738</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle a_{11}" display="inline"><msub><mi>a</mi><mn>11</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=5741" display="inline"><mrow><mi></mi><mo>=</mo><mn>5741</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\displaystyle a_{12}" display="inline"><msub><mi>a</mi><mn>12</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle=13860" display="inline"><mrow><mi></mi><mo>=</mo><mn>13860</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, as our approximations to <math id="p3.m13" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>, we have</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="1,\frac{3}{2},\frac{7}{5},\frac{17}{12},\frac{41}{29},\frac{99}{70},\frac{239}%
+{169},\frac{577}{408},\frac{1753}{985},\frac{3003}{2738},\frac{8119}{5741}." display="block"><mrow><mrow><mn>1</mn><mo>,</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>7</mn><mn>5</mn></mfrac><mo>,</mo><mfrac><mn>17</mn><mn>12</mn></mfrac><mo>,</mo><mfrac><mn>41</mn><mn>29</mn></mfrac><mo>,</mo><mfrac><mn>99</mn><mn>70</mn></mfrac><mo>,</mo><mfrac><mn>239</mn><mn>169</mn></mfrac><mo>,</mo><mfrac><mn>577</mn><mn>408</mn></mfrac><mo>,</mo><mfrac><mn>1753</mn><mn>985</mn></mfrac><mo>,</mo><mfrac><mn>3003</mn><mn>2738</mn></mfrac><mo>,</mo><mfrac><mn>8119</mn><mn>5741</mn></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By making suitable transformations, one can compute all the roots
+of a polynomial using this technique. A way to do this is to start
+with a rational number <math id="p4.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> which is closer to the desired root than
+to the other roots, then make a change of variable <math id="p4.m2" class="ltx_Math" alttext="x=1/(y+h)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">As an example, we shall examine the roots of <math id="p5.m1" class="ltx_Math" alttext="x^{3}+9x+1" display="inline"><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></math>.
+Approximating the polynomial by leaving off the constant term, we
+guess that the roots are close to <math id="p5.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, <math id="p5.m3" class="ltx_Math" alttext="+3i" display="inline"><mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></math>, and <math id="p5.m4" class="ltx_Math" alttext="-3i" display="inline"><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></math>. Since the
+two complex roots are conjugates, it suffices to find one of them.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">To look for the root near <math id="p6.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, we make the change of variable <math id="p6.m2" class="ltx_Math" alttext="x=1/y" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>y</mi></mrow></mrow></math> to obtain <math id="p6.m3" class="ltx_Math" alttext="y^{3}+9y^{2}+1=0" display="inline"><mrow><mrow><msup><mi>y</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>, which gives the recursion
+<math id="p6.m4" class="ltx_Math" alttext="a_{k+3}+9a_{k+2}+a_{k}=0" display="inline"><mrow><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>3</mn></mrow></msub><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><mo>+</mo><msub><mi>a</mi><mi>k</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>. Picking some initial values, this
+recursion gives us the sequence</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="0,0,1,-9,81,-738,6723,-61236,557766,-5090401,\ldots," display="block"><mrow><mrow><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>9</mn></mrow><mo>,</mo><mn>81</mn><mo>,</mo><mrow><mo>-</mo><mn>738</mn></mrow><mo>,</mo><mn>6723</mn><mo>,</mo><mrow><mo>-</mo><mn>61236</mn></mrow><mo>,</mo><mn>557766</mn><mo>,</mo><mrow><mo>-</mo><mn>5090401</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence we obtain the approximations</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="-\frac{1}{9},-\frac{1}{9},-\frac{81}{738},-\frac{738}{6723},-\frac{6723}{61236%
+},-\frac{61236}{557766},-\frac{557766}{5090401},\ldots." display="block"><mrow><mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>1</mn><mn>9</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>81</mn><mn>738</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>738</mn><mn>6723</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>6723</mn><mn>61236</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>61236</mn><mn>557766</mn></mfrac></mrow><mo>,</mo><mrow><mo>-</mo><mfrac><mn>557766</mn><mn>5090401</mn></mfrac></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">To look for the root near <math id="p7.m1" class="ltx_Math" alttext="3i" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></math>, we make the change of variable
+<math id="p7.m2" class="ltx_Math" alttext="x=1/(y+3i)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> to obtain <math id="p7.m3" class="ltx_Math" alttext="y^{3}+(9+9i)y^{2}+(-27+54i)y+82-27i=0" display="inline"><mrow><mrow><mrow><msup><mi>y</mi><mn>3</mn></msup><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>9</mn><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mn>27</mn></mrow><mo>+</mo><mrow><mn>54</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mn>82</mn></mrow><mo>-</mo><mrow><mn>27</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, which gives the recursion</p>
+<table id="S0.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex25.m1" class="ltx_Math" alttext="a_{k+3}+(9+9i)a_{k+2}+(-27+54i)a_{k+1}+(82-27i)a_{k}=0." display="block"><mrow><mrow><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>3</mn></mrow></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>9</mn><mo>+</mo><mrow><mn>9</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mn>27</mn></mrow><mo>+</mo><mrow><mn>54</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>82</mn><mo>-</mo><mrow><mn>27</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>a</mi><mi>k</mi></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Picking some initial values, this
+recursion gives us the sequence</p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="0,\,0,\,1,\,-9-9i,\,27+108i,\,-82-945i,\,-225+11196i,\,44415-127953i,\ldots," display="block"><mrow><mrow><mn>0</mn><mo>,</mo><mn> 0</mn><mo>,</mo><mn> 1</mn><mo rspace="4.2pt">,</mo><mrow><mrow><mo>-</mo><mn>9</mn></mrow><mo>-</mo><mrow><mn>9</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mn> 27</mn><mo>+</mo><mrow><mn>108</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><mrow><mo>-</mo><mn>82</mn></mrow><mo>-</mo><mrow><mn>945</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><mrow><mo>-</mo><mn>225</mn></mrow><mo>+</mo><mrow><mn>11196</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mn> 44415</mn><mo>-</mo><mrow><mn>127953</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">approximating algebraic numbers with linear recurrences</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ApproximatingAlgebraicNumbersWithLinearRecurrences</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11B37</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:26:54 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

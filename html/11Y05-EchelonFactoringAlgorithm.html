@@ -1,0 +1,165 @@
+<!DOCTYPE html><html>
+<head>
+<title>echelon factoring algorithm</title>
+<!--Generated on Fri Feb  9 15:47:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">echelon factoring algorithm</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Here’s a specific example that’s missing from everyone’s repertoire, when it comes to having a general factoring method:</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Example one</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="N=7477=61*127" display="inline"><mrow><mi>N</mi><mo>=</mo><mn>7477</mn><mo>=</mo><mrow><mn>61</mn><mo>*</mo><mn>127</mn></mrow></mrow></math>, and <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="\sqrt{N}\approx 88.01" display="inline"><mrow><msqrt><mi>N</mi></msqrt><mo>≈</mo><mn>88.01</mn></mrow></math>, and compute the following:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="M=2^{(7477+1)}=2^{7478}" display="block"><mrow><mi>M</mi><mo>=</mo><msup><mn>2</mn><mrow><mo stretchy="false">(</mo><mrow><mn>7477</mn><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><msup><mn>2</mn><mn>7478</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">now, <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="X=\mod(M,N-1)" display="inline"><mrow><mi>X</mi><mo>=</mo><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>N</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, and <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="\gcd(X-[2^{0}],N)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>0</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="\gcd(X-[2^{1}],N)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>1</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></math>,…, <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\gcd(X-[2^{k}]^{2},N)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><msup><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="[2^{k}]^{2}\leq\sqrt{N}" display="inline"><mrow><msup><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mn>2</mn></msup><mo>≤</mo><msqrt><mi>N</mi></msqrt></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">It’ll find the factor, but we would have to use George Woltman’s FFT’s method to compute the <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>’s for larger numbers. In this example, <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="M\mod(N-1)=246" display="inline"><mrow><mrow><mi>M</mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mrow><mo stretchy="false">(</mo><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>246</mn></mrow></math>, and <math id="S0.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="\gcd(246-2,N)=61" display="inline"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>246</mn><mo>-</mo><mn>2</mn></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>61</mn></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Also, calculate <math id="S0.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="ln(7477)\approx 8.955" display="inline"><mrow><mrow><mi>l</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>7477</mn><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mn>8.955</mn></mrow></math>, so, you could continue to check</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\gcd(X-[3^{1}],N),...,\gcd(X-[3^{k}],N)" display="block"><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>3</mn><mn>1</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>3</mn><mi>k</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that <math id="S0.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="[3^{k}]^{2}\leq sqrt(N)" display="inline"><mrow><msup><mrow><mo stretchy="false">[</mo><msup><mn>3</mn><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mn>2</mn></msup><mo>≤</mo><mrow><mi>s</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="S0.SS0.SSS0.Px1.p3.m3" class="ltx_Math" alttext="\gcd(X-[5^{2}])" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>5</mn><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S0.SS0.SSS0.Px1.p3.m4" class="ltx_Math" alttext="[5^{k}]^{2}\leq\sqrt{N}" display="inline"><mrow><msup><mrow><mo stretchy="false">[</mo><msup><mn>5</mn><mi>k</mi></msup><mo stretchy="false">]</mo></mrow><mn>2</mn></msup><mo>≤</mo><msqrt><mi>N</mi></msqrt></mrow></math>, if a factor hasn’t shown itself. Unlike primality-proving, finding the factor would be the ”proof-in-the-pudding”!</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">We’d have the answer; that’s for sure! I call it a step or ”echelon”-factoring algorithm.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Example two</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="1500450271*5915587277=8876044532898802067" display="block"><mrow><mrow><mn>1500450271</mn><mo>*</mo><mn>5915587277</mn></mrow><mo>=</mo><mn>8876044532898802067</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">You’d use this fact to get past the first <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\mathrm{modpow}()" display="inline"><mrow><mi>modpow</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="N+1=8876044532898802067+1=2^{2}*3*(2^{4}+1)*(2*3^{4}*(2*(2^{2}*5*(2^{2}*5^{3}*%
+(2*(2^{2}*7+1)+1)+1)+1)+1)*(2^{3}*3*5^{2}*7*(2*(2*(2*5+1)+1)+1)*(2^{7}*3^{2}+1%
+)+1)+1)" display="block"><mrow><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><mn>8876044532898802067</mn><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>*</mo><mn>3</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><msup><mn>3</mn><mn>4</mn></msup><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>*</mo><mn>5</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>*</mo><msup><mn>5</mn><mn>3</mn></msup><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>*</mo><mn>7</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>*</mo><mn>3</mn><mo>*</mo><msup><mn>5</mn><mn>2</mn></msup><mo>*</mo><mn>7</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>*</mo><mn>5</mn></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mn>2</mn><mn>7</mn></msup><mo>*</mo><msup><mn>3</mn><mn>2</mn></msup></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="M=2^{(}8876044532898802067+1)" display="inline"><mrow><mi>M</mi><mo>=</mo><msup><mn>2</mn><mo stretchy="false">(</mo></msup><mn>8876044532898802067</mn><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p5" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSS0.Px2.p5.m1" class="ltx_Math" alttext="k=log2[\sqrt{\sqrt{8876044532898802067}}]=15" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mi>l</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msqrt><msqrt><mn>8876044532898802067</mn></msqrt></msqrt><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mn>15</mn></mrow></math> so, 1 huge step and 31 base two subtractions, and some base 3, 5, …, 43, etc!
+…
+find <math id="S0.SS0.SSS0.Px2.p5.m2" class="ltx_Math" alttext="\mod(2^{N+1},N-1)" display="inline"><mrow><mi></mi><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mrow><mo stretchy="false">(</mo><msup><mn>2</mn><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>,</mo><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, and <math id="S0.SS0.SSS0.Px2.p5.m3" class="ltx_Math" alttext="\gcd(M-[2^{0}],N)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>M</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>0</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S0.SS0.SSS0.Px2.p5.m4" class="ltx_Math" alttext="\gcd(M-[2^{1}],N)...,\gcd(M-[2^{30}],N)" display="inline"><mrow><mrow><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>M</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>1</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>M</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><msup><mn>2</mn><mn>30</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, etc. and you’ll have a factor.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p6" class="ltx_para">
+<p class="ltx_p">It’s the best, shortest method that you’ll ever use to check for factors, and it’s definitive, assuming we can conquer the enormous modular calculation!</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p7" class="ltx_para">
+<p class="ltx_p">In this last example, the number of steps is comparable to the 2 times 16th Root of <math id="S0.SS0.SSS0.Px2.p7.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> for the base 2 calculations alone. I couldn’t do the calculations by hand.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">echelon factoring algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EchelonFactoringAlgorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:36:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:36:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">leavemsg2 (21852)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">leavemsg2 (21852)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">leavemsg2 (21852)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11Y05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">step</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">echelon</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">factoring algorithm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:47:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

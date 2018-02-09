@@ -1,0 +1,102 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Cauchy-Davenport theorem</title>
+<!--Generated on Fri Feb  9 15:25:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Cauchy-Davenport theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">There is a proof, essentially from here <span class="ltx_text ltx_font_typewriter">http://www.math.tau.ac.il/ nogaa/PDFS/annr3.pdf</span>(Imre Ruzsa et al.):</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="|A|=k" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>k</mi></mrow></math> and <math id="p2.m2" class="ltx_Math" alttext="|B|=l" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>l</mi></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="|A+B|=n" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>A</mi><mo>+</mo><mi>B</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>n</mi></mrow></math>.
+If <math id="p2.m4" class="ltx_Math" alttext="n\geq k+l-1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mrow><mrow><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, the assertion is true, now assume <math id="p2.m5" class="ltx_Math" alttext="n&lt;k+l-1" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mrow><mrow><mi>k</mi><mo>+</mo><mi>l</mi></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>.
+Form the polynomial <math id="p2.m6" class="ltx_Math" alttext="f(x,y)=\prod_{c\in A+B}(x+y-c)=\sum_{i+j\leq n}f_{ij}*x^{i}*y^{j}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>c</mi><mo>∈</mo><mrow><mi>A</mi><mo>+</mo><mi>B</mi></mrow></mrow></msub><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>-</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow><mo>≤</mo><mi>n</mi></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>*</mo><msup><mi>x</mi><mi>i</mi></msup><mo>*</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow></math>.
+The sum is over <math id="p2.m7" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>,<math id="p2.m8" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> with <math id="p2.m9" class="ltx_Math" alttext="i+j\leq n" display="inline"><mrow><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow><mo>≤</mo><mi>n</mi></mrow></math>, because there are <math id="p2.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> factors in the product.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Since <math id="p3.m1" class="ltx_Math" alttext="Z_{p}" display="inline"><msub><mi>Z</mi><mi>p</mi></msub></math> is a field, there are polynomials <math id="p3.m2" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> of degree <math id="p3.m3" class="ltx_Math" alttext="&lt;k" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>k</mi></mrow></math> and <math id="p3.m4" class="ltx_Math" alttext="h_{j}" display="inline"><msub><mi>h</mi><mi>j</mi></msub></math> of degree <math id="p3.m5" class="ltx_Math" alttext="&lt;l" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>l</mi></mrow></math> such that <math id="p3.m6" class="ltx_Math" alttext="g_{i}(x)=x^{i}" display="inline"><mrow><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></math> for all <math id="p3.m7" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="p3.m8" class="ltx_Math" alttext="h_{j}(y)=y^{j}" display="inline"><mrow><mrow><msub><mi>h</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></math> for all <math id="p3.m9" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>.
+Define a polynomial <math id="p3.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> by
+<math id="p3.m11" class="ltx_Math" alttext="p(x,y)=\sum_{i&lt;k,\hskip 5.690551ptj&lt;l}f_{ij}*x^{i}*y^{j}+\sum_{i\geq k,\hskip 5%
+.690551ptj\leq n-i}f_{ij}*g_{i}(x)*y^{j}+\sum_{j\geq l,\hskip 5.690551pti\leq n%
+-j}f_{ij}*x^{i}*h_{j}(y)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>&lt;</mo><mi>k</mi></mrow><mo rspace="8.2pt">,</mo><mrow><mi>j</mi><mo>&lt;</mo><mi>l</mi></mrow></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>*</mo><msup><mi>x</mi><mi>i</mi></msup><mo>*</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>≥</mo><mi>k</mi></mrow><mo rspace="8.2pt">,</mo><mrow><mi>j</mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></mrow></mrow></msub><mrow><mrow><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>*</mo><msub><mi>g</mi><mi>i</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>*</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><mi>j</mi><mo>≥</mo><mi>l</mi></mrow><mo rspace="8.2pt">,</mo><mrow><mi>i</mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mi>j</mi></mrow></mrow></mrow></msub><mrow><mrow><msub><mi>f</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>*</mo><msup><mi>x</mi><mi>i</mi></msup><mo>*</mo><msub><mi>h</mi><mi>j</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math>.
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">This polynomial coincides with <math id="p4.m1" class="ltx_Math" alttext="f(x,y)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> for all <math id="p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p4.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in <math id="p4.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, for these <math id="p4.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,<math id="p4.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> we have, however, <math id="p4.m8" class="ltx_Math" alttext="f(x,y)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+The polynomial <math id="p4.m9" class="ltx_Math" alttext="p(x,y)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is of degree <math id="p4.m10" class="ltx_Math" alttext="&lt;k" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>k</mi></mrow></math> in <math id="p4.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and of degree <math id="p4.m12" class="ltx_Math" alttext="&lt;l" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>l</mi></mrow></math> in <math id="p4.m13" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.
+Let <math id="p4.m14" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, then <math id="p4.m15" class="ltx_Math" alttext="p(x,y)=\sum p_{j}(x)*y^{j}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∑</mo><mrow><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>*</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow></math> is zero for all <math id="p4.m16" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, and all coefficients must be zero. Finally, <math id="p4.m17" class="ltx_Math" alttext="p_{j}(x)" display="inline"><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is zero for all <math id="p4.m18" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, and all coefficients <math id="p4.m19" class="ltx_Math" alttext="p_{ij}" display="inline"><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> of <math id="p4.m20" class="ltx_Math" alttext="p(x,y)=\sum p_{ij}*x^{i}*y^{j}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∑</mo><mrow><msub><mi>p</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>*</mo><msup><mi>x</mi><mi>i</mi></msup><mo>*</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow></math> must be zero as elements of <math id="p4.m21" class="ltx_Math" alttext="Z_{p}" display="inline"><msub><mi>Z</mi><mi>p</mi></msub></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Should the assertion of the theorem be false, then there are numbers <math id="p5.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>,<math id="p5.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> with <math id="p5.m3" class="ltx_Math" alttext="u+v=n&lt;p" display="inline"><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>=</mo><mi>n</mi><mo>&lt;</mo><mi>p</mi></mrow></math> and <math id="p5.m4" class="ltx_Math" alttext="u&lt;k" display="inline"><mrow><mi>u</mi><mo>&lt;</mo><mi>k</mi></mrow></math> and <math id="p5.m5" class="ltx_Math" alttext="v&lt;l" display="inline"><mrow><mi>v</mi><mo>&lt;</mo><mi>l</mi></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">But the monomial <math id="p6.m1" class="ltx_Math" alttext="x^{u}*y^{v}" display="inline"><mrow><msup><mi>x</mi><mi>u</mi></msup><mo>*</mo><msup><mi>y</mi><mi>v</mi></msup></mrow></math> does not appear in the second and third sum, because for <math id="p6.m2" class="ltx_Math" alttext="j=v" display="inline"><mrow><mi>j</mi><mo>=</mo><mi>v</mi></mrow></math> we have <math id="p6.m3" class="ltx_Math" alttext="i\leq n-j=u&lt;k" display="inline"><mrow><mi>i</mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mi>j</mi></mrow><mo>=</mo><mi>u</mi><mo>&lt;</mo><mi>k</mi></mrow></math>, and for <math id="p6.m4" class="ltx_Math" alttext="i=u" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>u</mi></mrow></math> we have <math id="p6.m5" class="ltx_Math" alttext="j\leq n-i=v&lt;l" display="inline"><mrow><mi>j</mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow><mo>=</mo><mi>v</mi><mo>&lt;</mo><mi>l</mi></mrow></math>.
+Then <math id="p6.m6" class="ltx_Math" alttext="p_{uv}=0" display="inline"><mrow><msub><mi>p</mi><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math> is <math id="p6.m7" class="ltx_Math" alttext="modulo\hskip 5.690551ptp" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mpadded width="+5.7pt"><mi>o</mi></mpadded><mo>⁢</mo><mi>p</mi></mrow></math> equal to <math id="p6.m8" class="ltx_Math" alttext="f_{uv}" display="inline"><msub><mi>f</mi><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub></math>, this is equal to the binomial coefficient <math id="p6.m9" class="ltx_Math" alttext="n\choose v" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>v</mi></mfrac><mo>)</mo></mrow></math>, which is not divisible by <math id="p6.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> for <math id="p6.m11" class="ltx_Math" alttext="n&lt;p" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><mi>p</mi></mrow></math>, a contradiction.
+The Cauchy-Davenport theorem is proved.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Cauchy-Davenport theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCauchyDavenportTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:34:49</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:34:49</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wolfgang (5320)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wolfgang (5320)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wolfgang (5320)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11B05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:25:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html><html>
+<head>
+<title>ramification index</title>
+<!--Generated on Fri Feb  9 15:46:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">ramification index</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Ramification in number fields</h2>
+
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span> (First definition).</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="L/K" display="inline"><mrow><mi>L</mi><mo>/</mo><mi>K</mi></mrow></math> be an extension of number fields. Let <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> be a nonzero
+prime ideal in the ring of integers <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\mathcal{O}_{K}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>K</mi></msub></math> of <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, and suppose the
+ideal <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="{\mathfrak{p}}\mathcal{O}_{L}\subset\mathcal{O}_{L}" display="inline"><mrow><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow><mo>⊂</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow></math> factors as</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="{\mathfrak{p}}\mathcal{O}_{L}=\prod_{i=1}^{n}{\mathfrak{P}}_{i}^{e_{i}}" display="block"><mrow><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>𝔓</mi><mi>i</mi><msub><mi>e</mi><mi>i</mi></msub></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some prime ideals <math id="Thmtheorem1.p1.m6" class="ltx_Math" alttext="{\mathfrak{P}}_{i}\subset\mathcal{O}_{L}" display="inline"><mrow><msub><mi>𝔓</mi><mi>i</mi></msub><mo>⊂</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow></math> and exponents <math id="Thmtheorem1.p1.m7" class="ltx_Math" alttext="e_{i}\in\mathbb{N}" display="inline"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>∈</mo><mi>ℕ</mi></mrow></math>. The natural number <math id="Thmtheorem1.p1.m8" class="ltx_Math" alttext="e_{i}" display="inline"><msub><mi>e</mi><mi>i</mi></msub></math> is called the <span class="ltx_text ltx_font_italic">ramification index</span>
+of <math id="Thmtheorem1.p1.m9" class="ltx_Math" alttext="{\mathfrak{P}}_{i}" display="inline"><msub><mi>𝔓</mi><mi>i</mi></msub></math> over <math id="Thmtheorem1.p1.m10" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math>. It is often denoted <math id="Thmtheorem1.p1.m11" class="ltx_Math" alttext="e({\mathfrak{P}}_{i}/{\mathfrak{p}})" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝔓</mi><mi>i</mi></msub><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. If <math id="Thmtheorem1.p1.m12" class="ltx_Math" alttext="e_{i}&gt;1" display="inline"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>&gt;</mo><mn>1</mn></mrow></math>
+for any <math id="Thmtheorem1.p1.m13" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, then we say the ideal <math id="Thmtheorem1.p1.m14" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> <span class="ltx_text ltx_font_italic">ramifies</span> in <math id="Thmtheorem1.p1.m15" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div id="Thmtheorem1.p2" class="ltx_para">
+<p class="ltx_p">Likewise, if <math id="Thmtheorem1.p2.m1" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> is a nonzero prime ideal in <math id="Thmtheorem1.p2.m2" class="ltx_Math" alttext="\mathcal{O}_{L}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></math>, and <math id="Thmtheorem1.p2.m3" class="ltx_Math" alttext="{\mathfrak{p}}:={\mathfrak{P}}\cap\mathcal{O}_{K}" display="inline"><mrow><mi>𝔭</mi><mo>:=</mo><mrow><mi>𝔓</mi><mo>∩</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>K</mi></msub></mrow></mrow></math>, then we say <math id="Thmtheorem1.p2.m4" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> <span class="ltx_text ltx_font_italic">ramifies</span> over <math id="Thmtheorem1.p2.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> if the
+ramification index <math id="Thmtheorem1.p2.m6" class="ltx_Math" alttext="e({\mathfrak{P}}/{\mathfrak{p}})" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="Thmtheorem1.p2.m7" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> in the factorization of the
+ideal <math id="Thmtheorem1.p2.m8" class="ltx_Math" alttext="{\mathfrak{p}}\mathcal{O}_{L}\subset\mathcal{O}_{L}" display="inline"><mrow><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow><mo>⊂</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow></math> is greater than 1. That is, a prime <math id="Thmtheorem1.p2.m9" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math>
+in <math id="Thmtheorem1.p2.m10" class="ltx_Math" alttext="\mathcal{O}_{K}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>K</mi></msub></math> ramifies in <math id="Thmtheorem1.p2.m11" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> if at least one prime <math id="Thmtheorem1.p2.m12" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> dividing <math id="Thmtheorem1.p2.m13" class="ltx_Math" alttext="{\mathfrak{p}}\mathcal{O}_{L}" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow></math> ramifies over <math id="Thmtheorem1.p2.m14" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. If <math id="Thmtheorem1.p2.m15" class="ltx_Math" alttext="L/K" display="inline"><mrow><mi>L</mi><mo>/</mo><mi>K</mi></mrow></math> is a Galois extension, then the
+ramification indices of all the primes dividing <math id="Thmtheorem1.p2.m16" class="ltx_Math" alttext="{\mathfrak{p}}\mathcal{O}_{L}" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></mrow></math> are equal,
+since the Galois group is transitive on this set of primes.</p>
+</div>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>The local view</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">The phenomenon of ramification has an equivalent interpretation in
+terms of local rings. With <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="L/K" display="inline"><mrow><mi>L</mi><mo>/</mo><mi>K</mi></mrow></math> as before, let <math id="S1.SS1.p1.m2" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> be a prime in
+<math id="S1.SS1.p1.m3" class="ltx_Math" alttext="\mathcal{O}_{L}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub></math> with <math id="S1.SS1.p1.m4" class="ltx_Math" alttext="{\mathfrak{p}}:={\mathfrak{P}}\cap\mathcal{O}_{K}" display="inline"><mrow><mi>𝔭</mi><mo>:=</mo><mrow><mi>𝔓</mi><mo>∩</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>K</mi></msub></mrow></mrow></math>. Then the induced map of
+localizations <math id="S1.SS1.p1.m5" class="ltx_Math" alttext="(\mathcal{O}_{K})_{\mathfrak{p}}\hookrightarrow(\mathcal{O}_{L})_{\mathfrak{P}}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>K</mi></msub><mo stretchy="false">)</mo></mrow><mi>𝔭</mi></msub><mo>↪</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub><mo stretchy="false">)</mo></mrow><mi>𝔓</mi></msub></mrow></math> is a local
+homomorphism of local rings (in fact, of discrete valuation rings),
+and the ramification index of <math id="S1.SS1.p1.m6" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> over <math id="S1.SS1.p1.m7" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> is the unique natural
+number <math id="S1.SS1.p1.m8" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> such that</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="{\mathfrak{p}}(\mathcal{O}_{L})_{\mathfrak{P}}=({\mathfrak{P}}(\mathcal{O}_{L}%
+)_{\mathfrak{P}})^{e}\subset(\mathcal{O}_{L})_{\mathfrak{P}}." display="block"><mrow><mrow><mrow><mi>𝔭</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub><mo stretchy="false">)</mo></mrow><mi>𝔓</mi></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub><mo stretchy="false">)</mo></mrow><mi>𝔓</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>e</mi></msup><mo>⊂</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>L</mi></msub><mo stretchy="false">)</mo></mrow><mi>𝔓</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p">An astute reader may notice that this formulation of ramification
+index does not require that <math id="S1.SS1.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> and <math id="S1.SS1.p2.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be number fields, or even that
+they play any role at all. We take advantage of this fact here to give
+a second, more general definition.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span> (Second definition).</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="\iota:A\longrightarrow B" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>A</mi><mo>⟶</mo><mi>B</mi></mrow></mrow></math> be any ring homomorphism. Suppose <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="{\mathfrak{P}}\subset B" display="inline"><mrow><mi>𝔓</mi><mo>⊂</mo><mi>B</mi></mrow></math>
+is a prime ideal such that the localization <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="B_{\mathfrak{P}}" display="inline"><msub><mi>B</mi><mi>𝔓</mi></msub></math> of <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> at <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> is a
+discrete valuation ring. Let <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> be the prime ideal <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="\iota^{-1}({\mathfrak{P}})\subset A" display="inline"><mrow><mrow><msup><mi>ι</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔓</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mi>A</mi></mrow></math>, so that <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> induces a local homomorphism <math id="Thmtheorem2.p1.m9" class="ltx_Math" alttext="\iota_{\mathfrak{P}}:A_{\mathfrak{p}}\longrightarrow B_{\mathfrak{P}}" display="inline"><mrow><msub><mi>ι</mi><mi>𝔓</mi></msub><mo>:</mo><mrow><msub><mi>A</mi><mi>𝔭</mi></msub><mo>⟶</mo><msub><mi>B</mi><mi>𝔓</mi></msub></mrow></mrow></math>. Then the <span class="ltx_text ltx_font_italic">ramification index</span> <math id="Thmtheorem2.p1.m10" class="ltx_Math" alttext="e({\mathfrak{P}}/{\mathfrak{p}})" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is
+defined to be the unique natural number such that</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\iota({\mathfrak{p}})B_{\mathfrak{P}}=({\mathfrak{P}}B_{\mathfrak{P}})^{e({%
+\mathfrak{P}}/{\mathfrak{p}})}\subset B_{\mathfrak{P}}," display="block"><mrow><mrow><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔭</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mi>𝔓</mi></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>⁢</mo><msub><mi>B</mi><mi>𝔓</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⊂</mo><msub><mi>B</mi><mi>𝔓</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or <math id="Thmtheorem2.p1.m11" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> if <math id="Thmtheorem2.p1.m12" class="ltx_Math" alttext="\iota({\mathfrak{p}})B_{\mathfrak{P}}=(0)" display="inline"><mrow><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔭</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mi>𝔓</mi></msub></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">The reader who is not interested in local rings may assume that <math id="S1.SS1.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+and <math id="S1.SS1.p3.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are unique factorization domains, in which case <math id="S1.SS1.p3.m3" class="ltx_Math" alttext="e({\mathfrak{P}}/{\mathfrak{p}})" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is
+the exponent of <math id="S1.SS1.p3.m4" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> in the factorization of the ideal <math id="S1.SS1.p3.m5" class="ltx_Math" alttext="\iota({\mathfrak{p}})B" display="inline"><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔭</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>B</mi></mrow></math>,
+just as in our first definition (but without the requirement that the
+rings <math id="S1.SS1.p3.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.SS1.p3.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> originate from number fields).</p>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<p class="ltx_p">There is of course much more that can be said about ramification
+indices even in this purely algebraic setting, but we limit ourselves
+to the following remarks:</p>
+</div>
+<div id="S1.SS1.p5" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are themselves discrete valuation rings,
+with respective maximal ideals <math id="I1.i1.p1.m3" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math>. Let <math id="I1.i1.p1.m5" class="ltx_Math" alttext="\hat{A}:=\,\underset{\longleftarrow}{\lim}\,A/{\mathfrak{p}}^{n}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mo rspace="4.2pt">:=</mo><mrow><mrow><mpadded width="+1.7pt"><munder accentunder="true"><mo>lim</mo><mo>⟵</mo></munder></mpadded><mo>⁢</mo><mi>A</mi></mrow><mo>/</mo><msup><mi>𝔭</mi><mi>n</mi></msup></mrow></mrow></math> and <math id="I1.i1.p1.m6" class="ltx_Math" alttext="\hat{B}:=\,\underset{\longleftarrow}{\lim}\,B/{\mathfrak{P}}^{n}" display="inline"><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover><mo rspace="4.2pt">:=</mo><mrow><mrow><mpadded width="+1.7pt"><munder accentunder="true"><mo>lim</mo><mo>⟵</mo></munder></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>/</mo><msup><mi>𝔓</mi><mi>n</mi></msup></mrow></mrow></math> be the completions of <math id="I1.i1.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+and <math id="I1.i1.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with respect to <math id="I1.i1.p1.m9" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> and <math id="I1.i1.p1.m10" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math>. Then</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="e({\mathfrak{P}}/{\mathfrak{p}})=e({\mathfrak{P}}\hat{B}/{\mathfrak{p}}\hat{A})." display="block"><mrow><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>𝔓</mi><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">^</mo></mover></mrow><mo>/</mo><mi>𝔭</mi></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, the ramification index of <math id="I1.i1.p1.m11" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> over <math id="I1.i1.p1.m12" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> in the
+<math id="I1.i1.p1.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>–algebra <math id="I1.i1.p1.m14" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> equals the ramification index in the completions of
+<math id="I1.i1.p1.m15" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i1.p1.m16" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with respect to <math id="I1.i1.p1.m17" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math> and <math id="I1.i1.p1.m18" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="I1.i2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are Dedekind domains, with respective
+fraction fields <math id="I1.i2.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. If <math id="I1.i2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> equals the integral closure of <math id="I1.i2.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+in <math id="I1.i2.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, then</p>
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\sum_{{\mathfrak{P}}\mid{\mathfrak{p}}}e({\mathfrak{P}}/{\mathfrak{p}})f({%
+\mathfrak{P}}/{\mathfrak{p}})\leq[L:K]," display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>𝔓</mi><mo>∣</mo><mi>𝔭</mi></mrow></munder><mi>e</mi><mrow><mo stretchy="false">(</mo><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi><mo stretchy="false">)</mo></mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">[</mo><mi>L</mi><mo>:</mo><mi>K</mi><mo stretchy="false">]</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i2.p1.m8" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> ranges over all prime ideals in <math id="I1.i2.p1.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> that divide <math id="I1.i2.p1.m10" class="ltx_Math" alttext="{\mathfrak{p}}B" display="inline"><mrow><mi>𝔭</mi><mo>⁢</mo><mi>B</mi></mrow></math>, and
+<math id="I1.i2.p1.m11" class="ltx_Math" alttext="f({\mathfrak{P}}/{\mathfrak{p}}):=\dim_{A/{\mathfrak{p}}}(B/{\mathfrak{P}})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝔓</mi><mo>/</mo><mi>𝔭</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mo>dim</mo><mrow><mi>A</mi><mo>/</mo><mi>𝔭</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>/</mo><mi>𝔓</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the inertial degree of <math id="I1.i2.p1.m12" class="ltx_Math" alttext="{\mathfrak{P}}" display="inline"><mi>𝔓</mi></math> over
+<math id="I1.i2.p1.m13" class="ltx_Math" alttext="{\mathfrak{p}}" display="inline"><mi>𝔭</mi></math>. Equality holds in Equation (<a href="#S1.E2" title="(2) ‣ 2. ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) whenever <math id="I1.i2.p1.m14" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is
+finitely generated as an <math id="I1.i2.p1.m15" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>–module.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Ramification in algebraic geometry</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The word “ramify” in English means “to divide into two or more
+branches,” and we will show in this section that the mathematical term
+lives up to its common English meaning.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span> (Algebraic version).</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="f:C_{1}\longrightarrow C_{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⟶</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></mrow></math> be a non–constant regular morphism of curves
+(by which we mean one dimensional nonsingular irreducible algebraic
+varieties) over an algebraically closed field <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Then <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has a
+nonzero degree <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="n:=\deg f" display="inline"><mrow><mi>n</mi><mo>:=</mo><mrow><mi>deg</mi><mo>⁡</mo><mi>f</mi></mrow></mrow></math>, which can be defined in any of the
+following ways:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The number of points in a generic fiber <math id="I2.i1.p1.m1" class="ltx_Math" alttext="f^{-1}(p)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math>, for <math id="I2.i1.p1.m2" class="ltx_Math" alttext="p\in C_{2}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The maximum number of points in <math id="I2.i2.p1.m1" class="ltx_Math" alttext="f^{-1}(p)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math>, for <math id="I2.i2.p1.m2" class="ltx_Math" alttext="p\in C_{2}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The degree of the extension <math id="I2.i3.p1.m1" class="ltx_Math" alttext="k(C_{1})/f^{*}k(C_{2})" display="inline"><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><msup><mi>f</mi><mo>*</mo></msup></mrow><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> of function
+fields</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Thmtheorem3.p2" class="ltx_para">
+<p class="ltx_p">There is a finite set of points <math id="Thmtheorem3.p2.m1" class="ltx_Math" alttext="p\in C_{2}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math> for which the inverse
+image <math id="Thmtheorem3.p2.m2" class="ltx_Math" alttext="f^{-1}(p)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> does not have size <math id="Thmtheorem3.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and we call these points the
+<span class="ltx_text ltx_font_italic">branch points</span> or <span class="ltx_text ltx_font_italic">ramification points</span> of <math id="Thmtheorem3.p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. If <math id="Thmtheorem3.p2.m5" class="ltx_Math" alttext="P\in C_{1}" display="inline"><mrow><mi>P</mi><mo>∈</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></math> with <math id="Thmtheorem3.p2.m6" class="ltx_Math" alttext="f(P)=p" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>p</mi></mrow></math>, then the <span class="ltx_text ltx_font_italic">ramification index</span> <math id="Thmtheorem3.p2.m7" class="ltx_Math" alttext="e(P/p)" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>/</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> of
+<math id="Thmtheorem3.p2.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Thmtheorem3.p2.m9" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the ramification index obtained algebraically from
+Definition <a href="#Thmtheorem2" title="Definition 2 (Second definition). ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> by taking</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="A=k[C_{2}]_{p}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>p</mi></msub></mrow></mrow></math>, the local ring consisting of all rational
+functions in the function field <math id="I3.i1.p1.m2" class="ltx_Math" alttext="k(C_{2})" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> which are regular at <math id="I3.i1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="B=k[C_{1}]_{P}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>P</mi></msub></mrow></mrow></math>, the local ring consisting of all rational
+functions in the function field <math id="I3.i2.p1.m2" class="ltx_Math" alttext="k(C_{1})" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> which are regular at <math id="I3.i2.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="{\mathfrak{p}}={\mathfrak{m}}_{p}" display="inline"><mrow><mi>𝔭</mi><mo>=</mo><msub><mi>𝔪</mi><mi>p</mi></msub></mrow></math>, the maximal ideal in <math id="I3.i3.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> consisting of all
+functions which vanish at <math id="I3.i3.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i4.p1.m1" class="ltx_Math" alttext="{\mathfrak{P}}={\mathfrak{m}}_{P}" display="inline"><mrow><mi>𝔓</mi><mo>=</mo><msub><mi>𝔪</mi><mi>P</mi></msub></mrow></math>, the maximal ideal in <math id="I3.i4.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> consisting of all
+functions which vanish at <math id="I3.i4.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i5.p1.m1" class="ltx_Math" alttext="\iota=f^{*}_{p}:k[C_{2}]_{p}\hookrightarrow k[C_{1}]_{P}" display="inline"><mrow><mrow><mi>ι</mi><mo>=</mo><msubsup><mi>f</mi><mi>p</mi><mo>*</mo></msubsup></mrow><mo>:</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mi>p</mi></msub></mrow><mo>↪</mo><mrow><mi>k</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mi>P</mi></msub></mrow></mrow></mrow></math>, the map on
+the function fields induced by the morphism <math id="I3.i5.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 4</span>.</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p">The picture in Figure <a href="#S2.F1" title="Figure 1 ‣ Example 4. ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> may be worth a thousand words. Let <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="k=\mathbb{C}" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>ℂ</mi></mrow></math> and
+<math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="C_{1}=C_{2}=\mathbb{C}=\mathbb{A}^{1}_{\mathbb{C}}" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mi>ℂ</mi><mo>=</mo><msubsup><mi>𝔸</mi><mi>ℂ</mi><mn>1</mn></msubsup></mrow></math>. Take the map <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="f:\mathbb{C}\longrightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℂ</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> given by
+<math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="f(y)=y^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math>. Then <math id="Thmtheorem4.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is plainly a map of degree 2, and every point
+in <math id="Thmtheorem4.p1.m6" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> except for 0 has two preimages in <math id="Thmtheorem4.p1.m7" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>. The point 0 is thus
+a ramification point of <math id="Thmtheorem4.p1.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> of index 2, and we have drawn the graph of <math id="Thmtheorem4.p1.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> near <math id="Thmtheorem4.p1.m10" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><img src="curve.eps" id="S2.F1.g1" class="ltx_graphics" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>The function <math id="S2.F1.m3" class="ltx_Math" alttext="f(y)=y^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math> near <math id="S2.F1.m4" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>.</figcaption>
+</figure>
+<div id="Thmtheorem4.p2" class="ltx_para">
+<p class="ltx_p">Note that we have only drawn the real locus of <math id="Thmtheorem4.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> because that is all
+that can fit into two dimensions. We see from the figure that a
+typical point on <math id="Thmtheorem4.p2.m2" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> such as the point <math id="Thmtheorem4.p2.m3" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> has two points in
+<math id="Thmtheorem4.p2.m4" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> which map to it, but that the point <math id="Thmtheorem4.p2.m5" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> has only one
+corresponding point of <math id="Thmtheorem4.p2.m6" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> which “branches” or “ramifies” into two
+distinct points of <math id="Thmtheorem4.p2.m7" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> whenever one moves away from 0.</p>
+</div>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Relation to the number field case</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">The relationship between Definition <a href="#Thmtheorem2" title="Definition 2 (Second definition). ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> and
+Definition <a href="#Thmtheorem3" title="Definition 3 (Algebraic version). ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> is easiest to explain in the case where <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>
+is a map between affine varieties. When <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> are affine,
+then their coordinate rings <math id="S2.SS1.p1.m4" class="ltx_Math" alttext="k[C_{1}]" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="S2.SS1.p1.m5" class="ltx_Math" alttext="k[C_{2}]" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> are Dedekind
+domains, and the points of the curve <math id="S2.SS1.p1.m6" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> (respectively, <math id="S2.SS1.p1.m7" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>)
+correspond naturally with the maximal ideals of the ring <math id="S2.SS1.p1.m8" class="ltx_Math" alttext="k[C_{1}]" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math>
+(respectively, <math id="S2.SS1.p1.m9" class="ltx_Math" alttext="k[C_{2}]" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math>). The ramification points of the curve <math id="S2.SS1.p1.m10" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>
+are then exactly the points of <math id="S2.SS1.p1.m11" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> which correspond to maximal
+ideals of <math id="S2.SS1.p1.m12" class="ltx_Math" alttext="k[C_{1}]" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> that ramify in the algebraic sense, with respect to
+the map <math id="S2.SS1.p1.m13" class="ltx_Math" alttext="f^{*}:k[C_{2}]\longrightarrow k[C_{1}]" display="inline"><mrow><msup><mi>f</mi><mo>*</mo></msup><mo>:</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow><mo>⟶</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math> of coordinate rings.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S1.E2" title="(2) ‣ 2. ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) in this case says</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\sum_{P\in f^{-1}(p)}e(P/p)=n," display="block"><mrow><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>P</mi><mo>∈</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>/</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>n</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we see that the well known formula (<a href="#S1.E2" title="(2) ‣ 2. ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) in number
+theory is simply the algebraic analogue of the geometric fact that the
+number of points in the fiber of <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, counting multiplicities, is
+always <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 5</span>.</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="f:\mathbb{C}\longrightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℂ</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math> be given by <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="f(y)=y^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math> as in
+Example <a href="#Thmtheorem4" title="Example 4. ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>. Since <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> is just the affine line, the
+coordinate ring <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="\mathbb{C}[C_{2}]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> is equal to <math id="Thmtheorem5.p1.m5" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math>, the polynomial ring in
+one variable over <math id="Thmtheorem5.p1.m6" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. Likewise, <math id="Thmtheorem5.p1.m7" class="ltx_Math" alttext="\mathbb{C}[C_{1}]=\mathbb{C}[Y]" display="inline"><mrow><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and the induced
+map <math id="Thmtheorem5.p1.m8" class="ltx_Math" alttext="f^{*}:\mathbb{C}[X]\longrightarrow\mathbb{C}[Y]" display="inline"><mrow><msup><mi>f</mi><mo>*</mo></msup><mo>:</mo><mrow><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow><mo>⟶</mo><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math> is naturally given by <math id="Thmtheorem5.p1.m9" class="ltx_Math" alttext="f^{*}(X)=Y^{2}" display="inline"><mrow><mrow><msup><mi>f</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>Y</mi><mn>2</mn></msup></mrow></math>. We
+may accordingly identify the coordinate ring <math id="Thmtheorem5.p1.m10" class="ltx_Math" alttext="\mathbb{C}[C_{2}]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> with the
+subring <math id="Thmtheorem5.p1.m11" class="ltx_Math" alttext="\mathbb{C}[X^{2}]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow></math> of <math id="Thmtheorem5.p1.m12" class="ltx_Math" alttext="\mathbb{C}[X]=\mathbb{C}[C_{1}]" display="inline"><mrow><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem5.p2" class="ltx_para">
+<p class="ltx_p">Now, the ring <math id="Thmtheorem5.p2.m1" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> is a principal ideal domain, and the maximal
+ideals in <math id="Thmtheorem5.p2.m2" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> are exactly the principal ideals of the form <math id="Thmtheorem5.p2.m3" class="ltx_Math" alttext="(X-a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></math> for any <math id="Thmtheorem5.p2.m4" class="ltx_Math" alttext="a\in\mathbb{C}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℂ</mi></mrow></math>. Hence the nonzero prime ideals in <math id="Thmtheorem5.p2.m5" class="ltx_Math" alttext="\mathbb{C}[X^{2}]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow></math>
+are of the form <math id="Thmtheorem5.p2.m6" class="ltx_Math" alttext="(X^{2}-a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></math>, and these factor in <math id="Thmtheorem5.p2.m7" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> as</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="(X^{2}-a)=(X-\sqrt{a})(X+\sqrt{a})\subset\mathbb{C}[X]." display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><msqrt><mi>a</mi></msqrt></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>+</mo><msqrt><mi>a</mi></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the two prime ideals <math id="Thmtheorem5.p2.m8" class="ltx_Math" alttext="(X-\sqrt{a})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><msqrt><mi>a</mi></msqrt></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="Thmtheorem5.p2.m9" class="ltx_Math" alttext="(X+\sqrt{a})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>+</mo><msqrt><mi>a</mi></msqrt></mrow><mo stretchy="false">)</mo></mrow></math>
+of <math id="Thmtheorem5.p2.m10" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> are equal only when <math id="Thmtheorem5.p2.m11" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, so we see that the ideal <math id="Thmtheorem5.p2.m12" class="ltx_Math" alttext="(X^{2}-a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mn>2</mn></msup><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></math> in <math id="Thmtheorem5.p2.m13" class="ltx_Math" alttext="\mathbb{C}[X^{2}]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow></math>, corresponding to the point <math id="Thmtheorem5.p2.m14" class="ltx_Math" alttext="a\in C_{2}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math>, ramifies
+in <math id="Thmtheorem5.p2.m15" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> exactly when <math id="Thmtheorem5.p2.m16" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>. We have therefore recovered our
+previous geometric characterization of the ramified points of <math id="Thmtheorem5.p2.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>,
+solely in terms of the algebraic factorizations of ideals in <math id="Thmtheorem5.p2.m18" class="ltx_Math" alttext="\mathbb{C}[X]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">In the case where <math id="S2.SS1.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a map between projective varieties,
+Definition <a href="#Thmtheorem2" title="Definition 2 (Second definition). ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> does not directly apply to the
+coordinate rings of <math id="S2.SS1.p3.m2" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="S2.SS1.p3.m3" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>, but only to those of open covers
+of <math id="S2.SS1.p3.m4" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="S2.SS1.p3.m5" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> by affine varieties. Thus we do have an instance of
+yet another new phenomenon here, and rather than keep the reader in
+suspense we jump straight to the final, most general definition of
+ramification that we will give.</p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 6</span> (Final form).</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="f:(X,\mathcal{O}_{X})\longrightarrow(Y,\mathcal{O}_{Y})" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo stretchy="false">)</mo></mrow><mo>⟶</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>Y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be a morphism of locally ringed
+spaces. Let <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="p\in X" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>X</mi></mrow></math> and suppose that the stalk <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="(\mathcal{O}_{X})_{p}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo stretchy="false">)</mo></mrow><mi>p</mi></msub></math> is a
+discrete valuation ring. Write <math id="Thmtheorem6.p1.m4" class="ltx_Math" alttext="\phi_{p}:(\mathcal{O}_{Y})_{f(p)}\longrightarrow(\mathcal{O}_{X})_{p}" display="inline"><mrow><msub><mi>ϕ</mi><mi>p</mi></msub><mo>:</mo><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>Y</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⟶</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo stretchy="false">)</mo></mrow><mi>p</mi></msub></mrow></mrow></math>
+for the induced map of <math id="Thmtheorem6.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on stalks at <math id="Thmtheorem6.p1.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Then the <span class="ltx_text ltx_font_italic">ramification index</span> of <math id="Thmtheorem6.p1.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> over <math id="Thmtheorem6.p1.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is the unique natural number <math id="Thmtheorem6.p1.m9" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>,
+if it exists (or <math id="Thmtheorem6.p1.m10" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> if it does not exist), such that</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\phi_{p}({\mathfrak{m}}_{f(p)})(\mathcal{O}_{X})_{p}={\mathfrak{m}}_{p}^{e}," display="block"><mrow><mrow><mrow><msub><mi>ϕ</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo stretchy="false">)</mo></mrow><mi>p</mi></msub></mrow><mo>=</mo><msubsup><mi>𝔪</mi><mi>p</mi><mi>e</mi></msubsup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Thmtheorem6.p1.m11" class="ltx_Math" alttext="{\mathfrak{m}}_{p}" display="inline"><msub><mi>𝔪</mi><mi>p</mi></msub></math> and <math id="Thmtheorem6.p1.m12" class="ltx_Math" alttext="{\mathfrak{m}}_{f(p)}" display="inline"><msub><mi>𝔪</mi><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub></math> are the respective maximal ideals of
+<math id="Thmtheorem6.p1.m13" class="ltx_Math" alttext="(\mathcal{O}_{X})_{p}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo stretchy="false">)</mo></mrow><mi>p</mi></msub></math> and <math id="Thmtheorem6.p1.m14" class="ltx_Math" alttext="(\mathcal{O}_{Y})_{f(p)}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>Y</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></msub></math>. We say <math id="Thmtheorem6.p1.m15" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is <span class="ltx_text ltx_font_italic">ramified</span> in <math id="Thmtheorem6.p1.m16" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> if
+<math id="Thmtheorem6.p1.m17" class="ltx_Math" alttext="e&gt;1" display="inline"><mrow><mi>e</mi><mo>&gt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 7</span>.</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p">A ring homomorphism <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="\iota:A\longrightarrow B" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>A</mi><mo>⟶</mo><mi>B</mi></mrow></mrow></math> corresponds functorially to a
+morphism <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)" display="inline"><mrow><mrow><mi>Spec</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⟶</mo><mrow><mi>Spec</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> of locally ringed spaces from the
+prime spectrum of <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to that of <math id="Thmtheorem7.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and the algebraic notion of
+ramification from Definition <a href="#Thmtheorem2" title="Definition 2 (Second definition). ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> equals the
+sheaf–theoretic notion of ramification from Definition <a href="#Thmtheorem6" title="Definition 6 (Final form). ‣ 2.1 Relation to the number field case ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.</p>
+</div>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 8</span>.</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p">For any morphism of varieties <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="f:C_{1}\longrightarrow C_{2}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⟶</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></mrow></math>, there is an induced
+morphism <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="f^{\#}" display="inline"><msup><mi>f</mi><mi mathvariant="normal">#</mi></msup></math> on the structure sheaves of <math id="Thmtheorem8.p1.m3" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="Thmtheorem8.p1.m4" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>, which are
+locally ringed spaces. If <math id="Thmtheorem8.p1.m5" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="Thmtheorem8.p1.m6" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> are curves, then the stalks are one dimensional regular local rings and therefore discrete valuation rings, so in this way we recover the algebraic
+geometric definition (Definition <a href="#Thmtheorem3" title="Definition 3 (Algebraic version). ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) from the sheaf
+definition (Definition <a href="#Thmtheorem6" title="Definition 6 (Final form). ‣ 2.1 Relation to the number field case ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>).</p>
+</div>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Ramification in complex analysis</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Ramification points or branch points in complex geometry are merely a
+special case of the high–flown terminology of
+Definition <a href="#Thmtheorem6" title="Definition 6 (Final form). ‣ 2.1 Relation to the number field case ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>. However, they are important enough to merit a
+separate mention here.</p>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 9</span> (Analytic version).</h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem9.p1.m1" class="ltx_Math" alttext="f:M\longrightarrow N" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>M</mi><mo>⟶</mo><mi>N</mi></mrow></mrow></math> be a holomorphic map of Riemann surfaces. For any <math id="Thmtheorem9.p1.m2" class="ltx_Math" alttext="p\in M" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>M</mi></mrow></math>, there exists local coordinate charts <math id="Thmtheorem9.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="Thmtheorem9.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> around <math id="Thmtheorem9.p1.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>
+and <math id="Thmtheorem9.p1.m6" class="ltx_Math" alttext="f(p)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="Thmtheorem9.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is locally the map <math id="Thmtheorem9.p1.m8" class="ltx_Math" alttext="z\mapsto z^{e}" display="inline"><mrow><mi>z</mi><mo>↦</mo><msup><mi>z</mi><mi>e</mi></msup></mrow></math> from <math id="Thmtheorem9.p1.m9" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>
+to <math id="Thmtheorem9.p1.m10" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. The natural number <math id="Thmtheorem9.p1.m11" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> is called the <span class="ltx_text ltx_font_italic">ramification index</span>
+of <math id="Thmtheorem9.p1.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Thmtheorem9.p1.m13" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, and <math id="Thmtheorem9.p1.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is said to be a <span class="ltx_text ltx_font_italic">branch point</span> or <span class="ltx_text ltx_font_italic">ramification point</span> of <math id="Thmtheorem9.p1.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> if <math id="Thmtheorem9.p1.m16" class="ltx_Math" alttext="e&gt;1" display="inline"><mrow><mi>e</mi><mo>&gt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 10</span>.</h6>
+<div id="Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">Take the map <math id="Thmtheorem10.p1.m1" class="ltx_Math" alttext="f:\mathbb{C}\longrightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℂ</mi><mo>⟶</mo><mi>ℂ</mi></mrow></mrow></math>, <math id="Thmtheorem10.p1.m2" class="ltx_Math" alttext="f(y)=y^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math> of
+Example <a href="#Thmtheorem4" title="Example 4. ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>. We study the behavior of <math id="Thmtheorem10.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> near the
+unramified point <math id="Thmtheorem10.p1.m4" class="ltx_Math" alttext="y=1" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn></mrow></math> and near the ramified point <math id="Thmtheorem10.p1.m5" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>. Near <math id="Thmtheorem10.p1.m6" class="ltx_Math" alttext="y=1" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn></mrow></math>,
+take the coordinate <math id="Thmtheorem10.p1.m7" class="ltx_Math" alttext="w=y-1" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> on the domain and <math id="Thmtheorem10.p1.m8" class="ltx_Math" alttext="v=x-1" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> on the
+range. Then <math id="Thmtheorem10.p1.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> maps <math id="Thmtheorem10.p1.m10" class="ltx_Math" alttext="w+1" display="inline"><mrow><mi>w</mi><mo>+</mo><mn>1</mn></mrow></math> to <math id="Thmtheorem10.p1.m11" class="ltx_Math" alttext="(w+1)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>, which in the <math id="Thmtheorem10.p1.m12" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> coordinate
+is <math id="Thmtheorem10.p1.m13" class="ltx_Math" alttext="(w+1)^{2}-1=2w+w^{2}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><msup><mi>w</mi><mn>2</mn></msup></mrow></mrow></math>. If we change coordinates to <math id="Thmtheorem10.p1.m14" class="ltx_Math" alttext="z=2w+w^{2}" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><msup><mi>w</mi><mn>2</mn></msup></mrow></mrow></math> on the domain, keeping <math id="Thmtheorem10.p1.m15" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> on the range, then <math id="Thmtheorem10.p1.m16" class="ltx_Math" alttext="f(z)=z" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math>, so the
+ramification index of <math id="Thmtheorem10.p1.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Thmtheorem10.p1.m18" class="ltx_Math" alttext="y=1" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>1</mn></mrow></math> is equal to 1.</p>
+</div>
+<div id="Thmtheorem10.p2" class="ltx_para">
+<p class="ltx_p">Near <math id="Thmtheorem10.p2.m1" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>, the function <math id="Thmtheorem10.p2.m2" class="ltx_Math" alttext="f(y)=y^{2}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></math> is already in the form <math id="Thmtheorem10.p2.m3" class="ltx_Math" alttext="z\mapsto z^{e}" display="inline"><mrow><mi>z</mi><mo>↦</mo><msup><mi>z</mi><mi>e</mi></msup></mrow></math> with <math id="Thmtheorem10.p2.m4" class="ltx_Math" alttext="e=2" display="inline"><mrow><mi>e</mi><mo>=</mo><mn>2</mn></mrow></math>, so the ramification index of <math id="Thmtheorem10.p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Thmtheorem10.p2.m6" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math> is
+equal to 2.</p>
+</div>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Algebraic–analytic correspondence</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">Of course, the analytic notion of ramification given in
+Definition <a href="#Thmtheorem9" title="Definition 9 (Analytic version). ‣ 3 Ramification in complex analysis ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a> can be couched in terms of locally ringed
+spaces as well. Any Riemann surface together with its sheaf of
+holomorphic functions is a locally ringed space. Furthermore the stalk
+at any point is always a discrete valuation ring, because germs of
+holomorphic functions have Taylor expansions making the stalk
+isomorphic to the power series ring <math id="S3.SS1.p1.m1" class="ltx_Math" alttext="\mathbb{C}[[z]]" display="inline"><mrow><mi>ℂ</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">[</mo><mi>z</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow></mrow></math>. We can therefore apply
+Definition <a href="#Thmtheorem6" title="Definition 6 (Final form). ‣ 2.1 Relation to the number field case ‣ 2 Ramification in algebraic geometry ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> to any holomorphic map of Riemann surfaces, and
+it is not surprising that this process yields the same results as
+Definition <a href="#Thmtheorem9" title="Definition 9 (Analytic version). ‣ 3 Ramification in complex analysis ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>.</p>
+</div>
+<div id="S3.SS1.p2" class="ltx_para">
+<p class="ltx_p">More generally, every map of algebraic varieties <math id="S3.SS1.p2.m1" class="ltx_Math" alttext="f:V\longrightarrow W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>V</mi><mo>⟶</mo><mi>W</mi></mrow></mrow></math> can be
+interpreted as a holomorphic map of Riemann surfaces in the usual way,
+and the ramification points on <math id="S3.SS1.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="S3.SS1.p2.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> under <math id="S3.SS1.p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> as algebraic
+varieties are identical to their ramification points as Riemann
+surfaces. It turns out that the analytic structure may be regarded in
+a certain sense as the “completion” of the algebraic structure, and in
+this sense the algebraic–analytic correspondence between the
+ramification points may be regarded as the geometric version of the
+equality (<a href="#S1.E1" title="(1) ‣ 1. ‣ 1.1 The local view ‣ 1 Ramification in number fields ‣ ramification index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in number theory.</p>
+</div>
+<div id="S3.SS1.p3" class="ltx_para">
+<p class="ltx_p">The algebraic–analytic correspondence of ramification points is
+itself only one manifestation of the wide ranging identification
+between algebraic geometry and analytic geometry which is explained to
+great effect in the seminal paper of Serre <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>.</p>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> Robin Hartshorne, <span class="ltx_text ltx_font_italic">Algebraic
+Geometry</span>, Springer–Verlag, 1977 (GTM <span class="ltx_text ltx_font_bold">52</span>).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> Gerald Janusz, <span class="ltx_text ltx_font_italic">Algebraic Number Fields, Second
+Edition</span>, American Mathematical Society, 1996 (GSM <span class="ltx_text ltx_font_bold">7</span>).
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> Jürgen Jost, <span class="ltx_text ltx_font_italic">Compact Riemann Surfaces</span>,
+Springer–Verlag, 1997.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> Dino Lorenzini, <span class="ltx_text ltx_font_italic">An Invitation to Arithmetic Geometry</span>, American Mathematical Society, 1996 (GSM <span class="ltx_text ltx_font_bold">9</span>).
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock"> Jean–Pierre Serre, <span class="ltx_text ltx_font_italic">Local Fields</span>,
+Springer–Verlag, 1979 (GTM <span class="ltx_text ltx_font_bold">67</span>).
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock"> Jean–Pierre Serre, “Géométrie algébraique et
+géométrie analytique,” Ann. de L’Inst. Fourier <span class="ltx_text ltx_font_bold">6</span> pp. 1–42,
+1955–56.
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock"> Joseph Silverman, The Arithmetic of Elliptic
+Curves, Springer–Verlag, 1986 (GTM <span class="ltx_text ltx_font_bold">106</span>).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">ramification index</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RamificationIndex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:36:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:36:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11S15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30F99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30F99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12F99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13B02</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 14E22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ramify</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ramified</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">unramified</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ramification degree</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ramification</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NumberField</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DecompositionGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UnramifiedExtensionsAndClassNumberDivisibility</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SplittingAndRamificationInNumberFieldsAndGaloisExtensions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">branch point</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ramification point</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:46:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

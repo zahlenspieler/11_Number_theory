@@ -1,0 +1,173 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euler polynomial</title>
+<!--Generated on Fri Feb  9 15:29:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euler polynomial</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Euler polynomials</em>  <math id="p1.m1" class="ltx_Math" alttext="E_{0}(x),\,E_{1}(x),\,E_{2}(x),\,\ldots" display="inline"><mrow><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><msub><mi>E</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math>  are certain polynomials of the indeterminate <math id="p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with rational coefficients (whose denominators may only be powers <math id="p1.m3" class="ltx_Math" alttext="1,\,2,\,4,\,8,\,\ldots" display="inline"><mrow><mn>1</mn><mo>,</mo><mn> 2</mn><mo>,</mo><mn> 4</mn><mo>,</mo><mn> 8</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math>  of 2).  The Euler polynomials may be defined by means of the generating function such that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{2e^{xt}}{e^{t}\!+\!1}\;=\;\sum_{n=0}^{\infty}E_{n}(x)\frac{t^{n}}{n!}," display="block"><mrow><mrow><mpadded width="+2.8pt"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mi>e</mi><mrow><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mrow><mpadded width="-1.7pt"><msup><mi>e</mi><mi>t</mi></msup></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mi>t</mi><mi>n</mi></msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. one can get them by dividing the Taylor series <math id="p1.m4" class="ltx_Math" alttext="2+2xt+x^{2}t^{2}+\frac{1}{3}x^{3}t^{3}+\ldots" display="inline"><mrow><mn>2</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></math>  by the Taylor series <math id="p1.m5" class="ltx_Math" alttext="2+t+\frac{1}{2}t^{2}+\frac{1}{6}t^{3}+\ldots" display="inline"><mrow><mn>2</mn><mo>+</mo><mi>t</mi><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></math>.  There are also explicit formulae for the polynomials, e.g.</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="E_{n}(x)\;=\;\sum_{k=0}^{n}{n\choose k}\frac{E_{k}}{2^{k}}\left(x\!-\!\frac{1}%
+{2}\right)^{n-k}" display="block"><mrow><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mfrac><msub><mi>E</mi><mi>k</mi></msub><msup><mn>2</mn><mi>k</mi></msup></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">via the Euler numbers <math id="p1.m6" class="ltx_Math" alttext="E_{k}" display="inline"><msub><mi>E</mi><mi>k</mi></msub></math>.  Conversely, the Euler numbers are expressed with the Euler polynomials through</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="E_{k}\;=\;2^{k}E_{k}\!\!\left(\!\frac{1}{2}\!\right)." display="block"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>E</mi><mi>k</mi></msub></mpadded><mo>=</mo><mrow><msup><mn> 2</mn><mi>k</mi></msup><mo>⁢</mo><mpadded width="-3.3pt"><msub><mi>E</mi><mi>k</mi></msub></mpadded><mo>⁢</mo><mrow><mo rspace="0.8pt">(</mo><mpadded width="-1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">The first seven Euler polynomials are</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle E_{0}(x)\;=\;1" display="inline"><mrow><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn> 1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle E_{1}(x)\;=\;x\!-\!\frac{1}{2}" display="inline"><mrow><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle E_{2}(x)\;=\;x^{2}\!-\!x" display="inline"><mrow><mrow><msub><mi>E</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle E_{3}(x)\;=\;x^{3}\!-\!\frac{3}{2}x^{2}\!+\!\frac{1}{4}" display="inline"><mrow><mrow><msub><mi>E</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle E_{4}(x)\;=\;x^{4}\!-\!2x^{3}\!+\!x" display="inline"><mrow><mrow><msub><mi>E</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>4</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>3</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle E_{5}(x)\;=\;x^{5}\!-\!\frac{5}{2}x^{4}\!+\!\frac{5}{2}x^{2}\!-%
+\!\frac{1}{2}" display="inline"><mrow><mrow><msub><mi>E</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>5</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>5</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>4</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>5</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle E_{6}(x)\;=\;x^{6}\!-\!3x^{5}\!+\!5x^{3}\!-\!3x" display="inline"><mrow><mrow><msub><mi>E</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>6</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>5</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><mn>5</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>3</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The Euler polynomials have the beautiful addition formula</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="E_{n}(x\!+\!y)\;=\;\sum_{k=0}^{n}{n\choose k}E_{k}(x)y^{k}" display="block"><mrow><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">+</mo><mi>y</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msub><mi>E</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>y</mi><mi>k</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the derivative</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="E_{n}^{\prime}(x)\;=\;nE_{n-1}(x)\qquad(\textrm{for }n=1,\,2,\,\ldots)." display="block"><mrow><msubsup><mi>E</mi><mi>n</mi><mo>′</mo></msubsup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mi>n</mi><msub><mi>E</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mtext>for </mtext><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The Euler polynomials form an example of Appell sequences.</p>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euler polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EulerPolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:07:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:07:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11B68</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BernoulliPolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BernoulliPolynomialsAndNumbers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:29:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

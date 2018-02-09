@@ -1,0 +1,401 @@
+<!DOCTYPE html><html>
+<head>
+<title>sandbox-maxima-worked-example-3</title>
+<!--Generated on Fri Feb  9 15:10:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">sandbox-maxima-worked-example-3</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Before we get started, load ezunits.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+load (ezunits);
+</pre>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span class="ltx_text ltx_markedasmath">/usr/local/share/maxima/branch_5_32_base_2_g0e99686/share/ezunits/ezunits.mac</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Units in integrals and derivatives
+</h2>
+
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Integral
+</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">Units for integrals and derivatives are derived as the same units that a finite approximation would yield.
+Turn off simplification for a moment so that we can have a look at the unsimplified form.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+simp : false $
+foo : 'integrate ((3 * t^2) ` m/s, t ` s, 0 ` s, t[1] ` s);
+</pre>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\int_{0\;\mathrm{s}}^{t_{1}\;\mathrm{s}}{3\,t^{2}\;{{\mathrm{m}}\over{\mathrm{%
+s}}}\;dt\;\mathrm{s}}" display="block"><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+2.8pt"><mn>0</mn></mpadded><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow><mrow><mpadded width="+2.8pt"><msub><mi>t</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow></msubsup><mrow><mpadded width="+1.7pt"><mn>3</mn></mpadded><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>t</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mi mathvariant="normal">m</mi><mi mathvariant="normal">s</mi></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now go ahead and simplify it.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+simp : true $
+foo : ''foo;
+</pre>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="3\,\left(\int_{0}^{t_{1}}{t^{2}\;dt}\right)\;\mathrm{m}" display="block"><mrow><mpadded width="+1.7pt"><mn>3</mn></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><msub><mi>t</mi><mn>1</mn></msub></msubsup><mrow><mpadded width="+2.8pt"><msup><mi>t</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+%, nouns;
+</pre>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="t_{1}^{3}\;\mathrm{m}" display="block"><mrow><mpadded width="+2.8pt"><msubsup><mi>t</mi><mn>1</mn><mn>3</mn></msubsup></mpadded><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Derivative
+</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Again, have a look at the unsimplified form.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+simp : false $
+foo : 'diff (sqrt (t) ` inch, t ` year, 1);
+</pre>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="{{d+^{1}}\over{d\,`^{1}\left(t,{\it year}\right)}}\,\left(\sqrt{t}\;\mathrm{%
+inch}\right)" display="block"><mrow><mpadded width="+1.7pt"><mfrac><mrow><mi>d</mi><msup><mo>+</mo><mn>1</mn></msup></mrow><mrow><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><msup><mi mathvariant="normal">`</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mi>t</mi><mo>,</mo><mi>𝑦𝑒𝑎𝑟</mi><mo>)</mo></mrow></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="+2.8pt"><msqrt><mi>t</mi></msqrt></mpadded><mo>⁢</mo><mi>inch</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Go ahead and simplify it.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+simp : true $
+foo : ''foo;
+</pre>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="{{d}\over{d\,t}}\,\sqrt{t}\;{{\mathrm{inch}}\over{\mathrm{year}}}" display="block"><mrow><mpadded width="+1.7pt"><mfrac><mi>d</mi><mrow><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><mi>t</mi></mrow></mfrac></mpadded><mo>⁢</mo><mpadded width="+2.8pt"><msqrt><mi>t</mi></msqrt></mpadded><mo>⁢</mo><mfrac><mi>inch</mi><mi>year</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+foo, nouns;
+</pre>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="{{1}\over{2\,\sqrt{t}}}\;{{\mathrm{inch}}\over{\mathrm{year}}}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mn>1</mn><mrow><mpadded width="+1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><msqrt><mi>t</mi></msqrt></mrow></mfrac></mpadded><mo>⁢</mo><mfrac><mi>inch</mi><mi>year</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Units in solving equations
+</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">‘solve_dimensional’ can solve equations in which unit-ful expressions contain unknowns.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+foo : solve_dimensional (10^6 ` Btu = 1/2 * (10 ` lbm) * v^2, v);
+</pre>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\left[v=\left(-8\,5^{{{5}\over{2}}}\right)\;{{\sqrt{\mathrm{Btu}}}\over{\sqrt{%
+\mathrm{lbm}}}},v=8\,5^{{{5}\over{2}}}\;{{\sqrt{\mathrm{Btu}}}\over{\sqrt{%
+\mathrm{lbm}}}}\right]" display="block"><mrow><mo>[</mo><mrow><mrow><mi>v</mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mo>-</mo><msup><mn>8 5</mn><mfrac><mn>5</mn><mn>2</mn></mfrac></msup></mrow><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mfrac><msqrt><mi>Btu</mi></msqrt><msqrt><mi>lbm</mi></msqrt></mfrac></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>=</mo><mrow><mpadded width="+2.8pt"><msup><mn>8 5</mn><mfrac><mn>5</mn><mn>2</mn></mfrac></msup></mpadded><mo>⁢</mo><mfrac><msqrt><mi>Btu</mi></msqrt><msqrt><mi>lbm</mi></msqrt></mfrac></mrow></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+dimensions (foo);
+</pre>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\left[{\it dimensions}\left(v\right)={{{\it length}}\over{{\it time}}},{\it
+dimensions%
+}\left(v\right)={{{\it length}}\over{{\it time}}}\right]" display="block"><mrow><mo>[</mo><mrow><mrow><mrow><mi>𝑑𝑖𝑚𝑒𝑛𝑠𝑖𝑜𝑛𝑠</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mi>𝑙𝑒𝑛𝑔𝑡ℎ</mi><mi>𝑡𝑖𝑚𝑒</mi></mfrac></mrow><mo>,</mo><mrow><mrow><mi>𝑑𝑖𝑚𝑒𝑛𝑠𝑖𝑜𝑛𝑠</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mi>𝑙𝑒𝑛𝑔𝑡ℎ</mi><mi>𝑡𝑖𝑚𝑒</mi></mfrac></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+foo1 : foo `` m/s;
+</pre>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\left[{\it``}\left(v,{{m}\over{s}}\right)=\left(-{{128\,5^{{{13}\over{2}}}\,%
+\sqrt{1055}}\over{\sqrt{45359237}}}\right)\;{{\mathrm{m}}\over{\mathrm{s}}},{%
+\it``}\left(v,{{m}\over{s}}\right)={{128\,5^{{{13}\over{2}}}\,\sqrt{1055}}%
+\over{\sqrt{45359237}}}\;{{\mathrm{m}}\over{\mathrm{s}}}\right]" display="block"><mrow><mo>[</mo><mrow><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>,</mo><mfrac><mi>m</mi><mi>s</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mo>-</mo><mfrac><mrow><mpadded width="+1.7pt"><msup><mn>128 5</mn><mfrac><mn>13</mn><mn>2</mn></mfrac></msup></mpadded><mo>⁢</mo><msqrt><mn>1055</mn></msqrt></mrow><msqrt><mn>45359237</mn></msqrt></mfrac></mrow><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mfrac><mi mathvariant="normal">m</mi><mi mathvariant="normal">s</mi></mfrac></mrow></mrow><mo>,</mo><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>,</mo><mfrac><mi>m</mi><mi>s</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+2.8pt"><mfrac><mrow><mpadded width="+1.7pt"><msup><mn>128 5</mn><mfrac><mn>13</mn><mn>2</mn></mfrac></msup></mpadded><mo>⁢</mo><msqrt><mn>1055</mn></msqrt></mrow><msqrt><mn>45359237</mn></msqrt></mfrac></mpadded><mo>⁢</mo><mfrac><mi mathvariant="normal">m</mi><mi mathvariant="normal">s</mi></mfrac></mrow></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+float (foo1);
+</pre>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\left[{\it``}\left(v,{{m}\over{s}}\right)=\left(-21567.92463845541\right)\;{{%
+\mathrm{m}}\over{\mathrm{s}}},{\it``}\left(v,{{m}\over{s}}\right)=21567.924638%
+45541\;{{\mathrm{m}}\over{\mathrm{s}}}\right]" display="block"><mrow><mo>[</mo><mrow><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>,</mo><mfrac><mi>m</mi><mi>s</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mo>-</mo><mn>21567.92463845541</mn></mrow><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mfrac><mi mathvariant="normal">m</mi><mi mathvariant="normal">s</mi></mfrac></mrow></mrow><mo>,</mo><mrow><mrow><mi mathvariant="normal">`</mi><mo>⁢</mo><mi mathvariant="normal">`</mi><mo>⁢</mo><mrow><mo>(</mo><mi>v</mi><mo>,</mo><mfrac><mi>m</mi><mi>s</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+2.8pt"><mn>21567.92463845541</mn></mpadded><mo>⁢</mo><mfrac><mi mathvariant="normal">m</mi><mi mathvariant="normal">s</mi></mfrac></mrow></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Selecting a named field from a unit-ful expression
+</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">‘@’ distributes over unit-ful expressions.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+defstruct (my3d (x, y, z));
+</pre>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="\left[{\it my3d}\left(x,y,z\right)\right]" display="block"><mrow><mo>[</mo><mrow><mi mathvariant="italic">my3d</mi><mo>⁢</mo><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+foo : my3d (17, 29, 42) ` m;
+</pre>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="{\it my3d}\left(17,29,42\right)\;\mathrm{m}" display="block"><mrow><mi mathvariant="italic">my3d</mi><mo>⁢</mo><mrow><mo>(</mo><mn>17</mn><mo>,</mo><mn>29</mn><mo>,</mo><mn>42</mn><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+foo @ z;
+</pre>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="@\left({\it my3d}\left(17,29,42\right),z\right)\;\mathrm{m}" display="block"><mrow><mi mathvariant="normal">@</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi mathvariant="italic">my3d</mi><mo>⁢</mo><mrow><mo>(</mo><mn>17</mn><mo>,</mo><mn>29</mn><mo>,</mo><mn>42</mn><mo>)</mo></mrow></mrow><mo>,</mo><mi>z</mi><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hmm, looks like it needs a little encouragement.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+''%;
+</pre>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="42\;\mathrm{m}" display="block"><mrow><mpadded width="+2.8pt"><mn>42</mn></mpadded><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Real part and imaginary part of a unit-ful expression
+</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Simplifications for unit-ful expressions apply only to noun forms of ‘realpart’ and ‘imagpart’.
+Oh well.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+declare (a, complex) $
+realpart (a ` m);
+</pre>
+<table id="S4.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex16.m1" class="ltx_Math" alttext="{\it realpart}\left(a\;\mathrm{m}\right)" display="block"><mrow><mi>𝑟𝑒𝑎𝑙𝑝𝑎𝑟𝑡</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="+2.8pt"><mi>a</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+''%;
+</pre>
+<table id="S4.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex17.m1" class="ltx_Math" alttext="{\it realpart}\left(a\right)\;\mathrm{m}" display="block"><mrow><mi>𝑟𝑒𝑎𝑙𝑝𝑎𝑟𝑡</mi><mo>⁢</mo><mrow><mo>(</mo><mi>a</mi><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+imagpart (a ` m);
+</pre>
+<table id="S4.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex18.m1" class="ltx_Math" alttext="{\it imagpart}\left(a\;\mathrm{m}\right)" display="block"><mrow><mi>𝑖𝑚𝑎𝑔𝑝𝑎𝑟𝑡</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="+2.8pt"><mi>a</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+''%;
+</pre>
+<table id="S4.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex19.m1" class="ltx_Math" alttext="{\it imagpart}\left(a\right)\;\mathrm{m}" display="block"><mrow><mi>𝑖𝑚𝑎𝑔𝑝𝑎𝑟𝑡</mi><mo>⁢</mo><mrow><mo>(</mo><mi>a</mi><mo rspace="5.3pt">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">m</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Splitting off units of varying magnitudes
+</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">This one is for converting to units which come in conventional magnitude order,
+such as hours, minutes, and seconds, or miles, feet, and inches.
+When the units are specified as a list,
+the unit conversion operator will split off the first,
+then the second from the remainder of the first,
+the third from the remainder, etc.</p>
+<pre class="ltx_verbatim ltx_font_typewriter">
+10 ` km `` mile;
+</pre>
+<table id="S5.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex20.m1" class="ltx_Math" alttext="{{78125}\over{12573}}\;\mathrm{mile}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mn>78125</mn><mn>12573</mn></mfrac></mpadded><mo>⁢</mo><mi>mile</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+10 ` km `` [mile, yard, foot, inch];
+</pre>
+<table id="S5.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex21.m1" class="ltx_Math" alttext="\left[6\;\mathrm{mile},376\;\mathrm{yard},0\;\mathrm{foot},{{608}\over{127}}\;%
+\mathrm{inch}\right]" display="block"><mrow><mo>[</mo><mrow><mpadded width="+2.8pt"><mn>6</mn></mpadded><mo>⁢</mo><mi>mile</mi></mrow><mo>,</mo><mrow><mpadded width="+2.8pt"><mn>376</mn></mpadded><mo>⁢</mo><mi>yard</mi></mrow><mo>,</mo><mrow><mpadded width="+2.8pt"><mn>0</mn></mpadded><mo>⁢</mo><mi>foot</mi></mrow><mo>,</mo><mrow><mpadded width="+2.8pt"><mfrac><mn>608</mn><mn>127</mn></mfrac></mpadded><mo>⁢</mo><mi>inch</mi></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<pre class="ltx_verbatim ltx_font_typewriter">
+apply ("+", %) `` km;
+</pre>
+<table id="S5.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex22.m1" class="ltx_Math" alttext="10\;\mathrm{km}" display="block"><mrow><mpadded width="+2.8pt"><mn>10</mn></mpadded><mo>⁢</mo><mi>km</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S5.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">sandbox-maxima-worked-example-3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Sandboxmaximaworkedexample3</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-12-30 17:48:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-12-30 17:48:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">robert_dodier (1000903)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">robert_dodier (1000903)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">robert_dodier (1000903)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Example</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:10:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

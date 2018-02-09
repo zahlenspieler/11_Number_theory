@@ -1,0 +1,809 @@
+<!DOCTYPE html><html>
+<head>
+<title>proposed elementary proof of Fermat’s last theorem</title>
+<!--Generated on Fri Feb  9 15:32:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proposed elementary proof of Fermat’s last theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Michael Pogorsky has offered what is said to be an elementary proof of Fermat’s
+last theorem. Is the proof correct? The intent
+of this entry is to show the proof up to the point at which it fails,
+if there is such a point. New equation numbers will be used.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">proof</span>
+We assume that there are positive integers <math id="p2.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> and <math id="p2.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="a^{n}+b^{n}=c^{n}\quad\quad\quad(1)" display="block"><mrow><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><msup><mi>c</mi><mi>n</mi></msup><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We can assume without loss of generality that <math id="p4.m1" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math> and <math id="p4.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are mutually coprime, so that in fact
+they are also pairwise coprime. The proof is split into 3 major cases:
+(1) <math id="p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime greater than 2, (2) <math id="p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is divisible by a prime greater than 2,
+and (3) <math id="p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a power of 2.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>n is a prime greater than 2</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Write <math id="S1.p1.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> as</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="c=a+k=b+f" display="block"><mrow><mi>c</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mi>k</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>+</mo><mi>f</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some integers <math id="S1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and <math id="S1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Then</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="a^{n}+b^{n}=(a+k)^{n}=(b+f)^{n}." display="block"><mrow><mrow><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the binomial theorem we can write</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="a^{n}=f(nb^{n-1}+\frac{1}{2}n(n-1)b^{n-2}f+\cdots+f^{n-1})\quad\quad\quad(2)" display="block"><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>f</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="b^{n}=k(na^{n-1}+\frac{1}{2}n(n-1)a^{n-2}k+\cdots+k^{n-1}).\quad\quad\quad(3)" display="block"><mrow><msup><mi>b</mi><mi>n</mi></msup><mo>=</mo><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>n</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mi>k</mi><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>.</mo><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Lemma 1. If <math id="S1.p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is prime number then <math id="S1.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p3.m3" class="ltx_Math" alttext="\binom{n}{k}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo>)</mo></mrow></math> for <math id="S1.p3.m4" class="ltx_Math" alttext="0&lt;k&lt;n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>k</mi><mo>&lt;</mo><mi>n</mi></mrow></math>.
+<br class="ltx_break">The proof is easy.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Claim: <math id="S1.p4.m1" class="ltx_Math" alttext="gcd(f,k)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. 
+<br class="ltx_break">Proof. A factor of <math id="S1.p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S1.p4.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> will also divide <math id="S1.p4.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p4.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> by equations (2)
+and (3). But <math id="S1.p4.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p4.m7" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are coprime, so the gcd of <math id="S1.p4.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S1.p4.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> must be 1.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Now write (2) as <math id="S1.p5.m1" class="ltx_Math" alttext="a^{n}=fs" display="inline"><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math> for some integer <math id="S1.p5.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">From that point in the proof the exposition is somewhat unclear
+so I will attempt to rearrange the steps in what seems to be a better order.
+First, I introduce a lemma of my own.
+Write (3) as <math id="S1.p6.m1" class="ltx_Math" alttext="b^{n}=kt" display="inline"><mrow><msup><mi>b</mi><mi>n</mi></msup><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> for some integer <math id="S1.p6.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Lemma 2. <math id="S1.p7.m1" class="ltx_Math" alttext="gcd(f,s)=n^{\alpha}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>n</mi><mi>α</mi></msup></mrow></math> and <math id="S1.p7.m2" class="ltx_Math" alttext="gcd(k,t)=n^{\beta}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>n</mi><mi>β</mi></msup></mrow></math> for
+some nonnegative integers <math id="S1.p7.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="S1.p7.m4" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>. 
+<br class="ltx_break">Proof. Suppose <math id="S1.p7.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m6" class="ltx_Math" alttext="\gcd(f,s)" display="inline"><mrow><mi>gcd</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="S1.p7.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is a prime. Then <math id="S1.p7.m8" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m9" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p7.m10" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>.
+We can write <math id="S1.p7.m11" class="ltx_Math" alttext="s=nb^{n-1}+fT" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></mrow></math> for some integer <math id="S1.p7.m12" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, so that <math id="S1.p7.m13" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m14" class="ltx_Math" alttext="s-fT" display="inline"><mrow><mi>s</mi><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math> and therefore
+<math id="S1.p7.m15" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m16" class="ltx_Math" alttext="nb^{n-1}" display="inline"><mrow><mi>n</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. Hence <math id="S1.p7.m17" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m18" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> or <math id="S1.p7.m19" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m20" class="ltx_Math" alttext="b^{n-1}" display="inline"><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>. But if <math id="S1.p7.m21" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides
+<math id="S1.p7.m22" class="ltx_Math" alttext="b^{n-1}" display="inline"><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math> then <math id="S1.p7.m23" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m24" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, a contradiction. Hence <math id="S1.p7.m25" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> divides <math id="S1.p7.m26" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. But <math id="S1.p7.m27" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime, so
+<math id="S1.p7.m28" class="ltx_Math" alttext="q=n" display="inline"><mrow><mi>q</mi><mo>=</mo><mi>n</mi></mrow></math>. From this we get that <math id="S1.p7.m29" class="ltx_Math" alttext="gcd(f,s)=n^{\alpha}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>n</mi><mi>α</mi></msup></mrow></math> for some nonnegative integer <math id="S1.p7.m30" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>.
+Similarly, <math id="S1.p7.m31" class="ltx_Math" alttext="gcd(k,t)=n^{\beta}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>n</mi><mi>β</mi></msup></mrow></math> for
+some nonnegative integer <math id="S1.p7.m32" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>. 
+<br class="ltx_break"></p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">It is clear that at least one of <math id="S1.p8.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="S1.p8.m2" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is zero, otherwise <math id="S1.p8.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p8.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>
+and <math id="S1.p8.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Without loss of generality, we can assume that <math id="S1.p8.m6" class="ltx_Math" alttext="\alpha=0" display="inline"><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">The author now introduces what he calls version A and version B. I would prefer to call these
+Case A and Case B. But there is no claim outstanding yet, so I have to defer the case split.
+What seems to be the next main result is stated in the following lemma. 
+<br class="ltx_break"></p>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">Lemma 3. There exist positive integers <math id="S1.p10.m1" class="ltx_Math" alttext="p,u,v,w" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi></mrow></math> such 
+<br class="ltx_break">1) <math id="S1.p10.m2" class="ltx_Math" alttext="a=vp" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math>, 
+<br class="ltx_break">2) if <math id="S1.p10.m3" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math> then 
+<br class="ltx_break"></p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="a=uwv+v^{n}" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="b=uwv+w^{n}" display="block"><mrow><mi>b</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="c=uwv+v^{n}+w^{n}." display="block"><mrow><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and 
+<br class="ltx_break">3) if <math id="S1.p10.m4" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> then there is a positive integers <math id="S1.p10.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> such that
+</p>
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex9.m1" class="ltx_Math" alttext="a=n^{g}uwv+v^{n}" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex10.m1" class="ltx_Math" alttext="b=n^{g}uwv+n^{gn-1}w^{n}" display="block"><mrow><mi>b</mi><mo>=</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex11.m1" class="ltx_Math" alttext="c=n^{g}uwv+v^{n}+n^{gn-1}w^{n}." display="block"><mrow><mrow><mi>c</mi><mo>=</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">Proof. (1) We have <math id="S1.p10.m6" class="ltx_Math" alttext="a^{n}=fs" display="inline"><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math>,where <math id="S1.p10.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S1.p10.m8" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> are coprime. By unique factorization of integers
+it must be that <math id="S1.p10.m9" class="ltx_Math" alttext="f=v^{n}" display="inline"><mrow><mi>f</mi><mo>=</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></math> and <math id="S1.p10.m10" class="ltx_Math" alttext="s=p^{n}" display="inline"><mrow><mi>s</mi><mo>=</mo><msup><mi>p</mi><mi>n</mi></msup></mrow></math> for some positive integers <math id="S1.p10.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S1.p10.m12" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. It follows that
+<math id="S1.p10.m13" class="ltx_Math" alttext="a=pv" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math>. 
+<br class="ltx_break">(2) Similarly, there are positive integers <math id="S1.p10.m14" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="S1.p10.m15" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that <math id="S1.p10.m16" class="ltx_Math" alttext="b=wq" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>w</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>, where <math id="S1.p10.m17" class="ltx_Math" alttext="w^{n}=k" display="inline"><mrow><msup><mi>w</mi><mi>n</mi></msup><mo>=</mo><mi>k</mi></mrow></math>.
+From <math id="S1.p10.m18" class="ltx_Math" alttext="a+k=b+f" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi>k</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>+</mo><mi>f</mi></mrow></mrow></math> we get</p>
+<table id="S1.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex12.m1" class="ltx_Math" alttext="vp+w^{n}=wq+v^{n}" display="block"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mi>w</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and after regrouping we have</p>
+<table id="S1.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex13.m1" class="ltx_Math" alttext="v(p-v^{n-1})=w(q-w^{n-1})" display="block"><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S1.p10.m19" class="ltx_Math" alttext="gcd(f,k)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> it follows that <math id="S1.p10.m20" class="ltx_Math" alttext="gcd(v,w)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, so that</p>
+<table id="S1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex14.m1" class="ltx_Math" alttext="v|(q-w^{n-1})" display="block"><mrow><mi>v</mi><mo stretchy="false">|</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>-</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex15.m1" class="ltx_Math" alttext="w|(p-v^{n-1})." display="block"><mrow><mi>w</mi><mo stretchy="false">|</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence</p>
+<table id="S1.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex16.m1" class="ltx_Math" alttext="u:=\frac{p-v^{n-1}}{w}=\frac{q-w^{n-1}}{v}\quad\quad\quad(4)" display="block"><mrow><mrow><mi>u</mi><mo>:=</mo><mfrac><mrow><mi>p</mi><mo>-</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mi>w</mi></mfrac><mo>=</mo><mfrac><mrow><mi>q</mi><mo>-</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mi>v</mi></mfrac></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an integer. Using <math id="S1.p10.m21" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> we can now write
+<math id="S1.p10.m22" class="ltx_Math" alttext="a=uwv+v^{n}" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math>, <math id="S1.p10.m23" class="ltx_Math" alttext="b=uwv+w^{n}" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></math>, and <math id="S1.p10.m24" class="ltx_Math" alttext="c=uwv+v^{n}+w^{n}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></math>. 
+<br class="ltx_break">(3) Since <math id="S1.p10.m25" class="ltx_Math" alttext="\alpha=0" display="inline"><mrow><mi>α</mi><mo>=</mo><mn>0</mn></mrow></math>, we have <math id="S1.p10.m26" class="ltx_Math" alttext="gcd(f,s)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.
+Since <math id="S1.p10.m27" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we can write</p>
+<table id="S1.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex17.m1" class="ltx_Math" alttext="k=k_{1}n^{\tau}" display="block"><mrow><mi>k</mi><mo>=</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>n</mi><mi>τ</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p10.m28" class="ltx_Math" alttext="\tau&gt;0" display="inline"><mrow><mi>τ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S1.p10.m29" class="ltx_Math" alttext="gcd(k_{1},n)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. By Lemma 1 there is a positive integer <math id="S1.p10.m30" class="ltx_Math" alttext="c_{i}" display="inline"><msub><mi>c</mi><mi>i</mi></msub></math> such that
+<math id="S1.p10.m31" class="ltx_Math" alttext="\binom{n}{i}=nc_{i}" display="inline"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub></mrow></mrow></math> for <math id="S1.p10.m32" class="ltx_Math" alttext="0&lt;i&lt;n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>. We can write</p>
+<table id="S1.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex18.m1" class="ltx_Math" alttext="t=\sum_{i=1}^{n}\binom{n}{i}a^{n-i}k^{i-1}=\sum_{i=1}^{n-1}nc_{i}a^{n-i}k^{i-1%
+}+k^{n-1}" display="block"><mrow><mi>t</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mi>k</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>n</mi><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mi>k</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>+</mo><msup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex19.m1" class="ltx_Math" alttext="=\sum_{i=1}^{n-1}nc_{i}a^{n-i}k^{i-1}+nk_{1}n^{\tau-1}k^{n-2}=nT" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>n</mi><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mi>k</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>n</mi><mrow><mi>τ</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p10.m33" class="ltx_Math" alttext="T=a^{n-1}+\frac{1}{2}(n-1)a^{n-2}k+\cdots+k_{1}n^{\tau-1}k^{n-2}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>n</mi><mrow><mi>τ</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></mrow></math>.
+Hence,</p>
+<table id="S1.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex20.m1" class="ltx_Math" alttext="b^{n}=kt=knT=k_{1}n^{\tau+1}T." display="block"><mrow><mrow><msup><mi>b</mi><mi>n</mi></msup><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>n</mi><mrow><mi>τ</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>T</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Claim: <math id="S1.p10.m34" class="ltx_Math" alttext="gcd(T,n)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. 
+<br class="ltx_break">This follows from the fact that <math id="S1.p10.m35" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides all the terms of <math id="S1.p10.m36" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> except the first term.
+The first term is not divisible by <math id="S1.p10.m37" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> because <math id="S1.p10.m38" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> divides <math id="S1.p10.m39" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and therefore <math id="S1.p10.m40" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p10.m41" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+and <math id="S1.p10.m42" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p10.m43" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are coprime. 
+<br class="ltx_break">Claim: <math id="S1.p10.m44" class="ltx_Math" alttext="gcd(T,k_{1})=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. 
+<br class="ltx_break">This follows from the fact that <math id="S1.p10.m45" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> divides <math id="S1.p10.m46" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, so <math id="S1.p10.m47" class="ltx_Math" alttext="k_{1}" display="inline"><msub><mi>k</mi><mn>1</mn></msub></math> divides <math id="S1.p10.m48" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and <math id="S1.p10.m49" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and
+<math id="S1.p10.m50" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are coprime.
+By unique factorization of integers, then, it must be that there are positive integers
+<math id="S1.p10.m51" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>, <math id="S1.p10.m52" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="S1.p10.m53" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> such that
+<math id="S1.p10.m54" class="ltx_Math" alttext="T=q^{n}" display="inline"><mrow><mi>T</mi><mo>=</mo><msup><mi>q</mi><mi>n</mi></msup></mrow></math>, <math id="S1.p10.m55" class="ltx_Math" alttext="k_{1}=w^{n}" display="inline"><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>=</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></math> and <math id="S1.p10.m56" class="ltx_Math" alttext="n^{\tau+1}=\lambda^{n}" display="inline"><mrow><msup><mi>n</mi><mrow><mi>τ</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow></math>. Since <math id="S1.p10.m57" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a prime, it follows
+that <math id="S1.p10.m58" class="ltx_Math" alttext="\lambda=n^{g}" display="inline"><mrow><mi>λ</mi><mo>=</mo><msup><mi>n</mi><mi>g</mi></msup></mrow></math> for some positive integer <math id="S1.p10.m59" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. Hence <math id="S1.p10.m60" class="ltx_Math" alttext="gn=\tau+1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mrow><mi>τ</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">It follows that
+<math id="S1.p11.m1" class="ltx_Math" alttext="b^{n}=w^{n}n^{gn}q^{n}" display="inline"><mrow><msup><mi>b</mi><mi>n</mi></msup><mo>=</mo><mrow><msup><mi>w</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>n</mi><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow></msup><mo>⁢</mo><msup><mi>q</mi><mi>n</mi></msup></mrow></mrow></math>, so that <math id="S1.p11.m2" class="ltx_Math" alttext="b=n^{g}wq" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>. From <math id="S1.p11.m3" class="ltx_Math" alttext="a+k=b+f" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi>k</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>+</mo><mi>f</mi></mrow></mrow></math> we get</p>
+<table id="S1.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex21.m1" class="ltx_Math" alttext="vp+n^{gn-1}w^{n}=n^{g}wq+v^{n}" display="block"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which we can regroup to get</p>
+<table id="S1.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex22.m1" class="ltx_Math" alttext="v(p-v^{n-1})=n^{g}w(q-n^{g(n-1)-1}w^{n-1})." display="block"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S1.p11.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p11.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are coprime, it follows that <math id="S1.p11.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and <math id="S1.p11.m7" class="ltx_Math" alttext="n^{g}w" display="inline"><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi></mrow></math> are coprime.
+Hence</p>
+<table id="S1.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex23.m1" class="ltx_Math" alttext="u:=\frac{p-v^{n-1}}{n^{g}w}=\frac{q-n^{g(n-1)-1}w^{n-1}}{v}" display="block"><mrow><mi>u</mi><mo>:=</mo><mfrac><mrow><mi>p</mi><mo>-</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>q</mi><mo>-</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mi>v</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an integer.
+It follows that</p>
+<table id="S1.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex24.m1" class="ltx_Math" alttext="vp-v^{n}=n^{g}wq-n^{gn-1}w^{n}=n^{g}uwv" display="block"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>q</mi></mrow><mo>-</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and one can now express <math id="S1.p11.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>,<math id="S1.p11.m9" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S1.p11.m10" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> in terms of <math id="S1.p11.m11" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>,<math id="S1.p11.m12" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>,<math id="S1.p11.m13" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>.</p>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">Lemma 4. Let <math id="S1.p12.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> be the integer of Lemma 3. There is a monic polynomial <math id="S1.p12.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>
+with integer coefficients such that 
+<br class="ltx_break">(a) <math id="S1.p12.m3" class="ltx_Math" alttext="P(u)=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, 
+<br class="ltx_break">(b) the sum of the roots of <math id="S1.p12.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is 0, and 
+<br class="ltx_break">(c) all coefficients of <math id="S1.p12.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> are divisible by <math id="S1.p12.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> except that when
+<math id="S1.p12.m7" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is positive the last coefficient is not divisible by <math id="S1.p12.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. 
+<br class="ltx_break">Proof. We use the same cases as in Lemma 3. (1) In this case we have</p>
+<table id="S1.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex25.m1" class="ltx_Math" alttext="(uwv+v^{n})^{n}+(uwv+w^{n})^{n}-(uwv+v^{n}+w^{n})^{n}=0." display="block"><mrow><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The left hand side can be expanded using the binomial theorem to get a
+polynomial <math id="S1.p12.m9" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>
+with coefficients that
+depend on <math id="S1.p12.m10" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and <math id="S1.p12.m11" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>. For the coefficient of <math id="S1.p12.m12" class="ltx_Math" alttext="u^{n-i}" display="inline"><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup></math> we have to combine</p>
+<table id="S1.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex26.m1" class="ltx_Math" alttext="\binom{n}{i}(uwv)^{n-i}(v^{n})^{i}+\binom{n}{i}(uwv)^{n-i}(w^{n})^{i}-\binom{n%
+}{i}(uwv)^{n-i}(v^{n}+w^{n})^{i}" display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>v</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow></mrow><mo>-</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex27.m1" class="ltx_Math" alttext="=u^{n-i}\binom{n}{i}(wv)^{n-i}(-(v^{n}+w^{n})^{i}+(v^{n})^{i}+(w^{n})^{i})%
+\quad\quad\quad(5)" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>v</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Clearly if <math id="S1.p12.m13" class="ltx_Math" alttext="i=1" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></math> this coefficient is 0.
+If <math id="S1.p12.m14" class="ltx_Math" alttext="i=0" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow></math> the coefficient is <math id="S1.p12.m15" class="ltx_Math" alttext="(wv)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>.
+For the other terms we can write
+them as</p>
+<table id="S1.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex28.m1" class="ltx_Math" alttext="\binom{n}{i}(wv)^{n-i}v^{n}w^{n}\sum_{j=1}^{i-1}\binom{i}{j}v^{n(j-1)}w^{n(i-j%
+-1)}" display="block"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>i</mi><mi>j</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>-</mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that the coefficient is divisible by <math id="S1.p12.m16" class="ltx_Math" alttext="(wv)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>.
+The coefficient is also divisible by <math id="S1.p12.m17" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> if <math id="S1.p12.m18" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math> by Lemma 1.
+So we set <math id="S1.p12.m19" class="ltx_Math" alttext="P:=Q/(wv)^{n}" display="inline"><mrow><mi>P</mi><mo>:=</mo><mrow><mi>Q</mi><mo>/</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow></math> to get the conclusion for case (1). 
+<br class="ltx_break">(2) We proceed as in case (1). The left side of the equation</p>
+<table id="S1.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex29.m1" class="ltx_Math" alttext="(n^{g}uwv+v^{n})^{n}+(n^{g}uwv+n^{gn-1}w^{n})^{n}-(n^{g}uwv+v^{n}+n^{gn-1}w^{n%
+})^{n}=0" display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">can be expanded by the binomial theorem to get a polynomial
+<math id="S1.p12.m20" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> with coefficients that depend on <math id="S1.p12.m21" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and <math id="S1.p12.m22" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>.
+It is clear that the leading term is
+<math id="S1.p12.m23" class="ltx_Math" alttext="(n^{g}uwv)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>. For the coefficient of <math id="S1.p12.m24" class="ltx_Math" alttext="u^{n-i}" display="inline"><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup></math> we have to combine</p>
+<table id="S1.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex30.m1" class="ltx_Math" alttext="\binom{n}{i}(n^{g}uwv)^{n-i}(v^{n})^{i}+\binom{n}{i}(n^{g}uwv)^{n-i}(n^{gn-1}w%
+^{n})^{i}-\binom{n}{i}(n^{g}uwv)^{n-i}(v^{n}+n^{gn-1}w^{n})^{i}" display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>v</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow></mrow><mo>-</mo><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex31.m1" class="ltx_Math" alttext="=u^{n-i}\binom{n}{i}(n^{g}wv)^{n-i}((v^{n})^{i}+(n^{gn-1}w^{n})^{i}-(v^{n}+n^{%
+gn-1}w^{n})^{i}.\quad\quad\quad(6)" display="block"><mrow><mo>=</mo><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mi>g</mi></msup><mi>w</mi><mi>v</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>v</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi>w</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi>w</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>.</mo><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This form makes it clear that the coefficient is 0 if <math id="S1.p12.m25" class="ltx_Math" alttext="i=1" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></math> and divisible by <math id="S1.p12.m26" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> if
+<math id="S1.p12.m27" class="ltx_Math" alttext="1\leq i&lt;n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>&lt;</mo><mi>n</mi></mrow></math>.
+If <math id="S1.p12.m28" class="ltx_Math" alttext="i=0" display="inline"><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow></math>, the coefficient is <math id="S1.p12.m29" class="ltx_Math" alttext="(n^{g}wv)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>. Equation (6) is equal to</p>
+<table id="S1.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex32.m1" class="ltx_Math" alttext="u^{n-i}\binom{n}{i}(n^{g}wv)^{n-i}\sum_{j=1}^{i-1}v^{n(j-1)}(n^{gn-1}w^{n})^{i%
+-j-1}v^{n}n^{gn-1}w^{n}" display="block"><mrow><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>i</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msup><mi>v</mi><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>-</mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which shows that <math id="S1.p12.m30" class="ltx_Math" alttext="n^{gn}w^{n}v^{n}" display="inline"><mrow><msup><mi>n</mi><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></math> divides each coefficient. Set
+<math id="S1.p12.m31" class="ltx_Math" alttext="P:=Q/(n^{g}wv)^{n}" display="inline"><mrow><mi>P</mi><mo>:=</mo><mrow><mi>Q</mi><mo>/</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow></math> to get the conclusion for case (2).</p>
+</div>
+<div id="S1.p13" class="ltx_para">
+<p class="ltx_p">Lemma 5. The polynomial <math id="S1.p13.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of Lemma 4 has exactly one positive root. 
+<br class="ltx_break">Proof. By (5) and (6) the coefficients of <math id="S1.p13.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> are negative except for the leading
+coefficient. So there is exactly one sign change and by Descartes’s rule of signs
+there is exactly one positive root.</p>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">Definition. For each real root <math id="S1.p14.m1" class="ltx_Math" alttext="u_{i}" display="inline"><msub><mi>u</mi><mi>i</mi></msub></math> of <math id="S1.p14.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> we can define <math id="S1.p14.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="S1.p14.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="S1.p14.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.
+(For example, <math id="S1.p14.m6" class="ltx_Math" alttext="a=u_{i}wv+v^{n}" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow></math> and so on.) We say that a root <math id="S1.p14.m7" class="ltx_Math" alttext="u_{i}" display="inline"><msub><mi>u</mi><mi>i</mi></msub></math> is
+<em class="ltx_emph ltx_font_italic">acceptable</em> if the resulting <math id="S1.p14.m8" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> are all positive integers.</p>
+</div>
+<div id="S1.p15" class="ltx_para">
+<p class="ltx_p">Lemma 6. The only acceptable root
+of <math id="S1.p15.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is <math id="S1.p15.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S1.p15.m3" class="ltx_Math" alttext="u&gt;0." display="inline"><mrow><mrow><mi>u</mi><mo>&gt;</mo><mn>0</mn></mrow><mo>.</mo></mrow></math> 
+<br class="ltx_break">Proof. Suppose that <math id="S1.p15.m4" class="ltx_Math" alttext="u_{i}" display="inline"><msub><mi>u</mi><mi>i</mi></msub></math> is a nonpositive acceptable root. Then <math id="S1.p15.m5" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> are all
+positive and in case (1) we have</p>
+<table id="S1.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex33.m1" class="ltx_Math" alttext="a+b=2u_{i}wv+v^{n}+w^{n}=c+u_{i}wv\leq c," display="block"><mrow><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mi>c</mi><mo>+</mo><mrow><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>≤</mo><mi>c</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">while in case (2) we have</p>
+<table id="S1.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex34.m1" class="ltx_Math" alttext="a+b=2n^{g}u_{i}wv+v^{n}+n^{gn-1}w^{n}=c+n^{g}u_{i}wv\leq c." display="block"><mrow><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><mi>c</mi><mo>+</mo><mrow><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><msub><mi>u</mi><mi>i</mi></msub><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>≤</mo><mi>c</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But</p>
+<table id="S1.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex35.m1" class="ltx_Math" alttext="a^{n}+b^{n}&lt;(a+b)^{n}\leq c^{n}" display="block"><mrow><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>≤</mo><msup><mi>c</mi><mi>n</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is a contradiction. Since <math id="S1.p15.m6" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> is acceptable, it must be that
+<math id="S1.p15.m7" class="ltx_Math" alttext="u&gt;0" display="inline"><mrow><mi>u</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="S1.p16" class="ltx_para">
+<p class="ltx_p">The following lemma 7 is incorrect. 
+<br class="ltx_break">Lemma 7. <math id="S1.p16.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> does not divide <math id="S1.p16.m2" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>. 
+<br class="ltx_break">Proof. We use the cases of Lemma 3. (1) We write 
+<br class="ltx_break"></p>
+<table id="S1.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex36.m1" class="ltx_Math" alttext="a^{n}+b^{n}=(a+b)Q" display="block"><mrow><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Q</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where
+</p>
+<table id="S1.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex37.m1" class="ltx_Math" alttext="Q=\sum_{j=1}^{n}a^{n-j}b^{j-1}(-1)^{j-1}." display="block"><mrow><mrow><mi>Q</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>b</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is known that the common divisor if <math id="S1.p16.m3" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math> and <math id="S1.p16.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is <math id="S1.p16.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and that
+if <math id="S1.p16.m6" class="ltx_Math" alttext="n^{s}||a+b" display="inline"><mrow><msup><mi>n</mi><mi>s</mi></msup><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math> then <math id="S1.p16.m7" class="ltx_Math" alttext="n^{s+1}||a^{n}+b^{n}" display="inline"><mrow><msup><mi>n</mi><mrow><mi>s</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">|</mo><mo stretchy="false">|</mo><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow></math>.
+Hence, we can write</p>
+<table id="S1.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex38.m1" class="ltx_Math" alttext="a+b=n^{s}\delta" display="block"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mrow><msup><mi>n</mi><mi>s</mi></msup><mo>⁢</mo><mi>δ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex39.m1" class="ltx_Math" alttext="Q=n\gamma" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p16.m8" class="ltx_Math" alttext="gcd(n,\delta)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>δ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, <math id="S1.p16.m9" class="ltx_Math" alttext="gcd(n,\gamma)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="S1.p16.m10" class="ltx_Math" alttext="gcd(\delta,\gamma)=1" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.
+From <math id="S1.p16.m11" class="ltx_Math" alttext="c^{n}=a^{n}+b^{n}=(a+b)Q=n^{s+1}\delta\gamma" display="inline"><mrow><msup><mi>c</mi><mi>n</mi></msup><mo>=</mo><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><msup><mi>n</mi><mrow><mi>s</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow></math>
+we get <math id="S1.p16.m12" class="ltx_Math" alttext="s=n-1" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>, <math id="S1.p16.m13" class="ltx_Math" alttext="n||c" display="inline"><mrow><mi>n</mi><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi>c</mi></mrow></math> and</p>
+<table id="S1.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex40.m1" class="ltx_Math" alttext="a+b=n^{n-1}\delta.\quad\quad\quad(7)" display="block"><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mi>δ</mi><mo>.</mo><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S1.p16.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m15" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math> and <math id="S1.p16.m16" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> we have <math id="S1.p16.m17" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m18" class="ltx_Math" alttext="2c-(a+b)=v^{n}+w^{n}" display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></math>.
+It is also known that</p>
+<table id="S1.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex41.m1" class="ltx_Math" alttext="v^{n}+w^{n}=(v+w)[(v+w)^{n-1}-nvw(v^{n-1}+\cdots+w^{n-1})]\quad\quad\quad(8)" display="block"><mrow><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that <math id="S1.p16.m19" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m20" class="ltx_Math" alttext="v+w" display="inline"><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow></math>. But then from (8) again, <math id="S1.p16.m21" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> divides <math id="S1.p16.m22" class="ltx_Math" alttext="v^{n}+w^{n}" display="inline"><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></math>.
+Now from (7) we have <math id="S1.p16.m23" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> divides <math id="S1.p16.m24" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>.
+Hence</p>
+<table id="S1.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex42.m1" class="ltx_Math" alttext="2c=(a+b)+v^{n}+w^{n}" display="block"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is divisible by <math id="S1.p16.m25" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> and this is a contradiction. 
+<br class="ltx_break">(2) In this case</p>
+<table id="S1.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex43.m1" class="ltx_Math" alttext="a+b=2n^{g}uwv+v^{n}+n^{gn-1}w^{n}" display="block"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mi>g</mi></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup><mo>+</mo><mrow><msup><mi>n</mi><mrow><mrow><mi>g</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that if <math id="S1.p16.m26" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m27" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math> then <math id="S1.p16.m28" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m29" class="ltx_Math" alttext="v^{n}" display="inline"><msup><mi>v</mi><mi>n</mi></msup></math> and therefore <math id="S1.p16.m30" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m31" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>.
+From <math id="S1.p16.m32" class="ltx_Math" alttext="a=vp" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mi>p</mi></mrow></mrow></math> we get then <math id="S1.p16.m33" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m34" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and therefore <math id="S1.p16.m35" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p16.m36" class="ltx_Math" alttext="b=a+b-a" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>-</mo><mi>a</mi></mrow></mrow></math>.
+But <math id="S1.p16.m37" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S1.p16.m38" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> are coprime, so we have a contradiction.</p>
+</div>
+<div id="S1.p17" class="ltx_para">
+<p class="ltx_p">Since Lemma 7 is incorrect, Lemma 8 is also incorrect. 
+<br class="ltx_break">Lemma 8. There are positive integers
+<math id="S1.p17.m1" class="ltx_Math" alttext="u_{p}" display="inline"><msub><mi>u</mi><mi>p</mi></msub></math> and <math id="S1.p17.m2" class="ltx_Math" alttext="c_{p}" display="inline"><msub><mi>c</mi><mi>p</mi></msub></math> such that
+<math id="S1.p17.m3" class="ltx_Math" alttext="a+b={u_{p}}^{n}" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mmultiscripts><mi>u</mi><mi>p</mi><none></none><none></none><mi>n</mi></mmultiscripts></mrow></math> and <math id="S1.p17.m4" class="ltx_Math" alttext="c=u_{p}c_{p}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><msub><mi>u</mi><mi>p</mi></msub><mo>⁢</mo><msub><mi>c</mi><mi>p</mi></msub></mrow></mrow></math>. 
+<br class="ltx_break">Proof. We can write</p>
+<table id="S1.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex44.m1" class="ltx_Math" alttext="x^{z}+y^{z}=(x+y)Q" display="block"><mrow><mrow><msup><mi>x</mi><mi>z</mi></msup><mo>+</mo><msup><mi>y</mi><mi>z</mi></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Q</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S1.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex45.m1" class="ltx_Math" alttext="Q=\sum_{j=1}^{z}x^{z-j}y^{j-1}(-1)^{j-1}." display="block"><mrow><mrow><mi>Q</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>z</mi></munderover><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is an old result first attributed to Nicolas Malebranche (1638-1715)
+that if <math id="S1.p17.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S1.p17.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are coprime and <math id="S1.p17.m7" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is a prime divisor of
+<math id="S1.p17.m8" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> and <math id="S1.p17.m9" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> then <math id="S1.p17.m10" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="S1.p17.m11" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. I will give a proof of this here.
+Define</p>
+<table id="S1.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex46.m1" class="ltx_Math" alttext="Q_{1}=Q=x^{z-1}+x^{z-2}y+\sum_{j=3}^{z}x^{z-j}y^{j-1}(-1)^{j-1}." display="block"><mrow><mrow><msub><mi>Q</mi><mn>1</mn></msub><mo>=</mo><mi>Q</mi><mo>=</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><mi>z</mi></munderover><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let</p>
+<table id="S1.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex47.m1" class="ltx_Math" alttext="Q_{2}=Q_{1}-x^{z-2}(x+y)=-2x^{z-2}y+x^{z-3}y^{2}+\sum_{j=4}^{z}x^{z-j}y^{j-1}(%
+-1)^{j-1}." display="block"><mrow><mrow><msub><mi>Q</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>Q</mi><mn>1</mn></msub><mo>-</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>4</mn></mrow><mi>z</mi></munderover><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="S1.p17.m12" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="S1.p17.m13" class="ltx_Math" alttext="Q_{2}" display="inline"><msub><mi>Q</mi><mn>2</mn></msub></math>.
+Define</p>
+<table id="S1.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex48.m1" class="ltx_Math" alttext="Q_{3}=Q_{2}+2x^{z-3}y(x+y)=3x^{z-3}y^{2}-x^{z-4}y^{3}+\sum_{j=5}^{z}x^{z-j}y^{%
+j-1}(-1)^{j-1}." display="block"><mrow><mrow><msub><mi>Q</mi><mn>3</mn></msub><mo>=</mo><mrow><msub><mi>Q</mi><mn>2</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>3</mn></mrow></msup><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>3</mn></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mn>4</mn></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>5</mn></mrow><mi>z</mi></munderover><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In general</p>
+<table id="S1.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex49.m1" class="ltx_Math" alttext="Q_{n}=(-1)^{n+1}nx^{z-n}y^{n-1}+x^{z-n-1}y^{n}+\sum_{j=n+2}^{z}x^{z-j}y^{j-1}(%
+-1)^{j-1}" display="block"><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>n</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mi>n</mi></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow><mi>z</mi></munderover><mrow><msup><mi>x</mi><mrow><mi>z</mi><mo>-</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>y</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and each <math id="S1.p17.m14" class="ltx_Math" alttext="Q_{n}" display="inline"><msub><mi>Q</mi><mi>n</mi></msub></math> is divisible by <math id="S1.p17.m15" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Hence,</p>
+<table id="S1.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex50.m1" class="ltx_Math" alttext="Q_{z}=\pm zy^{z-1}" display="block"><mrow><msub><mi>Q</mi><mi>z</mi></msub><mo>=</mo><mrow><mo>±</mo><mrow><mi>z</mi><mo>⁢</mo><msup><mi>y</mi><mrow><mi>z</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">will be divisible by <math id="S1.p17.m16" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. But <math id="S1.p17.m17" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> does not divide <math id="S1.p17.m18" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> (since otherwise it would also divide
+<math id="S1.p17.m19" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, which would contradict that <math id="S1.p17.m20" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S1.p17.m21" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are coprime). Hence, <math id="S1.p17.m22" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="S1.p17.m23" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.
+Using this result, we can say that
+if</p>
+<table id="S1.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex51.m1" class="ltx_Math" alttext="a^{n}+b^{n}=(a+b)(a^{n-1}-a^{n-2}b+\cdots-ab^{n-2}+b^{n-1})=(a+b)Q" display="block"><mrow><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mrow><msup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>-</mo><mrow><mi>a</mi><mo>⁢</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>+</mo><msup><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Q</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="S1.p17.m24" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math> and <math id="S1.p17.m25" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> are coprime. Because if <math id="S1.p17.m26" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is a prime divisor of each
+then <math id="S1.p17.m27" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> divides <math id="S1.p17.m28" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, so <math id="S1.p17.m29" class="ltx_Math" alttext="d=n" display="inline"><mrow><mi>d</mi><mo>=</mo><mi>n</mi></mrow></math> and then <math id="S1.p17.m30" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> divides <math id="S1.p17.m31" class="ltx_Math" alttext="a+b" display="inline"><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></math>, which contradicts Lemma 7.
+By unique factorization there are positive integers <math id="S1.p17.m32" class="ltx_Math" alttext="u_{p}" display="inline"><msub><mi>u</mi><mi>p</mi></msub></math> and <math id="S1.p17.m33" class="ltx_Math" alttext="c_{p}" display="inline"><msub><mi>c</mi><mi>p</mi></msub></math>
+such that</p>
+<table id="S1.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex52.m1" class="ltx_Math" alttext="a+b={u_{p}}^{n}" display="block"><mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo>=</mo><mmultiscripts><mi>u</mi><mi>p</mi><none></none><none></none><mi>n</mi></mmultiscripts></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex53.m1" class="ltx_Math" alttext="Q={c_{p}}^{n}." display="block"><mrow><mrow><mi>Q</mi><mo>=</mo><mmultiscripts><mi>c</mi><mi>p</mi><none></none><none></none><mi>n</mi></mmultiscripts></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="S1.p17.m34" class="ltx_Math" alttext="c^{n}=(a+b)Q={u_{p}}^{n}{c_{p}}^{n}" display="inline"><mrow><msup><mi>c</mi><mi>n</mi></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mmultiscripts><mi>u</mi><mi>p</mi><none></none><none></none><mi>n</mi></mmultiscripts><mo>⁢</mo><mmultiscripts><mi>c</mi><mi>p</mi><none></none><none></none><mi>n</mi></mmultiscripts></mrow></mrow></math>.
+Hence <math id="S1.p17.m35" class="ltx_Math" alttext="c=u_{p}c_{p}" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><msub><mi>u</mi><mi>p</mi></msub><mo>⁢</mo><msub><mi>c</mi><mi>p</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p18" class="ltx_para">
+<p class="ltx_p">Lemma 9. Let <math id="S1.p18.m1" class="ltx_Math" alttext="p,u,v,w" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi></mrow></math> be as in Lemma 3. Let <math id="S1.p18.m2" class="ltx_Math" alttext="c_{p}" display="inline"><msub><mi>c</mi><mi>p</mi></msub></math> be as in
+Lemma 8. Suppose there are positive integers <math id="S1.p18.m3" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>and <math id="S1.p18.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> such that</p>
+<table id="S1.Ex54" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex54.m1" class="ltx_Math" alttext="ah+bq=cp." display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>h</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>q</mi></mrow></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>p</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then one of the following possibilities holds: 
+<br class="ltx_break">(a) <math id="S1.p18.m5" class="ltx_Math" alttext="h=h_{k}c,q=q_{k}c" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><msub><mi>h</mi><mi>k</mi></msub><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><msub><mi>q</mi><mi>k</mi></msub><mo>⁢</mo><mi>c</mi></mrow></mrow></mrow></math> for some integers <math id="S1.p18.m6" class="ltx_Math" alttext="h_{k}" display="inline"><msub><mi>h</mi><mi>k</mi></msub></math> and <math id="S1.p18.m7" class="ltx_Math" alttext="q_{k}" display="inline"><msub><mi>q</mi><mi>k</mi></msub></math>; 
+<br class="ltx_break">(b) <math id="S1.p18.m8" class="ltx_Math" alttext="h=q=jc_{p}" display="inline"><mrow><mi>h</mi><mo>=</mo><mi>q</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msub><mi>c</mi><mi>p</mi></msub></mrow></mrow></math> for some integer <math id="S1.p18.m9" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>; 
+<br class="ltx_break">(c) <math id="S1.p18.m10" class="ltx_Math" alttext="h=jw^{n(n-1)},q=jv^{n(n-1)}" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow></mrow></math> for some integer <math id="S1.p18.m11" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>; 
+<br class="ltx_break">(d) <math id="S1.p18.m12" class="ltx_Math" alttext="h=jb,q=jw^{n}" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></math> for some integer <math id="S1.p18.m13" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>; 
+<br class="ltx_break">(e) <math id="S1.p18.m14" class="ltx_Math" alttext="h=jv^{n},q=-jw^{n}" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><mo>-</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow></math> for some integer <math id="S1.p18.m15" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>; 
+<br class="ltx_break">(f) <math id="S1.p18.m16" class="ltx_Math" alttext="h=jv^{n},q=j(2uwv+w^{n}+2v^{n})" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><msup><mi>w</mi><mi>n</mi></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for some integer <math id="S1.p18.m17" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>; 
+<br class="ltx_break">(g) <math id="S1.p18.m18" class="ltx_Math" alttext="h=j(2uwv+2w^{n}+v^{n}),q=jw^{n}" display="inline"><mrow><mrow><mi>h</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow><mo>+</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>q</mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>w</mi><mi>n</mi></msup></mrow></mrow></mrow></math> for some integer <math id="S1.p18.m19" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. 
+<br class="ltx_break">Proof. At this point I think the proof is incomplete since he does not prove the result, but rather
+verifies that each of the possible solutions is indeed a solution. Later on,he needs to know that these
+are the only solutions.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>n is divisible by a prime greater than 2</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p1.m1" class="ltx_Math" alttext="n=mz" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math> where <math id="S2.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is a prime greater than 2, then</p>
+<table id="S2.Ex55" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex55.m1" class="ltx_Math" alttext="(a^{m})^{z}+(b^{m})^{z}=(c^{m})^{z}" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow><mi>z</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>b</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow><mi>z</mi></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow><mi>z</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we can apply the results of section 1 to conclude that no such <math id="S2.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> can exist.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>n is a power of 2</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">It is known that if <math id="S3.p1.m1" class="ltx_Math" alttext="n=4" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow></math> then Fermat’s Last Theorem is true. For example,
+see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>. So if <math id="S3.p1.m2" class="ltx_Math" alttext="n=2^{t},t\geq 3" display="inline"><mrow><mrow><mi>n</mi><mo>=</mo><msup><mn>2</mn><mi>t</mi></msup></mrow><mo>,</mo><mrow><mi>t</mi><mo>≥</mo><mn>3</mn></mrow></mrow></math>, then we can write</p>
+<table id="S3.Ex56" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex56.m1" class="ltx_Math" alttext="(a^{2^{t-2}})^{4}+(b^{2^{t-2}})^{4}=(c^{2^{t-2}})^{4}" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><msup><mn>2</mn><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></msup></msup><mo stretchy="false">)</mo></mrow><mn>4</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>b</mi><msup><mn>2</mn><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></msup></msup><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><msup><mn>2</mn><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></msup></msup><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which contradicts the theorem for <math id="S3.p1.m3" class="ltx_Math" alttext="n=4" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>4</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> G.H. Hardy, E.M. Wright, <em class="ltx_emph ltx_font_italic">An Introduction to the Theory of Numbers</em>, 5th ed., Oxford
+University Press, page 191.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proposed elementary proof of Fermat’s last theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProposedElementaryProofOfFermatsLastTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:36:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:36:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">78</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11D41</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:32:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

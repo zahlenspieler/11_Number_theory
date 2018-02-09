@@ -1,0 +1,154 @@
+<!DOCTYPE html><html>
+<head>
+<title>linear recurrence</title>
+<!--Generated on Fri Feb  9 15:27:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">linear recurrence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A sequence <math id="p1.m1" class="ltx_Math" alttext="x_{0},x_{1},\ldots," display="inline"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo></mrow></math> is said to satisfy a <em class="ltx_emph ltx_font_italic">general linear recurrence</em> if there are constants <math id="p1.m2" class="ltx_Math" alttext="a_{n,i}" display="inline"><msub><mi>a</mi><mrow><mi>n</mi><mo>,</mo><mi>i</mi></mrow></msub></math> and <math id="p1.m3" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> such that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x_{n}=\sum_{i=1}^{n}a_{n,i}x_{n-i}+f_{n}" display="block"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>i</mi></mrow></msub></mrow></mrow><mo>+</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The sequence <math id="p1.m4" class="ltx_Math" alttext="\{f_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is called the <em class="ltx_emph ltx_font_italic">non-homogeneous part</em>
+of the recurrence.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If <math id="p2.m1" class="ltx_Math" alttext="f_{n}=0" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math> for all <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> then the recurrence is said to be <em class="ltx_emph ltx_font_italic">homogeneous</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In this case if <math id="p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p3.m2" class="ltx_Math" alttext="x^{\prime}" display="inline"><msup><mi>x</mi><mo>′</mo></msup></math> are two solutions to the recurrence,
+and <math id="p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p3.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are constants, then <math id="p3.m5" class="ltx_Math" alttext="Ax+Bx^{\prime}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup></mrow></mrow></math> are also solutions.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">If <math id="p4.m1" class="ltx_Math" alttext="a_{n,i}=a_{i}" display="inline"><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo><msub><mi>a</mi><mi>i</mi></msub></mrow></math> for all <math id="p4.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> then the recurrence is called
+a <em class="ltx_emph ltx_font_italic">linear recurrence with constant coefficients</em>. Such a recurrence
+with <math id="p4.m3" class="ltx_Math" alttext="a_{n,i}=0" display="inline"><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math> for all <math id="p4.m4" class="ltx_Math" alttext="i&gt;k" display="inline"><mrow><mi>i</mi><mo>&gt;</mo><mi>k</mi></mrow></math> and <math id="p4.m5" class="ltx_Math" alttext="a_{k}\neq 0" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> is said to be of
+<em class="ltx_emph ltx_font_italic">finite order</em> and the smallest such integer <math id="p4.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is called the
+<em class="ltx_emph ltx_font_italic">order</em> of the recurrence. If no such <math id="p4.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> exists, the recurrence is
+said to be of <em class="ltx_emph ltx_font_italic">infinite order</em>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For example, the Fibonacci sequence is a linear recurrence with constant coefficients and order 2.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Now suppose that <math id="p6.m1" class="ltx_Math" alttext="x=\{x_{n}\}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> satisfies a homogeneous linear recurrence of
+finite order <math id="p6.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. The polynomial
+<math id="p6.m3" class="ltx_Math" alttext="F_{x}=u^{k}-a_{1}u^{k-1}-\ldots-a_{k}" display="inline"><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>-</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>u</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><msub><mi>a</mi><mi>k</mi></msub></mrow></mrow></math> is called the <em class="ltx_emph ltx_font_italic">companion polynomial</em>
+of <math id="p6.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+If we assume that the coefficients <math id="p6.m5" class="ltx_Math" alttext="a_{i}" display="inline"><msub><mi>a</mi><mi>i</mi></msub></math> come from a field <math id="p6.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> we can
+write</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="F_{x}=(u-u_{1})^{e_{1}}\cdots(u-u_{t})^{e_{t}}" display="block"><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><msub><mi>u</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>e</mi><mn>1</mn></msub></msup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><msub><mi>u</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>e</mi><mi>t</mi></msub></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p6.m7" class="ltx_Math" alttext="u_{1},\ldots,u_{t}" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>t</mi></msub></mrow></math> are the distinct roots of <math id="p6.m8" class="ltx_Math" alttext="F_{x}" display="inline"><msub><mi>F</mi><mi>x</mi></msub></math> in some
+splitting field of <math id="p6.m9" class="ltx_Math" alttext="F_{x}" display="inline"><msub><mi>F</mi><mi>x</mi></msub></math> containing <math id="p6.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and <math id="p6.m11" class="ltx_Math" alttext="e_{1},\ldots,e_{t}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>t</mi></msub></mrow></math> are
+positive integers.
+A theorem about such recurrence relations is that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="x_{n}=\sum_{i=1}^{t}g_{i}(n){u_{i}}^{n}" display="block"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></munderover><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mmultiscripts><mi>u</mi><mi>i</mi><none></none><none></none><mi>n</mi></mmultiscripts></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some polynomials <math id="p6.m12" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> in <math id="p6.m13" class="ltx_Math" alttext="K[X]" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> where <math id="p6.m14" class="ltx_Math" alttext="deg(g_{i})&lt;e_{i}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now suppose further that all <math id="p7.m1" class="ltx_Math" alttext="K=\mathbb{C}" display="inline"><mrow><mi>K</mi><mo>=</mo><mi>ℂ</mi></mrow></math> and</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">let <math id="p8.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be the largest value of the <math id="p8.m2" class="ltx_Math" alttext="|u_{i}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>u</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">It follows that if <math id="p9.m1" class="ltx_Math" alttext="U&gt;1" display="inline"><mrow><mi>U</mi><mo>&gt;</mo><mn>1</mn></mrow></math> then</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="|x_{n}|\leq CU^{n}" display="block"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>U</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some constant <math id="p9.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">(to be continued)</p>
+</div>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">linear recurrence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LinearRecurrence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:52:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:52:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 11B37</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:27:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

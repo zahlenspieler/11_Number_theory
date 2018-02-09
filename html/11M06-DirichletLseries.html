@@ -1,0 +1,162 @@
+<!DOCTYPE html><html>
+<head>
+<title>Dirichlet L-series</title>
+<!--Generated on Fri Feb  9 15:37:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Dirichlet L-series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Dirichlet L-series</em> associated to a Dirichlet character <math id="p1.m1" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> is the series</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="L(\chi,s)=\sum_{n=1}^{\infty}\frac{\chi(n)}{n^{s}}." display="block"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>n</mi><mi>s</mi></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It converges absolutely and uniformly in the domain <math id="p1.m2" class="ltx_Math" alttext="\Re(s)\geq 1+\delta" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mn>1</mn><mo>+</mo><mi>δ</mi></mrow></mrow></math> for any positive <math id="p1.m3" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>, and admits the Euler product identity</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="L(\chi,s)=\prod_{p}\frac{1}{1-\chi(p)p^{-s}}" display="block"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mi>p</mi></munder><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>p</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup></mrow></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the product is over all primes <math id="p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, by virtue of the multiplicativity of <math id="p1.m5" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math>. In the case where <math id="p1.m6" class="ltx_Math" alttext="\chi=\chi_{0}" display="inline"><mrow><mi>χ</mi><mo>=</mo><msub><mi>χ</mi><mn>0</mn></msub></mrow></math> is the trivial character mod m, we have</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="L(\chi_{0},s)=\zeta(s)\prod_{p|m}(1-p^{-s})," display="block"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>χ</mi><mn>0</mn></msub><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>p</mi><mo stretchy="false">|</mo><mi>m</mi></mrow></munder><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>p</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m7" class="ltx_Math" alttext="\zeta(s)" display="inline"><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the Riemann Zeta function. If <math id="p1.m8" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> is non-primitive, and <math id="p1.m9" class="ltx_Math" alttext="C_{\chi}" display="inline"><msub><mi>C</mi><mi>χ</mi></msub></math> is the conductor of <math id="p1.m10" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math>, we have</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="L(\chi,s)=L(\chi\prime,s)\prod_{p|m\atop p\nmid C_{\chi}}(1-\chi(p)p^{-s})," display="block"><mrow><mi>L</mi><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>L</mi><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>′</mo><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mfrac linethickness="0pt"><mrow><mi>p</mi><mo stretchy="false">|</mo><mi>m</mi></mrow><mrow><mi>p</mi><mo>∤</mo><msub><mi>C</mi><mi>χ</mi></msub></mrow></mfrac></munder><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>χ</mi><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><msup><mi>p</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m11" class="ltx_Math" alttext="\chi\prime" display="inline"><mrow><mi>χ</mi><mo>′</mo></mrow></math> is the primitive character which induces <math id="p1.m12" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math>. For non-trivial, primitive characters <math id="p1.m13" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> mod m, <math id="p1.m14" class="ltx_Math" alttext="L(\chi,s)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> admits an analytic continuation to all of <math id="p1.m15" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and satsfies the symmetric functional equation</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="L(\chi,s)\left(\frac{m}{\pi}\right)^{s/2}\Gamma\left(\frac{s+e_{\chi}}{2}%
+\right)=\frac{g_{1}(\chi)}{i^{e_{\chi}}\sqrt{m}}L(\chi^{-1},1-s)\left(\frac{m}%
+{\pi}\right)^{\frac{1-s}{2}}\Gamma\left(\frac{1-s+e_{\chi}}{2}\right)." display="block"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi>m</mi><mi>π</mi></mfrac><mo>)</mo></mrow><mrow><mi>s</mi><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo>(</mo><mfrac><mrow><mi>s</mi><mo>+</mo><msub><mi>e</mi><mi>χ</mi></msub></mrow><mn>2</mn></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>i</mi><msub><mi>e</mi><mi>χ</mi></msub></msup><mo>⁢</mo><msqrt><mi>m</mi></msqrt></mrow></mfrac><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>χ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi>m</mi><mi>π</mi></mfrac><mo>)</mo></mrow><mfrac><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow><mn>2</mn></mfrac></msup><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo>(</mo><mfrac><mrow><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow><mo>+</mo><msub><mi>e</mi><mi>χ</mi></msub></mrow><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Here, <math id="p1.m16" class="ltx_Math" alttext="e_{\chi}\in\{0,1\}" display="inline"><mrow><msub><mi>e</mi><mi>χ</mi></msub><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></math> is defined by <math id="p1.m17" class="ltx_Math" alttext="\chi(-1)=(-1)^{e_{\chi}}\chi(1)" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><msub><mi>e</mi><mi>χ</mi></msub></msup><mo>⁢</mo><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="p1.m18" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> is the gamma function, and <math id="p1.m19" class="ltx_Math" alttext="g_{1}(\chi)" display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Gauss sum.
+(3),(4), and (5) combined show that <math id="p1.m20" class="ltx_Math" alttext="L(\chi,s)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> admits a meromorphic continuation to all of <math id="p1.m21" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> for all Dirichlet characters <math id="p1.m22" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math>, and an analytic one for non-trivial <math id="p1.m23" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math>.
+Again assuming that <math id="p1.m24" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> is non-trivial and primitive character mod m, if <math id="p1.m25" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a positive integer, we have</p>
+<table id="S0.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E6.m1" class="ltx_Math" alttext="L(\chi,1-k)=-\frac{B_{k,\chi}}{k}," display="block"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mrow><mn>1</mn><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mfrac><msub><mi>B</mi><mrow><mi>k</mi><mo>,</mo><mi>χ</mi></mrow></msub><mi>k</mi></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m26" class="ltx_Math" alttext="B_{k,\chi}" display="inline"><msub><mi>B</mi><mrow><mi>k</mi><mo>,</mo><mi>χ</mi></mrow></msub></math> is a generalized Bernoulli number. By (5), taking into account the poles of <math id="p1.m27" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math>, we get for <math id="p1.m28" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> positive, <math id="p1.m29" class="ltx_Math" alttext="k\equiv e_{\chi}" display="inline"><mrow><mi>k</mi><mo>≡</mo><msub><mi>e</mi><mi>χ</mi></msub></mrow></math> mod 2,</p>
+<table id="S0.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E7.m1" class="ltx_Math" alttext="L(\chi,k)=(-1)^{1+\frac{k-e_{\chi}}{2}}\frac{g_{1}(\chi)}{2i^{e_{\chi}}}\left(%
+\frac{2\pi}{m}\right)^{k}\frac{B_{k,\chi^{-1}}}{k!}." display="block"><mrow><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>k</mi><mo>-</mo><msub><mi>e</mi><mi>χ</mi></msub></mrow><mn>2</mn></mfrac></mrow></msup><mo>⁢</mo><mfrac><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>i</mi><msub><mi>e</mi><mi>χ</mi></msub></msup></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mi>m</mi></mfrac><mo>)</mo></mrow><mi>k</mi></msup><mo>⁢</mo><mfrac><msub><mi>B</mi><mrow><mi>k</mi><mo>,</mo><msup><mi>χ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></msub><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This series was first investigated by Dirichlet (for whom they were named), who used the non-vanishing of <math id="p1.m30" class="ltx_Math" alttext="L(\chi,1)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> for non-trivial <math id="p1.m31" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> to prove his famous Dirichlet’s theorem on primes in arithmetic progression. This is probably the first instance of using complex analysis to prove a purely number theoretic result.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Dirichlet L-series</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DirichletLseries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:22:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:22:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11M06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Dirichlet L-function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LSeriesOfAnEllipticCurve</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DirichletSeries</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 15:37:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
