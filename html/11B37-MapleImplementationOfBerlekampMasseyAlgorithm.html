@@ -20,18 +20,18 @@
 <br class="ltx_break"><pre class="ltx_verbatim ltx_font_typewriter">
 \PMlinkescapetext{
 &gt;
-# Maple code for the Berlekamp-Massey algorithm
+# Maple code for the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Berlekamp-Massey algorithm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Berlekamp-MasseyAlgorithm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/berlekampmasseyalgorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
 # Adapted from www.cs.wisc.edu/~cs435-1/bermas.m
 # Transliteration of
 #   Massey, "Shift-Register Synthesis and BCH Decoding,"
 #   IEEE Trans. Inform. Theory, 15(1):122-127, 1969.
 # Input: P, either 0 or a prime
 #           If P&gt;0 then we work over the field K = Z/Z[P] (mod P)
-#           else we work over the field K = Q (rationals)
-#        N, a positive integer
+#           else we work over the field K = Q (<a class="nnexus_concept" href="http://planetmath.org/rationalnumber">rationals</a>)
+#        N, a <a class="nnexus_concept" href="http://mathworld.wolfram.com/PositiveInteger.html">positive integer</a>
 #        s, a list of &gt;= 2*N terms in K
 #        x, a formal variable
-# Returns: Unique monic annihilator of minimum degree, over K[x].
+# Returns: Unique monic <a class="nnexus_concept" href="http://planetmath.org/conductorofavector">annihilator</a> of <a class="nnexus_concept" href="http://mathworld.wolfram.com/MinimumDegree.html">minimum degree</a>, over K[x].
 
  BM := proc(s, N, P, x)
    local C,B,T,L,k,i,n,d,b,safemod;
@@ -88,13 +88,13 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">The annihilator is the same as denominator, as we expect.
+<p class="ltx_p">The annihilator is the same as <a class="nnexus_concept" href="http://planetmath.org/fraction">denominator</a>, as we expect.
 </p>
 <table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">maple implementation of Berlekamp-Massey algorithm</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/mapleimplementationofberlekampmasseyalgorithm">maple implementation of Berlekamp-Massey algorithm</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -129,7 +129,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 11B37</td>
 </tr>
 <tr class="ltx_tr">

@@ -20,10 +20,10 @@
 <br class="ltx_break">
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">When it came to teaching recursion in programming languages in the 1980s and 1990s, the factorial function <math id="p2.m1" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> was the classic example to explain the concept.</p>
+<p class="ltx_p">When it came to teaching <a class="nnexus_concept" href="http://mathworld.wolfram.com/Recursion.html">recursion</a> in programming languages in the 1980s and 1990s, the <a class="nnexus_concept" href="http://planetmath.org/factorial">factorial function</a> <math id="p2.m1" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> was the classic example to explain the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">concept</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Concept.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/conceptlattice"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">Usually left unexplained, in a mathematical paper or book one might encounter an explanation for the <math id="p3.m1" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> shorthand for this function along the lines of</p>
+<p class="ltx_p">Usually left unexplained, in a mathematical paper or book one might encounter an explanation for the <math id="p3.m1" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> shorthand for this <a class="nnexus_concept" href="http://planetmath.org/function">function</a> along the lines of</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -32,13 +32,13 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">(with <math id="p3.m2" class="ltx_Math" alttext="0!=1" display="inline"><mrow><mrow><mn>0</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>) while a computer programming book might say something like <math id="p3.m3" class="ltx_Math" alttext="n!=1\times 2\times\ldots\times(n-1)\times n" display="inline"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>×</mo><mn>2</mn><mo>×</mo><mi mathvariant="normal">…</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>n</mi></mrow></mrow></math> (with the same assignment for zero factorial). Either of these suggests implementation with some kind of <code class="ltx_verbatim ltx_font_typewriter">FOR</code> loop.</p>
+<p class="ltx_p">(with <math id="p3.m2" class="ltx_Math" alttext="0!=1" display="inline"><mrow><mrow><mn>0</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>) while a computer programming book might say something like <math id="p3.m3" class="ltx_Math" alttext="n!=1\times 2\times\ldots\times(n-1)\times n" display="inline"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mn>1</mn><mo>×</mo><mn>2</mn><mo>×</mo><mi mathvariant="normal">…</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>n</mi></mrow></mrow></math> (with the same assignment for zero <a class="nnexus_concept" href="http://mathworld.wolfram.com/Factorial.html">factorial</a>). Either of these suggests implementation with some kind of <code class="ltx_verbatim ltx_font_typewriter">FOR</code> loop.</p>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">The recurrence relation <math id="p4.m1" class="ltx_Math" alttext="n!=(n-1)!n" display="inline"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mi>n</mi></mrow></mrow></math> with <math id="p4.m2" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="1!=1" display="inline"><mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> suggests a recursive implementation.</p>
+<p class="ltx_p">The <a class="nnexus_concept" href="http://planetmath.org/recurrencerelation">recurrence relation</a> <math id="p4.m1" class="ltx_Math" alttext="n!=(n-1)!n" display="inline"><mrow><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mi>n</mi></mrow></mrow></math> with <math id="p4.m2" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="1!=1" display="inline"><mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> suggests a <a class="nnexus_concept" href="http://planetmath.org/arithmeticalhierarchy">recursive</a> implementation.</p>
 </div>
 <div id="p5" class="ltx_para">
-<p class="ltx_p">Call the recursive factorial algorithm with an integer <code class="ltx_verbatim ltx_font_typewriter">N</code>.</p>
+<p class="ltx_p">Call the recursive factorial <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">algorithm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Algorithm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/algorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> with an <a class="nnexus_concept" href="http://mathworld.wolfram.com/Integer.html">integer</a> <code class="ltx_verbatim ltx_font_typewriter">N</code>.</p>
 </div>
 <div id="p6" class="ltx_para">
 <ol id="I1" class="ltx_enumerate">
@@ -57,7 +57,7 @@
 </ol>
 </div>
 <div id="p7" class="ltx_para">
-<p class="ltx_p">The algorithm calls itself and some mechanism is necessary for keeping track of the state of the computation. Here’s an implementation in the PASCAL programming language from Koffman’s 1981 book:</p>
+<p class="ltx_p">The algorithm calls itself and some mechanism is necessary for keeping track of the state of the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Computation.html">computation</a>. Here’s an implementation in the PASCAL programming language from Koffman’s 1981 book:</p>
 </div>
 <div id="p8" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
@@ -74,7 +74,7 @@ END; (* FACTORIAL *)
 </pre>
 </div>
 <div id="p9" class="ltx_para">
-<p class="ltx_p">Depending on the implementation, what would happen the first time <code class="ltx_verbatim ltx_font_typewriter">FACTORIAL(N)</code> calls itself is that the memory address of the function together with <math id="p9.m1" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> would be pushed on to the stack. The next time <math id="p9.m2" class="ltx_Math" alttext="n-2" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></math> would be pushed on the stack, and so on and so forth until 0 is reached. At this point, the last instance of the function returns, the next-to-last instance pops a 1 off the stack and multiplies it by 2, the next-to-next-to-last instance pops a 2 off the stack and multiplies it by 3, pushes a 6, and so on and so forth until the first instance pops <math id="p9.m3" class="ltx_Math" alttext="(n-1)!" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> off the stack and multiplies it by <math id="p9.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
+<p class="ltx_p">Depending on the implementation, what would happen the first time <code class="ltx_verbatim ltx_font_typewriter">FACTORIAL(N)</code> calls itself is that the memory address of the function together with <math id="p9.m1" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> would be pushed on to the stack. The next time <math id="p9.m2" class="ltx_Math" alttext="n-2" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></math> would be pushed on the stack, and so on and so forth until 0 is reached. At this point, the last <a class="nnexus_concept" href="http://planetmath.org/substitutionsinpropositionallogic">instance</a> of the function returns, the next-to-last instance pops a 1 off the stack and multiplies it by 2, the next-to-next-to-last instance pops a 2 off the stack and multiplies it by 3, pushes a 6, and so on and so forth until the first instance pops <math id="p9.m3" class="ltx_Math" alttext="(n-1)!" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> off the stack and multiplies it by <math id="p9.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
 </div>
 <div id="p10" class="ltx_para">
 <p class="ltx_p">The following table illustrates a sample run starting with <code class="ltx_verbatim ltx_font_typewriter">N = 7</code>:
@@ -226,7 +226,7 @@ END; (* FACTORIAL *)
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">recursive algorithm for factorial function</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/recursivealgorithmforfactorialfunction">recursive algorithm for factorial function</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -261,7 +261,7 @@ END; (* FACTORIAL *)
 <td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 11B65</td>
 </tr>
 <tr class="ltx_tr">

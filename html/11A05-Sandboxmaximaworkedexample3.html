@@ -42,11 +42,11 @@ load (ezunits);
 </h3>
 
 <div id="S1.SS1.p1" class="ltx_para">
-<p class="ltx_p">Units for integrals and derivatives are derived as the same units that a finite approximation would yield.
+<p class="ltx_p">Units for <a class="nnexus_concept" href="http://planetmath.org/integral">integrals</a> and derivatives are derived as the same units that a finite approximation would yield.
 Turn off simplification for a moment so that we can have a look at the unsimplified form.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 simp : false $
-foo : 'integrate ((3 * t^2) ` m/s, t ` s, 0 ` s, t[1] ` s);
+foo : '<a class="nnexus_concept" href="http://planetmath.org/integralsign">integrate</a> ((3 * t^2) ` m/s, t ` s, 0 ` s, t[1] ` s);
 </pre>
 <table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
 
@@ -136,7 +136,7 @@ foo, nouns;
 </h2>
 
 <div id="S2.p1" class="ltx_para">
-<p class="ltx_p">‘solve_dimensional’ can solve equations in which unit-ful expressions contain unknowns.</p>
+<p class="ltx_p">‘solve_dimensional’ can solve equations in which unit-ful <a class="nnexus_concept" href="http://planetmath.org/expression">expressions</a> contain unknowns.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 foo : solve_dimensional (10^6 ` Btu = 1/2 * (10 ` lbm) * v^2, v);
 </pre>
@@ -151,7 +151,7 @@ foo : solve_dimensional (10^6 ` Btu = 1/2 * (10 ` lbm) * v^2, v);
 </tr>
 </table>
 <pre class="ltx_verbatim ltx_font_typewriter">
-dimensions (foo);
+<a class="nnexus_concept" href="http://planetmath.org/dimension">dimensions</a> (foo);
 </pre>
 <table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
 
@@ -198,7 +198,7 @@ float (foo1);
 </h2>
 
 <div id="S3.p1" class="ltx_para">
-<p class="ltx_p">‘@’ distributes over unit-ful expressions.</p>
+<p class="ltx_p">‘@’ <a class="nnexus_concept" href="http://planetmath.org/distributivity">distributes over</a> unit-ful expressions.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 defstruct (my3d (x, y, z));
 </pre>
@@ -311,7 +311,7 @@ imagpart (a ` m);
 such as hours, minutes, and seconds, or miles, feet, and inches.
 When the units are specified as a list,
 the unit conversion operator will split off the first,
-then the second from the remainder of the first,
+then the second from the <a class="nnexus_concept" href="http://planetmath.org/longdivision">remainder</a> of the first,
 the third from the remainder, etc.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 10 ` km `` mile;
@@ -356,7 +356,7 @@ apply ("+", %) `` km;
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">sandbox-maxima-worked-example-3</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">Sandboxmaximaworkedexample3</td>
 </tr>
 <tr class="ltx_tr">

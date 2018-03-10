@@ -23,7 +23,7 @@
 <h2 class="ltx_title ltx_title_subsubsection">Representation</h2>
 
 <div id="S0.SS0.SSSx1.p1" class="ltx_para">
-<p class="ltx_p">Any rational number <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\frac{a}{b}\in\mathbb{Q}" display="inline"><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>∈</mo><mi>ℚ</mi></mrow></math> between 0 and 1 can be represented as a sum of different unit fractions. This result was known to the Egyptians, whose way for representing rational numbers was as a sum of different unit fractions.</p>
+<p class="ltx_p">Any <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">rational number</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/egyptianfraction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/liberabaci"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/rationalnumber"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\frac{a}{b}\in\mathbb{Q}" display="inline"><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>∈</mo><mi>ℚ</mi></mrow></math> between 0 and 1 can be represented as a sum of different <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">unit fractions</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/unitfraction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/hibehpapyrus"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. This result was known to the Egyptians, whose way for representing rational numbers was as a sum of different unit fractions.</p>
 </div>
 <div id="S0.SS0.SSSx1.p2" class="ltx_para">
 <p class="ltx_p">The following greedy algorithm can represent any <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="0\leq\frac{a}{b}&lt;1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>&lt;</mo><mn>1</mn></mrow></math> as such a sum:</p>
@@ -40,7 +40,7 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">be the smallest natural number for which <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\frac{1}{n}\leq\frac{a}{b}" display="inline"><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>≤</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>. If <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, terminate.</p>
+<p class="ltx_p">be the smallest <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">natural number</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/NaturalNumber.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/naturalnumber"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> for which <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\frac{1}{n}\leq\frac{a}{b}" display="inline"><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>≤</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow></math>. If <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>, terminate.</p>
 </div>
 </li>
 <li id="I1.i2" class="ltx_item" style="list-style-type:none;">
@@ -75,7 +75,7 @@
 <p class="ltx_p">The algorithm can never output the same unit fraction twice. Indeed, any <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> selected in step 1 is at least 2, so <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="\frac{1}{n-1}&lt;\frac{2}{n}" display="inline"><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>&lt;</mo><mfrac><mn>2</mn><mi>n</mi></mfrac></mrow></math> – so the same <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> cannot be selected twice by the algorithm, as then <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> could have been selected instead of <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.</p>
 </div>
 <div id="S0.SS0.SSSx2.p2" class="ltx_para">
-<p class="ltx_p">It remains to prove that the algorithm terminates. We do this by induction on <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+<p class="ltx_p">It remains to prove that the algorithm terminates. We do this by <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">induction</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Induction.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/induction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> on <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
 <dl id="I2" class="ltx_description">
 <dt id="I2.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description">For <math id="I2.ix1.m1" class="ltx_Math" alttext="a=0" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow></math>:</span></dt>
 <dd class="ltx_item">
@@ -86,7 +86,7 @@
 <dt id="I2.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description">For <math id="I2.ix2.m1" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:</span></dt>
 <dd class="ltx_item">
 <div id="I2.ix2.p1" class="ltx_para">
-<p class="ltx_p">The <math id="I2.ix2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> selected in step 1 satisfies</p>
+<p class="ltx_p">The <math id="I2.ix2.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> selected in step 1 <a class="nnexus_concept" href="http://planetmath.org/satisfactionrelation">satisfies</a></p>
 <table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -104,7 +104,7 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">and <math id="I2.ix2.p1.m2" class="ltx_Math" alttext="0\leq an-b&lt;a" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mi>b</mi></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> – by the induction hypothesis, the algorithm terminates for <math id="I2.ix2.p1.m3" class="ltx_Math" alttext="\frac{a}{b}-\frac{1}{n}" display="inline"><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>-</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></math>.</p>
+<p class="ltx_p">and <math id="I2.ix2.p1.m2" class="ltx_Math" alttext="0\leq an-b&lt;a" display="inline"><mrow><mn>0</mn><mo>≤</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mi>b</mi></mrow><mo>&lt;</mo><mi>a</mi></mrow></math> – by the <a class="nnexus_concept" href="http://planetmath.org/principleoffiniteinduction">induction hypothesis</a>, the algorithm terminates for <math id="I2.ix2.p1.m3" class="ltx_Math" alttext="\frac{a}{b}-\frac{1}{n}" display="inline"><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>-</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></math>.</p>
 </div>
 </dd>
 </dl>
@@ -120,7 +120,7 @@
 <li id="I3.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">1.</span> 
 <div id="I3.i1.p1" class="ltx_para">
-<p class="ltx_p">The greedy algorithm always works, but it tends to produce unnecessarily large denominators. For instance,</p>
+<p class="ltx_p">The greedy algorithm always works, but it tends to produce unnecessarily large <a class="nnexus_concept" href="http://planetmath.org/fraction">denominators</a>. For <a class="nnexus_concept" href="http://planetmath.org/substitutionsinpropositionallogic">instance</a>,</p>
 <table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -163,7 +163,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">any rational number is a sum of unit fractions</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">AnyRationalNumberIsASumOfUnitFractions</td>
 </tr>
 <tr class="ltx_tr">
@@ -192,7 +192,7 @@
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
-<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/derivationsinnaturaldeduction">Derivation</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
@@ -200,7 +200,7 @@
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
-<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Egyptian algorithm</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/anyrationalnumberisasumofunitfractions">Egyptian algorithm</a></td>
 </tr>
 </tbody>
 </table>
