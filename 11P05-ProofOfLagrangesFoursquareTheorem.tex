@@ -67,12 +67,13 @@ then $a^2+b^2+1=kp$ for some integers $a,b,k$ with $0<k<p$. \end{lem}
 
 \begin{proof} Let $p = 2n + 1$.  Consider the sets $$A:=\lbrace a^2 \mid a=0,1,...,n\rbrace\quad\mbox{ and }\quad B:=\lbrace -b^2-1 \mid b=0,1,...,n \rbrace.$$  We have the following facts:
 \begin{enumerate}
-\item No two elements in $A$ are congruent mod $p$, for if $a^2\equiv c^2 \pmod p$, then either $p\mid (a-c)$ or $p\mid (a+c)$ by unique factorization of primes.  Since $a-c, a+c \le 2n< p$, and $0\le a,c$, we must have $a=c$.  
+\item No two elements in $A$ are congruent mod $p$, for if $a^2\equiv c^2 \pmod p$, then either $p\mid (a-c)$ or $p\mid (a+c)$ by Euclids lemma.  Since $a-c, a+c \le 2n< p$, and $0\le a,c$, we must have $a=c$.  
 \item Similarly, no two elements in $B$ are congruent mod $p$.  
-\item Furthermore, $A\cap B=\varnothing$ since elements of $A$ are all non-negative, while elements of $B$ are all negative.
-\item Therefore, $C:=A\cup B$ has $2n+2$, or $p+1$ elements.
+\item Taking residues modulo $p$ of the elements in $A$ and $B$, the disjoint union contains $\lvert A \rvert +\lvert B\rvert -\lvert A \cap B\rvert$ elements.
+Since $\lvert A \rvert =n +1 =\lvert B \rvert$ we have $\lvert A\rvert +\lvert B \rvert =2n +2=p+1$.
+But since $p+1 -\lvert A \cap B\rvert <=p$ we have $1 \leq \lvert A \cap B\rvert$.
 \end{enumerate}
-Therefore, by the pigeonhole principle, two elements in $C$ must be congruent mod $p$.  In addition, by the first two facts, the two elements must come from different sets.  As a result, we have the following equation: $$a^2+b^2+1=kp$$
+Therefore, there exist integers $a, b$ such that $a^2 \equiv -b^2 -1 \pmod p$. Thus $$a^2+b^2+1=kp$$
 for some $k$. Clearly $k$ is positive. Also, $p^2 = (2n + 1)^2 > 2n^2 + 1 \ge a^2+b^2+1 = kp$, so $p > k$.
 \end{proof}
 
